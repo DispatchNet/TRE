@@ -2,6 +2,7 @@
 Both the send files and the WIPs
 
 Remember to:
+
 	tag the version appropriately
 	
 	add
