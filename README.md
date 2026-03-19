@@ -11,5 +11,8 @@ Remember to:
 	
 	push
 
-To version, use: git tag -a vX.Y -m "Version description"
+To version, use: 
+	
+	git tag -a vX.Y -m "Version description"
+
 X is only incremented for major releases, Y is for all others
