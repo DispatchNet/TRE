@@ -9,6 +9,50 @@
 \fancyfoot[c]{\thepage}
 
 \begin {document}
-	\section*{Section text}
-		Body text
+\section{Objectives}
+	\subsection{Rail System Modeling}
+		The system aims to model a real railway layout in terms of:
+		\begin{itemize}
+			\item \textbf{Lines.}
+				Collection of tracks that run without interference between two \textbf{Junctions} or \textbf{Stations}
+			\item \textbf{Junctions.} Anonymous \textbf{Stations} where lines connect
+			\item \textbf{Stations.} Places for trains to stop and load passengers or cargo	
+		\end{itemize}
+		
+		\textit{Boundary:} 
+		Initially, we are not aiming to model each individual section of track, instead we abstract them to \textbf{Lines} and \textbf{Stations} to group them, reducing complexity.
+		In the future, the system may be expanded to allow for finer granularity
+		
+	\subsection{Travel Information}
+		The system must allow anyone to view relevant travel information on any relevant \underline{Passenger} journey on the network
+
+	\subsection{Service Planning}
+		The system must allow \underline{Companies} to register services to be ran along the network
+
+	\subsection{Train Definitions}
+		For ease of use, we must keep a record of existing train types for use in services in order to calculate capacity and enforce other physical constraints
+
+\newpage
+\section{Non-Functional Requirements}
+	\subsection{Topology}
+		Following \textbf{1.1}, the system must be able to store the layout of the railway network as a directed mesh.
+		Each node in the mesh should not have restrictions over the number of incoming and outgoing connections, beyond having at least one of each (not being orphaned or a dead-end)
+	\subsection{Unique IDs}
+		Following \textbf{1.1} and in reference to \textbf{2.1}, the system should store each element in the network with unique IDs for each type of element.
+	
+\section{Functional Requirements}
+	\subsection{Creating a Service}
+		Following \textbf{1.3} and in reference to \textbf{2.1}, the system must enavle the easy creation of a route between different stations
+	\subsection{Creating a Train}
+		The system must allow \underline{Companies} to register a train type.
+		Upon definition, a train type should include the following fields:
+		\begin{itemize}
+			\item The train series identificator
+			\item (Optionally) The commercial name of the train
+			\item The set of service-types that the train can be used for
+			\item The lenght
+			\item The maximum operating speed of a train
+			\item Whether it is a \underline{Passenger} or \underline{Freight} train
+			\item The capacities, excluding staff, of people or cargo respective to the previous train type
+		\end{itemize}
 \end {document}
