@@ -1,40 +1,63 @@
-\contentsline {section}{Purpose}{3}{}%
-\contentsline {section}{\numberline {1}Objectives}{3}{}%
-\contentsline {subsection}{\numberline {1.1}Account management}{3}{}%
-\contentsline {subsection}{\numberline {1.2}Ticketing system}{3}{}%
-\contentsline {subsection}{\numberline {1.3}Route-finding}{4}{}%
-\contentsline {subsection}{\numberline {1.4}Virtual board}{4}{}%
-\contentsline {subsection}{\numberline {1.5}Streamlining}{4}{}%
-\contentsline {subsection}{\numberline {1.6}Rail system modeling}{4}{}%
-\contentsline {subsection}{\numberline {1.7}Service planning}{5}{}%
-\contentsline {subsection}{\numberline {1.8}Train definitions}{5}{}%
-\contentsline {section}{\numberline {2}Stakeholders}{5}{}%
-\contentsline {subsection}{\numberline {2.1}Internal}{5}{}%
-\contentsline {subsubsection}{\numberline {2.1.1}Human}{5}{}%
-\contentsline {subsubsection}{\numberline {2.1.2}Non-human}{5}{}%
-\contentsline {subsection}{\numberline {2.2}External}{6}{}%
-\contentsline {subsubsection}{\numberline {2.2.1}Human}{6}{}%
-\contentsline {subsubsection}{\numberline {2.2.2}Non-human}{6}{}%
-\contentsline {section}{\numberline {3}Functional requirements}{6}{}%
-\contentsline {subsection}{\numberline {3.1}Account registration}{6}{}%
-\contentsline {subsection}{\numberline {3.2}Account information}{7}{}%
-\contentsline {subsection}{\numberline {3.3}Account deletion}{7}{}%
-\contentsline {subsection}{\numberline {3.4}Account information change}{7}{}%
-\contentsline {subsection}{\numberline {3.5}Password reset}{7}{}%
-\contentsline {subsection}{\numberline {3.6}Login}{7}{}%
-\contentsline {subsection}{\numberline {3.7}Logout}{7}{}%
-\contentsline {subsection}{\numberline {3.8}Tickets information}{8}{}%
-\contentsline {subsection}{\numberline {3.9}Tickets details display}{8}{}%
-\contentsline {subsection}{\numberline {3.10}Ticket purchase}{8}{}%
-\contentsline {subsection}{\numberline {3.11}Ticket cancellation}{8}{}%
-\contentsline {subsection}{\numberline {3.12}Ticket history}{8}{}%
-\contentsline {subsection}{\numberline {3.13}Traversal}{9}{}%
-\contentsline {subsection}{\numberline {3.14}Ranking}{9}{}%
-\contentsline {subsection}{\numberline {3.15}Hybridization}{9}{}%
-\contentsline {subsection}{\numberline {3.16}Segregation}{9}{}%
-\contentsline {subsection}{\numberline {3.17}Station display}{10}{}%
-\contentsline {subsection}{\numberline {3.18}Train display}{10}{}%
-\contentsline {subsection}{\numberline {3.19}Scheduling change warnings}{10}{}%
-\contentsline {subsection}{\numberline {3.20}Inference}{10}{}%
-\contentsline {subsection}{\numberline {3.21}Defining a service request}{10}{}%
-\contentsline {subsection}{\numberline {3.22}Defining a train}{11}{}%
+\contentsline {section}{Purpose}{4}{section*.2}%
+\contentsline {section}{\numberline {1}Objectives}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Account management}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Ticketing system}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Route-finding}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Virtual board}{5}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Streamlining}{5}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Rail system modeling}{5}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Service planning}{6}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Train definitions}{6}{subsection.1.8}%
+\contentsline {section}{\numberline {2}Stakeholders}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Internal}{6}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Human}{6}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Non-human}{6}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}External}{7}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Human}{7}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Non-human}{7}{subsubsection.2.2.2}%
+\contentsline {section}{\numberline {3}Functional requirements}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Account registration}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Account information}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Account deletion}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Account information change}{8}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Password reset}{8}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Login}{8}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Logout}{8}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Tickets information}{8}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Tickets details display}{9}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Ticket purchase}{9}{subsection.3.10}%
+\contentsline {subsection}{\numberline {3.11}Ticket cancellation}{9}{subsection.3.11}%
+\contentsline {subsection}{\numberline {3.12}Ticket history}{9}{subsection.3.12}%
+\contentsline {subsection}{\numberline {3.13}Traversal}{10}{subsection.3.13}%
+\contentsline {subsection}{\numberline {3.14}Ranking}{10}{subsection.3.14}%
+\contentsline {subsection}{\numberline {3.15}Hybridization}{10}{subsection.3.15}%
+\contentsline {subsection}{\numberline {3.16}Segregation}{10}{subsection.3.16}%
+\contentsline {subsection}{\numberline {3.17}Station display}{11}{subsection.3.17}%
+\contentsline {subsection}{\numberline {3.18}Train display}{11}{subsection.3.18}%
+\contentsline {subsection}{\numberline {3.19}Scheduling change warnings}{11}{subsection.3.19}%
+\contentsline {subsection}{\numberline {3.20}Inference}{11}{subsection.3.20}%
+\contentsline {subsection}{\numberline {3.21}Defining a service request}{11}{subsection.3.21}%
+\contentsline {subsection}{\numberline {3.22}Defining a train}{12}{subsection.3.22}%
+\contentsline {subsection}{\numberline {3.23}Defining a service type}{13}{subsection.3.23}%
+\contentsline {subsection}{\numberline {3.24}Defining the network}{13}{subsection.3.24}%
+\contentsline {subsection}{\numberline {3.25}Viewing the network}{13}{subsection.3.25}%
+\contentsline {subsection}{\numberline {3.26}Defining a station}{13}{subsection.3.26}%
+\contentsline {subsection}{\numberline {3.27}Defining a line}{13}{subsection.3.27}%
+\contentsline {subsection}{\numberline {3.28}Defining a junction}{14}{subsection.3.28}%
+\contentsline {subsection}{\numberline {3.29}Service integrity checks}{14}{subsection.3.29}%
+\contentsline {subsection}{\numberline {3.30}Service request approval}{15}{subsection.3.30}%
+\contentsline {subsection}{\numberline {3.31}Editing the network}{15}{subsection.3.31}%
+\contentsline {subsection}{\numberline {3.32}Requirements accessible based on user classification}{15}{subsection.3.32}%
+\contentsline {section}{\numberline {4}Non-functional requirements}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Account registration details}{16}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Data protection regulation}{16}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Password security}{17}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Email notification}{17}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Consent for personal data processing}{17}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Request of processed data}{17}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Tickets information consistency}{17}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Process interconnection}{17}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Input minimization}{18}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Computational speed}{18}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}Topology}{18}{subsection.4.11}%
+\contentsline {subsection}{\numberline {4.12}ID uniqueness}{18}{subsection.4.12}%

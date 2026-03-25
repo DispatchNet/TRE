@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 
 \usepackage{fancyhdr}
+\usepackage{hyperref}
 
 \pagestyle{fancy}
 \fancyhead[l]{DispatchNet}
@@ -11,6 +12,7 @@
 \renewcommand\bf[1]{\textbf{#1}}
 \renewcommand\it[1]{\textit{#1}}
 \newcommand\un[1]{\underline{#1}}
+\newcommand\hyl[1]{\hyperlink{subsection.#1}{\bf{#1}}}
 
 \begin {document}
 \tableofcontents
@@ -19,6 +21,7 @@
 \bf{Bold} words are sytem-important constructs \newline
 \un{Underlined} nouns are actors of the system \newline
 \it{Italic} words are special keywords to denote important limits of the project
+\bf{Text} in reference to Sections and Subsections will be a hyperlink
 \newpage
 
 
@@ -119,64 +122,70 @@ Upon logging in, \un{Anonymous Users} may prove to be other Actors, but are assu
 
 \section{Functional requirements}
 \subsection{Account registration}
-Following \bf{1.1}, the system must allow anonymous users to register.
-The additional funcitonalities are described in \bf{3.T} !TODO TABLE 1 WITH CUSTOM NUMBER!
+Following \hyl{1.1}, the system must allow anonymous users to register.
+The additional funcitonalities are described in \hyl{3.32}
 
 \subsection{Account information}
-Following \bf{1.1} and \bf{4.2}, and in reference to \bf{3.1}, at registration the system must require user to provide username, email and password. information must statisfy \bf{4.1}.
-Registration can finally succed after \bf{4.5}. At succesful operation's end the user is notified as described at \bf{4.4}
+Following \hyl{1.1} and \hyl{4.2}, and in reference to \hyl{3.1}, at registration the system must require user to provide username, email and password. information must statisfy \hyl{4.1}.
+Registration can finally succed after \hyl{4.5}. At succesful operation's end the user is notified as described at \hyl{4.4}
 
 \subsection{Account deletion}
-Following \bf{1.1} and \bf{4.2}, and in reference to \bf{3.1}, the system must allow users to delete their accounts, as well as any other related information. At successful operation's end the user is notified
-as described at \bf{4.4}.
+Following \hyl{1.1} and \hyl{4.2}, and in reference to \hyl{3.1}, the system must allow users to delete their accounts, as well as any other related information. At successful operation's end the user is notified
+as described at \hyl{4.4}.
 
 \subsection{Account information change}
-Following \bf{1.1} and \bf{4.2}, and in refenrence to \bf{3.1}, the system must allow users to change their \bf{3.2} information.
-The new information must again satisfy \bf{4.1}. At succesful operation's end, the user should be notified as described in \bf{4.4}.
+Following \hyl{1.1} and \hyl{4.2}, and in refenrence to \hyl{3.1}, the system must allow users to change their \hyl{3.2} information.
+The new information must again satisfy \hyl{4.1}. At succesful operation's end, the user should be notified as described in \hyl{4.4}.
 
 \subsection{Password reset}
-Following \bf{1.1} and in reference to \bf{3.1}, the system shall allow users to request a reset of their password and change it accordingly to \bf{3.4}.
-The user will receive an email (according to \bf{4.4}) with instructions on how to reset.
+Following \hyl{1.1} and in reference to \hyl{3.1}, the system shall allow users to request a reset of their password and change it accordingly to \hyl{3.4}.
+The user will receive an email (according to \hyl{4.4}) with instructions on how to reset.
 
 \subsection{Login}
-Following \bf{1.1} the system should allow \un{Anonymous Users} to perform a login using their username and passord defined at \bf{3.2}.
+Following \hyl{1.1} the system should allow \un{Anonymous Users} to perform a login using their username and passord defined at \hyl{3.2}.
 
 \subsection{Logout}
-Following \bf{1.1} the system should allow non-\un{Anonymous Users} to perform a logout, returning them to \un{Anonymous User} status.
+Following \hyl{1.1} the system should allow non-\un{Anonymous Users} to perform a logout, returning them to \un{Anonymous User} status.
 
 \subsection{Tickets information}
-Following \bf{1.2}, the system shall include detailed information about the available tickets. In particular:
+Following \hyl{1.2}, the system shall include detailed information about the available tickets. In particular:
 \begin{itemize}
-	\item Train details (indicated at \bf{3.22}) which are relevant to the passenger.
-	Mainly identfier, services provider, capacities, and available classes (indicated in \bf{3.23}.
+	\item Train details (indicated at \hyl{3.22}) which are relevant to the passenger.
+	Mainly identfier, services provider, capacities, and available classes (indicated in \hyl{3.23}.
 	\item Arrival and departure times, as well as total travel time.
 	\item Arrival and departure stations.
 	\item Price.
 \end{itemize}
 
 \subsection{Tickets details display}
-Following \bf{1.2}, and in reference to \bf{4.7}, the system must provide an interface containing the information described at \bf{3.8}. 
-It sohuld be possible to quickly switch to \bf{4.10}
+Following \hyl{1.2}, and in reference to \hyl{4.7}, the system must provide an interface containing the information 
+described at \hyl{3.8}. 
+It sohuld be possible to quickly switch to \hyl{4.10}
 
 \subsection{Ticket purchase}
-Following \bf{1.2} and in refence to \bf{4.7}, the system should allow users to buy tickets. It should show a final confirmation interface with all the infromation described at \bf{3.8}. 
-The ticked will be marked as pruchased and displayed properly in \bf{3.12}.
-At transaction's end, the user is notified as described in \bf{4.4}.
+Following \hyl{1.2} and in refence to \hyl{4.7}, the system should allow users to buy tickets. It should show a final 
+confirmation interface with all the infromation described at \hyl{3.8}. 
+The ticked will be marked as pruchased and displayed properly in \hyl{3.12}.
+At transaction's end, the user is notified as described in \hyl{4.4}.
 
 \subsection{Ticket cancellation}
-Following \bf{1.2}, the system should allow the cancellation of pruchased tickets. It should show a final confirmation interface with
-the information described at \bf{3.8}. The ticked will be marked as cancelled and siplayed properly in \bf{3.12}.
-At successful operation's end, the user is notified as described in \bf{4.4}.
+Following \hyl{1.2}, the system should allow the cancellation of pruchased tickets. It should show a final confirmation 
+interface with
+the information described at \hyl{3.8}. The ticked will be marked as cancelled and siplayed properly in \hyl{3.12}.
+At successful operation's end, the user is notified as described in \hyl{4.4}.
 
 \subsection{Ticket history}
-Following \bf{1.2} and in refenrece to \bf{3.7}, the system should provide an interface displaying purchased tickets with the dynamics dictated at \bf{3.10} and cancelled tickets with the dynamics dictated at \bf{3.11}.
+Following \hyl{1.2} and in refenrece to \hyl{3.7}, the system should provide an interface displaying purchased tickets with 
+the dynamics dictated at \hyl{3.10} and cancelled tickets with the dynamics dictated at \hyl{3.11}.
 
 \subsection{Traversal}
-Following \bf{1.3}, the system needs to be able to compute multiple \bf{paths} between nodes in the mesh.
-If the destination node is not reachable by the starting node, an explicit error should be given to the user instead of an empty list of paths.
+Following \hyl{1.3}, the system needs to be able to compute multiple \bf{paths} between nodes in the mesh.
+If the destination node is not reachable by the starting node, an explicit error should be given to the user instead of an 
+empty list of paths.
 
 \subsection{Ranking}
-Following \bf{1.3} and in reference to \bf{3.13}, the system needs to be able to distringuish and rank multiple \bf{paths} over the network over several factors, including but not limited to:
+Following \hyl{1.3} and in reference to \hyl{3.13}, the system needs to be able to distringuish and rank multiple 
+\bf{paths} over the network over several factors, including but not limited to:
 \begin{itemize}
 	\item Lenght.
 	\item Deviation from requested arrival or departure time.
@@ -187,30 +196,33 @@ Following \bf{1.3} and in reference to \bf{3.13}, the system needs to be able to
 The user should manually select (or defualt to a favourite) among the rank-able factors.
 
 \subsection{Hybridization}
-Following \bf{1.3} and in refence to \bf{3.13} and \bf{3.14}, the system needs to be able to treat two segments of seperate train routes (\bf{natural} or \bf{transfer-dependent}) joined at a common valid arrival-into-departure station as a \bf{transfer-dependent route}, being hierarchically equivalent to a natural train route and carrying 
-the properties of the former train until the arrival to the transfer station, and the latter train's after its departure from the station.
+Following \hyl{1.3} and in refence to \hyl{3.13} and \hyl{3.14}, the system needs to be able to treat two segments of 
+seperate train routes (\bf{natural} or \bf{transfer-dependent}) joined at a common valid arrival-into-departure station 
+as a \bf{transfer-dependent route}, being hierarchically equivalent to a natural train route and carrying 
+the properties of the former train until the arrival to the transfer station, and the latter train's after its departure 
+from the station.
 
 \subsection{Segregation}
-Following \bf{1.3}, the system should not consider train routes or paths over the network that pass trhough nodes or by trains that the 
+Following \hyl{1.3}, the system should not consider train routes or paths over the network that pass trhough nodes or by trains that the 
 user is  not allowed to use or purchase tickets for, be that because of train retirement, expectation of exceeded capacity, or incompatible train type.
 
 \subsection{Station display}
-Following \bf{1.4}, the system should store, update, and provide departure and arrival times of all train's schedules for every station.
+Following \hyl{1.4}, the system should store, update, and provide departure and arrival times of all train's schedules for every station.
 
 \subsection{Train display}
-Following \bf{1.4}, the system should store, update, and provide departure and arrival times of any train on all stations in its schedule.
+Following \hyl{1.4}, the system should store, update, and provide departure and arrival times of any train on all stations in its schedule.
 
 \subsection{Scheduling change warnings}
-Following \bf{1.4} and in reference to \bf{3.17} and \bf{3.18}, the system should be able to recognise and/or receive, and to provide to users when a train is expected to be 
+Following \hyl{1.4} and in reference to \hyl{3.17} and \hyl{3.18}, the system should be able to recognise and/or receive, and to provide to users when a train is expected to be 
 late, delayed, cancelled, substituted or deviated.
 
 \subsection{Inference}
-Following \bf{1.4} and in reference to \bf{3.17} and \bf{3.18}, if the system is aware of a delay, deviation, or cancellation
+Following \hyl{1.4} and in reference to \hyl{3.17} and \hyl{3.18}, if the system is aware of a delay, deviation, or cancellation
 of a train's route or of a departure or arrival time in station, it should automatically propagate that to all remaining 
 stations on the affected train's route, estimating positive or negative delay caused by deviations using available data.
 
 \subsection{Defining a service request}
-Following \bf{1.7}, in refenence to \bf{4.11}, \bf{3.30}, and \bf{3.31}, and depending on \bf{3.22}, \bf{3.23}, and \bf{3.24}.
+Following \hyl{1.7}, in refenence to \hyl{4.11}, \hyl{3.30}, and \hyl{3.31}, and depending on \hyl{3.22}, \hyl{3.23}, and \hyl{3.24}.
 The system must allow \un{Companies} to request the \un{Network Owners} the introducion of a service between different stations.
 The service must include:
 \begin{itemize}
@@ -222,56 +234,201 @@ The service must include:
 \end{itemize}
 \un{Note:} When departure times are defined it is assumed that the train waits for the first available departure time after its scheduled arrival time to continue.
 Dwell time is considered a minimum amount of time the train must be stopped for checking when the next available departure time is.
-The further handling of the request is defined in \bf{3.31}
+The further handling of the request is defined in \hyl{3.31}
 
 \subsection{Defining a train}
+Following \hyl{1.7} and depending on \hyl{3.23}, the system should allow \un{Companies} to register a train type.
+
+Upon definition, a train should include the following fields:
+\begin{itemize}
+	\item The train series identificator.
+	\item (Optionally) The commercial name of the train.
+	\item The set of service-types (see \hyl{3.23}) that the train can be used for.
+	\item The length.
+	\item The maximum operating speed (Vmax).
+	\item Mode of traction (Diesel or Voltage).
+	\item Installed signaling systems (ERTMS, SCMT, \dots).
+	\item The type (Freight or Passenger).
+	\item Loading gauge.
+	\item Track gauge(s).
+	\item If passenger, capacities per Class (see \hyl{3.23})
+\end{itemize}
+\it{Boundary:} This is the description of a train type, I.E. not the modelling of individual trains.
+
+\subsection{Defining a service type}
+Following \hyl{1.7} and in referrence to \hyl{3.21} and \hyl{3.22}, the system must allow \un{Companies} to define a service-type
+with their own set of service classes and well as their pricing model for passenger trains.
+
+\subsection{Defining the network}
+Following \hyl{1.6} and depending on \hyl{3.27}, \hyl{3.28}, and \hyl{3.29}, the system must allow \un{Network Owners} to register infrastructure information and construct a network out of its basic components.
+
+\subsection{Viewing the network}
+Following \hyl{1.6} and to ease scheduling, the system should be able to generate \bf{schedule graphs} displaying services aas they move through a certain \bf{path} along the network
+
+\subsection{Defining a station}
+Following \hyl{1.6} and depending on \hyl{3.29}, the system must allow \un{Network Managers} to register a \bf{station}, 
+which is an extension of a \bf{junction}
+
+Upon definition, a \bf{station} should include the following fields:
+\begin{itemize}
+	\item Name.
+	\item GPS coordinates.
+	\item For each platform:
+	\begin{itemize}
+		\item Its length.
+		\item Its name.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Defining a line}
+Following \hyl{1.6}, the system must allow \un{Network Managers} to register a \bf{line}.
+
+Upon definition, a \bf{line} should include the following fields:
+\begin{itemize}
+	\item Lenght.
+	\item Max Speed.
+	\item Signaling systems in use.
+	\item Start \& end \bf{junctions} or \bf{stations}.
+	\item A flag for if the line is single-tracked.
+	\item Eletrification system.
+	\item Maximum allowed loading gauge.
+	\item Gauge(s).
+\end{itemize}
+
+\subsection{Defining a junction}
+Following \hyl{1.6}, the system must allow \un{Network Managers} to register a \bf{junction}.
+
+Upon definition, a \bf{junction} should include the following fields:
+\begin{itemize}
+	\item Display name.
+	\item GPS location.
+\end{itemize}
+
+\subsection{Service integrity checks}
+Following \hyl{1.7}, in reference to \hyl{3.31}, and depending on \hyl{3.21}, \hyl{3.22}, and \hyl{3.24}.
+The system should be able to perform the following checks on a service request:
+\begin{itemize}
+	\item No other service should be occupying a single tracked \bf{line} in opposite directions at the same time as the new service.
+	\item The platforms used at each station must be available at all times the service is running on them.
+	\item All of the trains used must be compatible with the signaling systems installed along the traversed infrastructure.
+	\item All electric trains must be compatible with the electrification systems installed along the traversed structures.
+	\item All of the trains used must be compatible with the track gauge of the line.
+	\item All the trains used must fit the shortest plantform on the service.
+\end{itemize}
+
+The system should display the result of this check on request approval as well as before the request is sent for approval, however this 
+should not prevent the \un{Company} from submitting the request as it is possible that the \un{Network Managers} could intervene to rectify the network in such a way as to allow the service to run.
+
+\subsection{Service request approval}
+Following \hyl{1.7} and depending on \hyl{3.21}, the system should allow the \un{Network Managers} to 
+review requests, after that they may:
+
+\begin{itemize}
+	\item Approve the request as is.
+	\item Send back an amended version of the request to the \un{Company} for counter-review.
+	\item Deny the request, returning some reasoning to the \un{Company}.
+\end{itemize}
+
+\subsection{Editing the network}
+Following \hyl{1.6} and in reference to \hyl{3.24}, the system should allow modification and deletion 
+of components of the network.
+
+The system should perform a check on all services on the network before allowing the edit to take place, 
+in order to avoid undefined behaviour.
+
+\subsection{Requirements accessible based on user classification}
+!TABLEHERE!
+
+\section{Non-functional requirements}
+\subsection{Account registration details}
+\it{Product and Usability requirement}
+
+Following \hyl{1.1} and \hyl{4.2}, when performing \hyl{3.1} and regarding \hyl{3.2}.
+The account information must be such that:
+\begin{itemize}
+	\item The username must be unique
+	\item The email must be unique, and validated after registration
+	\item The password must be secure, as indicated in \hyl{4.3}, and inserted twice to avoid typing errors.
+\end{itemize}
+
+\subsection{Data protection regulation}
+\it{External Legislative requirement}
+
+The system must respect \href{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02016R0679-20160504&qid=1532348683434}{EU Regulation 2016/679} 
+on the protection of natural persons with regard to the processing of personal data.
+In particular:
+\begin{itemize}
+	\item[\bf{Art.5}] Principles relatino to processing of personal data, ensuring ethical processing.
+	\item[\bf{Art.6,7}] Lafwulness of processing, Conditions for consent. Both concerning consent for the processing of personal data.
+	\item[\bf{Art.13}] Information to be provided where personal data are collected from the data subject, I.E. providing information of the controller of the processing.
+	\item[\bf{Art.15}] Right of access by the data subject, I.E. Users must be able to see their stored information.
+	\item[\bf{Art.16}] Right to rectification, I.E. users must be able to change their information.
+	\item[\bf{Art.17}] Right to erasue ('Right to be forgotten').
+	\item[\bf{Art.32}] Seurity of processing.
+\end{itemize}
+
+\subsection{Password security}
+\it{Product Security requirement}
+
+Following \hyl{1.1} and \hyl{4.2}, the passwords related to \hyl{3.2} must be at least 8 character, with at least one upper and one lower case letter and one digit.
+
+\subsection{Email notification}
+\it{Product Usability requirement}
+
+The system should notify the user when certain events happen. This should be implemented by sending an email to the address specified at \hyl{3.1}
+
+\subsection{Consent for personal data processing}
+\it{External Legislative requirement}
+
+Following \hyl{4.2}, the system must show the user the data that will be processed, the reason, and must ask for consent.
+
+\subsection{Request of processed data}
+\it{External Legislative requirement}
+Following \hyl{4.2}, the system must provide users review of their stored information, through \hyl{4.4}.
 
 
+\subsection{Tickets information consistency}
+\it{Product Usability requirement}
 
+Following \hyl{1.2}, the system must consistently show the same data, which is listed at \hyl{3.8}, in the functionalities 
+described at \hyl{3.9} and \hyl{3.12}; in the latter there should also be added hour and date of purchase and a 
+classification on the status, being either valid, exipred, or cancelled.
 
+\subsection{Process interconnection}
+\it{Product Usability requirement}
 
+Following \hyl{1.5}, for all processes the user can initiate: all other processes that require a similar type of input as 
+the user's process or could accept the user's process' output as input should have some easily accessible way to be used as 
+such if relevant.
 
+\subsection{Input minimization}
+\it{Product Usability requirement}
 
+Following \hyl{1.5} and in reference to \hyl{4.8}, all operations of the system that accept user's unput about information 
+the system can provide should be capable of automatically obtaining such information from the system itself.
 
+When a procedure is starteed by the user it should inherit and auto-fill as many of its inputs from the previous interface's
+relevant data as possible to minimise user repetition.
 
+\subsection{Computational speed}
+\it{Product Usability requirement}
 
+Following \hyl{1.3}, all path's displays should take at most five hundred milliseconds to load, and the computation of a 
+\bf{path} along the network should take no more than one second on top of that. 
 
+Once the time limit is up, no more \bf{paths} should be computed, providing the user only the possibly incomplete list.
 
+\subsection{Topology}
+\it{!YET UNDEFINED!}
 
+Following \hyl{1.6}, the system must be able to store the layout of the rail network as a mesh,
+with no limit of inbound or outbound connnections for nodes, within reason.
 
+\subsection{ID uniqueness}
+\it{!YET UNDEFINED!}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Following \hyl{1.6} and in reference \hyl{4.11}, the system should store each element in the network with unique IDs for 
+each type network element.
 
 \end {document}
 
