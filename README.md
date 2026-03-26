@@ -1,17 +1,18 @@
 # TRE
 Both the send files and the WIPs
 Firstly,
+
 	git fetch
 
 Alternatively, to pull the repository:
+
 	git pull <link>
 
 For branches:
+
 	git switch <branch_name>
 
 To push, remember to:
-
-	tag the version appropriately (see below)
 	
 	git add -A
 	
@@ -19,7 +20,7 @@ To push, remember to:
 
 	git push
 
-To create new tag: 
+To create new tag (tag the version appropriately, see below: 
 	
 	git tag -a vX.Y -m "Version description"
 
