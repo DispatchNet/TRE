@@ -3,9 +3,16 @@
 \usepackage{fancyhdr}
 \usepackage{hyperref}
 
+\setlength{\headheight}{14.49998pt}
+\addtolength{\topmargin}{-2.49998pt}
+
 \title{\bf{Software Engineering Project}}
 \author{\bf{DispatchNet:} \\ Alessio Zanon \\ Leonardo Tonetta \\ Luca Fiorini}
 \date{\it{Requirements Analysis}}
+
+\makeatletter
+\renewcommand*{\numberline}[1]{\hb@xt@4em{#1\hfil}} 
+\makeatother
 
 \makeatletter
 \NewExpandableDocumentCommand{\mynumbering}{m}{%

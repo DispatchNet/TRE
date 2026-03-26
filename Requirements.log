@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  26 MAR 2026 11:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  26 MAR 2026 11:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -181,33 +181,33 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 (./Requirements.aux)
 \openout1 = `Requirements.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-Package hyperref Info: Link coloring OFF on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+Package hyperref Info: Link coloring OFF on input line 47.
  (./Requirements.out) (./Requirements.out)
 \@outlinefile=\write3
 \openout3 = `Requirements.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 42.
+(Font)              <14.4> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 42.
+(Font)              <7> on input line 49.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Requirements.toc
@@ -217,355 +217,31 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
-
-Overfull \hbox (0.93076pt too wide) detected at line 18
-\OT1/cmr/bx/n/12 FR 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 28
-\OT1/cmr/m/n/12 FR.10 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 29
-\OT1/cmr/m/n/12 FR.11 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 30
-\OT1/cmr/m/n/12 FR.12 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 31
-\OT1/cmr/m/n/12 FR.13 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 32
-\OT1/cmr/m/n/12 FR.14 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 33
-\OT1/cmr/m/n/12 FR.15 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 34
-\OT1/cmr/m/n/12 FR.16 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[2]
-Overfull \hbox (4.30411pt too wide) detected at line 35
-\OT1/cmr/m/n/12 FR.17 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 36
-\OT1/cmr/m/n/12 FR.18 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 37
-\OT1/cmr/m/n/12 FR.19 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 38
-\OT1/cmr/m/n/12 FR.20 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 39
-\OT1/cmr/m/n/12 FR.21 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 40
-\OT1/cmr/m/n/12 FR.22 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 41
-\OT1/cmr/m/n/12 FR.23 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 42
-\OT1/cmr/m/n/12 FR.24 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 43
-\OT1/cmr/m/n/12 FR.25 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 44
-\OT1/cmr/m/n/12 FR.26 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 45
-\OT1/cmr/m/n/12 FR.27 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 46
-\OT1/cmr/m/n/12 FR.28 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 47
-\OT1/cmr/m/n/12 FR.29 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 48
-\OT1/cmr/m/n/12 FR.30 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 49
-\OT1/cmr/m/n/12 FR.31 
- []
-
-
-Overfull \hbox (4.30411pt too wide) detected at line 50
-\OT1/cmr/m/n/12 FR.32 
- []
-
-
-Overfull \hbox (11.48633pt too wide) detected at line 51
-\OT1/cmr/bx/n/12 NFR 
- []
-
-
-Overfull \hbox (7.23741pt too wide) detected at line 52
-\OT1/cmr/m/n/12 NFR.1 
- []
-
-
-Overfull \hbox (7.23741pt too wide) detected at line 53
-\OT1/cmr/m/n/12 NFR.2 
- []
-
-
-Overfull \hbox (7.23741pt too wide) detected at line 54
-\OT1/cmr/m/n/12 NFR.3 
- []
-
-
-Overfull \hbox (7.23741pt too wide) detected at line 55
-\OT1/cmr/m/n/12 NFR.4 
- []
-
-
-Overfull \hbox (7.23741pt too wide) detected at line 56
-\OT1/cmr/m/n/12 NFR.5 
- []
-
-
-Overfull \hbox (7.23741pt too wide) detected at line 57
-\OT1/cmr/m/n/12 NFR.6 
- []
-
-
-Overfull \hbox (7.23741pt too wide) detected at line 58
-\OT1/cmr/m/n/12 NFR.7 
- []
-
-
-Overfull \hbox (7.23741pt too wide) detected at line 59
-\OT1/cmr/m/n/12 NFR.8 
- []
-
-
-Overfull \hbox (7.23741pt too wide) detected at line 60
-\OT1/cmr/m/n/12 NFR.9 
- []
-
-
-Overfull \hbox (13.11235pt too wide) detected at line 61
-\OT1/cmr/m/n/12 NFR.10 
- []
-
-
-Overfull \hbox (13.11235pt too wide) detected at line 62
-\OT1/cmr/m/n/12 NFR.11 
- []
-
-
-Overfull \hbox (13.11235pt too wide) detected at line 63
-\OT1/cmr/m/n/12 NFR.12 
- []
-
-)
+ [2])
 \tf@toc=\write4
 \openout4 = `Requirements.toc'.
 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[3]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[5]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[6]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 145--147
+ [3] [4]
+[5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
 
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[8]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[9]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[10]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[11]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[13]
-Overfull \hbox (28.1018pt too wide) in paragraph at lines 285--286
+[8] [9] [10] [11] [12] [13]
+Overfull \hbox (28.1018pt too wide) in paragraph at lines 292--293
 \OT1/cmr/m/n/12 Following []\OT1/cmr/bx/n/12 O.6[] \OT1/cmr/m/n/12 and de-pend-
 ing on []\OT1/cmr/bx/n/12 FR.29[]\OT1/cmr/m/n/12 , the sys-tem must al-low $[]$
 
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[15]
-Overfull \hbox (55.1918pt too wide) in paragraph at lines 338--339
+[14] [15]
+Overfull \hbox (55.1918pt too wide) in paragraph at lines 345--346
 \OT1/cmr/m/n/12 Following []\OT1/cmr/bx/n/12 O.7[] \OT1/cmr/m/n/12 and de-pend-
 ing on []\OT1/cmr/bx/n/12 FR.21[]\OT1/cmr/m/n/12 , the sys-tem should al-low th
 e $[]$
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[17]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[19] (./Requirements.aux)
+[16] [17] [18] [19] (./Requirements.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -576,7 +252,7 @@ Package rerunfilecheck Info: File `Requirements.out' has not changed.
 Here is how much of TeX's memory you used:
  8136 strings out of 469515
  125502 string characters out of 5470807
- 543130 words of memory out of 5000000
+ 543132 words of memory out of 5000000
  36665 multiletter control sequences out of 15000+600000
  634227 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -585,7 +261,7 @@ Here is how much of TeX's memory you used:
 ></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Requirements.pdf (19 pages, 96247 bytes).
+Output written on Requirements.pdf (19 pages, 96251 bytes).
 PDF statistics:
  566 PDF objects out of 1000 (max. 8388607)
  532 compressed objects within 6 object streams
