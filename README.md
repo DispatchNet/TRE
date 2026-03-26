@@ -4,10 +4,6 @@ Firstly,
 
 	git pull
 
-Alternatively, to pull the repository:
-
-	git pull <link>
-
 For branches:
 
 	git switch <branch_name>
