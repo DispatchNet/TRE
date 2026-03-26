@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  26 MAR 2026 11:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  26 MAR 2026 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Requirements.tex
-(./Requirements.tex
+**D1_DispatchNet.tex
+(./D1_DispatchNet.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -178,8 +178,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count295
 )
-(./Requirements.aux)
-\openout1 = `Requirements.aux'.
+(./D1_DispatchNet.aux)
+\openout1 = `D1_DispatchNet.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
@@ -200,9 +200,9 @@ LaTeX Font Info:    ... okay on input line 47.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
 Package hyperref Info: Link coloring OFF on input line 47.
- (./Requirements.out) (./Requirements.out)
+ (./D1_DispatchNet.out) (./D1_DispatchNet.out)
 \@outlinefile=\write3
-\openout3 = `Requirements.out'.
+\openout3 = `D1_DispatchNet.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 49.
@@ -210,7 +210,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 49.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Requirements.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./D1_DispatchNet.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -219,10 +219,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
  [2])
 \tf@toc=\write4
-\openout4 = `Requirements.toc'.
+\openout4 = `D1_DispatchNet.toc'.
 
- [3] [4]
-[5] [6] [7]
+
+[3] [4] [5] [6] [7]
 Underfull \hbox (badness 10000) in paragraph at lines 152--154
 
  []
@@ -241,27 +241,31 @@ ing on []\OT1/cmr/bx/n/12 FR.21[]\OT1/cmr/m/n/12 , the sys-tem should al-low th
 e $[]$
  []
 
-[16] [17] [18] [19] (./Requirements.aux)
+[16] [17] [18] [19] (./D1_DispatchNet.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `Requirements.out' has not changed.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package rerunfilecheck Info: File `D1_DispatchNet.out' has not changed.
 (rerunfilecheck)             Checksum: 9C32FD39190FB49653E87A5DD558F713;9236.
  ) 
 Here is how much of TeX's memory you used:
  8136 strings out of 469515
- 125502 string characters out of 5470807
- 543132 words of memory out of 5000000
+ 125550 string characters out of 5470807
+ 543133 words of memory out of 5000000
  36665 multiletter control sequences out of 15000+600000
  634227 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,12n,79p,416b,520s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,418b,520s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/alessio/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
 ></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Requirements.pdf (19 pages, 96251 bytes).
+Output written on D1_DispatchNet.pdf (19 pages, 96241 bytes).
 PDF statistics:
  566 PDF objects out of 1000 (max. 8388607)
  532 compressed objects within 6 object streams
