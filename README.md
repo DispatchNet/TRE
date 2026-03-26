@@ -2,7 +2,7 @@
 Both the send files and the WIPs
 Firstly,
 
-	git fetch
+	git pull
 
 Alternatively, to pull the repository:
 
