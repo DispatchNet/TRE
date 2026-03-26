@@ -1,18 +1,25 @@
 # TRE
 Both the send files and the WIPs
+Firstly,
 
-Remember to:
+	git pull
 
-	tag the version appropriately
-	
-	add
-	
-	commit (with a message)
-	
-	push
+For branches:
 
-To version, use: 
+	git switch <branch_name>
+
+To push, remember to:
+	
+	git add -A
+	
+	git commit -m <"message">
+
+	git push
+
+To create new tag (tag the version appropriately, see below: 
 	
 	git tag -a vX.Y -m "Version description"
 
 X is only incremented for major releases, Y is for all others
+
+	git push --tags
