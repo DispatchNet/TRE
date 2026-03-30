@@ -43,6 +43,7 @@
 \renewcommand\it[1]{\textit{#1}}
 \newcommand\un[1]{\underline{#1}}
 \newcommand\hyl[1]{\hyperref[#1]{\bf{#1}}}
+\newcommand\subs[2]{\subsection{#1}\label{#2}}
 
 \begin {document}
 \maketitle
@@ -70,14 +71,15 @@ The purpose of this document is to:
 \end{itemize}
 
 \section{Objectives}
-The project provides an interface that covers the needs of both passengers and train companies, as well as an underlying management system of rolling stock and network. The solution to this project has been identified in a web application accessible for the aforesaid users.
+The project provides an interface that covers the needs of both passengers and train companies, as well as an underlying 
+management system of rolling stock and network. 
+The solution to this project has been identified in an application accessible for the aforesaid users.
+
 Specifically, the objectives of the project are:
 
-\subsection{Account management} \label{O.1}
-Subsystem which deals with the management of accounts. It allows to classify between \un{Anonymous Users}, \un {Passengers}, or \un{Train Company Operator}, providing proper different functionalities to them. Moreover, it provides users' registration and authentication.
-
-\subsection{Ticketing system} \label{O.2}
-Subsystem which deals with tickets, from an interface with the details to the possible actions after the purchase. It includes basic operations that the user can perform, such as (but not limiting to):
+\subs{Ticketing system}{O.1}
+Subsystem which deals with tickets, from the search to the possible actions after the purchase. 
+It includes basic operations that the user can perform, such as (but not limiting to):
 \begin{itemize}
 	\item Selection with details.
 	\item Purchase.
@@ -85,43 +87,28 @@ Subsystem which deals with tickets, from an interface with the details to the po
 	\item Cancellation
 \end{itemize}
 
-\it{Boundary:} The project assumes the use of a third-party payment system, implementing only a reasonable place-holder for a real integration with it.
+\it{Boundary:} The project assumes the use of a third-party payment system, implementing only a place-holder for a real 
+integration with it.
 
-\subsection{Route-finding} \label{O.3}
-The system should provide users an interface where they can select a starting station, destination station, and either a departure time or expected arrival time.
-The system should then automatically compute and rank the best possible \bf{routes} that best fit the user's request and permissions
-(for example, not displaying cargo trains to \un{Passengers}).
-The user should then be able to choose among the options (if multiple), comparing estimated arrival and departure times of each train and possible count and locations of transfers.
-The system should include a dedicated section which displays several rankings based on the user's preferences.
+\subs{Route-finding}{O.2}
+The system lets users select a starting station, a destination station, and either a departure time or expected arrival time.
+The system then automatically computes and ranks the possible \bf{routes} that best fit the user's request and permissions
+(for example, not permitting cargo trains to \un{Passengers}).
+The user should is able to choose among the options (if multiple), comparing estimated arrival and departure times of each 
+train and possible count and locations of transfers.
+The system includes a dedicated section which displays several rankings based on the user's preferences.
 
-\subsection{Virtual board} \label{O.4}
-The system should provide users with the option to display any in-network station's Departure and Arrival boards, including and accounting for known strikes, deviations and/or delays. 
-A similar option should be available for individual train lines, displaying all the stations in its route and the expected scheduled times for each.
+\subs{Virtual board}{O.3}
+The system provides users any in-network station's Departure and Arrival boards, and similarly all stations in route for 
+individual train lines, including all the expected scheduled times for each.
 
-\subsection{Streamlining} \label{O.5}
-The user should be able to quickly transition between the virtual boards of a station and the trains that pass through it, and vice versa.
-The user should be able to quickly transition between a station's virtual board to a route that either departs or arrives to it,
-automatically filling in the relevant input of the \bf{route}-finding interface.
-Given a \bf{route}, the system should allow for direct purchase of the necessary tickets.
-
-\subsection{Rail system modeling} \label{O.6}
-The system should aim to model any real railway layout in terms of:
-\begin{itemize}
-	\item \bf{Lines:} Collection of tracks that run without interference between Stations and Junctions.
-	\item \bf{Junctions:} Where lines connect.
-	\item \bf{Stations:} Places for the train to stop and load passengers or cargo.
-\end{itemize}
-\it{Boundary:} Initially, the project does not aim to model each individual section of track, instead abstracting them to \bf{Lines} and \bf{Junctions} to reduce complexity.
-In the future, the system may be extended to allow for finer granularity.
-
-\subsection{Service planning} \label{O.7}
-The system must allow Companies to register services to be run along the network.
-
-\subsection{Train definitions} \label{O.8}
-The system must maintain a record of existing train types for use in services in order to calculate capacity and enforce physical constraints.
+\subs{Rail system modeling}{O.4}
+The system provides a data-driven approach to rail network modelling, such that it can be efficiently traversed by trains, 
+and therefore goods and passengers.
 
 \addcontentsline{toc}{section}{Stakeholders}
 \section*{Stakeholders}
+
 \addcontentsline{toc}{subsection}{Internal}
 \subsection*{Internal}
 
@@ -130,317 +117,378 @@ The system must maintain a record of existing train types for use in services in
 \un{Network managers}, the product owner. They want to combine the availability of train organizations with passengers' needs.
 They are the primary stakeholder for making functional decisions.
 
-\addcontentsline{toc}{subsubsection}{Non-human}
-\subsubsection*{Non-human}
-\un{Railway sensors}, Devices that notify the system when a train passes through it. Used to compute delays by comparing the 
-actual time of arrival of a train with its schedule.\\
-\it{Boundary:} The project assumes that these devices are implemented and installed by a third-party organization. They are simulated with random delay of random magnitude as a place-holder solution.
-
 \addcontentsline{toc}{subsection}{External}
 \subsection*{External}
 
 \addcontentsline{toc}{subsubsection}{Human}
 \subsubsection*{Human}
-\un{Passengers}, the main end users. They want to take a train to reach any possible destination, including:
+\un{Passengers}, the main end users. They want to streamline their interactions with the train transport system, including:
 \begin{itemize}
 	\item Searching for routes and schedules.
 	\item Analyzing departure/arrival boards as well as train information.
 	\item Buying tickets.
-    \item Other related details.
+	\item Other related details.
 \end{itemize}
 
-A subset of them are \un{Anonymous Users}, which are equivalent, save for not having logged in to an account, thus not having access to personal and personalized system functionalities.
-Upon logging in, \un{Anonymous Users} may prove to be another Actor, but are assumed to be passengers until proved otherwise. \\
+A subset of them are \un{Anonymous Users}, which are equivalent, save for not having logged in to an account, thus not 
+having access to personal and personalized system functionalities.
+Upon logging in, \un{Anonymous Users} may prove to not be \un{Passengers}, but are assumed to be passengers until proved 
+otherwise. \\
 
-\noindent\un{Train companies}, who provide the rolling stock. They want an efficient management of the network infrastructure. They are also expected to provide information of trains they ask to be managed.
+\noindent\un{Train companies}, who provide the rolling stock. They want an efficient management of the network 
+infrastructure. They are also expected to provide information of trains they ask to be managed.
 
 \addcontentsline{toc}{subsubsection}{Non-human}
 \subsubsection*{Non-human}
 \un{Payment gateway}, which provides the underlying payment methods.\\
+
 \it{Boundary:} The project will not provide actual transactions nor integration with any payment application.
 
 \section{Functional requirements}
-\subsection{Account registration} \label{FR.1}
-Following \hyl{O.1}, the system must allow anonymous users to register.
-The additional functionalities for authenticated users are described in \hyl{FR.32}
+\subs{Account classification}{FR.1}
+The system shall classify between anonymous user, passenger, train company operator and network manager. 
+The additional functionalities are described in 
+\hyperref[Table1]{\bf{Requirement restrictions based on user classification}}.
 
-\subsection{Account information} \label{FR.2}
-Following \hyl{O.1} and \hyl{NFR.2}, in reference to \hyl{FR.1}, at registration the system must require the user to provide username, email and password. information must satisfy the constraints indicated at \hyl{NFR.1}.
-Registration can finally succeed after \hyl{NFR.5}. At end of successful operation the user is notified as described at \hyl{NFR.4}
+\subs{Account registration}{FR.2}
+Following \hyl{FR.1}, in reference to \hyl{NFR.2}, the system must allow anonymous users to register. Data must 
+satisfy \hyl{NFR.3}. Password must satisfy \hyl{NFR.4} and \hyl{NFR.5}.
 
-\subsection{Account deletion} \label{FR.3}
-Following \hyl{O.1} and \hyl{NFR.2}, in reference to \hyl{FR.1}, the system must allow users to delete their accounts, as well as any other related information. At end of successful operation the user is notified
-as described at \hyl{NFR.4}.
+\subs{Consent management}{FR.3}
+Following \hyl{NFR.6}, in reference to \hyl{FR.2}, at registration the system must request the user's consent for personal 
+data processing.
 
-\subsection{Account information change} \label{FR.4}
-Following \hyl{O.1} and \hyl{NFR.2}, in reference to \hyl{FR.1}, the system must allow users to change their information (\hyl{FR.2}).
-The new information must satisfy the constraints indicated at \hyl{NFR.1}. At end of successful operation, the user should be notified as described in \hyl{NFR.4}.
+\subs{Account registration notification}{FR.4}
+In reference to \hyl{FR.2}, after successful registration the system must notify the user as described at \hyl{NFR.9}.
 
-\subsection{Password reset} \label{FR.5}
-Following \hyl{O.1}, in reference to \hyl{FR.1}, the system shall allow users to request a reset of their password and change it accordingly to \hyl{FR.4}.
-The user will be notified as described \hyl{NFR.4} with instructions on how to reset.
+\subs{Account deletion}{FR.5}
+Following \hyl{NFR.1}, the system shall allow users to delete their accounts, as well as any other related data.
 
-\subsection{Login} \label{FR.6}
-Following \hyl{O.1} the system should allow \un{Anonymous Users} to login using their username and password defined at \hyl{FR.2}.
+\subs{Account deletion notification}{FR.6}
+In reference to \hyl{FR.5}, after successful deletion the user is notified as described at \hyl{NFR.9}.
 
-\subsection{Logout} \label{FR.7}
-Following \hyl{O.1} the system should allow non-\un{Anonymous Users} to logout, switching to the restricted \un{Anonymous User} status.
+\subs{Data request management}{FR.7}
+Following \hyl{NFR.7}, in reference to \hyl{NFR.2}, the system must provide users view of their stored information.
 
-\subsection{Tickets information} \label{FR.8}
-Following \hyl{O.2}, the system shall include detailed information about the available tickets. In particular:
-\begin{itemize}
-	\item Train details (indicated at \hyl{FR.22}) which are relevant to the passenger.
-	Mainly, identifier, services provided, capacities and available classes (indicated in \hyl{FR.23}).
-	\item Arrival and departure times, as well as total travel time.
-	\item Arrival and departure stations.
-	\item Price.
-\end{itemize}
+\subs{Account data change}{FR.8}
+Following \hyl{NFR.8}, in reference and \hyl{NFR.2}, the system must allow users to change their data. New data must 
+satisfy \hyl{NFR.3}.
 
-\subsection{Tickets details display} \label{FR.9}
-Following \hyl{O.2}, in reference to \hyl{NFR.7}, the system must provide an interface containing ticket information described at \hyl{FR.8}. 
-It should be possible to quickly switch to \hyl{NFR.10}.
+\subs{Account data change notification}{FR.9}
+In reference to \hyl{FR.8}, after a successful change operation the user is notified as described at \hyl{NFR.9}.
 
-\subsection{Ticket purchase} \label{FR.10}
-Following \hyl{O.2} in reference to \hyl{NFR.7}, the system should allow users to buy tickets. It should show a final confirmation interface with all the ticket information described at \hyl{FR.8}. 
-The ticked will be marked as purchased and displayed properly in the history at \hyl{FR.12}.
+\subs{Password reset}{FR.10}
+Following \hyl{NFR.8}, in reference to \hyl{NFR.2}, the system shall allow users to reset the password and change it. 
+New password must satisfy \hyl{NFR.4} and \hyl{NFR.5}.
 
-\subsection{Ticket cancellation} \label{FR.11}
-Following \hyl{O.2}, the system should allow the cancellation of purchased tickets. It should show a final confirmation interface with the ticket information described at \hyl{FR.8}. The ticket will be marked as cancelled and displayed properly in the history at \hyl{FR.12}.
-At end of successful operation, the user is notified as described in \hyl{NFR.4}.
+\subs{Login}{FR.11}
+Following \hyl{FR.1}, the system must let users login using their username and password defined at registration (\hyl{FR.2}).
 
-\subsection{Ticket history} \label{FR.12}
-Following \hyl{O.2}, in reference to \hyl{FR.7}, the system should provide an interface displaying purchased tickets with the dynamics dictated at \hyl{FR.10} and cancelled tickets with the dynamics dictated at \hyl{FR.11}.
+\un{Boundary:} The \un{network manager} has default account username "admin" and password "Password1234".
 
-\subsection{Traversal} \label{FR.13}
-Following \hyl{O.3}, the system needs to be able to compute multiple \bf{paths} between nodes in the mesh.
-If the destination node is not reachable by the starting node, an explicit error should be given to the user instead of an empty list of paths.
+\subs{Logout}{FR.12}
+Following \hyl{FR.1}, the system shall let logged in users log out, switching to the restricted \un{anonymous user's} 
+functionalities. 
 
-\subsection{Ranking} \label{FR.14}
-Following \hyl{O.3}, in reference to \hyl{FR.13}, the system needs to be able to distinguish and rank multiple \bf{paths} over the network over several factors, including but not limited to:
-\begin{itemize}
-	\item Length.
-	\item Deviation from requested arrival or departure time.
-	\item Participation in user's privileges.
-	\item Expected cost.
-	\item Active tickets or subscriptions.
-\end{itemize}
-The user should manually select (or default to a favourite) among the rank-able factors.
+\subs{Tickets details display}{FR.13}
+Following \hyl{O.1}, the system must allow users to view tickets. 
 
-\subsection{Hybridization} \label{FR.15}
-Following \hyl{O.3}, in reference to \hyl{FR.13} and \hyl{FR.14}, the system needs to be able to treat two segments of separate train routes (\bf{natural} or \bf{transfer-dependent}) joined at a common valid arrival-into-departure station as a \bf{transfer-dependent route}, being hierarchically equivalent to a natural train route and carrying 
-the properties of the former train until the arrival to the transfer station, and the latter train's after its departure from the station.
+\subs{Tickets purchase}{FR.14}
+Following \hyl{O.1}, the system must allow users to buy tickets.
 
-\subsection{Segregation} \label{FR.16}
-Following \hyl{O.3}, the system should not consider train routes or paths over the network that pass through nodes or by trains that the user is  not allowed to use or purchase tickets for, be that because of train retirement, expectation of exceeded capacity, or incompatible train type.
+\subs{Tickets purchase confirmation}{FR.15}
+Following \hyl{O.1}, in reference to \hyl{FR.14}, the user must be asked for a final confirmation before purchase.
 
-\subsection{Station display} \label{FR.17}
-Following \hyl{O.4}, the system should store, update, and provide departure and arrival times of all train's schedules for every station.
+\subs{Tickets purchase notification}{FR.16}
+Following \hyl{O.1}, in reference to \hyl{FR.14}, at the end of a purchase operation, the system must notify user as 
+described at \hyl{NFR.9}.
 
-\subsection{Train display} \label{FR.18}
-Following \hyl{O.4}, the system should store, update, and provide departure and arrival times of any train on all stations in its schedule.
+\subs{Tickets cancellation}{FR.17}
+Following \hyl{O.1}, the system must allow the cancellation of purchased tickets. 
 
-\subsection{Scheduling change warnings} \label{FR.19}
-Following \hyl{O.4}, in reference to \hyl{FR.17} and \hyl{FR.18}, the system should be able to recognise and/or receive, and to provide to users when a train is expected to be late, delayed, cancelled, substituted or deviated.
+\subs{Tickets cancellation confirmation}{FR.18}
+Following \hyl{O.1}, in reference to \hyl{FR.17} and \hyl{NFR.9}, the user must be asked for a final confirmation before 
+cancellation.
 
-\subsection{Inference} \label{FR.20}
-Following \hyl{O.4}, in reference to \hyl{FR.17} and \hyl{FR.18}, if the system is aware of a delay, deviation, or cancellation of a train's route or of a departure or arrival time in station, it should automatically propagate that to all remaining stations on the affected train's route, estimating positive or negative delay caused by deviations using available data.
+\subs{Tickets cancellation notification}{FR.19}
+Following \hyl{O.1}, in reference to \hyl{FR.17}, at the end of a cancellation operation, the system must notify user as 
+described at \hyl{NFR.9}.
 
-\subsection{Defining a service request} \label{FR.21}
-Following \hyl{O.7}, in reference to \hyl{NFR.11}, \hyl{FR.30}, and \hyl{FR.31}, and depending on \hyl{FR.22}, \hyl{FR.23}, and \hyl{FR.24}.
-The system must allow \un{Companies} to request the \un{Network Owners} the introduction of a service between different stations.
-The service must include:
-\begin{itemize}
-	\item Travel time between all \bf{stations} and \bf{junctions}.
-	\item A list of Stations the service traverses (as well as the platform the service should use).
-	\item If the service is stopping, the dwell time at each Station.
-	\item The train type used to operate the service.
-	\item The departure times at one or more stations the train is scheduled to stop at (\bf{Dispatch Time})
-\end{itemize}
-\un{Note:} When departure times are defined it is assumed that the train waits for the first available departure time after its scheduled arrival time to continue.
-Dwell time is considered a minimum amount of time the train must be stopped for checking when the next available departure time is.
-The further handling of the request is defined in \hyl{FR.31}
+\subs{Tickets history}{FR.20}
+Following \hyl{O.1}, the system must allow users to view their tickets history, both purchased and cancelled.
 
-\subsection{Defining a train} \label{FR.22}
-Following \hyl{O.7} and depending on \hyl{FR.23}, the system should allow \un{Companies} to register a train type.
+\subs{Tickets classification}{FR.21}
+Following \hyl{O.1}, in reference to \hyl{FR.20}, the tickets history must show whether a ticket is valid, expired, or 
+cancelled.
 
-Upon definition, a train should include the following fields:
-\begin{itemize}
-	\item The train series identifier.
-	\item (Optionally) The commercial name of the train.
-	\item The set of service-types (see \hyl{FR.23}) that the train can be used for.
-	\item The length.
-	\item The maximum operating speed (Vmax).
-	\item Mode of traction (Diesel or Voltage).
-	\item Installed signaling systems (ERTMS, SCMT, \dots).
-	\item The type (Freight or Passenger).
-	\item Loading gauge.
-	\item Track gauge(s).
-	\item If passenger, capacities per Class (see \hyl{FR.23})
-\end{itemize}
-\it{Boundary:} This is the description of a train type, I.E. not the modelling of individual trains.
+\subs{Path search}{FR.22}
+Following \hyl{O.2}, the system needs to be able to compute multiple paths between stations.
 
-\subsection{Defining a service type} \label{FR.23}
-Following \hyl{O.7}, in reference to \hyl{FR.21} and \hyl{FR.22}, the system must allow \un{Companies} to define a service-type with their own set of service classes as well as their pricing model for passenger trains.
+\subs{Path points}{FR.23}
+Following \hyl{O.2} and extending \hyl{FR.22}, the user must choose both the first and last stations of paths to be computed.
 
-\subsection{Defining the network} \label{FR.24}
-Following \hyl{O.6} and depending on \hyl{FR.27}, \hyl{FR.28}, and \hyl{FR.29}, the system must allow \un{Network Owners} to register infrastructure information and construct a network out of its basic components.
+\subs{Path timing}{FR.24}
+Following \hyl{O.2} and extending \hyl{FR.22}, the user can, optionally, specify a first departure time and/or a last 
+arrival time. If neither is specified, the system must default to the earliest departure from the current time on-wards.
 
-\subsection{Viewing the network} \label{FR.25}
-Following \hyl{O.6} and to ease scheduling, the system should be able to generate \bf{schedule graphs} displaying services as they move through a certain \bf{path} along the network.
+\subs{Path ranking}{FR.25}
+Following \hyl{O.2}, in reference to \hyl{FR.22}, the system needs to be able to rank the paths over the network by one of
+several factors, at user's choice among a fixed list.
 
-\subsection{Defining a station} \label{FR.26}
-Following \hyl{O.6} and depending on \hyl{FR.29}, the system must allow \un{Network Managers} to register a \bf{station}, which is an extension of a \bf{junction}
+\subs{Ranking length}{FR.26}
+Following \hyl{O.2} and in reference to \hyl{FR.25}, the system should be able to rank higher the paths with the least 
+difference between the first departure and last arrival time, and the ones passing between the least amount of stations 
+among them.
 
-Upon definition, a \bf{station} should include the following fields:
-\begin{itemize}
-	\item Name.
-	\item GPS coordinates.
-	\item For each platform:
-	\begin{itemize}
-		\item Its length.
-		\item Its name.
-	\end{itemize}
-\end{itemize}
+\subs{Ranking deviation "Departure"}{FR.27}
+Following \hyl{O.2} and in reference to \hyl{FR.25}, the system should be able to rank higher paths that have a first 
+departure time closest (but not earlier than) the user requested departure time.
 
-\subsection{Defining a line} \label{FR.27}
-Following \hyl{O.6}, the system must allow \un{Network Managers} to register a \bf{line}.
+\subs{Ranking deviation 2 "Arrival"}{FR.28}
+Following \hyl{O.2} and in reference to \hyl{FR.25}, the system should be able to rank higher the paths that have a last 
+arrival time closest (but no later than) the user requested departure time.
 
-Upon definition, a \bf{line} should include the following fields:
-\begin{itemize}
-	\item Length.
-	\item Max Speed.
-	\item Signaling systems in use.
-	\item Start \& end \bf{junctions} or \bf{stations}.
-	\item A flag for if the line is single-tracked.
-	\item Electrification system.
-	\item Maximum allowed loading gauge.
-	\item Gauge(s).
-\end{itemize}
+\subs{Ranking cost}{FR.29}
+Following \hyl{O.2} and in reference to \hyl{FR.25}, the system should be able to rank higher paths whose total sum of 
+ticket's (not already owned as valid by the user) cost is lower.
 
-\subsection{Defining a junction} \label{FR.28}
-Following \hyl{O.6}, the system must allow \un{Network Managers} to register a \bf{junction}.
 
-Upon definition, a \bf{junction} should include the following fields:
-\begin{itemize}
-	\item Display name.
-	\item GPS location.
-\end{itemize}
+\subs{Transfers}{FR.30}
+Following \hyl{O.2} and in reference to \hyl{FR.22}, the system needs to be able to compute transfer paths out of 
+intersecting routes.
 
-\subsection{Service integrity checks} \label{FR.29}
-Following \hyl{O.7}, in reference to \hyl{FR.31}, and depending on \hyl{FR.21}, \hyl{FR.22}, and \hyl{FR.24}.
-The system should be able to perform the following checks on a service request:
-\begin{itemize}
-	\item No other service should be occupying a single tracked \bf{line} in opposite directions at the same time as the new service.
-	\item The platforms used at each station must be available at all times the service is running on them.
-	\item All the trains used must be compatible with the signaling systems installed along the traversed infrastructure.
-	\item All electric trains must be compatible with the electrification systems installed along the traversed structures.
-	\item All the trains used must be compatible with the track gauge of the line.
-	\item All the trains used must fit the shortest platform on the service.
-\end{itemize}
+\subs{Segregation}{FR.31}
+Following \hyl{O.2} and in reference to \hyl{FR.22}, the system must not consider train routes that pass through stations 
+or by trains that the user is not allowed to use or purchase a ticket for.
 
-The system should display the result of this check on request approval as well as before the request is sent for approval, however this 
-should not prevent the \un{Company} from submitting the request as it is possible that the \un{Network Managers} could intervene to rectify the network in such a way as to allow the service to run.
+\subs{Station display}{FR.32}
+Following \hyl{O.3}, the system must provide departure and arrival times of all trains that pass through any station.
 
-\subsection{Service request approval} \label{FR.30}
-Following \hyl{O.7} and depending on \hyl{FR.21}, the system should allow the \un{Network Managers} to review requests, after that they may:
+\subs{Train display}{FR.33}
+Following \hyl{O.3}, the system must provide departure and arrival times of a train on all stations in its schedule.
 
-\begin{itemize}
-	\item Approve the request as it is.
-	\item Send back an amended version of the request to the \un{Company} for counter-review.
-	\item Deny the request, returning some reasoning to the \un{Company}.
-\end{itemize}
+\subs{Path display}{FR.34}
+The system must be able to provide \hyl{FR.33} for all trains in a path, within the bounds of the train's participation in 
+that path.
 
-\subsection{Editing the network} \label{FR.31}
-Following \hyl{O.6}, in reference to \hyl{FR.24}, the system should allow modification and deletion 
-of components of the network.
+\subs{Creating a Service Request}{FR.35}
+Following \hyl{O.4}, \un{Companies} must be allowed to send the system a request for the introduction of a service.
 
-The system should perform a check on all services on the network before allowing the edit to take place, in order to avoid undefined behaviour.
+\subs{Defining a Train Type}{FR.36}
+In reference to  \hyl{FR.37}, the system must allow companies to register a train type to be used when defining a service.
 
-\subsection{Requirements accessible based on user classification} \label{FR.32}
-!TABLEHERE!
+\subs{Defining a Service Type}{FR.37}
+In reference to \hyl{FR.35} and \hyl{FR.36}.  
+The system must allow companies to define a set of types of services with their own set of service classes as well as a 
+pricing model for passenger trains.
 
+\subs{Viewing the Network}{FR.38}
+Following \hyl{O.3} and \hyl{O.4}, the system must allow any user to access a map of the network.
+
+\subs{Registering a Station}{FR.39}
+Following \hyl{O.4}, the system must allow network managers to register a station.
+
+\subs{Modifying a Station}{FR.40}
+Following \hyl{O.4}, the system must allow network managers to modify any existing station.
+
+
+\subs{Deleting a Station}{FR.41}
+Following \hyl{O.4}, the system must allow network managers to delete any existing station.
+
+\subs{Registering a Line}{FR.42}
+Following \hyl{O.4}, the system must allow network managers to register a line.  
+
+
+\subs{Modifying a Line}{FR.43}
+Following \hyl{O.4}, the system must allow network managers to modify any existing line.  
+
+\subs{Deleting a Line}{FR.44}
+Following \hyl{O.4}, the system must allow network managers to delete any existing line.
+
+\subs{Registering a Junction}{FR.45}
+Following \hyl{O.4}, the system must allow network managers to register a junction.  
+
+\subs{Modifying a Junction}{FR.46}
+Following \hyl{O.4}, the system must allow network managers to modify any existing junction.  
+
+\subs{Deleting a Junction}{FR.47}
+Following \hyl{O.4}, the system must allow network managers to delete any existing junction.  
+
+\subs{Automated Service Integrity Checks}{FR.48}
+In reference to \hyl{FR.55}, the system must autonomously be able to perform integrity checks on proposed services.
+Integrity checks are defined by: \hyl{FR.50}, \hyl{FR.51}, \hyl{FR.52}, and \hyl{FR.53}.
+
+\subs{Displaying Integrity Check Results}{FR.49}
+Extending \hyl{FR.48}, the system should be able to provide these results.
+
+\subs{Single Tracked Availability Check}{FR.50}
+Following \hyl{FR.48}, the system should ensure that no two services are scheduled to traverse a single track line in the 
+opposite directions at the same time.
+
+\subs{Platform Availability Check}{FR.51}
+Following \hyl{FR.48}, the system should ensure that two services are scheduled to stop at the same platform at the same time.
+
+\subs{Trackside Systems Compatibility Check}{FR.52}
+Following \hyl{FR.48}, the system should ensure that all trains used for a service are compatible with the signaling and 
+electrification systems installed on the traversed infrastructure.
+
+\subs{Track Geometry Check}{FR.53}
+Following \hyl{FR.48}, the system should ensure that all trains used for a service are compatible with both the loading 
+and track gauges of the infrastructure they traverse.
+
+\subs{Service Request Review}{FR.54}
+Following \hyl{FR.35}, the system must allow the network managers to review requests.
+
+\subs{Service Request approval}{FR.55}
+In reference to \hyl{FR.35}, the network manager must be able to approve a service request, applying the proposed changes to 
+the system and notifying (\hyl{NFR.9}) the company that submitted the request
+
+\subs{Service Request amendment}{FR.56}
+In reference to \hyl{FR.35}, the system must allow the network manager to send back an amended version of the request for 
+the company to review, notifying (\hyl{NFR.9}) them.
+
+\subs{Service Request denial}{FR.57}
+In reference to \hyl{FR.35}, network managers must be able to deny a service request, deleting it from the system and 
+notifying (\hyl{NFR.9}) the company that submitted the request.
+
+\addcontentsline{toc}{subsection}{Requirement restrictions based on user classification}
+\subsection*{Requirement restrictions based on user classification}\label{Table1}
+\begin{center}
+	\begin{tabular}{c|c c c c }
+	\hline
+	\bf{Requirement} &Anonymous &Passenger &Train company &Manager \\
+	\hline
+	\begin{tabular}{@{}c@{}}
+	\bf{FR.1}\\
+	\bf{FR.38}	
+	\end{tabular} &Full &Full &Full &Full \\
+	\hline
+	\begin{tabular}{@{}c@{}}
+	\bf{FR.2-4}\\
+	\bf{FR.11} 
+	\end{tabular} &Full &None &None &None \\
+	\hline
+	\bf{FR.5-10} &None &Full &Full &None \\
+	\hline
+	\bf{FR.12} &None &Full &Full &Full \\
+	\hline
+	\begin{tabular}{@{}c@{}}
+	\bf{FR.13}\\
+	\bf{FR.22-34} 
+	\end{tabular} &Full &Full &None &None \\
+	\hline
+	\bf{FR.14-21} &None &Full &None &None \\
+	\hline
+	\bf{FR.35-37} &None &None &Full &None \\
+	\hline
+	\begin{tabular}{@{}c@{}}
+	\bf{FR.39-47}\\
+	\bf{FR.55-57} 
+	\end{tabular} &None &None &None &Full \\
+	\hline
+	\bf{FR.54} &None &None &Self &Full \\
+	\hline
+	\end{tabular}
+\end{center}
 \section{Non-functional requirements}
-\subsection{Account registration details} \label{NFR.1}
-\it{Product - Usability requirement}
 
-Following \hyl{O.1} and \hyl{NFR.2}, when performing \hyl{FR.1} and regarding \hyl{FR.2}.
-The account information must be such that:
+\subs{Data Protection Regulation}{NFR.1}
+\un{External requirement - Legislative requirement} \\
+
+\noindent The system respects the \href{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02016R0679-20160504&qid=1532348683434}
+{Regulation (EU) 2016/679} on the protection of natural persons with regard to the processing of personal data. In particular:
+\begin{itemize}
+	\item[Art. 5] Principles relating to processing of personal data, ensuring ethical processing.
+	\item[Art. 6, 7] Lawfulness of processing and Conditions for consent, both concerning consent for the processing 
+	of personal data.
+	\item[Art. 13] Information to be provided where personal data are collected from the data subject, 
+	i.e. providing information of the controller of the processing.
+	\item[Art. 15] Right of access by the data subject, i.e. users must be able to see their stored information.
+	\item[Art. 16] Right to rectification, i.e. users must be able to change their information.
+	\item[Art. 17] Right to erasure (‘right to be forgotten’).
+	\item[Art. 32] Security of processing.
+\end{itemize}
+
+\subs{Account data}{NFR.2}
+\un{Product requirement - Security requirement} \\
+
+\noindent Following \hyl{FR.1} and \hyl{NFR.1}, in reference to \hyl{FR.2}, user accounts must include username, email and 
+password.
+
+\subs{Account data details}{NFR.3}
+\un{Product requirement - Security requirement} \\
+
+\noindent Following \hyl{NFR.1} and \hyl{NFR2}, account data must satisfy the following:
 \begin{itemize}
 	\item The username must be unique.
-	\item The email must be unique, and validated after registration.
-	\item The password must be secure, as indicated in \hyl{NFR.3}, and inserted twice to avoid typing errors.
+	\item The email must be unique.
 \end{itemize}
 
-\subsection{Data protection regulation} \label{NFR.2}
-\it{External - Legislative requirement}
+\subs{Password security}{NFR.4}
+\un{Product requirement - Security requirement} \\
 
-The system must respect \href{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02016R0679-20160504&qid=1532348683434}{EU Regulation 2016/679} 
-on the protection of natural persons with regard to the processing of personal data.
-In particular:
-\begin{itemize}
-	\item[\bf{Art.5}] Principles relating to processing of personal data, ensuring ethical processing.
-	\item[\bf{Art.6,7}] Lawfulness of processing, Conditions for consent. Both concerning consent for the processing of personal data.
-	\item[\bf{Art.13}] Information to be provided where personal data are collected from the data subject, I.E. providing information of the controller of the processing.
-	\item[\bf{Art.15}] Right of access by the data subject, I.E. Users must be able to see their stored information.
-	\item[\bf{Art.16}] Right to rectification, I.E. users must be able to change their information.
-	\item[\bf{Art.17}] Right to erasure ('Right to be forgotten').
-	\item[\bf{Art.32}] Security of processing.
-\end{itemize}
+\noindent Following \hyl{NFR.1} and \hyl{NFR.2}, in reference to \hyl{FR.3}, the password must be at least 8 characters, 
+with at least one upper and one lowercase letters and one digit.
 
-\subsection{Password security} \label{NFR.3}
-\it{Product - Security requirement}
+\subs{Typo prevention}{NFR.5*}
+\un{Product requirement - Security requirement} \\
 
-Following \hyl{O.1} and \hyl{NFR.2}, the passwords related to \hyl{FR.2} must be at least 8 characters, with at least one upper and one lower case letter and one digit.
+\noindent When a password is chosen or modified, the system must take prevention to mitigate typos.
+Such as: requiring the password to be typed twice and only accepted if both match.
 
-\subsection{Email notification} \label{NFR.4}
-\it{Product - Usability requirement}
+\subs{Consent for personal data processing}{NFR.6}
+\un{External requirement - Legislative requirement} \\
 
-The system should notify the user when certain events happen. This should be implemented by sending an email to the address specified at registration, as indicated at \hyl{FR.1}.
+\noindent Following \hyl{NFR.1}, the system must comply with the GDPR for data processing consent.
 
-\subsection{Consent for personal data processing} \label{NFR.5}
-\it{External - Legislative requirement}
+\subs{Request of processed data}{NFR.7}
+\un{External requirement - Legislative requirement} \\
 
-Following \hyl{NFR.2}, the system must show the user the data that will be processed, the reason, and must ask for consent.
+\noindent Following \hyl{NFR1}, the system must comply with the GDPR for accessing processed data.
 
-\subsection{Request of processed data} \label{NFR.6}
-\it{External - Legislative requirement}
+\subs{Rectification of processed data}{NFR.8}
+\un{External requirement - Legislative requirement} \\
 
-Following \hyl{NFR.2}, the system must provide users review of their stored information, through email notification, as indicated at \hyl{NFR.4}.
+\noindent Following \hyl{NFR1}, the system must comply with the GDPR for the right of rectification.
 
-\subsection{Tickets information consistency} \label{NFR.7}
-\it{Product - Usability requirement}
+\subs{Email notification}{NFR.9}
+\un{Product requirement - Usability requirement} \\
 
-Following \hyl{O.2}, the system must consistently show the same ticket information data, which is listed at \hyl{FR.8}, in the functionalities described at \hyl{FR.9} and \hyl{FR.12}; in the latter there should also be added hour and date of purchase and a classification on the status, being either valid, expired, or cancelled.
+\noindent Notifications shall be sent via email to the account's email address.
 
-\subsection{Process interconnection} \label{NFR.8}
-\it{Product - Usability requirement}
+\subs{Station to train display}{NFR.10}
+\un{Product requirement - Usability requirement} \\
 
-Following \hyl{O.5}, for all processes the user can initiate: all other processes that require a similar type of input as the user's process or could accept the user's process' output as input should have some easily accessible way to be used as such if relevant.
+\noindent Users must be able to switch with a single prompt/input between a station's display and a train's display passing 
+through that station.
 
-\subsection{Input minimization} \label{NFR.9}
-\it{Product - Usability requirement}
+\subs{Train to station display}{NFR.11}
+\un{Product requirement - Usability requirement} \\
 
-Following \hyl{O.5}, in reference to \hyl{NFR.8}, all operations of the system that accept user's input about information the system can provide should be capable of automatically obtaining such information from the system itself.
+\noindent Users must be able to switch with a single prompt/input between a train's display and a station's display in its 
+schedule.
 
-When a procedure is started by the user it should inherit and auto-fill as many of its inputs from the previous interface's relevant data, as possible, to minimise user repetition.
+\subs{Station "from" path}{NFR.12}
+\un{Product requirement - Usability requirement} \\
 
-\subsection{Computational speed} \label{NFR.10}
-\it{Product - Usability requirement}
+\noindent Users must be able to switch with a single prompt/input between a station's display and the route-finding 
+procedure with the station automatically set as the path's start.
 
-Following \hyl{O.3}, all path's displays should take at most five hundred milliseconds to load, and the computation of a \bf{path} along the network should take no more than one second on top of that. 
+\subs{Station "to" path}{NFR.13}
+\un{Product requirement - Usability Requirement} \\
 
-Once the time limit is up, no more \bf{paths} should be computed, providing the user only the possibly incomplete list.
+\noindent Users must be able to switch with a single prompt/input between a station's display and the route-finding 
+procedure with the station automatically set as to the destination.
 
-\subsection{Topology} \label{NFR.11}
-\it{!YET UNDEFINED!}
+\subs{Path list to path list}{NFR.14}
+\un{Product requirement - Usability requirement} \\
 
-Following \hyl{O.6}, the system must be able to store the layout of the rail network as a mesh,
-with no limit of inbound or outbound connections for nodes, within reason.
+\noindent Users must be able to switch from a list of paths according to a ranking option to another, in no more 
+steps/inputs than the ones required to select a different ranking. 
 
-\subsection{ID uniqueness} \label{NFR.12}
-\it{!YET UNDEFINED!}
+\subs{Ranking non-choice}{NFR.15}
+\un{Product requirement - Usability requirement} \\
 
-Following \hyl{O.6} and in reference \hyl{NFR.11}, the system should store each element in the network with unique IDs for 
-each type network element.
+\noindent The system should default to \hyl{FR.26} until a different ranking choice is given by the user.
 
 \end {document}
