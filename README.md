@@ -18,8 +18,16 @@ To push, remember to:
 
 To create new tag (tag the version appropriately, see below: 
 	
-	git tag -a vX.Y -m "Version description"
+	First, find your commit to tag (usually at the top) from the list
+	
+	git log --pretty=oneline
 
-X is only incremented for major releases, Y is for all others
+	Then, Take the first characters of its hash string, to tag the commit
+	
+	git tag -a v<X>.<Y> -m "Version description" <First characters>
 
+	Remeber then to also push the tags, after pushing to remote
+	
 	git push --tags
+	
+X is only incremented for major releases, Y is for all others
