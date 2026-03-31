@@ -2,6 +2,10 @@
 
 \usepackage{fancyhdr}
 \usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue
+}
 
 \setlength{\headheight}{14.49998pt}
 \addtolength{\topmargin}{-2.49998pt}
@@ -42,22 +46,23 @@
 \renewcommand\bf[1]{\textbf{#1}}
 \renewcommand\it[1]{\textit{#1}}
 \newcommand\un[1]{\underline{#1}}
-\newcommand\hyl[1]{\hyperref[#1]{\bf{#1}}}
+\newcommand\hyl[1]{\hyperref[#1]{#1}}
 \newcommand\subs[2]{\subsection{#1}\label{#2}}
+\newcommand\ssubs[2]{\subsubsection{#1}\label{#2}}
 
 \begin {document}
 \maketitle
 
 \newpage
-\tableofcontents
+\tableofcontents \label{Contents}
 
 \section*{Readability notes}
-\bf{Bold} words are system-important constructs \newline
-\un{Underlined} nouns are actors of the system \newline
-\it{Italic} words are special keywords to denote important limits of the project
-\bf{Text} in reference to Sections and Subsections will be a hyperlink
+\bf{Bold} words are system-important constructs. \newline
+\un{Underlined} nouns are actors of the system. \newline
+\it{Italic} words are special keywords to denote important limits of the project. \newline
+\hyperref[Contents]{Hyperlinks} in reference to sections and subsections will be blue. \newline
+\href{https:\\www.google.com}{Hyperlinks} to external web content will be in magenta.
 \newpage
-
 
 \addcontentsline{toc}{section}{Purpose}
 \section*{Purpose}
@@ -105,7 +110,7 @@ individual train lines, including all the expected scheduled times for each.
 \subs{Rail system modeling}{O.4}
 The system provides a data-driven approach to rail network modelling, such that it can be efficiently traversed by trains, 
 and therefore goods and \un{passengers}.
-
+\phantomsection
 \addcontentsline{toc}{section}{Stakeholders}
 \section*{Stakeholders}
 
@@ -147,7 +152,7 @@ infrastructure. They are also expected to provide information of trains they ask
 \subs{Account classification}{FR.1}
 The system shall classify between \un{anonymous user}, \un{passenger}, \un{train company} operator and \un{network manager}. 
 The additional functionalities are described in 
-\hyperref[Table1]{\bf{Requirement restrictions based on user classification}}.
+\hyperref[Table1]{Requirement restrictions based on user classification}.
 
 \subs{Account registration}{FR.2}
 Following \hyl{FR.1}, in reference to \hyl{NFR.2}, the system must allow \un{anonymous users} to register. Data must 
@@ -391,8 +396,9 @@ Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, \un{network ma
 \subs{Data Protection Regulation}{NFR.1}
 \un{External requirement - Legislative requirement} \\
 
-\noindent The system respects the \href{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02016R0679-20160504&qid=1532348683434}
-{Regulation (EU) 2016/679} on the protection of natural persons with regard to the processing of personal data. In particular:
+\noindent The system must respect the \href{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02016R0679-20160504&qid=1532348683434}
+{Regulation (EU) 2016/679} on the protection of natural persons with regard to the processing of personal data. 
+With special attention to:
 \begin{itemize}
 	\item[Art. 5] Principles relating to processing of personal data, ensuring ethical processing.
 	\item[Art. 6, 7] Lawfulness of processing and Conditions for consent, both concerning consent for the processing 

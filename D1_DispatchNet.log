@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  31 MAR 2026 10:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  31 MAR 2026 19:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -174,6 +174,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip65
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 8.
+
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count295
@@ -181,33 +183,59 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 (./D1_DispatchNet.aux)
 \openout1 = `D1_DispatchNet.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-Package hyperref Info: Link coloring OFF on input line 48.
- (./D1_DispatchNet.out) (./D1_DispatchNet.out)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+ (/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count296
+\scratchdimen=\dimen153
+\scratchbox=\box53
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen154
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks20
+)) (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+Package hyperref Info: Link coloring ON on input line 53.
+
+(./D1_DispatchNet.out) (./D1_DispatchNet.out)
 \@outlinefile=\write3
 \openout3 = `D1_DispatchNet.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 50.
+(Font)              <14.4> on input line 55.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 50.
+(Font)              <7> on input line 55.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./D1_DispatchNet.toc
@@ -221,102 +249,100 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `D1_DispatchNet.toc'.
 
-
-[4] [5]
-Overfull \hbox (11.12778pt too wide) in paragraph at lines 106--108
+ [4] [5]
+Overfull \hbox (11.12778pt too wide) in paragraph at lines 111--115
 \OT1/cmr/m/n/12 that it can be ef-fi-ciently tra-versed by trains, and there-fo
-re goods and $[]$. 
+re goods and $[]$.
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 132--136
+Underfull \hbox (badness 10000) in paragraph at lines 137--141
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 
-Overfull \hbox (16.24516pt too wide) in paragraph at lines 153--155
-\OT1/cmr/m/n/12 Following []\OT1/cmr/bx/n/12 FR.1[]\OT1/cmr/m/n/12 , in ref-er-
-ence to []\OT1/cmr/bx/n/12 NFR.2[]\OT1/cmr/m/n/12 , the sys-tem must al-low $[]
-$
+Overfull \hbox (7.29453pt too wide) in paragraph at lines 158--160
+\OT1/cmr/m/n/12 Following [][]FR.1[][], in ref-er-ence to [][]NFR.2[][], the sy
+s-tem must al-low $[]$
  []
 
-[7] [8] [9] [10] [11] [12] [13] [14]
-Overfull \hbox (29.02402pt too wide) in paragraph at lines 337--338
-\OT1/cmr/m/n/12 Following []\OT1/cmr/bx/n/12 O.4[]\OT1/cmr/m/n/12 , in ref-er-e
-nce to []\OT1/cmr/bx/n/12 FR.35[]\OT1/cmr/m/n/12 , the sys-tem must al-low the 
-$[]$
+[7] [8] [9] [10] [11] [12]
+Overfull \hbox (3.90843pt too wide) in paragraph at lines 320--322
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.55[][], the sys
+-tem must be able to au-tonomously
+ []
+
+[13]
+Overfull \hbox (22.18602pt too wide) in paragraph at lines 342--343
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.35[][], the sys
+-tem must al-low the $[]$
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
+
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 409--410
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
 
-LaTeX Warning: Hyper reference `NFR2' on page 17 undefined on input line 417.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--425
+Underfull \hbox (badness 10000) in paragraph at lines 421--422
 
  []
+
+
+LaTeX Warning: Hyper reference `NFR2' on page 16 undefined on input line 423.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
+
+ []
+
+
+LaTeX Warning: Hyper reference `NFR1' on page 17 undefined on input line 448.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
+
+ []
+
+
+LaTeX Warning: Hyper reference `NFR1' on page 17 undefined on input line 453.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--457
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
-
- []
-
-
-LaTeX Warning: Hyper reference `NFR1' on page 18 undefined on input line 442.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 445--446
-
- []
-
-
-LaTeX Warning: Hyper reference `NFR1' on page 18 undefined on input line 447.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 461--462
 
  []
 
-[18]
+
 Underfull \hbox (badness 10000) in paragraph at lines 467--468
 
  []
@@ -336,6 +362,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 485--486
 
  []
 
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+
+ []
+
 [19] (./D1_DispatchNet.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -346,24 +377,24 @@ L3 programming layer <2026-01-19>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `D1_DispatchNet.out' has not changed.
-(rerunfilecheck)             Checksum: 527E0920B4F266E24D01D98AAAF2E9B2;14119.
+(rerunfilecheck)             Checksum: 95915AD1FE83B65C5BD9B4FAD61FD052;14125.
  ) 
 Here is how much of TeX's memory you used:
- 8210 strings out of 469515
- 126501 string characters out of 5470807
- 547670 words of memory out of 5000000
- 36715 multiletter control sequences out of 15000+600000
+ 8766 strings out of 469515
+ 134174 string characters out of 5470807
+ 555676 words of memory out of 5000000
+ 37253 multiletter control sequences out of 15000+600000
  634227 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,12n,79p,395b,516s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,395b,517s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/alessio/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
 ></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti12.pfb>
-Output written on D1_DispatchNet.pdf (19 pages, 91559 bytes).
+Output written on D1_DispatchNet.pdf (19 pages, 92092 bytes).
 PDF statistics:
- 699 PDF objects out of 1000 (max. 8388607)
- 664 compressed objects within 7 object streams
- 109 named destinations out of 1000 (max. 500000)
+ 702 PDF objects out of 1000 (max. 8388607)
+ 667 compressed objects within 7 object streams
+ 110 named destinations out of 1000 (max. 500000)
  697 words of extra memory for PDF output out of 10000 (max. 10000000)
 
