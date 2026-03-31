@@ -66,50 +66,59 @@
 
 \addcontentsline{toc}{section}{Purpose}
 \section*{Purpose}
-This document describes the scope of the Project "TRE", which implements a system for rail transport management.
+This document describes the scope and the requirements of the Project "TRE", which implements a rail transport management system.
 
 The purpose of this document is to: 
 \begin{itemize}
-	\item Present the objectives.
+	\item Specify the objectives.
 	\item Identify the primary stakeholders.
 	\item Define the functional and non-functional requirements.
 \end{itemize}
 
 \section{Objectives}
-The project provides an interface that covers the needs of both \un{passengers} and train companies, as well as an underlying 
-management system of rolling stock and network. 
+The project provides a platform that covers the needs of both \un{passengers} and \un{train companies}, as well as an underlying 
+management system of any rail network, which supports \un{network managers} in its administration. 
 The solution to this project has been identified in an application accessible for the aforesaid users.
 
-Specifically, the objectives of the project are:
+The main objectives of the project are:
 
 \subs{Ticketing system}{O.1}
 Subsystem which deals with tickets, from the search to the possible actions after the purchase. 
-It includes basic operations that the user can perform, such as (but not limiting to):
+It includes basic operations that the \un{passenger} can perform, such as:
 \begin{itemize}
-	\item Selection with details.
+	\item Viewing tickets details.
 	\item Purchase.
-	\item Previous purchase history.
+	\item Accessing tickets history.
 	\item Cancellation
 \end{itemize}
 
-\it{Boundary:} The project assumes the use of a third-party payment system, implementing only a place-holder for a real 
+\it{Boundary:} The project assumes the use of a third-party \un{payment gateway} system, implementing only a place-holder for a real 
 integration with it.
 
 \subs{Route-finding}{O.2}
-The system lets users select a starting station, a destination station, and either a departure time or expected arrival time.
-The system then automatically computes and ranks the possible \bf{routes} that best fit the user's request and permissions
-(for example, not permitting cargo trains to \un{Passengers}).
-The user must be able to choose among the options (if multiple), comparing estimated arrival and departure times of each 
-train and possible count and locations of transfers.
-The system includes a dedicated section which displays several rankings based on the user's preferences.
+The system shall let \un{passengers} select a starting station, a destination station, and either a departure time or arrival time.\\
+It computes and ranks possible \bf{routes} that best fit the user's request and permissions
+(for example, not permitting cargo trains to \un{passengers}).\\
+The user must be able to compare the options based on:
+\begin{itemize}
+    \item Departure and arrival times.
+    \item Number of transfers.
+    \item Possible transfer locations.
+\end{itemize}
 
 \subs{Virtual board}{O.3}
-The system provides users any station's Departure and Arrival boards, and, similarly, all stations in route for 
-individual train lines, including all the expected scheduled times for each.
+The system provides \un{passengers} access to departure and arrival boards for any station. It also shows intermediate stations and scheduled times for each 
+individual train service.
 
 \subs{Rail system modeling}{O.4}
-The system provides a data-driven approach to rail network modelling, such that it can be efficiently traversed by trains, 
-and therefore goods and \un{passengers}.
+The system provides a data-driven approach to rail network modelling, supporting an efficient administration of the infrastructure.\\
+It shall support:
+\begin{itemize}
+    \item Management of the network by the \un{network manager}.
+    \item Management of rolling stock by the \un{network manager}.
+    \item Submission of a new service request by \un{train companies}.
+    \item Review of a service request by the \un{network manager}.
+\end{itemize}
 \phantomsection
 \addcontentsline{toc}{section}{Stakeholders}
 \section*{Stakeholders}
@@ -119,8 +128,8 @@ and therefore goods and \un{passengers}.
 
 \addcontentsline{toc}{subsubsection}{Human}
 \subsubsection*{Human}
-\un{Network managers}, the product owner. They want to combine the availability of train organizations with \un{passengers'} needs.
-They are the primary stakeholder for making functional decisions.
+\un{Network managers}, the product owner. They manage the rail network combining the availability of \un{train companies} with \un{passengers'} needs.\\
+They are the primary stakeholders for making functional decisions.
 
 \addcontentsline{toc}{subsection}{External}
 \subsection*{External}
@@ -131,16 +140,10 @@ They are the primary stakeholder for making functional decisions.
 \begin{itemize}
 	\item Searching for routes and schedules.
 	\item Analyzing departure/arrival boards as well as train information.
-	\item Buying tickets.
+	\item Purchase tickets.
 \end{itemize}
 
-\un{Anonymous Users}, which are \un{passengers}, save for not having logged in to an account, thus not 
-having access to personal and personalized system functionalities.
-Upon logging in, \un{Anonymous Users} may prove to not be \un{Passengers}, but are assumed to be \un{passengers} until proved 
-otherwise. \\
-
-\noindent\un{Train companies}, who provide the rolling stock. They want an efficient management of the network 
-infrastructure. They are also expected to provide information of trains they ask to be managed.
+\noindent\un{Train companies}, who provide the rolling stock. They request the introduction of services. They are also expected to provide information of trains they ask to be managed.
 
 \addcontentsline{toc}{subsubsection}{Non-human}
 \subsubsection*{Non-human}
