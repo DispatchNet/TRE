@@ -71,7 +71,7 @@ The purpose of this document is to:
 \end{itemize}
 
 \section{Objectives}
-The project provides an interface that covers the needs of both passengers and train companies, as well as an underlying 
+The project provides an interface that covers the needs of both \un{passengers} and train companies, as well as an underlying 
 management system of rolling stock and network. 
 The solution to this project has been identified in an application accessible for the aforesaid users.
 
@@ -104,7 +104,7 @@ individual train lines, including all the expected scheduled times for each.
 
 \subs{Rail system modeling}{O.4}
 The system provides a data-driven approach to rail network modelling, such that it can be efficiently traversed by trains, 
-and therefore goods and passengers.
+and therefore goods and \un{passengers}.
 
 \addcontentsline{toc}{section}{Stakeholders}
 \section*{Stakeholders}
@@ -114,7 +114,7 @@ and therefore goods and passengers.
 
 \addcontentsline{toc}{subsubsection}{Human}
 \subsubsection*{Human}
-\un{Network managers}, the product owner. They want to combine the availability of train organizations with passengers' needs.
+\un{Network managers}, the product owner. They want to combine the availability of train organizations with \un{passengers'} needs.
 They are the primary stakeholder for making functional decisions.
 
 \addcontentsline{toc}{subsection}{External}
@@ -129,9 +129,9 @@ They are the primary stakeholder for making functional decisions.
 	\item Buying tickets.
 \end{itemize}
 
-\un{Anonymous Users}, which are passengers, save for not having logged in to an account, thus not 
+\un{Anonymous Users}, which are \un{passengers}, save for not having logged in to an account, thus not 
 having access to personal and personalized system functionalities.
-Upon logging in, \un{Anonymous Users} may prove to not be \un{Passengers}, but are assumed to be passengers until proved 
+Upon logging in, \un{Anonymous Users} may prove to not be \un{Passengers}, but are assumed to be \un{passengers} until proved 
 otherwise. \\
 
 \noindent\un{Train companies}, who provide the rolling stock. They want an efficient management of the network 
@@ -145,12 +145,12 @@ infrastructure. They are also expected to provide information of trains they ask
 
 \section{Functional requirements}
 \subs{Account classification}{FR.1}
-The system shall classify between anonymous user, passenger, train company operator and network manager. 
+The system shall classify between \un{anonymous user}, \un{passenger}, \un{train company} operator and \un{network manager}. 
 The additional functionalities are described in 
 \hyperref[Table1]{\bf{Requirement restrictions based on user classification}}.
 
 \subs{Account registration}{FR.2}
-Following \hyl{FR.1}, in reference to \hyl{NFR.2}, the system must allow anonymous users to register. Data must 
+Following \hyl{FR.1}, in reference to \hyl{NFR.2}, the system must allow \un{anonymous users} to register. Data must 
 satisfy \hyl{NFR.3}. Password must satisfy \hyl{NFR.4} and \hyl{NFR.5}.
 
 \subs{Consent management}{FR.3}
@@ -249,7 +249,7 @@ arrival time closest (but no later than) the user requested departure time.
 
 \subs{Ranking cost}{FR.29}
 Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall be able to rank higher the paths with lower total cost of 
-tickets' (not already owned as valid by the user).
+tickets' not already owned as valid by the user.
 
 
 \subs{Transfers}{FR.30}
@@ -283,33 +283,33 @@ The system must allow companies to define services and classes, as well as a pri
 Following \hyl{O.3} and \hyl{O.4}, the system must allow users to access a map of the network.
 
 \subs{Registering a Station}{FR.39}
-Following \hyl{O.4}, the system must allow network managers to register a station.
+Following \hyl{O.4}, the system must allow \un{network managers} to register a station.
 
 \subs{Modifying a Station}{FR.40}
-Following \hyl{O.4}, the system must allow network managers to modify any existing station.
+Following \hyl{O.4}, the system must allow \un{network managers} to modify any existing station.
 
 
 \subs{Deleting a Station}{FR.41}
-Following \hyl{O.4}, the system must allow network managers to delete any existing station.
+Following \hyl{O.4}, the system must allow \un{network managers} to delete any existing station.
 
 \subs{Registering a Line}{FR.42}
-Following \hyl{O.4}, the system must allow network managers to register a line.  
+Following \hyl{O.4}, the system must allow \un{network managers} to register a line.  
 
 
 \subs{Modifying a Line}{FR.43}
-Following \hyl{O.4}, the system must allow network managers to modify any existing line.  
+Following \hyl{O.4}, the system must allow \un{network managers} to modify any existing line.  
 
 \subs{Deleting a Line}{FR.44}
-Following \hyl{O.4}, the system must allow network managers to delete any existing line.
+Following \hyl{O.4}, the system must allow \un{network managers} to delete any existing line.
 
 \subs{Registering a Junction}{FR.45}
-Following \hyl{O.4}, the system must allow network managers to register a junction.  
+Following \hyl{O.4}, the system must allow \un{network managers} to register a junction.  
 
 \subs{Modifying a Junction}{FR.46}
-Following \hyl{O.4}, the system must allow network managers to modify any existing junction.  
+Following \hyl{O.4}, the system must allow \un{network managers} to modify any existing junction.  
 
 \subs{Deleting a Junction}{FR.47}
-Following \hyl{O.4}, the system must allow network managers to delete any existing junction.  
+Following \hyl{O.4}, the system must allow \un{network managers} to delete any existing junction.  
 
 \subs{Automated Service Integrity Checks}{FR.48}
 Following \hyl{O.4}, in reference to \hyl{FR.55}, the system must be able to autonomously perform integrity checks on proposed services.
@@ -334,18 +334,18 @@ Following \hyl{O.4}, specifying \hyl{FR.48}, the system must ensure that all tra
 and track gauges of the infrastructure they traverse.
 
 \subs{Service Request Review}{FR.54}
-Following \hyl{O.4}, in reference to \hyl{FR.35}, the system must allow the network managers to review requests.
+Following \hyl{O.4}, in reference to \hyl{FR.35}, the system must allow the \un{network managers} to review requests.
 
 \subs{Service Request approval}{FR.55}
-Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, the network manager must be able to approve a service request, applying the proposed changes to 
-the system and notifying (\hyl{NFR.9}) the company that submitted the request.
+Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, the \un{network manager} must be able to approve a service request, applying the proposed changes to 
+the system and notifying (\hyl{NFR.9}) the \un{train company} that submitted the request.
 
 \subs{Service Request amendment}{FR.56}
-Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, the system must allow the network manager to send back an amended version of the request for 
-the company to review, notifying (\hyl{NFR.9}) them.
+Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, the system must allow the \un{network manager} to send back an amended version of the request for 
+the \un{train company} to review, notifying (\hyl{NFR.9}) them.
 
 \subs{Service Request denial}{FR.57}
-Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, network managers must be able to deny a service request, notifying (\hyl{NFR.9}) the company that submitted the request.
+Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, \un{network managers} must be able to deny a service request, notifying (\hyl{NFR.9}) the \un{train company} that submitted the request.
 
 \addcontentsline{toc}{subsection}{Requirement restrictions based on user classification}
 \subsection*{Requirement restrictions based on user classification}\label{Table1}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  30 MAR 2026 15:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  31 MAR 2026 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -222,57 +222,78 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `D1_DispatchNet.toc'.
 
 
-[4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 133--137
+[4] [5]
+Overfull \hbox (11.12778pt too wide) in paragraph at lines 106--108
+\OT1/cmr/m/n/12 that it can be ef-fi-ciently tra-versed by trains, and there-fo
+re goods and $[]$. 
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 132--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
 
-LaTeX Warning: Hyper reference `NFR.5' on page 7 undefined on input line 155.
+Overfull \hbox (16.24516pt too wide) in paragraph at lines 153--155
+\OT1/cmr/m/n/12 Following []\OT1/cmr/bx/n/12 FR.1[]\OT1/cmr/m/n/12 , in ref-er-
+ence to []\OT1/cmr/bx/n/12 NFR.2[]\OT1/cmr/m/n/12 , the sys-tem must al-low $[]
+$
+ []
 
-[7]
+[7] [8] [9] [10] [11] [12] [13] [14]
+Overfull \hbox (29.02402pt too wide) in paragraph at lines 337--338
+\OT1/cmr/m/n/12 Following []\OT1/cmr/bx/n/12 O.4[]\OT1/cmr/m/n/12 , in ref-er-e
+nce to []\OT1/cmr/bx/n/12 FR.35[]\OT1/cmr/m/n/12 , the sys-tem must al-low the 
+$[]$
+ []
 
-LaTeX Warning: Hyper reference `NFR.5' on page 8 undefined on input line 182.
-
-[8] [9] [10] [11] [12] [13] [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--420
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
 
-LaTeX Warning: Hyper reference `NFR2' on page 17 undefined on input line 421.
+LaTeX Warning: Hyper reference `NFR2' on page 17 undefined on input line 417.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 434--435
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 [17]
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
+
+ []
+
+
+LaTeX Warning: Hyper reference `NFR1' on page 18 undefined on input line 442.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 445--446
 
  []
@@ -286,40 +307,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 450--451
  []
 
 
-LaTeX Warning: Hyper reference `NFR1' on page 18 undefined on input line 452.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 455--456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 472--473
+Underfull \hbox (badness 10000) in paragraph at lines 467--468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 478--479
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--485
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 490--491
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
 
  []
 
@@ -333,13 +346,13 @@ L3 programming layer <2026-01-19>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `D1_DispatchNet.out' has not changed.
-(rerunfilecheck)             Checksum: C8C07F2FFB29C96D9CB4CA2F3D8F9F98;14114.
+(rerunfilecheck)             Checksum: 527E0920B4F266E24D01D98AAAF2E9B2;14119.
  ) 
 Here is how much of TeX's memory you used:
- 8211 strings out of 469515
- 126509 string characters out of 5470807
- 547669 words of memory out of 5000000
- 36716 multiletter control sequences out of 15000+600000
+ 8210 strings out of 469515
+ 126501 string characters out of 5470807
+ 547670 words of memory out of 5000000
+ 36715 multiletter control sequences out of 15000+600000
  634227 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,12n,79p,395b,516s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -347,10 +360,10 @@ Here is how much of TeX's memory you used:
 ></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti12.pfb>
-Output written on D1_DispatchNet.pdf (19 pages, 90382 bytes).
+Output written on D1_DispatchNet.pdf (19 pages, 91559 bytes).
 PDF statistics:
- 682 PDF objects out of 1000 (max. 8388607)
- 647 compressed objects within 7 object streams
+ 699 PDF objects out of 1000 (max. 8388607)
+ 664 compressed objects within 7 object streams
  109 named destinations out of 1000 (max. 500000)
  697 words of extra memory for PDF output out of 10000 (max. 10000000)
 

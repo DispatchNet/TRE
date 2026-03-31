@@ -62,7 +62,7 @@
 \contentsline {subsection}{\numberline {FR.49}Displaying Integrity Check Results}{14}{subsection.2.49}%
 \contentsline {subsection}{\numberline {FR.50}Single Tracked Availability Check}{14}{subsection.2.50}%
 \contentsline {subsection}{\numberline {FR.51}Platform Availability Check}{14}{subsection.2.51}%
-\contentsline {subsection}{\numberline {FR.52}Trackside Systems Compatibility Check}{14}{subsection.2.52}%
+\contentsline {subsection}{\numberline {FR.52}Track-side Systems Compatibility Check}{14}{subsection.2.52}%
 \contentsline {subsection}{\numberline {FR.53}Track Geometry Check}{15}{subsection.2.53}%
 \contentsline {subsection}{\numberline {FR.54}Service Request Review}{15}{subsection.2.54}%
 \contentsline {subsection}{\numberline {FR.55}Service Request approval}{15}{subsection.2.55}%
