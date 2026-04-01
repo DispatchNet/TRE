@@ -164,189 +164,197 @@ The additional functionalities are described in
 Following \hyl{FR.1}, in reference to \hyl{NFR.2}, the system must allow \un{anonymous users} to register. Data must 
 satisfy \hyl{NFR.3}. Password must satisfy \hyl{NFR.4} and \hyl{NFR.5}.
 
-\subs{Consent management}{FR.3}
+\ssubs{Consent management}{FR.2.1}
 Following \hyl{NFR.6}, in reference to \hyl{FR.2}, at registration the system must request the user's consent for personal 
 data processing.
 
-\subs{Account registration notification}{FR.4}
+\ssubs{Account registration notification}{FR.2.2}
 In reference to \hyl{FR.2}, after successful registration the system must notify the user as described at \hyl{NFR.9}.
 
-\subs{Account deletion}{FR.5}
+\subs{Account deletion}{FR.3}
 Following \hyl{NFR.1}, the system shall allow users to delete their accounts, as well as any other related data.
 
-\subs{Account deletion notification}{FR.6}
-In reference to \hyl{FR.5}, after successful deletion the user is notified as described at \hyl{NFR.9}.
+\ssubs{Account deletion notification}{FR.3.1}
+In reference to \hyl{FR.3}, after successful deletion the user is notified as described at \hyl{NFR.9}.
 
-\subs{Data request management}{FR.7}
+\subs{Data request management}{FR.4}
 Following \hyl{NFR.7}, in reference to \hyl{NFR.2}, the system must provide users view of their stored information.
 
-\subs{Account data change}{FR.8}
+\subs{Account data change}{FR.5}
 Following \hyl{NFR.8}, in reference to \hyl{NFR.2}, the system must allow users to change their data. New data must 
 satisfy \hyl{NFR.3}.
 
-\subs{Account data change notification}{FR.9}
-In reference to \hyl{FR.8}, after a successful change operation the user is notified as described at \hyl{NFR.9}.
+\ssubs{Account data change notification}{FR.5.1}
+In reference to \hyl{FR.5}, after a successful change operation the user is notified as described at \hyl{NFR.9}.
 
-\subs{Password reset}{FR.10}
+\subs{Password reset}{FR.6}
 Following \hyl{NFR.8}, in reference to \hyl{NFR.2}, the system shall allow users to reset the password and change it. 
 New password must satisfy \hyl{NFR.4} and \hyl{NFR.5}.
 
-\subs{Login}{FR.11}
+\subs{Login}{FR.7}
 Following \hyl{FR.1}, the system must let users login using their username and password defined at registration (\hyl{FR.2}).
 
 \un{Boundary:} The \un{network manager} has default account username "admin" and password "Password1234".
 
-\subs{Logout}{FR.12}
+\subs{Logout}{FR.8}
 Following \hyl{FR.1}, the system shall let logged in users log out, switching to the restricted \un{anonymous user's} 
 functionalities. 
 
-\subs{Tickets details display}{FR.13}
+\subs{Tickets details display}{FR.9}
 Following \hyl{O.1}, the system must allow \un{passengers} to view tickets. 
 
-\subs{Tickets purchase}{FR.14}
+\subs{Tickets purchase}{FR.10}
 Following \hyl{O.1}, the system must allow \un{passengers} to buy tickets.
 
-\subs{Tickets purchase confirmation}{FR.15}
-Following \hyl{O.1}, in reference to \hyl{FR.14}, the \un{passenger} must be asked for a final confirmation before purchase.
+\ssubs{Tickets purchase confirmation}{FR.10.1}
+Following \hyl{O.1}, in reference to \hyl{FR.10}, the \un{passenger} must be asked for a final confirmation before purchase.
 
-\subs{Tickets purchase notification}{FR.16}
-Following \hyl{O.1}, in reference to \hyl{FR.14}, at the end of a purchase operation, the system must notify the \un{passenger} as 
+\ssubs{Tickets purchase notification}{FR.10.2}
+Following \hyl{O.1}, in reference to \hyl{FR.10}, at the end of a purchase operation, the system must notify the \un{passenger} as 
 described at \hyl{NFR.9}.
 
-\subs{Tickets cancellation}{FR.17}
+\subs{Tickets cancellation}{FR.11}
 Following \hyl{O.1}, the system must allow the cancellation of purchased tickets. 
 
-\subs{Tickets cancellation confirmation}{FR.18}
-Following \hyl{O.1}, in reference to \hyl{FR.17} and \hyl{NFR.9}, the \un{passenger} must be asked for a final confirmation before 
+\ssubs{Tickets cancellation confirmation}{FR.11.1}
+Following \hyl{O.1}, in reference to \hyl{FR.11} and \hyl{NFR.9}, the \un{passenger} must be asked for a final confirmation before 
 cancellation.
 
-\subs{Tickets cancellation notification}{FR.19}
-Following \hyl{O.1}, in reference to \hyl{FR.17}, at the end of a cancellation operation, the system must notify the \un{passenger} as 
+\ssubs{Tickets cancellation notification}{FR.11.2}
+Following \hyl{O.1}, in reference to \hyl{FR.11}, at the end of a cancellation operation, the system must notify the \un{passenger} as 
 described at \hyl{NFR.9}.
 
-\subs{Tickets history}{FR.20}
+\subs{Tickets history}{FR.12}
 Following \hyl{O.1}, the system must allow \un{passengers} to view their tickets history, both purchased and cancelled.
 
-\subs{Tickets classification}{FR.21}
-Following \hyl{O.1}, in reference to \hyl{FR.20}, the tickets history must show whether a ticket is valid, expired, or 
+\ssubs{Tickets classification}{FR.12.1}
+Following \hyl{O.1}, in reference to \hyl{FR.12}, the tickets history must show whether a ticket is valid, expired, or 
 cancelled.
 
-\subs{Path search}{FR.22}
+\subs{Path search}{FR.13}
 Following \hyl{O.2}, the system needs to be able to compute multiple paths between stations.
 
-\subs{Path points}{FR.23}
-Following \hyl{O.2}, extending \hyl{FR.22}, the \un{passenger} must be able to choose both the first and last stations of paths to be computed.
+\ssubs{Path points}{FR.13.1}
+Following \hyl{O.2}, extending \hyl{FR.13}, the \un{passenger} must be able to choose both the first and last stations of paths to be computed.
 
-\subs{Path timing}{FR.24}
-Following \hyl{O.2}, extending \hyl{FR.22}, the \un{passenger} shall be able to optionally specify a departure time and/or a latest 
+\ssubs{Path timing}{FR:13.2}
+Following \hyl{O.2}, extending \hyl{FR.13}, the \un{passenger} shall be able to optionally specify a departure time and/or a latest 
 arrival time. If neither is specified, the system must consider paths with departure times starting from the current time.
 
-\subs{Path ranking}{FR.25}
-Following \hyl{O.2}, in reference to \hyl{FR.22}, the system needs to rank the paths with a criteria selected by the \un{passenger} among a fixed list.
+\subs{Path ranking}{FR.14}
+Following \hyl{O.2}, in reference to \hyl{FR.13}, the system needs to rank the paths with a criteria selected by the \un{passenger} among a fixed list.
 
-\subs{Ranking length}{FR.26}
-Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall rank paths by prioritizing those with shortest travel time, and, secondarily, those with fewer intermediate stations.
+\ssubs{Ranking length}{FR.14.1}
+Following \hyl{O.2}, in reference to \hyl{FR.14}, the system shall rank paths by prioritizing those with shortest travel time, and, secondarily, those with fewer intermediate stations.
 
-\subs{Ranking deviation "Departure"}{FR.27}
-Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall rank paths by prioritizing those whose first 
+\ssubs{Ranking deviation "Departure"}{FR.14.2}
+Following \hyl{O.2}, in reference to \hyl{FR.14}, the system shall rank paths by prioritizing those whose first 
 departure time is closest (but not earlier than) the user requested departure time.
 
-\subs{Ranking deviation 2 "Arrival"}{FR.28}
-Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall rank paths by prioritizing those whose last 
+\ssubs{Ranking deviation 2 "Arrival"}{FR.14.3}
+Following \hyl{O.2}, in reference to \hyl{FR.14}, the system shall rank paths by prioritizing those whose last 
 arrival time is closest (but not later than) the user requested departure time.
 
-\subs{Ranking cost}{FR.29}
-Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall rank paths by prioritizing those with lower total cost of 
+\ssubs{Ranking cost}{FR.14.4}
+Following \hyl{O.2}, in reference to \hyl{FR.14}, the system shall rank paths by prioritizing those with lower total cost of 
 tickets not already owned by the user.
 
-\subs{Transfers}{FR.30}
-Following \hyl{O.2}, in reference to \hyl{FR.22}, the system needs to compute transfer paths out of intersecting routes.
+\subs{Transfers}{FR.15}
+Following \hyl{O.2}, in reference to \hyl{FR.13}, the system needs to compute transfer paths out of intersecting routes.
 
-\subs{Segregation}{FR.31}
-Following \hyl{O.2}, in reference to \hyl{FR.22}, the system must not consider train routes that pass by trains that the \un{passenger} is not allowed to purchase a ticket for.
+\subs{Segregation}{FR.16}
+Following \hyl{O.2}, in reference to \hyl{FR.13}, the system must not consider train routes that pass by trains that the \un{passenger} is not allowed to purchase a ticket for.
 
-\subs{Station display}{FR.32}
+\subs{Station display}{FR.17}
 Following \hyl{O.3}, the system must provide departure and arrival times of all trains that pass through any station.
 
-\subs{Train display}{FR.33}
+\subs{Train display}{FR.18}
 Following \hyl{O.3}, the system must provide departure and arrival times of a train at all the stations on its schedule.
 
-\subs{Path display}{FR.34}
-The system must provide the board described at \hyl{FR.33} for each train in a given path, limited to the segments in which the train participates.
+\subs{Path display}{FR.19}
+The system must provide the board described at \hyl{FR.18} for each train in a given path, limited to the segments in which the train participates.
 
-\subs{Creating a Service Request}{FR.35}
+\subs{Creating a Service Request}{FR.20}
 Following \hyl{O.4}, \un{companies} must be allowed to send the system a request for the introduction of a service.
 
-\subs{Defining a Train Type}{FR.36}
-Following \hyl{O.4}, in reference to  \hyl{FR.37}, the system must allow \un{companies} to register a train type to be used when defining a service.
+\subs{Defining a Train Type}{FR.21}
+Following \hyl{O.4}, in reference to  \hyl{FR.22}, the system must allow \un{companies} to register a train type to be used when defining a service.
 
-\subs{Defining a Service Type}{FR.37}
-Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.36}.  
+\subs{Defining a Service Type}{FR.22}
+Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.21}.  
 The system must allow \un{companies} to define services and classes, as well as a pricing model for passenger trains.
 
-\subs{Viewing the Network}{FR.38}
+\subs{Viewing the Network}{FR.23}
 Following \hyl{O.3} and \hyl{O.4}, the system must allow users to access a map of the network.
 
-\subs{Registering a Station}{FR.39}
+\subs{!PLACEHOLDER 39!}{FR.24}
+!PLACEHOLDER!
+
+\ssubs{Registering a Station}{FR.24.1}
 Following \hyl{O.4}, the system must allow \un{network managers} to register a station.
 
-\subs{Modifying a Station}{FR.40}
+\ssubs{Modifying a Station}{FR.24.2}
 Following \hyl{O.4}, the system must allow \un{network managers} to modify any existing station.
 
-
-\subs{Deleting a Station}{FR.41}
+\ssubs{Deleting a Station}{FR.24.3}
 Following \hyl{O.4}, the system must allow \un{network managers} to delete any existing station.
 
-\subs{Registering a Line}{FR.42}
+\subs{!PLACEHOLDER 42!}{FR.25}
+!PLACEHOLDER!
+
+\ssubs{Registering a Line}{FR.25.1}
 Following \hyl{O.4}, the system must allow \un{network managers} to register a line.  
 
-\subs{Modifying a Line}{FR.43}
+\subs{Modifying a Line}{FR.25.2}
 Following \hyl{O.4}, the system must allow \un{network managers} to modify any existing line.  
 
-\subs{Deleting a Line}{FR.44}
+\subs{Deleting a Line}{FR.25.3}
 Following \hyl{O.4}, the system must allow \un{network managers} to delete any existing line.
 
-\subs{Registering a Junction}{FR.45}
+\subs{!PLACEHOLDER 45!}{FR.26}
+!PLACEHOLDER!
+
+\ssubs{Registering a Junction}{FR.26.1}
 Following \hyl{O.4}, the system must allow \un{network managers} to register a junction.  
 
-\subs{Modifying a Junction}{FR.46}
+\ssubs{Modifying a Junction}{FR.26.2}
 Following \hyl{O.4}, the system must allow \un{network managers} to modify any existing junction.  
 
-\subs{Deleting a Junction}{FR.47}
+\ssubs{Deleting a Junction}{FR.26.3}
 Following \hyl{O.4}, the system must allow \un{network managers} to delete any existing junction.  
 
-\subs{Automated Service Integrity Checks}{FR.48}
-Following \hyl{O.4}, in reference to \hyl{FR.55}, the system must autonomously perform integrity checks on proposed services.
-Integrity checks are defined by: \hyl{FR.50}, \hyl{FR.51}, \hyl{FR.52}, and \hyl{FR.53}.
+\subs{Automated Service Integrity Checks}{FR.27}
+Following \hyl{O.4}, in reference to \hyl{FR.29.1}, the system must autonomously perform integrity checks on proposed services.
+Integrity checks are defined by: \hyl{FR.27.1}, \hyl{FR.27.2}, \hyl{FR.27.3}, and \hyl{FR.27.4}.
 
-\subs{Displaying Integrity Check Results}{FR.49}
-Following \hyl{O.4}, extending \hyl{FR.48}, the system must provide these results.
+\ssubs{Single Track Line Availability Check}{FR.27.1}
+Following \hyl{O.4}, specifying \hyl{FR.27}, the system must ensure that no two services are scheduled to traverse a single track line in the opposite directions at the same time.
 
-\subs{Single Track Line Availability Check}{FR.50}
-Following \hyl{O.4}, specifying \hyl{FR.48}, the system must ensure that no two services are scheduled to traverse a single track line in the opposite directions at the same time.
+\ssubs{Platform Availability Check}{FR.27.2}
+Following \hyl{O.4}, specifying \hyl{FR.27}, the system must ensure that no two services are scheduled to stop at the same platform at the same time.
 
-\subs{Platform Availability Check}{FR.51}
-Following \hyl{O.4}, specifying \hyl{FR.48}, the system must ensure that no two services are scheduled to stop at the same platform at the same time.
+\ssubs{Track-side Systems Compatibility Check}{FR.27.3}
+Following \hyl{O.4}, specifying \hyl{FR.27}, the system must ensure that all trains used for a service are compatible with the signaling and electrification systems installed on the traversed infrastructure.
 
-\subs{Track-side Systems Compatibility Check}{FR.52}
-Following \hyl{O.4}, specifying \hyl{FR.48}, the system must ensure that all trains used for a service are compatible with the signaling and electrification systems installed on the traversed infrastructure.
+\ssubs{Track Geometry Check}{FR.27.4}
+Following \hyl{O.4}, specifying \hyl{FR.27}, the system must ensure that all trains used for a service are compatible with both the loading and track gauges of the infrastructure they traverse.
 
-\subs{Track Geometry Check}{FR.53}
-Following \hyl{O.4}, specifying \hyl{FR.48}, the system must ensure that all trains used for a service are compatible with both the loading and track gauges of the infrastructure they traverse.
+\subs{Displaying Integrity Check Results}{FR.28}
+Following \hyl{O.4}, extending \hyl{FR.27}, the system must provide these results.
 
-\subs{Service Request Review}{FR.54}
-Following \hyl{O.4}, in reference to \hyl{FR.35}, the system must allow the \un{network manager} to review requests.
+\subs{Service Request Review}{FR.29}
+Following \hyl{O.4}, in reference to \hyl{FR.20}, the system must allow the \un{network manager} and \un{train companies} to review requests.
 
-\subs{Service Request approval}{FR.55}
-Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, the \un{network manager} must be able to approve a service request, applying the proposed changes to 
+\ssubs{Service Request approval}{FR.29.1}
+Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, the \un{network manager} must be able to approve a service request, applying the proposed changes to 
 the system and notifying (\hyl{NFR.9}) the \un{train company} that submitted the request.
 
-\subs{Service Request amendment}{FR.56}
-Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, the system must allow the \un{network manager} to send back an amended version of the request for 
+\ssubs{Service Request amendment}{FR.29.2}
+Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, the system must allow the \un{network manager} to send back an amended version of the request for 
 the \un{train company} to review, notifying (\hyl{NFR.9}) them.
 
-\subs{Service Request denial}{FR.57}
-Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, \un{network manager} must be able to deny a service request, notifying (\hyl{NFR.9}) the \un{train company} that submitted the request.
+\ssubs{Service Request denial}{FR.29.3}
+Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, \un{network manager} must be able to deny a service request, notifying (\hyl{NFR.9}) the \un{train company} that submitted the request.
 
 \addcontentsline{toc}{subsection}{Requirement restrictions based on user classification}
 \subsection*{Requirement restrictions based on user classification}\label{Table1}
@@ -357,33 +365,33 @@ Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, \un{network ma
 	\hline
 	\begin{tabular}{@{}c@{}}
 	\bf{FR.1}\\
-	\bf{FR.38}	
+	\bf{FR.23}	
 	\end{tabular} &Full &Full &Full &Full \\
 	\hline
 	\begin{tabular}{@{}c@{}}
-	\bf{FR.2-4}\\
-	\bf{FR.11} 
+	\bf{FR.2-2.2}\\
+	\bf{FR.7} 
 	\end{tabular} &Full &None &None &None \\
 	\hline
-	\bf{FR.5-10} &None &Full &Full &None \\
+	\bf{FR.3-6} &None &Full &Full &None \\
 	\hline
-	\bf{FR.12} &None &Full &Full &Full \\
+	\bf{FR.8} &None &Full &Full &Full \\
 	\hline
 	\begin{tabular}{@{}c@{}}
-	\bf{FR.13}\\
-	\bf{FR.22-34} 
+	\bf{FR.9}\\
+	\bf{FR.13-19} 
 	\end{tabular} &Full &Full &None &None \\
 	\hline
-	\bf{FR.14-21} &None &Full &None &None \\
+	\bf{FR.10-12.1} &None &Full &None &None \\
 	\hline
-	\bf{FR.35-37} &None &None &Full &None \\
+	\bf{FR.20-22} &None &None &Full &None \\
 	\hline
 	\begin{tabular}{@{}c@{}}
-	\bf{FR.39-47}\\
-	\bf{FR.55-57} 
+	\bf{FR.24-26.3}\\
+	\bf{FR.29.1-29.3} 
 	\end{tabular} &None &None &None &Full \\
 	\hline
-	\bf{FR.54} &None &None &Self &Full \\
+	\bf{FR.28-29} &None &None &Self &Full \\
 	\hline
 	\end{tabular}
 \end{center}
@@ -402,15 +410,15 @@ Caption:
 {Regulation (EU) 2016/679} on the protection of natural persons with regard to the processing of personal data. 
 With special attention to:
 \begin{itemize}
-	\item[Art. 5] Principles relating to processing of personal data, ensuring ethical processing.
-	\item[Art. 6, 7] Lawfulness of processing and Conditions for consent, both concerning consent for the processing 
+	\item[\bf{Art. 5}] Principles relating to processing of personal data, ensuring ethical processing.
+	\item[\bf{Art. 6, 7}] Lawfulness of processing and Conditions for consent, both concerning consent for the processing 
 	of personal data.
-	\item[Art. 13] Information to be provided where personal data are collected from the data subject, 
+	\item[\bf{Art. 13}] Information to be provided where personal data are collected from the data subject, 
 	i.e. providing information of the controller of the processing.
-	\item[Art. 15] Right of access by the data subject, i.e. users must be able to see their stored information.
-	\item[Art. 16] Right to rectification, i.e. users must be able to change their information.
-	\item[Art. 17] Right to erasure (‘right to be forgotten’).
-	\item[Art. 32] Security of processing.
+	\item[\bf{Art. 15}] Right of access by the data subject, i.e. users must be able to see their stored information.
+	\item[\bf{Art. 16}] Right to rectification, i.e. users must be able to change their information.
+	\item[\bf{Art. 17}] Right to erasure (‘right to be forgotten’).
+	\item[\bf{Art. 32}] Security of processing.
 \end{itemize}
 
 \subs{Account data}{NFR.2}
@@ -422,7 +430,7 @@ password.
 \subs{Account data details}{NFR.3}
 \un{Product requirement - Security requirement} \\
 
-\noindent Following \hyl{NFR.1} and \hyl{NFR2}, account data must satisfy the following:
+\noindent Following \hyl{NFR.1} and \hyl{NFR.2}, account data must satisfy the following:
 \begin{itemize}
 	\item The username must be unique.
 	\item The email must be unique.
@@ -431,7 +439,7 @@ password.
 \subs{Password security}{NFR.4}
 \un{Product requirement - Security requirement} \\
 
-\noindent Following \hyl{NFR.1} and \hyl{NFR.2}, in reference to \hyl{FR.3}, the password must be at least 8 characters, 
+\noindent Following \hyl{NFR.1} and \hyl{NFR.2}, in reference to \hyl{FR.2.1}, the password must be at least 8 characters, 
 with at least one upper and one lowercase letters and one digit.
 
 \subs{Typo prevention}{NFR.5}
@@ -447,51 +455,57 @@ with at least one upper and one lowercase letters and one digit.
 \subs{Request of processed data}{NFR.7}
 \un{External requirement - Legislative requirement} \\
 
-\noindent Following \hyl{NFR1}, the system must comply with the GDPR for accessing processed data.
+\noindent Following \hyl{NFR.1}, the system must comply with the GDPR for accessing processed data.
 
 \subs{Rectification of processed data}{NFR.8}
 \un{External requirement - Legislative requirement} \\
 
-\noindent Following \hyl{NFR1}, the system must comply with the GDPR for the right of rectification.
+\noindent Following \hyl{NFR.1}, the system must comply with the GDPR for the right of rectification.
 
 \subs{Email notification}{NFR.9}
 \un{Product requirement - Usability requirement} \\
 
 \noindent In order to notify users, the system shall use the email service, using the one inserted at registration (\hyl{FR.2}).
 
-\subs{Station to train display}{NFR.10}
+\subs{!PLACEHOLDER 10!}{NFR.10}
+!PLACEHOLDER!
+
+\ssubs{Station to train display}{NFR.10.1}
 \un{Product requirement - Usability requirement} \\
 
 \noindent Users must be able to switch with a single prompt/input between a station's display and a train's display passing 
 through that station.
 
-\subs{Train to station display}{NFR.11}
+\ssubs{Train to station display}{NFR.10.2}
 \un{Product requirement - Usability requirement} \\
 
 \noindent Users must be able to switch with a single prompt/input between a train's display and a station's display in its 
 schedule.
 
-\subs{Station "from" path}{NFR.12}
+\subs{!PLACEHOLDER 12!}{NFR.11}
+!PLACEHOLDER!
+
+\ssubs{Station "from" path}{NFR.11.1}
 \un{Product requirement - Usability requirement} \\
 
 \noindent Users must be able to switch with a single prompt/input between a station's display and the route-finding 
 procedure with the station automatically set as the path's start.
 
-\subs{Station "to" path}{NFR.13}
+\ssubs{Station "to" path}{NFR.11.2}
 \un{Product requirement - Usability Requirement} \\
 
 \noindent Users must be able to switch with a single prompt/input between a station's display and the route-finding 
 procedure with the station automatically set as the destination.
 
-\subs{Path list to path list}{NFR.14}
+\subs{Path list to path list}{NFR.12}
 \un{Product requirement - Usability requirement} \\
 
 \noindent Users must be able to switch from a list of paths according to a ranking option to another, in no more 
 steps/inputs than the ones required to select a different ranking. 
 
-\subs{Ranking non-choice}{NFR.15}
+\subs{Ranking non-choice}{NFR.13}
 \un{Product requirement - Usability requirement} \\
 
-\noindent The system shall default to the ranking described at \hyl{FR.26} until a different ranking choice is given by the user.
+\noindent The system shall default to the ranking described at \hyl{FR.14.1} until a different ranking choice is given by the user.
 
 \end {document}
