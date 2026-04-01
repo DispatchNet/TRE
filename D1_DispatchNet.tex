@@ -15,7 +15,7 @@
 \date{\it{Requirements Analysis}}
 
 \makeatletter
-\renewcommand*{\numberline}[1]{\hb@xt@4em{#1\hfil}} 
+\renewcommand*{\numberline}[1]{\hb@xt@5.1em{#1\hfil}} 
 \makeatother
 
 \makeatletter
@@ -40,7 +40,7 @@
 \pagestyle{fancy}
 \fancyhead[l]{DispatchNet}
 \fancyhead[c]{Project TRE}
-\fancyhead[r]{v0.4}
+\fancyhead[r]{v0.5}
 \fancyfoot[c]{\thepage}
 
 \renewcommand\bf[1]{\textbf{#1}}
@@ -90,7 +90,7 @@ It includes basic operations that the \un{passenger} can perform, such as:
 	\item Viewing tickets details.
 	\item Purchase.
 	\item Accessing tickets history.
-	\item Cancellation
+	\item Cancellation.
 \end{itemize}
 
 \it{Boundary:} The project assumes the use of a third-party \un{payment gateway} system, implementing only a place-holder for a real 
@@ -141,7 +141,7 @@ They are the primary stakeholders for making functional decisions.
 \begin{itemize}
 	\item Searching for routes and schedules.
 	\item Analyzing departure/arrival boards as well as train information.
-	\item Purchase tickets.
+	\item Purchasing tickets.
 \end{itemize}
 
 \noindent\un{Train companies}, who provide the rolling stock. They request the introduction of services. They are also expected to provide information of trains they ask to be managed.
@@ -172,7 +172,7 @@ data processing.
 In reference to \hyl{FR.2}, after successful registration the system must notify the user as described at \hyl{NFR.9}.
 
 \subs{Account deletion}{FR.3}
-Following \hyl{NFR.1}, the system shall allow users to delete their accounts, as well as any other related data.
+Following \hyl{NFR.1}, the system shall allow users to delete their accounts. Any other related data is also deleted.
 
 \ssubs{Account deletion notification}{FR.3.1}
 In reference to \hyl{FR.3}, after successful deletion the user is notified as described at \hyl{NFR.9}.
@@ -188,13 +188,13 @@ satisfy \hyl{NFR.3}.
 In reference to \hyl{FR.5}, after a successful change operation the user is notified as described at \hyl{NFR.9}.
 
 \subs{Password reset}{FR.6}
-Following \hyl{NFR.8}, in reference to \hyl{NFR.2}, the system shall allow users to reset the password and change it. 
+Following \hyl{NFR.8}, in reference to \hyl{NFR.2}, the system shall allow users to reset the password and change it (\hyl{NFR.9}). 
 New password must satisfy \hyl{NFR.4} and \hyl{NFR.5}.
 
 \subs{Login}{FR.7}
 Following \hyl{FR.1}, the system must let users login using their username and password defined at registration (\hyl{FR.2}).
 
-\un{Boundary:} The \un{network manager} has default account username "admin" and password "Password1234".
+\it{Boundary:} The \un{network manager} has default account username "admin" and password "Password1234".
 
 \subs{Logout}{FR.8}
 Following \hyl{FR.1}, the system shall let logged in users log out, switching to the restricted \un{anonymous user's} 
@@ -285,50 +285,50 @@ Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.21}.
 The system must allow \un{companies} to define services and classes, as well as a pricing model for passenger trains.
 
 \subs{Viewing the Network}{FR.23}
-Following \hyl{O.3} and \hyl{O.4}, the system must allow users to access a map of the network.
+Following \hyl{O.3}, the system must allow users to access a map of the network.
 
-\subs{!PLACEHOLDER 39!}{FR.24}
-!PLACEHOLDER!
+\subs{Managing a Station}{FR.24}
+Following \hyl{O.4}, the system must allow \un{network managers} to manage a station.
 
 \ssubs{Registering a Station}{FR.24.1}
-Following \hyl{O.4}, the system must allow \un{network managers} to register a station.
+Following \hyl{O.4}, in reference to \hyl{FR.24}, the system must allow \un{network managers} to register a station.
 
 \ssubs{Modifying a Station}{FR.24.2}
-Following \hyl{O.4}, the system must allow \un{network managers} to modify any existing station.
+Following \hyl{O.4}, in reference to \hyl{FR.24}, the system must allow \un{network managers} to modify any existing station.
 
 \ssubs{Deleting a Station}{FR.24.3}
-Following \hyl{O.4}, the system must allow \un{network managers} to delete any existing station.
+Following \hyl{O.4}, in reference to \hyl{FR.24}, the system must allow \un{network managers} to delete any existing station.
 
-\subs{!PLACEHOLDER 42!}{FR.25}
-!PLACEHOLDER!
+\subs{Managing a Line}{FR.25}
+Following \hyl{O.4}, the system must allow \un{network managers} to manage a line.
 
 \ssubs{Registering a Line}{FR.25.1}
-Following \hyl{O.4}, the system must allow \un{network managers} to register a line.  
+Following \hyl{O.4}, in reference to \hyl{FR.25}, the system must allow \un{network managers} to register a line.  
 
-\subs{Modifying a Line}{FR.25.2}
-Following \hyl{O.4}, the system must allow \un{network managers} to modify any existing line.  
+\ssubs{Modifying a Line}{FR.25.2}
+Following \hyl{O.4}, in reference to \hyl{FR.25}, the system must allow \un{network managers} to modify any existing line.  
 
-\subs{Deleting a Line}{FR.25.3}
-Following \hyl{O.4}, the system must allow \un{network managers} to delete any existing line.
+\ssubs{Deleting a Line}{FR.25.3}
+Following \hyl{O.4}, in reference to \hyl{FR.25}, the system must allow \un{network managers} to delete any existing line.
 
-\subs{!PLACEHOLDER 45!}{FR.26}
-!PLACEHOLDER!
+\subs{Managing a Junction}{FR.26}
+Following \hyl{O.4}, the system must allow \un{network managers} to manage a junction.
 
 \ssubs{Registering a Junction}{FR.26.1}
-Following \hyl{O.4}, the system must allow \un{network managers} to register a junction.  
+Following \hyl{O.4}, in reference to \hyl{FR.26}, the system must allow \un{network managers} to register a junction.  
 
 \ssubs{Modifying a Junction}{FR.26.2}
-Following \hyl{O.4}, the system must allow \un{network managers} to modify any existing junction.  
+Following \hyl{O.4}, in reference to \hyl{FR.26}, the system must allow \un{network managers} to modify any existing junction.  
 
 \ssubs{Deleting a Junction}{FR.26.3}
-Following \hyl{O.4}, the system must allow \un{network managers} to delete any existing junction.  
+Following \hyl{O.4}, in reference to \hyl{FR.26}, the system must allow \un{network managers} to delete any existing junction.  
 
 \subs{Automated Service Integrity Checks}{FR.27}
-Following \hyl{O.4}, in reference to \hyl{FR.29.1}, the system must autonomously perform integrity checks on proposed services.
-Integrity checks are defined by: \hyl{FR.27.1}, \hyl{FR.27.2}, \hyl{FR.27.3}, and \hyl{FR.27.4}.
+Following \hyl{O.4}, the system must autonomously perform integrity checks on proposed services.
+Integrity checks are defined by the following.
 
 \ssubs{Single Track Line Availability Check}{FR.27.1}
-Following \hyl{O.4}, specifying \hyl{FR.27}, the system must ensure that no two services are scheduled to traverse a single track line in the opposite directions at the same time.
+Following \hyl{O.4}, specifying \hyl{FR.27}, the system must ensure that no two services are scheduled to traverse a single track line in opposite directions at the same time.
 
 \ssubs{Platform Availability Check}{FR.27.2}
 Following \hyl{O.4}, specifying \hyl{FR.27}, the system must ensure that no two services are scheduled to stop at the same platform at the same time.
@@ -340,21 +340,20 @@ Following \hyl{O.4}, specifying \hyl{FR.27}, the system must ensure that all tra
 Following \hyl{O.4}, specifying \hyl{FR.27}, the system must ensure that all trains used for a service are compatible with both the loading and track gauges of the infrastructure they traverse.
 
 \subs{Displaying Integrity Check Results}{FR.28}
-Following \hyl{O.4}, extending \hyl{FR.27}, the system must provide these results.
+Following \hyl{O.4}, extending \hyl{FR.27}, the system must provide the integrity check results.
 
 \subs{Service Request Review}{FR.29}
-Following \hyl{O.4}, in reference to \hyl{FR.20}, the system must allow the \un{network manager} and \un{train companies} to review requests.
+Following \hyl{O.4}, in reference to \hyl{FR.20}, the system must allow the \un{network manager} to review requests.
 
 \ssubs{Service Request approval}{FR.29.1}
-Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, the \un{network manager} must be able to approve a service request, applying the proposed changes to 
-the system and notifying (\hyl{NFR.9}) the \un{train company} that submitted the request.
+Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, the \un{network manager} must be able to approve a service request, notifying (\hyl{NFR.9}) the \un{train company} that submitted the request.
 
 \ssubs{Service Request amendment}{FR.29.2}
 Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, the system must allow the \un{network manager} to send back an amended version of the request for 
 the \un{train company} to review, notifying (\hyl{NFR.9}) them.
 
 \ssubs{Service Request denial}{FR.29.3}
-Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, \un{network manager} must be able to deny a service request, notifying (\hyl{NFR.9}) the \un{train company} that submitted the request.
+Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, the system must allow the \un{network manager} to deny a service request, notifying (\hyl{NFR.9}) the \un{train company} that submitted the request.
 
 \addcontentsline{toc}{subsection}{Requirement restrictions based on user classification}
 \subsection*{Requirement restrictions based on user classification}\label{Table1}
@@ -365,42 +364,38 @@ Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, \un{network ma
 	\hline
 	\begin{tabular}{@{}c@{}}
 	\bf{FR.1}\\
+    \bf{FR.6}\\
 	\bf{FR.23}	
-	\end{tabular} &Full &Full &Full &Full \\
+	\end{tabular} &yes &yes &yes &yes \\
 	\hline
 	\begin{tabular}{@{}c@{}}
-	\bf{FR.2-2.2}\\
+	\bf{FR.2}\\
 	\bf{FR.7} 
-	\end{tabular} &Full &None &None &None \\
+	\end{tabular} &yes & & & \\
 	\hline
-	\bf{FR.3-6} &None &Full &Full &None \\
+	\bf{FR.3-5} & &yes &yes & \\
 	\hline
-	\bf{FR.8} &None &Full &Full &Full \\
+	\bf{FR.8} & &yes &yes &yes \\
 	\hline
 	\begin{tabular}{@{}c@{}}
 	\bf{FR.9}\\
 	\bf{FR.13-19} 
-	\end{tabular} &Full &Full &None &None \\
+	\end{tabular} &yes &yes & & \\
 	\hline
-	\bf{FR.10-12.1} &None &Full &None &None \\
+	\bf{FR.10-12} & &yes & & \\
 	\hline
-	\bf{FR.20-22} &None &None &Full &None \\
+	\bf{FR.20-22} & & &yes & \\
 	\hline
 	\begin{tabular}{@{}c@{}}
-	\bf{FR.24-26.3}\\
-	\bf{FR.29.1-29.3} 
-	\end{tabular} &None &None &None &Full \\
+	\bf{FR.24-28}
+	\end{tabular} & & & &yes \\
 	\hline
-	\bf{FR.28-29} &None &None &Self &Full \\
+	\bf{FR.29} & & &self &self \\
 	\hline
 	\end{tabular}
 \end{center}
-Caption:
-\begin{itemize}
-    \item Full: complete access.
-    \item None: no access.
-    \item Self: access to resources regarding only the personal account.
-\end{itemize}
+\un{Caption}\\
+Self: access to resources regarding only the personal part of the functionality.
 \section{Non-functional requirements}
 
 \subs{Data Protection Regulation}{NFR.1}
@@ -467,34 +462,34 @@ with at least one upper and one lowercase letters and one digit.
 
 \noindent In order to notify users, the system shall use the email service, using the one inserted at registration (\hyl{FR.2}).
 
-\subs{!PLACEHOLDER 10!}{NFR.10}
-!PLACEHOLDER!
+\subs{Station-train display switching}{NFR.10}
+Users must be able to switch with a single prompt/input between the following
 
 \ssubs{Station to train display}{NFR.10.1}
 \un{Product requirement - Usability requirement} \\
 
-\noindent Users must be able to switch with a single prompt/input between a station's display and a train's display passing 
+\noindent A station's display and a train's display passing 
 through that station.
 
 \ssubs{Train to station display}{NFR.10.2}
 \un{Product requirement - Usability requirement} \\
 
-\noindent Users must be able to switch with a single prompt/input between a train's display and a station's display in its 
+\noindent A train's display and a station's display in its 
 schedule.
 
-\subs{!PLACEHOLDER 12!}{NFR.11}
-!PLACEHOLDER!
+\subs{Station-path searching switching}{NFR.11}
+Users must be able to switch with a single prompt/inpu between the following.
 
 \ssubs{Station "from" path}{NFR.11.1}
 \un{Product requirement - Usability requirement} \\
 
-\noindent Users must be able to switch with a single prompt/input between a station's display and the route-finding 
+\noindent A station's display and the route-finding 
 procedure with the station automatically set as the path's start.
 
 \ssubs{Station "to" path}{NFR.11.2}
 \un{Product requirement - Usability Requirement} \\
 
-\noindent Users must be able to switch with a single prompt/input between a station's display and the route-finding 
+\noindent A station's display and the route-finding 
 procedure with the station automatically set as the destination.
 
 \subs{Path list to path list}{NFR.12}
