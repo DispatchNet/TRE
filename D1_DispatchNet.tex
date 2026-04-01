@@ -77,8 +77,9 @@ The purpose of this document is to:
 
 \section{Objectives}
 The project provides a platform that covers the needs of both \un{passengers} and \un{train companies}, as well as an underlying 
-management system of any rail network, which supports \un{network managers} in its administration. 
-The solution to this project has been identified in an application accessible for the aforesaid users.
+management system of any rail network, which supports \un{network managers} in its administration. \\
+It provides a set of functionalities which support the planning of train travel. The system lets \un{passengers} discover paths, view scheduling and manage tickets. On the other side, it lets \un{train companies} introduce train services and \un{network managers} administer the network.\\
+The project coordinates the functionalities for each stakeholder into a solution that has been identified in an application accessible for the aforesaid users.
 
 The main objectives of the project are:
 
@@ -145,6 +146,8 @@ They are the primary stakeholders for making functional decisions.
 
 \noindent\un{Train companies}, who provide the rolling stock. They request the introduction of services. They are also expected to provide information of trains they ask to be managed.
 
+\noindent\un{Anonymous users}, who have not yet authenticated. They are considered as passengers with restricted access to functionalities that require authentication.
+
 \addcontentsline{toc}{subsubsection}{Non-human}
 \subsubsection*{Non-human}
 \un{Payment gateway}, which provides the underlying payment methods.\\
@@ -198,31 +201,31 @@ Following \hyl{FR.1}, the system shall let logged in users log out, switching to
 functionalities. 
 
 \subs{Tickets details display}{FR.13}
-Following \hyl{O.1}, the system must allow users to view tickets. 
+Following \hyl{O.1}, the system must allow \un{passengers} to view tickets. 
 
 \subs{Tickets purchase}{FR.14}
-Following \hyl{O.1}, the system must allow users to buy tickets.
+Following \hyl{O.1}, the system must allow \un{passengers} to buy tickets.
 
 \subs{Tickets purchase confirmation}{FR.15}
-Following \hyl{O.1}, in reference to \hyl{FR.14}, the user must be asked for a final confirmation before purchase.
+Following \hyl{O.1}, in reference to \hyl{FR.14}, the \un{passenger} must be asked for a final confirmation before purchase.
 
 \subs{Tickets purchase notification}{FR.16}
-Following \hyl{O.1}, in reference to \hyl{FR.14}, at the end of a purchase operation, the system must notify the user as 
+Following \hyl{O.1}, in reference to \hyl{FR.14}, at the end of a purchase operation, the system must notify the \un{passenger} as 
 described at \hyl{NFR.9}.
 
 \subs{Tickets cancellation}{FR.17}
 Following \hyl{O.1}, the system must allow the cancellation of purchased tickets. 
 
 \subs{Tickets cancellation confirmation}{FR.18}
-Following \hyl{O.1}, in reference to \hyl{FR.17} and \hyl{NFR.9}, the user must be asked for a final confirmation before 
+Following \hyl{O.1}, in reference to \hyl{FR.17} and \hyl{NFR.9}, the \un{passenger} must be asked for a final confirmation before 
 cancellation.
 
 \subs{Tickets cancellation notification}{FR.19}
-Following \hyl{O.1}, in reference to \hyl{FR.17}, at the end of a cancellation operation, the system must notify the user as 
+Following \hyl{O.1}, in reference to \hyl{FR.17}, at the end of a cancellation operation, the system must notify the \un{passenger} as 
 described at \hyl{NFR.9}.
 
 \subs{Tickets history}{FR.20}
-Following \hyl{O.1}, the system must allow users to view their tickets history, both purchased and cancelled.
+Following \hyl{O.1}, the system must allow \un{passengers} to view their tickets history, both purchased and cancelled.
 
 \subs{Tickets classification}{FR.21}
 Following \hyl{O.1}, in reference to \hyl{FR.20}, the tickets history must show whether a ticket is valid, expired, or 
@@ -232,40 +235,35 @@ cancelled.
 Following \hyl{O.2}, the system needs to be able to compute multiple paths between stations.
 
 \subs{Path points}{FR.23}
-Following \hyl{O.2}, extending \hyl{FR.22}, the user must choose both the first and last stations of paths to be computed.
+Following \hyl{O.2}, extending \hyl{FR.22}, the \un{passenger} must be able to choose both the first and last stations of paths to be computed.
 
 \subs{Path timing}{FR.24}
-Following \hyl{O.2}, extending \hyl{FR.22}, the user can, optionally, specify a first departure time and/or a last 
-arrival time. If neither is specified, the system must default to the earliest departure from the current time on-wards.
+Following \hyl{O.2}, extending \hyl{FR.22}, the \un{passenger} shall be able to optionally specify a departure time and/or a latest 
+arrival time. If neither is specified, the system must consider paths with departure times starting from the current time.
 
 \subs{Path ranking}{FR.25}
-Following \hyl{O.2}, in reference to \hyl{FR.22}, the system needs to be able to rank the paths over the network by one of
-several factors, at user's choice among a fixed list.
+Following \hyl{O.2}, in reference to \hyl{FR.22}, the system needs to rank the paths with a criteria selected by the \un{passenger} among a fixed list.
 
 \subs{Ranking length}{FR.26}
-Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall be able to rank higher the paths with the least 
-travel time, and the ones with the least amount of stations 
-among them.
+Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall rank paths by prioritizing those with shortest travel time, and, secondarily, those with fewer intermediate stations.
 
 \subs{Ranking deviation "Departure"}{FR.27}
-Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall be able to rank higher paths that have a first 
-departure time closest (but not earlier than) the user requested departure time.
+Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall rank paths by prioritizing those whose first 
+departure time is closest (but not earlier than) the user requested departure time.
 
 \subs{Ranking deviation 2 "Arrival"}{FR.28}
-Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall be able to rank higher the paths that have a last 
-arrival time closest (but no later than) the user requested departure time.
+Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall rank paths by prioritizing those whose last 
+arrival time is closest (but not later than) the user requested departure time.
 
 \subs{Ranking cost}{FR.29}
-Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall be able to rank higher the paths with lower total cost of 
-tickets' not already owned as valid by the user.
-
+Following \hyl{O.2}, in reference to \hyl{FR.25}, the system shall rank paths by prioritizing those with lower total cost of 
+tickets not already owned by the user.
 
 \subs{Transfers}{FR.30}
-Following \hyl{O.2}, in reference to \hyl{FR.22}, the system needs to be able to compute transfer paths out of 
-intersecting routes.
+Following \hyl{O.2}, in reference to \hyl{FR.22}, the system needs to compute transfer paths out of intersecting routes.
 
 \subs{Segregation}{FR.31}
-Following \hyl{O.2}, in reference to \hyl{FR.22}, the system must not consider train routes that pass by trains that the user is not allowed to purchase a ticket for.
+Following \hyl{O.2}, in reference to \hyl{FR.22}, the system must not consider train routes that pass by trains that the \un{passenger} is not allowed to purchase a ticket for.
 
 \subs{Station display}{FR.32}
 Following \hyl{O.3}, the system must provide departure and arrival times of all trains that pass through any station.
@@ -274,18 +272,17 @@ Following \hyl{O.3}, the system must provide departure and arrival times of all 
 Following \hyl{O.3}, the system must provide departure and arrival times of a train at all the stations on its schedule.
 
 \subs{Path display}{FR.34}
-The system must be able to provide the board described at \hyl{FR.33} for all trains in a path, within the bounds of the train's participation in 
-that path.
+The system must provide the board described at \hyl{FR.33} for each train in a given path, limited to the segments in which the train participates.
 
 \subs{Creating a Service Request}{FR.35}
-Following \hyl{O.4}, \un{Companies} must be allowed to send the system a request for the introduction of a service.
+Following \hyl{O.4}, \un{companies} must be allowed to send the system a request for the introduction of a service.
 
 \subs{Defining a Train Type}{FR.36}
-Following \hyl{O.4}, in reference to  \hyl{FR.37}, the system must allow companies to register a train type to be used when defining a service.
+Following \hyl{O.4}, in reference to  \hyl{FR.37}, the system must allow \un{companies} to register a train type to be used when defining a service.
 
 \subs{Defining a Service Type}{FR.37}
 Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.36}.  
-The system must allow companies to define services and classes, as well as a pricing model for passenger trains.
+The system must allow \un{companies} to define services and classes, as well as a pricing model for passenger trains.
 
 \subs{Viewing the Network}{FR.38}
 Following \hyl{O.3} and \hyl{O.4}, the system must allow users to access a map of the network.
@@ -303,7 +300,6 @@ Following \hyl{O.4}, the system must allow \un{network managers} to delete any e
 \subs{Registering a Line}{FR.42}
 Following \hyl{O.4}, the system must allow \un{network managers} to register a line.  
 
-
 \subs{Modifying a Line}{FR.43}
 Following \hyl{O.4}, the system must allow \un{network managers} to modify any existing line.  
 
@@ -320,29 +316,26 @@ Following \hyl{O.4}, the system must allow \un{network managers} to modify any e
 Following \hyl{O.4}, the system must allow \un{network managers} to delete any existing junction.  
 
 \subs{Automated Service Integrity Checks}{FR.48}
-Following \hyl{O.4}, in reference to \hyl{FR.55}, the system must be able to autonomously perform integrity checks on proposed services.
+Following \hyl{O.4}, in reference to \hyl{FR.55}, the system must autonomously perform integrity checks on proposed services.
 Integrity checks are defined by: \hyl{FR.50}, \hyl{FR.51}, \hyl{FR.52}, and \hyl{FR.53}.
 
 \subs{Displaying Integrity Check Results}{FR.49}
-Following \hyl{O.4}, extending \hyl{FR.48}, the system must be able to provide these results.
+Following \hyl{O.4}, extending \hyl{FR.48}, the system must provide these results.
 
 \subs{Single Track Line Availability Check}{FR.50}
-Following \hyl{O.4}, specifying \hyl{FR.48}, the system must ensure that no two services are scheduled to traverse a single track line in the 
-opposite directions at the same time.
+Following \hyl{O.4}, specifying \hyl{FR.48}, the system must ensure that no two services are scheduled to traverse a single track line in the opposite directions at the same time.
 
 \subs{Platform Availability Check}{FR.51}
 Following \hyl{O.4}, specifying \hyl{FR.48}, the system must ensure that no two services are scheduled to stop at the same platform at the same time.
 
 \subs{Track-side Systems Compatibility Check}{FR.52}
-Following \hyl{O.4}, specifying \hyl{FR.48}, the system must ensure that all trains used for a service are compatible with the signaling and 
-electrification systems installed on the traversed infrastructure.
+Following \hyl{O.4}, specifying \hyl{FR.48}, the system must ensure that all trains used for a service are compatible with the signaling and electrification systems installed on the traversed infrastructure.
 
 \subs{Track Geometry Check}{FR.53}
-Following \hyl{O.4}, specifying \hyl{FR.48}, the system must ensure that all trains used for a service are compatible with both the loading 
-and track gauges of the infrastructure they traverse.
+Following \hyl{O.4}, specifying \hyl{FR.48}, the system must ensure that all trains used for a service are compatible with both the loading and track gauges of the infrastructure they traverse.
 
 \subs{Service Request Review}{FR.54}
-Following \hyl{O.4}, in reference to \hyl{FR.35}, the system must allow the \un{network managers} to review requests.
+Following \hyl{O.4}, in reference to \hyl{FR.35}, the system must allow the \un{network manager} to review requests.
 
 \subs{Service Request approval}{FR.55}
 Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, the \un{network manager} must be able to approve a service request, applying the proposed changes to 
@@ -353,7 +346,7 @@ Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, the system mus
 the \un{train company} to review, notifying (\hyl{NFR.9}) them.
 
 \subs{Service Request denial}{FR.57}
-Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, \un{network managers} must be able to deny a service request, notifying (\hyl{NFR.9}) the \un{train company} that submitted the request.
+Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, \un{network manager} must be able to deny a service request, notifying (\hyl{NFR.9}) the \un{train company} that submitted the request.
 
 \addcontentsline{toc}{subsection}{Requirement restrictions based on user classification}
 \subsection*{Requirement restrictions based on user classification}\label{Table1}
@@ -394,6 +387,12 @@ Following \hyl{O.4}, in reference to \hyl{FR.35} and \hyl{FR.54}, \un{network ma
 	\hline
 	\end{tabular}
 \end{center}
+Caption:
+\begin{itemize}
+    \item Full: complete access.
+    \item None: no access.
+    \item Self: access to resources regarding only the personal account.
+\end{itemize}
 \section{Non-functional requirements}
 
 \subs{Data Protection Regulation}{NFR.1}
@@ -458,7 +457,7 @@ with at least one upper and one lowercase letters and one digit.
 \subs{Email notification}{NFR.9}
 \un{Product requirement - Usability requirement} \\
 
-\noindent Notifications shall be sent via email to the account's email address.
+\noindent In order to notify users, the system shall use the email service, using the one inserted at registration (\hyl{FR.2}).
 
 \subs{Station to train display}{NFR.10}
 \un{Product requirement - Usability requirement} \\
