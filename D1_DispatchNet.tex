@@ -15,7 +15,7 @@
 \date{\it{Requirements Analysis}}
 
 \makeatletter
-\renewcommand*{\numberline}[1]{\hb@xt@5.1em{#1\hfil}} 
+\renewcommand*{\numberline}[1]{\hb@xt@5em{#1\hfil}} 
 \makeatother
 
 \makeatletter
@@ -76,12 +76,15 @@ The purpose of this document is to:
 \end{itemize}
 
 \section{Objectives}
-The project provides a platform that covers the needs of both \un{passengers} and \un{train companies}, as well as an underlying 
-management system of any rail network, which supports \un{network managers} in its administration. \\
-It provides a set of functionalities which support the planning of train travel. The system lets \un{passengers} discover paths, view scheduling and manage tickets. On the other side, it lets \un{train companies} introduce train services and \un{network managers} administer the network.\\
-The project coordinates the functionalities for each stakeholder into a solution that has been identified in an application accessible for the aforesaid users.
 
-The main objectives of the project are:
+A major European rail infrastructure manager received an idea for a unified rail service scheduling and ticketing system, and has chosen us to prototype a trial run, over multiple regions in their network.\\
+
+Thus, the project provides a platform that covers the needs of both \un{passengers} and \un{train companies}, as well as an underlying 
+management system of any regional-sized rail network, which supports \un{network managers} in its administration. \\
+It provides a set of functionalities which support the planning of train travel. The system lets \un{passengers} discover paths, view scheduling and manage tickets. On the other side, it lets \un{train companies} introduce train services and \un{network managers} administer the network.\\
+The project coordinates the functionalities for each stakeholder into a solution that has been identified in an application accessible for the aforesaid users. \\
+
+\noindent The main objectives of the project are:
 
 \subs{Ticketing system}{O.1}
 Subsystem which deals with tickets, from the search to the possible actions after the purchase. 
@@ -93,8 +96,8 @@ It includes basic operations that the \un{passenger} can perform, such as:
 	\item Cancellation.
 \end{itemize}
 
-\it{Boundary:} The project assumes the use of a third-party \un{payment gateway} system, implementing only a place-holder for a real 
-integration with it.
+% \it{Boundary:} The project assumes the use of a third-party \un{payment gateway} system, implementing only a place-holder for a real 
+% integration with it.
 
 \subs{Route-finding}{O.2}
 The system shall let \un{passengers} select a starting station, a destination station, and either a departure time or arrival time.\\
@@ -152,7 +155,9 @@ They are the primary stakeholders for making functional decisions.
 \subsubsection*{Non-human}
 \un{Payment gateway}, which provides the underlying payment methods.\\
 
-\it{Boundary:} The project will not provide actual transactions nor integration with any payment application.
+% \it{Boundary:} The project will not provide actual transactions nor integration with any payment application.
+
+\newpage
 
 \section{Functional requirements}
 \subs{Account classification}{FR.1}
@@ -366,36 +371,39 @@ Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, the system mus
 	\bf{FR.1}\\
     \bf{FR.6}\\
 	\bf{FR.23}	
-	\end{tabular} &yes &yes &yes &yes \\
+	\end{tabular} &Yes &Yes &Yes &Yes \\
 	\hline
 	\begin{tabular}{@{}c@{}}
 	\bf{FR.2}\\
 	\bf{FR.7} 
-	\end{tabular} &yes & & & \\
+	\end{tabular} &Yes & & & \\
 	\hline
-	\bf{FR.3-5} & &yes &yes & \\
+	\bf{FR.3-5} & &Yes &Yes & \\
 	\hline
-	\bf{FR.8} & &yes &yes &yes \\
+	\bf{FR.8} & &Yes &Yes &Yes \\
 	\hline
 	\begin{tabular}{@{}c@{}}
 	\bf{FR.9}\\
 	\bf{FR.13-19} 
-	\end{tabular} &yes &yes & & \\
+	\end{tabular} &Yes &Yes & & \\
 	\hline
-	\bf{FR.10-12} & &yes & & \\
+	\bf{FR.10-12} & &Yes & & \\
 	\hline
-	\bf{FR.20-22} & & &yes & \\
+	\bf{FR.20-22} & & &Yes & \\
 	\hline
 	\begin{tabular}{@{}c@{}}
 	\bf{FR.24-28}
-	\end{tabular} & & & &yes \\
+	\end{tabular} & & & &Yes \\
 	\hline
-	\bf{FR.29} & & &self &self \\
+	\bf{FR.29} & & &Self &Self \\
 	\hline
 	\end{tabular}
 \end{center}
-\un{Caption}\\
+\it{Caption:}\\
 Self: access to resources regarding only the personal part of the functionality.
+
+\newpage
+
 \section{Non-functional requirements}
 
 \subs{Data Protection Regulation}{NFR.1}
@@ -463,31 +471,29 @@ with at least one upper and one lowercase letters and one digit.
 \noindent In order to notify users, the system shall use the email service, using the one inserted at registration (\hyl{FR.2}).
 
 \subs{Station-train display switching}{NFR.10}
+\un{Product requirement - Usability requirement} \\
 Users must be able to switch with a single prompt/input between the following
 
 \ssubs{Station to train display}{NFR.10.1}
-\un{Product requirement - Usability requirement} \\
 
 \noindent A station's display and a train's display passing 
 through that station.
 
 \ssubs{Train to station display}{NFR.10.2}
-\un{Product requirement - Usability requirement} \\
 
 \noindent A train's display and a station's display in its 
 schedule.
 
 \subs{Station-path searching switching}{NFR.11}
-Users must be able to switch with a single prompt/inpu between the following.
+\un{Product requirement - Usability requirement} \\
+Users must be able to switch with a single prompt/input between the following.
 
 \ssubs{Station "from" path}{NFR.11.1}
-\un{Product requirement - Usability requirement} \\
 
 \noindent A station's display and the route-finding 
 procedure with the station automatically set as the path's start.
 
 \ssubs{Station "to" path}{NFR.11.2}
-\un{Product requirement - Usability Requirement} \\
 
 \noindent A station's display and the route-finding 
 procedure with the station automatically set as the destination.
