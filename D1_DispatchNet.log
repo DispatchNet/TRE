@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  1 APR 2026 18:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  1 APR 2026 21:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -245,119 +245,169 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
- [2] [3]
-Overfull \hbox (2.27638pt too wide) detected at line 86
-\OT1/cmr/m/n/12 NFR.10.1 
- []
-
-
-Overfull \hbox (2.27638pt too wide) detected at line 87
-\OT1/cmr/m/n/12 NFR.10.2 
- []
-
-
-Overfull \hbox (2.27638pt too wide) detected at line 89
-\OT1/cmr/m/n/12 NFR.11.1 
- []
-
-
-Overfull \hbox (2.27638pt too wide) detected at line 90
-\OT1/cmr/m/n/12 NFR.11.2 
- []
-
-)
+ [2] [3])
 \tf@toc=\write4
 \openout4 = `D1_DispatchNet.toc'.
 
- [4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--86
+
+ []
+
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
 [7]
-Overfull \hbox (7.29453pt too wide) in paragraph at lines 164--166
+Overfull \hbox (7.29453pt too wide) in paragraph at lines 169--171
 \OT1/cmr/m/n/12 Following [][]FR.1[][], in ref-er-ence to [][]NFR.2[][], the sy
 s-tem must al-low $[]$
  []
 
-[8] [9] [10] [11] [12] [13] [14]
-Overfull \hbox (17.55135pt too wide) in paragraph at lines 346--347
+[8] [9] [10] [11] [12]
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 299--300
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
+-tem must al-low $[]$
+ []
+
+
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 302--303
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
+-tem must al-low $[]$
+ []
+
+
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 305--306
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
+-tem must al-low $[]$
+ []
+
+
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 311--312
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
+-tem must al-low $[]$
+ []
+
+
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 314--315
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
+-tem must al-low $[]$
+ []
+
+[13]
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 317--318
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
+-tem must al-low $[]$
+ []
+
+
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 323--324
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
+-tem must al-low $[]$
+ []
+
+
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 326--327
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
+-tem must al-low $[]$
+ []
+
+
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 329--330
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
+-tem must al-low $[]$
+ []
+
+[14]
+Overfull \hbox (17.55135pt too wide) in paragraph at lines 351--352
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.20[][], the sys
 -tem must al-low the $[]$
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
+Overfull \hbox (17.05968pt too wide) in paragraph at lines 361--362
+[]$ \OT1/cmr/m/n/12 to deny a ser-vice re-quest, no-ti-fy-ing ([][]NFR.9[][]) t
+he $[]$
  []
 
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 425--426
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 431--432
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--462
+Underfull \hbox (badness 10000) in paragraph at lines 454--455
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--490
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 495--496
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--502
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 507--508
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 504--505
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 510--511
 
  []
 
@@ -367,24 +417,24 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `D1_DispatchNet.out' has not changed.
-(rerunfilecheck)             Checksum: 4C317A1BE3D018B2B5B1AD2EC979D5D4;15195.
+(rerunfilecheck)             Checksum: 3AD241643D7AE14BC97A004519BEBA50;15407.
  ) 
 Here is how much of TeX's memory you used:
  8780 strings out of 469515
- 134754 string characters out of 5470807
- 556199 words of memory out of 5000000
+ 134774 string characters out of 5470807
+ 556249 words of memory out of 5000000
  37261 multiletter control sequences out of 15000+600000
  634227 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,12n,79p,405b,516s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,405b,515s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/alessio/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
 ></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti12.pfb>
-Output written on D1_DispatchNet.pdf (20 pages, 95165 bytes).
+Output written on D1_DispatchNet.pdf (20 pages, 95719 bytes).
 PDF statistics:
- 736 PDF objects out of 1000 (max. 8388607)
- 700 compressed objects within 7 object streams
+ 744 PDF objects out of 1000 (max. 8388607)
+ 707 compressed objects within 8 object streams
  116 named destinations out of 1000 (max. 500000)
  737 words of extra memory for PDF output out of 10000 (max. 10000000)
 
