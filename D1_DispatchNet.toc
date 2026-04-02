@@ -86,7 +86,7 @@
 \contentsline {subsubsection}{\numberline {NFR.10.1}Station to train display}{19}{subsubsection.3.10.1}%
 \contentsline {subsubsection}{\numberline {NFR.10.2}Train to station display}{19}{subsubsection.3.10.2}%
 \contentsline {subsection}{\numberline {NFR.11}Station-path searching switching}{19}{subsection.3.11}%
-\contentsline {subsubsection}{\numberline {NFR.11.1}Station "from" path}{20}{subsubsection.3.11.1}%
+\contentsline {subsubsection}{\numberline {NFR.11.1}Station "from" path}{19}{subsubsection.3.11.1}%
 \contentsline {subsubsection}{\numberline {NFR.11.2}Station "to" path}{20}{subsubsection.3.11.2}%
 \contentsline {subsection}{\numberline {NFR.12}Path list to path list}{20}{subsection.3.12}%
 \contentsline {subsection}{\numberline {NFR.13}Ranking non-choice}{20}{subsection.3.13}%
