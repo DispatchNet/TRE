@@ -2,6 +2,7 @@
 
 \usepackage{fancyhdr}
 \usepackage{hyperref}
+\usepackage{xcolor}
 \hypersetup{
 	colorlinks=true,
 	linkcolor=blue
@@ -40,7 +41,7 @@
 \pagestyle{fancy}
 \fancyhead[l]{DispatchNet}
 \fancyhead[c]{Project TRE}
-\fancyhead[r]{v1.0}
+\fancyhead[r]{v1.1}
 \fancyfoot[c]{\thepage}
 
 \renewcommand\bf[1]{\textbf{#1}}
@@ -61,7 +62,9 @@
 \un{Underlined} nouns are actors of the system. \newline
 \it{Italic} words are special keywords to denote important limits of the project. \newline
 \hyperref[Contents]{Hyperlinks} in reference to sections and subsections will be blue. \newline
-\href{https:\\www.google.com}{Hyperlinks} to external web content will be in magenta.
+\href{https:\\www.google.com}{Hyperlinks} to external web content will be in magenta. \newline
+\textcolor{green}{Green text are D2 modifications}.
+
 \newpage
 
 \addcontentsline{toc}{section}{Purpose}
@@ -135,6 +138,12 @@ It shall support:
 \un{Network managers}, the product owner. They manage the rail network combining the availability of \un{train companies} with \un{passengers'} needs.\\
 They are the primary stakeholders for making functional decisions.
 
+\textcolor{green}{
+\addcontentsline{toc}{subsubsection}{Human}
+\subsubsection*{Non-Human}
+\un{Database}, where all the information used by the application are stored.
+}
+
 \addcontentsline{toc}{subsection}{External}
 \subsection*{External}
 
@@ -161,7 +170,7 @@ They are the primary stakeholders for making functional decisions.
 
 \section{Functional requirements}
 \subs{Account classification}{FR.1}
-The system shall classify between \un{anonymous user}, \un{passenger}, \un{train company} operator and \un{network manager}. 
+The system shall \textcolor{green}{provide different functionalities, distinguishing users between} between \un{anonymous user}, \un{passenger}, \un{train company} operator and \un{network manager}. 
 The additional functionalities are described in 
 \hyperref[Table1]{Requirement restrictions based on user classification}.
 
@@ -237,7 +246,7 @@ Following \hyl{O.1}, in reference to \hyl{FR.12}, the tickets history must show 
 cancelled.
 
 \subs{Path search}{FR.13}
-Following \hyl{O.2}, the system needs to be able to compute multiple paths between stations.
+Following \hyl{O.2}, the system needs to be able to compute multiple paths between stations \textcolor{green}{, that is an ordered sequence of services from a departure to an arrival station}.
 
 \ssubs{Path points}{FR.13.1}
 Following \hyl{O.2}, extending \hyl{FR.13}, the \un{passenger} must be able to choose both the first and last stations of paths to be computed.
@@ -267,8 +276,8 @@ tickets not already owned by the user.
 \subs{Transfers}{FR.15}
 Following \hyl{O.2}, in reference to \hyl{FR.13}, the system needs to compute transfer paths out of intersecting routes.
 
-\subs{Segregation}{FR.16}
-Following \hyl{O.2}, in reference to \hyl{FR.13}, the system must not consider train routes that pass by trains that the \un{passenger} is not allowed to purchase a ticket for.
+\subs{Train access restriction}{FR.16}
+Following \hyl{O.2}, in reference to \hyl{FR.13}, the system must not consider train routes that pass by trains that the \un{passenger} is not allowed to purchase a ticket for\textcolor{green}{, such as cargo trains or trains with unavailable seats}.
 
 \subs{Station display}{FR.17}
 Following \hyl{O.3}, the system must provide departure and arrival times of all trains that pass through any station.
@@ -293,7 +302,7 @@ The system must allow \un{companies} to define services and classes, as well as 
 Following \hyl{O.3}, the system must allow users to access a map of the network.
 
 \subs{Managing a Station}{FR.24}
-Following \hyl{O.4}, the system must allow \un{network managers} to manage a station.
+Following \hyl{O.4}, \textcolor{green}{in reference to \hyl{NFR.14},} the system must allow \un{network managers} to manage a station.
 
 \ssubs{Registering a Station}{FR.24.1}
 Following \hyl{O.4}, in reference to \hyl{FR.24}, the system must allow \un{network managers} to register a station.
@@ -305,7 +314,7 @@ Following \hyl{O.4}, in reference to \hyl{FR.24}, the system must allow \un{netw
 Following \hyl{O.4}, in reference to \hyl{FR.24}, the system must allow \un{network managers} to delete any existing station.
 
 \subs{Managing a Line}{FR.25}
-Following \hyl{O.4}, the system must allow \un{network managers} to manage a line.
+Following \hyl{O.4}, \textcolor{green}{in reference to \hyl{NFR.14},} the system must allow \un{network managers} to manage a line.
 
 \ssubs{Registering a Line}{FR.25.1}
 Following \hyl{O.4}, in reference to \hyl{FR.25}, the system must allow \un{network managers} to register a line.  
@@ -317,7 +326,7 @@ Following \hyl{O.4}, in reference to \hyl{FR.25}, the system must allow \un{netw
 Following \hyl{O.4}, in reference to \hyl{FR.25}, the system must allow \un{network managers} to delete any existing line.
 
 \subs{Managing a Junction}{FR.26}
-Following \hyl{O.4}, the system must allow \un{network managers} to manage a junction.
+Following \hyl{O.4}, \textcolor{green}{in reference to \hyl{NFR.14},} the system must allow \un{network managers} to manage a junction.
 
 \ssubs{Registering a Junction}{FR.26.1}
 Following \hyl{O.4}, in reference to \hyl{FR.26}, the system must allow \un{network managers} to register a junction.  
@@ -355,7 +364,8 @@ Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, the \un{networ
 
 \ssubs{Service Request amendment}{FR.29.2}
 Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, the system must allow the \un{network manager} to send back an amended version of the request for 
-the \un{train company} to review, notifying (\hyl{NFR.9}) them.
+the \un{train company} to review, notifying (\hyl{NFR.9}) them.\\
+\textcolor{green}{\textit{Boundary: the system will not implement any amendment functionalities.}}
 
 \ssubs{Service Request denial}{FR.29.3}
 Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, the system must allow the \un{network manager} to deny a service request, notifying (\hyl{NFR.9}) the \un{train company} that submitted the request.
@@ -508,5 +518,11 @@ steps/inputs than the ones required to select a different ranking.
 \un{Product requirement - Usability requirement} \\
 
 \noindent The system shall default to the ranking described at \hyl{FR.14.1} until a different ranking choice is given by the user.
+
+\textcolor{green}{
+\subs{Network infrastructure}{NFR.14}
+\un{Organizational requirement - Development requirement} \\
+\noindent The system structures the network infrastructure with junctions, stations and lines; in a way similar to a graph, where junctions and stations are nodes and lines are edges.
+}
 
 \end {document}
