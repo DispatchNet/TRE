@@ -18,9 +18,9 @@
           <y:Realizers active="0">
             <y:TableNode configuration="YED_TABLE_NODE">
               <y:Geometry height="808.8894140625034" width="817.1151050000037" x="651.9725594853671" y="151.11058593749658"/>
-              <y:Fill color="#ECF5FF" transparent="false"/>
+              <y:Fill color="#ECF5FF" color2="#0042F440" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.37646484375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="112.3837890625" x="352.36565796875175" xml:space="preserve" y="4.311767578125">UC13: View Info<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="-0.5" nodeRatioX="0.0" nodeRatioY="-0.494669521564796" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.37646484375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="251.6171875" x="282.74895875000175" xml:space="preserve" y="4.311767578125">UC13: View Train and Station Details<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="-0.5" nodeRatioX="0.0" nodeRatioY="-0.494669521564796" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="94.046875" x="91.49656249999998" xml:space="preserve" y="33.0">Anonymous user<y:LabelModel><y:ColumnNodeLabelModel offset="3.0"/></y:LabelModel><y:ModelParameter><y:ColumnNodeLabelModelParameter id="column_0" inside="true" verticalPosition="0.0"/></y:ModelParameter></y:NodeLabel>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="44.0078125" x="525.0736462500017" xml:space="preserve" y="33.0">System<y:LabelModel><y:ColumnNodeLabelModel offset="3.0"/></y:LabelModel><y:ModelParameter><y:ColumnNodeLabelModelParameter id="column_1" inside="true" verticalPosition="0.0"/></y:ModelParameter></y:NodeLabel>
               <y:StyleProperties>
@@ -67,7 +67,7 @@
             </y:TableNode>
             <y:TableNode configuration="YED_TABLE_NODE">
               <y:Geometry height="808.8894140625034" width="777.7551050000038" x="651.9725594853671" y="151.11058593749658"/>
-              <y:Fill color="#ECF5FF" transparent="false"/>
+              <y:Fill color="#ECF5FF" color2="#0042F440" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="94.046875" x="91.49656249999998" xml:space="preserve" y="33.0">Anonymous user<y:LabelModel><y:ColumnNodeLabelModel offset="3.0"/></y:LabelModel><y:ModelParameter><y:ColumnNodeLabelModelParameter id="column_0" inside="true" verticalPosition="0.0"/></y:ModelParameter></y:NodeLabel>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="44.0078125" x="505.3936462500019" xml:space="preserve" y="33.0">System<y:LabelModel><y:ColumnNodeLabelModel offset="3.0"/></y:LabelModel><y:ModelParameter><y:ColumnNodeLabelModelParameter id="column_1" inside="true" verticalPosition="0.0"/></y:ModelParameter></y:NodeLabel>
@@ -400,7 +400,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </node>
     <edge id="n0::e0" source="n0::n1" target="n0::n3">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="19.047619047619037" tx="-39.02439024390242" ty="0.0">
@@ -413,7 +412,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e1" source="n0::n6" target="n0::n7">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="39.02439024390242" sy="0.0" tx="0.0" ty="-14.0625">
@@ -427,7 +425,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e2" source="n0::n10" target="n0::n11">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="39.02439024390242" sy="0.0" tx="0.0" ty="-14.0625">
@@ -441,7 +438,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e3" source="n0::n4" target="n0::n5">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="14.0625" tx="0.0" ty="-14.0625"/>
@@ -452,7 +448,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e4" source="n0::n5" target="n0::n6">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="14.0625" tx="0.0" ty="-19.047619047619037"/>
@@ -463,7 +458,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e5" source="n0::n3" target="n0::n4">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="19.047619047619037" tx="0.0" ty="-14.0625"/>
@@ -475,7 +469,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e6" source="n0::n3" target="n0::n8">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="39.02439024390242" sy="0.0" tx="0.0" ty="-14.0625">
@@ -489,7 +482,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e7" source="n0::n8" target="n0::n9">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="14.0625" tx="0.0" ty="0.0"/>
@@ -500,7 +492,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e8" source="n0::n9" target="n0::n10">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="14.0625" tx="0.0" ty="-19.047619047619037"/>
@@ -511,7 +502,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e9" source="n0::n7" target="n0::n12">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="14.0625" tx="47.0204081632653" ty="0.0">
@@ -524,7 +514,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e10" source="n0::n11" target="n0::n12">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="14.0625" tx="47.0204081632653" ty="0.0">
@@ -537,7 +526,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e11" source="n0::n6" target="n0::n12">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="19.047619047619037" tx="47.0204081632653" ty="0.0">
@@ -551,7 +539,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e12" source="n0::n10" target="n0::n12">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="19.047619047619037" tx="47.0204081632653" ty="0.0">
@@ -565,7 +552,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e13" source="n0::n12" target="n0::n13">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="14.0625" tx="-39.02439024390242" ty="0.0">
@@ -578,7 +564,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e14" source="n0::n13" target="n0::n1">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-19.047619047619037" tx="52.51834862385317" ty="0.0">
@@ -592,7 +577,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e15" source="n0::n13" target="n0::n14">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="19.047619047619037" tx="47.0204081632653" ty="0.0">
@@ -606,7 +590,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e16" source="n0::n13" target="n0::n0">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="39.02439024390242" sy="0.0" tx="0.0" ty="-29.01756634441449">
@@ -630,7 +613,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="e1" source="n0::n14" target="n0">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-317.7501119853681" ty="-13.23529296875438">
@@ -643,7 +625,6 @@ Ticket Display<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
       </data>
     </edge>
     <edge id="n0::e17" source="n0::n14" target="n0::n1">
-      <data key="d8"/>
       <data key="d9">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
