@@ -7,9 +7,10 @@
 \contentsline {section}{Stakeholders}{6}{section*.4}%
 \contentsline {subsection}{Internal}{7}{section*.5}%
 \contentsline {subsubsection}{Human}{7}{section*.6}%
-\contentsline {subsection}{External}{7}{section*.7}%
-\contentsline {subsubsection}{Human}{7}{section*.8}%
-\contentsline {subsubsection}{Non-human}{7}{section*.9}%
+\contentsline {subsubsection}{Human}{7}{section*.7}%
+\contentsline {subsection}{External}{7}{section*.8}%
+\contentsline {subsubsection}{Human}{7}{section*.9}%
+\contentsline {subsubsection}{Non-human}{7}{section*.10}%
 \contentsline {section}{\numberline {FR}Functional requirements}{8}{section.2}%
 \contentsline {subsection}{\numberline {FR.1}Account classification}{8}{subsection.2.1}%
 \contentsline {subsection}{\numberline {FR.2}Account registration}{8}{subsection.2.2}%
@@ -41,7 +42,7 @@
 \contentsline {subsubsection}{\numberline {FR.14.3}Ranking deviation 2 "Arrival"}{11}{subsubsection.2.14.3}%
 \contentsline {subsubsection}{\numberline {FR.14.4}Ranking cost}{11}{subsubsection.2.14.4}%
 \contentsline {subsection}{\numberline {FR.15}Transfers}{12}{subsection.2.15}%
-\contentsline {subsection}{\numberline {FR.16}Segregation}{12}{subsection.2.16}%
+\contentsline {subsection}{\numberline {FR.16}Train access restriction}{12}{subsection.2.16}%
 \contentsline {subsection}{\numberline {FR.17}Station display}{12}{subsection.2.17}%
 \contentsline {subsection}{\numberline {FR.18}Train display}{12}{subsection.2.18}%
 \contentsline {subsection}{\numberline {FR.19}Path display}{12}{subsection.2.19}%
@@ -90,3 +91,4 @@
 \contentsline {subsubsection}{\numberline {NFR.11.2}Station "to" path}{20}{subsubsection.3.11.2}%
 \contentsline {subsection}{\numberline {NFR.12}Path list to path list}{20}{subsection.3.12}%
 \contentsline {subsection}{\numberline {NFR.13}Ranking non-choice}{20}{subsection.3.13}%
+\contentsline {subsection}{\numberline {NFR.14}Network infrastructure}{20}{subsection.3.14}%

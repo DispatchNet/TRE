@@ -1,0 +1,159 @@
+\documentclass[12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue
+}
+
+\setlength{\headheight}{14.49998pt}
+\addtolength{\topmargin}{-2.49998pt}
+
+\title{\bf{Software Engineering Project}}
+\author{\bf{DispatchNet:} \\ Alessio Zanon \\ Leonardo Tonetta \\ Luca Fiorini}
+\date{\it{Use Case Analysis}}
+
+\pagestyle{fancy}
+\fancyhead[l]{DispatchNet}
+\fancyhead[c]{Project TRE}
+\fancyhead[r]{v1.2}
+\fancyfoot[c]{\thepage}
+
+\renewcommand\bf[1]{\textbf{#1}}
+\renewcommand\it[1]{\textit{#1}}
+\newcommand\un[1]{\underline{#1}}
+\newcommand\hyl[1]{\hyperref[#1]{#1}}
+\newcommand\subs[2]{\subsection{#1}\label{#2}}
+\newcommand\ssubs[2]{\subsubsection{#1}\label{#2}}
+\newcommand\imgins[1]{{\centering\includepdf[pages=-, linktodoc, width=\textwidth]{#1}Alternate link at our \href{https://github.com/DispatchNet/TRE/blob/uc/D2_DispatchNet/#1}{Github}}}
+
+\begin {document}
+\maketitle
+
+\newpage
+\tableofcontents \label{Contents}
+
+\section*{Readability notes}
+\bf{Bold} words are system-important constructs. \newline
+\un{Underlined} nouns are actors of the system. \newline
+\it{Italic} words are special keywords to denote important limits of the project. \newline
+\hyperref[Contents]{Hyperlinks} in reference to sections and subsections will be blue. \newline
+\href{https:\\www.google.com}{Hyperlinks} to external web content will be in magenta. \newline
+
+
+\newpage
+
+\addcontentsline{toc}{section}{RE: Purpose}
+\section*{RE: Purpose}
+This document describes the use cases, their relation, and the class-based diagram of Project "TRE", which implements a rail transport management system.
+
+The purpose of this document is to: 
+\begin{itemize}
+	\item Represent all intended use cases
+	\item Relate use cases with eachother and with stakeholders
+	\item Itemize and relate the major data-components employed by the system
+	\item Provide a top-level view of the system's operations
+\end{itemize}
+
+\addcontentsline{toc}{section}{RE: Objectives}
+\section*{RE: Objectives}
+
+A major European rail infrastructure manager received an idea for a unified rail service scheduling and ticketing system, and has chosen us to prototype a trial run, over multiple regions in their network.\\
+
+Thus, the project provides a platform that covers the needs of both \un{passengers} and \un{train companies}, as well as an underlying 
+management system of any regional-sized rail network, which supports \un{network managers} in its administration. \\
+It provides a set of functionalities which support the planning of train travel. The system lets \un{passengers} discover paths, view scheduling and manage tickets. On the other side, it lets \un{train companies} introduce train services and \un{network managers} administer the network.\\
+The project coordinates the functionalities for each stakeholder into a solution that has been identified in an application accessible for the aforesaid users. \\
+
+\noindent The main objectives of the project are:
+
+\subs{Ticketing system}{O.1}
+Subsystem which deals with tickets, from the search to the possible actions after the purchase. 
+It includes basic operations that the \un{passenger} can perform, such as:
+\begin{itemize}
+	\item Viewing tickets details.
+	\item Purchase.
+	\item Accessing tickets history.
+	\item Cancellation.
+\end{itemize}
+
+% \it{Boundary:} The project assumes the use of a third-party \un{payment gateway} system, implementing only a place-holder for a real 
+% integration with it.
+
+\subs{Route-finding}{O.2}
+The system shall let \un{passengers} select a starting station, a destination station, and either a departure time or arrival time.\\
+It computes and ranks possible \bf{routes} that best fit the user's request and permissions
+(for example, not permitting cargo trains to \un{passengers}).\\
+The user must be able to compare the options based on:
+\begin{itemize}
+    \item Departure and arrival times.
+    \item Number of transfers.
+    \item Possible transfer locations.
+\end{itemize}
+
+\subs{Virtual board}{O.3}
+The system provides \un{passengers} access to departure and arrival boards for any station. It also shows intermediate stations and scheduled times for each 
+individual train service.
+
+\subs{Rail system modeling}{O.4}
+The system provides a data-driven approach to rail network modelling, supporting an efficient administration of the infrastructure.\\
+It shall support:
+\begin{itemize}
+    \item Management of the network by the \un{network manager}.
+    \item Management of rolling stock by the \un{network manager}.
+    \item Submission of a new service request by \un{train companies}.
+    \item Review of a service request by the \un{network manager}.
+\end{itemize}
+\phantomsection
+\addcontentsline{toc}{section}{RE: Stakeholders}
+\section*{RE: Stakeholders}
+
+\addcontentsline{toc}{subsection}{Internal}
+\subsection*{Internal}
+
+\addcontentsline{toc}{subsubsection}{Human}
+\subsubsection*{Human}
+\un{Network managers:}, the product owner. They manage the rail network combining the availability of \un{train companies} with \un{passengers'} needs.\\
+They are the primary stakeholders for making functional decisions.
+
+\addcontentsline{toc}{subsubsection}{Human}
+\subsubsection*{Non-Human}
+\un{Database}, where all the information used by the application are stored.
+
+
+\addcontentsline{toc}{subsection}{External}
+\subsection*{External}
+
+\addcontentsline{toc}{subsubsection}{Human}
+\subsubsection*{Human}
+\un{Passengers}, the main end users. They want to streamline their interactions with the train transport system, including:
+\begin{itemize}
+	\item Searching for routes and schedules.
+	\item Analyzing departure/arrival boards as well as train information.
+	\item Purchasing tickets.
+\end{itemize}
+
+\noindent\un{Train companies}, who provide the rolling stock. They request the introduction of services. They are also expected to provide information of trains they ask to be managed.
+
+\noindent\un{Anonymous users}, who have not yet authenticated. They are considered as passengers with restricted access to functionalities that require authentication.
+
+\addcontentsline{toc}{subsubsection}{Non-human}
+\subsubsection*{Non-human}
+\un{Payment gateway}, which provides the underlying payment methods.\\
+
+% \it{Boundary:} The project will not provide actual transactions nor integration with any payment application.
+
+\newpage
+
+% main doc here 
+
+\imgins{activity_diagrams/UC01_activity.pdf}
+
+\newpage
+
+\includepdf[pages=-, linktodoc]{../D1_DispatchNet/D1_DispatchNet.pdf} %Fix the links being broken, try PAX?
+
+\end {document}
