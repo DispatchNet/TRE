@@ -44,33 +44,35 @@
 \contentsline {subsection}{\numberline {FR.15}Transfers}{12}{subsection.2.15}%
 \contentsline {subsection}{\numberline {FR.16}Train access restriction}{12}{subsection.2.16}%
 \contentsline {subsection}{\numberline {FR.17}Station display}{12}{subsection.2.17}%
+\contentsline {subsubsection}{\numberline {FR.17.1}Station search}{12}{subsubsection.2.17.1}%
 \contentsline {subsection}{\numberline {FR.18}Train display}{12}{subsection.2.18}%
+\contentsline {subsubsection}{\numberline {FR.18.1}Train search}{12}{subsubsection.2.18.1}%
 \contentsline {subsection}{\numberline {FR.19}Path display}{12}{subsection.2.19}%
-\contentsline {subsection}{\numberline {FR.20}Creating a Service Request}{12}{subsection.2.20}%
-\contentsline {subsection}{\numberline {FR.21}Defining a Train Type}{12}{subsection.2.21}%
+\contentsline {subsection}{\numberline {FR.20}Creating a Service Request}{13}{subsection.2.20}%
+\contentsline {subsection}{\numberline {FR.21}Defining a Train Type}{13}{subsection.2.21}%
 \contentsline {subsection}{\numberline {FR.22}Defining a Service Type}{13}{subsection.2.22}%
 \contentsline {subsection}{\numberline {FR.23}Viewing the Network}{13}{subsection.2.23}%
 \contentsline {subsection}{\numberline {FR.24}Managing a Station}{13}{subsection.2.24}%
 \contentsline {subsubsection}{\numberline {FR.24.1}Registering a Station}{13}{subsubsection.2.24.1}%
 \contentsline {subsubsection}{\numberline {FR.24.2}Modifying a Station}{13}{subsubsection.2.24.2}%
 \contentsline {subsubsection}{\numberline {FR.24.3}Deleting a Station}{13}{subsubsection.2.24.3}%
-\contentsline {subsection}{\numberline {FR.25}Managing a Line}{13}{subsection.2.25}%
-\contentsline {subsubsection}{\numberline {FR.25.1}Registering a Line}{13}{subsubsection.2.25.1}%
+\contentsline {subsection}{\numberline {FR.25}Managing a Line}{14}{subsection.2.25}%
+\contentsline {subsubsection}{\numberline {FR.25.1}Registering a Line}{14}{subsubsection.2.25.1}%
 \contentsline {subsubsection}{\numberline {FR.25.2}Modifying a Line}{14}{subsubsection.2.25.2}%
 \contentsline {subsubsection}{\numberline {FR.25.3}Deleting a Line}{14}{subsubsection.2.25.3}%
 \contentsline {subsection}{\numberline {FR.26}Managing a Junction}{14}{subsection.2.26}%
 \contentsline {subsubsection}{\numberline {FR.26.1}Registering a Junction}{14}{subsubsection.2.26.1}%
 \contentsline {subsubsection}{\numberline {FR.26.2}Modifying a Junction}{14}{subsubsection.2.26.2}%
 \contentsline {subsubsection}{\numberline {FR.26.3}Deleting a Junction}{14}{subsubsection.2.26.3}%
-\contentsline {subsection}{\numberline {FR.27}Automated Service Integrity Checks}{14}{subsection.2.27}%
-\contentsline {subsubsection}{\numberline {FR.27.1}Single Track Line Availability Check}{14}{subsubsection.2.27.1}%
+\contentsline {subsection}{\numberline {FR.27}Automated Service Integrity Checks}{15}{subsection.2.27}%
+\contentsline {subsubsection}{\numberline {FR.27.1}Single Track Line Availability Check}{15}{subsubsection.2.27.1}%
 \contentsline {subsubsection}{\numberline {FR.27.2}Platform Availability Check}{15}{subsubsection.2.27.2}%
 \contentsline {subsubsection}{\numberline {FR.27.3}Track-side Systems Compatibility Check}{15}{subsubsection.2.27.3}%
 \contentsline {subsubsection}{\numberline {FR.27.4}Track Geometry Check}{15}{subsubsection.2.27.4}%
 \contentsline {subsection}{\numberline {FR.28}Displaying Integrity Check Results}{15}{subsection.2.28}%
 \contentsline {subsection}{\numberline {FR.29}Service Request Review}{15}{subsection.2.29}%
-\contentsline {subsubsection}{\numberline {FR.29.1}Service Request approval}{15}{subsubsection.2.29.1}%
-\contentsline {subsubsection}{\numberline {FR.29.2}Service Request amendment}{15}{subsubsection.2.29.2}%
+\contentsline {subsubsection}{\numberline {FR.29.1}Service Request approval}{16}{subsubsection.2.29.1}%
+\contentsline {subsubsection}{\numberline {FR.29.2}Service Request amendment}{16}{subsubsection.2.29.2}%
 \contentsline {subsubsection}{\numberline {FR.29.3}Service Request denial}{16}{subsubsection.2.29.3}%
 \contentsline {subsection}{Requirement restrictions based on user classification}{16}{subsubsection.2.29.3}%
 \contentsline {section}{\numberline {NFR}Non-functional requirements}{17}{section.3}%

@@ -28,7 +28,7 @@
 \newcommand\hyl[1]{\hyperref[#1]{#1}}
 \newcommand\subs[2]{\subsection{#1}\label{#2}}
 \newcommand\ssubs[2]{\subsubsection{#1}\label{#2}}
-\newcommand\imgins[1]{{\centering\includepdf[pages=-, linktodoc, width=\textwidth]{#1}Alternate link at our \href{https://github.com/DispatchNet/TRE/blob/uc/D2_DispatchNet/#1}{Github}}} %Remember to switch away from "uc" to "main" when the merge happens
+\newcommand\imgins[1]{{\footnotesize\centering\includegraphics[width=0.75\textwidth]{#1}\newline Alternate link at our \href{https://github.com/DispatchNet/TRE/blob/uc/D2_DispatchNet/#1}{Github}}} %Remember to switch away from "uc" to "main" when the merge happens
 
 \begin {document}
 \maketitle
@@ -57,6 +57,8 @@ The purpose of this document is to:
 	\item Itemize and relate the major data-components employed by the system
 	\item Provide a top-level view of the system's operations
 \end{itemize}
+
+\newpage
 
 \addcontentsline{toc}{section}{RE: Objectives}
 \section*{RE: Objectives}
@@ -107,6 +109,9 @@ It shall support:
     \item Submission of a new service request by \un{train companies}.
     \item Review of a service request by the \un{network manager}.
 \end{itemize}
+
+\newpage
+
 \phantomsection
 \addcontentsline{toc}{section}{RE: Stakeholders}
 \section*{RE: Stakeholders}
@@ -148,12 +153,34 @@ They are the primary stakeholders for making functional decisions.
 
 \newpage
 
-% main doc here 
+\section{Component Diagram}
+\imgins{components/components_diagram.pdf}
 
-\imgins{activity_diagrams/UC01_activity.pdf}
+\subsection{User authentication}
+\imgins{components/user_authentication_component.pdf}
+
+\ssubs{Registration}{UC.1}
+
+\subsection{User management}
+\imgins{components/user_management_component.pdf}
+
+\subsection{Ticketing management}
+\imgins{components/ticketing_management_component.pdf}
+
+\subsection{Path finding}
+\imgins{components/ticketing_management_component.pdf}
+
+\subsection{Info view}
+\imgins{components/ticketing_management_component.pdf}
+
+\subsection{Network management}
+\imgins{components/network_management_component.pdf}
+
+\subsection{Service management}
+\imgins{components/service_management_component.pdf}
 
 \newpage
-
+\addcontentsline{toc}{section}{Context Description (D1)}
 \includepdf[pages=-, linktodoc]{../D1_DispatchNet/D1_DispatchNet.pdf} %Fix the links being broken, try PAX?
 
 \end {document}

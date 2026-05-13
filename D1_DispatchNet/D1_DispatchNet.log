@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.17)  12 MAY 2026 22:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.17)  13 MAY 2026 15:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -291,116 +291,106 @@ s-tem must al-low $[]$
  []
 
 [8] [9] [10] [11] [12]
-Overfull \hbox (12.0639pt too wide) in paragraph at lines 305--306
+Overfull \hbox (12.0639pt too wide) in paragraph at lines 315--316
 \OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
 e sys-tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 308--309
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 318--319
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 311--312
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 321--322
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 314--315
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 324--325
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (12.0639pt too wide) in paragraph at lines 317--318
+Overfull \hbox (12.0639pt too wide) in paragraph at lines 327--328
 \OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
 e sys-tem must al-low $[]$
- []
-
-
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 320--321
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
--tem must al-low $[]$
- []
-
-
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 323--324
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
--tem must al-low $[]$
  []
 
 [13]
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 326--327
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 330--331
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (12.0639pt too wide) in paragraph at lines 329--330
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 333--334
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
+-tem must al-low $[]$
+ []
+
+
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 336--337
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
+-tem must al-low $[]$
+ []
+
+
+Overfull \hbox (12.0639pt too wide) in paragraph at lines 339--340
 \OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
 e sys-tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 332--333
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 342--343
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 335--336
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 345--346
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 338--339
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 348--349
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
 -tem must al-low $[]$
  []
 
 [14]
-Overfull \hbox (17.55135pt too wide) in paragraph at lines 360--361
+Overfull \hbox (17.55135pt too wide) in paragraph at lines 370--371
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.20[][], the sys
 -tem must al-low the $[]$
  []
 
-
-Overfull \hbox (17.05968pt too wide) in paragraph at lines 371--372
+[15]
+Overfull \hbox (17.05968pt too wide) in paragraph at lines 381--382
 []$ \OT1/cmr/m/n/12 to deny a ser-vice re-quest, no-ti-fy-ing ([][]NFR.9[][]) t
 he $[]$
  []
 
-[15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 448--449
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+Underfull \hbox (badness 10000) in paragraph at lines 454--455
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 453--454
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 464--465
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
 
  []
 
@@ -414,18 +404,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 474--475
 
  []
 
-[18]
+
 Underfull \hbox (badness 10000) in paragraph at lines 479--480
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 484--485
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+
+ []
+
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 512--513
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 518--519
+Underfull \hbox (badness 10000) in paragraph at lines 528--529
 
  []
 
@@ -435,13 +435,13 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `D1_DispatchNet.out' has not changed.
-(rerunfilecheck)             Checksum: FFEAF42A4ECCB8F71FCBD2E905FE936B;15731.
+(rerunfilecheck)             Checksum: B11E636C6DB3A638A963AB9BFA77F3B1;16007.
  ) 
 Here is how much of TeX's memory you used:
- 9177 strings out of 469515
- 139109 string characters out of 5470807
- 562723 words of memory out of 5000000
- 37655 multiletter control sequences out of 15000+600000
+ 9183 strings out of 469515
+ 139211 string characters out of 5470807
+ 562837 words of memory out of 5000000
+ 37659 multiletter control sequences out of 15000+600000
  634227 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,12n,79p,405b,515s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -449,10 +449,10 @@ Here is how much of TeX's memory you used:
 ></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti12.pfb>
-Output written on D1_DispatchNet.pdf (20 pages, 97383 bytes).
+Output written on D1_DispatchNet.pdf (20 pages, 97674 bytes).
 PDF statistics:
- 758 PDF objects out of 1000 (max. 8388607)
- 721 compressed objects within 8 object streams
- 118 named destinations out of 1000 (max. 500000)
- 753 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 770 PDF objects out of 1000 (max. 8388607)
+ 733 compressed objects within 8 object streams
+ 120 named destinations out of 1000 (max. 500000)
+ 769 words of extra memory for PDF output out of 10000 (max. 10000000)
 
