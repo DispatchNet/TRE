@@ -22,36 +22,37 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Account data view}{30}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Account data change}{33}{subsubsection.2.2.3}%
 \contentsline {subsubsection}{\numberline {2.2.4}Reset password}{41}{subsubsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.3}Ticketing management}{49}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}View Ticket Details}{50}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Ticket purchase}{54}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Ticket cancellation}{58}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}Ticket history}{62}{subsubsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.4}Path finding}{65}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Find Path}{66}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Purchase Tickets in path}{72}{subsubsection.2.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.3}View Stations in path}{77}{subsubsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.5}Info view}{80}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}View Train and Station Details}{81}{subsubsection.2.5.1}%
-\contentsline {subsubsection}{\numberline {2.5.2}Search Info}{85}{subsubsection.2.5.2}%
-\contentsline {subsubsection}{\numberline {2.5.3}View Map}{90}{subsubsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.6}Network management}{93}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}View Network Elements}{94}{subsubsection.2.6.1}%
-\contentsline {subsubsection}{\numberline {2.6.2}Insert Station Data}{98}{subsubsection.2.6.2}%
-\contentsline {subsubsection}{\numberline {2.6.3}Insert Junction Data}{102}{subsubsection.2.6.3}%
-\contentsline {subsubsection}{\numberline {2.6.4}Insert Line Data}{105}{subsubsection.2.6.4}%
-\contentsline {subsubsection}{\numberline {2.6.5}Create Station}{108}{subsubsection.2.6.5}%
-\contentsline {subsubsection}{\numberline {2.6.6}Create Junction}{111}{subsubsection.2.6.6}%
-\contentsline {subsubsection}{\numberline {2.6.7}Create Line}{114}{subsubsection.2.6.7}%
-\contentsline {subsubsection}{\numberline {2.6.8}Edit Station}{117}{subsubsection.2.6.8}%
-\contentsline {subsubsection}{\numberline {2.6.9}Edit Junction}{120}{subsubsection.2.6.9}%
-\contentsline {subsubsection}{\numberline {2.6.10}Edit Line}{123}{subsubsection.2.6.10}%
-\contentsline {subsubsection}{\numberline {2.6.11}Delete Station}{126}{subsubsection.2.6.11}%
-\contentsline {subsubsection}{\numberline {2.6.12}Delete Junction}{130}{subsubsection.2.6.12}%
-\contentsline {subsubsection}{\numberline {2.6.13}Delete Line}{133}{subsubsection.2.6.13}%
-\contentsline {subsection}{\numberline {2.7}Service management}{136}{subsection.2.7}%
-\contentsline {subsubsection}{\numberline {2.7.1}Defining a Train Type}{137}{subsubsection.2.7.1}%
-\contentsline {subsubsection}{\numberline {2.7.2}Registering a Service Type}{140}{subsubsection.2.7.2}%
-\contentsline {subsubsection}{\numberline {2.7.3}Create Service Request}{145}{subsubsection.2.7.3}%
-\contentsline {subsubsection}{\numberline {2.7.4}Service Request Review}{150}{subsubsection.2.7.4}%
-\contentsline {section}{Context Description (D1)}{155}{subsubsection.2.7.4}%
+\contentsline {subsection}{\numberline {2.3}Ticketing management}{50}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}View Ticket Details}{52}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Ticket purchase}{56}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Ticket cancellation}{60}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Ticket history}{64}{subsubsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.4}Path finding}{68}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Find Path}{70}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Purchase Tickets in path}{76}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}View Stations in path}{81}{subsubsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.5}Info view}{85}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}View Train and Station Details}{87}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Search Info}{91}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.3}View Map}{96}{subsubsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.6}Network management}{99}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}View Network Elements}{100}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Insert Station Data}{104}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}Insert Junction Data}{108}{subsubsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.4}Insert Line Data}{111}{subsubsection.2.6.4}%
+\contentsline {subsubsection}{\numberline {2.6.5}Create Station}{114}{subsubsection.2.6.5}%
+\contentsline {subsubsection}{\numberline {2.6.6}Create Junction}{117}{subsubsection.2.6.6}%
+\contentsline {subsubsection}{\numberline {2.6.7}Create Line}{120}{subsubsection.2.6.7}%
+\contentsline {subsubsection}{\numberline {2.6.8}Edit Station}{123}{subsubsection.2.6.8}%
+\contentsline {subsubsection}{\numberline {2.6.9}Edit Junction}{126}{subsubsection.2.6.9}%
+\contentsline {subsubsection}{\numberline {2.6.10}Edit Line}{129}{subsubsection.2.6.10}%
+\contentsline {subsubsection}{\numberline {2.6.11}Delete Station}{132}{subsubsection.2.6.11}%
+\contentsline {subsubsection}{\numberline {2.6.12}Delete Junction}{136}{subsubsection.2.6.12}%
+\contentsline {subsubsection}{\numberline {2.6.13}Delete Line}{139}{subsubsection.2.6.13}%
+\contentsline {subsection}{\numberline {2.7}Service management}{142}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.1}Defining a Train Type}{143}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.2}Registering a Service Type}{147}{subsubsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {2.7.3}Create Service Request}{152}{subsubsection.2.7.3}%
+\contentsline {subsubsection}{\numberline {2.7.4}Service Request Review}{157}{subsubsection.2.7.4}%
+\contentsline {section}{\numberline {3}Class Diagram}{162}{section.3}%
+\contentsline {section}{Context Description (D1)}{163}{section.3}%
