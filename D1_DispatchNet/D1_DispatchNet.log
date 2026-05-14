@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.17)  13 MAY 2026 15:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.17)  14 MAY 2026 07:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -264,118 +264,163 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `D1_DispatchNet.toc'.
 
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+ [4] (./D1_BodyText.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--89
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
 
  []
 
 [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 [7]
-Overfull \hbox (66.0911pt too wide) in paragraph at lines 173--176
+Overfull \hbox (66.0911pt too wide) in paragraph at lines 93--96
 \OT1/cmr/m/n/12 tween[] be-tween $[]$, $[]$, $[]$ op-er-a-tor and $[]$.
  []
 
 
-Overfull \hbox (7.29453pt too wide) in paragraph at lines 178--180
+Overfull \hbox (7.29453pt too wide) in paragraph at lines 98--100
 \OT1/cmr/m/n/12 Following [][]FR.1[][], in ref-er-ence to [][]NFR.2[][], the sy
 s-tem must al-low $[]$
  []
 
 [8] [9] [10] [11] [12]
-Overfull \hbox (12.0639pt too wide) in paragraph at lines 315--316
+Overfull \hbox (12.0639pt too wide) in paragraph at lines 235--236
 \OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
 e sys-tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 318--319
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 238--239
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 321--322
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 241--242
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 324--325
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 244--245
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (12.0639pt too wide) in paragraph at lines 327--328
+Overfull \hbox (12.0639pt too wide) in paragraph at lines 247--248
 \OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
 e sys-tem must al-low $[]$
  []
 
 [13]
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 330--331
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 250--251
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 333--334
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 253--254
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 336--337
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 256--257
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (12.0639pt too wide) in paragraph at lines 339--340
+Overfull \hbox (12.0639pt too wide) in paragraph at lines 259--260
 \OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
 e sys-tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 342--343
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 262--263
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 345--346
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 265--266
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 348--349
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 268--269
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
 -tem must al-low $[]$
  []
 
 [14]
-Overfull \hbox (17.55135pt too wide) in paragraph at lines 370--371
+Overfull \hbox (17.55135pt too wide) in paragraph at lines 290--291
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.20[][], the sys
 -tem must al-low the $[]$
  []
 
 [15]
-Overfull \hbox (17.05968pt too wide) in paragraph at lines 381--382
+Overfull \hbox (17.05968pt too wide) in paragraph at lines 301--302
 []$ \OT1/cmr/m/n/12 to deny a ser-vice re-quest, no-ti-fy-ing ([][]NFR.9[][]) t
 he $[]$
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
@@ -384,52 +429,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 448--449
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
-
- []
-
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 463--464
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 469--470
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 479--480
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 484--485
-
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 489--490
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 522--523
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--529
-
- []
-
-[20] (./D1_DispatchNet.aux)
+) [20] (./D1_DispatchNet.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -438,10 +438,10 @@ Package rerunfilecheck Info: File `D1_DispatchNet.out' has not changed.
 (rerunfilecheck)             Checksum: B11E636C6DB3A638A963AB9BFA77F3B1;16007.
  ) 
 Here is how much of TeX's memory you used:
- 9183 strings out of 469515
- 139211 string characters out of 5470807
+ 9189 strings out of 469515
+ 139324 string characters out of 5470807
  562837 words of memory out of 5000000
- 37659 multiletter control sequences out of 15000+600000
+ 37662 multiletter control sequences out of 15000+600000
  634227 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,12n,79p,405b,515s stack positions out of 10000i,1000n,20000p,200000b,200000s

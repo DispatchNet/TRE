@@ -1,0 +1,157 @@
+\section{RE: Objectives}
+
+A major European rail infrastructure manager received an idea for a unified rail service scheduling and ticketing system, and has chosen us to prototype a trial run, over multiple regions in their network.\\
+
+Thus, the project provides a platform that covers the needs of both \un{passengers} and \un{train companies}, as well as an underlying 
+management system of any regional-sized rail network, which supports \un{network managers} in its administration. \\
+It provides a set of functionalities which support the planning of train travel. The system lets \un{passengers} discover paths, view scheduling and manage tickets. On the other side, it lets \un{train companies} introduce train services and \un{network managers} administer the network.\\
+The project coordinates the functionalities for each stakeholder into a solution that has been identified in an application accessible for the aforesaid users. \\
+
+\noindent The main objectives of the project are:
+
+\subs{Ticketing system}{O.1}
+Subsystem which deals with tickets, from the search to the possible actions after the purchase. 
+It includes basic operations that the \un{passenger} can perform, such as:
+\begin{itemize}
+	\item Viewing tickets details.
+	\item Purchase.
+	\item Accessing tickets history.
+	\item Cancellation.
+\end{itemize}
+
+% \it{Boundary:} The project assumes the use of a third-party \un{payment gateway} system, implementing only a place-holder for a real 
+% integration with it.
+
+\subs{Route-finding}{O.2}
+The system shall let \un{passengers} select a starting station, a destination station, and either a departure time or arrival time.\\
+It computes and ranks possible \bf{routes} that best fit the user's request and permissions
+(for example, not permitting cargo trains to \un{passengers}).\\
+The user must be able to compare the options based on:
+\begin{itemize}
+    \item Departure and arrival times.
+    \item Number of transfers.
+    \item Possible transfer locations.
+\end{itemize}
+
+\subs{Virtual board}{O.3}
+The system provides \un{passengers} access to departure and arrival boards for any station. It also shows intermediate stations and scheduled times for each 
+individual train service.
+
+\subs{Rail system modeling}{O.4}
+The system provides a data-driven approach to rail network modelling, supporting an efficient administration of the infrastructure.\\
+It shall support:
+\begin{itemize}
+    \item Management of the network by the \un{network manager}.
+    \item Management of rolling stock by the \un{network manager}.
+    \item Submission of a new service request by \un{train companies}.
+    \item Review of a service request by the \un{network manager}.
+\end{itemize}
+
+\newpage
+
+\phantomsection
+\addcontentsline{toc}{section}{RE: Stakeholders}
+\section*{RE: Stakeholders}
+
+\addcontentsline{toc}{subsection}{Internal}
+\subsection*{Internal}
+
+\addcontentsline{toc}{subsubsection}{Human}
+\subsubsection*{Human}
+\un{Network managers:}, the product owner. They manage the rail network combining the availability of \un{train companies} with \un{passengers'} needs.\\
+They are the primary stakeholders for making functional decisions.
+
+\addcontentsline{toc}{subsubsection}{Human}
+\subsubsection*{Non-Human}
+\un{Database}, where all the information used by the application are stored.
+
+\addcontentsline{toc}{subsection}{External}
+\subsection*{External}
+
+\addcontentsline{toc}{subsubsection}{Human}
+\subsubsection*{Human}
+\un{Passengers}, the main end users. They want to streamline their interactions with the train transport system, including:
+\begin{itemize}
+	\item Searching for routes and schedules.
+	\item Analyzing departure/arrival boards as well as train information.
+	\item Purchasing tickets.
+\end{itemize}
+
+\noindent\un{Train companies}, who provide the rolling stock. They request the introduction of services. They are also expected to provide information of trains they ask to be managed.
+
+\noindent\un{Anonymous users}, who have not yet authenticated. They are considered as passengers with restricted access to functionalities that require authentication.
+
+\addcontentsline{toc}{subsubsection}{Non-human}
+\subsubsection*{Non-human}
+\un{Payment gateway}, which provides the underlying payment methods.\\
+
+% \it{Boundary:} The project will not provide actual transactions nor integration with any payment application.
+
+\newpage
+
+\section{Use Cases}
+
+\section{Component Diagram}
+\imgarg{components/components_diagram.pdf}{1}
+
+\subsection{User authentication}
+\imgins{components/user_authentication_component.pdf}
+\uclnk{Registration}{1-4}{01}{}
+\uclnk{Login}{18-20}{06}{}
+\uclnk{Logout}{21}{07}{}
+
+\subsection{User management}
+\imgins{components/user_management_component.pdf}
+\uclnk{Account deletion}{5-6}{02}{}
+\uclnk{Account data view}{7}{03}{}
+\uclnk{Account data change}{8-12}{04}{}
+\uclnk{Reset password}{13-17}{05}{}
+
+\subsection{Ticketing management}
+\imgins{components/ticketing_management_component.pdf}
+\uclnk{View Ticket Details}{22-23}{08}{}
+\uclnk{Ticket purchase}{24-25}{09}{}
+\uclnk{Ticket cancellation}{26-27}{10}{}
+\uclnk{Ticket history}{28}{11}{}
+
+\subsection{Path finding}
+\imgins{components/ticketing_management_component.pdf}
+\uclnk{Find Path}{29-31}{12}{}
+\uclnk{Purchase Tickets in path}{32-33}{12.1}{}
+\uclnk{View Stations in path}{34}{12.2}{}
+
+\subsection{Info view}
+\imgins{components/ticketing_management_component.pdf}
+\uclnk{View Train and Station Details}{35-36}{13}{}
+\uclnk{Search Info}{37-38}{14}{}
+\uclnk{View Map}{39}{15}{}
+
+\subsection{Network management}
+\imgins{components/network_management_component.pdf}
+\uclnk{View Network Elements}{40-41}{16}{}
+\uclnk{Insert Station Data}{42-43}{17}{}
+\uclnk{Insert Junction Data}{44}{18}{}
+\uclnk{Insert Line Data}{45}{19}{}
+\uclnk{Create Station}{46}{20}{}
+\uclnk{Create Junction}{47}{21}{}
+\uclnk{Create Line}{48}{22}{}
+\uclnk{Edit Station}{49}{23}{}
+\uclnk{Edit Junction}{50}{24}{}
+\uclnk{Edit Line}{51}{25}{}
+\uclnk{Delete Station}{52-53}{26}{}
+\uclnk{Delete Junction}{54}{27}{}
+\uclnk{Delete Line}{55}{28}{}
+
+\subsection{Service management}
+\imgins{components/service_management_component.pdf}
+\uclnk{Defining a Train Type}{56}{29}{}
+\uclnk{Registering a Service Type}{57-58}{30}{}
+\uclnk{Create Service Request}{59-60}{31}{}
+\uclnk{Service Request Review}{61-62}{32}{}
+
+\newpage
+
+\section{Class Diagram}
+\imgarg{class_diagram/class_diagram.pdf}{1}
+
+\newpage
