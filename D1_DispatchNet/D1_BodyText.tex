@@ -84,7 +84,7 @@ They are the primary stakeholders for making functional decisions.
 \subsubsection*{Non-human}
 \un{Payment gateway}, which provides the underlying payment methods.\\
 
-% \it{Boundary:} The project will not provide actual transactions nor integration with any payment application.
+\textcolor{green}{\it{Boundary:} The project will not provide actual transactions nor integration with any payment application, instead a fake API.}
 
 \newpage
 
@@ -92,7 +92,8 @@ They are the primary stakeholders for making functional decisions.
 \subs{Account classification}{FR.1}
 The system shall \textcolor{green}{provide different functionalities, distinguishing users between} between \un{anonymous user}, \un{passenger}, \un{train company} operator and \un{network manager}. 
 The additional functionalities are described in 
-\hyperref[Table1]{Requirement restrictions based on user classification}.
+\hyperref[Table1]{Requirement restrictions based on user classification}.\\
+\textit{\textcolor{green}{Clarified in which sense the system classifies users}}
 
 \subs{Account registration}{FR.2}
 Following \hyl{FR.1}, in reference to \hyl{NFR.2}, the system must allow \un{anonymous users} to register. Data must 
@@ -166,7 +167,8 @@ Following \hyl{O.1}, in reference to \hyl{FR.12}, the tickets history must show 
 cancelled.
 
 \subs{Path search}{FR.13}
-Following \hyl{O.2}, the system needs to be able to compute multiple paths between stations \textcolor{green}{, that is an ordered sequence of services from a departure to an arrival station}.
+Following \hyl{O.2}, the system needs to be able to compute multiple paths between stations \textcolor{green}{, that is an ordered sequence of services from a departure to an arrival station}.\\
+\textit{\textcolor{green}{Clarified what is a "path"}}
 
 \ssubs{Path points}{FR.13.1}
 Following \hyl{O.2}, extending \hyl{FR.13}, the \un{passenger} must be able to choose both the first and last stations of paths to be computed.
@@ -197,7 +199,8 @@ tickets not already owned by the user.
 Following \hyl{O.2}, in reference to \hyl{FR.13}, the system needs to compute transfer paths out of intersecting routes.
 
 \subs{Train access restriction}{FR.16}
-Following \hyl{O.2}, in reference to \hyl{FR.13}, the system must not consider train routes that pass by trains that the \un{passenger} is not allowed to purchase a ticket for\textcolor{green}{, such as cargo trains or trains with unavailable seats}.
+Following \hyl{O.2}, in reference to \hyl{FR.13}, the system must not consider train routes that pass by trains that the \un{passenger} is not allowed to purchase a ticket for\textcolor{green}{, such as cargo trains or trains with unavailable seats}.\\
+\textit{\textcolor{green}{Clarified which trains the passenger cannot access}}
 
 \subs{Station display}{FR.17}
 Following \hyl{O.3}, the system must provide departure and arrival times of all trains that pass through any station.
@@ -214,7 +217,7 @@ Following \hyl{O.3}, the system must provide departure and arrival times of a tr
 
 \textcolor{green}{
 	\ssubs{Train search}{FR.18.1}
-	Following \hyl{O.3}, the system must allow user to search such information by the a train's identifier.
+	Following \hyl{O.3}, the system must allow user to search such information by a train's identifier.
 	\newline
 	\it{Added to actually allow users to request train information}
 }
@@ -283,9 +286,11 @@ Following \hyl{O.4}, specifying \hyl{FR.27}, the system must ensure that no two 
 
 \ssubs{Track-side Systems Compatibility Check}{FR.27.3}
 Following \hyl{O.4}, specifying \hyl{FR.27}, the system must ensure that all trains used for a service are compatible with the signaling and electrification systems installed on the traversed infrastructure.
+\textit{textcolor{green}{Boundary: the system will not implement track-side compatibility check}}
 
 \ssubs{Track Geometry Check}{FR.27.4}
 Following \hyl{O.4}, specifying \hyl{FR.27}, the system must ensure that all trains used for a service are compatible with both the loading and track gauges of the infrastructure they traverse.
+\textit{textcolor{green}{Boundary: the system will not implement geometry check}}
 
 \subs{Displaying Integrity Check Results}{FR.28}
 Following \hyl{O.4}, extending \hyl{FR.27}, the system must provide the integrity check results.
@@ -313,13 +318,12 @@ Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, the system mus
 	\hline
 	\begin{tabular}{@{}c@{}}
 	\bf{FR.1}\\
-    \bf{FR.6}\\
 	\bf{FR.23}	
 	\end{tabular} &Yes &Yes &Yes &Yes \\
 	\hline
 	\begin{tabular}{@{}c@{}}
 	\bf{FR.2}\\
-	\bf{FR.7} 
+	\bf{FR.6-7}
 	\end{tabular} &Yes & & & \\
 	\hline
 	\bf{FR.3-5} & &Yes &Yes & \\
@@ -344,7 +348,8 @@ Following \hyl{O.4}, in reference to \hyl{FR.20} and \hyl{FR.29}, the system mus
 	\end{tabular}
 \end{center}
 \it{Caption:}\\
-Self: access to resources regarding only the personal part of the functionality.
+Self: access to resources regarding only the personal part of the functionality.\\
+\textit{\textcolor{green}{Moved FR.6 from first row, because it was originally intended in this way, an authenticated user change password with FR5.}}
 
 \newpage
 
@@ -456,5 +461,6 @@ steps/inputs than the ones required to select a different ranking.
 \textcolor{green}{
 \subs{Network infrastructure}{NFR.14}
 \un{Organizational requirement - Development requirement} \\
-\noindent The system structures the network infrastructure with junctions, stations and lines; in a way similar to a graph, where junctions and stations are nodes and lines are edges.
+\noindent The system structures the network infrastructure with junctions, stations and lines; in a way similar to a graph, where junctions and stations are nodes and lines are edges.\\
+\textit{Added to explain what are the components of a network and how they interact.}
 }
