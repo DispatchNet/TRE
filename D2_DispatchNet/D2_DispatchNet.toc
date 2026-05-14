@@ -113,41 +113,41 @@
 \contentsline {subsubsection}{Registration}{29}{section*.29}%
 \contentsline {subsubsection}{Login}{36}{section*.30}%
 \contentsline {subsubsection}{Logout}{40}{section*.31}%
-\contentsline {subsection}{User management}{43}{section*.33}%
-\contentsline {subsubsection}{Account deletion}{44}{section*.34}%
-\contentsline {subsubsection}{Account data view}{47}{section*.35}%
-\contentsline {subsubsection}{Account data change}{50}{section*.36}%
-\contentsline {subsubsection}{Reset password}{58}{section*.37}%
-\contentsline {subsection}{Ticketing management}{66}{section*.39}%
-\contentsline {subsubsection}{View Ticket Details}{68}{section*.40}%
-\contentsline {subsubsection}{Ticket purchase}{71}{section*.41}%
-\contentsline {subsubsection}{Ticket cancellation}{75}{section*.42}%
-\contentsline {subsubsection}{Ticket history}{79}{section*.43}%
-\contentsline {subsection}{Path finding}{82}{section*.45}%
-\contentsline {subsubsection}{Find Path}{84}{section*.46}%
-\contentsline {subsubsection}{Purchase Tickets in path}{89}{section*.47}%
-\contentsline {subsubsection}{View Stations in path}{94}{section*.48}%
-\contentsline {subsection}{Info view}{97}{section*.50}%
-\contentsline {subsubsection}{View Train and Station Details}{99}{section*.51}%
-\contentsline {subsubsection}{Search Info}{103}{section*.52}%
-\contentsline {subsubsection}{View Map}{107}{section*.53}%
-\contentsline {subsection}{Network management}{110}{section*.55}%
-\contentsline {subsubsection}{View Network Elements}{111}{section*.56}%
-\contentsline {subsubsection}{Insert Station Data}{114}{section*.57}%
-\contentsline {subsubsection}{Insert Junction Data}{117}{section*.58}%
-\contentsline {subsubsection}{Insert Line Data}{120}{section*.59}%
-\contentsline {subsubsection}{Create Station}{123}{section*.60}%
-\contentsline {subsubsection}{Create Junction}{126}{section*.61}%
-\contentsline {subsubsection}{Create Line}{129}{section*.62}%
-\contentsline {subsubsection}{Edit Station}{132}{section*.63}%
-\contentsline {subsubsection}{Edit Junction}{135}{section*.64}%
-\contentsline {subsubsection}{Edit Line}{138}{section*.65}%
-\contentsline {subsubsection}{Delete Station}{141}{section*.66}%
-\contentsline {subsubsection}{Delete Junction}{144}{section*.67}%
-\contentsline {subsubsection}{Delete Line}{147}{section*.68}%
-\contentsline {subsection}{Service management}{150}{section*.70}%
-\contentsline {subsubsection}{Defining a Train Type}{151}{section*.71}%
-\contentsline {subsubsection}{Registering a Service Type}{154}{section*.72}%
-\contentsline {subsubsection}{Create Service Request}{158}{section*.73}%
-\contentsline {subsubsection}{Service Request Review}{163}{section*.74}%
-\contentsline {section}{Class Diagram}{167}{section*.77}%
+\contentsline {subsection}{User management}{43}{section*.32}%
+\contentsline {subsubsection}{Account deletion}{44}{section*.33}%
+\contentsline {subsubsection}{Account data view}{47}{section*.34}%
+\contentsline {subsubsection}{Account data change}{50}{section*.35}%
+\contentsline {subsubsection}{Reset password}{58}{section*.36}%
+\contentsline {subsection}{Ticketing management}{66}{section*.37}%
+\contentsline {subsubsection}{View Ticket Details}{68}{section*.38}%
+\contentsline {subsubsection}{Ticket purchase}{71}{section*.39}%
+\contentsline {subsubsection}{Ticket cancellation}{75}{section*.40}%
+\contentsline {subsubsection}{Ticket history}{79}{section*.41}%
+\contentsline {subsection}{Path finding}{82}{section*.42}%
+\contentsline {subsubsection}{Find Path}{84}{section*.43}%
+\contentsline {subsubsection}{Purchase Tickets in path}{89}{section*.44}%
+\contentsline {subsubsection}{View Stations in path}{94}{section*.45}%
+\contentsline {subsection}{Info view}{97}{section*.46}%
+\contentsline {subsubsection}{View Train and Station Details}{99}{section*.47}%
+\contentsline {subsubsection}{Search Info}{103}{section*.48}%
+\contentsline {subsubsection}{View Map}{107}{section*.49}%
+\contentsline {subsection}{Network management}{110}{section*.50}%
+\contentsline {subsubsection}{View Network Elements}{111}{section*.51}%
+\contentsline {subsubsection}{Insert Station Data}{114}{section*.52}%
+\contentsline {subsubsection}{Insert Junction Data}{117}{section*.53}%
+\contentsline {subsubsection}{Insert Line Data}{120}{section*.54}%
+\contentsline {subsubsection}{Create Station}{123}{section*.55}%
+\contentsline {subsubsection}{Create Junction}{126}{section*.56}%
+\contentsline {subsubsection}{Create Line}{129}{section*.57}%
+\contentsline {subsubsection}{Edit Station}{132}{section*.58}%
+\contentsline {subsubsection}{Edit Junction}{135}{section*.59}%
+\contentsline {subsubsection}{Edit Line}{138}{section*.60}%
+\contentsline {subsubsection}{Delete Station}{141}{section*.61}%
+\contentsline {subsubsection}{Delete Junction}{144}{section*.62}%
+\contentsline {subsubsection}{Delete Line}{147}{section*.63}%
+\contentsline {subsection}{Service management}{150}{section*.64}%
+\contentsline {subsubsection}{Defining a Train Type}{151}{section*.65}%
+\contentsline {subsubsection}{Registering a Service Type}{154}{section*.66}%
+\contentsline {subsubsection}{Create Service Request}{158}{section*.67}%
+\contentsline {subsubsection}{Service Request Review}{163}{section*.68}%
+\contentsline {section}{Class Diagram}{167}{section*.70}%
