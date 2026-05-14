@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.17)  14 MAY 2026 08:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.17)  14 MAY 2026 08:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**D1_DispatchNet.tex
-(./D1_DispatchNet.tex
+**D1_DispatchNet/D1_DispatchNet.tex
+(./D1_DispatchNet/D1_DispatchNet.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -205,7 +205,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 9.
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count295
 )
-(./D1_DispatchNet.aux)
+No file D1_DispatchNet.aux.
 \openout1 = `D1_DispatchNet.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
@@ -227,10 +227,8 @@ LaTeX Font Info:    ... okay on input line 54.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
 Package hyperref Info: Link coloring ON on input line 54.
- (./D1_DispatchNet.out) (./D1_DispatchNet.out)
 \@outlinefile=\write3
 \openout3 = `D1_DispatchNet.out'.
-
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -252,207 +250,51 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 56.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./D1_DispatchNet.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 3.
-
-[2] [3])
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+No file D1_DispatchNet.toc.
 \tf@toc=\write4
 \openout4 = `D1_DispatchNet.toc'.
 
- [4] (./D1_BodyText.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 62.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 62.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 62.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--9
-
- []
-
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
-
- []
-
-[7]
-Overfull \hbox (66.0911pt too wide) in paragraph at lines 93--96
-\OT1/cmr/m/n/12 tween[] be-tween $[]$, $[]$, $[]$ op-er-a-tor and $[]$.
- []
+LaTeX Warning: Hyper reference `Contents' on page 2 undefined on input line 64.
 
 
-Overfull \hbox (7.29453pt too wide) in paragraph at lines 98--100
-\OT1/cmr/m/n/12 Following [][]FR.1[][], in ref-er-ence to [][]NFR.2[][], the sy
-s-tem must al-low $[]$
- []
+[2]
 
-[8] [9] [10] [11] [12]
-Overfull \hbox (12.0639pt too wide) in paragraph at lines 239--240
-\OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
-e sys-tem must al-low $[]$
- []
+! LaTeX Error: File `D1_BodyText.tex' not found.
 
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 242--243
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
--tem must al-low $[]$
- []
-
-
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 245--246
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
--tem must al-low $[]$
- []
-
-
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 248--249
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
--tem must al-low $[]$
- []
-
-
-Overfull \hbox (12.0639pt too wide) in paragraph at lines 251--252
-\OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
-e sys-tem must al-low $[]$
- []
-
-[13]
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 254--255
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
--tem must al-low $[]$
- []
-
-
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 257--258
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
--tem must al-low $[]$
- []
-
-
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 260--261
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
--tem must al-low $[]$
- []
-
-
-Overfull \hbox (12.0639pt too wide) in paragraph at lines 263--264
-\OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
-e sys-tem must al-low $[]$
- []
-
-
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 266--267
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
--tem must al-low $[]$
- []
-
-
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 269--270
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
--tem must al-low $[]$
- []
-
-
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 272--273
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
--tem must al-low $[]$
- []
-
-[14]
-Overfull \hbox (17.55135pt too wide) in paragraph at lines 294--295
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.20[][], the sys
--tem must al-low the $[]$
- []
-
-[15]
-Overfull \hbox (17.05968pt too wide) in paragraph at lines 305--306
-[]$ \OT1/cmr/m/n/12 to deny a ser-vice re-quest, no-ti-fy-ing ([][]NFR.9[][]) t
-he $[]$
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
-
- []
-
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 387--388
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 398--399
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
-
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
-
- []
-
-) [20] (./D1_DispatchNet.aux)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2026-01-19>
- ***********
-Package rerunfilecheck Info: File `D1_DispatchNet.out' has not changed.
-(rerunfilecheck)             Checksum: B11E636C6DB3A638A963AB9BFA77F3B1;16007.
- ) 
+Enter file name: ^^X
+! Missing endcsname inserted.
+<to be read again> 
+                   MessageBreak 
+l.81 \input{D1_BodyText.tex}
+                            
+? x
+ 
 Here is how much of TeX's memory you used:
- 9189 strings out of 469515
- 139324 string characters out of 5470807
- 562837 words of memory out of 5000000
- 37662 multiletter control sequences out of 15000+600000
+ 8875 strings out of 469515
+ 134910 string characters out of 5470807
+ 543746 words of memory out of 5000000
+ 37475 multiletter control sequences out of 15000+600000
  634227 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,12n,79p,405b,515s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/alessio/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on D1_DispatchNet.pdf (20 pages, 97758 bytes).
+ 75i,11n,79p,274b,451s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti12.pfb>
+Output written on D1_DispatchNet.pdf (2 pages, 43111 bytes).
 PDF statistics:
- 770 PDF objects out of 1000 (max. 8388607)
- 733 compressed objects within 8 object streams
- 120 named destinations out of 1000 (max. 500000)
- 769 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 35 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
