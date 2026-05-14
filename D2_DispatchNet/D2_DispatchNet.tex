@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{report}
 
 \usepackage{fancyhdr}
 \usepackage{hyperref}
@@ -12,9 +12,12 @@
 \setlength{\headheight}{14.49998pt}
 \addtolength{\topmargin}{-2.49998pt}
 
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
 \title{\bf{Software Engineering Project}}
 \author{\bf{DispatchNet:} \\ Alessio Zanon \\ Leonardo Tonetta \\ Luca Fiorini}
-\date{\it{Use Case Analysis}}
+\date{\it{Use Case \& Class Analysis}}
 
 \pagestyle{fancy}
 \fancyhead[l]{DispatchNet}
@@ -36,9 +39,9 @@
   \int_case:nn { #1 }
    {
     {0}{0}
-    {1}{1}
-    {2}{2}
-    {3}{3}
+    {1}{O}
+    {2}{FR}
+    {3}{NFR}
     {4}{4}
     {5}{O }
     {6}{FR }
@@ -57,10 +60,34 @@
 \newcommand\hyl[1]{\hyperref[#1]{#1}}
 \newcommand\subs[2]{\subsection{#1}\label{#2}}
 \newcommand\ssubs[2]{\subsubsection{#1}\label{#2}}
-\newcommand\imgarg[2]{\begin{center}{\footnotesize\includegraphics[width=#2\textwidth]{#1}\newline Original image in our \href{https://github.com/DispatchNet/TRE/blob/uc/D2_DispatchNet/#1}{Github}}\end{center}} %Remember to switch away from "uc" to "main" when the merge happens
-\newcommand\imgins[1]{\imgarg{#1}{0.65}}
+\newcommand\gitter[1]{
+	\href{https://github.com/DispatchNet/TRE/blob/uc/#1}{Github here}
+}
+\newcommand\imgarg[2]{\includegraphics[width=#2\textwidth]{#1}} %Remember to switch away from "uc" to "main" when the merge happens
+\newcommand\imgins[1]{
+	\begin{center}
+		\footnotesize
+		\imgarg{#1}{0.65}
+		
+		Original image can be found on our \gitter{#1}
+	\end{center}
+}
 \newcommand\uclnk[4]{
-	%\newpage\subsubsection{#1} #4 \includepdf[pages={#2}, linktodoc=true]{use_cases/use_cases_v0.5.pdf}\imgarg{activity_diagrams/UC#3_activity.pdf}{0.6} \imgarg{sequence_diagrams/UC#3_sequence.pdf}{1}
+	\newpage
+	\addcontentsline{toc}{subsubsection}{#1}
+	\subsubsection*{#1} 
+	
+	Original Activity diagram image can be found on our \gitter{D2_DispatchNet/activity_diagrams/UC#3_activity.pdf}
+	\newline	
+	Original Sequence diagram image can be found on our \gitter{D2_DispatchNet/sequence_diagrams/UC#3_sequence.pdf}
+	\newline
+	#4 
+	\newline
+	\includepdf[pages={#2}]{use_cases/use_cases_v0.5.pdf}
+
+	\imgarg{activity_diagrams/UC#3_activity.pdf}{0.6} 
+
+	\imgarg{sequence_diagrams/UC#3_sequence.pdf}{1}
 	}
 
 \begin {document}
@@ -93,12 +120,11 @@ The purpose of this document is to:
 
 \newpage
 
-\input{D2_BodyText.tex}
-
-\addcontentsline{toc}{section}{Context Description (D1)}
-\section*{Context Description (D1)}
-Original, up-to-date file available on our \href{https://github.com/DispatchNet/TRE/blob/uc/D1_DispatchnNet/D1_DispatchNet.pdf}{Github}
-
+\chapter{Context Description (D1)}
+Original, up-to-date file available at our \gitter{D1_DispatchNet/D1_DispatchNet.pdf}
 \input{../D1_DispatchNet/D1_BodyText.tex}
+
+\chapter{Use Cases \& UML (D2)}
+\input{D2_BodyText.tex}
 
 \end {document}

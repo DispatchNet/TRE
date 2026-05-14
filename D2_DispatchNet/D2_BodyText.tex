@@ -1,4 +1,5 @@
-\section{RE: Objectives}
+\addcontentsline{toc}{section}{RE: Objectives}
+\section*{RE: Objectives}
 
 A major European rail infrastructure manager received an idea for a unified rail service scheduling and ticketing system, and has chosen us to prototype a trial run, over multiple regions in their network.\\
 
@@ -9,7 +10,8 @@ The project coordinates the functionalities for each stakeholder into a solution
 
 \noindent The main objectives of the project are:
 
-\subs{Ticketing system}{O.1}
+\subsection*{Ticketing system}
+\addcontentsline{toc}{subsection}{Ticketing system}
 Subsystem which deals with tickets, from the search to the possible actions after the purchase. 
 It includes basic operations that the \un{passenger} can perform, such as:
 \begin{itemize}
@@ -22,7 +24,8 @@ It includes basic operations that the \un{passenger} can perform, such as:
 % \it{Boundary:} The project assumes the use of a third-party \un{payment gateway} system, implementing only a place-holder for a real 
 % integration with it.
 
-\subs{Route-finding}{O.2}
+\subsection*{Route-finding}
+\addcontentsline{toc}{subsection}{Route-finding}
 The system shall let \un{passengers} select a starting station, a destination station, and either a departure time or arrival time.\\
 It computes and ranks possible \bf{routes} that best fit the user's request and permissions
 (for example, not permitting cargo trains to \un{passengers}).\\
@@ -33,11 +36,13 @@ The user must be able to compare the options based on:
     \item Possible transfer locations.
 \end{itemize}
 
-\subs{Virtual board}{O.3}
+\subsection*{Virtual board}
+\addcontentsline{toc}{subsection}{Virtual board}
 The system provides \un{passengers} access to departure and arrival boards for any station. It also shows intermediate stations and scheduled times for each 
 individual train service.
 
-\subs{Rail system modeling}{O.4}
+\subsection*{Rail system modeling}
+\addcontentsline{toc}{subsection}{Rail system modeling}
 The system provides a data-driven approach to rail network modelling, supporting an efficient administration of the infrastructure.\\
 It shall support:
 \begin{itemize}
@@ -89,69 +94,81 @@ They are the primary stakeholders for making functional decisions.
 
 \newpage
 
-\section{Use Cases}
+\addcontentsline{toc}{section}{Component Diagram}
+\section*{Component Diagram}
+\begin{center}
+	\footnotesize
+	\imgarg{components/components_diagram.pdf}{1}
+	Original image can be found on our \gitter{components/components_diagram.pdf}
+\end{center}
 
-\section{Component Diagram}
-\imgarg{components/components_diagram.pdf}{1}
-
-\subsection{User authentication}
+\subsection*{User authentication}
+\addcontentsline{toc}{subsection}{User authentication}
 \imgins{components/user_authentication_component.pdf}
 \uclnk{Registration}{1-4}{01}{}
-\uclnk{Login}{18-20}{06}{}
-\uclnk{Logout}{21}{07}{}
+\uclnk{Login}{17-18}{06}{}
+\uclnk{Logout}{19}{07}{}
 
-\subsection{User management}
+\subsection*{User management}
+\addcontentsline{toc}{subsection}{User management}
 \imgins{components/user_management_component.pdf}
-\uclnk{Account deletion}{5-6}{02}{}
-\uclnk{Account data view}{7}{03}{}
-\uclnk{Account data change}{8-12}{04}{}
-\uclnk{Reset password}{13-17}{05}{}
+\uclnk{Account deletion}{5}{02}{}
+\uclnk{Account data view}{6}{03}{}
+\uclnk{Account data change}{7-11}{04}{}
+\uclnk{Reset password}{12-16}{05}{}
 
-\subsection{Ticketing management}
+\subsection*{Ticketing management}
+\addcontentsline{toc}{subsection}{Ticketing management}
 \imgins{components/ticketing_management_component.pdf}
-\uclnk{View Ticket Details}{22-23}{08}{}
-\uclnk{Ticket purchase}{24-25}{09}{}
-\uclnk{Ticket cancellation}{26-27}{10}{}
-\uclnk{Ticket history}{28}{11}{}
+\uclnk{View Ticket Details}{20}{08}{}
+\uclnk{Ticket purchase}{21-22}{09}{}
+\uclnk{Ticket cancellation}{23-24}{10}{}
+\uclnk{Ticket history}{25}{11}{}
 
-\subsection{Path finding}
+\subsection*{Path finding}
+\addcontentsline{toc}{subsection}{Path finding}
 \imgins{components/ticketing_management_component.pdf}
-\uclnk{Find Path}{29-31}{12}{}
-\uclnk{Purchase Tickets in path}{32-33}{12.1}{}
-\uclnk{View Stations in path}{34}{12.2}{}
+\uclnk{Find Path}{26-27}{12}{}
+\uclnk{Purchase Tickets in path}{28-29}{12.1}{}
+\uclnk{View Stations in path}{30}{12.2}{}
 
-\subsection{Info view}
+\subsection*{Info view}
+\addcontentsline{toc}{subsection}{Info view}
 \imgins{components/ticketing_management_component.pdf}
-\uclnk{View Train and Station Details}{35-36}{13}{}
-\uclnk{Search Info}{37-38}{14}{}
-\uclnk{View Map}{39}{15}{}
+\uclnk{View Train and Station Details}{31-32}{13}{}
+\uclnk{Search Info}{33-34}{14}{}
+\uclnk{View Map}{35}{15}{}
 
-\subsection{Network management}
+\subsection*{Network management}
+\addcontentsline{toc}{subsection}{Network management}
 \imgins{components/network_management_component.pdf}
-\uclnk{View Network Elements}{40-41}{16}{}
-\uclnk{Insert Station Data}{42-43}{17}{}
-\uclnk{Insert Junction Data}{44}{18}{}
-\uclnk{Insert Line Data}{45}{19}{}
-\uclnk{Create Station}{46}{20}{}
-\uclnk{Create Junction}{47}{21}{}
-\uclnk{Create Line}{48}{22}{}
-\uclnk{Edit Station}{49}{23}{}
-\uclnk{Edit Junction}{50}{24}{}
-\uclnk{Edit Line}{51}{25}{}
-\uclnk{Delete Station}{52-53}{26}{}
-\uclnk{Delete Junction}{54}{27}{}
-\uclnk{Delete Line}{55}{28}{}
+\uclnk{View Network Elements}{36}{16}{}
+\uclnk{Insert Station Data}{37}{17}{}
+\uclnk{Insert Junction Data}{38}{18}{}
+\uclnk{Insert Line Data}{39}{19}{}
+\uclnk{Create Station}{40}{20}{}
+\uclnk{Create Junction}{41}{21}{}
+\uclnk{Create Line}{42}{22}{}
+\uclnk{Edit Station}{43}{23}{}
+\uclnk{Edit Junction}{44}{24}{}
+\uclnk{Edit Line}{45}{25}{}
+\uclnk{Delete Station}{46}{26}{}
+\uclnk{Delete Junction}{47}{27}{}
+\uclnk{Delete Line}{48}{28}{}
 
-\subsection{Service management}
+\subsection*{Service management}
+\addcontentsline{toc}{subsection}{Service management}
 \imgins{components/service_management_component.pdf}
-\uclnk{Defining a Train Type}{56}{29}{}
-\uclnk{Registering a Service Type}{57-58}{30}{}
-\uclnk{Create Service Request}{59-60}{31}{}
-\uclnk{Service Request Review}{61-62}{32}{}
+\uclnk{Defining a Train Type}{49}{29}{}
+\uclnk{Registering a Service Type}{50}{30}{}
+\uclnk{Create Service Request}{51-52}{31}{}
+\uclnk{Service Request Review}{53}{32}{}
 
 \newpage
 
-\section{Class Diagram}
+\phantomsection
+\section*{Class Diagram}
+\addcontentsline{toc}{section}{Class Diagram}
 \imgarg{class_diagram/class_diagram.pdf}{1}
 
 \newpage
