@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.17)  14 MAY 2026 22:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.17)  14 MAY 2026 22:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -342,7 +342,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...0}Tickets purchase}{12}{subsection.1.2.10}
+l.29 ...0}Tickets purchase}{13}{subsection.1.2.10}
                                                   % [1
 
 ] [2] [3] [4])
@@ -3199,17 +3199,13 @@ quence.pdf>]
 File: class_diagram/class_diagram.pdf Graphic file (type pdf)
 <use class_diagram/class_diagram.pdf>
 Package pdftex.def Info: class_diagram/class_diagram.pdf  used on input line 17
-2.
+4.
 (pdftex.def)             Requested size: 390.0pt x 233.97597pt.
  [165 <./class_diagram/class_diagram.pdf>]) (./D2_DispatchNet.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `D2_DispatchNet.out' has not changed.
 (rerunfilecheck)             Checksum: A2CB2BF4F18311D6FE04FEF5EE95C858;24166.
  ) 
@@ -3226,10 +3222,10 @@ Here is how much of TeX's memory you used:
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti12.pfb>
-Output written on D2_DispatchNet.pdf (166 pages, 4692240 bytes).
+Output written on D2_DispatchNet.pdf (166 pages, 4692763 bytes).
 PDF statistics:
- 3175 PDF objects out of 3580 (max. 8388607)
- 2735 compressed objects within 28 object streams
+ 3176 PDF objects out of 3580 (max. 8388607)
+ 2736 compressed objects within 28 object streams
  325 named destinations out of 1000 (max. 500000)
  2025 words of extra memory for PDF output out of 10000 (max. 10000000)
 
