@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.17)  14 MAY 2026 14:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.17)  15 MAY 2026 20:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -342,7 +342,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...10}Tickets purchase}{8}{subsection.1.2.10}
+l.29 ...0}Tickets purchase}{13}{subsection.1.2.10}
                                                   % [1
 
 ] [2] [3] [4])
@@ -370,26 +370,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
  []
 
 [9] [10]
-Overfull \hbox (66.0911pt too wide) in paragraph at lines 93--96
+Overfull \hbox (66.0911pt too wide) in paragraph at lines 93--97
 \OT1/cmr/m/n/12 tween[] be-tween $[]$, $[]$, $[]$ op-er-a-tor and $[]$.
  []
 
 
-Overfull \hbox (7.29453pt too wide) in paragraph at lines 98--100
+Overfull \hbox (7.29453pt too wide) in paragraph at lines 99--101
 \OT1/cmr/m/n/12 Following [][]FR.1[][], in ref-er-ence to [][]NFR.2[][], the sy
 s-tem must al-low $[]$
  []
 
 [11] [12] [13] [14] [15]
-Overfull \hbox (12.0639pt too wide) in paragraph at lines 239--240
+Overfull \hbox (12.0639pt too wide) in paragraph at lines 242--243
 \OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
 e sys-tem must al-low $[]$
- []
-
-
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 242--243
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
--tem must al-low $[]$
  []
 
 
@@ -398,22 +392,22 @@ Overfull \hbox (3.25566pt too wide) in paragraph at lines 245--246
 -tem must al-low $[]$
  []
 
-
+[16]
 Overfull \hbox (3.25566pt too wide) in paragraph at lines 248--249
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
 -tem must al-low $[]$
  []
 
 
-Overfull \hbox (12.0639pt too wide) in paragraph at lines 251--252
-\OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
-e sys-tem must al-low $[]$
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 251--252
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.24[][], the sys
+-tem must al-low $[]$
  []
 
-[16]
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 254--255
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
--tem must al-low $[]$
+
+Overfull \hbox (12.0639pt too wide) in paragraph at lines 254--255
+\OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
+e sys-tem must al-low $[]$
  []
 
 
@@ -429,15 +423,15 @@ Overfull \hbox (3.25566pt too wide) in paragraph at lines 260--261
  []
 
 
-Overfull \hbox (12.0639pt too wide) in paragraph at lines 263--264
-\OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
-e sys-tem must al-low $[]$
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 263--264
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.25[][], the sys
+-tem must al-low $[]$
  []
 
 
-Overfull \hbox (3.25566pt too wide) in paragraph at lines 266--267
-\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
--tem must al-low $[]$
+Overfull \hbox (12.0639pt too wide) in paragraph at lines 266--267
+\OT1/cmr/m/n/12 Following [][]O.4[][], []in ref-er-ence to [][]NFR.14[][],[] th
+e sys-tem must al-low $[]$
  []
 
 
@@ -446,46 +440,47 @@ Overfull \hbox (3.25566pt too wide) in paragraph at lines 269--270
 -tem must al-low $[]$
  []
 
-
+[17]
 Overfull \hbox (3.25566pt too wide) in paragraph at lines 272--273
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
 -tem must al-low $[]$
  []
 
-[17]
-Overfull \hbox (17.55135pt too wide) in paragraph at lines 294--295
+
+Overfull \hbox (3.25566pt too wide) in paragraph at lines 275--276
+\OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.26[][], the sys
+-tem must al-low $[]$
+ []
+
+[18]
+Overfull \hbox (17.55135pt too wide) in paragraph at lines 299--300
 \OT1/cmr/m/n/12 Following [][]O.4[][], in ref-er-ence to [][]FR.20[][], the sys
 -tem must al-low the $[]$
  []
 
-[18]
-Overfull \hbox (17.05968pt too wide) in paragraph at lines 305--306
+
+Overfull \hbox (17.05968pt too wide) in paragraph at lines 310--311
 []$ \OT1/cmr/m/n/12 to deny a ser-vice re-quest, no-ti-fy-ing ([][]NFR.9[][]) t
 he $[]$
  []
 
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
+[19] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 387--388
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
@@ -504,22 +499,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 408--409
 
  []
 
-[21]
+
 Underfull \hbox (badness 10000) in paragraph at lines 413--414
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
 
  []
 
-) [23]
+) [24]
 Chapter 2.
 (./D2_BodyText.tex
 
@@ -536,28 +536,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--10
 
  []
 
-[24
+[25
 
-] [25]
+] [26]
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-[26]
-<components/components_diagram.pdf, id=1039, 677.53125pt x 677.53125pt>
+[27]
+<components/components_diagram.pdf, id=1044, 583.98174pt x 434.0215pt>
 File: components/components_diagram.pdf Graphic file (type pdf)
 <use components/components_diagram.pdf>
 Package pdftex.def Info: components/components_diagram.pdf  used on input line 
 101.
-(pdftex.def)             Requested size: 390.0pt x 390.01164pt.
-<components/user_authentication_component.pdf, id=1041, 677.53125pt x 903.375pt
->
+(pdftex.def)             Requested size: 390.0pt x 289.85248pt.
+<components/user_authentication_component.pdf, id=1046, 621.02014pt x 699.21222
+pt>
 File: components/user_authentication_component.pdf Graphic file (type pdf)
 <use components/user_authentication_component.pdf>
 Package pdftex.def Info: components/user_authentication_component.pdf  used on 
 input line 107.
-(pdftex.def)             Requested size: 253.49762pt x 337.99287pt.
- [27 <./components/components_diagram.pdf>] [28 <./components/user_authenticati
+(pdftex.def)             Requested size: 296.39786pt x 333.71895pt.
+ [28 <./components/components_diagram.pdf>] [29 <./components/user_authenticati
 on_component.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 108--108
 
@@ -568,105 +568,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--108
 
  []
 
-<use_cases/use_cases_v0.5.pdf, id=1115, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1118, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 108.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1117, page=1, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1120, page=1, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf, page 1>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page1 used on input lin
 e 108.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf, page 1>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page1 used on input lin
 e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[29]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[30]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf, page 1>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page1 used on input lin
 e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf, page 1>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page1 used on input lin
 e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf, page 1>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page1 used on input lin
 e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [30
-
- <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1138, page=2, 597.53635pt x 845.04686pt>
-File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 2>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page2 used on input lin
-e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 2>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page2 used on input lin
-e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 2>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page2 used on input lin
-e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [31
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1143, page=3, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1153, page=2, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 3>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page3 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 2>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page2 used on input lin
 e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 3>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page3 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 2>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page2 used on input lin
 e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 3>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page3 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 2>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page2 used on input lin
 e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [32
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1148, page=4, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1167, page=3, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 4>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page4 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 3>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page3 used on input lin
 e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 4>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page4 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 3>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page3 used on input lin
 e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 4>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page4 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 3>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page3 used on input lin
 e 108.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [33
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC01_activity.pdf, id=1153, 633.36626pt x 1275.76625pt>
+<activity_diagrams/UC01_activity.pdf, id=1177, 633.36626pt x 1275.76625pt>
 File: activity_diagrams/UC01_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC01_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC01_activity.pdf  used on input lin
 e 108.
 (pdftex.def)             Requested size: 234.00238pt x 471.3448pt.
-<sequence_diagrams/UC01_sequence.pdf, id=1154, 634.37pt x 509.905pt>
+<sequence_diagrams/UC01_sequence.pdf, id=1178, 634.37pt x 509.905pt>
 File: sequence_diagrams/UC01_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC01_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC01_sequence.pdf  used on input lin
@@ -696,63 +677,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--109
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 109.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1200, page=17, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1223, page=14, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 17>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page17 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 14>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page14 used on input li
 ne 109.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 17>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page17 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 14>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page14 used on input li
 ne 109.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 [36]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 17>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page17 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 14>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page14 used on input li
 ne 109.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 17>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page17 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 14>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page14 used on input li
 ne 109.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 17>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page17 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 14>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page14 used on input li
 ne 109.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [37
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1210, page=18, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1234, page=15, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 18>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page18 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 15>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page15 used on input li
 ne 109.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 18>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page18 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 15>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page15 used on input li
 ne 109.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 18>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page18 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 15>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page15 used on input li
 ne 109.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [38
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC06_activity.pdf, id=1215, 633.36626pt x 713.66624pt>
+<activity_diagrams/UC06_activity.pdf, id=1240, 633.36626pt x 713.66624pt>
 File: activity_diagrams/UC06_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC06_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC06_activity.pdf  used on input lin
 e 109.
 (pdftex.def)             Requested size: 234.00238pt x 263.67123pt.
-<sequence_diagrams/UC06_sequence.pdf, id=1216, 634.37pt x 369.38pt>
+<sequence_diagrams/UC06_sequence.pdf, id=1241, 634.37pt x 369.38pt>
 File: sequence_diagrams/UC06_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC06_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC06_sequence.pdf  used on input lin
@@ -782,44 +763,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--110
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 110.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1247, page=19, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1272, page=16, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 19>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page19 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 16>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page16 used on input li
 ne 110.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 19>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page19 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 16>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page16 used on input li
 ne 110.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 [40]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 19>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page19 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 16>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page16 used on input li
 ne 110.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 19>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page19 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 16>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page16 used on input li
 ne 110.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 19>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page19 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 16>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page16 used on input li
 ne 110.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [41
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC07_activity.pdf, id=1256, 578.16pt x 428.60126pt>
+<activity_diagrams/UC07_activity.pdf, id=1282, 578.16pt x 428.60126pt>
 File: activity_diagrams/UC07_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC07_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC07_activity.pdf  used on input lin
 e 110.
 (pdftex.def)             Requested size: 234.00238pt x 173.46483pt.
-<sequence_diagrams/UC07_sequence.pdf, id=1257, 467.7475pt x 280.04625pt>
+<sequence_diagrams/UC07_sequence.pdf, id=1283, 467.7475pt x 280.04625pt>
 File: sequence_diagrams/UC07_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC07_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC07_sequence.pdf  used on input lin
@@ -835,12 +816,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
-<components/user_management_component.pdf, id=1258, 648.62326pt x 916.02223pt>
+<components/user_management_component.pdf, id=1284, 648.62326pt x 916.02223pt>
 File: components/user_management_component.pdf Graphic file (type pdf)
 <use components/user_management_component.pdf>
 Package pdftex.def Info: components/user_management_component.pdf  used on inpu
 t line 114.
-(pdftex.def)             Requested size: 253.49762pt x 358.00201pt.
+(pdftex.def)             Requested size: 296.39786pt x 418.59386pt.
 [42 <./activity_diagrams/UC07_activity.pdf> <./sequence_diagrams/UC07_sequence.
 pdf>] [43 <./components/user_management_component.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 115--115
@@ -855,44 +836,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--115
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 115.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1328, page=5, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1353, page=4, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 5>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page5 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 4>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page4 used on input lin
 e 115.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 5>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page5 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 4>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page4 used on input lin
 e 115.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 [44]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 5>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page5 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 4>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page4 used on input lin
 e 115.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 5>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page5 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 4>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page4 used on input lin
 e 115.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 5>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page5 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 4>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page4 used on input lin
 e 115.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [45
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC02_activity.pdf, id=1337, 658.46pt x 538.01pt>
+<activity_diagrams/UC02_activity.pdf, id=1363, 658.46pt x 538.01pt>
 File: activity_diagrams/UC02_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC02_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC02_activity.pdf  used on input lin
 e 115.
 (pdftex.def)             Requested size: 234.00238pt x 191.19601pt.
-<sequence_diagrams/UC02_sequence.pdf, id=1338, 633.36626pt x 280.04625pt>
+<sequence_diagrams/UC02_sequence.pdf, id=1364, 633.36626pt x 280.04625pt>
 File: sequence_diagrams/UC02_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC02_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC02_sequence.pdf  used on input lin
@@ -922,44 +903,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--116
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 116.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1368, page=6, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1394, page=5, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 6>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page6 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 5>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page5 used on input lin
 e 116.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 6>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page6 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 5>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page5 used on input lin
 e 116.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 [47]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 6>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page6 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 5>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page5 used on input lin
 e 116.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 6>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page6 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 5>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page5 used on input lin
 e 116.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 6>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page6 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 5>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page5 used on input lin
 e 116.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [48
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC03_activity.pdf, id=1378, 578.16pt x 428.60126pt>
+<activity_diagrams/UC03_activity.pdf, id=1406, 578.16pt x 428.60126pt>
 File: activity_diagrams/UC03_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC03_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC03_activity.pdf  used on input lin
 e 116.
 (pdftex.def)             Requested size: 234.00238pt x 173.46483pt.
-<sequence_diagrams/UC03_sequence.pdf, id=1379, 633.36626pt x 323.2075pt>
+<sequence_diagrams/UC03_sequence.pdf, id=1407, 633.36626pt x 323.2075pt>
 File: sequence_diagrams/UC03_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC03_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC03_sequence.pdf  used on input lin
@@ -989,121 +970,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--117
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 117.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1405, page=7, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1433, page=6, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 7>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page7 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 6>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page6 used on input lin
 e 117.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 7>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page7 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 6>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page6 used on input lin
 e 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 [50]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 7>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page7 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 6>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page6 used on input lin
 e 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 7>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page7 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 6>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page6 used on input lin
 e 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 7>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page7 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 6>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page6 used on input lin
 e 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [51
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1415, page=8, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1443, page=7, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 8>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page8 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 7>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page7 used on input lin
 e 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 8>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page8 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 7>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page7 used on input lin
 e 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 8>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page8 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 7>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page7 used on input lin
 e 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [52
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1420, page=9, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1449, page=8, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 9>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page9 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 8>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page8 used on input lin
 e 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 9>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page9 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 8>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page8 used on input lin
 e 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 9>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page9 used on input lin
+<use use_cases/use_cases_v0.5.pdf, page 8>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page8 used on input lin
 e 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [53
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1425, page=10, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1455, page=9, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 10>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page10 used on input li
-ne 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+<use use_cases/use_cases_v0.5.pdf, page 9>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page9 used on input lin
+e 117.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 10>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page10 used on input li
-ne 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+<use use_cases/use_cases_v0.5.pdf, page 9>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page9 used on input lin
+e 117.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 10>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page10 used on input li
-ne 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+<use use_cases/use_cases_v0.5.pdf, page 9>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page9 used on input lin
+e 117.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [54
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1431, page=11, 597.53635pt x 845.04686pt>
-File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 11>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page11 used on input li
-ne 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 11>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page11 used on input li
-ne 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 11>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page11 used on input li
-ne 117.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-
-[55
-
- <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC04_activity.pdf, id=1436, 1350.04375pt x 1115.16624pt>
+<activity_diagrams/UC04_activity.pdf, id=1462, 1350.04375pt x 1115.16624pt>
 File: activity_diagrams/UC04_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC04_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC04_activity.pdf  used on input lin
 e 117.
 (pdftex.def)             Requested size: 234.00238pt x 193.28525pt.
-<sequence_diagrams/UC04_sequence.pdf, id=1437, 633.36626pt x 762.85pt>
+<sequence_diagrams/UC04_sequence.pdf, id=1463, 633.36626pt x 762.85pt>
 File: sequence_diagrams/UC04_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC04_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC04_sequence.pdf  used on input lin
@@ -1119,7 +1080,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
-[56 <./activity_diagrams/UC04_activity.pdf>] [57 <./sequence_diagrams/UC04_sequ
+[55 <./activity_diagrams/UC04_activity.pdf>] [56 <./sequence_diagrams/UC04_sequ
 ence.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 118--118
 
@@ -1133,115 +1094,95 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--118
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 118.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1488, page=12, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1514, page=10, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 12>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page12 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 10>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page10 used on input li
 ne 118.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 12>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page12 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 10>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page10 used on input li
 ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[58]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[57]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 12>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page12 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 10>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page10 used on input li
 ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 12>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page12 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 10>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page10 used on input li
 ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 12>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page12 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 10>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page10 used on input li
 ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [58
+
+ <./use_cases/use_cases_v0.5.pdf>]
+<use_cases/use_cases_v0.5.pdf, id=1524, page=11, 597.55246pt x 845.07718pt>
+File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
+<use use_cases/use_cases_v0.5.pdf, page 11>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page11 used on input li
+ne 118.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
+<use use_cases/use_cases_v0.5.pdf, page 11>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page11 used on input li
+ne 118.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
+<use use_cases/use_cases_v0.5.pdf, page 11>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page11 used on input li
+ne 118.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [59
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1497, page=13, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1531, page=12, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 13>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page13 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 12>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page12 used on input li
 ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 13>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page13 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 12>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page12 used on input li
 ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 13>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page13 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 12>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page12 used on input li
 ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [60
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1503, page=14, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1538, page=13, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 14>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page14 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 13>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page13 used on input li
 ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 14>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page14 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 13>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page13 used on input li
 ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 14>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page14 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 13>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page13 used on input li
 ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [61
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1508, page=15, 597.53635pt x 845.04686pt>
-File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 15>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page15 used on input li
-ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 15>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page15 used on input li
-ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 15>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page15 used on input li
-ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [62
-
- <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1513, page=16, 597.53635pt x 845.04686pt>
-File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 16>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page16 used on input li
-ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 16>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page16 used on input li
-ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 16>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page16 used on input li
-ne 118.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-
-[63
-
- <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC05_activity.pdf, id=1518, 633.36626pt x 1490.56876pt>
+<activity_diagrams/UC05_activity.pdf, id=1544, 633.36626pt x 1490.56876pt>
 File: activity_diagrams/UC05_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC05_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC05_activity.pdf  used on input lin
@@ -1251,8 +1192,8 @@ e 118.
 Overfull \vbox (2.20576pt too high) has occurred while \output is active []
 
 
-[64 <./activity_diagrams/UC05_activity.pdf>]
-<sequence_diagrams/UC05_sequence.pdf, id=1548, 634.37pt x 537.00626pt>
+[62 <./activity_diagrams/UC05_activity.pdf>]
+<sequence_diagrams/UC05_sequence.pdf, id=1573, 634.37pt x 537.00626pt>
 File: sequence_diagrams/UC05_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC05_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC05_sequence.pdf  used on input lin
@@ -1268,18 +1209,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-<components/ticketing_management_component.pdf, id=1549, 586.69188pt x 1260.71p
-t>
+<components/ticketing_management_component.pdf, id=1574, 586.69188pt x 1008.768
+75pt>
 File: components/ticketing_management_component.pdf Graphic file (type pdf)
 <use components/ticketing_management_component.pdf>
 Package pdftex.def Info: components/ticketing_management_component.pdf  used on
  input line 122.
-(pdftex.def)             Requested size: 253.49762pt x 544.71095pt.
-[65 <./sequence_diagrams/UC05_sequence.pdf>]
-Overfull \vbox (19.76094pt too high) has occurred while \output is active []
-
-
-[66 <./components/ticketing_management_component.pdf>] [67]
+(pdftex.def)             Requested size: 296.39786pt x 509.632pt.
+[63 <./sequence_diagrams/UC05_sequence.pdf>] [64 <./components/ticketing_manage
+ment_component.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 123--123
 
  []
@@ -1292,44 +1230,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--123
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 123.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1630, page=20, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1651, page=17, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 20>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page20 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 17>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page17 used on input li
 ne 123.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 20>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page20 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 17>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page17 used on input li
 ne 123.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[68]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[65]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 20>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page20 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 17>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page17 used on input li
 ne 123.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 20>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page20 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 17>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page17 used on input li
 ne 123.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 20>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page20 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 17>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page17 used on input li
 ne 123.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [69
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [66
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC08_activity.pdf, id=1639, 578.16pt x 428.60126pt>
+<activity_diagrams/UC08_activity.pdf, id=1662, 578.16pt x 428.60126pt>
 File: activity_diagrams/UC08_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC08_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC08_activity.pdf  used on input lin
 e 123.
 (pdftex.def)             Requested size: 234.00238pt x 173.46483pt.
-<sequence_diagrams/UC08_sequence.pdf, id=1640, 634.37pt x 323.2075pt>
+<sequence_diagrams/UC08_sequence.pdf, id=1663, 634.37pt x 323.2075pt>
 File: sequence_diagrams/UC08_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC08_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC08_sequence.pdf  used on input lin
@@ -1345,7 +1283,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-[70 <./activity_diagrams/UC08_activity.pdf> <./sequence_diagrams/UC08_sequence.
+[67 <./activity_diagrams/UC08_activity.pdf> <./sequence_diagrams/UC08_sequence.
 pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 124--124
 
@@ -1359,63 +1297,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--124
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 124.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1667, page=21, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1689, page=18, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 21>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page21 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 18>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page18 used on input li
 ne 124.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 21>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page21 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 18>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page18 used on input li
 ne 124.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[71]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[68]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 21>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page21 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 18>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page18 used on input li
 ne 124.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 21>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page21 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 18>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page18 used on input li
 ne 124.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 21>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page21 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 18>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page18 used on input li
 ne 124.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [72
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [69
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1677, page=22, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1699, page=19, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 22>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page22 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 19>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page19 used on input li
 ne 124.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 22>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page22 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 19>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page19 used on input li
 ne 124.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 22>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page22 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 19>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page19 used on input li
 ne 124.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [73
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [70
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC09_activity.pdf, id=1682, 1054.94125pt x 745.78625pt>
+<activity_diagrams/UC09_activity.pdf, id=1705, 1054.94125pt x 745.78625pt>
 File: activity_diagrams/UC09_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC09_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC09_activity.pdf  used on input lin
 e 124.
 (pdftex.def)             Requested size: 234.00238pt x 165.41629pt.
-<sequence_diagrams/UC09_sequence.pdf, id=1683, 890.32625pt x 406.51875pt>
+<sequence_diagrams/UC09_sequence.pdf, id=1706, 890.32625pt x 406.51875pt>
 File: sequence_diagrams/UC09_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC09_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC09_sequence.pdf  used on input lin
@@ -1431,7 +1369,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-[74 <./activity_diagrams/UC09_activity.pdf> <./sequence_diagrams/UC09_sequence.
+[71 <./activity_diagrams/UC09_activity.pdf> <./sequence_diagrams/UC09_sequence.
 pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 125--125
 
@@ -1445,63 +1383,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--125
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 125.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1720, page=23, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1743, page=20, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 23>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page23 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 20>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page20 used on input li
 ne 125.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 23>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page23 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 20>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page20 used on input li
 ne 125.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[75]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[72]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 23>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page23 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 20>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page20 used on input li
 ne 125.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 23>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page23 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 20>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page20 used on input li
 ne 125.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 23>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page23 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 20>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page20 used on input li
 ne 125.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [76
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [73
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1729, page=24, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1754, page=21, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 24>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page24 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 21>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page21 used on input li
 ne 125.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 24>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page24 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 21>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page21 used on input li
 ne 125.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 24>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page24 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 21>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page21 used on input li
 ne 125.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [77
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [74
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC10_activity.pdf, id=1734, 1054.94125pt x 746.79pt>
+<activity_diagrams/UC10_activity.pdf, id=1760, 1054.94125pt x 746.79pt>
 File: activity_diagrams/UC10_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC10_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC10_activity.pdf  used on input lin
 e 125.
 (pdftex.def)             Requested size: 234.00238pt x 165.63892pt.
-<sequence_diagrams/UC10_sequence.pdf, id=1735, 889.3225pt x 406.51875pt>
+<sequence_diagrams/UC10_sequence.pdf, id=1761, 889.3225pt x 406.51875pt>
 File: sequence_diagrams/UC10_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC10_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC10_sequence.pdf  used on input lin
@@ -1517,7 +1455,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-[78 <./activity_diagrams/UC10_activity.pdf> <./sequence_diagrams/UC10_sequence.
+[75 <./activity_diagrams/UC10_activity.pdf> <./sequence_diagrams/UC10_sequence.
 pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 126--126
 
@@ -1531,44 +1469,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--126
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 126.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1773, page=25, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1799, page=22, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 25>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page25 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 22>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page22 used on input li
 ne 126.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 25>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page25 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 22>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page22 used on input li
 ne 126.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[79]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[76]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 25>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page25 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 22>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page22 used on input li
 ne 126.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 25>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page25 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 22>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page22 used on input li
 ne 126.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 25>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page25 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 22>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page22 used on input li
 ne 126.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [80
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [77
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC11_activity.pdf, id=1783, 578.16pt x 428.60126pt>
+<activity_diagrams/UC11_activity.pdf, id=1809, 578.16pt x 428.60126pt>
 File: activity_diagrams/UC11_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC11_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC11_activity.pdf  used on input lin
 e 126.
 (pdftex.def)             Requested size: 234.00238pt x 173.46483pt.
-<sequence_diagrams/UC11_sequence.pdf, id=1784, 634.37pt x 323.2075pt>
+<sequence_diagrams/UC11_sequence.pdf, id=1810, 634.37pt x 323.2075pt>
 File: sequence_diagrams/UC11_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC11_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC11_sequence.pdf  used on input lin
@@ -1588,13 +1526,9 @@ File: components/ticketing_management_component.pdf Graphic file (type pdf)
 <use components/ticketing_management_component.pdf>
 Package pdftex.def Info: components/ticketing_management_component.pdf  used on
  input line 130.
-(pdftex.def)             Requested size: 253.49762pt x 544.71095pt.
-[81 <./activity_diagrams/UC11_activity.pdf> <./sequence_diagrams/UC11_sequence.
-pdf>]
-Overfull \vbox (19.76094pt too high) has occurred while \output is active []
-
-
-[82] [83]
+(pdftex.def)             Requested size: 296.39786pt x 509.632pt.
+[78 <./activity_diagrams/UC11_activity.pdf> <./sequence_diagrams/UC11_sequence.
+pdf>] [79]
 Underfull \hbox (badness 10000) in paragraph at lines 131--131
 
  []
@@ -1607,63 +1541,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--131
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 131.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1819, page=26, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1842, page=23, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 26>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page26 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 23>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page23 used on input li
 ne 131.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 26>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page26 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 23>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page23 used on input li
 ne 131.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[84]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[80]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 26>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page26 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 23>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page23 used on input li
 ne 131.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 26>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page26 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 23>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page23 used on input li
 ne 131.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 26>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page26 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 23>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page23 used on input li
 ne 131.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [85
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [81
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1829, page=27, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1852, page=24, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 27>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page27 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 24>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page24 used on input li
 ne 131.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 27>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page27 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 24>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page24 used on input li
 ne 131.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 27>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page27 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 24>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page24 used on input li
 ne 131.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [86
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [82
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC12_activity.pdf, id=1834, 634.37pt x 1420.30624pt>
+<activity_diagrams/UC12_activity.pdf, id=1858, 634.37pt x 1420.30624pt>
 File: activity_diagrams/UC12_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC12_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC12_activity.pdf  used on input lin
 e 131.
 (pdftex.def)             Requested size: 234.00238pt x 523.90135pt.
-<sequence_diagrams/UC12_sequence.pdf, id=1835, 634.37pt x 604.2575pt>
+<sequence_diagrams/UC12_sequence.pdf, id=1859, 634.37pt x 604.2575pt>
 File: sequence_diagrams/UC12_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC12_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC12_sequence.pdf  used on input lin
@@ -1679,7 +1613,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
-[87 <./activity_diagrams/UC12_activity.pdf>] [88 <./sequence_diagrams/UC12_sequ
+[83 <./activity_diagrams/UC12_activity.pdf>] [84 <./sequence_diagrams/UC12_sequ
 ence.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 132--132
 
@@ -1693,63 +1627,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--132
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 132.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1885, page=28, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1911, page=25, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 28>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page28 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 25>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page25 used on input li
 ne 132.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 28>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page28 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 25>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page25 used on input li
 ne 132.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[89]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[85]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 28>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page28 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 25>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page25 used on input li
 ne 132.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 28>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page28 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 25>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page25 used on input li
 ne 132.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 28>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page28 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 25>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page25 used on input li
 ne 132.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [90
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [86
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1895, page=29, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=1921, page=26, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 29>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page29 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 26>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page26 used on input li
 ne 132.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 29>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page29 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 26>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page26 used on input li
 ne 132.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 29>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page29 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 26>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page26 used on input li
 ne 132.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [91
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [87
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC12.1_activity.pdf, id=1900, 634.37pt x 1125.20375pt>
+<activity_diagrams/UC12.1_activity.pdf, id=1927, 634.37pt x 1125.20375pt>
 File: activity_diagrams/UC12.1_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC12.1_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC12.1_activity.pdf  used on input l
 ine 132.
 (pdftex.def)             Requested size: 234.00238pt x 415.04836pt.
-<sequence_diagrams/UC12.1_sequence.pdf, id=1901, 540.0175pt x 277.035pt>
+<sequence_diagrams/UC12.1_sequence.pdf, id=1928, 540.0175pt x 277.035pt>
 File: sequence_diagrams/UC12.1_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC12.1_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC12.1_sequence.pdf  used on input l
@@ -1765,7 +1699,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-[92 <./activity_diagrams/UC12.1_activity.pdf>] [93 <./sequence_diagrams/UC12.1_
+[88 <./activity_diagrams/UC12.1_activity.pdf>] [89 <./sequence_diagrams/UC12.1_
 sequence.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 133--133
 
@@ -1779,49 +1713,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--133
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 133.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1938, page=30, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=1964, page=27, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 30>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page30 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 27>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page27 used on input li
 ne 133.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 30>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page30 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 27>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page27 used on input li
 ne 133.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[94]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[90]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 30>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page30 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 27>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page27 used on input li
 ne 133.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 30>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page30 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 27>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page27 used on input li
 ne 133.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 30>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page30 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 27>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page27 used on input li
 ne 133.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [95
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [91
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC12.2_activity.pdf, id=1947, 578.16pt x 428.60126pt>
+<activity_diagrams/UC12.2_activity.pdf, id=1975, 578.16pt x 428.60126pt>
 File: activity_diagrams/UC12.2_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC12.2_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC12.2_activity.pdf  used on input l
 ine 133.
 (pdftex.def)             Requested size: 234.00238pt x 173.46483pt.
-<sequence_diagrams/UC12.2_sequence.pdf, id=1948, 634.37pt x 327.2225pt>
+<sequence_diagrams/UC12.2_sequence.pdf, id=1976, 634.37pt x 323.2075pt>
 File: sequence_diagrams/UC12.2_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC12.2_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC12.2_sequence.pdf  used on input l
 ine 133.
-(pdftex.def)             Requested size: 390.0pt x 201.17822pt.
+(pdftex.def)             Requested size: 390.0pt x 198.70978pt.
 
 Overfull \hbox (17.62482pt too wide) in paragraph at lines 133--134
 [][]
@@ -1836,13 +1770,9 @@ File: components/ticketing_management_component.pdf Graphic file (type pdf)
 <use components/ticketing_management_component.pdf>
 Package pdftex.def Info: components/ticketing_management_component.pdf  used on
  input line 137.
-(pdftex.def)             Requested size: 253.49762pt x 544.71095pt.
-[96 <./activity_diagrams/UC12.2_activity.pdf> <./sequence_diagrams/UC12.2_seque
-nce.pdf>]
-Overfull \vbox (16.96095pt too high) has occurred while \output is active []
-
-
-[97] [98]
+(pdftex.def)             Requested size: 296.39786pt x 509.632pt.
+[92 <./activity_diagrams/UC12.2_activity.pdf> <./sequence_diagrams/UC12.2_seque
+nce.pdf>] [93]
 Underfull \hbox (badness 10000) in paragraph at lines 138--138
 
  []
@@ -1855,63 +1785,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--138
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 138.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=1984, page=31, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2007, page=28, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 31>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page31 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 28>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page28 used on input li
 ne 138.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 31>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page31 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 28>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page28 used on input li
 ne 138.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[99]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[94]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 31>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page31 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 28>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page28 used on input li
 ne 138.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 31>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page31 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 28>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page28 used on input li
 ne 138.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 31>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page31 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 28>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page28 used on input li
 ne 138.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [100
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [95
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=1993, page=32, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=2017, page=29, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 32>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page32 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 29>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page29 used on input li
 ne 138.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 32>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page32 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 29>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page29 used on input li
 ne 138.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 32>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page32 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 29>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page29 used on input li
 ne 138.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [101
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [96
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC13_activity.pdf, id=1998, 852.18375pt x 842.14626pt>
+<activity_diagrams/UC13_activity.pdf, id=2025, 852.18375pt x 842.14626pt>
 File: activity_diagrams/UC13_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC13_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC13_activity.pdf  used on input lin
 e 138.
 (pdftex.def)             Requested size: 234.00238pt x 231.23756pt.
-<sequence_diagrams/UC13_sequence.pdf, id=1999, 634.37pt x 323.2075pt>
+<sequence_diagrams/UC13_sequence.pdf, id=2026, 634.37pt x 323.2075pt>
 File: sequence_diagrams/UC13_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC13_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC13_sequence.pdf  used on input lin
@@ -1927,8 +1857,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
-[102 <./activity_diagrams/UC13_activity.pdf> <./sequence_diagrams/UC13_sequence
-.pdf>]
+[97 <./activity_diagrams/UC13_activity.pdf> <./sequence_diagrams/UC13_sequence.
+pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 139--139
 
  []
@@ -1941,63 +1871,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--139
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 139.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2037, page=33, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2063, page=30, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 33>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page33 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 30>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page30 used on input li
 ne 139.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 33>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page33 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 30>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page30 used on input li
 ne 139.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[103]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[98]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 33>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page33 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 30>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page30 used on input li
 ne 139.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 33>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page33 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 30>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page30 used on input li
 ne 139.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 33>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page33 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 30>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page30 used on input li
 ne 139.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [104
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [99
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=2047, page=34, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=2073, page=31, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 34>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page34 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 31>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page31 used on input li
 ne 139.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 34>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page34 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 31>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page31 used on input li
 ne 139.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 34>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page34 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 31>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page31 used on input li
 ne 139.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [105
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [100
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC14_activity.pdf, id=2052, 611.28375pt x 842.14626pt>
+<activity_diagrams/UC14_activity.pdf, id=2079, 611.28375pt x 842.14626pt>
 File: activity_diagrams/UC14_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC14_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC14_activity.pdf  used on input lin
 e 139.
 (pdftex.def)             Requested size: 234.00238pt x 322.37047pt.
-<sequence_diagrams/UC14_sequence.pdf, id=2053, 634.37pt x 323.2075pt>
+<sequence_diagrams/UC14_sequence.pdf, id=2080, 634.37pt x 323.2075pt>
 File: sequence_diagrams/UC14_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC14_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC14_sequence.pdf  used on input lin
@@ -2013,7 +1943,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
-[106 <./activity_diagrams/UC14_activity.pdf> <./sequence_diagrams/UC14_sequence
+[101 <./activity_diagrams/UC14_activity.pdf> <./sequence_diagrams/UC14_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 140--140
 
@@ -2027,44 +1957,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--140
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 140.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2086, page=35, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2113, page=32, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 35>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page35 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 32>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page32 used on input li
 ne 140.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 35>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page35 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 32>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page32 used on input li
 ne 140.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[107]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[102]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 35>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page35 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 32>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page32 used on input li
 ne 140.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 35>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page35 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 32>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page32 used on input li
 ne 140.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 35>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page35 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 32>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page32 used on input li
 ne 140.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [108
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [103
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC15_activity.pdf, id=2096, 611.28375pt x 541.02126pt>
+<activity_diagrams/UC15_activity.pdf, id=2124, 611.28375pt x 541.02126pt>
 File: activity_diagrams/UC15_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC15_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC15_activity.pdf  used on input lin
 e 140.
 (pdftex.def)             Requested size: 234.00238pt x 207.10092pt.
-<sequence_diagrams/UC15_sequence.pdf, id=2097, 634.37pt x 323.2075pt>
+<sequence_diagrams/UC15_sequence.pdf, id=2125, 634.37pt x 323.2075pt>
 File: sequence_diagrams/UC15_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC15_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC15_sequence.pdf  used on input lin
@@ -2080,15 +2010,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
-<components/network_management_component.pdf, id=2098, 1580.90625pt x 1129.2187
-5pt>
+<components/network_management_component.pdf, id=2126, 793.16327pt x 887.51576p
+t>
 File: components/network_management_component.pdf Graphic file (type pdf)
 <use components/network_management_component.pdf>
 Package pdftex.def Info: components/network_management_component.pdf  used on i
 nput line 144.
-(pdftex.def)             Requested size: 253.49762pt x 181.05775pt.
-[109 <./activity_diagrams/UC15_activity.pdf> <./sequence_diagrams/UC15_sequence
-.pdf>] [110 <./components/network_management_component.pdf>]
+(pdftex.def)             Requested size: 296.39786pt x 331.65294pt.
+[104 <./activity_diagrams/UC15_activity.pdf> <./sequence_diagrams/UC15_sequence
+.pdf>] [105 <./components/network_management_component.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 145--145
 
  []
@@ -2101,44 +2031,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--145
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 145.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2177, page=36, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2205, page=33, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 36>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page36 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 33>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page33 used on input li
 ne 145.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 36>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page36 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 33>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page33 used on input li
 ne 145.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[111]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[106]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 36>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page36 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 33>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page33 used on input li
 ne 145.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 36>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page36 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 33>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page33 used on input li
 ne 145.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 36>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page36 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 33>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page33 used on input li
 ne 145.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [112
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [107
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC16_activity.pdf, id=2186, 578.16pt x 629.35126pt>
+<activity_diagrams/UC16_activity.pdf, id=2215, 578.16pt x 629.35126pt>
 File: activity_diagrams/UC16_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC16_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC16_activity.pdf  used on input lin
 e 145.
 (pdftex.def)             Requested size: 234.00238pt x 254.713pt.
-<sequence_diagrams/UC16_sequence.pdf, id=2187, 634.37pt x 292.09125pt>
+<sequence_diagrams/UC16_sequence.pdf, id=2216, 634.37pt x 292.09125pt>
 File: sequence_diagrams/UC16_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC16_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC16_sequence.pdf  used on input lin
@@ -2154,7 +2084,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
-[113 <./activity_diagrams/UC16_activity.pdf> <./sequence_diagrams/UC16_sequence
+[108 <./activity_diagrams/UC16_activity.pdf> <./sequence_diagrams/UC16_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 146--146
 
@@ -2168,44 +2098,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--146
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 146.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2216, page=37, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2246, page=34, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 37>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page37 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 34>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page34 used on input li
 ne 146.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 37>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page37 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 34>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page34 used on input li
 ne 146.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[114]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[109]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 37>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page37 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 34>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page34 used on input li
 ne 146.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 37>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page37 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 34>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page34 used on input li
 ne 146.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 37>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page37 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 34>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page34 used on input li
 ne 146.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [115
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [110
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC17_activity.pdf, id=2226, 584.1825pt x 636.3775pt>
+<activity_diagrams/UC17_activity.pdf, id=2256, 584.1825pt x 636.3775pt>
 File: activity_diagrams/UC17_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC17_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC17_activity.pdf  used on input lin
 e 146.
 (pdftex.def)             Requested size: 234.00238pt x 254.90576pt.
-<sequence_diagrams/UC17_sequence.pdf, id=2227, 634.37pt x 368.37625pt>
+<sequence_diagrams/UC17_sequence.pdf, id=2257, 634.37pt x 368.37625pt>
 File: sequence_diagrams/UC17_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC17_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC17_sequence.pdf  used on input lin
@@ -2221,7 +2151,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
-[116 <./activity_diagrams/UC17_activity.pdf> <./sequence_diagrams/UC17_sequence
+[111 <./activity_diagrams/UC17_activity.pdf> <./sequence_diagrams/UC17_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 147--147
 
@@ -2235,44 +2165,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--147
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 147.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2256, page=38, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2287, page=35, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 38>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page38 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 35>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page35 used on input li
 ne 147.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 38>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page38 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 35>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page35 used on input li
 ne 147.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[117]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[112]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 38>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page38 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 35>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page35 used on input li
 ne 147.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 38>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page38 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 35>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page35 used on input li
 ne 147.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 38>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page38 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 35>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page35 used on input li
 ne 147.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [118
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [113
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC18_activity.pdf, id=2265, 583.17876pt x 636.3775pt>
+<activity_diagrams/UC18_activity.pdf, id=2301, 583.17876pt x 636.3775pt>
 File: activity_diagrams/UC18_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC18_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC18_activity.pdf  used on input lin
 e 147.
 (pdftex.def)             Requested size: 234.00238pt x 255.34273pt.
-<sequence_diagrams/UC18_sequence.pdf, id=2266, 634.37pt x 369.38pt>
+<sequence_diagrams/UC18_sequence.pdf, id=2302, 634.37pt x 369.38pt>
 File: sequence_diagrams/UC18_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC18_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC18_sequence.pdf  used on input lin
@@ -2288,7 +2218,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-[119 <./activity_diagrams/UC18_activity.pdf> <./sequence_diagrams/UC18_sequence
+[114 <./activity_diagrams/UC18_activity.pdf> <./sequence_diagrams/UC18_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 148--148
 
@@ -2302,44 +2232,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--148
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 148.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2296, page=39, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2332, page=36, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 39>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page39 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 36>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page36 used on input li
 ne 148.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 39>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page39 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 36>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page36 used on input li
 ne 148.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[120]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[115]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 39>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page39 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 36>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page36 used on input li
 ne 148.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 39>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page39 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 36>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page36 used on input li
 ne 148.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 39>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page39 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 36>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page36 used on input li
 ne 148.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [121
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [116
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC19_activity.pdf, id=2306, 584.1825pt x 636.3775pt>
+<activity_diagrams/UC19_activity.pdf, id=2342, 584.1825pt x 636.3775pt>
 File: activity_diagrams/UC19_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC19_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC19_activity.pdf  used on input lin
 e 148.
 (pdftex.def)             Requested size: 234.00238pt x 254.90576pt.
-<sequence_diagrams/UC19_sequence.pdf, id=2307, 634.37pt x 369.38pt>
+<sequence_diagrams/UC19_sequence.pdf, id=2343, 634.37pt x 369.38pt>
 File: sequence_diagrams/UC19_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC19_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC19_sequence.pdf  used on input lin
@@ -2355,7 +2285,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
-[122 <./activity_diagrams/UC19_activity.pdf> <./sequence_diagrams/UC19_sequence
+[117 <./activity_diagrams/UC19_activity.pdf> <./sequence_diagrams/UC19_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 149--149
 
@@ -2369,44 +2299,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--149
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 149.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2336, page=40, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2372, page=37, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 40>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page40 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 37>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page37 used on input li
 ne 149.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 40>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page40 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 37>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page37 used on input li
 ne 149.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[123]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[118]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 40>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page40 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 37>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page37 used on input li
 ne 149.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 40>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page40 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 37>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page37 used on input li
 ne 149.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 40>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page40 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 37>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page37 used on input li
 ne 149.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [124
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [119
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC20_activity.pdf, id=2345, 584.1825pt x 499.8675pt>
+<activity_diagrams/UC20_activity.pdf, id=2382, 584.1825pt x 499.8675pt>
 File: activity_diagrams/UC20_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC20_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC20_activity.pdf  used on input lin
 e 149.
 (pdftex.def)             Requested size: 234.00238pt x 200.22566pt.
-<sequence_diagrams/UC20_sequence.pdf, id=2346, 634.37pt x 246.9225pt>
+<sequence_diagrams/UC20_sequence.pdf, id=2383, 634.37pt x 246.9225pt>
 File: sequence_diagrams/UC20_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC20_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC20_sequence.pdf  used on input lin
@@ -2422,7 +2352,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
-[125 <./activity_diagrams/UC20_activity.pdf> <./sequence_diagrams/UC20_sequence
+[120 <./activity_diagrams/UC20_activity.pdf> <./sequence_diagrams/UC20_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 150--150
 
@@ -2436,44 +2366,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--150
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 150.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2373, page=41, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2412, page=38, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 41>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page41 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 38>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page38 used on input li
 ne 150.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 41>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page41 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 38>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page38 used on input li
 ne 150.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[126]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[121]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 41>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page41 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 38>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page38 used on input li
 ne 150.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 41>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page41 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 38>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page38 used on input li
 ne 150.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 41>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page41 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 38>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page38 used on input li
 ne 150.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [127
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [122
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC21_activity.pdf, id=2383, 584.1825pt x 499.8675pt>
+<activity_diagrams/UC21_activity.pdf, id=2422, 584.1825pt x 499.8675pt>
 File: activity_diagrams/UC21_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC21_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC21_activity.pdf  used on input lin
 e 150.
 (pdftex.def)             Requested size: 234.00238pt x 200.22566pt.
-<sequence_diagrams/UC21_sequence.pdf, id=2384, 634.37pt x 247.92625pt>
+<sequence_diagrams/UC21_sequence.pdf, id=2423, 634.37pt x 247.92625pt>
 File: sequence_diagrams/UC21_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC21_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC21_sequence.pdf  used on input lin
@@ -2489,7 +2419,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
-[128 <./activity_diagrams/UC21_activity.pdf> <./sequence_diagrams/UC21_sequence
+[123 <./activity_diagrams/UC21_activity.pdf> <./sequence_diagrams/UC21_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 151--151
 
@@ -2503,44 +2433,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--151
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 151.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2411, page=42, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2450, page=39, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 42>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page42 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 39>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page39 used on input li
 ne 151.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 42>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page42 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 39>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page39 used on input li
 ne 151.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[129]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[124]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 42>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page42 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 39>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page39 used on input li
 ne 151.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 42>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page42 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 39>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page39 used on input li
 ne 151.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 42>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page42 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 39>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page39 used on input li
 ne 151.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [130
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [125
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC22_activity.pdf, id=2421, 584.1825pt x 499.8675pt>
+<activity_diagrams/UC22_activity.pdf, id=2460, 584.1825pt x 499.8675pt>
 File: activity_diagrams/UC22_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC22_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC22_activity.pdf  used on input lin
 e 151.
 (pdftex.def)             Requested size: 234.00238pt x 200.22566pt.
-<sequence_diagrams/UC22_sequence.pdf, id=2422, 634.37pt x 247.92625pt>
+<sequence_diagrams/UC22_sequence.pdf, id=2461, 634.37pt x 247.92625pt>
 File: sequence_diagrams/UC22_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC22_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC22_sequence.pdf  used on input lin
@@ -2556,7 +2486,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-[131 <./activity_diagrams/UC22_activity.pdf> <./sequence_diagrams/UC22_sequence
+[126 <./activity_diagrams/UC22_activity.pdf> <./sequence_diagrams/UC22_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 152--152
 
@@ -2570,44 +2500,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--152
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 152.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2449, page=43, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2489, page=40, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 43>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page43 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 40>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page40 used on input li
 ne 152.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 43>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page43 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 40>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page40 used on input li
 ne 152.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[132]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[127]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 43>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page43 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 40>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page40 used on input li
 ne 152.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 43>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page43 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 40>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page40 used on input li
 ne 152.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 43>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page43 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 40>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page40 used on input li
 ne 152.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [133
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [128
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC23_activity.pdf, id=2459, 583.17876pt x 614.295pt>
+<activity_diagrams/UC23_activity.pdf, id=2499, 583.17876pt x 614.295pt>
 File: activity_diagrams/UC23_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC23_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC23_activity.pdf  used on input lin
 e 152.
 (pdftex.def)             Requested size: 234.00238pt x 246.48225pt.
-<sequence_diagrams/UC23_sequence.pdf, id=2460, 634.37pt x 308.15125pt>
+<sequence_diagrams/UC23_sequence.pdf, id=2500, 634.37pt x 308.15125pt>
 File: sequence_diagrams/UC23_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC23_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC23_sequence.pdf  used on input lin
@@ -2623,7 +2553,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
-[134 <./activity_diagrams/UC23_activity.pdf> <./sequence_diagrams/UC23_sequence
+[129 <./activity_diagrams/UC23_activity.pdf> <./sequence_diagrams/UC23_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 153--153
 
@@ -2637,44 +2567,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--153
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 153.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2488, page=44, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2529, page=41, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 44>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page44 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 41>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page41 used on input li
 ne 153.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 44>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page44 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 41>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page41 used on input li
 ne 153.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[135]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[130]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 44>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page44 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 41>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page41 used on input li
 ne 153.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 44>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page44 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 41>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page41 used on input li
 ne 153.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 44>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page44 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 41>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page41 used on input li
 ne 153.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [136
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [131
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC24_activity.pdf, id=2497, 583.17876pt x 615.29875pt>
+<activity_diagrams/UC24_activity.pdf, id=2539, 583.17876pt x 615.29875pt>
 File: activity_diagrams/UC24_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC24_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC24_activity.pdf  used on input lin
 e 153.
 (pdftex.def)             Requested size: 234.00238pt x 246.88501pt.
-<sequence_diagrams/UC24_sequence.pdf, id=2498, 634.37pt x 308.15125pt>
+<sequence_diagrams/UC24_sequence.pdf, id=2540, 634.37pt x 308.15125pt>
 File: sequence_diagrams/UC24_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC24_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC24_sequence.pdf  used on input lin
@@ -2690,7 +2620,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
-[137 <./activity_diagrams/UC24_activity.pdf> <./sequence_diagrams/UC24_sequence
+[132 <./activity_diagrams/UC24_activity.pdf> <./sequence_diagrams/UC24_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 154--154
 
@@ -2704,44 +2634,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--154
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 154.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2526, page=45, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2569, page=42, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 45>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page45 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 42>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page42 used on input li
 ne 154.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 45>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page45 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 42>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page42 used on input li
 ne 154.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[138]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[133]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 45>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page45 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 42>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page42 used on input li
 ne 154.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 45>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page45 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 42>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page42 used on input li
 ne 154.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 45>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page45 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 42>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page42 used on input li
 ne 154.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [139
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [134
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC25_activity.pdf, id=2536, 584.1825pt x 615.29875pt>
+<activity_diagrams/UC25_activity.pdf, id=2579, 584.1825pt x 615.29875pt>
 File: activity_diagrams/UC25_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC25_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC25_activity.pdf  used on input lin
 e 154.
 (pdftex.def)             Requested size: 234.00238pt x 246.46251pt.
-<sequence_diagrams/UC25_sequence.pdf, id=2537, 634.37pt x 308.15125pt>
+<sequence_diagrams/UC25_sequence.pdf, id=2580, 634.37pt x 308.15125pt>
 File: sequence_diagrams/UC25_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC25_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC25_sequence.pdf  used on input lin
@@ -2757,7 +2687,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
-[140 <./activity_diagrams/UC25_activity.pdf> <./sequence_diagrams/UC25_sequence
+[135 <./activity_diagrams/UC25_activity.pdf> <./sequence_diagrams/UC25_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 155--155
 
@@ -2771,44 +2701,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--155
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 155.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2566, page=46, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2608, page=43, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 46>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page46 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 43>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page43 used on input li
 ne 155.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 46>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page46 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 43>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page43 used on input li
 ne 155.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[141]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[136]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 46>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page46 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 43>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page43 used on input li
 ne 155.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 46>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page46 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 43>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page43 used on input li
 ne 155.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 46>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page46 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 43>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page43 used on input li
 ne 155.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [142
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [137
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC26_activity.pdf, id=2575, 583.17876pt x 615.29875pt>
+<activity_diagrams/UC26_activity.pdf, id=2618, 583.17876pt x 615.29875pt>
 File: activity_diagrams/UC26_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC26_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC26_activity.pdf  used on input lin
 e 155.
 (pdftex.def)             Requested size: 234.00238pt x 246.88501pt.
-<sequence_diagrams/UC26_sequence.pdf, id=2576, 634.37pt x 383.4325pt>
+<sequence_diagrams/UC26_sequence.pdf, id=2619, 634.37pt x 383.4325pt>
 File: sequence_diagrams/UC26_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC26_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC26_sequence.pdf  used on input lin
@@ -2824,7 +2754,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
-[143 <./activity_diagrams/UC26_activity.pdf> <./sequence_diagrams/UC26_sequence
+[138 <./activity_diagrams/UC26_activity.pdf> <./sequence_diagrams/UC26_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 156--156
 
@@ -2838,44 +2768,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--156
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 156.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2605, page=47, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2649, page=44, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 47>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page47 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 44>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page44 used on input li
 ne 156.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 47>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page47 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 44>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page44 used on input li
 ne 156.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[144]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[139]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 47>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page47 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 44>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page44 used on input li
 ne 156.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 47>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page47 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 44>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page44 used on input li
 ne 156.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 47>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page47 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 44>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page44 used on input li
 ne 156.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [145
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [140
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC27_activity.pdf, id=2615, 583.17876pt x 614.295pt>
+<activity_diagrams/UC27_activity.pdf, id=2660, 583.17876pt x 614.295pt>
 File: activity_diagrams/UC27_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC27_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC27_activity.pdf  used on input lin
 e 156.
 (pdftex.def)             Requested size: 234.00238pt x 246.48225pt.
-<sequence_diagrams/UC27_sequence.pdf, id=2616, 634.37pt x 383.4325pt>
+<sequence_diagrams/UC27_sequence.pdf, id=2661, 634.37pt x 383.4325pt>
 File: sequence_diagrams/UC27_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC27_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC27_sequence.pdf  used on input lin
@@ -2891,7 +2821,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
-[146 <./activity_diagrams/UC27_activity.pdf> <./sequence_diagrams/UC27_sequence
+[141 <./activity_diagrams/UC27_activity.pdf> <./sequence_diagrams/UC27_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 157--157
 
@@ -2905,44 +2835,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--157
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 157.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2645, page=48, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2690, page=45, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 48>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page48 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 45>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page45 used on input li
 ne 157.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 48>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page48 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 45>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page45 used on input li
 ne 157.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[147]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[142]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 48>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page48 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 45>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page45 used on input li
 ne 157.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 48>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page48 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 45>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page45 used on input li
 ne 157.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 48>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page48 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 45>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page45 used on input li
 ne 157.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [148
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [143
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC28_activity.pdf, id=2654, 583.17876pt x 489.83pt>
+<activity_diagrams/UC28_activity.pdf, id=2700, 583.17876pt x 489.83pt>
 File: activity_diagrams/UC28_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC28_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC28_activity.pdf  used on input lin
 e 157.
 (pdftex.def)             Requested size: 234.00238pt x 196.54141pt.
-<sequence_diagrams/UC28_sequence.pdf, id=2655, 634.37pt x 307.1475pt>
+<sequence_diagrams/UC28_sequence.pdf, id=2701, 634.37pt x 307.1475pt>
 File: sequence_diagrams/UC28_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC28_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC28_sequence.pdf  used on input lin
@@ -2958,14 +2888,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
-<components/service_management_component.pdf, id=2656, 903.375pt x 903.375pt>
+<components/service_management_component.pdf, id=2702, 594.42076pt x 699.21222p
+t>
 File: components/service_management_component.pdf Graphic file (type pdf)
 <use components/service_management_component.pdf>
 Package pdftex.def Info: components/service_management_component.pdf  used on i
 nput line 161.
-(pdftex.def)             Requested size: 253.49762pt x 253.49464pt.
-[149 <./activity_diagrams/UC28_activity.pdf> <./sequence_diagrams/UC28_sequence
-.pdf>] [150 <./components/service_management_component.pdf>]
+(pdftex.def)             Requested size: 296.39786pt x 348.6557pt.
+[144 <./activity_diagrams/UC28_activity.pdf> <./sequence_diagrams/UC28_sequence
+.pdf>] [145 <./components/service_management_component.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 162--162
 
  []
@@ -2978,44 +2909,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--162
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 162.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2716, page=49, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2761, page=46, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 49>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page49 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 46>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page46 used on input li
 ne 162.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 49>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page49 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 46>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page46 used on input li
 ne 162.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[151]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[146]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 49>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page49 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 46>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page46 used on input li
 ne 162.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 49>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page49 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 46>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page46 used on input li
 ne 162.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 49>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page49 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 46>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page46 used on input li
 ne 162.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [152
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [147
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC29_activity.pdf, id=2725, 633.36626pt x 738.76pt>
+<activity_diagrams/UC29_activity.pdf, id=2772, 633.36626pt x 738.76pt>
 File: activity_diagrams/UC29_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC29_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC29_activity.pdf  used on input lin
 e 162.
 (pdftex.def)             Requested size: 234.00238pt x 272.94237pt.
-<sequence_diagrams/UC29_sequence.pdf, id=2726, 633.36626pt x 397.485pt>
+<sequence_diagrams/UC29_sequence.pdf, id=2773, 633.36626pt x 397.485pt>
 File: sequence_diagrams/UC29_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC29_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC29_sequence.pdf  used on input lin
@@ -3031,7 +2962,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
-[153 <./activity_diagrams/UC29_activity.pdf> <./sequence_diagrams/UC29_sequence
+[148 <./activity_diagrams/UC29_activity.pdf> <./sequence_diagrams/UC29_sequence
 .pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 163--163
 
@@ -3045,44 +2976,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--163
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 163.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2756, page=50, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2803, page=47, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 50>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page50 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 47>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page47 used on input li
 ne 163.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 50>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page50 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 47>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page47 used on input li
 ne 163.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[154]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[149]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 50>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page50 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 47>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page47 used on input li
 ne 163.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 50>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page50 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 47>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page47 used on input li
 ne 163.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 50>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page50 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 47>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page47 used on input li
 ne 163.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [155
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [150
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC30_activity.pdf, id=2765, 633.36626pt x 1122.1925pt>
+<activity_diagrams/UC30_activity.pdf, id=2814, 633.36626pt x 1122.1925pt>
 File: activity_diagrams/UC30_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC30_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC30_activity.pdf  used on input lin
 e 163.
 (pdftex.def)             Requested size: 234.00238pt x 414.60541pt.
-<sequence_diagrams/UC30_sequence.pdf, id=2766, 634.37pt x 430.60875pt>
+<sequence_diagrams/UC30_sequence.pdf, id=2815, 634.37pt x 430.60875pt>
 File: sequence_diagrams/UC30_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC30_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC30_sequence.pdf  used on input lin
@@ -3098,7 +3029,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
-[156 <./activity_diagrams/UC30_activity.pdf>] [157 <./sequence_diagrams/UC30_se
+[151 <./activity_diagrams/UC30_activity.pdf>] [152 <./sequence_diagrams/UC30_se
 quence.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 164--164
 
@@ -3112,63 +3043,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--164
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 164.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2808, page=51, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2855, page=48, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 51>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page51 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 48>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page48 used on input li
 ne 164.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 51>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page51 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 48>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page48 used on input li
 ne 164.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[158]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[153]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 51>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page51 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 48>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page48 used on input li
 ne 164.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 51>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page51 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 48>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page48 used on input li
 ne 164.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 51>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page51 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 48>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page48 used on input li
 ne 164.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [159
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [154
 
  <./use_cases/use_cases_v0.5.pdf>]
-<use_cases/use_cases_v0.5.pdf, id=2817, page=52, 597.53635pt x 845.04686pt>
+<use_cases/use_cases_v0.5.pdf, id=2865, page=49, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 52>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page52 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 49>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page49 used on input li
 ne 164.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 52>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page52 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 49>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page49 used on input li
 ne 164.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 52>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page52 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 49>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page49 used on input li
 ne 164.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [160
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [155
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC31_activity.pdf, id=2822, 633.36626pt x 949.5475pt>
+<activity_diagrams/UC31_activity.pdf, id=2871, 633.36626pt x 949.5475pt>
 File: activity_diagrams/UC31_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC31_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC31_activity.pdf  used on input lin
 e 164.
 (pdftex.def)             Requested size: 234.00238pt x 350.81996pt.
-<sequence_diagrams/UC31_sequence.pdf, id=2823, 634.37pt x 449.68pt>
+<sequence_diagrams/UC31_sequence.pdf, id=2872, 634.37pt x 449.68pt>
 File: sequence_diagrams/UC31_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC31_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC31_sequence.pdf  used on input lin
@@ -3184,7 +3115,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
-[161 <./activity_diagrams/UC31_activity.pdf>] [162 <./sequence_diagrams/UC31_se
+[156 <./activity_diagrams/UC31_activity.pdf>] [157 <./sequence_diagrams/UC31_se
 quence.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 165--165
 
@@ -3198,44 +3129,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--165
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
 <use use_cases/use_cases_v0.5.pdf>
 Package pdftex.def Info: use_cases/use_cases_v0.5.pdf  used on input line 165.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
-<use_cases/use_cases_v0.5.pdf, id=2861, page=53, 597.53635pt x 845.04686pt>
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+<use_cases/use_cases_v0.5.pdf, id=2911, page=50, 597.55246pt x 845.07718pt>
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 53>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page53 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 50>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page50 used on input li
 ne 165.
-(pdftex.def)             Requested size: 597.53488pt x 845.0448pt.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 53>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page53 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 50>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page50 used on input li
 ne 165.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
-[163]
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+[158]
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 53>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page53 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 50>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page50 used on input li
 ne 165.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 53>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page53 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 50>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page50 used on input li
 ne 165.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: use_cases/use_cases_v0.5.pdf Graphic file (type pdf)
-<use use_cases/use_cases_v0.5.pdf, page 53>
-Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page53 used on input li
+<use use_cases/use_cases_v0.5.pdf, page 50>
+Package pdftex.def Info: use_cases/use_cases_v0.5.pdf , page50 used on input li
 ne 165.
-(pdftex.def)             Requested size: 562.14925pt x 795.00179pt.
- [164
+(pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
+ [159
 
  <./use_cases/use_cases_v0.5.pdf>]
-<activity_diagrams/UC32_activity.pdf, id=2870, 682.55pt x 1024.82875pt>
+<activity_diagrams/UC32_activity.pdf, id=2921, 682.55pt x 1024.82875pt>
 File: activity_diagrams/UC32_activity.pdf Graphic file (type pdf)
 <use activity_diagrams/UC32_activity.pdf>
 Package pdftex.def Info: activity_diagrams/UC32_activity.pdf  used on input lin
 e 165.
 (pdftex.def)             Requested size: 234.00238pt x 351.34576pt.
-<sequence_diagrams/UC32_sequence.pdf, id=2871, 634.37pt x 453.695pt>
+<sequence_diagrams/UC32_sequence.pdf, id=2922, 634.37pt x 453.695pt>
 File: sequence_diagrams/UC32_sequence.pdf Graphic file (type pdf)
 <use sequence_diagrams/UC32_sequence.pdf>
 Package pdftex.def Info: sequence_diagrams/UC32_sequence.pdf  used on input lin
@@ -3251,43 +3182,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
-[165 <./activity_diagrams/UC32_activity.pdf>] [166 <./sequence_diagrams/UC32_se
+[160 <./activity_diagrams/UC32_activity.pdf>] [161 <./sequence_diagrams/UC32_se
 quence.pdf>]
-<class_diagram/class_diagram.pdf, id=2909, 3387.65625pt x 2032.59375pt>
+<class_diagram/class_diagram.pdf, id=2960, 2963.07pt x 2186.1675pt>
 File: class_diagram/class_diagram.pdf Graphic file (type pdf)
 <use class_diagram/class_diagram.pdf>
 Package pdftex.def Info: class_diagram/class_diagram.pdf  used on input line 17
-2.
-(pdftex.def)             Requested size: 390.0pt x 233.97597pt.
- [167 <./class_diagram/class_diagram.pdf>]) (./D2_DispatchNet.aux)
+4.
+(pdftex.def)             Requested size: 390.0pt x 287.71436pt.
+ [162 <./class_diagram/class_diagram.pdf>]) (./D2_DispatchNet.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `D2_DispatchNet.out' has not changed.
 (rerunfilecheck)             Checksum: A2CB2BF4F18311D6FE04FEF5EE95C858;24166.
  ) 
 Here is how much of TeX's memory you used:
- 11426 strings out of 469515
- 195680 string characters out of 5470807
- 586591 words of memory out of 5000000
- 39642 multiletter control sequences out of 15000+600000
+ 11412 strings out of 469515
+ 195223 string characters out of 5470807
+ 586613 words of memory out of 5000000
+ 39633 multiletter control sequences out of 15000+600000
  634833 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,17n,79p,411b,599s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,17n,79p,410b,599s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/alessio/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
 ></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti12.pfb>
-Output written on D2_DispatchNet.pdf (168 pages, 4344595 bytes).
+Output written on D2_DispatchNet.pdf (163 pages, 4787555 bytes).
 PDF statistics:
- 3111 PDF objects out of 3580 (max. 8388607)
- 2670 compressed objects within 27 object streams
- 327 named destinations out of 1000 (max. 500000)
- 2040 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3172 PDF objects out of 3580 (max. 8388607)
+ 2735 compressed objects within 28 object streams
+ 322 named destinations out of 1000 (max. 500000)
+ 2025 words of extra memory for PDF output out of 10000 (max. 10000000)
 
