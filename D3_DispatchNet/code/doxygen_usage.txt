@@ -1,0 +1,10 @@
+# after every change:
+
+# run Doxygen (from D3_DispatchNet\code):
+doxygen Doxyfile
+
+# open in browser:
+# Linux
+xdg-open docs/html/index.html
+# Windows
+start docs\html\index.html
