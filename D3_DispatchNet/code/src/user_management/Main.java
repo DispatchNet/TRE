@@ -1,3 +1,5 @@
+package user_management;
+
 public class Main {
     public static void main(String[] args) {
         NetworkManager networkManager = new NetworkManager("admin", "admin@example.com", "passwordsicura");

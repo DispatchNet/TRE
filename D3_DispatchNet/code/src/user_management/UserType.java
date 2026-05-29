@@ -1,3 +1,5 @@
+package user_management;
+
 /**
  * @brief Enum representing the different types of users in the system.
  */

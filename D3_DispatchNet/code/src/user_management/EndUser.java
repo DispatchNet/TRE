@@ -1,3 +1,5 @@
+package user_management;
+
 /**
 * @brief Abstract class representing an end user, a type of authenticated user 
 * who can view and manage their own data.

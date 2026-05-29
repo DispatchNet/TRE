@@ -1,3 +1,5 @@
+package user_management;
+
 /**
 * @brief Class representing a train company, a type of end user who can
 * additionally create service requests and manage their account.

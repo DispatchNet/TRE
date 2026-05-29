@@ -1,3 +1,5 @@
+package user_management;
+
 /**
 * @brief Class representing a network manager, a type of authenticated user who 
 * can manage the network and review service requests.
