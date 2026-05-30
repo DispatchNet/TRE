@@ -1,0 +1,76 @@
+\doxysection{mail\+\_\+service.\+Mock\+Mail\+Service Class Reference}
+\hypertarget{classmail__service_1_1_mock_mail_service}{}\label{classmail__service_1_1_mock_mail_service}\index{mail\_service.MockMailService@{mail\_service.MockMailService}}
+Inheritance diagram for mail\+\_\+service.\+Mock\+Mail\+Service:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmail__service_1_1_mock_mail_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \doxymbox{\hyperlink{classmail__service_1_1_mock_mail_service_a5bc0be1fd1a61c90363f55838949b701}{send\+Email}} (\doxymbox{\hyperlink{classmail__service_1_1_email}{Email}} email)
+\begin{DoxyCompactList}\small\item\em Sends an email. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classmail__service_1_1_mock_mail_service_a53c1db5b6399a019f76e79a99e87d28e}{send\+Email}} (String recipient, String subject, String body)
+\begin{DoxyCompactList}\small\item\em Sends an email to a recipient with subject and body. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mock implementation of \doxylink{interfacemail__service_1_1_mail_service}{Mail\+Service}. Simulates sending emails without actually sending them. Used for testing and development purposes. 
+
+\label{classmail__service_1_1_mock_mail_service_doc-func-members}
+\Hypertarget{classmail__service_1_1_mock_mail_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmail__service_1_1_mock_mail_service_a5bc0be1fd1a61c90363f55838949b701}\index{mail\_service.MockMailService@{mail\_service.MockMailService}!sendEmail@{sendEmail}}
+\index{sendEmail@{sendEmail}!mail\_service.MockMailService@{mail\_service.MockMailService}}
+\doxysubsubsection{\texorpdfstring{sendEmail()}{sendEmail()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmail__service_1_1_mock_mail_service_a5bc0be1fd1a61c90363f55838949b701} 
+boolean mail\+\_\+service.\+Mock\+Mail\+Service.\+send\+Email (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classmail__service_1_1_email}{Email}}}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sends an email. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & The email to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the email was sent successfully, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{interfacemail__service_1_1_mail_service_acec8ccf695f27a0481c88b96feed5024}{mail\+\_\+service.\+Mail\+Service}}.
+
+\Hypertarget{classmail__service_1_1_mock_mail_service_a53c1db5b6399a019f76e79a99e87d28e}\index{mail\_service.MockMailService@{mail\_service.MockMailService}!sendEmail@{sendEmail}}
+\index{sendEmail@{sendEmail}!mail\_service.MockMailService@{mail\_service.MockMailService}}
+\doxysubsubsection{\texorpdfstring{sendEmail()}{sendEmail()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmail__service_1_1_mock_mail_service_a53c1db5b6399a019f76e79a99e87d28e} 
+boolean mail\+\_\+service.\+Mock\+Mail\+Service.\+send\+Email (\begin{DoxyParamCaption}\item[{String}]{recipient}{, }\item[{String}]{subject}{, }\item[{String}]{body}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sends an email to a recipient with subject and body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipient} & The email recipient \\
+\hline
+{\em subject} & The email subject \\
+\hline
+{\em body} & The email body \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the email was sent successfully, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{interfacemail__service_1_1_mail_service_af0f392720376e90c5201dfeb2dffa09a}{mail\+\_\+service.\+Mail\+Service}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+mail\+\_\+service/\+\doxymbox{\hyperlink{_mock_mail_service_8java}{Mock\+Mail\+Service.\+java}}\end{DoxyCompactItemize}

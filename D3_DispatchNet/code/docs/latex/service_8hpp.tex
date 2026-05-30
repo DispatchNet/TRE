@@ -1,0 +1,146 @@
+\doxysection{src/\+service.hpp File Reference}
+\hypertarget{service_8hpp}{}\label{service_8hpp}\index{src/service.hpp@{src/service.hpp}}
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$optional$>$}\newline
+{\ttfamily \+\#include $<$time.\+h$>$}\newline
+{\ttfamily \+\#include "{}infrastructure.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_train_type}{Train\+Type}}
+\begin{DoxyCompactList}\small\item\em A Class defining a \doxylink{class_train_type}{Train\+Type}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_service_type}{Service\+Type}}
+\begin{DoxyCompactList}\small\item\em A Class defining a \doxylink{class_service_type}{Service\+Type}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_stop_data}{Stop\+Data}}
+\begin{DoxyCompactList}\small\item\em A Class defining a \doxylink{class_service_type}{Service\+Type}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_service_step}{Service\+Step}}
+\begin{DoxyCompactList}\small\item\em A Class defining a \doxylink{class_service_step}{Service\+Step}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_service_set}{Service\+Set}}
+\begin{DoxyCompactList}\small\item\em A Class defining a \doxylink{class_service_set}{Service\+Set}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_dispatch}{Dispatch}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t \doxymbox{\hyperlink{service_8hpp_a8b0dce194c1f6bcfea253df45ba9c73c}{cents}}
+\item 
+typedef uint32\+\_\+t \doxymbox{\hyperlink{service_8hpp_aaeee3c20e3486512645b955ea706a43f}{minutes}}
+\item 
+typedef \doxymbox{\hyperlink{infrastructure_8hpp_af20f019c5355dbb745d80739a88eab06}{TODOTYPE}} \doxymbox{\hyperlink{service_8hpp_aab00a727254f8161ef4d2f05d74ea5eb}{Train\+Company}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{service_8hpp_adf86442aa7723857e0e1d501a2b0870e}{Service\+Status}} \{ \doxymbox{\hyperlink{service_8hpp_adf86442aa7723857e0e1d501a2b0870ea975826920e100645fa7b60f265742446}{Effective}}
+, \doxymbox{\hyperlink{service_8hpp_adf86442aa7723857e0e1d501a2b0870ea98282ee85199e49cf9489c8e56fc8d0d}{Pending\+Approval}}
+ \}
+\item 
+enum class \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3a}{Weekday}} \{ \newline
+\doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa6f8522e0610541f1ef215a22ffa66ff6}{Monday}} = 0
+, \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa5792315f09a5d54fb7e3d066672b507f}{Tuesday}}
+, \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa796c163589f295373e171842f37265d5}{Wednesday}}
+, \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa78ae6f0cd191d25147e252dc54768238}{Thursday}}
+, \newline
+\doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aac33b138a163847cdb6caeeb7c9a126b4}{Friday}}
+, \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa8b7051187b9191cdcdae6ed5a10e5adc}{Saturday}}
+, \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa9d1a0949c39e66a0cd65240bc0ac9177}{Sunday}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\label{service_8hpp_doc-typedef-members}
+\Hypertarget{service_8hpp_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{service_8hpp_a8b0dce194c1f6bcfea253df45ba9c73c}\index{service.hpp@{service.hpp}!cents@{cents}}
+\index{cents@{cents}!service.hpp@{service.hpp}}
+\doxysubsubsection{\texorpdfstring{cents}{cents}}
+{\footnotesize\ttfamily \label{service_8hpp_a8b0dce194c1f6bcfea253df45ba9c73c} 
+typedef uint32\+\_\+t \doxymbox{\hyperlink{service_8hpp_a8b0dce194c1f6bcfea253df45ba9c73c}{cents}}}
+
+\Hypertarget{service_8hpp_aaeee3c20e3486512645b955ea706a43f}\index{service.hpp@{service.hpp}!minutes@{minutes}}
+\index{minutes@{minutes}!service.hpp@{service.hpp}}
+\doxysubsubsection{\texorpdfstring{minutes}{minutes}}
+{\footnotesize\ttfamily \label{service_8hpp_aaeee3c20e3486512645b955ea706a43f} 
+typedef uint32\+\_\+t \doxymbox{\hyperlink{service_8hpp_aaeee3c20e3486512645b955ea706a43f}{minutes}}}
+
+\Hypertarget{service_8hpp_aab00a727254f8161ef4d2f05d74ea5eb}\index{service.hpp@{service.hpp}!TrainCompany@{TrainCompany}}
+\index{TrainCompany@{TrainCompany}!service.hpp@{service.hpp}}
+\doxysubsubsection{\texorpdfstring{TrainCompany}{TrainCompany}}
+{\footnotesize\ttfamily \label{service_8hpp_aab00a727254f8161ef4d2f05d74ea5eb} 
+typedef \doxymbox{\hyperlink{infrastructure_8hpp_af20f019c5355dbb745d80739a88eab06}{TODOTYPE}} \doxymbox{\hyperlink{service_8hpp_aab00a727254f8161ef4d2f05d74ea5eb}{Train\+Company}}}
+
+
+
+\label{service_8hpp_doc-enum-members}
+\Hypertarget{service_8hpp_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{service_8hpp_adf86442aa7723857e0e1d501a2b0870e}\index{service.hpp@{service.hpp}!ServiceStatus@{ServiceStatus}}
+\index{ServiceStatus@{ServiceStatus}!service.hpp@{service.hpp}}
+\doxysubsubsection{\texorpdfstring{ServiceStatus}{ServiceStatus}}
+{\footnotesize\ttfamily \label{service_8hpp_adf86442aa7723857e0e1d501a2b0870e} 
+enum class \doxymbox{\hyperlink{service_8hpp_adf86442aa7723857e0e1d501a2b0870e}{Service\+Status}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Effective@{Effective}!service.hpp@{service.hpp}}
+\index{service.hpp@{service.hpp}!Effective@{Effective}}
+}\Hypertarget{service_8hpp_adf86442aa7723857e0e1d501a2b0870ea975826920e100645fa7b60f265742446}\label{service_8hpp_adf86442aa7723857e0e1d501a2b0870ea975826920e100645fa7b60f265742446} 
+Effective&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PendingApproval@{PendingApproval}!service.hpp@{service.hpp}}
+\index{service.hpp@{service.hpp}!PendingApproval@{PendingApproval}}
+}\Hypertarget{service_8hpp_adf86442aa7723857e0e1d501a2b0870ea98282ee85199e49cf9489c8e56fc8d0d}\label{service_8hpp_adf86442aa7723857e0e1d501a2b0870ea98282ee85199e49cf9489c8e56fc8d0d} 
+Pending\+Approval&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3a}\index{service.hpp@{service.hpp}!Weekday@{Weekday}}
+\index{Weekday@{Weekday}!service.hpp@{service.hpp}}
+\doxysubsubsection{\texorpdfstring{Weekday}{Weekday}}
+{\footnotesize\ttfamily \label{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3a} 
+enum class \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3a}{Weekday}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Monday@{Monday}!service.hpp@{service.hpp}}
+\index{service.hpp@{service.hpp}!Monday@{Monday}}
+}\Hypertarget{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa6f8522e0610541f1ef215a22ffa66ff6}\label{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa6f8522e0610541f1ef215a22ffa66ff6} 
+Monday&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tuesday@{Tuesday}!service.hpp@{service.hpp}}
+\index{service.hpp@{service.hpp}!Tuesday@{Tuesday}}
+}\Hypertarget{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa5792315f09a5d54fb7e3d066672b507f}\label{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa5792315f09a5d54fb7e3d066672b507f} 
+Tuesday&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Wednesday@{Wednesday}!service.hpp@{service.hpp}}
+\index{service.hpp@{service.hpp}!Wednesday@{Wednesday}}
+}\Hypertarget{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa796c163589f295373e171842f37265d5}\label{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa796c163589f295373e171842f37265d5} 
+Wednesday&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Thursday@{Thursday}!service.hpp@{service.hpp}}
+\index{service.hpp@{service.hpp}!Thursday@{Thursday}}
+}\Hypertarget{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa78ae6f0cd191d25147e252dc54768238}\label{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa78ae6f0cd191d25147e252dc54768238} 
+Thursday&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Friday@{Friday}!service.hpp@{service.hpp}}
+\index{service.hpp@{service.hpp}!Friday@{Friday}}
+}\Hypertarget{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aac33b138a163847cdb6caeeb7c9a126b4}\label{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aac33b138a163847cdb6caeeb7c9a126b4} 
+Friday&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Saturday@{Saturday}!service.hpp@{service.hpp}}
+\index{service.hpp@{service.hpp}!Saturday@{Saturday}}
+}\Hypertarget{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa8b7051187b9191cdcdae6ed5a10e5adc}\label{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa8b7051187b9191cdcdae6ed5a10e5adc} 
+Saturday&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sunday@{Sunday}!service.hpp@{service.hpp}}
+\index{service.hpp@{service.hpp}!Sunday@{Sunday}}
+}\Hypertarget{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa9d1a0949c39e66a0cd65240bc0ac9177}\label{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa9d1a0949c39e66a0cd65240bc0ac9177} 
+Sunday&\\
+\hline
+
+\end{DoxyEnumFields}

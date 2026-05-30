@@ -1,0 +1,132 @@
+\doxysection{user\+\_\+management.\+End\+User Class Reference}
+\hypertarget{classuser__management_1_1_end_user}{}\label{classuser__management_1_1_end_user}\index{user\_management.EndUser@{user\_management.EndUser}}
+
+
+Abstract class representing an end user, a type of authenticated user who can view and manage their own data.  
+
+
+Inheritance diagram for user\+\_\+management.\+End\+User:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classuser__management_1_1_end_user}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classuser__management_1_1_end_user_adf51cbc032967c93268f201aaf829a1b}{End\+User}} ()
+\begin{DoxyCompactList}\small\item\em Empty constructor for \doxylink{classuser__management_1_1_end_user}{End\+User} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classuser__management_1_1_end_user_aa1059f6257cc0cdd6ebacf0bab5ea058}{End\+User}} (String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} user\+Type)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_end_user}{End\+User} class. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_end_user_a81d7e803c9b49ada40d22b998b53d6c0}{view\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Prints the user\textquotesingle{}s data, that is username and email. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_end_user_ae17eabb5fdb0875d9deafa1b4b14c88e}{change\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Changes the user\textquotesingle{}s data. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_end_user_ab809e033ef2f389636a1b50313cd6f70}{delete\+Account}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the user\textquotesingle{}s account. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{user\+\_\+management.\+Authenticated\+User}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a29b02562dec2e2a0f935157635d70c3e}{Authenticated\+User}} ()
+\begin{DoxyCompactList}\small\item\em Empty Constructor for \doxylink{classuser__management_1_1_authenticated_user}{Authenticated\+User} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a5fe1fed4db347cd45453709e9254e601}{Authenticated\+User}} (String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} user\+Type)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_authenticated_user}{Authenticated\+User} class. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a09d3ea4888c58c57a2f381fb32034d42}{get\+Username}} ()
+\begin{DoxyCompactList}\small\item\em Gets the username of the authenticated user. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_abea2507b50591d83e3a2b0f3637fe189}{get\+Email}} ()
+\begin{DoxyCompactList}\small\item\em Gets the email of the authenticated user. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_ab972efc0820664bae364120195cc502a}{get\+Password}} ()
+\begin{DoxyCompactList}\small\item\em Gets the password of the authenticated user. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a618015e999551dec58a497731a03048b}{get\+User\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of the authenticated user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a1028a84dece25ca9179a00503f3fa44b}{set\+Username}} (String username)
+\begin{DoxyCompactList}\small\item\em Sets the username of the authenticated user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a77ee15db77877404946251dbae09d425}{set\+Email}} (String email)
+\begin{DoxyCompactList}\small\item\em Sets the email of the authenticated user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a0d8244c10559ebbec311fabd0c41ddc1}{set\+Password}} (String password)
+\begin{DoxyCompactList}\small\item\em Sets the password of the authenticated user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_aabfe36234df0d8a7266b9cd3f95e06bd}{logout}} ()
+\begin{DoxyCompactList}\small\item\em Sets the type of the authenticated user. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a4ed89b9bcafa4f86a1637b251212e825}{equals}} (Object o)
+\begin{DoxyCompactList}\small\item\em Checks if this authenticated user is equal to another object. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a4a09cae41928361de7dd4888427b8760}{hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Generates a hash code for the authenticated user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class representing an end user, a type of authenticated user who can view and manage their own data. 
+
+\label{classuser__management_1_1_end_user_doc-constructors}
+\Hypertarget{classuser__management_1_1_end_user_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classuser__management_1_1_end_user_adf51cbc032967c93268f201aaf829a1b}\index{user\_management.EndUser@{user\_management.EndUser}!EndUser@{EndUser}}
+\index{EndUser@{EndUser}!user\_management.EndUser@{user\_management.EndUser}}
+\doxysubsubsection{\texorpdfstring{EndUser()}{EndUser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_end_user_adf51cbc032967c93268f201aaf829a1b} 
+user\+\_\+management.\+End\+User.\+End\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Empty constructor for \doxylink{classuser__management_1_1_end_user}{End\+User} class. 
+
+\Hypertarget{classuser__management_1_1_end_user_aa1059f6257cc0cdd6ebacf0bab5ea058}\index{user\_management.EndUser@{user\_management.EndUser}!EndUser@{EndUser}}
+\index{EndUser@{EndUser}!user\_management.EndUser@{user\_management.EndUser}}
+\doxysubsubsection{\texorpdfstring{EndUser()}{EndUser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_end_user_aa1059f6257cc0cdd6ebacf0bab5ea058} 
+user\+\_\+management.\+End\+User.\+End\+User (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{email}{, }\item[{String}]{password}{, }\item[{\doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}}}]{user\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{classuser__management_1_1_end_user}{End\+User} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username of the end user \\
+\hline
+{\em email} & The email of the end user \\
+\hline
+{\em password} & The password of the end user \\
+\hline
+{\em user\+Type} & The type of the user \\
+\hline
+\end{DoxyParams}
+
+
+\label{classuser__management_1_1_end_user_doc-func-members}
+\Hypertarget{classuser__management_1_1_end_user_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classuser__management_1_1_end_user_ae17eabb5fdb0875d9deafa1b4b14c88e}\index{user\_management.EndUser@{user\_management.EndUser}!changeData@{changeData}}
+\index{changeData@{changeData}!user\_management.EndUser@{user\_management.EndUser}}
+\doxysubsubsection{\texorpdfstring{changeData()}{changeData()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_end_user_ae17eabb5fdb0875d9deafa1b4b14c88e} 
+void user\+\_\+management.\+End\+User.\+change\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Changes the user\textquotesingle{}s data. 
+
+\Hypertarget{classuser__management_1_1_end_user_ab809e033ef2f389636a1b50313cd6f70}\index{user\_management.EndUser@{user\_management.EndUser}!deleteAccount@{deleteAccount}}
+\index{deleteAccount@{deleteAccount}!user\_management.EndUser@{user\_management.EndUser}}
+\doxysubsubsection{\texorpdfstring{deleteAccount()}{deleteAccount()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_end_user_ab809e033ef2f389636a1b50313cd6f70} 
+void user\+\_\+management.\+End\+User.\+delete\+Account (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes the user\textquotesingle{}s account. 
+
+\Hypertarget{classuser__management_1_1_end_user_a81d7e803c9b49ada40d22b998b53d6c0}\index{user\_management.EndUser@{user\_management.EndUser}!viewData@{viewData}}
+\index{viewData@{viewData}!user\_management.EndUser@{user\_management.EndUser}}
+\doxysubsubsection{\texorpdfstring{viewData()}{viewData()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_end_user_a81d7e803c9b49ada40d22b998b53d6c0} 
+void user\+\_\+management.\+End\+User.\+view\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the user\textquotesingle{}s data, that is username and email. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+user\+\_\+management/\+\doxymbox{\hyperlink{_end_user_8java}{End\+User.\+java}}\end{DoxyCompactItemize}

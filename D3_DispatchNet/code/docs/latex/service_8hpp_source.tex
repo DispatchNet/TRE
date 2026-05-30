@@ -1,0 +1,77 @@
+\doxysection{service.\+hpp}
+\hypertarget{service_8hpp_source}{}\label{service_8hpp_source}\index{src/service.hpp@{src/service.hpp}}
+\doxymbox{\hyperlink{service_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{infrastructure_8hpp}{infrastructure.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{typedef}\ uint32\_t\ \doxymbox{\hyperlink{service_8hpp_a8b0dce194c1f6bcfea253df45ba9c73c}{cents}};}
+\DoxyCodeLine{00007\ \textcolor{keyword}{typedef}\ uint32\_t\ \doxymbox{\hyperlink{service_8hpp_aaeee3c20e3486512645b955ea706a43f}{minutes}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{infrastructure_8hpp_af20f019c5355dbb745d80739a88eab06}{TODOTYPE}}\ \doxymbox{\hyperlink{service_8hpp_aab00a727254f8161ef4d2f05d74ea5eb}{TrainCompany}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_train_type}{TrainType}}\ \{}
+\DoxyCodeLine{00014\ \ \ std::string\ identifier;}
+\DoxyCodeLine{00015\ \ \ uint16\_t\ seatedCapacity;}
+\DoxyCodeLine{00016\ \ \ uint16\_t\ standingCapacity;}
+\DoxyCodeLine{00017\ \ \ \textcolor{keywordtype}{bool}\ isPassenger;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ uint16\_t\ \doxymbox{\hyperlink{class_train_type_aac0bd4aa35aff7f6dc83654bcdb083cf}{getSeatedCapacity}}();}
+\DoxyCodeLine{00021\ \ \ uint16\_t\ \doxymbox{\hyperlink{class_train_type_a0a903ab5b8457c7cdb88888571be41e7}{getStandingCapacity}}();}
+\DoxyCodeLine{00022\ \ \ uint16\_t\ \doxymbox{\hyperlink{class_train_type_a2d3cdd587197f0621a562e9189c98201}{getTotalCapacity}}();}
+\DoxyCodeLine{00023\ \ \ std::string*\ \doxymbox{\hyperlink{class_train_type_a34f9702edaeea19e6133fbf4893e9e23}{getIdentifier}}();}
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_train_type_a9395d1a1383d36bf1909426d9dc0484f}{isPassenger}}();}
+\DoxyCodeLine{00025\ \ \ std::string\ \doxymbox{\hyperlink{class_train_type_aeb707890e6c4131857855a13a7ece46f}{getDetails}}();}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_service_type}{ServiceType}}\ \{}
+\DoxyCodeLine{00035\ \ \ std::string\ commercial\_name;}
+\DoxyCodeLine{00036\ \ \ \doxymbox{\hyperlink{class_train_type}{TrainType}}*\ trainType;}
+\DoxyCodeLine{00037\ \ \ \doxymbox{\hyperlink{service_8hpp_a8b0dce194c1f6bcfea253df45ba9c73c}{cents}}\ priceKm;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_stop_data}{StopData}}\ \{}
+\DoxyCodeLine{00045\ \ \ std::string*\ platform;}
+\DoxyCodeLine{00046\ \ \ \doxymbox{\hyperlink{service_8hpp_aaeee3c20e3486512645b955ea706a43f}{minutes}}\ waitTime;}
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_service_step}{ServiceStep}}\{}
+\DoxyCodeLine{00054\ \ \ \doxymbox{\hyperlink{class_junction}{Junction}}*\ junction;}
+\DoxyCodeLine{00055\ \ \ std::optional<StopData>\ stopData;}
+\DoxyCodeLine{00056\ \ \ \doxymbox{\hyperlink{service_8hpp_aaeee3c20e3486512645b955ea706a43f}{minutes}}\ travelTime;}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{service_8hpp_adf86442aa7723857e0e1d501a2b0870e}{ServiceStatus}}\ \{}
+\DoxyCodeLine{00061\ \ \ \doxymbox{\hyperlink{service_8hpp_adf86442aa7723857e0e1d501a2b0870ea975826920e100645fa7b60f265742446}{Effective}},}
+\DoxyCodeLine{00062\ \ \ \doxymbox{\hyperlink{service_8hpp_adf86442aa7723857e0e1d501a2b0870ea98282ee85199e49cf9489c8e56fc8d0d}{PendingApproval}}}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_service_set}{ServiceSet}}\ \{}
+\DoxyCodeLine{00070\ \ \ \doxymbox{\hyperlink{service_8hpp_aab00a727254f8161ef4d2f05d74ea5eb}{TrainCompany}}*\ company;}
+\DoxyCodeLine{00071\ \ \ \doxymbox{\hyperlink{class_service_type}{ServiceType}}\ type;}
+\DoxyCodeLine{00072\ \ \ \doxymbox{\hyperlink{service_8hpp_adf86442aa7723857e0e1d501a2b0870e}{ServiceStatus}}\ status;}
+\DoxyCodeLine{00073\ \ \ std::vector<ServiceStep>\ steps;}
+\DoxyCodeLine{00074\ \ \ std::vector<Dispatch>\ dispatches;}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_dispatch}{Dispatch}}\ \{}
+\DoxyCodeLine{00078\ \ \ time\_t\ time;}
+\DoxyCodeLine{00079\ \ \ \textcolor{keywordtype}{bool}\ days[7];}
+\DoxyCodeLine{00080\ \ \ uint32\_t\ trainNumber;}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3a}{Weekday}}\ \{}
+\DoxyCodeLine{00084\ \ \ \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa6f8522e0610541f1ef215a22ffa66ff6}{Monday}}\ =\ 0,}
+\DoxyCodeLine{00085\ \ \ \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa5792315f09a5d54fb7e3d066672b507f}{Tuesday}},}
+\DoxyCodeLine{00086\ \ \ \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa796c163589f295373e171842f37265d5}{Wednesday}},}
+\DoxyCodeLine{00087\ \ \ \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa78ae6f0cd191d25147e252dc54768238}{Thursday}},}
+\DoxyCodeLine{00088\ \ \ \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aac33b138a163847cdb6caeeb7c9a126b4}{Friday}},}
+\DoxyCodeLine{00089\ \ \ \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa8b7051187b9191cdcdae6ed5a10e5adc}{Saturday}},}
+\DoxyCodeLine{00090\ \ \ \doxymbox{\hyperlink{service_8hpp_aec3d5ec6653b2c392d449500b8f5cb3aa9d1a0949c39e66a0cd65240bc0ac9177}{Sunday}}}
+\DoxyCodeLine{00091\ \};}
+
+\end{DoxyCode}

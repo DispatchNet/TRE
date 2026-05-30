@@ -1,0 +1,131 @@
+\doxysection{user\+\_\+management.\+Train\+Company Class Reference}
+\hypertarget{classuser__management_1_1_train_company}{}\label{classuser__management_1_1_train_company}\index{user\_management.TrainCompany@{user\_management.TrainCompany}}
+
+
+Class representing a train company, a type of end user who can additionally create service requests and manage their account.  
+
+
+Inheritance diagram for user\+\_\+management.\+Train\+Company:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classuser__management_1_1_train_company}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classuser__management_1_1_train_company_ae519ba25bce7757a5d27d87c9d699e81}{Train\+Company}} (String username, String email, String password)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_train_company}{Train\+Company} class. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_train_company_a62e69af858f8a9b48a89629944b38363}{create\+Service\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new service request. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_train_company_a093fa2ed831ef58e2d1325714dbdc9fc}{create\+Service\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new service type. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_train_company_a4be806906325eaddb82f45af5bc64d94}{create\+Train\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new train type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classuser__management_1_1_end_user}{user\+\_\+management.\+End\+User}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classuser__management_1_1_end_user_adf51cbc032967c93268f201aaf829a1b}{End\+User}} ()
+\begin{DoxyCompactList}\small\item\em Empty constructor for \doxylink{classuser__management_1_1_end_user}{End\+User} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classuser__management_1_1_end_user_aa1059f6257cc0cdd6ebacf0bab5ea058}{End\+User}} (String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} user\+Type)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_end_user}{End\+User} class. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_end_user_a81d7e803c9b49ada40d22b998b53d6c0}{view\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Prints the user\textquotesingle{}s data, that is username and email. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_end_user_ae17eabb5fdb0875d9deafa1b4b14c88e}{change\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Changes the user\textquotesingle{}s data. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_end_user_ab809e033ef2f389636a1b50313cd6f70}{delete\+Account}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the user\textquotesingle{}s account. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{user\+\_\+management.\+Authenticated\+User}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a29b02562dec2e2a0f935157635d70c3e}{Authenticated\+User}} ()
+\begin{DoxyCompactList}\small\item\em Empty Constructor for \doxylink{classuser__management_1_1_authenticated_user}{Authenticated\+User} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a5fe1fed4db347cd45453709e9254e601}{Authenticated\+User}} (String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} user\+Type)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_authenticated_user}{Authenticated\+User} class. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a09d3ea4888c58c57a2f381fb32034d42}{get\+Username}} ()
+\begin{DoxyCompactList}\small\item\em Gets the username of the authenticated user. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_abea2507b50591d83e3a2b0f3637fe189}{get\+Email}} ()
+\begin{DoxyCompactList}\small\item\em Gets the email of the authenticated user. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_ab972efc0820664bae364120195cc502a}{get\+Password}} ()
+\begin{DoxyCompactList}\small\item\em Gets the password of the authenticated user. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a618015e999551dec58a497731a03048b}{get\+User\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of the authenticated user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a1028a84dece25ca9179a00503f3fa44b}{set\+Username}} (String username)
+\begin{DoxyCompactList}\small\item\em Sets the username of the authenticated user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a77ee15db77877404946251dbae09d425}{set\+Email}} (String email)
+\begin{DoxyCompactList}\small\item\em Sets the email of the authenticated user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a0d8244c10559ebbec311fabd0c41ddc1}{set\+Password}} (String password)
+\begin{DoxyCompactList}\small\item\em Sets the password of the authenticated user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_aabfe36234df0d8a7266b9cd3f95e06bd}{logout}} ()
+\begin{DoxyCompactList}\small\item\em Sets the type of the authenticated user. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a4ed89b9bcafa4f86a1637b251212e825}{equals}} (Object o)
+\begin{DoxyCompactList}\small\item\em Checks if this authenticated user is equal to another object. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a4a09cae41928361de7dd4888427b8760}{hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Generates a hash code for the authenticated user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a train company, a type of end user who can additionally create service requests and manage their account. 
+
+\label{classuser__management_1_1_train_company_doc-constructors}
+\Hypertarget{classuser__management_1_1_train_company_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classuser__management_1_1_train_company_ae519ba25bce7757a5d27d87c9d699e81}\index{user\_management.TrainCompany@{user\_management.TrainCompany}!TrainCompany@{TrainCompany}}
+\index{TrainCompany@{TrainCompany}!user\_management.TrainCompany@{user\_management.TrainCompany}}
+\doxysubsubsection{\texorpdfstring{TrainCompany()}{TrainCompany()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_train_company_ae519ba25bce7757a5d27d87c9d699e81} 
+user\+\_\+management.\+Train\+Company.\+Train\+Company (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{email}{, }\item[{String}]{password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{classuser__management_1_1_train_company}{Train\+Company} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username of the train company \\
+\hline
+{\em email} & The email of the train company \\
+\hline
+{\em password} & The password of the train company \\
+\hline
+\end{DoxyParams}
+
+
+\label{classuser__management_1_1_train_company_doc-func-members}
+\Hypertarget{classuser__management_1_1_train_company_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classuser__management_1_1_train_company_a62e69af858f8a9b48a89629944b38363}\index{user\_management.TrainCompany@{user\_management.TrainCompany}!createServiceRequest@{createServiceRequest}}
+\index{createServiceRequest@{createServiceRequest}!user\_management.TrainCompany@{user\_management.TrainCompany}}
+\doxysubsubsection{\texorpdfstring{createServiceRequest()}{createServiceRequest()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_train_company_a62e69af858f8a9b48a89629944b38363} 
+void user\+\_\+management.\+Train\+Company.\+create\+Service\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new service request. 
+
+\Hypertarget{classuser__management_1_1_train_company_a093fa2ed831ef58e2d1325714dbdc9fc}\index{user\_management.TrainCompany@{user\_management.TrainCompany}!createServiceType@{createServiceType}}
+\index{createServiceType@{createServiceType}!user\_management.TrainCompany@{user\_management.TrainCompany}}
+\doxysubsubsection{\texorpdfstring{createServiceType()}{createServiceType()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_train_company_a093fa2ed831ef58e2d1325714dbdc9fc} 
+void user\+\_\+management.\+Train\+Company.\+create\+Service\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new service type. 
+
+\Hypertarget{classuser__management_1_1_train_company_a4be806906325eaddb82f45af5bc64d94}\index{user\_management.TrainCompany@{user\_management.TrainCompany}!createTrainType@{createTrainType}}
+\index{createTrainType@{createTrainType}!user\_management.TrainCompany@{user\_management.TrainCompany}}
+\doxysubsubsection{\texorpdfstring{createTrainType()}{createTrainType()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_train_company_a4be806906325eaddb82f45af5bc64d94} 
+void user\+\_\+management.\+Train\+Company.\+create\+Train\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new train type. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+user\+\_\+management/\+\doxymbox{\hyperlink{_train_company_8java}{Train\+Company.\+java}}\end{DoxyCompactItemize}

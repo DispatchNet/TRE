@@ -1,0 +1,75 @@
+\doxysection{Network Class Reference}
+\hypertarget{class_network}{}\label{class_network}\index{Network@{Network}}
+
+
+A Class representing the network. Provides an interface to add/\+remove elements from the network.  
+
+
+
+
+{\ttfamily \+\#include $<$infrastructure.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_network_ac786328302b8ea437c3c25ee89183d1d}{add\+Line}} (\doxymbox{\hyperlink{class_line}{Line}} line)
+\item 
+void \doxymbox{\hyperlink{class_network_a4fd51288aa75614593977ce8aab9100f}{remove\+Line}} (\doxymbox{\hyperlink{class_line}{Line}} \texorpdfstring{$\ast$}{*}line)
+\item 
+void \doxymbox{\hyperlink{class_network_ae1593ee525de162c4f6a120fa264f4b9}{add\+Junction}} (\doxymbox{\hyperlink{class_junction}{Junction}} junction)
+\item 
+void \doxymbox{\hyperlink{class_network_a512ea0d1fe05025f714b17d8c78c1e61}{remove\+Junction}} (\doxymbox{\hyperlink{class_junction}{Junction}} \texorpdfstring{$\ast$}{*}junction)
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_junction}{Junction}} $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_network_ade6392afac3a55b0f6dbd32e53066f83}{get\+Junctions}} ()
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_line}{Line}} $>$ \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_network_ab64882be0ed95513616e74f6b486cf34}{get\+Lines}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Class representing the network. Provides an interface to add/\+remove elements from the network. 
+
+\label{class_network_doc-func-members}
+\Hypertarget{class_network_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_network_ae1593ee525de162c4f6a120fa264f4b9}\index{Network@{Network}!addJunction@{addJunction}}
+\index{addJunction@{addJunction}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{addJunction()}{addJunction()}}
+{\footnotesize\ttfamily \label{class_network_ae1593ee525de162c4f6a120fa264f4b9} 
+void Network::\+add\+Junction (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_junction}{Junction}}}]{junction}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_network_ac786328302b8ea437c3c25ee89183d1d}\index{Network@{Network}!addLine@{addLine}}
+\index{addLine@{addLine}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{addLine()}{addLine()}}
+{\footnotesize\ttfamily \label{class_network_ac786328302b8ea437c3c25ee89183d1d} 
+void Network::\+add\+Line (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_line}{Line}}}]{line}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_network_ade6392afac3a55b0f6dbd32e53066f83}\index{Network@{Network}!getJunctions@{getJunctions}}
+\index{getJunctions@{getJunctions}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getJunctions()}{getJunctions()}}
+{\footnotesize\ttfamily \label{class_network_ade6392afac3a55b0f6dbd32e53066f83} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_junction}{Junction}} $>$ \texorpdfstring{$\ast$}{*} Network::\+get\+Junctions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_network_ab64882be0ed95513616e74f6b486cf34}\index{Network@{Network}!getLines@{getLines}}
+\index{getLines@{getLines}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getLines()}{getLines()}}
+{\footnotesize\ttfamily \label{class_network_ab64882be0ed95513616e74f6b486cf34} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_line}{Line}} $>$ \texorpdfstring{$\ast$}{*} Network::\+get\+Lines (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_network_a512ea0d1fe05025f714b17d8c78c1e61}\index{Network@{Network}!removeJunction@{removeJunction}}
+\index{removeJunction@{removeJunction}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{removeJunction()}{removeJunction()}}
+{\footnotesize\ttfamily \label{class_network_a512ea0d1fe05025f714b17d8c78c1e61} 
+void Network::\+remove\+Junction (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_junction}{Junction}} \texorpdfstring{$\ast$}{*}}]{junction}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_network_a4fd51288aa75614593977ce8aab9100f}\index{Network@{Network}!removeLine@{removeLine}}
+\index{removeLine@{removeLine}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{removeLine()}{removeLine()}}
+{\footnotesize\ttfamily \label{class_network_a4fd51288aa75614593977ce8aab9100f} 
+void Network::\+remove\+Line (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_line}{Line}} \texorpdfstring{$\ast$}{*}}]{line}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{infrastructure_8hpp}{infrastructure.\+hpp}}\end{DoxyCompactItemize}

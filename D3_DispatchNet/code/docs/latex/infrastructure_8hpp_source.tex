@@ -1,0 +1,59 @@
+\doxysection{infrastructure.\+hpp}
+\hypertarget{infrastructure_8hpp_source}{}\label{infrastructure_8hpp_source}\index{src/infrastructure.hpp@{src/infrastructure.hpp}}
+\doxymbox{\hyperlink{infrastructure_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <tuple>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{infrastructure_8hpp_a9bfa39c1d18047827253c3a7eb4bc9c1}{Meters}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{infrastructure_8hpp_ace50f1059979172691afcfdfc83b197d}{KilometersPerHour}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{infrastructure_8hpp_af20f019c5355dbb745d80739a88eab06}{TODOTYPE}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{infrastructure_8hpp_af20f019c5355dbb745d80739a88eab06}{TODOTYPE}}\ \doxymbox{\hyperlink{class_service_set}{ServiceSet}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_geo_coordinate}{GeoCoordinate}}\ \{}
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordtype}{float}\ latitude,\ longitude;}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_junction}{Junction}}\ \{}
+\DoxyCodeLine{00025\ \ \ \doxymbox{\hyperlink{class_geo_coordinate}{GeoCoordinate}}\ location;}
+\DoxyCodeLine{00026\ \ \ std::optional<StationData>\ stationData;}
+\DoxyCodeLine{00027\ \ \ std::string\ name;}
+\DoxyCodeLine{00028\ \ \ std::vector<Line*>\ connectedLines;}
+\DoxyCodeLine{00029\ \ \ std::vector<ServiceSet*>*\ services;}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_station_data}{StationData}}\ \{}
+\DoxyCodeLine{00037\ \ \ std::vector<std::string>\ platforms;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_line}{Line}}\ \{}
+\DoxyCodeLine{00044\ \ \ std::tuple<Junction*,Junction*>\ junctions;}
+\DoxyCodeLine{00045\ \ \ \doxymbox{\hyperlink{infrastructure_8hpp_a9bfa39c1d18047827253c3a7eb4bc9c1}{Meters}}\ length;}
+\DoxyCodeLine{00046\ \ \ \doxymbox{\hyperlink{infrastructure_8hpp_ace50f1059979172691afcfdfc83b197d}{KilometersPerHour}}\ maxSpeed;}
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{int}\ nTracks;}
+\DoxyCodeLine{00048\ \ \ }
+\DoxyCodeLine{00049\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ std::tuple<Junction*,Junction*>*\ \doxymbox{\hyperlink{class_line_afd58e7a89ee6daad6957520b51224f5f}{getJunctions}}();}
+\DoxyCodeLine{00051\ \ \ \doxymbox{\hyperlink{infrastructure_8hpp_a9bfa39c1d18047827253c3a7eb4bc9c1}{Meters}}\ \doxymbox{\hyperlink{class_line_ab4cf80381016388560d916cf80617600}{getLength}}();}
+\DoxyCodeLine{00052\ \ \ \doxymbox{\hyperlink{infrastructure_8hpp_ace50f1059979172691afcfdfc83b197d}{KilometersPerHour}}\ \doxymbox{\hyperlink{class_line_aa6134d491f8433ac4c496330cbd4b00a}{getMaxSpeed}}();}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_network}{Network}}\ \{}
+\DoxyCodeLine{00060\ \ \ std::vector<Junction>\ junctions;}
+\DoxyCodeLine{00061\ \ \ std::vector<Line>\ lines;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_network_ac786328302b8ea437c3c25ee89183d1d}{addLine}}(\doxymbox{\hyperlink{class_line}{Line}}\ line);}
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_network_a4fd51288aa75614593977ce8aab9100f}{removeLine}}(\doxymbox{\hyperlink{class_line}{Line}}\ *line);}
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_network_ae1593ee525de162c4f6a120fa264f4b9}{addJunction}}(\doxymbox{\hyperlink{class_junction}{Junction}}\ junction);}
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_network_a512ea0d1fe05025f714b17d8c78c1e61}{removeJunction}}(\doxymbox{\hyperlink{class_junction}{Junction}}*\ junction);}
+\DoxyCodeLine{00068\ \ \ std::vector<Junction>*\ \doxymbox{\hyperlink{class_network_ade6392afac3a55b0f6dbd32e53066f83}{getJunctions}}();}
+\DoxyCodeLine{00069\ \ \ std::vector<Line>*\ \doxymbox{\hyperlink{class_network_ab64882be0ed95513616e74f6b486cf34}{getLines}}();}
+\DoxyCodeLine{00070\ \};}
+
+\end{DoxyCode}

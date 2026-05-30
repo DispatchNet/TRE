@@ -1,0 +1,61 @@
+\doxysection{src/\+infrastructure.hpp File Reference}
+\hypertarget{infrastructure_8hpp}{}\label{infrastructure_8hpp}\index{src/infrastructure.hpp@{src/infrastructure.hpp}}
+{\ttfamily \+\#include $<$optional$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$set$>$}\newline
+{\ttfamily \+\#include $<$memory$>$}\newline
+{\ttfamily \+\#include $<$tuple$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_geo_coordinate}{Geo\+Coordinate}}
+\begin{DoxyCompactList}\small\item\em A Class representing a GPS coordinate. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_junction}{Junction}}
+\begin{DoxyCompactList}\small\item\em A Class representing a junction\textquotesingle{}s data. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_station_data}{Station\+Data}}
+\begin{DoxyCompactList}\small\item\em A Class containing a station\textquotesingle{}s data. Used by \doxylink{class_junction}{Junction}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_line}{Line}}
+\begin{DoxyCompactList}\small\item\em A Class representing a line between 2 \doxylink{class_junction}{Junction} elements. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_network}{Network}}
+\begin{DoxyCompactList}\small\item\em A Class representing the network. Provides an interface to add/\+remove elements from the network. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \doxymbox{\hyperlink{infrastructure_8hpp_a9bfa39c1d18047827253c3a7eb4bc9c1}{Meters}}
+\item 
+typedef int \doxymbox{\hyperlink{infrastructure_8hpp_ace50f1059979172691afcfdfc83b197d}{Kilometers\+Per\+Hour}}
+\item 
+typedef void \doxymbox{\hyperlink{infrastructure_8hpp_af20f019c5355dbb745d80739a88eab06}{TODOTYPE}}
+\item 
+typedef \doxymbox{\hyperlink{infrastructure_8hpp_af20f019c5355dbb745d80739a88eab06}{TODOTYPE}} \doxymbox{\hyperlink{infrastructure_8hpp_a325eb69d0cb7c1dfc68d943ea54b543d}{Service\+Set}}
+\end{DoxyCompactItemize}
+
+
+\label{infrastructure_8hpp_doc-typedef-members}
+\Hypertarget{infrastructure_8hpp_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{infrastructure_8hpp_ace50f1059979172691afcfdfc83b197d}\index{infrastructure.hpp@{infrastructure.hpp}!KilometersPerHour@{KilometersPerHour}}
+\index{KilometersPerHour@{KilometersPerHour}!infrastructure.hpp@{infrastructure.hpp}}
+\doxysubsubsection{\texorpdfstring{KilometersPerHour}{KilometersPerHour}}
+{\footnotesize\ttfamily \label{infrastructure_8hpp_ace50f1059979172691afcfdfc83b197d} 
+typedef int \doxymbox{\hyperlink{infrastructure_8hpp_ace50f1059979172691afcfdfc83b197d}{Kilometers\+Per\+Hour}}}
+
+\Hypertarget{infrastructure_8hpp_a9bfa39c1d18047827253c3a7eb4bc9c1}\index{infrastructure.hpp@{infrastructure.hpp}!Meters@{Meters}}
+\index{Meters@{Meters}!infrastructure.hpp@{infrastructure.hpp}}
+\doxysubsubsection{\texorpdfstring{Meters}{Meters}}
+{\footnotesize\ttfamily \label{infrastructure_8hpp_a9bfa39c1d18047827253c3a7eb4bc9c1} 
+typedef int \doxymbox{\hyperlink{infrastructure_8hpp_a9bfa39c1d18047827253c3a7eb4bc9c1}{Meters}}}
+
+\Hypertarget{infrastructure_8hpp_a325eb69d0cb7c1dfc68d943ea54b543d}\index{infrastructure.hpp@{infrastructure.hpp}!ServiceSet@{ServiceSet}}
+\index{ServiceSet@{ServiceSet}!infrastructure.hpp@{infrastructure.hpp}}
+\doxysubsubsection{\texorpdfstring{ServiceSet}{ServiceSet}}
+{\footnotesize\ttfamily \label{infrastructure_8hpp_a325eb69d0cb7c1dfc68d943ea54b543d} 
+typedef \doxymbox{\hyperlink{infrastructure_8hpp_af20f019c5355dbb745d80739a88eab06}{TODOTYPE}} Service\+Set}
+
+\Hypertarget{infrastructure_8hpp_af20f019c5355dbb745d80739a88eab06}\index{infrastructure.hpp@{infrastructure.hpp}!TODOTYPE@{TODOTYPE}}
+\index{TODOTYPE@{TODOTYPE}!infrastructure.hpp@{infrastructure.hpp}}
+\doxysubsubsection{\texorpdfstring{TODOTYPE}{TODOTYPE}}
+{\footnotesize\ttfamily \label{infrastructure_8hpp_af20f019c5355dbb745d80739a88eab06} 
+typedef void \doxymbox{\hyperlink{infrastructure_8hpp_af20f019c5355dbb745d80739a88eab06}{TODOTYPE}}}
+
