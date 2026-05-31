@@ -1,7 +1,8 @@
 package mail_service;
 
 /**
- * Mock implementation of MailService.
+ * @class MockMailService
+ * @brief Mock implementation of MailService.
  * Simulates sending emails without actually sending them.
  * Used for testing and development purposes.
  */

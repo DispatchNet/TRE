@@ -1,5 +1,6 @@
 package infrastructure;
 /**
+ * @class Line
  * @brief A Class representing a line between 2 Junction elements.
  */
 public class Line {
@@ -10,7 +11,7 @@ public class Line {
   int nTracks;
   
   /**
-   * Constructs a Line
+   * @brief Constructs a Line
    * @param j1 A Junction in the network
    * @param j2 A Junction in the network
    * @param lengthMeters The length of this line in meters
@@ -35,7 +36,7 @@ public class Line {
   }
 
   /**
-   * Gets one of the junctions this line ends at.
+   * @brief Gets one of the junctions this line ends at.
    * @return the junction
    */
   public Junction getJunction1() {
@@ -43,7 +44,7 @@ public class Line {
   }
   
   /**
-   * Gets one of the junctions this line ends at.
+   * @brief Gets one of the junctions this line ends at.
    * @return the junction
    */
   public Junction getJunction2() {
@@ -51,7 +52,7 @@ public class Line {
   }
   
   /**
-   * Gets one of the length of this line in meters.
+   * @brief Gets one of the length of this line in meters.
    * @return the length
    */
   public int getLengthMeters() {
@@ -59,7 +60,7 @@ public class Line {
   }
   
   /**
-   * Gets the max speed in kilometers per hour
+   * @brief Gets the max speed in kilometers per hour
    * @return The maximum speed
    */
   public int getMaxSpeedKpH() {
@@ -67,7 +68,7 @@ public class Line {
   }
   
   /**
-   * Gets the number of tracks of this line
+   * @brief Gets the number of tracks of this line
    * @return the number of tracks
    */
   public int getnTracks() {
@@ -75,27 +76,27 @@ public class Line {
   }
 
   /**
-   * Replaces junction1 of this Line.
+   * @brief Replaces junction1 of this Line.
    * @param junction the new junction.
    * @implNote also removes this line from the junction's adjacencies.
    */
   public void setJunction1(Junction junction) {
     this.junction1.connectedLines.remove(this);
-    this.junction1 = junction;
+    this.junction1 = junction; // TODO: add this line to the new junction's adjacencies?
   }
   
   /**
-   * Replaces junction2 of this Line.
+   * @brief Replaces junction2 of this Line.
    * @param junction the new junction.
    * @implNote also removes this line from the junction's adjacencies.
    */
   public void setJunction2(Junction junction) {
-    this.junction1.connectedLines.remove(this);
-    this.junction2 = junction;
+    this.junction1.connectedLines.remove(this); // TODO: this should be junction2
+    this.junction2 = junction; // TODO: add this line to the new junction's adjacencies?
   }
 
   /**
-   * Sets the length of this Line.
+   * @brief Sets the length of this Line.
    * @param lengthMeters the length.
    */
   public void setLengthMeters(int lengthMeters) {
@@ -103,7 +104,7 @@ public class Line {
   }
 
   /**
-   * Sets the max speed of this line in km/h.
+   * @brief Sets the max speed of this line in km/h.
    * @param maxSpeedKpH the maximum speed.
    */
   public void setMaxSpeedKpH(int maxSpeedKpH) {
@@ -111,7 +112,7 @@ public class Line {
   }
 
   /**
-   * Sets the number of tracks of this line.
+   * @brief Sets the number of tracks of this line.
    * @param nTracks the number of tracks of this line.
    */
   public void setnTracks(int nTracks) {

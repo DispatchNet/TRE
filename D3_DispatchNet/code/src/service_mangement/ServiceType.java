@@ -1,6 +1,7 @@
 package service_mangement;
 
 /**
+ * @class ServiceType
  * @brief A Class defining a ServiceType
  * 
  */

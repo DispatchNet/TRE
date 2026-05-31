@@ -1,6 +1,7 @@
 package user_management;
 
 /**
+* @class NetworkManager 
 * @brief Class representing a network manager, a type of authenticated user who 
 * can manage the network and review service requests.
 */

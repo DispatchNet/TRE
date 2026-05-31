@@ -3,6 +3,7 @@ package user_management;
 import java.util.Objects;
 
 /**
+ * @class AuthenticatedUser
 * @brief Abstract class representing an authenticated user in the system,
 * containing their credentials and user type.
 */

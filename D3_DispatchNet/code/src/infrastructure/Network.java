@@ -4,6 +4,7 @@ import java.util.List;
 import service_mangement.ServiceSet;
 
 /**
+ * @class Network
  * @brief A Class representing the network.
  * Provides an interface to add/remove elements from the network
  */
@@ -12,12 +13,16 @@ public class Network {
   List<Line> lines;
   List<ServiceSet> services;
 
+  /**
+   * @brief Adds a Junction to the network
+   * @param junction The junction to add
+   */
   public void addJunction(Junction junction) {
     this.junctions.add(junction);
   }
 
   /**
-   * Adds a Line to the network and updates relevant adjacencies
+   * @brief Adds a Line to the network and updates relevant adjacencies
    * @param j1 A Junction in the network
    * @param j2 A Junction in the network
    * @param lengthMeters The length of this line in meters

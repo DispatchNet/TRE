@@ -1,7 +1,8 @@
 package mail_service;
 
 /**
- * Represents an email message.
+ * @class Email
+ * @brief Class representing an email message.
  */
 public class Email {
     private String recipient;

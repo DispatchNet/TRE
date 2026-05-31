@@ -1,6 +1,7 @@
 package user_management;
 
 /**
+* @class EndUser
 * @brief Abstract class representing an end user, a type of authenticated user 
 * who can view and manage their own data.
 */

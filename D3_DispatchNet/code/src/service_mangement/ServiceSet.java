@@ -4,7 +4,8 @@ import java.util.List;
 import user_management.TrainCompany;
 
 /**
- * A Class defining a ServiceSet
+ * @class ServiceSet
+ * @brief A Class defining a ServiceSet
  * @see ServiceStep
  * @see Dispatch
  */

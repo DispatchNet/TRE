@@ -1,7 +1,8 @@
 package mail_service;
 
 /**
- * Interface for mail service operations.
+ * @interface MailService
+ * @brief Interface for mail service operations.
  * Defines the contract for sending emails.
  */
 public interface MailService {

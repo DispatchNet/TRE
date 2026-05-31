@@ -10,6 +10,7 @@ import java.util.List;
 
 
 /**
+ * @class Passenger
  * @brief Class representing a passenger, a type of end user who can 
  * additionally purchase and manage tickets.
  */

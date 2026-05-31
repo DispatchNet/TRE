@@ -1,6 +1,7 @@
 package user_management;
 
 /**
+ * @enum UserType
  * @brief Enum representing the different types of users in the system.
  */
 public enum UserType {

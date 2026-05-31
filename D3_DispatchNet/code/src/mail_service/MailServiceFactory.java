@@ -1,7 +1,8 @@
 package mail_service;
 
 /**
- * Factory class for creating mail service instances.
+ * @class MailServiceFactory
+ * @brief Factory class for creating mail service instances.
  */
 public class MailServiceFactory {
     private static MailService instance;

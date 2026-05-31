@@ -1,6 +1,7 @@
 package service_mangement;
 
 /**
+ * @class TrainType
  * @brief A Class defining a TrainType 
  */
 public class TrainType {

@@ -3,6 +3,7 @@ package user_management;
 import mail_service.Email;
 
 /**
+ * @class AnonymousUser
  * @brief Class representing an anonymous user, who can only view the map and
  * search for stations and trains.
  */
