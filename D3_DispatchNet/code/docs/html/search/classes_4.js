@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['junction_0',['Junction',['../class_junction.html',1,'']]]
+  ['junction_0',['Junction',['../classinfrastructure_1_1_junction.html',1,'infrastructure']]]
 ];

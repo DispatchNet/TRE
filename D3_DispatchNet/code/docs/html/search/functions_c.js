@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['register_0',['register',['../classuser__management_1_1_anonymous_user.html#a46c7e5d4eba6f36973eb1f30640f2027',1,'user_management::AnonymousUser']]],
-  ['removeanonymoususer_1',['removeAnonymousUser',['../classuser__management_1_1_user_management.html#a2339b13e53d56f9e1542af62d42c7c17',1,'user_management::UserManagement']]],
-  ['removeauthenticateduser_2',['removeAuthenticatedUser',['../classuser__management_1_1_user_management.html#a52964c827c1c2ead1bdcc8c5897cdeb8',1,'user_management::UserManagement']]],
-  ['removejunction_3',['removeJunction',['../class_network.html#a512ea0d1fe05025f714b17d8c78c1e61',1,'Network']]],
-  ['removeline_4',['removeLine',['../class_network.html#a4fd51288aa75614593977ce8aab9100f',1,'Network']]],
-  ['reset_5',['reset',['../classmail__service_1_1_mail_service_factory.html#ace74a142b4b20dd47a39a356bbca8731',1,'mail_service::MailServiceFactory']]],
-  ['resetpassword_6',['resetPassword',['../classuser__management_1_1_anonymous_user.html#a32b181b2695c9d859521c97f7f0a4cde',1,'user_management::AnonymousUser']]],
-  ['reviewservicerequest_7',['reviewServiceRequest',['../classuser__management_1_1_network_manager.html#a0805b2c854567e57e1b261f7c459d0bd',1,'user_management::NetworkManager']]]
+  ['passenger_0',['Passenger',['../classuser__management_1_1_passenger.html#a57540c84d1e854d8d4a3f3614fe49473',1,'user_management::Passenger']]],
+  ['purchaseticket_1',['purchaseTicket',['../classuser__management_1_1_passenger.html#a52a6aa38e6ec9de0be15ffb86ced2202',1,'user_management::Passenger']]],
+  ['purchaseticketgroup_2',['purchaseTicketGroup',['../classuser__management_1_1_passenger.html#ae7e647b76b375d3a9fb0af5fb58bfd74',1,'user_management::Passenger']]]
 ];

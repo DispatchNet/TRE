@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['passenger_0',['Passenger',['../classuser__management_1_1_passenger.html',1,'user_management.Passenger'],['../enumuser__management_1_1_user_type.html#adbd9cf58e47844d93016950619461ca9',1,'user_management.UserType.Passenger'],['../classuser__management_1_1_passenger.html#a57540c84d1e854d8d4a3f3614fe49473',1,'user_management.Passenger.Passenger()']]],
-  ['passenger_2ejava_1',['Passenger.java',['../_passenger_8java.html',1,'']]],
-  ['path_5ffinding_2ejava_2',['Path_Finding.java',['../_path___finding_8java.html',1,'']]],
-  ['pendingapproval_3',['PendingApproval',['../service_8hpp.html#adf86442aa7723857e0e1d501a2b0870ea98282ee85199e49cf9489c8e56fc8d0d',1,'service.hpp']]],
-  ['purchaseticket_4',['purchaseTicket',['../classuser__management_1_1_passenger.html#a52a6aa38e6ec9de0be15ffb86ced2202',1,'user_management::Passenger']]],
-  ['purchaseticketgroup_5',['purchaseTicketGroup',['../classuser__management_1_1_passenger.html#ae7e647b76b375d3a9fb0af5fb58bfd74',1,'user_management::Passenger']]]
+  ['register_0',['register',['../classuser__management_1_1_anonymous_user.html#a46c7e5d4eba6f36973eb1f30640f2027',1,'user_management::AnonymousUser']]],
+  ['removeanonymoususer_1',['removeAnonymousUser',['../classuser__management_1_1_user_management.html#a2339b13e53d56f9e1542af62d42c7c17',1,'user_management::UserManagement']]],
+  ['removeauthenticateduser_2',['removeAuthenticatedUser',['../classuser__management_1_1_user_management.html#a52964c827c1c2ead1bdcc8c5897cdeb8',1,'user_management::UserManagement']]],
+  ['reset_3',['reset',['../classmail__service_1_1_mail_service_factory.html#ace74a142b4b20dd47a39a356bbca8731',1,'mail_service::MailServiceFactory']]],
+  ['resetpassword_4',['resetPassword',['../classuser__management_1_1_anonymous_user.html#a32b181b2695c9d859521c97f7f0a4cde',1,'user_management::AnonymousUser']]],
+  ['reviewservicerequest_5',['reviewServiceRequest',['../classuser__management_1_1_network_manager.html#a0805b2c854567e57e1b261f7c459d0bd',1,'user_management::NetworkManager']]]
 ];

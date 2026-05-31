@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../classuser__management_1_1_main.html#a00a0f72a0f3b7978d3e7119daea41e0e',1,'user_management.Main.main()'],['../classuser__management_1_1_user_management.html#afb2e961f50194f840c383624fa2eb76c',1,'user_management.UserManagement.main()']]]
+  ['login_0',['login',['../classuser__management_1_1_anonymous_user.html#afc3e484831a7ea2d9a0308b2131bfe9e',1,'user_management::AnonymousUser']]],
+  ['logout_1',['logout',['../classuser__management_1_1_authenticated_user.html#aabfe36234df0d8a7266b9cd3f95e06bd',1,'user_management::AuthenticatedUser']]]
 ];

@@ -30,33 +30,104 @@ public class AnonymousUser {
     }
 
     /**
+     * @brief Displays an error message
+     * @param message The error message to display
+     */
+    private void displayError(String message) {
+        System.out.println("Error: " + message);
+    }
+
+    /**
+     * @brief Prompts the user for input
+     * @param message The message to display
+     * @return The user's input
+     */
+    private String prompt(String message) {
+        System.out.println(message);
+        return System.console().readLine();
+    }
+
+    /**
+     * @brief Prompts the user for a password
+     * @param message The message to display
+     * @return The user's password
+     * 
+     * @throws java.io.IOException if an I/O error occurs while reading input
+     */
+    private String promptPassword(String message) {
+        java.io.Console console = System.console();
+        // use console to read password without echoing if available,
+        // otherwise fall back to regular input
+        if (console != null) {
+            return new String(console.readPassword(message));
+        }
+
+        System.out.println(message);
+        // fallback to regular input if console is not available (e.g. in IDEs)
+        try {
+            return new java.io.BufferedReader(
+                // wrap System.in in a BufferedReader to read a line of input
+                new java.io.InputStreamReader(System.in)
+            ).readLine();
+        } catch (java.io.IOException e) {
+            return "";
+        }
+    }
+
+    /**
      * @brief Register a new user account from the anonymous user state.
      */
-    public void register() { // TODO: add errors display
+    public void register() {
         String username, email, password1, password2;
 
         // ask username until username is unique
+        boolean usernameUnique;
         do {
-            System.out.println("Enter username:");
-            username = System.console().readLine();
-        } while (!userManagement.checkUsernameUniqueness(username));
+            username = prompt("Enter username:");
+            usernameUnique = userManagement.checkUsernameUniqueness(username);
+            if (!usernameUnique) {
+                displayError(
+                    "That username is already taken. " + 
+                    "Please choose a different username."
+                );
+            }
+        } while (!usernameUnique);
 
         // ask email until email is unique
+        boolean emailUnique;
         do {
-            System.out.println("Enter email:");
-            email = System.console().readLine();
-        } while (!userManagement.checkEmailUniqueness(email));
+            email = prompt("Enter email:");
+            emailUnique = userManagement.checkEmailUniqueness(email);
+            if (!emailUnique) {
+                displayError(
+                    "That email is already registered. " + 
+                    "Please use a different email address."
+                );
+            }
+        } while (!emailUnique);
 
         // ask password until password is confirmed and meets security requirements
-        do {
-            System.out.println("Enter password:");
-            password1 = System.console().readLine();
-            System.out.println("Confirm password:");
-            password2 = System.console().readLine();
-        } while (
-            !password1.equals(password2) && 
-            !userManagement.checkPasswordSecurity(password1)
-        );
+        while (true) {
+            password1 = promptPassword("Enter password:");
+            password2 = promptPassword("Confirm password:");
+
+            if (!password1.equals(password2)) {
+                displayError(
+                    "Passwords do not match. Please try again."
+                );
+                continue;
+            }
+
+            if (!userManagement.checkPasswordSecurity(password1)) {
+                displayError(
+                    "Password does not meet security requirements." + 
+                    " Please choose a stronger password."
+                );
+                continue;
+            }
+
+            break;
+        }
 
         // create new user account and add it to the system
         Passenger newUser = new Passenger(username, email, password1);
@@ -78,14 +149,21 @@ public class AnonymousUser {
     /**
      * @brief Reset the password of a user from the anonymous user state.
      */
-    public void resetPassword() { // TODO: add errors display
+    public void resetPassword() {
         String email;
 
         // ask email until email is associated with an existing user account
+        boolean emailExists;
         do {
-            System.out.println("Enter email:");
-            email = System.console().readLine();
-        } while (!userManagement.checkEmailExistence(email));
+            email = prompt("Enter email:");
+            emailExists = userManagement.checkEmailExistence(email);
+            if (!emailExists) {
+                displayError(
+                    "No account exists for that email. " + 
+                    "Please enter a valid registered email."
+                );
+            }
+        } while (!emailExists);
 
         // create random OTP
         String otp = String.valueOf((int)(Math.random() * 1000000));
@@ -105,22 +183,38 @@ public class AnonymousUser {
         String enteredOtp;
 
         do {
-            System.out.println("Enter OTP sent to your email:");
-            enteredOtp = System.console().readLine();
+            enteredOtp = prompt("Enter OTP sent to your email:");
+            if (!enteredOtp.equals(otp)) {
+                displayError(
+                    "Invalid OTP. Please check your email and try again."
+                );
+            }
         } while (!enteredOtp.equals(otp));
 
         // ask new password until password is confirmed and meets security requirements
         String password1, password2;
 
-        do {
-            System.out.println("Enter new password:");
-            password1 = System.console().readLine();
-            System.out.println("Confirm new password:");
-            password2 = System.console().readLine();
-        } while (
-            !password1.equals(password2) && 
-            !userManagement.checkPasswordSecurity(password1)
-        );
+        while (true) {
+            password1 = promptPassword("Enter new password:");
+            password2 = promptPassword("Confirm new password:");
+
+            if (!password1.equals(password2)) {
+                displayError(
+                    "Passwords do not match. Please try again."
+                );
+                continue;
+            }
+
+            if (!userManagement.checkPasswordSecurity(password1)) {
+                displayError(
+                    "Password does not meet security requirements." + 
+                    " Please choose a stronger password."
+                );
+                continue;
+            }
+
+            break;
+        }
 
         // update the user's password in the system
         AuthenticatedUser user = userManagement.getAuthenticatedUserByEmail(email);
@@ -146,17 +240,22 @@ public class AnonymousUser {
     /**
      * @brief Log the anonymous user into the authenticated state.
      */
-    public void login() { // TODO: add errors display
+    public void login() {
         String username, password;
+        boolean authenticated;
 
         // ask username and password until they match an existing user account
         do {
-            System.out.println("Enter username:");
-            username = System.console().readLine();
-            
-            System.out.println("Enter password:");
-            password = System.console().readLine();
-        } while (!userManagement.authenticateUser(username, password));
+            username = prompt("Enter username:");
+            password = promptPassword("Enter password:");
+
+            authenticated = userManagement.authenticateUser(username, password);
+            if (!authenticated) {
+                displayError(
+                    "Invalid username or password. Please try again."
+                );
+            }
+        } while (!authenticated);
 
         // remove the anonymous user from the system
         userManagement.removeAnonymousUser(this);

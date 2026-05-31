@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "TRE", "index.html", [
-    [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -40,12 +39,7 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Typedefs", "globals_type.html", null ],
-        [ "Enumerations", "globals_enum.html", null ]
-      ] ]
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
@@ -53,7 +47,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_anonymous_user_8java.html",
-"service_8hpp.html#adf86442aa7723857e0e1d501a2b0870e"
+"classuser__management_1_1_user_management.html#ae7334f03c708cd1630fcc73093cc4432"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

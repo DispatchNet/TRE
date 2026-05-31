@@ -1,0 +1,65 @@
+\doxysection{infrastructure.\+Network Class Reference}
+\hypertarget{classinfrastructure_1_1_network}{}\label{classinfrastructure_1_1_network}\index{infrastructure.Network@{infrastructure.Network}}
+
+
+A Class representing the network. Provides an interface to add/\+remove elements from the network.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{classinfrastructure_1_1_network_a32220cc34d0ec586b6b4e192623ed460}{add\+Junction}} (Junction junction)
+\begin{DoxyCompactList}\small\item\em Adds a \doxylink{classinfrastructure_1_1_junction}{Junction} to the network. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classinfrastructure_1_1_network_ab7585378e8b44ba9ddd55647ed84784a}{add\+Line}} (Junction j1, Junction j2, int length\+Meters, int max\+Speed\+KpH, int n\+Tracks)
+\begin{DoxyCompactList}\small\item\em Adds a \doxylink{classinfrastructure_1_1_line}{Line} to the network and updates relevant adjacencies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Class representing the network. Provides an interface to add/\+remove elements from the network. 
+
+\label{classinfrastructure_1_1_network_doc-func-members}
+\Hypertarget{classinfrastructure_1_1_network_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classinfrastructure_1_1_network_a32220cc34d0ec586b6b4e192623ed460}\index{infrastructure.Network@{infrastructure.Network}!addJunction@{addJunction}}
+\index{addJunction@{addJunction}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{addJunction()}{addJunction()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_network_a32220cc34d0ec586b6b4e192623ed460} 
+void infrastructure.\+Network.\+add\+Junction (\begin{DoxyParamCaption}\item[{Junction}]{junction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a \doxylink{classinfrastructure_1_1_junction}{Junction} to the network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em junction} & The junction to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classinfrastructure_1_1_network_ab7585378e8b44ba9ddd55647ed84784a}\index{infrastructure.Network@{infrastructure.Network}!addLine@{addLine}}
+\index{addLine@{addLine}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{addLine()}{addLine()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_network_ab7585378e8b44ba9ddd55647ed84784a} 
+void infrastructure.\+Network.\+add\+Line (\begin{DoxyParamCaption}\item[{Junction}]{j1}{, }\item[{Junction}]{j2}{, }\item[{int}]{length\+Meters}{, }\item[{int}]{max\+Speed\+KpH}{, }\item[{int}]{n\+Tracks}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a \doxylink{classinfrastructure_1_1_line}{Line} to the network and updates relevant adjacencies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j1} & A \doxylink{classinfrastructure_1_1_junction}{Junction} in the network \\
+\hline
+{\em j2} & A \doxylink{classinfrastructure_1_1_junction}{Junction} in the network \\
+\hline
+{\em length\+Meters} & The length of this line in meters \\
+\hline
+{\em max\+Speed\+KpH} & The max speed of this line in Kilometers per hour \\
+\hline
+{\em n\+Tracks} & The number of tracks this line has \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+infrastructure/\+\doxymbox{\hyperlink{_network_8java}{Network.\+java}}\end{DoxyCompactItemize}

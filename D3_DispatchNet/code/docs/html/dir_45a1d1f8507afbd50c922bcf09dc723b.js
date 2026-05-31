@@ -3,7 +3,6 @@ var dir_45a1d1f8507afbd50c922bcf09dc723b =
     [ "AnonymousUser.java", "_anonymous_user_8java.html", "_anonymous_user_8java" ],
     [ "AuthenticatedUser.java", "_authenticated_user_8java.html", "_authenticated_user_8java" ],
     [ "EndUser.java", "_end_user_8java.html", "_end_user_8java" ],
-    [ "Main.java", "_main_8java.html", "_main_8java" ],
     [ "NetworkManager.java", "_network_manager_8java.html", "_network_manager_8java" ],
     [ "Passenger.java", "_passenger_8java.html", "_passenger_8java" ],
     [ "TrainCompany.java", "_train_company_8java.html", "_train_company_8java" ],

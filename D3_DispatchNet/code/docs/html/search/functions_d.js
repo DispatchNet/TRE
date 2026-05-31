@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['searchstationtrain_0',['searchStationTrain',['../classuser__management_1_1_passenger.html#afbd34a0e3cc4edc4da584366e73d600c',1,'user_management::Passenger']]],
-  ['sendemail_1',['sendEmail',['../interfacemail__service_1_1_mail_service.html#acec8ccf695f27a0481c88b96feed5024',1,'mail_service.MailService.sendEmail(Email email)'],['../interfacemail__service_1_1_mail_service.html#af0f392720376e90c5201dfeb2dffa09a',1,'mail_service.MailService.sendEmail(String recipient, String subject, String body)'],['../classmail__service_1_1_mock_mail_service.html#a5bc0be1fd1a61c90363f55838949b701',1,'mail_service.MockMailService.sendEmail(Email email)'],['../classmail__service_1_1_mock_mail_service.html#a53c1db5b6399a019f76e79a99e87d28e',1,'mail_service.MockMailService.sendEmail(String recipient, String subject, String body)'],['../classuser__management_1_1_user_management.html#a7f16a4696e991edf2fec02ce16e7b763',1,'user_management.UserManagement.sendEmail()']]],
-  ['setemail_2',['setEmail',['../classuser__management_1_1_authenticated_user.html#a77ee15db77877404946251dbae09d425',1,'user_management::AuthenticatedUser']]],
-  ['setmailservice_3',['setMailService',['../classmail__service_1_1_mail_service_factory.html#acce0b8c946c3aa09434df79947ba24d5',1,'mail_service::MailServiceFactory']]],
-  ['setpassword_4',['setPassword',['../classuser__management_1_1_authenticated_user.html#a0d8244c10559ebbec311fabd0c41ddc1',1,'user_management::AuthenticatedUser']]],
-  ['setusername_5',['setUsername',['../classuser__management_1_1_authenticated_user.html#a1028a84dece25ca9179a00503f3fa44b',1,'user_management::AuthenticatedUser']]]
+  ['register_0',['register',['../classuser__management_1_1_anonymous_user.html#a46c7e5d4eba6f36973eb1f30640f2027',1,'user_management::AnonymousUser']]],
+  ['removeanonymoususer_1',['removeAnonymousUser',['../classuser__management_1_1_user_management.html#a2339b13e53d56f9e1542af62d42c7c17',1,'user_management::UserManagement']]],
+  ['removeauthenticateduser_2',['removeAuthenticatedUser',['../classuser__management_1_1_user_management.html#a52964c827c1c2ead1bdcc8c5897cdeb8',1,'user_management::UserManagement']]],
+  ['reset_3',['reset',['../classmail__service_1_1_mail_service_factory.html#ace74a142b4b20dd47a39a356bbca8731',1,'mail_service::MailServiceFactory']]],
+  ['resetpassword_4',['resetPassword',['../classuser__management_1_1_anonymous_user.html#a32b181b2695c9d859521c97f7f0a4cde',1,'user_management::AnonymousUser']]],
+  ['reviewservicerequest_5',['reviewServiceRequest',['../classuser__management_1_1_network_manager.html#a0805b2c854567e57e1b261f7c459d0bd',1,'user_management::NetworkManager']]]
 ];

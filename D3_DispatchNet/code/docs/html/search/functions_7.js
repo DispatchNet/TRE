@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ispassenger_0',['isPassenger',['../class_train_type.html#a9395d1a1383d36bf1909426d9dc0484f',1,'TrainType']]]
+  ['isstation_0',['isStation',['../classinfrastructure_1_1_junction.html#ae6c05d878229f56a5619c2e7f9d93f53',1,'infrastructure::Junction']]]
 ];
