@@ -6,6 +6,7 @@ import java.util.List;
 import mail_service.Email;
 import mail_service.MailService;
 import mail_service.MailServiceFactory;
+import IO_operations.IO;
 
 /**
  * @class UserManagement
@@ -13,12 +14,16 @@ import mail_service.MailServiceFactory;
  * interact with this class to manage user sessions and data.
  */
 public class UserManagement {
-    // List of overall authenticated users in the system
-    private final static List<AuthenticatedUser> authenticatedUsers = new ArrayList<>();
+    // List of registered authenticated users in the system
+    private final static List<AuthenticatedUser> registeredUsers = new ArrayList<>();
+    // List of logged in authenticated users in the system
+    private final static List<AuthenticatedUser> loggedUsers = new ArrayList<>();
     // List of current anonymous users in the system
     private final static List<AnonymousUser> anonymousUsers = new ArrayList<>();
     // Mail service instance for sending emails
     private final static MailService mailService = MailServiceFactory.getMailService();
+    // IO instance for user input and output
+    private final static IO io = new IO();
 
     /**
      * @brief Constructor for UserManagement class
@@ -27,11 +32,19 @@ public class UserManagement {
     }
 
     /**
-     * @brief Gets the list of authenticated users
-     * @return A list of authenticated users
+     * @brief Gets the list of registered users
+     * @return A list of registered authenticated users
      */
-    public List<AuthenticatedUser> getAuthenticatedUsers() {
-        return new ArrayList<>(authenticatedUsers);
+    public List<AuthenticatedUser> getRegisteredUsers() {
+        return new ArrayList<>(registeredUsers);
+    }
+
+    /**
+     * @brief Gets the list of logged-in users
+     * @return A list of logged-in authenticated users
+     */
+    public List<AuthenticatedUser> getLoggedUsers() {
+        return new ArrayList<>(loggedUsers);
     }
 
     /**
@@ -43,15 +56,24 @@ public class UserManagement {
     }
 
     /**
-     * @brief Adds an authenticated user to the system
+     * @brief Adds a registered authenticated user to the system
      * @param user The authenticated user to add
      */
-    public void addAuthenticatedUser(AuthenticatedUser user) {
-        authenticatedUsers.add(user);
+    public void addRegisteredUser(AuthenticatedUser user) {
+        registeredUsers.add(user);
+    }
+
+    /**
+     * @brief Adds a logged-in authenticated user to the system
+     * @param user The authenticated user to add
+     */
+    public void addLoggedUser(AuthenticatedUser user) {
+        loggedUsers.add(user);
     }
 
     /**
      * @brief Adds an anonymous user to the system
+     * @param user The anonymous user to add
      */
     public void addAnonymousUser(AnonymousUser user) {
         anonymousUsers.add(user);
@@ -61,8 +83,16 @@ public class UserManagement {
      * @brief Removes an authenticated user from the system
      * @param user The authenticated user to remove
      */
-    public void removeAuthenticatedUser(AuthenticatedUser user) {
-        authenticatedUsers.remove(user);
+    public void removeRegisteredUser(AuthenticatedUser user) {
+        registeredUsers.remove(user);
+    }
+
+    /**
+     * @brief Removes a logged-in authenticated user from the system
+     * @param user The authenticated user to remove
+     */
+    public void removeLoggedUser(AuthenticatedUser user) {
+        loggedUsers.remove(user);
     }
 
     /**
@@ -83,13 +113,39 @@ public class UserManagement {
     }
 
     /**
+     * @brief Displays an error message
+     * @param message The error message to display
+     */
+    public void displayError(String message) {
+        io.displayError(message);
+    }
+
+    /**
+     * @brief Prompts the user for input
+     * @param message The message to display
+     * @return The user's input
+     */
+    public String prompt(String message) {
+        return io.prompt(message);
+    }
+
+    /**
+     * @brief Prompts the user for a password
+     * @param message The message to display
+     * @return The user's input
+     */
+    public String promptPassword(String message) {
+        return io.promptPassword(message);
+    }
+
+    /**
      * @brief Checks if a username is unique
      * @param username The username to check
      * @return true if the username is unique (i.e., not already taken),
      * false otherwise
      */
     protected boolean checkUsernameUniqueness(String username) {
-        for (AuthenticatedUser user : authenticatedUsers) {
+        for (AuthenticatedUser user : registeredUsers) {
             if (user.getUsername().equals(username)) {
                 return false;
             }
@@ -105,7 +161,7 @@ public class UserManagement {
      * false otherwise
      */
     protected boolean checkEmailUniqueness(String email) {
-        for (AuthenticatedUser user : authenticatedUsers) {
+        for (AuthenticatedUser user : registeredUsers) {
             if (user.getEmail().equals(email)) {
                 return false;
             }
@@ -120,7 +176,7 @@ public class UserManagement {
      * @return true if the email exists, false otherwise
      */
     protected boolean checkEmailExistence(String email) {
-        for (AuthenticatedUser user : authenticatedUsers) {
+        for (AuthenticatedUser user : registeredUsers) {
             if (user.getEmail().equals(email)) {
                 return true;
             }
@@ -165,11 +221,14 @@ public class UserManagement {
      * @param password The password of the user to authenticate
      * @return true if an authenticated user with the given credentials exists, 
      * false otherwise
+     * @details If true the logged-in user will be added to the list of 
+     * logged users
      */
     protected boolean authenticateUser(String username, String password) {
-        for (AuthenticatedUser user : authenticatedUsers) {
+        for (AuthenticatedUser user : registeredUsers) {
             if (user.getUsername().equals(username) && 
                 user.getPassword().equals(password)) {
+                    addLoggedUser(user);
                     return true;
             }
         }
@@ -178,12 +237,27 @@ public class UserManagement {
     }
 
     /**
+     * @brief Gets an authenticated user by their username
+     * @param username The username of the user to retrieve
+     * @return The authenticated user with the specified username, or null if not found
+     */
+    protected AuthenticatedUser getAuthenticatedUserByUsername(String username) {
+        for (AuthenticatedUser user : registeredUsers) {
+            if (user.getUsername().equals(username)) {
+                return user;
+            }
+        }
+
+        return null;
+    }
+
+    /**
      * @brief Gets an authenticated user by their email
      * @param email The email of the user to retrieve
      * @return The authenticated user with the specified email, or null if not found
      */
     protected AuthenticatedUser getAuthenticatedUserByEmail(String email) {
-        for (AuthenticatedUser user : authenticatedUsers) {
+        for (AuthenticatedUser user : registeredUsers) {
             if (user.getEmail().equals(email)) {
                 return user;
             }
@@ -230,7 +304,11 @@ public class UserManagement {
      */
     private void printUsers() {
         System.out.println("Authenticated Users:");
-        for (AuthenticatedUser user : authenticatedUsers) {
+        for (AuthenticatedUser user : registeredUsers) {
+            System.out.println(" - " + user.getUsername());
+        }
+        System.out.println("Logged-in Users:");
+        for (AuthenticatedUser user : loggedUsers) {
             System.out.println(" - " + user.getUsername());
         }
         System.out.println("Anonymous Users:");

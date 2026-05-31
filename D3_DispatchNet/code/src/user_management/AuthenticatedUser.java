@@ -4,9 +4,9 @@ import java.util.Objects;
 
 /**
  * @class AuthenticatedUser
-* @brief Abstract class representing an authenticated user in the system,
-* containing their credentials and user type.
-*/
+ * @brief Abstract class representing an authenticated user in the system,
+ * containing their credentials and user type.
+ */
 public abstract class AuthenticatedUser {
     private String username;
     private String email;
