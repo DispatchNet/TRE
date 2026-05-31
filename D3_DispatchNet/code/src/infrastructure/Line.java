@@ -1,0 +1,121 @@
+package infrastructure;
+/**
+ * @brief A Class representing a line between 2 Junction elements.
+ */
+public class Line {
+  Junction junction1;
+  Junction junction2;
+  int lengthMeters;
+  int maxSpeedKpH;
+  int nTracks;
+  
+  /**
+   * Constructs a Line
+   * @param j1 A Junction in the network
+   * @param j2 A Junction in the network
+   * @param lengthMeters The length of this line in meters
+   * @param maxSpeedKpH The max speed of this line in Kilometers per hour
+   * @param nTracks The number of tracks this line has
+   * 
+   * @throws NullPointerException if the junctions are null.
+   * @implNote Also adds this line to the junction's adjacencies.
+   */
+  Line(Junction j1, Junction j2, int lengthMeters, int maxSpeedKpH, int nTracks) {
+    assert j1 != null;
+    assert j2 != null;
+
+    j1.connectedLines.add(this);
+    j2.connectedLines.add(this);
+    
+    this.junction1 = j1;
+    this.junction2 = j2;
+    this.lengthMeters = lengthMeters;
+    this.maxSpeedKpH = maxSpeedKpH;
+    this.nTracks = nTracks;
+  }
+
+  /**
+   * Gets one of the junctions this line ends at.
+   * @return the junction
+   */
+  public Junction getJunction1() {
+    return junction1;
+  }
+  
+  /**
+   * Gets one of the junctions this line ends at.
+   * @return the junction
+   */
+  public Junction getJunction2() {
+    return junction2;
+  }
+  
+  /**
+   * Gets one of the length of this line in meters.
+   * @return the length
+   */
+  public int getLengthMeters() {
+    return lengthMeters;
+  }
+  
+  /**
+   * Gets the max speed in kilometers per hour
+   * @return The maximum speed
+   */
+  public int getMaxSpeedKpH() {
+    return maxSpeedKpH;
+  }
+  
+  /**
+   * Gets the number of tracks of this line
+   * @return the number of tracks
+   */
+  public int getnTracks() {
+    return nTracks;
+  }
+
+  /**
+   * Replaces junction1 of this Line.
+   * @param junction the new junction.
+   * @implNote also removes this line from the junction's adjacencies.
+   */
+  public void setJunction1(Junction junction) {
+    this.junction1.connectedLines.remove(this);
+    this.junction1 = junction;
+  }
+  
+  /**
+   * Replaces junction2 of this Line.
+   * @param junction the new junction.
+   * @implNote also removes this line from the junction's adjacencies.
+   */
+  public void setJunction2(Junction junction) {
+    this.junction1.connectedLines.remove(this);
+    this.junction2 = junction;
+  }
+
+  /**
+   * Sets the length of this Line.
+   * @param lengthMeters the length.
+   */
+  public void setLengthMeters(int lengthMeters) {
+    this.lengthMeters = lengthMeters;
+  }
+
+  /**
+   * Sets the max speed of this line in km/h.
+   * @param maxSpeedKpH the maximum speed.
+   */
+  public void setMaxSpeedKpH(int maxSpeedKpH) {
+    this.maxSpeedKpH = maxSpeedKpH;
+  }
+
+  /**
+   * Sets the number of tracks of this line.
+   * @param nTracks the number of tracks of this line.
+   */
+  public void setnTracks(int nTracks) {
+    this.nTracks = nTracks;
+  }
+
+}
