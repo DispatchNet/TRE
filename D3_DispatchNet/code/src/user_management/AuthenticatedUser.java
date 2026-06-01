@@ -108,8 +108,7 @@ public abstract class AuthenticatedUser {
     * @brief Log out the authenticated user, moving to the anonymous user state.
     */
     public void logout() {
-        userManagement.removeLoggedUser(this);
-        userManagement.addAnonymousUser(new AnonymousUser(userManagement));
+        userManagement.logoutUser();
     }
 
     /**

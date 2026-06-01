@@ -87,7 +87,7 @@ public class AnonymousUser {
 
         // create new user account and add it to the system
         Passenger newUser = new Passenger(username, email, password1, userManagement);
-        userManagement.addRegisteredUser(newUser);
+        userManagement.addAuthenticatedUser(newUser);
 
         // send email to the new user
         userManagement.sendEmail(
@@ -99,10 +99,7 @@ public class AnonymousUser {
         );
 
         // log the new user in the newly created account
-        userManagement.addLoggedUser(newUser);
-
-        // remove the anonymous user from the system
-        userManagement.removeAnonymousUser(this);
+        userManagement.loginUser(newUser);
     }
 
     /**
@@ -193,10 +190,7 @@ public class AnonymousUser {
         );
 
         // log the user in the account
-        userManagement.addLoggedUser(user);
-
-        // remove the anonymous user from the system
-        userManagement.removeAnonymousUser(this);
+        userManagement.loginUser(user);
     }
 
     /**
@@ -221,10 +215,7 @@ public class AnonymousUser {
 
         // log the user in the account
         AuthenticatedUser user = userManagement.getAuthenticatedUserByUsername(username);
-        userManagement.addLoggedUser(user);
-
-        // remove the anonymous user from the system
-        userManagement.removeAnonymousUser(this);
+        userManagement.loginUser(user);
     }
 
     

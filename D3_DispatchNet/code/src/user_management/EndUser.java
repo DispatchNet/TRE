@@ -153,8 +153,6 @@ public abstract class EndUser extends AuthenticatedUser {
      * @brief Deletes the user's account
      */
     public void deleteAccount() {
-        userManagement.removeLoggedUser(this);
-        userManagement.addAnonymousUser(new AnonymousUser(userManagement));
-        userManagement.removeRegisteredUser(this);
+        userManagement.logoutUser();
     }
 }

@@ -14,94 +14,51 @@ import IO_operations.IO;
  * interact with this class to manage user sessions and data.
  */
 public class UserManagement {
-    // List of registered authenticated users in the system
-    private final static List<AuthenticatedUser> registeredUsers = new ArrayList<>();
-    // List of logged in authenticated users in the system
-    private final static List<AuthenticatedUser> loggedUsers = new ArrayList<>();
-    // List of current anonymous users in the system
-    private final static List<AnonymousUser> anonymousUsers = new ArrayList<>();
+    // List of authenticated authenticated users in the system
+    private final static List<AuthenticatedUser> authenticatedUsers = new ArrayList<>();
     // Mail service instance for sending emails
     private final static MailService mailService = MailServiceFactory.getMailService();
     // IO instance for user input and output
     private final static IO io = new IO();
+    // User session to track the current active user (only one at a time)
+    private final static UserSession session = new UserSession();
 
     /**
      * @brief Constructor for UserManagement class
      */
     public UserManagement() {
+        session.setAnonymousUser(new AnonymousUser(this));
     }
 
     /**
-     * @brief Gets the list of registered users
-     * @return A list of registered authenticated users
+     * @brief Gets the list of authenticated users
+     * @return A list of authenticated authenticated users
      */
-    public List<AuthenticatedUser> getRegisteredUsers() {
-        return new ArrayList<>(registeredUsers);
+    public List<AuthenticatedUser> getAuthenticatedUsers() {
+        return new ArrayList<>(authenticatedUsers);
     }
 
-    /**
-     * @brief Gets the list of logged-in users
-     * @return A list of logged-in authenticated users
-     */
-    public List<AuthenticatedUser> getLoggedUsers() {
-        return new ArrayList<>(loggedUsers);
-    }
+
 
     /**
-     * @brief Gets the list of anonymous users
-     * @return A list of anonymous users
-     */
-    public List<AnonymousUser> getAnonymousUsers() {
-        return new ArrayList<>(anonymousUsers);
-    }
-
-    /**
-     * @brief Adds a registered authenticated user to the system
+     * @brief Adds a authenticated authenticated user to the system
      * @param user The authenticated user to add
      */
-    public void addRegisteredUser(AuthenticatedUser user) {
-        registeredUsers.add(user);
+    public void addAuthenticatedUser(AuthenticatedUser user) {
+        authenticatedUsers.add(user);
     }
 
-    /**
-     * @brief Adds a logged-in authenticated user to the system
-     * @param user The authenticated user to add
-     */
-    public void addLoggedUser(AuthenticatedUser user) {
-        loggedUsers.add(user);
-    }
 
-    /**
-     * @brief Adds an anonymous user to the system
-     * @param user The anonymous user to add
-     */
-    public void addAnonymousUser(AnonymousUser user) {
-        anonymousUsers.add(user);
-    }
 
     /**
      * @brief Removes an authenticated user from the system
      * @param user The authenticated user to remove
      */
-    public void removeRegisteredUser(AuthenticatedUser user) {
-        registeredUsers.remove(user);
+    public void removeAuthenticatedUser(AuthenticatedUser user) {
+        authenticatedUsers.remove(user);
     }
 
-    /**
-     * @brief Removes a logged-in authenticated user from the system
-     * @param user The authenticated user to remove
-     */
-    public void removeLoggedUser(AuthenticatedUser user) {
-        loggedUsers.remove(user);
-    }
 
-    /**
-     * @brief Removes an anonymous user from the system
-     * @param user The anonymous user to remove
-     */
-    public void removeAnonymousUser(AnonymousUser user) {
-        anonymousUsers.remove(user);
-    }
 
     /**
      * @brief Sends an email to a user
@@ -139,13 +96,37 @@ public class UserManagement {
     }
 
     /**
+     * @brief Gets the current user session
+     * @return The current user session
+     */
+    public UserSession getSession() {
+        return session;
+    }
+
+    /**
+     * @brief Checks if the current user is authenticated
+     * @return true if the current user is authenticated, false otherwise
+     */
+    public boolean isAuthenticated() {
+        return session.isAuthenticated();
+    }
+
+    /**
+     * @brief Gets the authenticated user for the current session
+     * @return The authenticated user for the current session, or null if the session is anonymous
+     */
+    public AuthenticatedUser getAuthenticatedUser() {
+        return session.getAuthenticatedUser();
+    }
+
+    /**
      * @brief Checks if a username is unique
      * @param username The username to check
      * @return true if the username is unique (i.e., not already taken),
      * false otherwise
      */
     protected boolean checkUsernameUniqueness(String username) {
-        for (AuthenticatedUser user : registeredUsers) {
+        for (AuthenticatedUser user : authenticatedUsers) {
             if (user.getUsername().equals(username)) {
                 return false;
             }
@@ -161,7 +142,7 @@ public class UserManagement {
      * false otherwise
      */
     protected boolean checkEmailUniqueness(String email) {
-        for (AuthenticatedUser user : registeredUsers) {
+        for (AuthenticatedUser user : authenticatedUsers) {
             if (user.getEmail().equals(email)) {
                 return false;
             }
@@ -176,7 +157,7 @@ public class UserManagement {
      * @return true if the email exists, false otherwise
      */
     protected boolean checkEmailExistence(String email) {
-        for (AuthenticatedUser user : registeredUsers) {
+        for (AuthenticatedUser user : authenticatedUsers) {
             if (user.getEmail().equals(email)) {
                 return true;
             }
@@ -221,19 +202,33 @@ public class UserManagement {
      * @param password The password of the user to authenticate
      * @return true if an authenticated user with the given credentials exists, 
      * false otherwise
-     * @details If true the logged-in user will be added to the list of 
-     * logged users
      */
     protected boolean authenticateUser(String username, String password) {
-        for (AuthenticatedUser user : registeredUsers) {
+        for (AuthenticatedUser user : authenticatedUsers) {
             if (user.getUsername().equals(username) && 
                 user.getPassword().equals(password)) {
-                    addLoggedUser(user);
-                    return true;
+                return true;
             }
         }
 
         return false;
+    }
+
+    /**
+     * @brief Transitions the current session from anonymous to authenticated.
+     * Sets the given authenticated user as the current session user.
+     * @param user The authenticated user to log in
+     */
+    public void loginUser(AuthenticatedUser user) {
+        session.setAuthenticatedUser(user);
+    }
+
+    /**
+     * @brief Transitions the current session from authenticated to anonymous.
+     * Clears the authenticated user and creates a new anonymous session.
+     */
+    public void logoutUser() {
+        session.setAnonymousUser(new AnonymousUser(this));
     }
 
     /**
@@ -242,7 +237,7 @@ public class UserManagement {
      * @return The authenticated user with the specified username, or null if not found
      */
     protected AuthenticatedUser getAuthenticatedUserByUsername(String username) {
-        for (AuthenticatedUser user : registeredUsers) {
+        for (AuthenticatedUser user : authenticatedUsers) {
             if (user.getUsername().equals(username)) {
                 return user;
             }
@@ -257,7 +252,7 @@ public class UserManagement {
      * @return The authenticated user with the specified email, or null if not found
      */
     protected AuthenticatedUser getAuthenticatedUserByEmail(String email) {
-        for (AuthenticatedUser user : registeredUsers) {
+        for (AuthenticatedUser user : authenticatedUsers) {
             if (user.getEmail().equals(email)) {
                 return user;
             }
@@ -273,47 +268,40 @@ public class UserManagement {
     public static void main(String[] args) {
         UserManagement userManagement = new UserManagement();
 
-        // add some anonymous users
-        AnonymousUser anon1 = new AnonymousUser(userManagement);
-        userManagement.addAnonymousUser(anon1);
-        AnonymousUser anon2 = new AnonymousUser(userManagement);
-        userManagement.addAnonymousUser(anon2);
-        AnonymousUser anon3 = new AnonymousUser(userManagement);
-        userManagement.addAnonymousUser(anon3);
-        AnonymousUser anon4 = new AnonymousUser(userManagement);
-        userManagement.addAnonymousUser(anon4);
+        // set initial anonymous user
+        AnonymousUser currentAnon = new AnonymousUser(userManagement);
+        session.setAnonymousUser(currentAnon);
 
-        // print users before registration
+        // print initial state (anonymous user)
         userManagement.printUsers();
 
-        // register a new user from the first anonymous user
-        anon1.register();
+        // register a new user from the anonymous user state
+        currentAnon.register();
 
-        // register a new user from the second anonymous user
-        anon2.register();
+        // print state after registration (authenticated user)
+        userManagement.printUsers();
 
-        // login the first user
-        anon3.login();
+        // logout the authenticated user
+        userManagement.getSession().getAuthenticatedUser().logout();
 
-        // print users after registration and login
+        // print state after logout (anonymous user)
         userManagement.printUsers();
     }
 
     /**
-     * @brief Prints all users in the system, used for testing purposes
+     * @brief Prints the current session state and authenticated users
      */
     private void printUsers() {
         System.out.println("Authenticated Users:");
-        for (AuthenticatedUser user : registeredUsers) {
+        for (AuthenticatedUser user : authenticatedUsers) {
             System.out.println(" - " + user.getUsername());
         }
-        System.out.println("Logged-in Users:");
-        for (AuthenticatedUser user : loggedUsers) {
-            System.out.println(" - " + user.getUsername());
+        System.out.println("Current Session:");
+        if (session.isAuthenticated()) {
+            System.out.println(" - Authenticated: " + session.getAuthenticatedUser().getUsername());
+        } else {
+            System.out.println(" - Anonymous: " + session.getAnonymousUser().getIdentifier());
         }
-        System.out.println("Anonymous Users:");
-        for (AnonymousUser user : anonymousUsers) {
-            System.out.println(" - " + user.getIdentifier());
-        }
+        System.out.println();
     }
 }
