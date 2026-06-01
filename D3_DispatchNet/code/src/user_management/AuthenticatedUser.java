@@ -12,11 +12,13 @@ public abstract class AuthenticatedUser {
     private String email;
     private String password;
     private UserType userType;
+    private final UserManagement userManagement;
 
     /**
     * @brief Empty Constructor for AuthenticatedUser class
     */
-    public AuthenticatedUser() {
+    public AuthenticatedUser(UserManagement userManagement) {
+        this.userManagement = userManagement;
     }
 
     /**
@@ -27,12 +29,14 @@ public abstract class AuthenticatedUser {
      * @param userType The type of the authenticated user
      */
     public AuthenticatedUser(
-        String username, String email, String password, UserType userType
+        String username, String email, String password, UserType userType,
+        UserManagement userManagement
     ) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.userType = userType;
+        this.userManagement = userManagement;
     }
 
     /**
@@ -104,7 +108,8 @@ public abstract class AuthenticatedUser {
     * @brief Log out the authenticated user, moving to the anonymous user state.
     */
     public void logout() {
-        // TODO: implement logout behavior
+        userManagement.removeLoggedUser(this);
+        userManagement.addAnonymousUser(new AnonymousUser(userManagement));
     }
 
     /**

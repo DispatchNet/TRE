@@ -10,14 +10,15 @@ import mail_service.Email;
 public class AnonymousUser {
     private final int identifier;
     private final UserManagement userManagement;
+    private static int idCounter = 0;
 
     /**
      * @brief Constructor for AnonymousUser class
      * @param identifier The identifier for the anonymous user
      * @param userManagement The user management instance
      */
-    public AnonymousUser(int identifier, UserManagement userManagement) {
-        this.identifier = identifier;
+    public AnonymousUser(UserManagement userManagement) {
+        this.identifier = idCounter++;
         this.userManagement = userManagement;
     }
 
@@ -221,7 +222,7 @@ public class AnonymousUser {
         // log the user in the account
         AuthenticatedUser user = userManagement.getAuthenticatedUserByUsername(username);
         userManagement.addLoggedUser(user);
-        
+
         // remove the anonymous user from the system
         userManagement.removeAnonymousUser(this);
     }

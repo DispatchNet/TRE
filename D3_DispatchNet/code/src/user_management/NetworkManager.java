@@ -12,8 +12,10 @@ public class NetworkManager extends AuthenticatedUser {
      * @param email The email of the network manager
      * @param password The password of the network manager
      */
-    public NetworkManager(String username, String email, String password) {
-        super(username, email, password, UserType.NetworkManager);
+    public NetworkManager(
+        String username, String email, String password, UserManagement userManagement
+    ) {
+        super(username, email, password, UserType.NetworkManager, userManagement);
     }
 
     /**

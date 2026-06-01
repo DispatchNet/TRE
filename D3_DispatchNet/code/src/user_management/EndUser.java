@@ -9,7 +9,8 @@ public abstract class EndUser extends AuthenticatedUser {
     /**
      * @brief Empty constructor for EndUser class
      */
-    public EndUser() {
+    public EndUser(UserManagement userManagement) {
+        super(userManagement);
     }
 
     /**
@@ -19,8 +20,11 @@ public abstract class EndUser extends AuthenticatedUser {
      * @param password The password of the end user
      * @param userType The type of the user
      */
-    public EndUser(String username, String email, String password, UserType userType) {
-        super(username, email, password, userType);
+    public EndUser(
+        String username, String email, String password, UserType userType, 
+        UserManagement userManagement
+    ) {
+        super(username, email, password, userType, userManagement);
     }
 
     /**

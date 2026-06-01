@@ -274,13 +274,13 @@ public class UserManagement {
         UserManagement userManagement = new UserManagement();
 
         // add some anonymous users
-        AnonymousUser anon1 = new AnonymousUser(anonymousUsers.size() + 1, userManagement);
+        AnonymousUser anon1 = new AnonymousUser(userManagement);
         userManagement.addAnonymousUser(anon1);
-        AnonymousUser anon2 = new AnonymousUser(anonymousUsers.size() + 1, userManagement);
+        AnonymousUser anon2 = new AnonymousUser(userManagement);
         userManagement.addAnonymousUser(anon2);
-        AnonymousUser anon3 = new AnonymousUser(anonymousUsers.size() + 1, userManagement);
+        AnonymousUser anon3 = new AnonymousUser(userManagement);
         userManagement.addAnonymousUser(anon3);
-        AnonymousUser anon4 = new AnonymousUser(anonymousUsers.size() + 1, userManagement);
+        AnonymousUser anon4 = new AnonymousUser(userManagement);
         userManagement.addAnonymousUser(anon4);
 
         // print users before registration
