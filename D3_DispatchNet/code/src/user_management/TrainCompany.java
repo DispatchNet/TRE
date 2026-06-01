@@ -11,9 +11,12 @@ public class TrainCompany extends EndUser {
      * @param username The username of the train company
      * @param email The email of the train company
      * @param password The password of the train company
+     * @param userManagement The user management instance
      */
-    public TrainCompany(String username, String email, String password) {
-        super(username, email, password, UserType.TrainCompany);
+    public TrainCompany(
+        String username, String email, String password, UserManagement userManagement
+    ) {
+        super(username, email, password, UserType.TrainCompany, userManagement);
     }
 
     /**

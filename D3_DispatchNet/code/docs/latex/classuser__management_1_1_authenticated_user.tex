@@ -14,9 +14,9 @@ Inheritance diagram for user\+\_\+management.\+Authenticated\+User:\+\begin{figu
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a29b02562dec2e2a0f935157635d70c3e}{Authenticated\+User}} ()
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_acc19eed0bd6c137afba3df938aaa5e7f}{Authenticated\+User}} (\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
 \begin{DoxyCompactList}\small\item\em Empty Constructor for \doxylink{classuser__management_1_1_authenticated_user}{Authenticated\+User} class. \end{DoxyCompactList}\item 
-\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a5fe1fed4db347cd45453709e9254e601}{Authenticated\+User}} (String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} user\+Type)
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_ae9a55c997dc9d8c12936fa302f5d4e19}{Authenticated\+User}} (String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} user\+Type, \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
 \begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_authenticated_user}{Authenticated\+User} class. \end{DoxyCompactList}\item 
 String \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a09d3ea4888c58c57a2f381fb32034d42}{get\+Username}} ()
 \begin{DoxyCompactList}\small\item\em Gets the username of the authenticated user. \end{DoxyCompactList}\item 
@@ -38,6 +38,11 @@ boolean \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a4ed89
 \begin{DoxyCompactList}\small\item\em Checks if this authenticated user is equal to another object. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a4a09cae41928361de7dd4888427b8760}{hash\+Code}} ()
 \begin{DoxyCompactList}\small\item\em Generates a hash code for the authenticated user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_afc13e6811e6fbd798dc8f8eadecb5c9f}{user\+Management}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -46,21 +51,21 @@ Abstract class representing an authenticated user in the system, containing thei
 \label{classuser__management_1_1_authenticated_user_doc-constructors}
 \Hypertarget{classuser__management_1_1_authenticated_user_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classuser__management_1_1_authenticated_user_a29b02562dec2e2a0f935157635d70c3e}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!AuthenticatedUser@{AuthenticatedUser}}
+\Hypertarget{classuser__management_1_1_authenticated_user_acc19eed0bd6c137afba3df938aaa5e7f}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!AuthenticatedUser@{AuthenticatedUser}}
 \index{AuthenticatedUser@{AuthenticatedUser}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
 \doxysubsubsection{\texorpdfstring{AuthenticatedUser()}{AuthenticatedUser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_authenticated_user_a29b02562dec2e2a0f935157635d70c3e} 
-user\+\_\+management.\+Authenticated\+User.\+Authenticated\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_authenticated_user_acc19eed0bd6c137afba3df938aaa5e7f} 
+user\+\_\+management.\+Authenticated\+User.\+Authenticated\+User (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}}}]{user\+Management}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Empty Constructor for \doxylink{classuser__management_1_1_authenticated_user}{Authenticated\+User} class. 
 
-\Hypertarget{classuser__management_1_1_authenticated_user_a5fe1fed4db347cd45453709e9254e601}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!AuthenticatedUser@{AuthenticatedUser}}
+\Hypertarget{classuser__management_1_1_authenticated_user_ae9a55c997dc9d8c12936fa302f5d4e19}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!AuthenticatedUser@{AuthenticatedUser}}
 \index{AuthenticatedUser@{AuthenticatedUser}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
 \doxysubsubsection{\texorpdfstring{AuthenticatedUser()}{AuthenticatedUser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_authenticated_user_a5fe1fed4db347cd45453709e9254e601} 
-user\+\_\+management.\+Authenticated\+User.\+Authenticated\+User (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{email}{, }\item[{String}]{password}{, }\item[{\doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}}}]{user\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_authenticated_user_ae9a55c997dc9d8c12936fa302f5d4e19} 
+user\+\_\+management.\+Authenticated\+User.\+Authenticated\+User (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{email}{, }\item[{String}]{password}{, }\item[{\doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}}}]{user\+Type}{, }\item[{\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}}}]{user\+Management}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -225,6 +230,17 @@ Sets the username of the authenticated user.
 {\em username} & The username of the authenticated user \\
 \hline
 \end{DoxyParams}
+
+
+\label{classuser__management_1_1_authenticated_user_doc-variable-members}
+\Hypertarget{classuser__management_1_1_authenticated_user_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classuser__management_1_1_authenticated_user_afc13e6811e6fbd798dc8f8eadecb5c9f}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!userManagement@{userManagement}}
+\index{userManagement@{userManagement}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{userManagement}{userManagement}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_authenticated_user_afc13e6811e6fbd798dc8f8eadecb5c9f} 
+final \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+\_\+management.\+Authenticated\+User.\+user\+Management\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}

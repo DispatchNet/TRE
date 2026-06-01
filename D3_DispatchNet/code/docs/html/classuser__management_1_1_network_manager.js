@@ -1,6 +1,6 @@
 var classuser__management_1_1_network_manager =
 [
-    [ "NetworkManager", "classuser__management_1_1_network_manager.html#ab16cf8733e844785291ffe91fe941e4d", null ],
+    [ "NetworkManager", "classuser__management_1_1_network_manager.html#ae8ee9940c29d84150c451b19046d41ac", null ],
     [ "createJunction", "classuser__management_1_1_network_manager.html#a8b7649a390789ac5de0aee1537361529", null ],
     [ "createLine", "classuser__management_1_1_network_manager.html#a07afc6a3c6b7a8ae8b22f7b62f50b7e3", null ],
     [ "createStation", "classuser__management_1_1_network_manager.html#a41541bddc80fd872cd6ce6252b87efad", null ],

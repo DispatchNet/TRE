@@ -6,5 +6,6 @@ var searchData=
   ['deletestation_3',['deleteStation',['../classuser__management_1_1_network_manager.html#a507d53464376d4db3868c44c4622a01c',1,'user_management::NetworkManager']]],
   ['departure_4',['Departure',['../enumsrt_alg.html#a4439aebe6b498dd8ef7be4404171ea6a',1,'srtAlg']]],
   ['dispatch_5',['Dispatch',['../classservice__mangement_1_1_dispatch.html',1,'service_mangement']]],
-  ['dispatch_2ejava_6',['Dispatch.java',['../_dispatch_8java.html',1,'']]]
+  ['dispatch_2ejava_6',['Dispatch.java',['../_dispatch_8java.html',1,'']]],
+  ['displayerror_7',['displayError',['../class_i_o__operations_1_1_i_o.html#a027fce54a25bbed47a3de6fb1c51b3e7',1,'IO_operations.IO.displayError()'],['../classuser__management_1_1_user_management.html#ab21bbe3550994a8d5fbd85bf8680370a',1,'user_management.UserManagement.displayError()']]]
 ];

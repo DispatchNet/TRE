@@ -22,9 +22,12 @@ public class Passenger extends EndUser {
      * @param username The username of the passenger
      * @param email The email of the passenger
      * @param password The password of the passenger
+     * @param userManagement The user management instance
      */
-    public Passenger(String username, String email, String password) {
-        super(username, email, password, UserType.Passenger);
+    public Passenger(
+        String username, String email, String password, UserManagement userManagement
+    ) {
+        super(username, email, password, UserType.Passenger, userManagement);
     }
 
     /**

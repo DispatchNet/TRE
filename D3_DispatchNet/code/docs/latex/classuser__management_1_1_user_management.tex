@@ -10,20 +10,32 @@ Class managing the user accounts in the system. Other modules will interact with
 \item 
 \doxymbox{\hyperlink{classuser__management_1_1_user_management_aebf624db28c98c91f2d1a97683f922ea}{User\+Management}} ()
 \begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_user_management}{User\+Management} class. \end{DoxyCompactList}\item 
-List$<$ \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} $>$ \doxymbox{\hyperlink{classuser__management_1_1_user_management_ae7334f03c708cd1630fcc73093cc4432}{get\+Authenticated\+Users}} ()
-\begin{DoxyCompactList}\small\item\em Gets the list of authenticated users. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} $>$ \doxymbox{\hyperlink{classuser__management_1_1_user_management_acee3bf6b49c741bf0ee237b03e402bf1}{get\+Registered\+Users}} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of registered users. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} $>$ \doxymbox{\hyperlink{classuser__management_1_1_user_management_a892bd1049cb806c3c0c7c8c7d0f73d7e}{get\+Logged\+Users}} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of logged-\/in users. \end{DoxyCompactList}\item 
 List$<$ \doxymbox{\hyperlink{classuser__management_1_1_anonymous_user}{Anonymous\+User}} $>$ \doxymbox{\hyperlink{classuser__management_1_1_user_management_a8d20db18b8e31e4b865ceebad09dfaf3}{get\+Anonymous\+Users}} ()
 \begin{DoxyCompactList}\small\item\em Gets the list of anonymous users. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classuser__management_1_1_user_management_a83f9ca2a346cbfd795b7d36ccb533989}{add\+Authenticated\+User}} (\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} user)
-\begin{DoxyCompactList}\small\item\em Adds an authenticated user to the system. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_user_management_a12f806e9460bd00531ebebe119a379b1}{add\+Registered\+User}} (\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} user)
+\begin{DoxyCompactList}\small\item\em Adds a registered authenticated user to the system. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_user_management_a9bfd083c08eae30431a58d8134d287ae}{add\+Logged\+User}} (\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} user)
+\begin{DoxyCompactList}\small\item\em Adds a logged-\/in authenticated user to the system. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classuser__management_1_1_user_management_ae96c47f9785d45248b979aed21f3e7f5}{add\+Anonymous\+User}} (\doxymbox{\hyperlink{classuser__management_1_1_anonymous_user}{Anonymous\+User}} user)
 \begin{DoxyCompactList}\small\item\em Adds an anonymous user to the system. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classuser__management_1_1_user_management_a52964c827c1c2ead1bdcc8c5897cdeb8}{remove\+Authenticated\+User}} (\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} user)
+void \doxymbox{\hyperlink{classuser__management_1_1_user_management_a3c76e1e8cb16a75920f9b421cd9ca3a5}{remove\+Registered\+User}} (\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} user)
 \begin{DoxyCompactList}\small\item\em Removes an authenticated user from the system. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_user_management_a5102104e7c91b176179a8b73e9207ce2}{remove\+Logged\+User}} (\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} user)
+\begin{DoxyCompactList}\small\item\em Removes a logged-\/in authenticated user from the system. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classuser__management_1_1_user_management_a2339b13e53d56f9e1542af62d42c7c17}{remove\+Anonymous\+User}} (\doxymbox{\hyperlink{classuser__management_1_1_anonymous_user}{Anonymous\+User}} user)
 \begin{DoxyCompactList}\small\item\em Removes an anonymous user from the system. \end{DoxyCompactList}\item 
 boolean \doxymbox{\hyperlink{classuser__management_1_1_user_management_a7f16a4696e991edf2fec02ce16e7b763}{send\+Email}} (\doxymbox{\hyperlink{classmail__service_1_1_email}{Email}} email)
-\begin{DoxyCompactList}\small\item\em Sends an email to a user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sends an email to a user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_user_management_ab21bbe3550994a8d5fbd85bf8680370a}{display\+Error}} (String message)
+\begin{DoxyCompactList}\small\item\em Displays an error message. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1_user_management_aeb62b2a53928428e54d053ccb6cc1a95}{prompt}} (String message)
+\begin{DoxyCompactList}\small\item\em Prompts the user for input. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1_user_management_a6b14e8552e54b69a20557cb80825bc83}{prompt\+Password}} (String message)
+\begin{DoxyCompactList}\small\item\em Prompts the user for a password. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,6 +54,8 @@ boolean \doxymbox{\hyperlink{classuser__management_1_1_user_management_a030c80cb
 \begin{DoxyCompactList}\small\item\em Checks if a password meets security requirements. \end{DoxyCompactList}\item 
 boolean \doxymbox{\hyperlink{classuser__management_1_1_user_management_adb8a1e1a254e0274d691f78c8c2e19a7}{authenticate\+User}} (String username, String password)
 \begin{DoxyCompactList}\small\item\em Authenticates a user based on their username and password. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} \doxymbox{\hyperlink{classuser__management_1_1_user_management_a441b6cb5a48c8ef385bd38c1a3ede4df}{get\+Authenticated\+User\+By\+Username}} (String username)
+\begin{DoxyCompactList}\small\item\em Gets an authenticated user by their username. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} \doxymbox{\hyperlink{classuser__management_1_1_user_management_aa1034d86d6be803f087644d93c262317}{get\+Authenticated\+User\+By\+Email}} (String email)
 \begin{DoxyCompactList}\small\item\em Gets an authenticated user by their email. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -77,15 +91,35 @@ void user\+\_\+management.\+User\+Management.\+add\+Anonymous\+User (\begin{Doxy
 
 Adds an anonymous user to the system. 
 
-\Hypertarget{classuser__management_1_1_user_management_a83f9ca2a346cbfd795b7d36ccb533989}\index{user\_management.UserManagement@{user\_management.UserManagement}!addAuthenticatedUser@{addAuthenticatedUser}}
-\index{addAuthenticatedUser@{addAuthenticatedUser}!user\_management.UserManagement@{user\_management.UserManagement}}
-\doxysubsubsection{\texorpdfstring{addAuthenticatedUser()}{addAuthenticatedUser()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_a83f9ca2a346cbfd795b7d36ccb533989} 
-void user\+\_\+management.\+User\+Management.\+add\+Authenticated\+User (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}}}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The anonymous user to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classuser__management_1_1_user_management_a9bfd083c08eae30431a58d8134d287ae}\index{user\_management.UserManagement@{user\_management.UserManagement}!addLoggedUser@{addLoggedUser}}
+\index{addLoggedUser@{addLoggedUser}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{addLoggedUser()}{addLoggedUser()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_a9bfd083c08eae30431a58d8134d287ae} 
+void user\+\_\+management.\+User\+Management.\+add\+Logged\+User (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}}}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Adds an authenticated user to the system. 
+Adds a logged-\/in authenticated user to the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The authenticated user to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classuser__management_1_1_user_management_a12f806e9460bd00531ebebe119a379b1}\index{user\_management.UserManagement@{user\_management.UserManagement}!addRegisteredUser@{addRegisteredUser}}
+\index{addRegisteredUser@{addRegisteredUser}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{addRegisteredUser()}{addRegisteredUser()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_a12f806e9460bd00531ebebe119a379b1} 
+void user\+\_\+management.\+User\+Management.\+add\+Registered\+User (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}}}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a registered authenticated user to the system. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -110,9 +144,9 @@ Authenticates a user based on their username and password.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true if an authenticated user with the given credentials exists, false otherwise 
+true if an authenticated user with the given credentials exists, false otherwise
 \end{DoxyReturn}
-\Hypertarget{classuser__management_1_1_user_management_afb272522dfa97fc9ea3328c0cc4e562f}\index{user\_management.UserManagement@{user\_management.UserManagement}!checkEmailExistence@{checkEmailExistence}}
+If true the logged-\/in user will be added to the list of logged users \Hypertarget{classuser__management_1_1_user_management_afb272522dfa97fc9ea3328c0cc4e562f}\index{user\_management.UserManagement@{user\_management.UserManagement}!checkEmailExistence@{checkEmailExistence}}
 \index{checkEmailExistence@{checkEmailExistence}!user\_management.UserManagement@{user\_management.UserManagement}}
 \doxysubsubsection{\texorpdfstring{checkEmailExistence()}{checkEmailExistence()}}
 {\footnotesize\ttfamily \label{classuser__management_1_1_user_management_afb272522dfa97fc9ea3328c0cc4e562f} 
@@ -184,6 +218,21 @@ Checks if a username is unique.
 \begin{DoxyReturn}{Returns}
 true if the username is unique (i.\+e., not already taken), false otherwise 
 \end{DoxyReturn}
+\Hypertarget{classuser__management_1_1_user_management_ab21bbe3550994a8d5fbd85bf8680370a}\index{user\_management.UserManagement@{user\_management.UserManagement}!displayError@{displayError}}
+\index{displayError@{displayError}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{displayError()}{displayError()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_ab21bbe3550994a8d5fbd85bf8680370a} 
+void user\+\_\+management.\+User\+Management.\+display\+Error (\begin{DoxyParamCaption}\item[{String}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays an error message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The error message to display \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classuser__management_1_1_user_management_a8d20db18b8e31e4b865ceebad09dfaf3}\index{user\_management.UserManagement@{user\_management.UserManagement}!getAnonymousUsers@{getAnonymousUsers}}
 \index{getAnonymousUsers@{getAnonymousUsers}!user\_management.UserManagement@{user\_management.UserManagement}}
 \doxysubsubsection{\texorpdfstring{getAnonymousUsers()}{getAnonymousUsers()}}
@@ -215,18 +264,49 @@ Gets an authenticated user by their email.
 \begin{DoxyReturn}{Returns}
 The authenticated user with the specified email, or null if not found 
 \end{DoxyReturn}
-\Hypertarget{classuser__management_1_1_user_management_ae7334f03c708cd1630fcc73093cc4432}\index{user\_management.UserManagement@{user\_management.UserManagement}!getAuthenticatedUsers@{getAuthenticatedUsers}}
-\index{getAuthenticatedUsers@{getAuthenticatedUsers}!user\_management.UserManagement@{user\_management.UserManagement}}
-\doxysubsubsection{\texorpdfstring{getAuthenticatedUsers()}{getAuthenticatedUsers()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_ae7334f03c708cd1630fcc73093cc4432} 
-List$<$ \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} $>$ user\+\_\+management.\+User\+Management.\+get\+Authenticated\+Users (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\Hypertarget{classuser__management_1_1_user_management_a441b6cb5a48c8ef385bd38c1a3ede4df}\index{user\_management.UserManagement@{user\_management.UserManagement}!getAuthenticatedUserByUsername@{getAuthenticatedUserByUsername}}
+\index{getAuthenticatedUserByUsername@{getAuthenticatedUserByUsername}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{getAuthenticatedUserByUsername()}{getAuthenticatedUserByUsername()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_a441b6cb5a48c8ef385bd38c1a3ede4df} 
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} user\+\_\+management.\+User\+Management.\+get\+Authenticated\+User\+By\+Username (\begin{DoxyParamCaption}\item[{String}]{username}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
 
 
 
-Gets the list of authenticated users. 
+Gets an authenticated user by their username. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username of the user to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The authenticated user with the specified username, or null if not found 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1_user_management_a892bd1049cb806c3c0c7c8c7d0f73d7e}\index{user\_management.UserManagement@{user\_management.UserManagement}!getLoggedUsers@{getLoggedUsers}}
+\index{getLoggedUsers@{getLoggedUsers}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{getLoggedUsers()}{getLoggedUsers()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_a892bd1049cb806c3c0c7c8c7d0f73d7e} 
+List$<$ \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} $>$ user\+\_\+management.\+User\+Management.\+get\+Logged\+Users (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the list of logged-\/in users. 
 
 \begin{DoxyReturn}{Returns}
-A list of authenticated users 
+A list of logged-\/in authenticated users 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1_user_management_acee3bf6b49c741bf0ee237b03e402bf1}\index{user\_management.UserManagement@{user\_management.UserManagement}!getRegisteredUsers@{getRegisteredUsers}}
+\index{getRegisteredUsers@{getRegisteredUsers}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{getRegisteredUsers()}{getRegisteredUsers()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_acee3bf6b49c741bf0ee237b03e402bf1} 
+List$<$ \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} $>$ user\+\_\+management.\+User\+Management.\+get\+Registered\+Users (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the list of registered users. 
+
+\begin{DoxyReturn}{Returns}
+A list of registered authenticated users 
 \end{DoxyReturn}
 \Hypertarget{classuser__management_1_1_user_management_afb2e961f50194f840c383624fa2eb76c}\index{user\_management.UserManagement@{user\_management.UserManagement}!main@{main}}
 \index{main@{main}!user\_management.UserManagement@{user\_management.UserManagement}}
@@ -243,6 +323,42 @@ Main method for testing \doxylink{classuser__management_1_1_user_management}{Use
 {\em args} & Command-\/line arguments \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classuser__management_1_1_user_management_aeb62b2a53928428e54d053ccb6cc1a95}\index{user\_management.UserManagement@{user\_management.UserManagement}!prompt@{prompt}}
+\index{prompt@{prompt}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{prompt()}{prompt()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_aeb62b2a53928428e54d053ccb6cc1a95} 
+String user\+\_\+management.\+User\+Management.\+prompt (\begin{DoxyParamCaption}\item[{String}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prompts the user for input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s input 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1_user_management_a6b14e8552e54b69a20557cb80825bc83}\index{user\_management.UserManagement@{user\_management.UserManagement}!promptPassword@{promptPassword}}
+\index{promptPassword@{promptPassword}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{promptPassword()}{promptPassword()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_a6b14e8552e54b69a20557cb80825bc83} 
+String user\+\_\+management.\+User\+Management.\+prompt\+Password (\begin{DoxyParamCaption}\item[{String}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prompts the user for a password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s input 
+\end{DoxyReturn}
 \Hypertarget{classuser__management_1_1_user_management_a2339b13e53d56f9e1542af62d42c7c17}\index{user\_management.UserManagement@{user\_management.UserManagement}!removeAnonymousUser@{removeAnonymousUser}}
 \index{removeAnonymousUser@{removeAnonymousUser}!user\_management.UserManagement@{user\_management.UserManagement}}
 \doxysubsubsection{\texorpdfstring{removeAnonymousUser()}{removeAnonymousUser()}}
@@ -258,11 +374,26 @@ Removes an anonymous user from the system.
 {\em user} & The anonymous user to remove \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classuser__management_1_1_user_management_a52964c827c1c2ead1bdcc8c5897cdeb8}\index{user\_management.UserManagement@{user\_management.UserManagement}!removeAuthenticatedUser@{removeAuthenticatedUser}}
-\index{removeAuthenticatedUser@{removeAuthenticatedUser}!user\_management.UserManagement@{user\_management.UserManagement}}
-\doxysubsubsection{\texorpdfstring{removeAuthenticatedUser()}{removeAuthenticatedUser()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_a52964c827c1c2ead1bdcc8c5897cdeb8} 
-void user\+\_\+management.\+User\+Management.\+remove\+Authenticated\+User (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}}}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\Hypertarget{classuser__management_1_1_user_management_a5102104e7c91b176179a8b73e9207ce2}\index{user\_management.UserManagement@{user\_management.UserManagement}!removeLoggedUser@{removeLoggedUser}}
+\index{removeLoggedUser@{removeLoggedUser}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{removeLoggedUser()}{removeLoggedUser()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_a5102104e7c91b176179a8b73e9207ce2} 
+void user\+\_\+management.\+User\+Management.\+remove\+Logged\+User (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}}}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a logged-\/in authenticated user from the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The authenticated user to remove \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classuser__management_1_1_user_management_a3c76e1e8cb16a75920f9b421cd9ca3a5}\index{user\_management.UserManagement@{user\_management.UserManagement}!removeRegisteredUser@{removeRegisteredUser}}
+\index{removeRegisteredUser@{removeRegisteredUser}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{removeRegisteredUser()}{removeRegisteredUser()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_management_a3c76e1e8cb16a75920f9b421cd9ca3a5} 
+void user\+\_\+management.\+User\+Management.\+remove\+Registered\+User (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}}}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

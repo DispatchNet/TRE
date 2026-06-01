@@ -1,6 +1,6 @@
 var classuser__management_1_1_passenger =
 [
-    [ "Passenger", "classuser__management_1_1_passenger.html#a57540c84d1e854d8d4a3f3614fe49473", null ],
+    [ "Passenger", "classuser__management_1_1_passenger.html#a186537203017ae5cfb40f165deffc539", null ],
     [ "cancelTicket", "classuser__management_1_1_passenger.html#a81844ab6dfcdb7740e3538134f991cd3", null ],
     [ "cancelTicketGroup", "classuser__management_1_1_passenger.html#a3ac385fea1fde68f24998a71d6be5774", null ],
     [ "findPath", "classuser__management_1_1_passenger.html#ab249f4d6f2e23a46b41c9e2aefc8011a", null ],

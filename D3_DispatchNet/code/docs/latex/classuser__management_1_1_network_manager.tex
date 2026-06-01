@@ -14,7 +14,7 @@ Inheritance diagram for user\+\_\+management.\+Network\+Manager:\+\begin{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{classuser__management_1_1_network_manager_ab16cf8733e844785291ffe91fe941e4d}{Network\+Manager}} (String username, String email, String password)
+\doxymbox{\hyperlink{classuser__management_1_1_network_manager_ae8ee9940c29d84150c451b19046d41ac}{Network\+Manager}} (String username, String email, String password, \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
 \begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_network_manager}{Network\+Manager} class. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classuser__management_1_1_network_manager_a2605b229ebc2dde1117bc7be74103582}{view\+Network}} ()
 \begin{DoxyCompactList}\small\item\em Views the transportation network. \end{DoxyCompactList}\item 
@@ -41,9 +41,9 @@ void \doxymbox{\hyperlink{classuser__management_1_1_network_manager_a0805b2c8545
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{user\+\_\+management.\+Authenticated\+User}}}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a29b02562dec2e2a0f935157635d70c3e}{Authenticated\+User}} ()
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_acc19eed0bd6c137afba3df938aaa5e7f}{Authenticated\+User}} (\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
 \begin{DoxyCompactList}\small\item\em Empty Constructor for \doxylink{classuser__management_1_1_authenticated_user}{Authenticated\+User} class. \end{DoxyCompactList}\item 
-\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a5fe1fed4db347cd45453709e9254e601}{Authenticated\+User}} (String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} user\+Type)
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_ae9a55c997dc9d8c12936fa302f5d4e19}{Authenticated\+User}} (String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} user\+Type, \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
 \begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_authenticated_user}{Authenticated\+User} class. \end{DoxyCompactList}\item 
 String \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a09d3ea4888c58c57a2f381fb32034d42}{get\+Username}} ()
 \begin{DoxyCompactList}\small\item\em Gets the username of the authenticated user. \end{DoxyCompactList}\item 
@@ -65,6 +65,12 @@ boolean \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a4ed89
 \begin{DoxyCompactList}\small\item\em Checks if this authenticated user is equal to another object. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a4a09cae41928361de7dd4888427b8760}{hash\+Code}} ()
 \begin{DoxyCompactList}\small\item\em Generates a hash code for the authenticated user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{user\+\_\+management.\+Authenticated\+User}}}
+\begin{DoxyCompactItemize}
+\item 
+final \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_afc13e6811e6fbd798dc8f8eadecb5c9f}{user\+Management}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -73,11 +79,11 @@ Class representing a network manager, a type of authenticated user who can manag
 \label{classuser__management_1_1_network_manager_doc-constructors}
 \Hypertarget{classuser__management_1_1_network_manager_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classuser__management_1_1_network_manager_ab16cf8733e844785291ffe91fe941e4d}\index{user\_management.NetworkManager@{user\_management.NetworkManager}!NetworkManager@{NetworkManager}}
+\Hypertarget{classuser__management_1_1_network_manager_ae8ee9940c29d84150c451b19046d41ac}\index{user\_management.NetworkManager@{user\_management.NetworkManager}!NetworkManager@{NetworkManager}}
 \index{NetworkManager@{NetworkManager}!user\_management.NetworkManager@{user\_management.NetworkManager}}
 \doxysubsubsection{\texorpdfstring{NetworkManager()}{NetworkManager()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_network_manager_ab16cf8733e844785291ffe91fe941e4d} 
-user\+\_\+management.\+Network\+Manager.\+Network\+Manager (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{email}{, }\item[{String}]{password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_network_manager_ae8ee9940c29d84150c451b19046d41ac} 
+user\+\_\+management.\+Network\+Manager.\+Network\+Manager (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{email}{, }\item[{String}]{password}{, }\item[{\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}}}]{user\+Management}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

@@ -86,7 +86,7 @@ public class AnonymousUser {
         }
 
         // create new user account and add it to the system
-        Passenger newUser = new Passenger(username, email, password1);
+        Passenger newUser = new Passenger(username, email, password1, userManagement);
         userManagement.addRegisteredUser(newUser);
 
         // send email to the new user

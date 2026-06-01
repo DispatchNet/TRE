@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['usermanagement_2ejava_0',['UserManagement.java',['../_user_management_8java.html',1,'']]],
-  ['usertype_2ejava_1',['UserType.java',['../_user_type_8java.html',1,'']]]
+  ['traincompany_2ejava_0',['TrainCompany.java',['../_train_company_8java.html',1,'']]],
+  ['traintype_2ejava_1',['TrainType.java',['../_train_type_8java.html',1,'']]]
 ];

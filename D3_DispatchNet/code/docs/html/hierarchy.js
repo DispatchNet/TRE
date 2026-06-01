@@ -11,6 +11,7 @@ var hierarchy =
     [ "service_mangement.Dispatch", "classservice__mangement_1_1_dispatch.html", null ],
     [ "mail_service.Email", "classmail__service_1_1_email.html", null ],
     [ "infrastructure.GeoCoordinate", "classinfrastructure_1_1_geo_coordinate.html", null ],
+    [ "IO_operations.IO", "class_i_o__operations_1_1_i_o.html", null ],
     [ "infrastructure.Junction", "classinfrastructure_1_1_junction.html", null ],
     [ "infrastructure.Line", "classinfrastructure_1_1_line.html", null ],
     [ "mail_service.MailService", "interfacemail__service_1_1_mail_service.html", [

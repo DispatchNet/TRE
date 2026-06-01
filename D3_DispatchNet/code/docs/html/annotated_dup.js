@@ -7,6 +7,9 @@ var annotated_dup =
       [ "Network", "classinfrastructure_1_1_network.html", "classinfrastructure_1_1_network" ],
       [ "StationData", "classinfrastructure_1_1_station_data.html", "classinfrastructure_1_1_station_data" ]
     ] ],
+    [ "IO_operations", "namespace_i_o__operations.html", [
+      [ "IO", "class_i_o__operations_1_1_i_o.html", "class_i_o__operations_1_1_i_o" ]
+    ] ],
     [ "mail_service", "namespacemail__service.html", [
       [ "Email", "classmail__service_1_1_email.html", "classmail__service_1_1_email" ],
       [ "MailService", "interfacemail__service_1_1_mail_service.html", "interfacemail__service_1_1_mail_service" ],

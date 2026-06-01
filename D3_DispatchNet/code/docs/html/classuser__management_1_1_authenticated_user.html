@@ -136,10 +136,10 @@ Inheritance diagram for user_management.AuthenticatedUser:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a29b02562dec2e2a0f935157635d70c3e" id="r_a29b02562dec2e2a0f935157635d70c3e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a29b02562dec2e2a0f935157635d70c3e">AuthenticatedUser</a> ()</td></tr>
-<tr class="memdesc:a29b02562dec2e2a0f935157635d70c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty Constructor for <a class="el" href="classuser__management_1_1_authenticated_user.html" title="Abstract class representing an authenticated user in the system, containing their credentials and use...">AuthenticatedUser</a> class.  <br /></td></tr>
-<tr class="memitem:a5fe1fed4db347cd45453709e9254e601" id="r_a5fe1fed4db347cd45453709e9254e601"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5fe1fed4db347cd45453709e9254e601">AuthenticatedUser</a> (String username, String email, String password, <a class="el" href="enumuser__management_1_1_user_type.html">UserType</a> userType)</td></tr>
-<tr class="memdesc:a5fe1fed4db347cd45453709e9254e601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classuser__management_1_1_authenticated_user.html" title="Abstract class representing an authenticated user in the system, containing their credentials and use...">AuthenticatedUser</a> class.  <br /></td></tr>
+<tr class="memitem:acc19eed0bd6c137afba3df938aaa5e7f" id="r_acc19eed0bd6c137afba3df938aaa5e7f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acc19eed0bd6c137afba3df938aaa5e7f">AuthenticatedUser</a> (<a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a> userManagement)</td></tr>
+<tr class="memdesc:acc19eed0bd6c137afba3df938aaa5e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty Constructor for <a class="el" href="classuser__management_1_1_authenticated_user.html" title="Abstract class representing an authenticated user in the system, containing their credentials and use...">AuthenticatedUser</a> class.  <br /></td></tr>
+<tr class="memitem:ae9a55c997dc9d8c12936fa302f5d4e19" id="r_ae9a55c997dc9d8c12936fa302f5d4e19"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae9a55c997dc9d8c12936fa302f5d4e19">AuthenticatedUser</a> (String username, String email, String password, <a class="el" href="enumuser__management_1_1_user_type.html">UserType</a> userType, <a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a> userManagement)</td></tr>
+<tr class="memdesc:ae9a55c997dc9d8c12936fa302f5d4e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classuser__management_1_1_authenticated_user.html" title="Abstract class representing an authenticated user in the system, containing their credentials and use...">AuthenticatedUser</a> class.  <br /></td></tr>
 <tr class="memitem:a09d3ea4888c58c57a2f381fb32034d42" id="r_a09d3ea4888c58c57a2f381fb32034d42"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a09d3ea4888c58c57a2f381fb32034d42">getUsername</a> ()</td></tr>
 <tr class="memdesc:a09d3ea4888c58c57a2f381fb32034d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the username of the authenticated user.  <br /></td></tr>
 <tr class="memitem:abea2507b50591d83e3a2b0f3637fe189" id="r_abea2507b50591d83e3a2b0f3637fe189"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#abea2507b50591d83e3a2b0f3637fe189">getEmail</a> ()</td></tr>
@@ -160,12 +160,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4ed89b9bcafa4f86a1637b251212e825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this authenticated user is equal to another object.  <br /></td></tr>
 <tr class="memitem:a4a09cae41928361de7dd4888427b8760" id="r_a4a09cae41928361de7dd4888427b8760"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4a09cae41928361de7dd4888427b8760">hashCode</a> ()</td></tr>
 <tr class="memdesc:a4a09cae41928361de7dd4888427b8760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a hash code for the authenticated user.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:afc13e6811e6fbd798dc8f8eadecb5c9f" id="r_afc13e6811e6fbd798dc8f8eadecb5c9f"><td class="memItemLeft">final <a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a>&#160;</td><td class="memItemRight"><a class="el" href="#afc13e6811e6fbd798dc8f8eadecb5c9f">userManagement</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract class representing an authenticated user in the system, containing their credentials and user type. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a29b02562dec2e2a0f935157635d70c3e" name="a29b02562dec2e2a0f935157635d70c3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29b02562dec2e2a0f935157635d70c3e">&#9670;&#160;</a></span>AuthenticatedUser() <span class="overload">[1/2]</span></h2>
+<a id="acc19eed0bd6c137afba3df938aaa5e7f" name="acc19eed0bd6c137afba3df938aaa5e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc19eed0bd6c137afba3df938aaa5e7f">&#9670;&#160;</a></span>AuthenticatedUser() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,7 +180,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">user_management.AuthenticatedUser.AuthenticatedUser </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a></td>          <td class="paramname"><span class="paramname"><em>userManagement</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -191,8 +195,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5fe1fed4db347cd45453709e9254e601" name="a5fe1fed4db347cd45453709e9254e601"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fe1fed4db347cd45453709e9254e601">&#9670;&#160;</a></span>AuthenticatedUser() <span class="overload">[2/2]</span></h2>
+<a id="ae9a55c997dc9d8c12936fa302f5d4e19" name="ae9a55c997dc9d8c12936fa302f5d4e19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a55c997dc9d8c12936fa302f5d4e19">&#9670;&#160;</a></span>AuthenticatedUser() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +222,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="enumuser__management_1_1_user_type.html">UserType</a></td>          <td class="paramname"><span class="paramname"><em>userType</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="enumuser__management_1_1_user_type.html">UserType</a></td>          <td class="paramname"><span class="paramname"><em>userType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a></td>          <td class="paramname"><span class="paramname"><em>userManagement</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -546,6 +555,29 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="afc13e6811e6fbd798dc8f8eadecb5c9f" name="afc13e6811e6fbd798dc8f8eadecb5c9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc13e6811e6fbd798dc8f8eadecb5c9f">&#9670;&#160;</a></span>userManagement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a> user_management.AuthenticatedUser.userManagement</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
