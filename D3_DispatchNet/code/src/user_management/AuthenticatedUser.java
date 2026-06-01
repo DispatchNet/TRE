@@ -12,7 +12,7 @@ public abstract class AuthenticatedUser {
     private String email;
     private String password;
     private UserType userType;
-    private final UserManagement userManagement;
+    protected final UserManagement userManagement; // must be visible to subclasses
 
     /**
     * @brief Empty Constructor for AuthenticatedUser class
