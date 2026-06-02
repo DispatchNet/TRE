@@ -1,5 +1,6 @@
 package infrastructure;
 
+import java.util.Collections;
 import java.util.Set;
 import java.util.UUID;
 
@@ -43,7 +44,7 @@ public class StationData {
    * @return the platforms
    */
   public Set<String> getPlatforms() {
-    return platforms;
+    return Collections.unmodifiableSet(platforms);
   }
 
   /**

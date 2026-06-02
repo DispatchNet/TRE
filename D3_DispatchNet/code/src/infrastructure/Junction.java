@@ -2,6 +2,7 @@ package infrastructure;
 
 import java.util.Optional;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 import service_mangement.ServiceSet;
@@ -122,7 +123,7 @@ public class Junction {
    * @return this junction's connected lines
    */
   public List<Line> getConnectedLines() {
-    return connectedLines;
+    return Collections.unmodifiableList(connectedLines);
   }
 
   /**
@@ -130,6 +131,6 @@ public class Junction {
    * @return this junction's services
    */
   public List<ServiceSet> getServices() {
-    return services;
+    return Collections.unmodifiableList(services);
   }
 };
