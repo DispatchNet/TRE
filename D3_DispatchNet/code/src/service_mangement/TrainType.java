@@ -41,6 +41,11 @@ public class TrainType {
   String getIdentifier() {
     return this.identifier;
   }
+
+  /**
+   * @brief Get whether this train can carry passengers or not
+   * @return true if the train can carry passengers, otherwise false
+   */
   boolean isPassenger() {
     return this.isPassenger;
   }
