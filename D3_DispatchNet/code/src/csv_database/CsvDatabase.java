@@ -267,7 +267,7 @@ public class CsvDatabase {
         output.add("id,junctionId,platforms");
 
         // convert each station data to a CSV line and add to output
-        for (Junction junction : network.getJunctions()) {
+        for (Junction junction : network.getJunctions().values()) {
             junction.getStationData().ifPresent(stationData ->
                 output.add(String.join(",",
                     escapeCsv(stationData.getId()),
@@ -296,7 +296,7 @@ public class CsvDatabase {
         output.add("id,name,latitude,longitude,stationDataId");
         
         // convert each junction to a CSV line and add to output
-        for (Junction junction : network.getJunctions()) {
+        for (Junction junction : network.getJunctions().values()) {
             String stationDataId = junction.getStationData().
                 map(StationData::getId).orElse("");
 
@@ -330,7 +330,7 @@ public class CsvDatabase {
         output.add("id,junction1Id,junction2Id,lengthMeters,maxSpeedKpH,nTracks");
 
         // convert each line to a CSV line and add to output
-        for (Line line : network.getLines()) {
+        for (Line line : network.getLines().values()) {
             output.add(String.join(",",
                 escapeCsv(line.getId()),
                 escapeCsv(line.getJunction1().getId()),
