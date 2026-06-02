@@ -1,6 +1,7 @@
 package infrastructure;
 
 import java.util.Set;
+import java.util.UUID;
 
 /**
  * @class StationData
@@ -8,14 +9,33 @@ import java.util.Set;
  * @see Junction
  */
 public class StationData {
-  Set<String> platforms;
+  private final String id;
+  private Set<String> platforms;
   
   /**
-   * @brief Constructs a StationsData object
+   * @brief Constructs a StationData object with a generated id
    * @param platforms A set of platforms
    */
-  StationData(Set<String> platforms) {
+  public StationData(Set<String> platforms) {
+    this(UUID.randomUUID().toString(), platforms);
+  }
+
+  /**
+   * @brief Constructs a StationData object with an explicit id
+   * @param id The unique identifier of the station data
+   * @param platforms A set of platforms
+   */
+  public StationData(String id, Set<String> platforms) {
+    this.id = id == null ? UUID.randomUUID().toString() : id;
     this.platforms = platforms;
+  }
+  
+  /**
+   * @brief Gets the unique identifier of this station data
+   * @return the identifier
+   */
+  public String getId() {
+    return id;
   }
   
   /**

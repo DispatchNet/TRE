@@ -30,6 +30,21 @@ public abstract class EndUser extends AuthenticatedUser {
     }
 
     /**
+     * @brief Constructor for EndUser class with explicit id
+     * @param id The unique identifier of the end user
+     * @param username The username of the end user
+     * @param email The email of the end user
+     * @param password The password of the end user
+     * @param userType The type of the user
+     */
+    public EndUser(
+        String id, String username, String email, String password, UserType userType,
+        UserManagement userManagement
+    ) {
+        super(id, username, email, password, userType, userManagement);
+    }
+
+    /**
      * @brief Prints the user's data, that is username and email
      */
     public void viewData() {

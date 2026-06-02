@@ -1,6 +1,8 @@
 package infrastructure;
 
 import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
 import service_mangement.ServiceSet;
 
 /**
@@ -12,6 +14,12 @@ public class Network {
   List<Junction> junctions;
   List<Line> lines;
   List<ServiceSet> services;
+
+  public Network() {
+    this.junctions = new ArrayList<>();
+    this.lines = new ArrayList<>();
+    this.services = new ArrayList<>();
+  }
 
   /**
    * @brief Adds a Junction to the network
@@ -37,4 +45,19 @@ public class Network {
     );
   }
 
+  /**
+   * @brief Adds an existing Line object to the network.
+   * @param line The line to add
+   */
+  public void addLine(Line line) {
+    this.lines.add(line);
+  }
+
+  public List<Junction> getJunctions() {
+    return Collections.unmodifiableList(junctions);
+  }
+
+  public List<Line> getLines() {
+    return Collections.unmodifiableList(lines);
+  }
 }

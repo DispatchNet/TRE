@@ -19,6 +19,15 @@ public class NetworkManager extends AuthenticatedUser {
     }
 
     /**
+     * @brief Constructor for NetworkManager class with explicit id
+     */
+    public NetworkManager(
+        String id, String username, String email, String password, UserManagement userManagement
+    ) {
+        super(id, username, email, password, UserType.NetworkManager, userManagement);
+    }
+
+    /**
      * @brief Views the transportation network
      */
     public void viewNetwork() {

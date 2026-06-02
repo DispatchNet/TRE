@@ -31,6 +31,15 @@ public class Passenger extends EndUser {
     }
 
     /**
+     * @brief Constructor for Passenger class with explicit id
+     */
+    public Passenger(
+        String id, String username, String email, String password, UserManagement userManagement
+    ) {
+        super(id, username, email, password, UserType.Passenger, userManagement);
+    }
+
+    /**
      * @brief Gets the list of tickets purchased by the passenger
      * @return A list of Ticket 
      */

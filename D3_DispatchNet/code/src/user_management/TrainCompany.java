@@ -20,6 +20,15 @@ public class TrainCompany extends EndUser {
     }
 
     /**
+     * @brief Constructor for TrainCompany class with explicit id
+     */
+    public TrainCompany(
+        String id, String username, String email, String password, UserManagement userManagement
+    ) {
+        super(id, username, email, password, UserType.TrainCompany, userManagement);
+    }
+
+    /**
      * @brief Creates a new service request
      */
     public void createServiceRequest() {

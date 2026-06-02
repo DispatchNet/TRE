@@ -3,6 +3,7 @@ package user_management;
 import java.util.ArrayList;
 import java.util.List;
 
+import csv_database.CsvDatabase;
 import mail_service.Email;
 import mail_service.MailService;
 import mail_service.MailServiceFactory;
@@ -22,12 +23,14 @@ public class UserManagement {
     private final static IO io = new IO();
     // User session to track the current active user (only one at a time)
     private final static UserSession session = new UserSession();
+    private final CsvDatabase csvDatabase = new CsvDatabase();
 
     /**
      * @brief Constructor for UserManagement class
      */
     public UserManagement() {
         session.setAnonymousUser(new AnonymousUser(this));
+        authenticatedUsers.addAll(csvDatabase.loadAuthenticatedUsers(this));
     }
 
     /**
@@ -46,6 +49,7 @@ public class UserManagement {
      */
     public void addAuthenticatedUser(AuthenticatedUser user) {
         authenticatedUsers.add(user);
+        csvDatabase.saveAuthenticatedUsers(authenticatedUsers);
     }
 
 
@@ -56,6 +60,7 @@ public class UserManagement {
      */
     public void removeAuthenticatedUser(AuthenticatedUser user) {
         authenticatedUsers.remove(user);
+        csvDatabase.saveAuthenticatedUsers(authenticatedUsers);
     }
 
 

@@ -3,6 +3,7 @@ package infrastructure;
 import java.util.Optional;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import service_mangement.ServiceSet;
 
 /**
@@ -10,6 +11,7 @@ import service_mangement.ServiceSet;
  * @brief A Class representing a junction's data.
  */
 public class Junction {
+  private final String id;
   GeoCoordinate location;
   Optional<StationData> stationData;
   String name;
@@ -17,7 +19,7 @@ public class Junction {
   List<ServiceSet> services;
   
   /**
-   * @brief Create a Junction
+   * @brief Create a Junction with generated id
    * @param location the location of this station as GPS coordinates
    * @param stationData the data for this station or {@code Optional.empty()}.
    * @param name the name of this station
@@ -30,13 +32,36 @@ public class Junction {
     List<Line> connectedLines,
     List<ServiceSet> services
   ) {
+    this(UUID.randomUUID().toString(), location, stationData, name, connectedLines, services);
+  }
+
+  /**
+   * @brief Create a Junction with explicit id
+   */
+  public Junction(
+    String id,
+    GeoCoordinate location, 
+    Optional<StationData> stationData,
+    String name,
+    List<Line> connectedLines,
+    List<ServiceSet> services
+  ) {
+    this.id = id == null ? UUID.randomUUID().toString() : id;
     this.location = location;
     this.stationData = stationData;
     this.name = name;
-    this.connectedLines = new ArrayList<>();
-    this.services = new ArrayList<>();
+    this.connectedLines = connectedLines == null ? new ArrayList<>() : new ArrayList<>(connectedLines);
+    this.services = services == null ? new ArrayList<>() : new ArrayList<>(services);
   }
   
+  /**
+   * @brief Get the unique identifier of this Junction
+   * @return this junction's id
+   */
+  public String getId() {
+    return id;
+  }
+
   /**
    * @brief Get this Junction's Location
    * @return this junction's location

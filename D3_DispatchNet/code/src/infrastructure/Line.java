@@ -1,9 +1,12 @@
 package infrastructure;
+
+import java.util.UUID;
 /**
  * @class Line
  * @brief A Class representing a line between 2 Junction elements.
  */
 public class Line {
+  private final String id;
   Junction junction1;
   Junction junction2;
   int lengthMeters;
@@ -11,7 +14,7 @@ public class Line {
   int nTracks;
   
   /**
-   * @brief Constructs a Line
+   * @brief Constructs a Line with generated id
    * @param j1 A Junction in the network
    * @param j2 A Junction in the network
    * @param lengthMeters The length of this line in meters
@@ -21,10 +24,18 @@ public class Line {
    * @throws NullPointerException if the junctions are null.
    * @implNote Also adds this line to the junction's adjacencies.
    */
-  Line(Junction j1, Junction j2, int lengthMeters, int maxSpeedKpH, int nTracks) {
+  public Line(Junction j1, Junction j2, int lengthMeters, int maxSpeedKpH, int nTracks) {
+    this(UUID.randomUUID().toString(), j1, j2, lengthMeters, maxSpeedKpH, nTracks);
+  }
+
+  /**
+   * @brief Constructs a Line with explicit id
+   */
+  public Line(String id, Junction j1, Junction j2, int lengthMeters, int maxSpeedKpH, int nTracks) {
     assert j1 != null;
     assert j2 != null;
 
+    this.id = id == null ? UUID.randomUUID().toString() : id;
     j1.connectedLines.add(this);
     j2.connectedLines.add(this);
     
@@ -33,6 +44,14 @@ public class Line {
     this.lengthMeters = lengthMeters;
     this.maxSpeedKpH = maxSpeedKpH;
     this.nTracks = nTracks;
+  }
+
+  /**
+   * @brief Gets the unique identifier for this line
+   * @return the id
+   */
+  public String getId() {
+    return id;
   }
 
   /**
