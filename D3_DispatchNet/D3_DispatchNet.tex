@@ -1,0 +1,81 @@
+\documentclass[12pt]{report}
+
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue
+}
+
+\setlength{\headheight}{14.49998pt}
+\addtolength{\topmargin}{-2.49998pt}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\title{\bf{Software Engineering Project}}
+\author{\bf{DispatchNet:} \\ Alessio Zanon \\ Leonardo Tonetta \\ Luca Fiorini}
+\date{\it{Use Case \& Class Analysis}}
+
+\pagestyle{fancy}
+\fancyhead[l]{DispatchNet}
+\fancyhead[c]{Project TRE}
+\fancyhead[r]{v1.2}
+\fancyfoot[c]{\thepage}
+
+
+\renewcommand\bf[1]{\textbf{#1}}
+\renewcommand\it[1]{\textit{#1}}
+\newcommand\un[1]{\underline{#1}}
+\newcommand\hyl[1]{\hyperref[#1]{#1}}
+\newcommand\subs[2]{\subsection{#1}\label{#2}}
+\newcommand\ssubs[2]{\subsubsection{#1}\label{#2}}
+\newcommand\gitter[1]{
+	\href{https://github.com/DispatchNet/TRE/blob/main/#1}{Github here}
+}
+\newcommand\imgarg[2]{\includegraphics[width=#2\textwidth]{#1}} 
+\newcommand\imgins[1]{
+	\begin{center}
+		\footnotesize
+		\imgarg{#1}{0.76}
+		
+		Original image can be found on our \gitter{#1}
+	\end{center}
+}
+
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents \label{Contents}
+
+\section*{Readability notes}
+\bf{Bold} words are system-important constructs. \newline
+\un{Underlined} nouns are actors of the system. \newline
+\it{Italic} words are special keywords to denote important limits of the project. \newline
+\hyperref[Contents]{Hyperlinks} in reference to sections and subsections will be blue. \newline
+\href{https:\\www.google.com}{Hyperlinks} to external web content will be in magenta. \newline
+
+\newpage
+
+\addcontentsline{toc}{section}{Purpose}
+\section*{Purpose}
+This document describes the use TODO
+
+The purpose of this document is to: 
+\begin{itemize}
+	\item TODO
+\end{itemize}
+
+\newpage
+
+\chapter{TODO CLEAN CLASS DIAGRAM}
+Original, up-to-date file of D1 and D2 available at our \gitter{D1_DispatchNet/D1_DispatchNet.pdf} and \gitter{D2_DispatchNet/D2_DispatchNet.pdf} respectively
+
+
+\chapter{TODO D3}
+\input{D3_BodyText.tex}
+
+\end{document}
