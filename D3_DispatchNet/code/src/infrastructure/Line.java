@@ -101,7 +101,8 @@ public class Line {
    */
   public void setJunction1(Junction junction) {
     this.junction1.connectedLines.remove(this);
-    this.junction1 = junction; // TODO: add this line to the new junction's adjacencies?
+    this.junction1 = junction;
+    this.junction1.connectedLines.add(this);
   }
   
   /**
@@ -110,8 +111,9 @@ public class Line {
    * @implNote also removes this line from the junction's adjacencies.
    */
   public void setJunction2(Junction junction) {
-    this.junction1.connectedLines.remove(this); // TODO: this should be junction2
-    this.junction2 = junction; // TODO: add this line to the new junction's adjacencies?
+    this.junction2.connectedLines.remove(this);
+    this.junction2 = junction;
+    this.junction2.connectedLines.add(this);
   }
 
   /**
