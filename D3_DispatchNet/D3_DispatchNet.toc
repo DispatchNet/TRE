@@ -1,3 +1,10 @@
 \contentsline {section}{Purpose}{2}{section*.2}%
 \contentsline {chapter}{\numberline {1}TODO CLEAN CLASS DIAGRAM}{3}{chapter.1}%
 \contentsline {chapter}{\numberline {2}TODO D3}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Architecture}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Implementation Language}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Database}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Dependencies}{4}{section.2.4}%
+\contentsline {section}{\numberline {2.5}User Flows}{4}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Code Preview}{4}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Team roles}{4}{section.2.7}%

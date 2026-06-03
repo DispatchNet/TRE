@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.21)  2 JUN 2026 17:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.21)  3 JUN 2026 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -368,13 +368,13 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `D3_DispatchNet.out' has not changed.
-(rerunfilecheck)             Checksum: 38D2CDBD152D7C6EE8860C55D763CB14;332.
+(rerunfilecheck)             Checksum: 0F340914FAD1003DBAB6CAD6E3E44876;1158.
  ) 
 Here is how much of TeX's memory you used:
- 10170 strings out of 469515
- 156840 string characters out of 5470807
- 565949 words of memory out of 5000000
- 38706 multiletter control sequences out of 15000+600000
+ 10184 strings out of 469515
+ 157008 string characters out of 5470807
+ 568963 words of memory out of 5000000
+ 38713 multiletter control sequences out of 15000+600000
  634833 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,11n,79p,259b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -382,10 +382,10 @@ Here is how much of TeX's memory you used:
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public
 /cm-super/sfrm1200.pfb>
-Output written on D3_DispatchNet.pdf (5 pages, 53925 bytes).
+Output written on D3_DispatchNet.pdf (5 pages, 59516 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 109 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
