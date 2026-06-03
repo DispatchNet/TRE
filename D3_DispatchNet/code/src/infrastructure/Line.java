@@ -32,8 +32,9 @@ public class Line {
    * @brief Constructs a Line with explicit id
    */
   public Line(String id, Junction j1, Junction j2, int lengthMeters, int maxSpeedKpH, int nTracks) {
-    assert j1 != null;
-    assert j2 != null;
+    if (j1 == null || j2 == null) {
+      throw new NullPointerException("Line can't be connected to null junction");
+    };
 
     this.id = id == null ? UUID.randomUUID().toString() : id;
     j1.connectedLines.add(this);
@@ -98,8 +99,12 @@ public class Line {
    * @brief Replaces junction1 of this Line.
    * @param junction the new junction.
    * @implNote also removes this line from the junction's adjacencies.
+   * @throws NullPointerExcpetion if the junction is null
    */
   public void setJunction1(Junction junction) {
+    if (junction == null) {
+      throw new NullPointerException("Line can't be connected to null Junction");
+    };
     this.junction1.connectedLines.remove(this);
     this.junction1 = junction;
     this.junction1.connectedLines.add(this);
@@ -109,8 +114,12 @@ public class Line {
    * @brief Replaces junction2 of this Line.
    * @param junction the new junction.
    * @implNote also removes this line from the junction's adjacencies.
+   * @throws NullPointerExcpetion if the junction is null
    */
   public void setJunction2(Junction junction) {
+    if (junction == null) {
+      throw new NullPointerException("Line can't be connected to null Junction");
+    };
     this.junction2.connectedLines.remove(this);
     this.junction2 = junction;
     this.junction2.connectedLines.add(this);
