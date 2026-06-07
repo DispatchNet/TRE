@@ -1,10 +1,13 @@
 package infrastructure;
 
 import java.util.Optional;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+
+import departure.Departure;
 import service_mangement.ServiceSet;
 
 /**
@@ -132,5 +135,35 @@ public class Junction {
    */
   public List<ServiceSet> getServices() {
     return Collections.unmodifiableList(services);
+  }
+
+  /**
+   * @brief Get the departures from this junction (Includes services that don't stop)
+   * @return the departures
+   */
+  public List<Departure> getDepartures() {
+    return getServices().stream().map(
+      service -> {
+        var steps = service.getSteps();
+        var dispatches = service.getDispatches();
+        var departures = new ArrayList<Departure>();
+        int total_travel_time = 0;
+
+        for (var step : steps) {
+          total_travel_time += step.getTravelMinutes();
+          total_travel_time += step.getStopData().map(val -> val.getWaitMinutes()).orElse(0);
+          if(step.getJunction() == this) {
+            for (var dispatch : dispatches) {
+                departures.add(
+                  new Departure(step,service,dispatch.getDispatchTime().plusMinutes(total_travel_time)
+                )
+              );
+            }
+          }
+        }
+
+        return departures;
+      }
+    ).flatMap(departures -> departures.stream()).toList();
   }
 };
