@@ -1,12 +1,66 @@
+\section{Project Structure}
+The structure of the project is shown in \textcolor{red}{TODO: figure.x}. It is composed of: 
+\begin{itemize}
+
+    \item the main modules:
+    \begin{itemize}
+        \item departure: \textcolor{red}{TODO: ?};
+        \item infrastructure: the network and its management;
+        \item path\_finding: the algorithm to find a path between stations;
+        \item service\_management: the management of services;
+        \item user\_management: the management of users and their authentication.
+    \end{itemize}
+
+    \item secondary tools:
+    \begin{itemize}
+        \item csv\_database: the actual database and its management;
+        \item IO\_operations: input/output operation to interact with the user from terminal;
+        \item mail\_service: integration with a possible mail service, as well as a temporary mock one;
+    \end{itemize}
+    
+\end{itemize}
+
+\textcolor{red}{TODO: add photo in folder structure }
+
 \section{Architecture}
 
 \section{Implementation Language}
 
 \section{Database}
 
+
+
 \section{Dependencies}
 
 \section{User Flows}
+
+\subsection{User Management}
+The following user diagram describes the actions related to the user management and user authentication, common to all the users.
+
+It provides different pages depending on the type of user. An authenticated user (I.E. passenger or train company, not network manager) can delete, view data (Account Page), change data or logout (also the network manager).\\
+An anonymous user can register, reset its password or login.
+
+\textcolor{red}{TODO: add photo in folder user\_diagrams }
+
+\subsection{Ticketing}
+The following user diagram describes the flow of the ticketing component, started from the \hyl{Passenger}'s diagram.
+
+\textcolor{red}{TODO: add photo in folder user\_diagrams }
+
+\subsection{Passenger}
+The following user diagram describes the actions the passenger can take. It can go to \hyl{User Management} \textcolor{red}{TODO: add hyperlink (everywhere) }, view its ticket history or start a path finding procedure. In the last two it can move to the \hyl{Ticketing} flow.
+
+\textcolor{red}{TODO: add photo in folder user\_diagrams }
+
+\subsection{Train Company}
+The following user diagram describes the actions the train company can take. It can go to \hyl{User Management} or to the service management.
+
+\textcolor{red}{TODO: add photo in folder user\_diagrams }
+
+\subsection{Network Manager}
+The following user diagram describes the actions the network manager can take: managing the network and its elements.
+
+\textcolor{red}{TODO: add photo in folder user\_diagrams }
 
 \section{Code Preview}
 
