@@ -1,6 +1,2 @@
 id,username,email,password,userType
 0e3c90bc-0861-4019-8e82-8b56c0275106,Admin,admin@dispatchnet.it,VerySecurePassword1234,NetworkManager
-934254b8-04ad-4cba-b828-4f95928d5d75,Admin,admin@dispatchnet.it,VerySecurePassword1234,NetworkManager
-7251fa0d-478a-4f0e-a092-4264c402498c,Admin,admin@dispatchnet.it,VerySecurePassword1234,NetworkManager
-4297ea64-f6c1-4327-93f2-442d6c7c7dad,trenitalia,trenitalia@real.it,DefaultPassword1,TrainCompany
-0a82e05f-cef9-4f9e-8e02-9dd14e31635a,trenitalia,trenitalia@real.it,DefaultPassword1,Passenger
