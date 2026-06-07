@@ -82,4 +82,34 @@ public class UserSession {
         }
         return "no-user";
     }
+
+    /**
+     * @brief Main method for testing the UserSession class functionality.
+     * @param args Command-line arguments
+     */
+    public static void main(String[] args) {
+        // Create a user session and test its functionality
+        UserSession session = new UserSession();
+        System.out.println("Current user: " + session.getCurrentUserIdentifier());
+
+        // Create an anonymous user and set it in the session
+        AnonymousUser anon = new AnonymousUser(new UserManagement());
+        session.setAnonymousUser(anon);
+        System.out.println("Current user after setting anonymous: " +
+            session.getCurrentUserIdentifier());
+
+        // Create an authenticated user and set it in the session
+        AuthenticatedUser auth = new Passenger(
+            "testuser", "test@example.com", 
+            "Password1", new UserManagement()
+        );
+        session.setAuthenticatedUser(auth);
+        System.out.println("Current user after setting authenticated: " +
+            session.getCurrentUserIdentifier());
+
+        // Clear the session
+        session.clearSession();
+        System.out.println("Current user after clearing session: " +
+            session.getCurrentUserIdentifier());
+    }
 }

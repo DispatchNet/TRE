@@ -30,10 +30,18 @@ public class AnonymousUser {
         return identifier;
     }
 
+    /** 
+     * @brief Register a new user account from the anonymous user state. 
+     * (wrapper function)
+    */
+    public void register() {
+        register(false);
+    }
+
     /**
      * @brief Register a new user account from the anonymous user state.
      */
-    public void register() {
+    public void register(boolean fromNetworkManager) {
         String username, email, password1, password2;
 
         // ask username until username is unique
@@ -62,30 +70,50 @@ public class AnonymousUser {
             }
         } while (!emailUnique);
 
-        // ask password until password is confirmed and meets security requirements
-        while (true) {
-            password1 = userManagement.promptPassword("Enter password:");
-            password2 = userManagement.promptPassword("Confirm password:");
+        // if registering from NetworkManager, skip password input and use a default password
+        if(fromNetworkManager) {
+            password1 = "DefaultPassword1";
+        }
+        else {
+            // ask password until password is confirmed and meets security requirements
+            while (true) {
+                password1 = userManagement.promptPassword("Enter password:");
+                password2 = userManagement.promptPassword("Confirm password:");
 
-            if (!password1.equals(password2)) {
-                userManagement.displayError(
-                    "Passwords do not match. Please try again."
-                );
-                continue;
+                if (!password1.equals(password2)) {
+                    userManagement.displayError(
+                        "Passwords do not match. Please try again."
+                    );
+                    continue;
+                }
+
+                if (!userManagement.checkPasswordSecurity(password1)) {
+                    userManagement.displayError(
+                        "Password does not meet security requirements." + 
+                        " Please choose a stronger password."
+                    );
+                    continue;
+                }
+
+                break;
             }
-
-            if (!userManagement.checkPasswordSecurity(password1)) {
-                userManagement.displayError(
-                    "Password does not meet security requirements." + 
-                    " Please choose a stronger password."
-                );
-                continue;
-            }
-
-            break;
         }
 
         // create new user account and add it to the system
+        if(fromNetworkManager) {
+            // if registering from NetworkManager, create a TrainCompany account
+            TrainCompany newUser = new TrainCompany(username, email, password1, userManagement);
+            userManagement.addAuthenticatedUser(newUser);
+            // do not log the new user in as the network manager has the session
+        }
+        else {
+            // otherwise, create a Passenger account
+            Passenger newUser = new Passenger(username, email, password1, userManagement);
+            userManagement.addAuthenticatedUser(newUser);
+
+            // log the new user in the newly created account
+            userManagement.loginUser(newUser);
+        }
         Passenger newUser = new Passenger(username, email, password1, userManagement);
         userManagement.addAuthenticatedUser(newUser);
 
@@ -97,9 +125,6 @@ public class AnonymousUser {
                 "Your account has been successfully created."
             )
         );
-
-        // log the new user in the newly created account
-        userManagement.loginUser(newUser);
     }
 
     /**
@@ -218,5 +243,37 @@ public class AnonymousUser {
         userManagement.loginUser(user);
     }
 
-    
+    /**
+     * @brief Main method for testing AnonymousUser behavior.
+     * @param args Command-line arguments
+     */
+    public static void main(String[] args) {
+        // Create a mock UserManagement for testing
+        UserManagement userManagement = new UserManagement();
+
+        // Test construction of AnonymousUser
+        AnonymousUser anon = new AnonymousUser(userManagement);
+        System.out.println("Anonymous identifier: " + anon.getIdentifier());
+
+        // Test registration 
+        System.out.println("Registering new user...");
+        anon.register();
+        System.out.println("Authenticated users after register: " + 
+            userManagement.getAuthenticatedUsers().size());
+
+        // Test login
+        System.out.println("Logging out and then logging back in...");
+        userManagement.logoutUser();
+        anon.login();
+        System.out.println("Current authenticated user: " + 
+            userManagement.getSession().getAuthenticatedUser().getUsername());
+
+        // Test password reset
+        System.out.println("Resetting password for existing user...");
+        userManagement.logoutUser();
+        anon.resetPassword();
+        System.out.println("Password reset completed for: " + 
+            userManagement.getSession().getAuthenticatedUser().getUsername());
+    }
 }
+

@@ -22,4 +22,14 @@ public enum UserType {
                 return "Unknown";
         }
     }
+
+    /**
+     * @brief Main method for testing UserType values.
+     * @param args Command-line arguments
+     */
+    public static void main(String[] args) {
+        for (UserType type : UserType.values()) {
+            System.out.println(type + " => " + type.toString());
+        }
+    }
 }

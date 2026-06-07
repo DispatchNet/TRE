@@ -110,4 +110,28 @@ public class NetworkManager extends AuthenticatedUser {
     public void reviewServiceRequest(String serviceRequest) {
         // TODO: implement service request review
     }
+
+    /**
+     * @brief Creates a new account for a train company
+     */
+    public void createTrainCompanyAccount() {
+        new AnonymousUser(userManagement).register(true);
+    }
+
+    /**
+     * @brief Main method for testing NetworkManager behavior.
+     * @param args Command-line arguments
+     */
+    public static void main(String[] args) {
+        // Test creating a new train company account
+        UserManagement userManagement = new UserManagement();
+        new AnonymousUser(userManagement).login();
+
+        NetworkManager networkManager = 
+            (NetworkManager) userManagement.
+            getAuthenticatedUserByUsername("Admin");
+        
+        System.out.println("Creating a new train company account...");
+        networkManager.createTrainCompanyAccount();
+    }
 }

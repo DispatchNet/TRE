@@ -170,4 +170,35 @@ public abstract class EndUser extends AuthenticatedUser {
     public void deleteAccount() {
         userManagement.logoutUser();
     }
+
+    /**
+     * @brief Main method for testing EndUser behavior.
+     * @param args Command-line arguments
+     */
+    public static void main(String[] args) {
+        // Create a UserManagement instance for testing
+        UserManagement userManagement = new UserManagement();
+
+        // Create an EndUser instance for testing (using Passenger as a concrete subclass)
+        EndUser user = new Passenger(
+            "testUser",
+            "test@example.com",
+            "Password1",
+            userManagement
+        );
+
+        // Test viewData
+        System.out.println("Before changeData:");
+        user.viewData();
+
+        // Test changeData
+        user.changeData();
+        System.out.println("After changeData:");
+        user.viewData();
+
+        // Test deleteAccount
+        user.deleteAccount();
+        System.out.println("Session after deleteAccount: " + 
+            userManagement.getSession().getCurrentUserIdentifier());
+    }
 }

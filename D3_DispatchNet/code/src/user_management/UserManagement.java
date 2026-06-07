@@ -31,6 +31,15 @@ public class UserManagement {
     public UserManagement() {
         session.setAnonymousUser(new AnonymousUser(this));
         authenticatedUsers.addAll(csvDatabase.loadAuthenticatedUsers(this));
+
+        // create default admin account if it doesn't exist
+        if (getAuthenticatedUserByUsername("admin") == null) {
+            NetworkManager admin = new NetworkManager(
+                "Admin", "admin@dispatchnet.it", "VerySecurePassword1234", this
+            );
+
+            addAuthenticatedUser(admin);
+        }
     }
 
     /**
@@ -41,8 +50,6 @@ public class UserManagement {
         return new ArrayList<>(authenticatedUsers);
     }
 
-
-
     /**
      * @brief Adds a authenticated authenticated user to the system
      * @param user The authenticated user to add
@@ -52,8 +59,6 @@ public class UserManagement {
         csvDatabase.saveAuthenticatedUsers(authenticatedUsers);
     }
 
-
-
     /**
      * @brief Removes an authenticated user from the system
      * @param user The authenticated user to remove
@@ -62,8 +67,6 @@ public class UserManagement {
         authenticatedUsers.remove(user);
         csvDatabase.saveAuthenticatedUsers(authenticatedUsers);
     }
-
-
 
     /**
      * @brief Sends an email to a user
