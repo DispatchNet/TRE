@@ -47,9 +47,9 @@ public class CsvDatabase {
      * @brief Constructor for CsvDatabase.
      */
     public CsvDatabase() {
-        // Ensure data directory and files exist
+        // Ensure data directory and CSV files exist before any read/write operations.
         try {
-            initializeFiles();
+            initializeFiles(); // Creates the data directory and header rows if needed.
         } catch (IOException e) {
             System.err.println("Failed to initialize CSV database: " + e.getMessage());
         }
@@ -94,10 +94,11 @@ public class CsvDatabase {
      */
     public List<AuthenticatedUser> loadAuthenticatedUsers(UserManagement userManagement) {
         try {
-            // Read CSV records, parse them into AuthenticatedUser objects, and return the list
+            // Read all data rows from the users CSV and convert each line to an AuthenticatedUser.
+            // USER_FILE is the path to the authenticated_users.csv file.
             return readCsvRecords(USER_FILE).stream()
-                .map(line -> parseUser(line, userManagement))
-                .filter(Optional::isPresent)
+                .map(line -> parseUser(line, userManagement)) // parse each CSV row with the current UserManagement context
+                .filter(Optional::isPresent) // skip invalid or malformed records
                 .map(Optional::get)
                 .collect(Collectors.toList());
         } catch (IOException e) {
@@ -112,18 +113,18 @@ public class CsvDatabase {
      */
     public void saveAuthenticatedUsers(List<AuthenticatedUser> users) {
         try {
-            // init output
+            // Build the CSV content in memory before writing it to disk.
             List<String> output = new ArrayList<>();
 
-            // add header
+            // Add the header row to the CSV output.
             output.add("id,username,email,password,userType");
 
-            // convert each user to a CSV line and add to output
+            // Convert each authenticated user into a CSV formatted string.
             for (AuthenticatedUser user : users) {
                 output.add(createUserCsvLine(user));
             }
 
-            // write output to file, overwriting existing content
+            // Write the CSV data to USER_FILE, creating it if necessary and replacing any existing file contents.
             Files.write(USER_FILE, output, StandardCharsets.UTF_8, 
                 StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
             );
@@ -137,21 +138,23 @@ public class CsvDatabase {
      */
     public void loadNetwork(Network network) {
         try {
-            // Load station data and junctions first to build the necessary mappings for lines
+            // Load station data first. The returned list is converted to a map by ID so junctions can resolve station references.
             Map<String, StationData> stationDataById = loadStationData().stream()
                 .collect(Collectors.toMap(StationData::getId, station -> station, (first, second) -> second));
 
+            // Load junctions using the stationDataById mapping to attach optional station metadata.
             List<Junction> junctions = loadJunctions(stationDataById);
             
+            // Convert junction list to a map by ID for line resolution.
             Map<String, Junction> junctionById = junctions.stream()
                 .collect(Collectors.toMap(Junction::getId, junction -> junction, (first, second) -> second));
 
-            // Load lines using the junction mappings
+            // Add all junction objects to the network before loading lines.
             for (Junction junction : junctions) {
                 network.addJunction(junction);
             }
 
-            // Load lines after junctions to ensure we can resolve junction references
+            // Load lines after junctions to ensure each line can find its endpoints by ID.
             for (Line line : loadLines(junctionById)) {
                 network.addLine(line);
             }
@@ -166,10 +169,10 @@ public class CsvDatabase {
      */
     public void saveNetwork(Network network) {
         try {
-            // save elements
-            saveStationData(network);
-            saveJunctions(network);
-            saveLines(network);
+            // Save each network component in dependency order.
+            saveStationData(network); // station data can be referenced by junctions
+            saveJunctions(network);   // junctions can be referenced by lines
+            saveLines(network);       // lines reference junction IDs
         } catch (IOException e) {
             System.err.println("Failed to save network data: " + e.getMessage());
         }
@@ -182,19 +185,20 @@ public class CsvDatabase {
      * @throws IOException If an I/O error occurs.
      */
     private List<String> readCsvRecords(Path source) throws IOException {
-        // If the file doesn't exist or is empty, return an empty list
+        // If the file doesn't exist, there are no records to read.
         if (!Files.exists(source)) {
             return Collections.emptyList();
         }
 
-        // Read all lines, skip the header, and filter out blank lines
+        // Read all lines using UTF-8 encoding. The first line is the CSV header.
         List<String> lines = Files.readAllLines(source, StandardCharsets.UTF_8);
 
-        // If there are no lines or only the header, return an empty list
+        // If the file is empty, return no records.
         if (lines.isEmpty()) {
             return Collections.emptyList();
         }
 
+        // Skip the first line (header) and ignore blank lines in the CSV data.
         return lines.stream().skip(1).filter(line -> !line.isBlank()).collect(Collectors.toList());
     }
 
@@ -205,28 +209,28 @@ public class CsvDatabase {
      * @return The parsed AuthenticatedUser object, or an empty Optional if parsing fails.
      */
     private Optional<AuthenticatedUser> parseUser(String line, UserManagement userManagement) {
-        // Split the line into values, allowing for empty fields
+        // Split a CSV row into fields. The -1 parameter preserves trailing empty values.
         String[] values = line.split(",", -1);
 
-        // Validate that we have at least the expected number of fields (5 in this case)
+        // Validate that the CSV row contains at least the expected user columns.
         if (values.length < 5) {
             return Optional.empty();
         }
 
-        // Extract values
+        // Extract values by column index.
         String id = values[0];
         String username = values[1];
         String email = values[2];
         String password = values[3];
-        // Parse user type, handling invalid values
         UserType userType;
         try {
+            // Convert the user type string into the corresponding enum value.
             userType = UserType.valueOf(values[4]);
         } catch (IllegalArgumentException e) {
             return Optional.empty();
         }
 
-        // Create the appropriate AuthenticatedUser subclass based on user type
+        // Instantiate the correct subclass based on the parsed userType.
         switch (userType) {
             case Passenger:
                 return Optional.of(new Passenger(id, username, email, password, userManagement));
@@ -260,13 +264,13 @@ public class CsvDatabase {
      * @throws IOException If an I/O error occurs.
      */
     private void saveStationData(Network network) throws IOException {
-        // init output
+        // Build the CSV file content for station data.
         List<String> output = new ArrayList<>();
 
-        // add header
+        // Header row defines the columns for station_data.csv.
         output.add("id,junctionId,platforms");
 
-        // convert each station data to a CSV line and add to output
+        // For each junction with station data, add a row containing station ID, junction ID, and platform list.
         for (Junction junction : network.getJunctions().values()) {
             junction.getStationData().ifPresent(stationData ->
                 output.add(String.join(",",
@@ -277,7 +281,7 @@ public class CsvDatabase {
             );
         }
 
-        // write output to file, overwriting existing content
+        // Write the station data CSV file using UTF-8 and overwrite any prior contents.
         Files.write(STATION_FILE, output, StandardCharsets.UTF_8, 
             StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
         );
@@ -289,16 +293,16 @@ public class CsvDatabase {
      * @throws IOException If an I/O error occurs.
      */
     private void saveJunctions(Network network) throws IOException {
-        // init output
+        // Build the CSV file content for junctions.
         List<String> output = new ArrayList<>();
         
-        // add header
+        // Header row defines the columns for junctions.csv.
         output.add("id,name,latitude,longitude,stationDataId");
         
-        // convert each junction to a CSV line and add to output
+        // Convert each junction in the network to a CSV line.
         for (Junction junction : network.getJunctions().values()) {
             String stationDataId = junction.getStationData().
-                map(StationData::getId).orElse("");
+                map(StationData::getId).orElse(""); // optional station data reference
 
             GeoCoordinate location = junction.getLocation();
             
@@ -311,7 +315,7 @@ public class CsvDatabase {
             ));
         }
 
-        // write output to file, overwriting existing content
+        // Write the junction CSV file using UTF-8 and overwrite any prior contents.
         Files.write(JUNCTION_FILE, output, StandardCharsets.UTF_8, 
             StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
         );
@@ -323,13 +327,13 @@ public class CsvDatabase {
      * @throws IOException If an I/O error occurs.
      */
     private void saveLines(Network network) throws IOException {
-        // init output
+        // Build the CSV file content for line data.
         List<String> output = new ArrayList<>();
 
-        // add header
+        // Header row defines the columns for lines.csv.
         output.add("id,junction1Id,junction2Id,lengthMeters,maxSpeedKpH,nTracks");
 
-        // convert each line to a CSV line and add to output
+        // Convert each Line object in the network into a CSV row.
         for (Line line : network.getLines().values()) {
             output.add(String.join(",",
                 escapeCsv(line.getId()),
@@ -341,7 +345,7 @@ public class CsvDatabase {
             ));
         }
 
-        // write output to file, overwriting existing content
+        // Write the lines CSV file using UTF-8 and overwrite any prior contents.
         Files.write(LINE_FILE, output, StandardCharsets.UTF_8, 
             StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
         );
@@ -353,17 +357,16 @@ public class CsvDatabase {
      * @throws IOException If an I/O error occurs.
      */
     private List<StationData> loadStationData() throws IOException {
-        // init result list
+        // Load station_data.csv into StationData objects.
         List<StationData> result = new ArrayList<>();
 
-        // read CSV records, parse them into StationData objects, and add to result list
+        // Each non-header row is a station record with id, junctionId, and platforms.
         for (String line : readCsvRecords(STATION_FILE)) {
-            // Split the line into values, allowing for empty fields
-            String[] values = line.split(",", -1);
+            String[] values = line.split(",", -1); // preserve empty trailing fields
 
             // Validate that we have at least the expected number of fields (3 in this case)
             if (values.length < 3) {
-                continue;
+                continue; // skip malformed rows
             }
 
             // Extract values
@@ -384,17 +387,16 @@ public class CsvDatabase {
      * @throws IOException If an I/O error occurs.
      */
     private List<Junction> loadJunctions(Map<String, StationData> stationDataById) throws IOException {
-        // init result list
+        // Load junctions.csv and attach optional station metadata using the provided stationDataById map.
         List<Junction> result = new ArrayList<>();
 
         // read CSV records, parse them into Junction objects, and add to result list
         for (String line : readCsvRecords(JUNCTION_FILE)) {
-            // Split the line into values, allowing for empty fields
-            String[] values = line.split(",", -1);
+            String[] values = line.split(",", -1); // preserve empty fields
 
             // Validate that we have at least the expected number of fields (5 in this case)
             if (values.length < 5) {
-                continue;
+                continue; // skip malformed rows
             }
 
             // Extract values
@@ -424,17 +426,16 @@ public class CsvDatabase {
      * @throws IOException If an I/O error occurs.
      */
     private List<Line> loadLines(Map<String, Junction> junctionsById) throws IOException {
-        // init result list
+        // Load lines.csv and resolve endpoint junctions by their IDs.
         List<Line> result = new ArrayList<>();
 
         // read CSV records, parse them into Line objects, and add to result list
         for (String line : readCsvRecords(LINE_FILE)) {
-            // Split the line into values, allowing for empty fields
-            String[] values = line.split(",", -1);
+            String[] values = line.split(",", -1); // preserve empty fields
 
             // Validate that we have at least the expected number of fields (6 in this case)
             if (values.length < 6) {
-                continue;
+                continue; // skip malformed rows
             }
 
             // Extract values
@@ -445,9 +446,8 @@ public class CsvDatabase {
             int maxSpeedKpH = Integer.parseInt(values[4]);
             int nTracks = Integer.parseInt(values[5]);
 
-            // If either junction reference is invalid, skip this line
             if (junction1 == null || junction2 == null) {
-                continue;
+                continue; // skip lines referencing unknown junction IDs
             }
 
             // Create a Line object and add to result list
@@ -463,15 +463,15 @@ public class CsvDatabase {
      * @return The escaped string.
      */
     private String escapeCsv(String input) {
-        // If the input is null, we return an empty string to avoid writing "null" in the CSV
+        // If the input is null, return an empty CSV field instead of the string "null".
         if (input == null) {
             return "";
         }
 
-        // Escape double quotes by replacing them with two double quotes
+        // Escape any quotes inside the value by doubling them, per CSV quoting rules.
         String value = input.replace("\"", "\"\"");
 
-        // If the value contains a comma, double quote, or newline, we need to wrap it in double quotes
+        // Wrap the field in quotes if it contains any special CSV characters.
         if (value.contains(",") || value.contains("\"") || value.contains("\n") || value.contains("\r")) {
             value = "\"" + value + "\"";
         }
@@ -485,12 +485,12 @@ public class CsvDatabase {
      * @return The set of platform names.
      */
     private Set<String> deserializePlatforms(String serialized) {
-        // If the input is null or blank, we return an empty set
+        // If the stored field is empty, return an empty set of platforms.
         if (serialized == null || serialized.isBlank()) {
             return Collections.emptySet();
         }
 
-        // Split the string by semicolons, trim whitespace, and collect into a set
+        // The platform list is stored as semicolon-separated values.
         String[] tokens = serialized.split(";");
         Set<String> set = new HashSet<>();
         
@@ -509,7 +509,7 @@ public class CsvDatabase {
      * @return The serialized string.
      */
     private String serializePlatforms(Set<String> platforms) {
-        // If the input is null or empty, we return an empty string
+        // Store platform names as a semicolon-separated string for the CSV file.
         if (platforms == null || platforms.isEmpty()) {
             return "";
         }
