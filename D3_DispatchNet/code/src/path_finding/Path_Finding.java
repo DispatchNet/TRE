@@ -5,17 +5,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import infrastructure.Junction;
+
 class Passenger {}; //Temporary passenger class, when properly implemented will be imported
-
-class Junction {}; //Temporary Junction class
-
-class Ticket {
-
-  public int purchase() {
-    //Prentend a ticket was purchased
-    return 0;
-  }
-}; 
+class Ticket {}; 
 
 public enum srtAlg {Length, Departure, Arrival, Cost};
 
