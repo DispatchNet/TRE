@@ -7,9 +7,9 @@ import java.util.Comparator;
 
 import infrastructure.Junction;
 import user_management.Passenger;
+import ticketing.Ticket;
 
-//TODO Temporary class, when properly implemented will be imported
-class Ticket {}; 
+//TODO Temporary class, when properly implemented will be imported 
 
 public enum srtAlg {Length, Departure, Arrival, Cost};
 
