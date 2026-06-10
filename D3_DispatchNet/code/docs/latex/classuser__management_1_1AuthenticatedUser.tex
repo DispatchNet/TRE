@@ -1,0 +1,288 @@
+\doxysection{user\+\_\+management.\+Authenticated\+User Class Reference}
+\hypertarget{classuser__management_1_1AuthenticatedUser}{}\label{classuser__management_1_1AuthenticatedUser}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+
+
+Abstract class representing an authenticated user in the system, containing their credentials and user type.  
+
+
+Inheritance diagram for user\+\_\+management.\+Authenticated\+User:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.445415cm]{classuser__management_1_1AuthenticatedUser}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_acc19eed0bd6c137afba3df938aaa5e7f}{Authenticated\+User}} (\doxymbox{\hyperlink{classuser__management_1_1UserManagement}{User\+Management}} \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_afc13e6811e6fbd798dc8f8eadecb5c9f}{user\+Management}})
+\begin{DoxyCompactList}\small\item\em Empty Constructor for \doxylink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_ae9a55c997dc9d8c12936fa302f5d4e19}{Authenticated\+User}} (String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1UserType}{User\+Type}} user\+Type, \doxymbox{\hyperlink{classuser__management_1_1UserManagement}{User\+Management}} \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_afc13e6811e6fbd798dc8f8eadecb5c9f}{user\+Management}})
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_af38ca69953beb17d8e20474ae5548a62}{Authenticated\+User}} (String id, String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1UserType}{User\+Type}} user\+Type, \doxymbox{\hyperlink{classuser__management_1_1UserManagement}{User\+Management}} \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_afc13e6811e6fbd798dc8f8eadecb5c9f}{user\+Management}})
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User} class with explicit id. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_a0fc57b8d0f424172ac74a2e0fc6296b0}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the unique id of the authenticated user. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_a09d3ea4888c58c57a2f381fb32034d42}{get\+Username}} ()
+\begin{DoxyCompactList}\small\item\em Gets the username of the authenticated user. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_abea2507b50591d83e3a2b0f3637fe189}{get\+Email}} ()
+\begin{DoxyCompactList}\small\item\em Gets the email of the authenticated user. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_ab972efc0820664bae364120195cc502a}{get\+Password}} ()
+\begin{DoxyCompactList}\small\item\em Gets the password of the authenticated user. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{enumuser__management_1_1UserType}{User\+Type}} \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_a618015e999551dec58a497731a03048b}{get\+User\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of the authenticated user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_a1028a84dece25ca9179a00503f3fa44b}{set\+Username}} (String username)
+\begin{DoxyCompactList}\small\item\em Sets the username of the authenticated user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_a77ee15db77877404946251dbae09d425}{set\+Email}} (String email)
+\begin{DoxyCompactList}\small\item\em Sets the email of the authenticated user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_a0d8244c10559ebbec311fabd0c41ddc1}{set\+Password}} (String password)
+\begin{DoxyCompactList}\small\item\em Sets the password of the authenticated user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_aabfe36234df0d8a7266b9cd3f95e06bd}{logout}} ()
+\begin{DoxyCompactList}\small\item\em Sets the type of the authenticated user. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_a4ed89b9bcafa4f86a1637b251212e825}{equals}} (Object o)
+\begin{DoxyCompactList}\small\item\em Checks if this authenticated user is equal to another object. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_a4a09cae41928361de7dd4888427b8760}{hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Generates a hash code for the authenticated user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final \doxymbox{\hyperlink{classuser__management_1_1UserManagement}{User\+Management}} \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_afc13e6811e6fbd798dc8f8eadecb5c9f}{user\+Management}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class representing an authenticated user in the system, containing their credentials and user type. 
+
+\label{doc-constructors}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_acc19eed0bd6c137afba3df938aaa5e7f}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!AuthenticatedUser@{AuthenticatedUser}}
+\index{AuthenticatedUser@{AuthenticatedUser}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{AuthenticatedUser()}{AuthenticatedUser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_acc19eed0bd6c137afba3df938aaa5e7f} 
+user\+\_\+management.\+Authenticated\+User.\+Authenticated\+User (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1UserManagement}{User\+Management}}}]{user\+Management}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Empty Constructor for \doxylink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User} class. 
+
+\Hypertarget{classuser__management_1_1AuthenticatedUser_ae9a55c997dc9d8c12936fa302f5d4e19}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!AuthenticatedUser@{AuthenticatedUser}}
+\index{AuthenticatedUser@{AuthenticatedUser}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{AuthenticatedUser()}{AuthenticatedUser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_ae9a55c997dc9d8c12936fa302f5d4e19} 
+user\+\_\+management.\+Authenticated\+User.\+Authenticated\+User (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{email}{, }\item[{String}]{password}{, }\item[{\doxymbox{\hyperlink{enumuser__management_1_1UserType}{User\+Type}}}]{user\+Type}{, }\item[{\doxymbox{\hyperlink{classuser__management_1_1UserManagement}{User\+Management}}}]{user\+Management}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username of the authenticated user \\
+\hline
+{\em email} & The email of the authenticated user \\
+\hline
+{\em password} & The password of the authenticated user \\
+\hline
+{\em user\+Type} & The type of the authenticated user \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_af38ca69953beb17d8e20474ae5548a62}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!AuthenticatedUser@{AuthenticatedUser}}
+\index{AuthenticatedUser@{AuthenticatedUser}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{AuthenticatedUser()}{AuthenticatedUser()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_af38ca69953beb17d8e20474ae5548a62} 
+user\+\_\+management.\+Authenticated\+User.\+Authenticated\+User (\begin{DoxyParamCaption}\item[{String}]{id}{, }\item[{String}]{username}{, }\item[{String}]{email}{, }\item[{String}]{password}{, }\item[{\doxymbox{\hyperlink{enumuser__management_1_1UserType}{User\+Type}}}]{user\+Type}{, }\item[{\doxymbox{\hyperlink{classuser__management_1_1UserManagement}{User\+Management}}}]{user\+Management}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User} class with explicit id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier of the authenticated user \\
+\hline
+{\em username} & The username of the authenticated user \\
+\hline
+{\em email} & The email of the authenticated user \\
+\hline
+{\em password} & The password of the authenticated user \\
+\hline
+{\em user\+Type} & The type of the authenticated user \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_a4ed89b9bcafa4f86a1637b251212e825}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!equals@{equals}}
+\index{equals@{equals}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_a4ed89b9bcafa4f86a1637b251212e825} 
+boolean user\+\_\+management.\+Authenticated\+User.\+equals (\begin{DoxyParamCaption}\item[{Object}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if this authenticated user is equal to another object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & The object to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the objects are equal, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_abea2507b50591d83e3a2b0f3637fe189}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_abea2507b50591d83e3a2b0f3637fe189} 
+String user\+\_\+management.\+Authenticated\+User.\+get\+Email (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the email of the authenticated user. 
+
+\begin{DoxyReturn}{Returns}
+The email of the authenticated user 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_a0fc57b8d0f424172ac74a2e0fc6296b0}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!getId@{getId}}
+\index{getId@{getId}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_a0fc57b8d0f424172ac74a2e0fc6296b0} 
+String user\+\_\+management.\+Authenticated\+User.\+get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the unique id of the authenticated user. 
+
+\begin{DoxyReturn}{Returns}
+The unique identifier 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_ab972efc0820664bae364120195cc502a}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!getPassword@{getPassword}}
+\index{getPassword@{getPassword}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{getPassword()}{getPassword()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_ab972efc0820664bae364120195cc502a} 
+String user\+\_\+management.\+Authenticated\+User.\+get\+Password (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the password of the authenticated user. 
+
+\begin{DoxyReturn}{Returns}
+The password of the authenticated user 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_a09d3ea4888c58c57a2f381fb32034d42}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_a09d3ea4888c58c57a2f381fb32034d42} 
+String user\+\_\+management.\+Authenticated\+User.\+get\+Username (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the username of the authenticated user. 
+
+\begin{DoxyReturn}{Returns}
+The username of the authenticated user 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_a618015e999551dec58a497731a03048b}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!getUserType@{getUserType}}
+\index{getUserType@{getUserType}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{getUserType()}{getUserType()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_a618015e999551dec58a497731a03048b} 
+\doxymbox{\hyperlink{enumuser__management_1_1UserType}{User\+Type}} user\+\_\+management.\+Authenticated\+User.\+get\+User\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the type of the authenticated user. 
+
+\begin{DoxyReturn}{Returns}
+The type of the authenticated user 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_a4a09cae41928361de7dd4888427b8760}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!hashCode@{hashCode}}
+\index{hashCode@{hashCode}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{hashCode()}{hashCode()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_a4a09cae41928361de7dd4888427b8760} 
+int user\+\_\+management.\+Authenticated\+User.\+hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates a hash code for the authenticated user. 
+
+\begin{DoxyReturn}{Returns}
+The hash code of the authenticated user 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_aabfe36234df0d8a7266b9cd3f95e06bd}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!logout@{logout}}
+\index{logout@{logout}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_aabfe36234df0d8a7266b9cd3f95e06bd} 
+void user\+\_\+management.\+Authenticated\+User.\+logout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the type of the authenticated user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Type} & The type of the authenticated user\\
+\hline
+\end{DoxyParams}
+Log out the authenticated user, moving to the anonymous user state. \Hypertarget{classuser__management_1_1AuthenticatedUser_a77ee15db77877404946251dbae09d425}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!setEmail@{setEmail}}
+\index{setEmail@{setEmail}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{setEmail()}{setEmail()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_a77ee15db77877404946251dbae09d425} 
+void user\+\_\+management.\+Authenticated\+User.\+set\+Email (\begin{DoxyParamCaption}\item[{String}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the email of the authenticated user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & The email of the authenticated user \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_a0d8244c10559ebbec311fabd0c41ddc1}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!setPassword@{setPassword}}
+\index{setPassword@{setPassword}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_a0d8244c10559ebbec311fabd0c41ddc1} 
+void user\+\_\+management.\+Authenticated\+User.\+set\+Password (\begin{DoxyParamCaption}\item[{String}]{password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the password of the authenticated user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & The password of the authenticated user \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_a1028a84dece25ca9179a00503f3fa44b}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!setUsername@{setUsername}}
+\index{setUsername@{setUsername}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{setUsername()}{setUsername()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_a1028a84dece25ca9179a00503f3fa44b} 
+void user\+\_\+management.\+Authenticated\+User.\+set\+Username (\begin{DoxyParamCaption}\item[{String}]{username}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the username of the authenticated user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username of the authenticated user \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classuser__management_1_1AuthenticatedUser_afc13e6811e6fbd798dc8f8eadecb5c9f}\index{user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}!userManagement@{userManagement}}
+\index{userManagement@{userManagement}!user\_management.AuthenticatedUser@{user\_management.AuthenticatedUser}}
+\doxysubsubsection{\texorpdfstring{userManagement}{userManagement}}
+{\footnotesize\ttfamily \label{classuser__management_1_1AuthenticatedUser_afc13e6811e6fbd798dc8f8eadecb5c9f} 
+final \doxymbox{\hyperlink{classuser__management_1_1UserManagement}{User\+Management}} user\+\_\+management.\+Authenticated\+User.\+user\+Management\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+user\+\_\+management/\+\doxymbox{\hyperlink{AuthenticatedUser_8java}{Authenticated\+User.\+java}}\end{DoxyCompactItemize}

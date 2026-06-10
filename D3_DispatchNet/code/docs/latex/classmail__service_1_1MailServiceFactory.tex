@@ -1,0 +1,67 @@
+\doxysection{mail\+\_\+service.\+Mail\+Service\+Factory Class Reference}
+\hypertarget{classmail__service_1_1MailServiceFactory}{}\label{classmail__service_1_1MailServiceFactory}\index{mail\_service.MailServiceFactory@{mail\_service.MailServiceFactory}}
+
+
+Factory class for creating mail service instances.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{interfacemail__service_1_1MailService}{Mail\+Service}} \doxymbox{\hyperlink{classmail__service_1_1MailServiceFactory_a295c2a6628363d594dd1a535c839641f}{get\+Mail\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Gets the default mail service instance. Currently returns a \doxylink{classmail__service_1_1MockMailService}{Mock\+Mail\+Service}. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{classmail__service_1_1MailServiceFactory_acce0b8c946c3aa09434df79947ba24d5}{set\+Mail\+Service}} (\doxymbox{\hyperlink{interfacemail__service_1_1MailService}{Mail\+Service}} mail\+Service)
+\begin{DoxyCompactList}\small\item\em Sets a custom mail service instance. Useful for testing or swapping implementations. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{classmail__service_1_1MailServiceFactory_ace74a142b4b20dd47a39a356bbca8731}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the mail service instance to the default. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory class for creating mail service instances. 
+
+\label{doc-func-members}
+\Hypertarget{classmail__service_1_1MailServiceFactory_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmail__service_1_1MailServiceFactory_a295c2a6628363d594dd1a535c839641f}\index{mail\_service.MailServiceFactory@{mail\_service.MailServiceFactory}!getMailService@{getMailService}}
+\index{getMailService@{getMailService}!mail\_service.MailServiceFactory@{mail\_service.MailServiceFactory}}
+\doxysubsubsection{\texorpdfstring{getMailService()}{getMailService()}}
+{\footnotesize\ttfamily \label{classmail__service_1_1MailServiceFactory_a295c2a6628363d594dd1a535c839641f} 
+\doxymbox{\hyperlink{interfacemail__service_1_1MailService}{Mail\+Service}} mail\+\_\+service.\+Mail\+Service\+Factory.\+get\+Mail\+Service (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gets the default mail service instance. Currently returns a \doxylink{classmail__service_1_1MockMailService}{Mock\+Mail\+Service}. 
+
+\begin{DoxyReturn}{Returns}
+The mail service instance 
+\end{DoxyReturn}
+\Hypertarget{classmail__service_1_1MailServiceFactory_ace74a142b4b20dd47a39a356bbca8731}\index{mail\_service.MailServiceFactory@{mail\_service.MailServiceFactory}!reset@{reset}}
+\index{reset@{reset}!mail\_service.MailServiceFactory@{mail\_service.MailServiceFactory}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \label{classmail__service_1_1MailServiceFactory_ace74a142b4b20dd47a39a356bbca8731} 
+void mail\+\_\+service.\+Mail\+Service\+Factory.\+reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Resets the mail service instance to the default. 
+
+\Hypertarget{classmail__service_1_1MailServiceFactory_acce0b8c946c3aa09434df79947ba24d5}\index{mail\_service.MailServiceFactory@{mail\_service.MailServiceFactory}!setMailService@{setMailService}}
+\index{setMailService@{setMailService}!mail\_service.MailServiceFactory@{mail\_service.MailServiceFactory}}
+\doxysubsubsection{\texorpdfstring{setMailService()}{setMailService()}}
+{\footnotesize\ttfamily \label{classmail__service_1_1MailServiceFactory_acce0b8c946c3aa09434df79947ba24d5} 
+void mail\+\_\+service.\+Mail\+Service\+Factory.\+set\+Mail\+Service (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interfacemail__service_1_1MailService}{Mail\+Service}}}]{mail\+Service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sets a custom mail service instance. Useful for testing or swapping implementations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail\+Service} & The mail service to use \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+mail\+\_\+service/\+\doxymbox{\hyperlink{MailServiceFactory_8java}{Mail\+Service\+Factory.\+java}}\end{DoxyCompactItemize}

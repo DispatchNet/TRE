@@ -1,0 +1,110 @@
+\doxysection{infrastructure.\+Network Class Reference}
+\hypertarget{classinfrastructure_1_1Network}{}\label{classinfrastructure_1_1Network}\index{infrastructure.Network@{infrastructure.Network}}
+
+
+A Class representing the network. Provides an interface to add/\+remove elements from the network.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classinfrastructure_1_1Network_a033139e8f7f1539d34f677e22d328b72}{Network}} ()
+\item 
+void \doxymbox{\hyperlink{classinfrastructure_1_1Network_a32220cc34d0ec586b6b4e192623ed460}{add\+Junction}} (\doxymbox{\hyperlink{classinfrastructure_1_1Junction}{Junction}} junction)
+\begin{DoxyCompactList}\small\item\em Adds a \doxylink{classinfrastructure_1_1Junction}{Junction} to the network. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classinfrastructure_1_1Network_ad97c37c743599553e5664fa0d83ccf5c}{add\+Line}} (\doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} line)
+\begin{DoxyCompactList}\small\item\em Adds an existing \doxylink{classinfrastructure_1_1Line}{Line} object to the network. \end{DoxyCompactList}\item 
+Map$<$ String, \doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1Network_a9ab91dde47f76df3afb6c997aefb967d}{get\+Lines}} ()
+\begin{DoxyCompactList}\small\item\em get the map of lines. \end{DoxyCompactList}\item 
+Map$<$ String, \doxymbox{\hyperlink{classinfrastructure_1_1Junction}{Junction}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1Network_a9e9f8ebaa47e4637758bd147036ded1c}{get\+Junctions}} ()
+\begin{DoxyCompactList}\small\item\em get the map of junctions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Class representing the network. Provides an interface to add/\+remove elements from the network. 
+
+\label{doc-constructors}
+\Hypertarget{classinfrastructure_1_1Network_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classinfrastructure_1_1Network_a033139e8f7f1539d34f677e22d328b72}\index{infrastructure.Network@{infrastructure.Network}!Network@{Network}}
+\index{Network@{Network}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{Network()}{Network()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Network_a033139e8f7f1539d34f677e22d328b72} 
+infrastructure.\+Network.\+Network (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classinfrastructure_1_1Network_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classinfrastructure_1_1Network_a32220cc34d0ec586b6b4e192623ed460}\index{infrastructure.Network@{infrastructure.Network}!addJunction@{addJunction}}
+\index{addJunction@{addJunction}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{addJunction()}{addJunction()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Network_a32220cc34d0ec586b6b4e192623ed460} 
+void infrastructure.\+Network.\+add\+Junction (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1Junction}{Junction}}}]{junction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a \doxylink{classinfrastructure_1_1Junction}{Junction} to the network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em junction} & The junction to add \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & The junction is already present in the map \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classinfrastructure_1_1Network_ad97c37c743599553e5664fa0d83ccf5c}\index{infrastructure.Network@{infrastructure.Network}!addLine@{addLine}}
+\index{addLine@{addLine}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{addLine()}{addLine()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Network_ad97c37c743599553e5664fa0d83ccf5c} 
+void infrastructure.\+Network.\+add\+Line (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}}}]{line}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an existing \doxylink{classinfrastructure_1_1Line}{Line} object to the network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & The line to add \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Arguemtne\+Exception} & if the line is already in the network \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classinfrastructure_1_1Network_a9e9f8ebaa47e4637758bd147036ded1c}\index{infrastructure.Network@{infrastructure.Network}!getJunctions@{getJunctions}}
+\index{getJunctions@{getJunctions}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{getJunctions()}{getJunctions()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Network_a9e9f8ebaa47e4637758bd147036ded1c} 
+Map$<$ String, \doxymbox{\hyperlink{classinfrastructure_1_1Junction}{Junction}} $>$ infrastructure.\+Network.\+get\+Junctions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the map of junctions. 
+
+\begin{DoxyReturn}{Returns}
+An unmodifiable view of the junctions 
+\end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1Network_a9ab91dde47f76df3afb6c997aefb967d}\index{infrastructure.Network@{infrastructure.Network}!getLines@{getLines}}
+\index{getLines@{getLines}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{getLines()}{getLines()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Network_a9ab91dde47f76df3afb6c997aefb967d} 
+Map$<$ String, \doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} $>$ infrastructure.\+Network.\+get\+Lines (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the map of lines. 
+
+\begin{DoxyReturn}{Returns}
+An unmodifiable view of the lines 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+infrastructure/\+\doxymbox{\hyperlink{Network_8java}{Network.\+java}}\end{DoxyCompactItemize}

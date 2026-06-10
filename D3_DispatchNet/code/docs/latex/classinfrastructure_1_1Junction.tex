@@ -1,0 +1,225 @@
+\doxysection{infrastructure.\+Junction Class Reference}
+\hypertarget{classinfrastructure_1_1Junction}{}\label{classinfrastructure_1_1Junction}\index{infrastructure.Junction@{infrastructure.Junction}}
+
+
+A Class representing a junction\textquotesingle{}s data.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classinfrastructure_1_1Junction_aefc3d341f399df7b6bf5a33ac7484f65}{Junction}} (\doxymbox{\hyperlink{classinfrastructure_1_1GeoCoordinate}{Geo\+Coordinate}} location, Optional$<$ \doxymbox{\hyperlink{classinfrastructure_1_1StationData}{Station\+Data}} $>$ station\+Data, String name, List$<$ \doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} $>$ connected\+Lines, List$<$ \doxymbox{\hyperlink{classservice__management_1_1ServiceSet}{Service\+Set}} $>$ services)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{classinfrastructure_1_1Junction}{Junction} with generated id. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classinfrastructure_1_1Junction_a7b9ab1a47d997eed94788c84b4300477}{Junction}} (String id, \doxymbox{\hyperlink{classinfrastructure_1_1GeoCoordinate}{Geo\+Coordinate}} location, Optional$<$ \doxymbox{\hyperlink{classinfrastructure_1_1StationData}{Station\+Data}} $>$ station\+Data, String name, List$<$ \doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} $>$ connected\+Lines, List$<$ \doxymbox{\hyperlink{classservice__management_1_1ServiceSet}{Service\+Set}} $>$ services)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{classinfrastructure_1_1Junction}{Junction} with explicit id. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classinfrastructure_1_1Junction_a4d2fee8eeab8b477279e92c5e4e205cd}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Get the unique identifier of this \doxylink{classinfrastructure_1_1Junction}{Junction}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classinfrastructure_1_1GeoCoordinate}{Geo\+Coordinate}} \doxymbox{\hyperlink{classinfrastructure_1_1Junction_ab668d83d145641f0ef4a4f158f6bae4a}{get\+Location}} ()
+\begin{DoxyCompactList}\small\item\em Get this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}s Location. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classinfrastructure_1_1Junction_ad8b26518cf32a6fde2cfd538b83787d5}{set\+Location}} (\doxymbox{\hyperlink{classinfrastructure_1_1GeoCoordinate}{Geo\+Coordinate}} location)
+\begin{DoxyCompactList}\small\item\em Set this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}s Location. \end{DoxyCompactList}\item 
+Optional$<$ \doxymbox{\hyperlink{classinfrastructure_1_1StationData}{Station\+Data}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1Junction_a4cbe9e3217bb4bd50ad7290ea4ef757a}{get\+Station\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Get this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}s \doxylink{classinfrastructure_1_1StationData}{Station\+Data}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classinfrastructure_1_1Junction_a42531b8da7cde28849f851e5d9e3730f}{set\+Station\+Data}} (Optional$<$ \doxymbox{\hyperlink{classinfrastructure_1_1StationData}{Station\+Data}} $>$ station\+Data)
+\begin{DoxyCompactList}\small\item\em Set this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}s station data. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classinfrastructure_1_1Junction_ae6c05d878229f56a5619c2e7f9d93f53}{is\+Station}} ()
+\begin{DoxyCompactList}\small\item\em Check if this \doxylink{classinfrastructure_1_1Junction}{Junction} is a Station. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classinfrastructure_1_1Junction_a153d50e1dfd3898cb23c20ad8c843d23}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}s name. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classinfrastructure_1_1Junction_aac69c0b13f4c0a03378b22f239d546fd}{set\+Name}} (String name)
+\begin{DoxyCompactList}\small\item\em Set this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}s name. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1Junction_af311651161c1d2e431329fcf130221e6}{get\+Connected\+Lines}} ()
+\begin{DoxyCompactList}\small\item\em Get this junction\textquotesingle{}s connected lines. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{classservice__management_1_1ServiceSet}{Service\+Set}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1Junction_abdaf3034d3efc79a6147e57172f3934f}{get\+Services}} ()
+\begin{DoxyCompactList}\small\item\em Get this junction\textquotesingle{}s services. \end{DoxyCompactList}\item 
+List$<$ Departure $>$ \doxymbox{\hyperlink{classinfrastructure_1_1Junction_a5024085388986afb63388beb0dbb2feb}{get\+Departures}} ()
+\begin{DoxyCompactList}\small\item\em Get the departures from this junction (Includes services that don\textquotesingle{}t stop). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Class representing a junction\textquotesingle{}s data. 
+
+\label{doc-constructors}
+\Hypertarget{classinfrastructure_1_1Junction_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classinfrastructure_1_1Junction_aefc3d341f399df7b6bf5a33ac7484f65}\index{infrastructure.Junction@{infrastructure.Junction}!Junction@{Junction}}
+\index{Junction@{Junction}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{Junction()}{Junction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_aefc3d341f399df7b6bf5a33ac7484f65} 
+infrastructure.\+Junction.\+Junction (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1GeoCoordinate}{Geo\+Coordinate}}}]{location}{, }\item[{Optional$<$ \doxymbox{\hyperlink{classinfrastructure_1_1StationData}{Station\+Data}} $>$}]{station\+Data}{, }\item[{String}]{name}{, }\item[{List$<$ \doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} $>$}]{connected\+Lines}{, }\item[{List$<$ \doxymbox{\hyperlink{classservice__management_1_1ServiceSet}{Service\+Set}} $>$}]{services}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a \doxylink{classinfrastructure_1_1Junction}{Junction} with generated id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & the location of this station as GPS coordinates \\
+\hline
+{\em station\+Data} & the data for this station or {\ttfamily Optional.\+empty()}. \\
+\hline
+{\em name} & the name of this station @impl\+Note Also initializes empty connected\+Lines and services lists to keep note on relations \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classinfrastructure_1_1Junction_a7b9ab1a47d997eed94788c84b4300477}\index{infrastructure.Junction@{infrastructure.Junction}!Junction@{Junction}}
+\index{Junction@{Junction}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{Junction()}{Junction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_a7b9ab1a47d997eed94788c84b4300477} 
+infrastructure.\+Junction.\+Junction (\begin{DoxyParamCaption}\item[{String}]{id}{, }\item[{\doxymbox{\hyperlink{classinfrastructure_1_1GeoCoordinate}{Geo\+Coordinate}}}]{location}{, }\item[{Optional$<$ \doxymbox{\hyperlink{classinfrastructure_1_1StationData}{Station\+Data}} $>$}]{station\+Data}{, }\item[{String}]{name}{, }\item[{List$<$ \doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} $>$}]{connected\+Lines}{, }\item[{List$<$ \doxymbox{\hyperlink{classservice__management_1_1ServiceSet}{Service\+Set}} $>$}]{services}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a \doxylink{classinfrastructure_1_1Junction}{Junction} with explicit id. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{classinfrastructure_1_1Junction_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classinfrastructure_1_1Junction_af311651161c1d2e431329fcf130221e6}\index{infrastructure.Junction@{infrastructure.Junction}!getConnectedLines@{getConnectedLines}}
+\index{getConnectedLines@{getConnectedLines}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{getConnectedLines()}{getConnectedLines()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_af311651161c1d2e431329fcf130221e6} 
+List$<$ \doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} $>$ infrastructure.\+Junction.\+get\+Connected\+Lines (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get this junction\textquotesingle{}s connected lines. 
+
+\begin{DoxyReturn}{Returns}
+this junction\textquotesingle{}s connected lines 
+\end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1Junction_a5024085388986afb63388beb0dbb2feb}\index{infrastructure.Junction@{infrastructure.Junction}!getDepartures@{getDepartures}}
+\index{getDepartures@{getDepartures}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{getDepartures()}{getDepartures()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_a5024085388986afb63388beb0dbb2feb} 
+List$<$ Departure $>$ infrastructure.\+Junction.\+get\+Departures (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the departures from this junction (Includes services that don\textquotesingle{}t stop). 
+
+\begin{DoxyReturn}{Returns}
+the departures 
+\end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1Junction_a4d2fee8eeab8b477279e92c5e4e205cd}\index{infrastructure.Junction@{infrastructure.Junction}!getId@{getId}}
+\index{getId@{getId}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_a4d2fee8eeab8b477279e92c5e4e205cd} 
+String infrastructure.\+Junction.\+get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the unique identifier of this \doxylink{classinfrastructure_1_1Junction}{Junction}. 
+
+\begin{DoxyReturn}{Returns}
+this junction\textquotesingle{}s id 
+\end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1Junction_ab668d83d145641f0ef4a4f158f6bae4a}\index{infrastructure.Junction@{infrastructure.Junction}!getLocation@{getLocation}}
+\index{getLocation@{getLocation}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{getLocation()}{getLocation()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_ab668d83d145641f0ef4a4f158f6bae4a} 
+\doxymbox{\hyperlink{classinfrastructure_1_1GeoCoordinate}{Geo\+Coordinate}} infrastructure.\+Junction.\+get\+Location (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}s Location. 
+
+\begin{DoxyReturn}{Returns}
+this junction\textquotesingle{}s location 
+\end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1Junction_a153d50e1dfd3898cb23c20ad8c843d23}\index{infrastructure.Junction@{infrastructure.Junction}!getName@{getName}}
+\index{getName@{getName}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_a153d50e1dfd3898cb23c20ad8c843d23} 
+String infrastructure.\+Junction.\+get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}s name. 
+
+\begin{DoxyReturn}{Returns}
+this junction\textquotesingle{}s name 
+\end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1Junction_abdaf3034d3efc79a6147e57172f3934f}\index{infrastructure.Junction@{infrastructure.Junction}!getServices@{getServices}}
+\index{getServices@{getServices}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{getServices()}{getServices()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_abdaf3034d3efc79a6147e57172f3934f} 
+List$<$ \doxymbox{\hyperlink{classservice__management_1_1ServiceSet}{Service\+Set}} $>$ infrastructure.\+Junction.\+get\+Services (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get this junction\textquotesingle{}s services. 
+
+\begin{DoxyReturn}{Returns}
+this junction\textquotesingle{}s services 
+\end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1Junction_a4cbe9e3217bb4bd50ad7290ea4ef757a}\index{infrastructure.Junction@{infrastructure.Junction}!getStationData@{getStationData}}
+\index{getStationData@{getStationData}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{getStationData()}{getStationData()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_a4cbe9e3217bb4bd50ad7290ea4ef757a} 
+Optional$<$ \doxymbox{\hyperlink{classinfrastructure_1_1StationData}{Station\+Data}} $>$ infrastructure.\+Junction.\+get\+Station\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}s \doxylink{classinfrastructure_1_1StationData}{Station\+Data}. 
+
+\begin{DoxyReturn}{Returns}
+this junction\textquotesingle{}s station data 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{classinfrastructure_1_1StationData}{Station\+Data} 
+\end{DoxySeeAlso}
+\Hypertarget{classinfrastructure_1_1Junction_ae6c05d878229f56a5619c2e7f9d93f53}\index{infrastructure.Junction@{infrastructure.Junction}!isStation@{isStation}}
+\index{isStation@{isStation}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{isStation()}{isStation()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_ae6c05d878229f56a5619c2e7f9d93f53} 
+boolean infrastructure.\+Junction.\+is\+Station (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if this \doxylink{classinfrastructure_1_1Junction}{Junction} is a Station. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if it\textquotesingle{}s a station, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1Junction_ad8b26518cf32a6fde2cfd538b83787d5}\index{infrastructure.Junction@{infrastructure.Junction}!setLocation@{setLocation}}
+\index{setLocation@{setLocation}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{setLocation()}{setLocation()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_ad8b26518cf32a6fde2cfd538b83787d5} 
+void infrastructure.\+Junction.\+set\+Location (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1GeoCoordinate}{Geo\+Coordinate}}}]{location}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}s Location. 
+
+\Hypertarget{classinfrastructure_1_1Junction_aac69c0b13f4c0a03378b22f239d546fd}\index{infrastructure.Junction@{infrastructure.Junction}!setName@{setName}}
+\index{setName@{setName}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_aac69c0b13f4c0a03378b22f239d546fd} 
+void infrastructure.\+Junction.\+set\+Name (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}s name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the new name for this junction \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classinfrastructure_1_1Junction_a42531b8da7cde28849f851e5d9e3730f}\index{infrastructure.Junction@{infrastructure.Junction}!setStationData@{setStationData}}
+\index{setStationData@{setStationData}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{setStationData()}{setStationData()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_a42531b8da7cde28849f851e5d9e3730f} 
+void infrastructure.\+Junction.\+set\+Station\+Data (\begin{DoxyParamCaption}\item[{Optional$<$ \doxymbox{\hyperlink{classinfrastructure_1_1StationData}{Station\+Data}} $>$}]{station\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}s station data. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+infrastructure/\+\doxymbox{\hyperlink{Junction_8java}{Junction.\+java}}\end{DoxyCompactItemize}
