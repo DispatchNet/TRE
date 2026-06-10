@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 import departure.Departure;
-import service_mangement.ServiceSet;
+import service_management.ServiceSet;
 
 /**
  * @class Junction

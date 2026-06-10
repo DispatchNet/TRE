@@ -1,4 +1,4 @@
-package service_mangement;
+package service_management;
 
 /**
  * @class StopData

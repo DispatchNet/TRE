@@ -1,4 +1,4 @@
-package service_mangement;
+package service_management;
 
 import java.util.List;
 import java.util.UUID;
