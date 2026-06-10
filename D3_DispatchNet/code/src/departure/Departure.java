@@ -2,8 +2,8 @@ package departure;
 
 import java.time.LocalTime;
 
-import service_mangement.ServiceSet;
-import service_mangement.ServiceStep;
+import service_management.ServiceSet;
+import service_management.ServiceStep;
 
 /**
  * @class A Departure represents a specific service leaving a certain junctionat a certain time
