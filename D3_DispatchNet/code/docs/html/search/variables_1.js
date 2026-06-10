@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cost_0',['Cost',['../enumsrt_alg.html#a66b676c019c1a41f7416404a2b4b21da',1,'srtAlg']]]
+  ['cost_0',['Cost',['../enumpath__finding_1_1srtAlg.html#af874bcb8cba721604eeb687fae2abad8',1,'path_finding::srtAlg']]]
 ];

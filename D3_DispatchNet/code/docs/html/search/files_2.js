@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['email_2ejava_0',['Email.java',['../_email_8java.html',1,'']]],
-  ['enduser_2ejava_1',['EndUser.java',['../_end_user_8java.html',1,'']]]
+  ['departure_2ejava_0',['Departure.java',['../Departure_8java.html',1,'']]],
+  ['dispatch_2ejava_1',['Dispatch.java',['../Dispatch_8java.html',1,'']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['tostring_0',['toString',['../classmail__service_1_1_email.html#a655c850dd114b6a5ede1d5ad8c7f382a',1,'mail_service.Email.toString()'],['../enumuser__management_1_1_user_type.html#a388f46df491e1867fc7b495011d5fab3',1,'user_management.UserType.toString()']]],
-  ['traincompany_1',['TrainCompany',['../classuser__management_1_1_train_company.html#ab2c6961dc96dbe7cf37cce2077a0f53b',1,'user_management::TrainCompany']]]
+  ['ticket_0',['Ticket',['../classticketing_1_1Ticket.html#a52fe3f83b6d55410afe64039944ee4b7',1,'ticketing::Ticket']]],
+  ['tostring_1',['toString',['../classmail__service_1_1Email.html#a655c850dd114b6a5ede1d5ad8c7f382a',1,'mail_service.Email.toString()'],['../enumuser__management_1_1UserType.html#a388f46df491e1867fc7b495011d5fab3',1,'user_management.UserType.toString()']]],
+  ['traincompany_2',['TrainCompany',['../classuser__management_1_1TrainCompany.html#ab2c6961dc96dbe7cf37cce2077a0f53b',1,'user_management.TrainCompany.TrainCompany(String username, String email, String password, UserManagement userManagement)'],['../classuser__management_1_1TrainCompany.html#a11a603ae15e3bf1a50e7597053835f11',1,'user_management.TrainCompany.TrainCompany(String id, String username, String email, String password, UserManagement userManagement)']]]
 ];

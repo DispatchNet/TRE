@@ -23,7 +23,7 @@ public class Ticket{
   
     /**
      * @brief Constructor of Ticket class
-     * @description Constructs a ticket enforcing the mandatory owner, departure and step information
+     * @details Constructs a ticket enforcing the mandatory owner, departure and step information
      * @param owner The owner of the ticket
      * @param departure The first station and train the ticket is valid from
      * @param lastStep The last station and train the ticket is valid for 
@@ -65,7 +65,7 @@ public class Ticket{
 
     /**
      * @brief evalutes the total cost of the ticket
-     * @description uses the depature and lastStep information to measure the distance covered and which train is used, then computes the resulting price
+     * @details uses the depature and lastStep information to measure the distance covered and which train is used, then computes the resulting price
      * @return an integer representing the monetary value 
      */
     public int getCost () {
@@ -75,7 +75,7 @@ public class Ticket{
     
     /*
      * @brief Get the last junction the train is valid for
-     * @description Looks into the lastStep value and extracts the junction it points total
+     * @details Looks into the lastStep value and extracts the junction it points total
      * @return a Junction pointer
      * @see Junction
      */

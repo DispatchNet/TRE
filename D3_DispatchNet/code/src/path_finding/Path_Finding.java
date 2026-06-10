@@ -17,7 +17,7 @@ public enum srtAlg {Length, Departure, Arrival, Cost};
  * @brief Class representing a path_finding request
  * @details created whith all the relevant information, stores the search result and is able to sort and produce it multiple times
  */
-class Path_Finding{
+public class Path_Finding{
 	Passenger requester;
 	Junction from;
 	Junction to;
@@ -29,11 +29,12 @@ class Path_Finding{
   //Public	
 		/**
      * @brief creates the Pathfinding_class
-     * @description Enforces mandatory information like requester and parameters of the search, initializes the sorting algorithm enum to its default value and computes the result lists
+     * 
+     * @details Enforces mandatory information like requester and parameters of the search, initializes the sorting algorithm enum to its default value and computes the result lists
      * @param requester which Passenger initiated the request, used for ticket generation
      * @param from Where the search starts 
      * @param to Where the search ends 
-     * @param after The earliest accepted time for the first train in a path to depart, is optional (all values pass) but if no before argument is specified defaults to current time
+     * @param after The earliest accepted time for the first train in a path to depart, is optional (all values pass) but if no "before" argument is specified defaults to current time
      * @param before The latest accepted time for the last train in a path to arrive, is optional (all values pass)
      * @exception NoPath The "from" Junction cannot reach the "to" Junction
      * @exception BadSearch No path respects both "after" and "before" argument
@@ -87,7 +88,7 @@ class Path_Finding{
     
     /**
      * @brief chosenSrt getter
-     * @reutrn a srtAlg enum
+     * @return a srtAlg enum
      */
 		public srtAlg getChosenSrt() {
 			return chosenSrt;
@@ -103,7 +104,9 @@ class Path_Finding{
     
     /**
      * @brief public way to access the results of the pathfinding 
-     * @description Calls the private srtPth function when necessary, and formats the results
+     * 
+     * @details Calls the private srtPth function when necessary, and formats the results
+     * @return An ArrayList of paths (ArrayList of Tickets)
      */
 		public ArrayList<ArrayList<Ticket>> getResults() {
 			return srtPth();
@@ -121,8 +124,9 @@ class Path_Finding{
 //Private
     /**
      * @brief sorts the results list according to the stored srtAlg
-     * @description calls the complex comparator PathComparator to sort in the correct order
-     * @return A list of lists, of tickets
+     * 
+     * @details calls the complex comparator PathComparator to sort in the correct order
+     * @return A list of lists, of tickets (List of Paths)
      * @see PathComparator
      */
 		ArrayList<ArrayList<Ticket>> srtPth() {
@@ -132,13 +136,15 @@ class Path_Finding{
 
 //Unit test
 		public static void main() {
+      System.out.println("Works");
 		}
 };
 
 /**
  * @class sortByLenght
  * @brief The comparator that allows the paths to be sorted by sortByLenght
- * @description Extracts time difference in a path and uses it as a primary sorting criterion, and uses junction count as a secondary one.
+ * 
+ * @details Extracts time difference in a path and uses it as a primary sorting criterion, and uses junction count as a secondary one.
  * @return A negative integer if the first argument is shorter, a positive integer otherwise. If equal, returns 0
  */
 class sortByLenght implements Comparator<ArrayList<Ticket>> {
@@ -156,7 +162,8 @@ class sortByLenght implements Comparator<ArrayList<Ticket>> {
 /**
  * @class sortByDeparture
  * @brief The comparator that allows the paths to be sorted by departure time
- * @description Extracts and compares the Departure information of the first train in each ticket list
+ * 
+ * @details Extracts and compares the Departure information of the first train in each ticket list
  * @return A negative integer if the first argument is after, a positive integer otherwise. If equal, returns 0
  */
 class sortByDeparture implements Comparator<ArrayList<Ticket>> {
@@ -168,8 +175,9 @@ class sortByDeparture implements Comparator<ArrayList<Ticket>> {
 /**
  * @class sortByArrival
  * @brief The comparator that allows the paths to be sorted by arrival time
- * @description Extracts and compares the arrival time from the lastStep information of the last ticket of each list
- * @returns A negative integer if the first argument is earlier, a positive integer otherwise. If equal, returns 0
+ * 
+ * @details Extracts and compares the arrival time from the lastStep information of the last ticket of each list
+ * @return A negative integer if the first argument is earlier, a positive integer otherwise. If equal, returns 0
  */
 class sortByArrival implements Comparator<ArrayList<Ticket>> {
   public int compare (ArrayList<Ticket> L1, ArrayList<Ticket> L2) {
@@ -181,8 +189,9 @@ class sortByArrival implements Comparator<ArrayList<Ticket>> {
 /**
  * @class sortByCost
  * @brief The comparator that allows the paths to be sorted by Cost
- * @description Extracts and compares the sum total of costs of each ticket list 
- * @returns A negative integer if the first argument is cheaper, a postive integer otherwise. If equal, returns 0
+ * 
+ * @details Extracts and compares the sum total of costs of each ticket list 
+ * @return A negative integer if the first argument is cheaper, a postive integer otherwise. If equal, returns 0
  */
 class sortByCost implements Comparator<ArrayList<Ticket>> {
   public int compare (ArrayList<Ticket> L1, ArrayList<Ticket> L2) {
@@ -194,8 +203,9 @@ class sortByCost implements Comparator<ArrayList<Ticket>> {
 /**
  * @class PathComparator
  * @brief Complex comparator that allows paths sorting according to a provided srtAlg parameter
- * @description Compares by the selected system first, and if the result is indecisive attempts to use all others in order
- * @returns A negative integer if the first argument is "better", a positive integer otherwise. If equal, returns 0
+ *
+ * @details Compares by the selected system first, and if the result is indecisive attempts to use all others in order
+ * @return A negative integer if the first argument is "better", a positive integer otherwise. If equal, returns 0
  * @see sortByLenght
  * @see sortByDeparture
  * @see sortByArrival
@@ -207,7 +217,8 @@ class PathComparator implements Comparator<ArrayList<Ticket>> {
   
   /**
    * @brief Comparator constructor 
-   * @description Initializes the sub-comparators, and sets the preferred one via the enum
+   * 
+   * @details Initializes the sub-comparators, and sets the preferred one via the enum
    * @param alg The preferred sorting enum
    */
   public PathComparator (srtAlg alg) {

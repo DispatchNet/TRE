@@ -9,7 +9,7 @@ Class representing a ticket, containing information about the owner, fist depart
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{classticketing_1_1Ticket_a52fe3f83b6d55410afe64039944ee4b7}{Ticket}} (\doxymbox{\hyperlink{classuser__management_1_1Passenger}{Passenger}} owner, Departure departure, \doxymbox{\hyperlink{classservice__management_1_1ServiceStep}{Service\+Step}} last\+Step)
-\begin{DoxyCompactList}\small\item\em Constructor of \doxylink{classticketing_1_1Ticket}{Ticket} class @description Constructs a ticket enforcing the mandatory owner, departure and step information. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructor of \doxylink{classticketing_1_1Ticket}{Ticket} class. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classuser__management_1_1Passenger}{Passenger}} \doxymbox{\hyperlink{classticketing_1_1Ticket_a083a6196da9fceff79a3e3f001dcbaf0}{get\+Owner}} ()
 \begin{DoxyCompactList}\small\item\em Owner getter. \end{DoxyCompactList}\item 
 Departure \doxymbox{\hyperlink{classticketing_1_1Ticket_a2bd87ede0ae1609713761d4b02824fa9}{get\+Departure}} ()
@@ -17,7 +17,7 @@ Departure \doxymbox{\hyperlink{classticketing_1_1Ticket_a2bd87ede0ae1609713761d4
 \doxymbox{\hyperlink{classservice__management_1_1ServiceStep}{Service\+Step}} \doxymbox{\hyperlink{classticketing_1_1Ticket_ad76c3c9605817aa62ae34998044192da}{get\+Last\+Step}} ()
 \begin{DoxyCompactList}\small\item\em last\+Step getter \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classticketing_1_1Ticket_af4e3d7dca5152d6ee51fc133d405bea1}{get\+Cost}} ()
-\begin{DoxyCompactList}\small\item\em evalutes the total cost of the ticket @description uses the depature and last\+Step information to measure the distance covered and which train is used, then computes the resulting price \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em evalutes the total cost of the ticket \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classinfrastructure_1_1Junction}{Junction}} \doxymbox{\hyperlink{classticketing_1_1Ticket_ab3e701c7f5363067e7fe6427999ee461}{get\+Junction}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
@@ -41,9 +41,9 @@ ticketing.\+Ticket.\+Ticket (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink
 
 
 
-Constructor of \doxylink{classticketing_1_1Ticket}{Ticket} class @description Constructs a ticket enforcing the mandatory owner, departure and step information. 
+Constructor of \doxylink{classticketing_1_1Ticket}{Ticket} class. 
 
-
+Constructs a ticket enforcing the mandatory owner, departure and step information 
 \begin{DoxyParams}{Parameters}
 {\em owner} & The owner of the ticket \\
 \hline
@@ -70,9 +70,9 @@ int ticketing.\+Ticket.\+get\+Cost (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 
 
 
-evalutes the total cost of the ticket @description uses the depature and last\+Step information to measure the distance covered and which train is used, then computes the resulting price 
+evalutes the total cost of the ticket 
 
-\begin{DoxyReturn}{Returns}
+uses the depature and last\+Step information to measure the distance covered and which train is used, then computes the resulting price \begin{DoxyReturn}{Returns}
 an integer representing the monetary value 
 \end{DoxyReturn}
 \Hypertarget{classticketing_1_1Ticket_a2bd87ede0ae1609713761d4b02824fa9}\index{ticketing.Ticket@{ticketing.Ticket}!getDeparture@{getDeparture}}

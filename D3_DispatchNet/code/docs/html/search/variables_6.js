@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['passenger_0',['Passenger',['../enumuser__management_1_1_user_type.html#adbd9cf58e47844d93016950619461ca9',1,'user_management::UserType']]],
-  ['pendingapproval_1',['PendingApproval',['../enumservice__mangement_1_1_service_status.html#a9daa1204f19dde44ea432d265325abe1',1,'service_mangement::ServiceStatus']]]
+  ['passenger_0',['Passenger',['../enumuser__management_1_1UserType.html#adbd9cf58e47844d93016950619461ca9',1,'user_management::UserType']]],
+  ['pendingapproval_1',['PendingApproval',['../enumservice__management_1_1ServiceStatus.html#a1ffd240ac187af32cea77ecccea67184',1,'service_management::ServiceStatus']]]
 ];

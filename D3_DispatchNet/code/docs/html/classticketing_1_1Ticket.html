@@ -98,7 +98,7 @@ $(function(){initNavTree('classticketing_1_1Ticket.html','','classticketing_1_1T
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a52fe3f83b6d55410afe64039944ee4b7" id="r_a52fe3f83b6d55410afe64039944ee4b7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a52fe3f83b6d55410afe64039944ee4b7">Ticket</a> (<a class="el" href="classuser__management_1_1Passenger.html">Passenger</a> owner, Departure departure, <a class="el" href="classservice__management_1_1ServiceStep.html">ServiceStep</a> lastStep)</td></tr>
-<tr class="memdesc:a52fe3f83b6d55410afe64039944ee4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classticketing_1_1Ticket.html" title="Class representing a ticket, containing information about the owner, fist departure and last valid ar...">Ticket</a> class @description Constructs a ticket enforcing the mandatory owner, departure and step information.  <br /></td></tr>
+<tr class="memdesc:a52fe3f83b6d55410afe64039944ee4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classticketing_1_1Ticket.html" title="Class representing a ticket, containing information about the owner, fist departure and last valid ar...">Ticket</a> class.  <br /></td></tr>
 <tr class="memitem:a083a6196da9fceff79a3e3f001dcbaf0" id="r_a083a6196da9fceff79a3e3f001dcbaf0"><td class="memItemLeft"><a class="el" href="classuser__management_1_1Passenger.html">Passenger</a>&#160;</td><td class="memItemRight"><a class="el" href="#a083a6196da9fceff79a3e3f001dcbaf0">getOwner</a> ()</td></tr>
 <tr class="memdesc:a083a6196da9fceff79a3e3f001dcbaf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Owner getter.  <br /></td></tr>
 <tr class="memitem:a2bd87ede0ae1609713761d4b02824fa9" id="r_a2bd87ede0ae1609713761d4b02824fa9"><td class="memItemLeft">Departure&#160;</td><td class="memItemRight"><a class="el" href="#a2bd87ede0ae1609713761d4b02824fa9">getDeparture</a> ()</td></tr>
@@ -106,7 +106,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad76c3c9605817aa62ae34998044192da" id="r_ad76c3c9605817aa62ae34998044192da"><td class="memItemLeft"><a class="el" href="classservice__management_1_1ServiceStep.html">ServiceStep</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad76c3c9605817aa62ae34998044192da">getLastStep</a> ()</td></tr>
 <tr class="memdesc:ad76c3c9605817aa62ae34998044192da"><td class="mdescLeft">&#160;</td><td class="mdescRight">lastStep getter  <br /></td></tr>
 <tr class="memitem:af4e3d7dca5152d6ee51fc133d405bea1" id="r_af4e3d7dca5152d6ee51fc133d405bea1"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af4e3d7dca5152d6ee51fc133d405bea1">getCost</a> ()</td></tr>
-<tr class="memdesc:af4e3d7dca5152d6ee51fc133d405bea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">evalutes the total cost of the ticket @description uses the depature and lastStep information to measure the distance covered and which train is used, then computes the resulting price  <br /></td></tr>
+<tr class="memdesc:af4e3d7dca5152d6ee51fc133d405bea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">evalutes the total cost of the ticket  <br /></td></tr>
 <tr class="memitem:ab3e701c7f5363067e7fe6427999ee461" id="r_ab3e701c7f5363067e7fe6427999ee461"><td class="memItemLeft"><a class="el" href="classinfrastructure_1_1Junction.html">Junction</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab3e701c7f5363067e7fe6427999ee461">getJunction</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -148,8 +148,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructor of <a class="el" href="classticketing_1_1Ticket.html" title="Class representing a ticket, containing information about the owner, fist departure and last valid ar...">Ticket</a> class @description Constructs a ticket enforcing the mandatory owner, departure and step information. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Constructor of <a class="el" href="classticketing_1_1Ticket.html" title="Class representing a ticket, containing information about the owner, fist departure and last valid ar...">Ticket</a> class. </p>
+<p>Constructs a ticket enforcing the mandatory owner, departure and step information </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">owner</td><td>The owner of the ticket </td></tr>
     <tr><td class="paramname"><a class="el" href="namespacedeparture.html">departure</a></td><td>The first station and train the ticket is valid from </td></tr>
@@ -187,8 +187,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>evalutes the total cost of the ticket @description uses the depature and lastStep information to measure the distance covered and which train is used, then computes the resulting price </p>
-<dl class="section return"><dt>Returns</dt><dd>an integer representing the monetary value </dd></dl>
+<p>evalutes the total cost of the ticket </p>
+<p>uses the depature and lastStep information to measure the distance covered and which train is used, then computes the resulting price </p><dl class="section return"><dt>Returns</dt><dd>an integer representing the monetary value </dd></dl>
 
 </div>
 </div>

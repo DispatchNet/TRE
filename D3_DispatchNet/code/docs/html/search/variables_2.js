@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['departure_0',['Departure',['../enumsrt_alg.html#a4439aebe6b498dd8ef7be4404171ea6a',1,'srtAlg']]]
+  ['departure_0',['Departure',['../enumpath__finding_1_1srtAlg.html#af333651b5349ce1373c4d13bfb2fede8',1,'path_finding::srtAlg']]]
 ];
