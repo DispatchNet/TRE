@@ -21,7 +21,7 @@ public class Line {
    * @param maxSpeedKpH The max speed of this line in Kilometers per hour
    * @param nTracks The number of tracks this line has
    * 
-   * @throws NullPointerException if the junctions are null.
+   * @throws NullPointerException if the any junction is null.
    * @implNote Also adds this line to the junction's adjacencies.
    */
   public Line(Junction j1, Junction j2, int lengthMeters, int maxSpeedKpH, int nTracks) {
@@ -30,6 +30,9 @@ public class Line {
 
   /**
    * @brief Constructs a Line with explicit id
+   * 
+   * @throws NullPointerException if the any junction is null.
+   * @implNote Also adds this line to the junction's adjacencies.
    */
   public Line(String id, Junction j1, Junction j2, int lengthMeters, int maxSpeedKpH, int nTracks) {
     if (j1 == null || j2 == null) {
