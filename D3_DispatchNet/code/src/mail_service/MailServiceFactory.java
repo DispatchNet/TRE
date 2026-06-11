@@ -5,7 +5,7 @@ package mail_service;
  * @brief Factory class for creating mail service instances.
  */
 public class MailServiceFactory {
-    private static MailService instance;
+    private static MailService instance = new MockMailService();
 
     /**
      * @brief Gets the default mail service instance.
@@ -14,9 +14,6 @@ public class MailServiceFactory {
      * @return The mail service instance
      */
     public static MailService getMailService() {
-        if (instance == null) {
-            instance = new MockMailService();
-        }
         return instance;
     }
 
