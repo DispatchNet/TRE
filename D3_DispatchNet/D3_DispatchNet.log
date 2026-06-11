@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.21)  3 JUN 2026 15:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.5)  11 JUN 2026 23:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -266,25 +266,25 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 (./D3_DispatchNet.aux)
 \openout1 = `D3_DispatchNet.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-Package hyperref Info: Link coloring ON on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+Package hyperref Info: Link coloring ON on input line 49.
  (./D3_DispatchNet.out) (./D3_DispatchNet.out)
 \@outlinefile=\write3
 \openout3 = `D3_DispatchNet.out'.
@@ -325,9 +325,9 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 82.
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 50.
+(Font)              <14.4> on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 50.
+(Font)              <7> on input line 51.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./D3_DispatchNet.toc
@@ -342,7 +342,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `D3_DispatchNet.toc'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--60
+Underfull \hbox (badness 10000) in paragraph at lines 56--61
 
  []
 
@@ -351,7 +351,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.61 \newpage
+l.62 \newpage
               [1
 
 ] [2{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
@@ -360,32 +360,77 @@ Chapter 1.
 
 ]
 Chapter 2.
-(./D3_BodyText.tex) [4
+(./D3_BodyText.tex [4
 
-] (./D3_DispatchNet.aux)
+]
+<images/database/user_database.png, id=114, 1085.55562pt x 52.69687pt>
+File: images/database/user_database.png Graphic file (type png)
+<use images/database/user_database.png>
+Package pdftex.def Info: images/database/user_database.png  used on input line 
+44.
+(pdftex.def)             Requested size: 296.39786pt x 14.38835pt.
+<user_diagrams/user_management_user.pdf, id=117, 885.3075pt x 983.675pt>
+File: user_diagrams/user_management_user.pdf Graphic file (type pdf)
+<use user_diagrams/user_management_user.pdf>
+Package pdftex.def Info: user_diagrams/user_management_user.pdf  used on input 
+line 58.
+(pdftex.def)             Requested size: 296.39786pt x 329.32678pt.
+ [5 <./images/database/user_database.png>] [6 <./user_diagrams/user_management_
+user.pdf>]
+<user_diagrams/ticketing_user.pdf, id=132, 447.6725pt x 376.40625pt>
+File: user_diagrams/ticketing_user.pdf Graphic file (type pdf)
+<use user_diagrams/ticketing_user.pdf>
+Package pdftex.def Info: user_diagrams/ticketing_user.pdf  used on input line 6
+5.
+(pdftex.def)             Requested size: 296.39786pt x 249.22148pt.
+ [7 <./user_diagrams/ticketing_user.pdf>]
+<user_diagrams/passenger_user.pdf, id=141, 677.53125pt x 993.7125pt>
+File: user_diagrams/passenger_user.pdf Graphic file (type pdf)
+<use user_diagrams/passenger_user.pdf>
+Package pdftex.def Info: user_diagrams/passenger_user.pdf  used on input line 7
+1.
+(pdftex.def)             Requested size: 296.39786pt x 434.73299pt.
+
+[8 <./user_diagrams/passenger_user.pdf>]
+<user_diagrams/train_company_user.pdf, id=150, 818.05624pt x 932.48375pt>
+File: user_diagrams/train_company_user.pdf Graphic file (type pdf)
+<use user_diagrams/train_company_user.pdf>
+Package pdftex.def Info: user_diagrams/train_company_user.pdf  used on input li
+ne 77.
+(pdftex.def)             Requested size: 296.39786pt x 337.85663pt.
+ [9 <./user_diagrams/train_company_user.pdf>]
+<user_diagrams/network_manager_user.pdf, id=157, 944.52875pt x 730.73pt>
+File: user_diagrams/network_manager_user.pdf Graphic file (type pdf)
+<use user_diagrams/network_manager_user.pdf>
+Package pdftex.def Info: user_diagrams/network_manager_user.pdf  used on input 
+line 83.
+(pdftex.def)             Requested size: 296.39786pt x 229.31146pt.
+ [10 <./user_diagrams/network_manager_user.pdf>]) [11]
+(./D3_DispatchNet.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `D3_DispatchNet.out' has not changed.
-(rerunfilecheck)             Checksum: 0F340914FAD1003DBAB6CAD6E3E44876;1158.
+(rerunfilecheck)             Checksum: 948BC38C8CB744E004E2DE123AAA1AC5;1925.
  ) 
 Here is how much of TeX's memory you used:
- 10184 strings out of 469515
- 157008 string characters out of 5470807
- 568963 words of memory out of 5000000
- 38713 multiletter control sequences out of 15000+600000
+ 10252 strings out of 469515
+ 159211 string characters out of 5470808
+ 572210 words of memory out of 5000000
+ 38768 multiletter control sequences out of 15000+600000
  634833 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,11n,79p,259b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,339b,560s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public
-/cm-super/sfrm1200.pfb>
-Output written on D3_DispatchNet.pdf (5 pages, 59516 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1
+200.pfb>
+Output written on D3_DispatchNet.pdf (12 pages, 606023 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 200 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 159 words of extra memory for PDF output out of 10000 (max. 10000000)
 

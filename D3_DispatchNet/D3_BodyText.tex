@@ -37,9 +37,11 @@ The database contains one file for each set of data:
     \item authenticated users
     \item junctions
     \item lines
-    \item station_data
+    \item station\_data
     \item \textcolor{red}{TODO: add if necessary}
 \end{itemize}
+
+\imgins{images/database/user_database.png}
 
 \textcolor{red}{TODO: add database images}
 
@@ -47,34 +49,40 @@ The database contains one file for each set of data:
 
 \section{User Flows}
 
-\subsection{User Management}
+\osubs{User Management}
 The following user diagram describes the actions related to the user management and user authentication, common to all the users.
 
 It provides different pages depending on the type of user. An authenticated user (I.E. passenger or train company, not network manager) can delete, view data (Account Page), change data or logout (also the network manager).\\
 An anonymous user can register, reset its password or login.
 
-\textcolor{red}{TODO: add photo in folder user\_diagrams }
+\imgins{user_diagrams/user_management_user.pdf}
 
-\subsection{Ticketing}
+
+\newpage
+\osubs{Ticketing}
 The following user diagram describes the flow of the ticketing component, started from the \hyl{Passenger}'s diagram.
 
-\textcolor{red}{TODO: add photo in folder user\_diagrams }
+\imgins{user_diagrams/ticketing_user.pdf}
 
-\subsection{Passenger}
+\newpage
+\osubs{Passenger}
 The following user diagram describes the actions the passenger can take. It can go to \hyl{User Management} \textcolor{red}{TODO: add hyperlink (everywhere) }, view its ticket history or start a path finding procedure. In the last two it can move to the \hyl{Ticketing} flow.
 
-\textcolor{red}{TODO: add photo in folder user\_diagrams }
+\imgins{user_diagrams/passenger_user.pdf}
 
-\subsection{Train Company}
+\newpage
+\osubs{Train Company}
 The following user diagram describes the actions the train company can take. It can go to \hyl{User Management} or to the service management.
 
-\textcolor{red}{TODO: add photo in folder user\_diagrams }
+\imgins{user_diagrams/train_company_user.pdf}
 
-\subsection{Network Manager}
+\newpage
+\osubs{Network Manager}
 The following user diagram describes the actions the network manager can take: managing the network and its elements.
 
-\textcolor{red}{TODO: add photo in folder user\_diagrams }
+\imgins{user_diagrams/network_manager_user.pdf}
 
+\newpage
 \section{Code Preview}
 
 \section{Team roles}
