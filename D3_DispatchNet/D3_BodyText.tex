@@ -1,5 +1,10 @@
 \section{Project Structure}
-The structure of the project is shown in \textcolor{red}{TODO: figure.x}. It is composed of: 
+In the following is shown the structure of the project.
+
+\imgins{images/structure/DispatchNet_project_structure.png}.
+
+It is composed of: 
+
 \begin{itemize}
 
     \item the main modules:
@@ -20,8 +25,6 @@ The structure of the project is shown in \textcolor{red}{TODO: figure.x}. It is 
     
 \end{itemize}
 
-\textcolor{red}{TODO: add photo in folder structure }
-
 \section{Architecture}
 
 \section{Implementation Language}
@@ -37,13 +40,25 @@ The database contains one file for each set of data:
     \item authenticated users
     \item junctions
     \item lines
-    \item station\_data
+    \item platform
+    \item station data
     \item \textcolor{red}{TODO: add if necessary}
 \end{itemize}
 
+The authenticated user conatins the following fields:
 \imgins{images/database/user_database.png}
 
-\textcolor{red}{TODO: add database images}
+The junction contains the following fields:
+\imgins{images/database/junction_database.png}
+
+The line contains the following fields:
+\imgins{images/database/line_database.png}
+
+The platform contains the following fields:
+\imgins{images/database/platform_database.png}
+
+The sstation data contains the following fields:
+\imgins{images/database/stationdata_database.png}
 
 \section{Dependencies}
 
@@ -66,7 +81,7 @@ The following user diagram describes the flow of the ticketing component, starte
 
 \newpage
 \osubs{Passenger}
-The following user diagram describes the actions the passenger can take. It can go to \hyl{User Management} \textcolor{red}{TODO: add hyperlink (everywhere) }, view its ticket history or start a path finding procedure. In the last two it can move to the \hyl{Ticketing} flow.
+The following user diagram describes the actions the passenger can take. It can go to \hyl{User Management}, view its ticket history or start a path finding procedure. In the last two it can move to the \hyl{Ticketing} flow.
 
 \imgins{user_diagrams/passenger_user.pdf}
 

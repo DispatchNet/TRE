@@ -58,32 +58,12 @@ public class Passenger extends EndUser {
     }
 
     /**
-     * @brief Purchases a new group pass
-     * @param groupPass The group pass to purchase
-     * @return true if the group pass was purchased successfully, false otherwise
-     */
-    public boolean purchaseTicketGroup(String groupPass) {
-        // TODO: implement group pass purchasing
-        return tickets.add(groupPass);
-    }
-
-    /**
      * @brief Cancels a purchased ticket
      * @param ticket The ticket to cancel
      * @return true if the ticket was canceled successfully, false otherwise
      */
     public boolean cancelTicket(String ticket) {
         return tickets.remove(ticket);
-    }
-
-    /**
-     * @brief Cancels a purchased group pass
-     * @param groupPass The group pass to cancel
-     * @return true if the group pass was canceled successfully, false otherwise
-     */
-    public boolean cancelTicketGroup(String groupPass) {
-        // TODO: implement group pass cancellation
-        return tickets.remove(groupPass);
     }
 
     /**

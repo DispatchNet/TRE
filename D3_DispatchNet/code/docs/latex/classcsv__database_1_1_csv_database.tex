@@ -1,0 +1,108 @@
+\doxysection{csv\+\_\+database.\+Csv\+Database Class Reference}
+\hypertarget{classcsv__database_1_1_csv_database}{}\label{classcsv__database_1_1_csv_database}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+
+
+CSV-\/based persistence layer for authenticated users and infrastructure data.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classcsv__database_1_1_csv_database_a8129b33845008dfa60afa3c0fa691399}{Csv\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classcsv__database_1_1_csv_database}{Csv\+Database}. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} $>$ \doxymbox{\hyperlink{classcsv__database_1_1_csv_database_a6afe10db8cf3efcc18b95e2ef2aab7b7}{load\+Authenticated\+Users}} (\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
+\begin{DoxyCompactList}\small\item\em Loads authenticated users from the CSV file. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classcsv__database_1_1_csv_database_a375c0f5298f3d3f22c4d65f62f9661fc}{save\+Authenticated\+Users}} (List$<$ \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} $>$ users)
+\begin{DoxyCompactList}\small\item\em Saves authenticated users to the CSV file. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classcsv__database_1_1_csv_database_a2ad9f289bfbede41dad278549f2f69a3}{load\+Network}} (\doxymbox{\hyperlink{classinfrastructure_1_1_network}{Network}} network)
+\begin{DoxyCompactList}\small\item\em Loads the network data from the CSV files. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classcsv__database_1_1_csv_database_a10d9e3efca422251e8da0857bdcc178d}{save\+Network}} (\doxymbox{\hyperlink{classinfrastructure_1_1_network}{Network}} network)
+\begin{DoxyCompactList}\small\item\em Saves the network data to the CSV files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CSV-\/based persistence layer for authenticated users and infrastructure data. 
+
+If a CSV file is to be added add everywhere there is "{}(add if necessary)"{} as well as in the read/\+write methods. 
+
+\label{classcsv__database_1_1_csv_database_doc-constructors}
+\Hypertarget{classcsv__database_1_1_csv_database_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcsv__database_1_1_csv_database_a8129b33845008dfa60afa3c0fa691399}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!CsvDatabase@{CsvDatabase}}
+\index{CsvDatabase@{CsvDatabase}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+\doxysubsubsection{\texorpdfstring{CsvDatabase()}{CsvDatabase()}}
+{\footnotesize\ttfamily \label{classcsv__database_1_1_csv_database_a8129b33845008dfa60afa3c0fa691399} 
+csv\+\_\+database.\+Csv\+Database.\+Csv\+Database (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{classcsv__database_1_1_csv_database}{Csv\+Database}. 
+
+
+
+\label{classcsv__database_1_1_csv_database_doc-func-members}
+\Hypertarget{classcsv__database_1_1_csv_database_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcsv__database_1_1_csv_database_a6afe10db8cf3efcc18b95e2ef2aab7b7}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!loadAuthenticatedUsers@{loadAuthenticatedUsers}}
+\index{loadAuthenticatedUsers@{loadAuthenticatedUsers}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+\doxysubsubsection{\texorpdfstring{loadAuthenticatedUsers()}{loadAuthenticatedUsers()}}
+{\footnotesize\ttfamily \label{classcsv__database_1_1_csv_database_a6afe10db8cf3efcc18b95e2ef2aab7b7} 
+List$<$ \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} $>$ csv\+\_\+database.\+Csv\+Database.\+load\+Authenticated\+Users (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}}}]{user\+Management}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads authenticated users from the CSV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Management} & The user management instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of authenticated users. 
+\end{DoxyReturn}
+\Hypertarget{classcsv__database_1_1_csv_database_a2ad9f289bfbede41dad278549f2f69a3}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!loadNetwork@{loadNetwork}}
+\index{loadNetwork@{loadNetwork}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+\doxysubsubsection{\texorpdfstring{loadNetwork()}{loadNetwork()}}
+{\footnotesize\ttfamily \label{classcsv__database_1_1_csv_database_a2ad9f289bfbede41dad278549f2f69a3} 
+void csv\+\_\+database.\+Csv\+Database.\+load\+Network (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_network}{Network}}}]{network}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads the network data from the CSV files. 
+
+\Hypertarget{classcsv__database_1_1_csv_database_a375c0f5298f3d3f22c4d65f62f9661fc}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!saveAuthenticatedUsers@{saveAuthenticatedUsers}}
+\index{saveAuthenticatedUsers@{saveAuthenticatedUsers}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+\doxysubsubsection{\texorpdfstring{saveAuthenticatedUsers()}{saveAuthenticatedUsers()}}
+{\footnotesize\ttfamily \label{classcsv__database_1_1_csv_database_a375c0f5298f3d3f22c4d65f62f9661fc} 
+void csv\+\_\+database.\+Csv\+Database.\+save\+Authenticated\+Users (\begin{DoxyParamCaption}\item[{List$<$ \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} $>$}]{users}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Saves authenticated users to the CSV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em users} & The list of authenticated users to save. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcsv__database_1_1_csv_database_a10d9e3efca422251e8da0857bdcc178d}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!saveNetwork@{saveNetwork}}
+\index{saveNetwork@{saveNetwork}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+\doxysubsubsection{\texorpdfstring{saveNetwork()}{saveNetwork()}}
+{\footnotesize\ttfamily \label{classcsv__database_1_1_csv_database_a10d9e3efca422251e8da0857bdcc178d} 
+void csv\+\_\+database.\+Csv\+Database.\+save\+Network (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_network}{Network}}}]{network}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Saves the network data to the CSV files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em network} & The network to save. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+csv\+\_\+database/\+\doxymbox{\hyperlink{_csv_database_8java}{Csv\+Database.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,166 @@
+\doxysection{user\+\_\+management.\+User\+Session Class Reference}
+\hypertarget{classuser__management_1_1_user_session}{}\label{classuser__management_1_1_user_session}\index{user\_management.UserSession@{user\_management.UserSession}}
+
+
+Tracks the current user session and whether the current user is authenticated. This project deals with one active user at a time, so the session knows whether the active user is authenticated or anonymous.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classuser__management_1_1_user_session_a9f679a48b17f98b6e0b77ee234561e3c}{User\+Session}} ()
+\begin{DoxyCompactList}\small\item\em Creates an empty session with no active user. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classuser__management_1_1_user_session_ab6849fcdbdafbb229ed797be0c6e722d}{is\+Authenticated}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the current session belongs to an authenticated user. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} \doxymbox{\hyperlink{classuser__management_1_1_user_session_ae0e0bcc500601dde294ba4549725f8a2}{get\+Authenticated\+User}} ()
+\begin{DoxyCompactList}\small\item\em Gets the authenticated user for the current session. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classuser__management_1_1_anonymous_user}{Anonymous\+User}} \doxymbox{\hyperlink{classuser__management_1_1_user_session_a299f07b9ea690d82bca8f361b4e10c8f}{get\+Anonymous\+User}} ()
+\begin{DoxyCompactList}\small\item\em Gets the anonymous user for the current session. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_user_session_abb8c58802a92b570e41fb3d85dc6b41a}{set\+Authenticated\+User}} (\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} authenticated\+User)
+\begin{DoxyCompactList}\small\item\em Starts an authenticated session for the given user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_user_session_a9d356ad00fa0ea4748009cc61c1d7ab4}{set\+Anonymous\+User}} (\doxymbox{\hyperlink{classuser__management_1_1_anonymous_user}{Anonymous\+User}} anonymous\+User)
+\begin{DoxyCompactList}\small\item\em Starts an anonymous session for the given anonymous user. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_user_session_aae4fd2f7078043f688917c54885e4d8c}{clear\+Session}} ()
+\begin{DoxyCompactList}\small\item\em Clears the current session state. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1_user_session_a49b463f9a21c670f57393c121891dacd}{get\+Current\+User\+Identifier}} ()
+\begin{DoxyCompactList}\small\item\em Gets a readable identifier for the current session user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{classuser__management_1_1_user_session_a93a62ffea8830e65c1397d4ae6dfc6dc}{main}} (String\+[$\,$]\+ args)
+\begin{DoxyCompactList}\small\item\em Main method for testing the \doxylink{classuser__management_1_1_user_session}{User\+Session} class functionality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tracks the current user session and whether the current user is authenticated. This project deals with one active user at a time, so the session knows whether the active user is authenticated or anonymous. 
+
+\label{classuser__management_1_1_user_session_doc-constructors}
+\Hypertarget{classuser__management_1_1_user_session_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classuser__management_1_1_user_session_a9f679a48b17f98b6e0b77ee234561e3c}\index{user\_management.UserSession@{user\_management.UserSession}!UserSession@{UserSession}}
+\index{UserSession@{UserSession}!user\_management.UserSession@{user\_management.UserSession}}
+\doxysubsubsection{\texorpdfstring{UserSession()}{UserSession()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_session_a9f679a48b17f98b6e0b77ee234561e3c} 
+user\+\_\+management.\+User\+Session.\+User\+Session (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an empty session with no active user. 
+
+
+
+\label{classuser__management_1_1_user_session_doc-func-members}
+\Hypertarget{classuser__management_1_1_user_session_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classuser__management_1_1_user_session_aae4fd2f7078043f688917c54885e4d8c}\index{user\_management.UserSession@{user\_management.UserSession}!clearSession@{clearSession}}
+\index{clearSession@{clearSession}!user\_management.UserSession@{user\_management.UserSession}}
+\doxysubsubsection{\texorpdfstring{clearSession()}{clearSession()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_session_aae4fd2f7078043f688917c54885e4d8c} 
+void user\+\_\+management.\+User\+Session.\+clear\+Session (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears the current session state. 
+
+\Hypertarget{classuser__management_1_1_user_session_a299f07b9ea690d82bca8f361b4e10c8f}\index{user\_management.UserSession@{user\_management.UserSession}!getAnonymousUser@{getAnonymousUser}}
+\index{getAnonymousUser@{getAnonymousUser}!user\_management.UserSession@{user\_management.UserSession}}
+\doxysubsubsection{\texorpdfstring{getAnonymousUser()}{getAnonymousUser()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_session_a299f07b9ea690d82bca8f361b4e10c8f} 
+\doxymbox{\hyperlink{classuser__management_1_1_anonymous_user}{Anonymous\+User}} user\+\_\+management.\+User\+Session.\+get\+Anonymous\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the anonymous user for the current session. 
+
+\begin{DoxyReturn}{Returns}
+The active anonymous user, or null if the session is authenticated 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1_user_session_ae0e0bcc500601dde294ba4549725f8a2}\index{user\_management.UserSession@{user\_management.UserSession}!getAuthenticatedUser@{getAuthenticatedUser}}
+\index{getAuthenticatedUser@{getAuthenticatedUser}!user\_management.UserSession@{user\_management.UserSession}}
+\doxysubsubsection{\texorpdfstring{getAuthenticatedUser()}{getAuthenticatedUser()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_session_ae0e0bcc500601dde294ba4549725f8a2} 
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} user\+\_\+management.\+User\+Session.\+get\+Authenticated\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the authenticated user for the current session. 
+
+\begin{DoxyReturn}{Returns}
+The active authenticated user, or null if the session is anonymous 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1_user_session_a49b463f9a21c670f57393c121891dacd}\index{user\_management.UserSession@{user\_management.UserSession}!getCurrentUserIdentifier@{getCurrentUserIdentifier}}
+\index{getCurrentUserIdentifier@{getCurrentUserIdentifier}!user\_management.UserSession@{user\_management.UserSession}}
+\doxysubsubsection{\texorpdfstring{getCurrentUserIdentifier()}{getCurrentUserIdentifier()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_session_a49b463f9a21c670f57393c121891dacd} 
+String user\+\_\+management.\+User\+Session.\+get\+Current\+User\+Identifier (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a readable identifier for the current session user. 
+
+\begin{DoxyReturn}{Returns}
+The username for authenticated sessions, an anonymous ID for anonymous sessions, or "{}no-\/user"{} when the session is empty 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1_user_session_ab6849fcdbdafbb229ed797be0c6e722d}\index{user\_management.UserSession@{user\_management.UserSession}!isAuthenticated@{isAuthenticated}}
+\index{isAuthenticated@{isAuthenticated}!user\_management.UserSession@{user\_management.UserSession}}
+\doxysubsubsection{\texorpdfstring{isAuthenticated()}{isAuthenticated()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_session_ab6849fcdbdafbb229ed797be0c6e722d} 
+boolean user\+\_\+management.\+User\+Session.\+is\+Authenticated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if the current session belongs to an authenticated user. 
+
+\begin{DoxyReturn}{Returns}
+true when an authenticated user is active, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1_user_session_a93a62ffea8830e65c1397d4ae6dfc6dc}\index{user\_management.UserSession@{user\_management.UserSession}!main@{main}}
+\index{main@{main}!user\_management.UserSession@{user\_management.UserSession}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_session_a93a62ffea8830e65c1397d4ae6dfc6dc} 
+void user\+\_\+management.\+User\+Session.\+main (\begin{DoxyParamCaption}\item[{String\+[$\,$]\+}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Main method for testing the \doxylink{classuser__management_1_1_user_session}{User\+Session} class functionality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Command-\/line arguments \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classuser__management_1_1_user_session_a9d356ad00fa0ea4748009cc61c1d7ab4}\index{user\_management.UserSession@{user\_management.UserSession}!setAnonymousUser@{setAnonymousUser}}
+\index{setAnonymousUser@{setAnonymousUser}!user\_management.UserSession@{user\_management.UserSession}}
+\doxysubsubsection{\texorpdfstring{setAnonymousUser()}{setAnonymousUser()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_session_a9d356ad00fa0ea4748009cc61c1d7ab4} 
+void user\+\_\+management.\+User\+Session.\+set\+Anonymous\+User (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_anonymous_user}{Anonymous\+User}}}]{anonymous\+User}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts an anonymous session for the given anonymous user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em anonymous\+User} & The anonymous user to set as current \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classuser__management_1_1_user_session_abb8c58802a92b570e41fb3d85dc6b41a}\index{user\_management.UserSession@{user\_management.UserSession}!setAuthenticatedUser@{setAuthenticatedUser}}
+\index{setAuthenticatedUser@{setAuthenticatedUser}!user\_management.UserSession@{user\_management.UserSession}}
+\doxysubsubsection{\texorpdfstring{setAuthenticatedUser()}{setAuthenticatedUser()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_user_session_abb8c58802a92b570e41fb3d85dc6b41a} 
+void user\+\_\+management.\+User\+Session.\+set\+Authenticated\+User (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}}}]{authenticated\+User}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts an authenticated session for the given user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em authenticated\+User} & The authenticated user to set as current \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+user\+\_\+management/\+\doxymbox{\hyperlink{_user_session_8java}{User\+Session.\+java}}\end{DoxyCompactItemize}

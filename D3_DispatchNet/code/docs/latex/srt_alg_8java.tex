@@ -1,0 +1,31 @@
+\doxysection{src/\+path\+\_\+finding/\+srt\+Alg.java File Reference}
+\hypertarget{srt_alg_8java}{}\label{srt_alg_8java}\index{src/path\_finding/srtAlg.java@{src/path\_finding/srtAlg.java}}
+{\ttfamily import java.\+time.\+Local\+Time;}\newline
+{\ttfamily import java.\+util.\+Array\+List;}\newline
+{\ttfamily import java.\+util.\+Collections;}\newline
+{\ttfamily import java.\+util.\+Comparator;}\newline
+{\ttfamily import infrastructure.\+Junction;}\newline
+{\ttfamily import user\+\_\+management.\+Passenger;}\newline
+{\ttfamily import ticketing.\+Ticket;}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{enumpath__finding_1_1srt_alg}{path\+\_\+finding.\+srt\+Alg}}
+\item 
+class {\bfseries path\+\_\+finding.\+Path\+\_\+\+Finding}
+\item 
+class {\bfseries path\+\_\+finding.\+sort\+By\+Lenght}
+\begin{DoxyCompactList}\small\item\em The comparator that allows the paths to be sorted by sort\+By\+Lenght @description Extracts time difference in a path and uses it as a primary sorting criterion, and uses junction count as a secondary one. \end{DoxyCompactList}\item 
+class {\bfseries path\+\_\+finding.\+sort\+By\+Departure}
+\begin{DoxyCompactList}\small\item\em The comparator that allows the paths to be sorted by departure time @description Extracts and compares the Departure information of the first train in each ticket list. \end{DoxyCompactList}\item 
+class {\bfseries path\+\_\+finding.\+sort\+By\+Arrival}
+\begin{DoxyCompactList}\small\item\em The comparator that allows the paths to be sorted by arrival time @description Extracts and compares the arrival time from the last\+Step information of the last ticket of each list. \end{DoxyCompactList}\item 
+class {\bfseries path\+\_\+finding.\+sort\+By\+Cost}
+\begin{DoxyCompactList}\small\item\em The comparator that allows the paths to be sorted by Cost @description Extracts and compares the sum total of costs of each ticket list. \end{DoxyCompactList}\item 
+class {\bfseries path\+\_\+finding.\+Path\+Comparator}
+\begin{DoxyCompactList}\small\item\em Complex comparator that allows paths sorting according to a provided \doxylink{enumpath__finding_1_1srt_alg}{srt\+Alg} parameter @description Compares by the selected system first, and if the result is indecisive attempts to use all others in order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Packages}
+\begin{DoxyCompactItemize}
+\item 
+package \doxymbox{\hyperlink{namespacepath__finding}{path\+\_\+finding}}
+\end{DoxyCompactItemize}
