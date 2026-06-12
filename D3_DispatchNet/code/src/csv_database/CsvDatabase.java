@@ -5,6 +5,7 @@ import infrastructure.Junction;
 import infrastructure.Line;
 import infrastructure.Network;
 import infrastructure.StationData;
+import ticketing.Ticket;
 import user_management.AuthenticatedUser;
 import user_management.Passenger;
 import user_management.TrainCompany;
@@ -42,6 +43,7 @@ public class CsvDatabase {
     private static final Path JUNCTION_FILE = DATA_DIR.resolve("junctions.csv");
     private static final Path STATION_FILE = DATA_DIR.resolve("station_data.csv");
     private static final Path LINE_FILE = DATA_DIR.resolve("lines.csv");
+    private static final Path TICKET_FILE = DATA_DIR.resolve("tickets.csv");
 
     /**
      * @brief Constructor for CsvDatabase.
@@ -70,6 +72,7 @@ public class CsvDatabase {
         createFileWithHeader(JUNCTION_FILE, "id,name,latitude,longitude,stationDataId");
         createFileWithHeader(STATION_FILE, "id,junctionId,platforms");
         createFileWithHeader(LINE_FILE, "id,junction1Id,junction2Id,lengthMeters,maxSpeedKpH,nTracks");
+        createFileWithHeader(TICKET_FILE, "id,ownerId,description,status,history");
     }
 
     /**
@@ -104,6 +107,69 @@ public class CsvDatabase {
         } catch (IOException e) {
             System.err.println("Failed to load authenticated users: " + e.getMessage());
             return new ArrayList<>();
+        }
+    }
+
+    /**
+     * @brief Loads ticket records from the CSV file.
+     * @param userManagement The user management instance used to resolve ticket owners.
+     * @return A list of Ticket objects loaded from storage.
+     * @throws IOException If the ticket CSV file cannot be read.
+     */
+    public List<Ticket> loadTickets(UserManagement userManagement) throws IOException {
+        List<Ticket> result = new ArrayList<>();
+
+        for (String line : readCsvRecords(TICKET_FILE)) {
+            String[] values = line.split(",", -1);
+            if (values.length < 5) {
+                continue;
+            }
+
+            String id = values[0];
+            String ownerId = values[1];
+            String description = values[2];
+            Ticket.TicketStatus status;
+            try {
+                status = Ticket.TicketStatus.valueOf(values[3]);
+            } catch (IllegalArgumentException e) {
+                status = Ticket.TicketStatus.INACTIVE;
+            }
+
+            List<String> history = deserializeList(values[4]);
+            AuthenticatedUser owner = userManagement.getAuthenticatedUserById(ownerId);
+            if (!(owner instanceof Passenger passenger)) {
+                continue;
+            }
+
+            result.add(new Ticket(id, passenger, description, status, history));
+        }
+
+        return result;
+    }
+
+    /**
+     * @brief Saves ticket objects to the ticket CSV file.
+     * @param tickets The list of tickets to persist.
+     */
+    public void saveTickets(List<Ticket> tickets) {
+        try {
+            List<String> output = new ArrayList<>();
+            output.add("id,ownerId,description,status,history");
+
+            for (Ticket ticket : tickets) {
+                output.add(String.join(",",
+                    escapeCsv(ticket.getId()),
+                    escapeCsv(ticket.getOwner() != null ? ticket.getOwner().getId() : ""),
+                    escapeCsv(ticket.getDescription()),
+                    escapeCsv(ticket.getStatus().name()),
+                    escapeCsv(serializeList(ticket.getHistory()))
+                ));
+            }
+
+            Files.write(TICKET_FILE, output, StandardCharsets.UTF_8,
+                StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+        } catch (IOException e) {
+            System.err.println("Failed to save tickets: " + e.getMessage());
         }
     }
 
@@ -515,5 +581,36 @@ public class CsvDatabase {
         }
 
         return String.join(";", platforms);
+    }
+
+    /**
+     * @brief Serializes a list of strings into a single CSV-safe value.
+     * @param values The list of items.
+     * @return The serialized string.
+     */
+    private String serializeList(List<String> values) {
+        if (values == null || values.isEmpty()) {
+            return "";
+        }
+        return String.join(";", values);
+    }
+
+    /**
+     * @brief Deserializes a semicolon-separated list from a CSV field.
+     * @param serialized The serialized list string.
+     * @return The deserialized values.
+     */
+    private List<String> deserializeList(String serialized) {
+        if (serialized == null || serialized.isBlank()) {
+            return new ArrayList<>();
+        }
+
+        List<String> result = new ArrayList<>();
+        for (String item : serialized.split(";")) {
+            if (!item.isBlank()) {
+                result.add(item.trim());
+            }
+        }
+        return result;
     }
 }

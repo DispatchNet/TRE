@@ -7,6 +7,7 @@ import csv_database.CsvDatabase;
 import mail_service.Email;
 import mail_service.MailService;
 import mail_service.MailServiceFactory;
+import ticketing.Ticket;
 import IO_operations.IO;
 
 /**
@@ -31,6 +32,7 @@ public class UserManagement {
     public UserManagement() {
         session.setAnonymousUser(new AnonymousUser(this));
         authenticatedUsers.addAll(csvDatabase.loadAuthenticatedUsers(this));
+        loadTickets();
 
         // create default admin account if it doesn't exist
         if (getAuthenticatedUserByUsername("admin") == null) {
@@ -267,6 +269,54 @@ public class UserManagement {
         }
 
         return null;
+    }
+
+    /**
+     * @brief Gets an authenticated user by their id
+     * @param id The id of the user to retrieve
+     * @return The authenticated user with the specified id, or null if not found
+     */
+    public AuthenticatedUser getAuthenticatedUserById(String id) {
+        for (AuthenticatedUser user : authenticatedUsers) {
+            if (user.getId().equals(id)) {
+                return user;
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * @brief Saves all passenger tickets to the CSV file.
+     */
+    public void saveTickets() {
+        try {
+            List<Ticket> allTickets = new ArrayList<>();
+            for (AuthenticatedUser user : authenticatedUsers) {
+                if (user instanceof Passenger passenger) {
+                    allTickets.addAll(passenger.getAllTickets());
+                }
+            }
+            csvDatabase.saveTickets(allTickets);
+        } catch (Exception e) {
+            System.err.println("Failed to save tickets: " + e.getMessage());
+        }
+    }
+
+    /**
+     * @brief Loads tickets from the CSV file and assigns them to their owners.
+     */
+    private void loadTickets() {
+        try {
+            for (Ticket ticket : csvDatabase.loadTickets(this)) {
+                Passenger owner = ticket.getOwner();
+                if (owner != null) {
+                    owner.addLoadedTicket(ticket);
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("Failed to load tickets: " + e.getMessage());
+        }
     }
 
     /**

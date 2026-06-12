@@ -1,9 +1,9 @@
 package ticketing;
 
-import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.List;
+import java.util.Objects;
+import java.util.UUID;
 
 import user_management.Passenger;
 import service_management.ServiceStep;
@@ -12,15 +12,17 @@ import infrastructure.Junction;
 
 /**
  * @class Ticket
- * @brief Class representing a ticket, containing information about the owner, fist departure and last valid arrival
+ * @brief Class representing a ticket, containing information about the owner, first departure and last valid arrival
  */
-public class Ticket{
-  Passenger owner;
-  Departure departure;
-  ServiceStep lastStep;
+public class Ticket {
+    private final String id;
+    private final Passenger owner;
+    private final Departure departure;
+    private final ServiceStep lastStep;
+    private final String description;
+    private TicketStatus status;
+    private final List<String> history = new ArrayList<>();
 
-  //Public
-  
     /**
      * @brief Constructor of Ticket class
      * @details Constructs a ticket enforcing the mandatory owner, departure and step information
@@ -30,10 +32,43 @@ public class Ticket{
      * @see Departure
      * @see ServiceStep
      */
-    public Ticket (Passenger owner, Departure departure, ServiceStep lastStep) {
-      this.owner = owner;
-      this.departure = departure;
-      this.lastStep = lastStep;
+    public Ticket(Passenger owner, Departure departure, ServiceStep lastStep) {
+        this(UUID.randomUUID().toString(), owner, departure, lastStep);
+    }
+
+    /**
+     * @brief Constructor of Ticket class with explicit id
+     */
+    public Ticket(String id, Passenger owner, Departure departure, ServiceStep lastStep) {
+        this.id = id == null ? UUID.randomUUID().toString() : id;
+        this.owner = owner;
+        this.departure = departure;
+        this.lastStep = lastStep;
+        this.status = TicketStatus.INACTIVE;
+        this.description = buildDescription();
+    }
+
+    /**
+     * @brief Constructor used when loading tickets from storage.
+     */
+    public Ticket(String id, Passenger owner, String description, TicketStatus status, List<String> history) {
+        this.id = id == null ? UUID.randomUUID().toString() : id;
+        this.owner = owner;
+        this.departure = null;
+        this.lastStep = null;
+        this.description = description == null ? "" : description;
+        this.status = status == null ? TicketStatus.INACTIVE : status;
+        if (history != null) {
+            this.history.addAll(history);
+        }
+    }
+
+    /**
+     * @brief Returns the unique ticket identifier.
+     * @return The ticket id.
+     */
+    public String getId() {
+        return id;
     }
 
     /**
@@ -42,7 +77,7 @@ public class Ticket{
      * @see Passenger
      */
     public Passenger getOwner() {
-      return owner;
+        return owner;
     }
     
     /**
@@ -51,8 +86,58 @@ public class Ticket{
      * @see Departure
      */
     public Departure getDeparture() {
-      return departure;
-    } 
+        return departure;
+    }
+
+    /**
+     * @brief Returns the ticket description.
+     * @return A human-readable summary of the ticket.
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * @brief Gets the current ticket status.
+     * @return The current TicketStatus.
+     */
+    public TicketStatus getStatus() {
+        return status;
+    }
+
+    /**
+     * @brief Sets the ticket status.
+     * @param status The new status.
+     */
+    public void setStatus(TicketStatus status) {
+        this.status = status;
+    }
+
+    /**
+     * @brief Returns true when the ticket is currently active.
+     * @return true if status is ACTIVE.
+     */
+    public boolean isActive() {
+        return status == TicketStatus.ACTIVE;
+    }
+
+    /**
+     * @brief Gets the list of history events for this ticket.
+     * @return A copy of history entries.
+     */
+    public List<String> getHistory() {
+        return new ArrayList<>(history);
+    }
+
+    /**
+     * @brief Adds an entry to the ticket lifecycle history.
+     * @param entry The history event to add.
+     */
+    public void addHistoryEntry(String entry) {
+        if (entry != null && !entry.isBlank()) {
+            history.add(entry);
+        }
+    }
 
     /**
      * @brief lastStep getter
@@ -60,17 +145,17 @@ public class Ticket{
      * @see ServiceStep
      */
     public ServiceStep getLastStep() {
-      return lastStep;
+        return lastStep;
     }
 
     /**
      * @brief evalutes the total cost of the ticket
-     * @details uses the depature and lastStep information to measure the distance covered and which train is used, then computes the resulting price
-     * @return an integer representing the monetary value 
+     * @details uses the departure and lastStep information to measure the distance covered and which train is used, then computes the resulting price
+     * @return an integer representing the monetary value
      */
-    public int getCost () {
-      //TODO evaluate cost 
-      return 0;
+    public int getCost() {
+        // TODO evaluate cost
+        return 0;
     }
     
     /*
@@ -79,14 +164,47 @@ public class Ticket{
      * @return a Junction pointer
      * @see Junction
      */
-    public Junction getJunction () {
-      //TODO get junction
-      return lastStep.getJunction();
+    public Junction getJunction() {
+        return lastStep == null ? null : lastStep.getJunction();
     }
-  //Private
 
-  //Unit test
-		public static void main() {
-      
-		}
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Ticket ticket)) return false;
+        return Objects.equals(id, ticket.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    /**
+     * @brief Constructs a human-readable description from departure and lastStep.
+     * @return A string describing the ticket route.
+     */
+    private String buildDescription() {
+        if (departure == null || lastStep == null) {
+            return "";
+        }
+        // TODO: uncomment when ready
+        Junction startJunction = null; //departure.serviceStep().getStationData().getJunction();
+        Junction endJunction = lastStep.getJunction();
+        if (startJunction == null || endJunction == null) {
+            return "";
+        }
+        return startJunction.getName() + " to " + endJunction.getName();
+    }
+
+    public static enum TicketStatus {
+        INACTIVE,
+        ACTIVE,
+        CANCELLED
+    }
+
+    //Unit test
+    public static void main(String[] args) {
+        System.out.println("Ticket class loaded successfully.");
+    }
 }
