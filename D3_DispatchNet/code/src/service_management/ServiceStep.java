@@ -64,8 +64,8 @@ public class ServiceStep{
   }
 
   /**
-   * @brief get the travel minutes to this destination.
-   * @return the travel time in minutes
+   * @brief Get whether the train is stopping at this destination.
+   * @return true if the train is stopping, false otherwise
    */
   public boolean isStopping() {
     return stopData.isPresent();
