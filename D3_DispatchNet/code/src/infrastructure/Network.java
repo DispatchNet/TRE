@@ -1,10 +1,12 @@
 package infrastructure;
 
 import java.util.Map;
+import java.util.Optional;
 
 import service_management.ServiceSet;
 
 import java.util.HashMap;
+import java.util.List;
 import java.lang.IllegalArgumentException;
 import java.util.Collections;
 
@@ -14,6 +16,16 @@ import java.util.Collections;
  * Provides an interface to add/remove elements from the network
  */
 public class Network {
+
+  /** 
+   * @enum Represents the kind of errors which may happen when an element is edited /
+   */
+  public enum EditError {
+    IN_USE,
+    NOT_FOUND
+  }
+
+
   Map<String,Junction> junctions;
   Map<String,Line> lines;
   Map<String,ServiceSet> services;
@@ -67,6 +79,60 @@ public class Network {
     return Collections.unmodifiableMap(junctions);
   }
 
-  //TODO: Remove methods
-  
+  /**
+   * @brief remove a junction from the network
+   * @param id the id of the jucntion
+   * @return If any error occured, the error
+   * @implNote Also removes all lines connected to the deleted junction, as well as adjacencies from neighbhoring junctions
+   * @see EditError
+   */
+  public Optional<EditError> removeJunction(String id) {
+    if (!this.junctions.containsKey(id)){
+      return Optional.of(EditError.NOT_FOUND);
+    }
+    
+    Junction jct = this.junctions.get(id);
+    List<Line> lines = jct.getConnectedLines();
+
+    if (jct.getServices().size() > 0) {
+      return Optional.of(EditError.IN_USE);
+    }
+    
+    this.junctions.remove(id);
+
+    for(var line : lines) {
+      this.lines.remove(line.getId());
+      Junction otherJunction = line.getJunction1() != jct ? line.getJunction1() : line.getJunction2();
+      otherJunction.connectedLines.remove(line);
+    }
+
+    return Optional.empty();
+  }
+
+  /**
+   * @brief remove a junction from the network
+   * @param id the id of the jucntion
+   * @return If any error occured, the error, otherwise Optional.empty()
+   * @implNote Also removes this line from the known adjacencies of it's connected lines
+   * @see EditError
+   */
+  public Optional<EditError> removeLine(String id) {
+    if (!this.lines.containsKey(id)){
+      return Optional.of(EditError.NOT_FOUND);
+    }
+    
+    Line line = this.lines.get(id);
+    if (line.isUsed()) {
+      return Optional.of(EditError.IN_USE);
+    };
+
+    this.lines.remove(id);
+
+    //remove adjacencies
+    line.junction1.connectedLines.remove(line);
+    line.junction2.connectedLines.remove(line);
+
+    return Optional.empty();
+  }
+
 }
