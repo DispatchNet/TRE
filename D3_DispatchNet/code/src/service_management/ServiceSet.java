@@ -83,11 +83,17 @@ public class ServiceSet {
     return type;
   }
 
-  //TODO: Consider removing status
+  /**
+   * @brief get the status of this service
+   * @return the service's status
+   */
   public ServiceStatus getStatus() {
     return status;
   }
-  //TODO: Consider removing status
+  /**
+   * @brief set the status of this service
+   * @param status the new status for this service
+   */
   public void setStatus(ServiceStatus status) {
     this.status = status;
   }
