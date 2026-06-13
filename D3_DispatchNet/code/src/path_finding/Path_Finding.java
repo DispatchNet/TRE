@@ -149,7 +149,6 @@ public class Path_Finding{
  */
 class sortByLenght implements Comparator<ArrayList<Ticket>> {
   public int compare (ArrayList<Ticket> L1, ArrayList<Ticket> L2) {
-    //TODO Get difference of depature time of first and arrival of last for each list 
     
     LocalTime startL1 = L1.get(0).getDeparture().time();
     LocalTime endL1 = L1.get(L1.size()-1).getDeparture().time();
@@ -196,8 +195,10 @@ class sortByLenght implements Comparator<ArrayList<Ticket>> {
  */
 class sortByDeparture implements Comparator<ArrayList<Ticket>> {
   public int compare (ArrayList<Ticket> L1, ArrayList<Ticket> L2) {
-    //TODO compare departure times
-    return 0;
+    
+    if (L1.get(0).getDeparture().time() == L2.get(0).getDeparture().time()) return 0;
+    
+    return L1.get(0).getDeparture().time().isBefore(L2.get(0).getDeparture().time())? -1 : 1;
   }
 };
 /**
@@ -209,8 +210,11 @@ class sortByDeparture implements Comparator<ArrayList<Ticket>> {
  */
 class sortByArrival implements Comparator<ArrayList<Ticket>> {
   public int compare (ArrayList<Ticket> L1, ArrayList<Ticket> L2) {
-    //TODO Compare arrival times
-    return 0;
+    Ticket lastTicketL1 = L1.get(L1.size()-1);
+    Ticket lastTicketL2 = L2.get(L2.size()-1);
+    
+    if (lastTicketL1.getArrival() == lastTicketL2.getArrival()) return 0;
+    return lastTicketL1.getArrival().isBefore(lastTicketL2.getArrival())? -1 : 1;
   }
 };
 
@@ -223,8 +227,18 @@ class sortByArrival implements Comparator<ArrayList<Ticket>> {
  */
 class sortByCost implements Comparator<ArrayList<Ticket>> {
   public int compare (ArrayList<Ticket> L1, ArrayList<Ticket> L2) {
-    //TODO Compare Cost
-    return 0;
+    int costL1 = 0;
+    int costL2 = 0;
+    
+    for (int i = 0; i<L1.size(); i++) {
+      costL1 += L1.get(i).getCost();
+    }
+
+    for (int i = 0; i<L2.size(); i++) {
+      costL2 += L2.get(i).getCost();
+    }
+
+    return costL1-costL2;
   }
 };
 

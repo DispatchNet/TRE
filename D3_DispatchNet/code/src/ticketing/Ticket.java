@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
+import java.time.LocalTime;
 
 import user_management.Passenger;
 import service_management.ServiceStep;
@@ -235,6 +236,7 @@ public class Ticket {
         if (!in_bounds && list.get(i) == first) in_bounds = true;
         if (in_bounds) passed_junctions.add(list.get(i).getJunction());
       }
+      passed_junctions.add(last.getJunction());
 
       int meters = 0;
 
@@ -243,6 +245,26 @@ public class Ticket {
       }
 
       return meters;
+    }
+
+    public LocalTime getArrival() {
+        
+      ServiceStep first = this.departure.serviceStep();
+      ServiceStep last = lastStep;
+
+      List<ServiceStep> list = this.departure.serviceSet().getSteps();
+
+      long offset = 0;
+
+      boolean in_bounds = false;
+      for (int i = 0; i<list.size() && list.get(i) != last; i++) {
+        if (in_bounds) offset += list.get(i).getTravelMinutes();//Line earlier than flag check because first is not counted
+        if (!in_bounds && list.get(i) == first) in_bounds = true;
+      }
+      offset += last.getTravelMinutes();
+
+      return this.departure.time().plusMinutes(offset);
+
     }
 
     //Unit test
