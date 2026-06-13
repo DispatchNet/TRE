@@ -32,7 +32,7 @@ public class ServiceStep{
 
   /**
    * @brief Get this serviceStep's ID
-   * @return
+   * @return this service's ID
    */
   public String getId() {
     return id;
