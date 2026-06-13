@@ -45,7 +45,7 @@ public class Network {
   public void addLine(Line line) {
     if (this.lines.containsKey(line.getId())){
       throw new IllegalArgumentException(
-        String.format("cannote add Lien %s twice",line.getId())
+        String.format("cannote add Line %s twice",line.getId())
       );
     }
     this.lines.put(line.getId(),line);
