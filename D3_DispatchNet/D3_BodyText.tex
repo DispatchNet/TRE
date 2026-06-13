@@ -26,8 +26,24 @@ It is composed of:
 \end{itemize}
 
 \section{Architecture}
+The project is intended, in its platonic ideal, as a Client-server structure, where the client shoulders only the user interface and requests to the server, who instead is responsible for the actualy interfacing with the database and computing the responses.
 
-\section{Implementation Language}
+Thanks to our chosen \hyl{Implementation Language}, the Client may be nearly any device capable of general computing, and thus we want to minimize the client-side device requirements to fully exploit our great portability. 
+
+Thus, the client is expected to perform only to the relatively light work of displaying responses and forming requests with user input to send the central server.
+
+Not beholden to such limitations, the central server must then receive requests and perform the computatonally expensive operations, chief among them the weighted-graph-traversal over the train nework, but also loading and handling the information from the database.
+
+Unfortunately, due to both skill and time limitations, the project is implemented as a temporary measure in a monolithic form, while still taking care to expect and enforce the necessary separation and operations for a hypothetical future division and upgrade to a client-server system ready for deployment.
+
+\section{Implementation Language}\label{Implementation Language}
+We chose \bf{Java} for the operational part and \bf{Doxygen} to generate documentation dynamically.
+
+
+Our motivation for \bf{Java} was the extreme portability and the very module-friendly structure, allowing us to experiment and tinker with different implementations of the same expected behaviour in a plug-and-play fashion. 
+The garbage collector feature of \bf{Java} also ensures us to spend more time working of the functioning of our systems rather than the management of their lifetimes.
+
+\bf{Doxygen} was chosen due to its in-built support for \bf{Java} development and for its low overhead cost during code development, as the comment-tag system requires both very little time and brain-power to make, while still being very sight-readable in the code files.
 
 \section{Database}
 
