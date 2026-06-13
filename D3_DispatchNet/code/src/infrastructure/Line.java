@@ -1,5 +1,6 @@
 package infrastructure;
 
+import java.util.List;
 import java.util.UUID;
 /**
  * @class Line
@@ -150,6 +151,45 @@ public class Line {
    */
   public void setnTracks(int nTracks) {
     this.nTracks = nTracks;
+  }
+
+  /**
+   * @brief Checks whether the line is used or not
+   * @return true if the line is used, false otherwise
+   */
+  public boolean isUsed() {
+
+    List<Junction> junctions = List.of(this.junction1,this.junction2);
+
+    return junctions.stream().anyMatch(thisJct -> { //check for both directions at both junctions
+      Junction otherJct = junction1 != thisJct ? junction1 : junction2; //flip the direction
+
+      return thisJct.getServices().stream().anyMatch(service -> {
+        boolean hitThis = false;
+        boolean hitOther = false;
+
+        for (var step : service.getSteps()) {
+          if (step.getJunction() == thisJct) {
+            if (hitOther) {
+              return true;
+            }
+            hitThis = true;
+            hitOther = false;
+          } else if (step.getJunction() == otherJct) {
+            if (hitThis) {
+              return true; 
+            }
+            hitOther = true;
+            hitThis = false;
+          } else {
+            hitOther = false;
+            hitThis = false;
+          }
+        }
+        return false;
+      });
+    });
+
   }
   
 /**
