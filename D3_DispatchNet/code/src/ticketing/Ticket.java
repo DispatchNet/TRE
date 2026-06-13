@@ -175,7 +175,7 @@ public class Ticket {
       return centsPerKm*meters/1000;
     }
     
-    /*
+    /**
      * @brief Get the last junction the train is valid for
      * @details Looks into the lastStep value and extracts the junction it points total
      * @return a Junction pointer
