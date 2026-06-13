@@ -165,4 +165,24 @@ public class Junction {
       }
     ).flatMap(departures -> departures.stream()).toList();
   }
+
+  /**
+   * @brief Get the line from this junction to another, if it exists 
+   * @param other The other junction the line should connect to 
+   * @return a Line pointer, NULL if there is no such line
+   */ 
+  public Line getToOther (Junction other) {
+    
+    Line connection = null;
+    for (int i = 0; i<this.connectedLines.size(); i++) {
+      if (connectedLines.get(i).hasJunction(other)) connection = connectedLines.get(i);
+    }
+
+    return connection;
+
+  }
+
+  static void main () {// Unit test
+
+  }
 };

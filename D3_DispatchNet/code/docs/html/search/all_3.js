@@ -8,5 +8,5 @@ var searchData=
   ['email_2ejava_5',['Email.java',['../Email_8java.html',1,'']]],
   ['enduser_6',['EndUser',['../classuser__management_1_1EndUser.html',1,'user_management.EndUser'],['../classuser__management_1_1EndUser.html#a02af5b0c36ffcef8cf5e95d2b229a9df',1,'user_management.EndUser.EndUser(UserManagement userManagement)'],['../classuser__management_1_1EndUser.html#a7d05d362709eb8a00116ffd3c9c8ef44',1,'user_management.EndUser.EndUser(String username, String email, String password, UserType userType, UserManagement userManagement)'],['../classuser__management_1_1EndUser.html#af22dde1419afc4b4271511562c419fe8',1,'user_management.EndUser.EndUser(String id, String username, String email, String password, UserType userType, UserManagement userManagement)']]],
   ['enduser_2ejava_7',['EndUser.java',['../EndUser_8java.html',1,'']]],
-  ['equals_8',['equals',['../classuser__management_1_1AuthenticatedUser.html#a4ed89b9bcafa4f86a1637b251212e825',1,'user_management::AuthenticatedUser']]]
+  ['equals_8',['equals',['../classticketing_1_1Ticket.html#a774cdfb4683b4d561924b2ddb54f6564',1,'ticketing.Ticket.equals()'],['../classuser__management_1_1AuthenticatedUser.html#a4ed89b9bcafa4f86a1637b251212e825',1,'user_management.AuthenticatedUser.equals()']]]
 ];

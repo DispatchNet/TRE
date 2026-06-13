@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ticket_0',['Ticket',['../classticketing_1_1Ticket.html',1,'ticketing.Ticket'],['../classticketing_1_1Ticket.html#a52fe3f83b6d55410afe64039944ee4b7',1,'ticketing.Ticket.Ticket()']]],
+  ['ticket_0',['Ticket',['../classticketing_1_1Ticket.html',1,'ticketing.Ticket'],['../classticketing_1_1Ticket.html#a52fe3f83b6d55410afe64039944ee4b7',1,'ticketing.Ticket.Ticket(Passenger owner, Departure departure, ServiceStep lastStep)'],['../classticketing_1_1Ticket.html#ac768a04be71f6215f890aeebf64d95cd',1,'ticketing.Ticket.Ticket(String id, Passenger owner, Departure departure, ServiceStep lastStep)'],['../classticketing_1_1Ticket.html#a5bc4cad65790fc0206a80899a4777f33',1,'ticketing.Ticket.Ticket(String id, Passenger owner, String description, TicketStatus status, List&lt; String &gt; history)']]],
   ['ticket_2ejava_1',['Ticket.java',['../Ticket_8java.html',1,'']]],
   ['ticketing_2',['ticketing',['../namespaceticketing.html',1,'']]],
   ['tostring_3',['toString',['../classmail__service_1_1Email.html#a655c850dd114b6a5ede1d5ad8c7f382a',1,'mail_service.Email.toString()'],['../enumuser__management_1_1UserType.html#a388f46df491e1867fc7b495011d5fab3',1,'user_management.UserType.toString()']]],

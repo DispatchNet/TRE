@@ -18,9 +18,11 @@ var hierarchy =
     [ "mail_service.MailService", "interfacemail__service_1_1MailService.html", [
       [ "mail_service.MockMailService", "classmail__service_1_1MockMailService.html", null ]
     ] ],
-    [ "mail_service.MailServiceFactory", "classmail__service_1_1MailServiceFactory.html", null ],
     [ "infrastructure.Network", "classinfrastructure_1_1Network.html", null ],
     [ "path_finding.Path_Finding", "classpath__finding_1_1Path__Finding.html", null ],
+    [ "payment_gateway.PaymentGateway", "interfacepayment__gateway_1_1PaymentGateway.html", [
+      [ "payment_gateway.MockPaymentGateway", "classpayment__gateway_1_1MockPaymentGateway.html", null ]
+    ] ],
     [ "service_management.ServiceManagement", "classservice__management_1_1ServiceManagement.html", null ],
     [ "service_management.ServiceSet", "classservice__management_1_1ServiceSet.html", null ],
     [ "service_management.ServiceStatus", "enumservice__management_1_1ServiceStatus.html", null ],

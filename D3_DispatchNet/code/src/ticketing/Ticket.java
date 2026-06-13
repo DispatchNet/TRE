@@ -9,6 +9,7 @@ import user_management.Passenger;
 import service_management.ServiceStep;
 import departure.Departure;
 import infrastructure.Junction;
+import infrastructure.Line;
 
 /**
  * @class Ticket
@@ -38,6 +39,13 @@ public class Ticket {
 
     /**
      * @brief Constructor of Ticket class with explicit id
+     * @details Enforces mandatory id by checking if provided one is NULL and assigning one if it is 
+     * @param id Possible string to treat as identifier
+     * @param owner The owner of the ticket
+     * @param departure The first station and train the ticket is valid from
+     * @param lastStep The last station and train the ticket is valid for 
+     * @see Departure
+     * @see ServiceStep
      */
     public Ticket(String id, Passenger owner, Departure departure, ServiceStep lastStep) {
         this.id = id == null ? UUID.randomUUID().toString() : id;
@@ -50,6 +58,12 @@ public class Ticket {
 
     /**
      * @brief Constructor used when loading tickets from storage.
+     * @details Preserves status and history, but not departure or lastStep
+     * @param id Possible string to treat as identifier
+     * @param owner The owner of the ticket
+     * @param description Description of the ticket
+     * @param status Status of the ticket
+     * @param history List of strings containing the history of the ticket
      */
     public Ticket(String id, Passenger owner, String description, TicketStatus status, List<String> history) {
         this.id = id == null ? UUID.randomUUID().toString() : id;
@@ -201,6 +215,34 @@ public class Ticket {
         INACTIVE,
         ACTIVE,
         CANCELLED
+    }
+
+    /**
+     * @brief returns the lenght in meters of the ticket's course
+     * @return an integer representing meters of lenght
+     */
+    public int getLength() {
+      
+      ServiceStep first = this.departure.serviceStep();
+      ServiceStep last = lastStep;
+
+      List<ServiceStep> list = this.departure.serviceSet().getSteps();
+      
+      ArrayList<Junction> passed_junctions = new ArrayList<Junction>();
+
+      boolean in_bounds = false;
+      for (int i = 0; i<list.size() && list.get(i) != last; i++) {
+        if (!in_bounds && list.get(i) == first) in_bounds = true;
+        if (in_bounds) passed_junctions.add(list.get(i).getJunction());
+      }
+
+      int meters = 0;
+
+      for (int i = 1; i<passed_junctions.size(); i++) {
+        meters += passed_junctions.get(i-1).getToOther(passed_junctions.get(i)).getLengthMeters();
+      }
+
+      return meters;
     }
 
     //Unit test

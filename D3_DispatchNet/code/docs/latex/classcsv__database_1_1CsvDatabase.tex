@@ -12,6 +12,10 @@ CSV-\/based persistence layer for authenticated users and infrastructure data.
 \begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classcsv__database_1_1CsvDatabase}{Csv\+Database}. \end{DoxyCompactList}\item 
 List$<$ \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User}} $>$ \doxymbox{\hyperlink{classcsv__database_1_1CsvDatabase_a6afe10db8cf3efcc18b95e2ef2aab7b7}{load\+Authenticated\+Users}} (\doxymbox{\hyperlink{classuser__management_1_1UserManagement}{User\+Management}} user\+Management)
 \begin{DoxyCompactList}\small\item\em Loads authenticated users from the CSV file. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{classticketing_1_1Ticket}{Ticket}} $>$ \doxymbox{\hyperlink{classcsv__database_1_1CsvDatabase_acd5fda440e1c6b3363f93bb9d6dca324}{load\+Tickets}} (\doxymbox{\hyperlink{classuser__management_1_1UserManagement}{User\+Management}} user\+Management)  throws IOException 
+\begin{DoxyCompactList}\small\item\em Loads ticket records from the CSV file. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classcsv__database_1_1CsvDatabase_a8a8102d625a9dbf113430259c779194e}{save\+Tickets}} (List$<$ \doxymbox{\hyperlink{classticketing_1_1Ticket}{Ticket}} $>$ tickets)
+\begin{DoxyCompactList}\small\item\em Saves ticket objects to the ticket CSV file. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classcsv__database_1_1CsvDatabase_a375c0f5298f3d3f22c4d65f62f9661fc}{save\+Authenticated\+Users}} (List$<$ \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User}} $>$ users)
 \begin{DoxyCompactList}\small\item\em Saves authenticated users to the CSV file. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classcsv__database_1_1CsvDatabase_a2ad9f289bfbede41dad278549f2f69a3}{load\+Network}} (\doxymbox{\hyperlink{classinfrastructure_1_1Network}{Network}} network)
@@ -71,6 +75,29 @@ void csv\+\_\+database.\+Csv\+Database.\+load\+Network (\begin{DoxyParamCaption}
 
 Loads the network data from the CSV files. 
 
+\Hypertarget{classcsv__database_1_1CsvDatabase_acd5fda440e1c6b3363f93bb9d6dca324}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!loadTickets@{loadTickets}}
+\index{loadTickets@{loadTickets}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+\doxysubsubsection{\texorpdfstring{loadTickets()}{loadTickets()}}
+{\footnotesize\ttfamily \label{classcsv__database_1_1CsvDatabase_acd5fda440e1c6b3363f93bb9d6dca324} 
+List$<$ \doxymbox{\hyperlink{classticketing_1_1Ticket}{Ticket}} $>$ csv\+\_\+database.\+Csv\+Database.\+load\+Tickets (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1UserManagement}{User\+Management}}}]{user\+Management}{}\end{DoxyParamCaption}) throws IOException\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads ticket records from the CSV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Management} & The user management instance used to resolve ticket owners. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of \doxylink{classticketing_1_1Ticket}{Ticket} objects loaded from storage. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & If the ticket CSV file cannot be read. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classcsv__database_1_1CsvDatabase_a375c0f5298f3d3f22c4d65f62f9661fc}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!saveAuthenticatedUsers@{saveAuthenticatedUsers}}
 \index{saveAuthenticatedUsers@{saveAuthenticatedUsers}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
 \doxysubsubsection{\texorpdfstring{saveAuthenticatedUsers()}{saveAuthenticatedUsers()}}
@@ -99,6 +126,21 @@ Saves the network data to the CSV files.
 
 \begin{DoxyParams}{Parameters}
 {\em network} & The network to save. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcsv__database_1_1CsvDatabase_a8a8102d625a9dbf113430259c779194e}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!saveTickets@{saveTickets}}
+\index{saveTickets@{saveTickets}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+\doxysubsubsection{\texorpdfstring{saveTickets()}{saveTickets()}}
+{\footnotesize\ttfamily \label{classcsv__database_1_1CsvDatabase_a8a8102d625a9dbf113430259c779194e} 
+void csv\+\_\+database.\+Csv\+Database.\+save\+Tickets (\begin{DoxyParamCaption}\item[{List$<$ \doxymbox{\hyperlink{classticketing_1_1Ticket}{Ticket}} $>$}]{tickets}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Saves ticket objects to the ticket CSV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tickets} & The list of tickets to persist. \\
 \hline
 \end{DoxyParams}
 

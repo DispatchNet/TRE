@@ -151,5 +151,17 @@ public class Line {
   public void setnTracks(int nTracks) {
     this.nTracks = nTracks;
   }
+  
+/**
+ * @public returns whether a junction is in junction1 or junction2
+ * @param jun a junciton pointer 
+ * @reutrn a booleanean
+ */
+  public boolean hasJunction(Junction jun) {
+    return jun == this.junction1 || jun == this.junction2; 
+  }
 
+  static void main () {//Unit test
+
+  }
 }

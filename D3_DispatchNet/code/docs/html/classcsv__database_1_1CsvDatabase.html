@@ -101,6 +101,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8129b33845008dfa60afa3c0fa691399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classcsv__database_1_1CsvDatabase.html" title="CSV-based persistence layer for authenticated users and infrastructure data.">CsvDatabase</a>.  <br /></td></tr>
 <tr class="memitem:a6afe10db8cf3efcc18b95e2ef2aab7b7" id="r_a6afe10db8cf3efcc18b95e2ef2aab7b7"><td class="memItemLeft">List&lt; <a class="el" href="classuser__management_1_1AuthenticatedUser.html">AuthenticatedUser</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6afe10db8cf3efcc18b95e2ef2aab7b7">loadAuthenticatedUsers</a> (<a class="el" href="classuser__management_1_1UserManagement.html">UserManagement</a> userManagement)</td></tr>
 <tr class="memdesc:a6afe10db8cf3efcc18b95e2ef2aab7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads authenticated users from the CSV file.  <br /></td></tr>
+<tr class="memitem:acd5fda440e1c6b3363f93bb9d6dca324" id="r_acd5fda440e1c6b3363f93bb9d6dca324"><td class="memItemLeft">List&lt; <a class="el" href="classticketing_1_1Ticket.html">Ticket</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#acd5fda440e1c6b3363f93bb9d6dca324">loadTickets</a> (<a class="el" href="classuser__management_1_1UserManagement.html">UserManagement</a> userManagement)  throws IOException </td></tr>
+<tr class="memdesc:acd5fda440e1c6b3363f93bb9d6dca324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads ticket records from the CSV file.  <br /></td></tr>
+<tr class="memitem:a8a8102d625a9dbf113430259c779194e" id="r_a8a8102d625a9dbf113430259c779194e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8a8102d625a9dbf113430259c779194e">saveTickets</a> (List&lt; <a class="el" href="classticketing_1_1Ticket.html">Ticket</a> &gt; tickets)</td></tr>
+<tr class="memdesc:a8a8102d625a9dbf113430259c779194e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves ticket objects to the ticket CSV file.  <br /></td></tr>
 <tr class="memitem:a375c0f5298f3d3f22c4d65f62f9661fc" id="r_a375c0f5298f3d3f22c4d65f62f9661fc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a375c0f5298f3d3f22c4d65f62f9661fc">saveAuthenticatedUsers</a> (List&lt; <a class="el" href="classuser__management_1_1AuthenticatedUser.html">AuthenticatedUser</a> &gt; users)</td></tr>
 <tr class="memdesc:a375c0f5298f3d3f22c4d65f62f9661fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves authenticated users to the CSV file.  <br /></td></tr>
 <tr class="memitem:a2ad9f289bfbede41dad278549f2f69a3" id="r_a2ad9f289bfbede41dad278549f2f69a3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2ad9f289bfbede41dad278549f2f69a3">loadNetwork</a> (<a class="el" href="classinfrastructure_1_1Network.html">Network</a> network)</td></tr>
@@ -201,6 +205,46 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="acd5fda440e1c6b3363f93bb9d6dca324" name="acd5fda440e1c6b3363f93bb9d6dca324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd5fda440e1c6b3363f93bb9d6dca324">&#9670;&#160;</a></span>loadTickets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="classticketing_1_1Ticket.html">Ticket</a> &gt; csv_database.CsvDatabase.loadTickets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classuser__management_1_1UserManagement.html">UserManagement</a></td>          <td class="paramname"><span class="paramname"><em>userManagement</em></span></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads ticket records from the CSV file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userManagement</td><td>The user management instance used to resolve ticket owners. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of <a class="el" href="classticketing_1_1Ticket.html" title="Class representing a ticket, containing information about the owner, first departure and last valid a...">Ticket</a> objects loaded from storage. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IOException</td><td>If the ticket CSV file cannot be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a375c0f5298f3d3f22c4d65f62f9661fc" name="a375c0f5298f3d3f22c4d65f62f9661fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a375c0f5298f3d3f22c4d65f62f9661fc">&#9670;&#160;</a></span>saveAuthenticatedUsers()</h2>
 
@@ -261,6 +305,39 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">network</td><td>The network to save. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a8102d625a9dbf113430259c779194e" name="a8a8102d625a9dbf113430259c779194e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a8102d625a9dbf113430259c779194e">&#9670;&#160;</a></span>saveTickets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void csv_database.CsvDatabase.saveTickets </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classticketing_1_1Ticket.html">Ticket</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>tickets</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves ticket objects to the ticket CSV file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tickets</td><td>The list of tickets to persist. </td></tr>
   </table>
   </dd>
 </dl>

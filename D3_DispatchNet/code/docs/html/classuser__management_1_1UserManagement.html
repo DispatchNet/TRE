@@ -107,6 +107,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a52964c827c1c2ead1bdcc8c5897cdeb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an authenticated user from the system.  <br /></td></tr>
 <tr class="memitem:a7f16a4696e991edf2fec02ce16e7b763" id="r_a7f16a4696e991edf2fec02ce16e7b763"><td class="memItemLeft">boolean&#160;</td><td class="memItemRight"><a class="el" href="#a7f16a4696e991edf2fec02ce16e7b763">sendEmail</a> (<a class="el" href="classmail__service_1_1Email.html">Email</a> email)</td></tr>
 <tr class="memdesc:a7f16a4696e991edf2fec02ce16e7b763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an email to a user.  <br /></td></tr>
+<tr class="memitem:a8934421768a979a09ac62a74197bd889" id="r_a8934421768a979a09ac62a74197bd889"><td class="memItemLeft">boolean&#160;</td><td class="memItemRight"><a class="el" href="#a8934421768a979a09ac62a74197bd889">processTransaction</a> (String transactionDescription)</td></tr>
 <tr class="memitem:ab21bbe3550994a8d5fbd85bf8680370a" id="r_ab21bbe3550994a8d5fbd85bf8680370a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab21bbe3550994a8d5fbd85bf8680370a">displayError</a> (String message)</td></tr>
 <tr class="memdesc:ab21bbe3550994a8d5fbd85bf8680370a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays an error message.  <br /></td></tr>
 <tr class="memitem:aeb62b2a53928428e54d053ccb6cc1a95" id="r_aeb62b2a53928428e54d053ccb6cc1a95"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#aeb62b2a53928428e54d053ccb6cc1a95">prompt</a> (String message)</td></tr>
@@ -123,6 +124,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af193ad576f495c43499d7c7ff2c9ef04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transitions the current session from anonymous to authenticated. Sets the given authenticated user as the current session user.  <br /></td></tr>
 <tr class="memitem:ab8affa201980a987db4d3a4a747db31e" id="r_ab8affa201980a987db4d3a4a747db31e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab8affa201980a987db4d3a4a747db31e">logoutUser</a> ()</td></tr>
 <tr class="memdesc:ab8affa201980a987db4d3a4a747db31e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transitions the current session from authenticated to anonymous. Clears the authenticated user and creates a new anonymous session.  <br /></td></tr>
+<tr class="memitem:a0a736e52d5f3843756477e863efdf630" id="r_a0a736e52d5f3843756477e863efdf630"><td class="memItemLeft"><a class="el" href="classuser__management_1_1AuthenticatedUser.html">AuthenticatedUser</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0a736e52d5f3843756477e863efdf630">getAuthenticatedUserById</a> (String id)</td></tr>
+<tr class="memdesc:a0a736e52d5f3843756477e863efdf630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an authenticated user by their id.  <br /></td></tr>
+<tr class="memitem:a9cc50fbdb29f913d2d85bd22af5dc77b" id="r_a9cc50fbdb29f913d2d85bd22af5dc77b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9cc50fbdb29f913d2d85bd22af5dc77b">saveTickets</a> ()</td></tr>
+<tr class="memdesc:a9cc50fbdb29f913d2d85bd22af5dc77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves all passenger tickets to the CSV file.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -480,6 +485,40 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0a736e52d5f3843756477e863efdf630" name="a0a736e52d5f3843756477e863efdf630"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a736e52d5f3843756477e863efdf630">&#9670;&#160;</a></span>getAuthenticatedUserById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classuser__management_1_1AuthenticatedUser.html">AuthenticatedUser</a> user_management.UserManagement.getAuthenticatedUserById </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets an authenticated user by their id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The id of the user to retrieve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The authenticated user with the specified id, or null if not found </dd></dl>
+
+</div>
+</div>
 <a id="a441b6cb5a48c8ef385bd38c1a3ede4df" name="a441b6cb5a48c8ef385bd38c1a3ede4df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a441b6cb5a48c8ef385bd38c1a3ede4df">&#9670;&#160;</a></span>getAuthenticatedUserByUsername()</h2>
 
@@ -691,6 +730,31 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a8934421768a979a09ac62a74197bd889" name="a8934421768a979a09ac62a74197bd889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8934421768a979a09ac62a74197bd889">&#9670;&#160;</a></span>processTransaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean user_management.UserManagement.processTransaction </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>transactionDescription</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aeb62b2a53928428e54d053ccb6cc1a95" name="aeb62b2a53928428e54d053ccb6cc1a95"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb62b2a53928428e54d053ccb6cc1a95">&#9670;&#160;</a></span>prompt()</h2>
 
@@ -789,6 +853,33 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a9cc50fbdb29f913d2d85bd22af5dc77b" name="a9cc50fbdb29f913d2d85bd22af5dc77b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cc50fbdb29f913d2d85bd22af5dc77b">&#9670;&#160;</a></span>saveTickets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void user_management.UserManagement.saveTickets </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves all passenger tickets to the CSV file. </p>
 
 </div>
 </div>

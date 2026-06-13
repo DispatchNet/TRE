@@ -6,9 +6,10 @@ var searchData=
   ['line_2ejava_3',['Line.java',['../Line_8java.html',1,'']]],
   ['loadauthenticatedusers_4',['loadAuthenticatedUsers',['../classcsv__database_1_1CsvDatabase.html#a6afe10db8cf3efcc18b95e2ef2aab7b7',1,'csv_database::CsvDatabase']]],
   ['loadnetwork_5',['loadNetwork',['../classcsv__database_1_1CsvDatabase.html#a2ad9f289bfbede41dad278549f2f69a3',1,'csv_database::CsvDatabase']]],
-  ['login_6',['login',['../classuser__management_1_1AnonymousUser.html#afc3e484831a7ea2d9a0308b2131bfe9e',1,'user_management::AnonymousUser']]],
-  ['loginuser_7',['loginUser',['../classuser__management_1_1UserManagement.html#af193ad576f495c43499d7c7ff2c9ef04',1,'user_management::UserManagement']]],
-  ['logout_8',['logout',['../classuser__management_1_1AuthenticatedUser.html#aabfe36234df0d8a7266b9cd3f95e06bd',1,'user_management::AuthenticatedUser']]],
-  ['logoutuser_9',['logoutUser',['../classuser__management_1_1UserManagement.html#ab8affa201980a987db4d3a4a747db31e',1,'user_management::UserManagement']]],
-  ['longitude_10',['longitude',['../classinfrastructure_1_1GeoCoordinate.html#a36e0b5ae560ee241205febc22def8020',1,'infrastructure::GeoCoordinate']]]
+  ['loadtickets_6',['loadTickets',['../classcsv__database_1_1CsvDatabase.html#acd5fda440e1c6b3363f93bb9d6dca324',1,'csv_database::CsvDatabase']]],
+  ['login_7',['login',['../classuser__management_1_1AnonymousUser.html#afc3e484831a7ea2d9a0308b2131bfe9e',1,'user_management::AnonymousUser']]],
+  ['loginuser_8',['loginUser',['../classuser__management_1_1UserManagement.html#af193ad576f495c43499d7c7ff2c9ef04',1,'user_management::UserManagement']]],
+  ['logout_9',['logout',['../classuser__management_1_1AuthenticatedUser.html#aabfe36234df0d8a7266b9cd3f95e06bd',1,'user_management::AuthenticatedUser']]],
+  ['logoutuser_10',['logoutUser',['../classuser__management_1_1UserManagement.html#ab8affa201980a987db4d3a4a747db31e',1,'user_management::UserManagement']]],
+  ['longitude_11',['longitude',['../classinfrastructure_1_1GeoCoordinate.html#a36e0b5ae560ee241205febc22def8020',1,'infrastructure::GeoCoordinate']]]
 ];

@@ -16,12 +16,15 @@ var annotated_dup =
     [ "mail_service", "namespacemail__service.html", [
       [ "Email", "classmail__service_1_1Email.html", "classmail__service_1_1Email" ],
       [ "MailService", "interfacemail__service_1_1MailService.html", "interfacemail__service_1_1MailService" ],
-      [ "MailServiceFactory", "classmail__service_1_1MailServiceFactory.html", null ],
       [ "MockMailService", "classmail__service_1_1MockMailService.html", "classmail__service_1_1MockMailService" ]
     ] ],
     [ "path_finding", "namespacepath__finding.html", [
-      [ "srtAlg", "enumpath__finding_1_1srtAlg.html", "enumpath__finding_1_1srtAlg" ],
-      [ "Path_Finding", "classpath__finding_1_1Path__Finding.html", "classpath__finding_1_1Path__Finding" ]
+      [ "Path_Finding", "classpath__finding_1_1Path__Finding.html", "classpath__finding_1_1Path__Finding" ],
+      [ "srtAlg", "enumpath__finding_1_1srtAlg.html", "enumpath__finding_1_1srtAlg" ]
+    ] ],
+    [ "payment_gateway", "namespacepayment__gateway.html", [
+      [ "MockPaymentGateway", "classpayment__gateway_1_1MockPaymentGateway.html", "classpayment__gateway_1_1MockPaymentGateway" ],
+      [ "PaymentGateway", "interfacepayment__gateway_1_1PaymentGateway.html", "interfacepayment__gateway_1_1PaymentGateway" ]
     ] ],
     [ "service_management", "namespaceservice__management.html", [
       [ "Dispatch", "classservice__management_1_1Dispatch.html", "classservice__management_1_1Dispatch" ],

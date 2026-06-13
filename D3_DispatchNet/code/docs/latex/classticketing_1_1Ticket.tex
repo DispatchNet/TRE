@@ -2,40 +2,67 @@
 \hypertarget{classticketing_1_1Ticket}{}\label{classticketing_1_1Ticket}\index{ticketing.Ticket@{ticketing.Ticket}}
 
 
-Class representing a ticket, containing information about the owner, fist departure and last valid arrival.  
+Class representing a ticket, containing information about the owner, first departure and last valid arrival.  
 
 
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Ticket\+Status}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{classticketing_1_1Ticket_a52fe3f83b6d55410afe64039944ee4b7}{Ticket}} (\doxymbox{\hyperlink{classuser__management_1_1Passenger}{Passenger}} owner, Departure departure, \doxymbox{\hyperlink{classservice__management_1_1ServiceStep}{Service\+Step}} last\+Step)
 \begin{DoxyCompactList}\small\item\em Constructor of \doxylink{classticketing_1_1Ticket}{Ticket} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classticketing_1_1Ticket_ac768a04be71f6215f890aeebf64d95cd}{Ticket}} (String id, \doxymbox{\hyperlink{classuser__management_1_1Passenger}{Passenger}} owner, Departure departure, \doxymbox{\hyperlink{classservice__management_1_1ServiceStep}{Service\+Step}} last\+Step)
+\begin{DoxyCompactList}\small\item\em Constructor of \doxylink{classticketing_1_1Ticket}{Ticket} class with explicit id. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classticketing_1_1Ticket_a5bc4cad65790fc0206a80899a4777f33}{Ticket}} (String id, \doxymbox{\hyperlink{classuser__management_1_1Passenger}{Passenger}} owner, String description, Ticket\+Status status, List$<$ String $>$ history)
+\begin{DoxyCompactList}\small\item\em Constructor used when loading tickets from storage. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classticketing_1_1Ticket_a83e95a6ee6a8cdcfb5abb98e6c00bc69}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Returns the unique ticket identifier. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classuser__management_1_1Passenger}{Passenger}} \doxymbox{\hyperlink{classticketing_1_1Ticket_a083a6196da9fceff79a3e3f001dcbaf0}{get\+Owner}} ()
 \begin{DoxyCompactList}\small\item\em Owner getter. \end{DoxyCompactList}\item 
 Departure \doxymbox{\hyperlink{classticketing_1_1Ticket_a2bd87ede0ae1609713761d4b02824fa9}{get\+Departure}} ()
 \begin{DoxyCompactList}\small\item\em Departure getter. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classticketing_1_1Ticket_a044a154a6f87490a15bd5c5614ef9257}{get\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Returns the ticket description. \end{DoxyCompactList}\item 
+Ticket\+Status \doxymbox{\hyperlink{classticketing_1_1Ticket_ab247737807d37826946ed71ce326d8ec}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current ticket status. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classticketing_1_1Ticket_a5abdb3363093798e89d3870e722053a2}{set\+Status}} (Ticket\+Status status)
+\begin{DoxyCompactList}\small\item\em Sets the ticket status. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classticketing_1_1Ticket_adb633a69df5ca346af8db124b11ca0f5}{is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Returns true when the ticket is currently active. \end{DoxyCompactList}\item 
+List$<$ String $>$ \doxymbox{\hyperlink{classticketing_1_1Ticket_a43e08cc9888a3642fac7de85dc22fdc0}{get\+History}} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of history events for this ticket. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classticketing_1_1Ticket_a12cc8e2ad48e38d1abfcde83c93d0c64}{add\+History\+Entry}} (String entry)
+\begin{DoxyCompactList}\small\item\em Adds an entry to the ticket lifecycle history. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classservice__management_1_1ServiceStep}{Service\+Step}} \doxymbox{\hyperlink{classticketing_1_1Ticket_ad76c3c9605817aa62ae34998044192da}{get\+Last\+Step}} ()
 \begin{DoxyCompactList}\small\item\em last\+Step getter \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classticketing_1_1Ticket_af4e3d7dca5152d6ee51fc133d405bea1}{get\+Cost}} ()
 \begin{DoxyCompactList}\small\item\em evalutes the total cost of the ticket \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classinfrastructure_1_1Junction}{Junction}} \doxymbox{\hyperlink{classticketing_1_1Ticket_ab3e701c7f5363067e7fe6427999ee461}{get\+Junction}} ()
+\item 
+boolean \doxymbox{\hyperlink{classticketing_1_1Ticket_a774cdfb4683b4d561924b2ddb54f6564}{equals}} (Object o)
+\item 
+int \doxymbox{\hyperlink{classticketing_1_1Ticket_a1d59e9b29721a17631a2bb06e96dd88c}{hash\+Code}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \doxymbox{\hyperlink{classticketing_1_1Ticket_ac22494c9fcd38b4516d8d34c597057d4}{main}} ()
+static void \doxymbox{\hyperlink{classticketing_1_1Ticket_a3d12e8caedcb466ea29d8e1b8eec2faf}{main}} (String\+[$\,$]\+ args)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Class representing a ticket, containing information about the owner, fist departure and last valid arrival. 
+Class representing a ticket, containing information about the owner, first departure and last valid arrival. 
 
 \label{doc-constructors}
 \Hypertarget{classticketing_1_1Ticket_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classticketing_1_1Ticket_a52fe3f83b6d55410afe64039944ee4b7}\index{ticketing.Ticket@{ticketing.Ticket}!Ticket@{Ticket}}
 \index{Ticket@{Ticket}!ticketing.Ticket@{ticketing.Ticket}}
-\doxysubsubsection{\texorpdfstring{Ticket()}{Ticket()}}
+\doxysubsubsection{\texorpdfstring{Ticket()}{Ticket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily \label{classticketing_1_1Ticket_a52fe3f83b6d55410afe64039944ee4b7} 
 ticketing.\+Ticket.\+Ticket (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1Passenger}{Passenger}}}]{owner}{, }\item[{Departure}]{departure}{, }\item[{\doxymbox{\hyperlink{classservice__management_1_1ServiceStep}{Service\+Step}}}]{last\+Step}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -57,11 +84,81 @@ Departure
 
 \doxylink{classservice__management_1_1ServiceStep}{Service\+Step} 
 \end{DoxySeeAlso}
+\Hypertarget{classticketing_1_1Ticket_ac768a04be71f6215f890aeebf64d95cd}\index{ticketing.Ticket@{ticketing.Ticket}!Ticket@{Ticket}}
+\index{Ticket@{Ticket}!ticketing.Ticket@{ticketing.Ticket}}
+\doxysubsubsection{\texorpdfstring{Ticket()}{Ticket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_ac768a04be71f6215f890aeebf64d95cd} 
+ticketing.\+Ticket.\+Ticket (\begin{DoxyParamCaption}\item[{String}]{id}{, }\item[{\doxymbox{\hyperlink{classuser__management_1_1Passenger}{Passenger}}}]{owner}{, }\item[{Departure}]{departure}{, }\item[{\doxymbox{\hyperlink{classservice__management_1_1ServiceStep}{Service\+Step}}}]{last\+Step}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor of \doxylink{classticketing_1_1Ticket}{Ticket} class with explicit id. 
+
+Enforces mandatory id by checking if provided one is NULL and assigning one if it is 
+\begin{DoxyParams}{Parameters}
+{\em id} & Possible string to treat as identifier \\
+\hline
+{\em owner} & The owner of the ticket \\
+\hline
+{\em \doxylink{namespacedeparture}{departure}} & The first station and train the ticket is valid from \\
+\hline
+{\em last\+Step} & The last station and train the ticket is valid for \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Departure 
+
+\doxylink{classservice__management_1_1ServiceStep}{Service\+Step} 
+\end{DoxySeeAlso}
+\Hypertarget{classticketing_1_1Ticket_a5bc4cad65790fc0206a80899a4777f33}\index{ticketing.Ticket@{ticketing.Ticket}!Ticket@{Ticket}}
+\index{Ticket@{Ticket}!ticketing.Ticket@{ticketing.Ticket}}
+\doxysubsubsection{\texorpdfstring{Ticket()}{Ticket()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_a5bc4cad65790fc0206a80899a4777f33} 
+ticketing.\+Ticket.\+Ticket (\begin{DoxyParamCaption}\item[{String}]{id}{, }\item[{\doxymbox{\hyperlink{classuser__management_1_1Passenger}{Passenger}}}]{owner}{, }\item[{String}]{description}{, }\item[{Ticket\+Status}]{status}{, }\item[{List$<$ String $>$}]{history}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor used when loading tickets from storage. 
+
+Preserves status and history, but not departure or last\+Step 
+\begin{DoxyParams}{Parameters}
+{\em id} & Possible string to treat as identifier \\
+\hline
+{\em owner} & The owner of the ticket \\
+\hline
+{\em description} & Description of the ticket \\
+\hline
+{\em status} & Status of the ticket \\
+\hline
+{\em history} & List of strings containing the history of the ticket \\
+\hline
+\end{DoxyParams}
 
 
 \label{doc-func-members}
 \Hypertarget{classticketing_1_1Ticket_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classticketing_1_1Ticket_a12cc8e2ad48e38d1abfcde83c93d0c64}\index{ticketing.Ticket@{ticketing.Ticket}!addHistoryEntry@{addHistoryEntry}}
+\index{addHistoryEntry@{addHistoryEntry}!ticketing.Ticket@{ticketing.Ticket}}
+\doxysubsubsection{\texorpdfstring{addHistoryEntry()}{addHistoryEntry()}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_a12cc8e2ad48e38d1abfcde83c93d0c64} 
+void ticketing.\+Ticket.\+add\+History\+Entry (\begin{DoxyParamCaption}\item[{String}]{entry}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an entry to the ticket lifecycle history. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & The history event to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classticketing_1_1Ticket_a774cdfb4683b4d561924b2ddb54f6564}\index{ticketing.Ticket@{ticketing.Ticket}!equals@{equals}}
+\index{equals@{equals}!ticketing.Ticket@{ticketing.Ticket}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_a774cdfb4683b4d561924b2ddb54f6564} 
+boolean ticketing.\+Ticket.\+equals (\begin{DoxyParamCaption}\item[{Object}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \Hypertarget{classticketing_1_1Ticket_af4e3d7dca5152d6ee51fc133d405bea1}\index{ticketing.Ticket@{ticketing.Ticket}!getCost@{getCost}}
 \index{getCost@{getCost}!ticketing.Ticket@{ticketing.Ticket}}
 \doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
@@ -72,7 +169,7 @@ int ticketing.\+Ticket.\+get\+Cost (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 
 evalutes the total cost of the ticket 
 
-uses the depature and last\+Step information to measure the distance covered and which train is used, then computes the resulting price \begin{DoxyReturn}{Returns}
+uses the departure and last\+Step information to measure the distance covered and which train is used, then computes the resulting price \begin{DoxyReturn}{Returns}
 an integer representing the monetary value 
 \end{DoxyReturn}
 \Hypertarget{classticketing_1_1Ticket_a2bd87ede0ae1609713761d4b02824fa9}\index{ticketing.Ticket@{ticketing.Ticket}!getDeparture@{getDeparture}}
@@ -91,6 +188,45 @@ a Departure pointer
 \begin{DoxySeeAlso}{See also}
 Departure 
 \end{DoxySeeAlso}
+\Hypertarget{classticketing_1_1Ticket_a044a154a6f87490a15bd5c5614ef9257}\index{ticketing.Ticket@{ticketing.Ticket}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!ticketing.Ticket@{ticketing.Ticket}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_a044a154a6f87490a15bd5c5614ef9257} 
+String ticketing.\+Ticket.\+get\+Description (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the ticket description. 
+
+\begin{DoxyReturn}{Returns}
+A human-\/readable summary of the ticket. 
+\end{DoxyReturn}
+\Hypertarget{classticketing_1_1Ticket_a43e08cc9888a3642fac7de85dc22fdc0}\index{ticketing.Ticket@{ticketing.Ticket}!getHistory@{getHistory}}
+\index{getHistory@{getHistory}!ticketing.Ticket@{ticketing.Ticket}}
+\doxysubsubsection{\texorpdfstring{getHistory()}{getHistory()}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_a43e08cc9888a3642fac7de85dc22fdc0} 
+List$<$ String $>$ ticketing.\+Ticket.\+get\+History (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the list of history events for this ticket. 
+
+\begin{DoxyReturn}{Returns}
+A copy of history entries. 
+\end{DoxyReturn}
+\Hypertarget{classticketing_1_1Ticket_a83e95a6ee6a8cdcfb5abb98e6c00bc69}\index{ticketing.Ticket@{ticketing.Ticket}!getId@{getId}}
+\index{getId@{getId}!ticketing.Ticket@{ticketing.Ticket}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_a83e95a6ee6a8cdcfb5abb98e6c00bc69} 
+String ticketing.\+Ticket.\+get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the unique ticket identifier. 
+
+\begin{DoxyReturn}{Returns}
+The ticket id. 
+\end{DoxyReturn}
 \Hypertarget{classticketing_1_1Ticket_ab3e701c7f5363067e7fe6427999ee461}\index{ticketing.Ticket@{ticketing.Ticket}!getJunction@{getJunction}}
 \index{getJunction@{getJunction}!ticketing.Ticket@{ticketing.Ticket}}
 \doxysubsubsection{\texorpdfstring{getJunction()}{getJunction()}}
@@ -129,12 +265,59 @@ a \doxylink{classuser__management_1_1Passenger}{Passenger} pointer
 \begin{DoxySeeAlso}{See also}
 \doxylink{classuser__management_1_1Passenger}{Passenger} 
 \end{DoxySeeAlso}
-\Hypertarget{classticketing_1_1Ticket_ac22494c9fcd38b4516d8d34c597057d4}\index{ticketing.Ticket@{ticketing.Ticket}!main@{main}}
+\Hypertarget{classticketing_1_1Ticket_ab247737807d37826946ed71ce326d8ec}\index{ticketing.Ticket@{ticketing.Ticket}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!ticketing.Ticket@{ticketing.Ticket}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_ab247737807d37826946ed71ce326d8ec} 
+Ticket\+Status ticketing.\+Ticket.\+get\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current ticket status. 
+
+\begin{DoxyReturn}{Returns}
+The current Ticket\+Status. 
+\end{DoxyReturn}
+\Hypertarget{classticketing_1_1Ticket_a1d59e9b29721a17631a2bb06e96dd88c}\index{ticketing.Ticket@{ticketing.Ticket}!hashCode@{hashCode}}
+\index{hashCode@{hashCode}!ticketing.Ticket@{ticketing.Ticket}}
+\doxysubsubsection{\texorpdfstring{hashCode()}{hashCode()}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_a1d59e9b29721a17631a2bb06e96dd88c} 
+int ticketing.\+Ticket.\+hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classticketing_1_1Ticket_adb633a69df5ca346af8db124b11ca0f5}\index{ticketing.Ticket@{ticketing.Ticket}!isActive@{isActive}}
+\index{isActive@{isActive}!ticketing.Ticket@{ticketing.Ticket}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_adb633a69df5ca346af8db124b11ca0f5} 
+boolean ticketing.\+Ticket.\+is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true when the ticket is currently active. 
+
+\begin{DoxyReturn}{Returns}
+true if status is ACTIVE. 
+\end{DoxyReturn}
+\Hypertarget{classticketing_1_1Ticket_a3d12e8caedcb466ea29d8e1b8eec2faf}\index{ticketing.Ticket@{ticketing.Ticket}!main@{main}}
 \index{main@{main}!ticketing.Ticket@{ticketing.Ticket}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily \label{classticketing_1_1Ticket_ac22494c9fcd38b4516d8d34c597057d4} 
-void ticketing.\+Ticket.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_a3d12e8caedcb466ea29d8e1b8eec2faf} 
+void ticketing.\+Ticket.\+main (\begin{DoxyParamCaption}\item[{String\+[$\,$]\+}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+\Hypertarget{classticketing_1_1Ticket_a5abdb3363093798e89d3870e722053a2}\index{ticketing.Ticket@{ticketing.Ticket}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!ticketing.Ticket@{ticketing.Ticket}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_a5abdb3363093798e89d3870e722053a2} 
+void ticketing.\+Ticket.\+set\+Status (\begin{DoxyParamCaption}\item[{Ticket\+Status}]{status}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the ticket status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & The new status. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}

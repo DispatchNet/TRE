@@ -18,6 +18,8 @@ void \doxymbox{\hyperlink{classuser__management_1_1UserManagement_a52964c827c1c2
 \begin{DoxyCompactList}\small\item\em Removes an authenticated user from the system. \end{DoxyCompactList}\item 
 boolean \doxymbox{\hyperlink{classuser__management_1_1UserManagement_a7f16a4696e991edf2fec02ce16e7b763}{send\+Email}} (\doxymbox{\hyperlink{classmail__service_1_1Email}{Email}} email)
 \begin{DoxyCompactList}\small\item\em Sends an email to a user. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classuser__management_1_1UserManagement_a8934421768a979a09ac62a74197bd889}{process\+Transaction}} (String transaction\+Description)
+\item 
 void \doxymbox{\hyperlink{classuser__management_1_1UserManagement_ab21bbe3550994a8d5fbd85bf8680370a}{display\+Error}} (String message)
 \begin{DoxyCompactList}\small\item\em Displays an error message. \end{DoxyCompactList}\item 
 String \doxymbox{\hyperlink{classuser__management_1_1UserManagement_aeb62b2a53928428e54d053ccb6cc1a95}{prompt}} (String message)
@@ -33,7 +35,11 @@ boolean \doxymbox{\hyperlink{classuser__management_1_1UserManagement_a77d9fd14f1
 void \doxymbox{\hyperlink{classuser__management_1_1UserManagement_af193ad576f495c43499d7c7ff2c9ef04}{login\+User}} (\doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User}} user)
 \begin{DoxyCompactList}\small\item\em Transitions the current session from anonymous to authenticated. Sets the given authenticated user as the current session user. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classuser__management_1_1UserManagement_ab8affa201980a987db4d3a4a747db31e}{logout\+User}} ()
-\begin{DoxyCompactList}\small\item\em Transitions the current session from authenticated to anonymous. Clears the authenticated user and creates a new anonymous session. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Transitions the current session from authenticated to anonymous. Clears the authenticated user and creates a new anonymous session. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User}} \doxymbox{\hyperlink{classuser__management_1_1UserManagement_a0a736e52d5f3843756477e863efdf630}{get\+Authenticated\+User\+By\+Id}} (String id)
+\begin{DoxyCompactList}\small\item\em Gets an authenticated user by their id. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1UserManagement_a9cc50fbdb29f913d2d85bd22af5dc77b}{save\+Tickets}} ()
+\begin{DoxyCompactList}\small\item\em Saves all passenger tickets to the CSV file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -232,6 +238,24 @@ Gets an authenticated user by their email.
 \begin{DoxyReturn}{Returns}
 The authenticated user with the specified email, or null if not found 
 \end{DoxyReturn}
+\Hypertarget{classuser__management_1_1UserManagement_a0a736e52d5f3843756477e863efdf630}\index{user\_management.UserManagement@{user\_management.UserManagement}!getAuthenticatedUserById@{getAuthenticatedUserById}}
+\index{getAuthenticatedUserById@{getAuthenticatedUserById}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{getAuthenticatedUserById()}{getAuthenticatedUserById()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1UserManagement_a0a736e52d5f3843756477e863efdf630} 
+\doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User}} user\+\_\+management.\+User\+Management.\+get\+Authenticated\+User\+By\+Id (\begin{DoxyParamCaption}\item[{String}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets an authenticated user by their id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the user to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The authenticated user with the specified id, or null if not found 
+\end{DoxyReturn}
 \Hypertarget{classuser__management_1_1UserManagement_a441b6cb5a48c8ef385bd38c1a3ede4df}\index{user\_management.UserManagement@{user\_management.UserManagement}!getAuthenticatedUserByUsername@{getAuthenticatedUserByUsername}}
 \index{getAuthenticatedUserByUsername@{getAuthenticatedUserByUsername}!user\_management.UserManagement@{user\_management.UserManagement}}
 \doxysubsubsection{\texorpdfstring{getAuthenticatedUserByUsername()}{getAuthenticatedUserByUsername()}}
@@ -329,6 +353,12 @@ Main method for testing \doxylink{classuser__management_1_1UserManagement}{User\
 {\em args} & Command-\/line arguments \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classuser__management_1_1UserManagement_a8934421768a979a09ac62a74197bd889}\index{user\_management.UserManagement@{user\_management.UserManagement}!processTransaction@{processTransaction}}
+\index{processTransaction@{processTransaction}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{processTransaction()}{processTransaction()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1UserManagement_a8934421768a979a09ac62a74197bd889} 
+boolean user\+\_\+management.\+User\+Management.\+process\+Transaction (\begin{DoxyParamCaption}\item[{String}]{transaction\+Description}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \Hypertarget{classuser__management_1_1UserManagement_aeb62b2a53928428e54d053ccb6cc1a95}\index{user\_management.UserManagement@{user\_management.UserManagement}!prompt@{prompt}}
 \index{prompt@{prompt}!user\_management.UserManagement@{user\_management.UserManagement}}
 \doxysubsubsection{\texorpdfstring{prompt()}{prompt()}}
@@ -380,6 +410,16 @@ Removes an authenticated user from the system.
 {\em user} & The authenticated user to remove \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classuser__management_1_1UserManagement_a9cc50fbdb29f913d2d85bd22af5dc77b}\index{user\_management.UserManagement@{user\_management.UserManagement}!saveTickets@{saveTickets}}
+\index{saveTickets@{saveTickets}!user\_management.UserManagement@{user\_management.UserManagement}}
+\doxysubsubsection{\texorpdfstring{saveTickets()}{saveTickets()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1UserManagement_a9cc50fbdb29f913d2d85bd22af5dc77b} 
+void user\+\_\+management.\+User\+Management.\+save\+Tickets (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Saves all passenger tickets to the CSV file. 
+
 \Hypertarget{classuser__management_1_1UserManagement_a7f16a4696e991edf2fec02ce16e7b763}\index{user\_management.UserManagement@{user\_management.UserManagement}!sendEmail@{sendEmail}}
 \index{sendEmail@{sendEmail}!user\_management.UserManagement@{user\_management.UserManagement}}
 \doxysubsubsection{\texorpdfstring{sendEmail()}{sendEmail()}}

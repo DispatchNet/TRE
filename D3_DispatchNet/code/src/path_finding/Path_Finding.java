@@ -1,5 +1,7 @@
 package path_finding;
 
+import static java.time.temporal.ChronoUnit.MINUTES;
+
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,6 +10,7 @@ import java.util.Comparator;
 import infrastructure.Junction;
 import user_management.Passenger;
 import ticketing.Ticket;
+import path_finding.srtAlg;
 
 /**
  * @class Path_finding
@@ -147,8 +150,36 @@ public class Path_Finding{
 class sortByLenght implements Comparator<ArrayList<Ticket>> {
   public int compare (ArrayList<Ticket> L1, ArrayList<Ticket> L2) {
     //TODO Get difference of depature time of first and arrival of last for each list 
-    //Shorter one is better 
-    //If times are the same, continue with size comparison
+    
+    LocalTime startL1 = L1.get(0).getDeparture().time();
+    LocalTime endL1 = L1.get(L1.size()-1).getDeparture().time();
+    int offsetL1 = L1.get(L1.size()-1).getLastStep().getTravelMinutes();
+
+    LocalTime startL2 = L2.get(0).getDeparture().time();
+    LocalTime endL2 = L2.get(L2.size()-1).getDeparture().time();
+    int offsetL2 = L2.get(L2.size()-1).getLastStep().getTravelMinutes();
+    
+    long diffL1 = MINUTES.between(startL1, endL1.plusMinutes(offsetL1));
+    long diffL2 = MINUTES.between(startL2, endL2.plusMinutes(offsetL2));
+    
+    //Shorter one is better
+    if (diffL1 < diffL2) return -1;
+    if (diffL2 > diffL2) return 1;
+    
+    //Compare Km lenght 
+    int metersL1 = 0;
+    for (int i = 0; i<L1.size(); i++) {
+      metersL1 += L1.get(i).getLength();
+    } 
+
+    int metersL2 = 0;
+    for (int i = 0; i<L2.size(); i++) {
+      metersL2 += L2.get(i).getLength();
+    }
+
+    if (metersL1 != metersL2) return metersL1-metersL2;
+
+    //If times and lenght are the same, continue with size comparison
     int size1 = L1.size();
     int size2 = L2.size();
 
