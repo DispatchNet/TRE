@@ -137,7 +137,8 @@ public class Junction {
   }
 
   /**
-   * @brief Get the departures from this junction (Includes services that don't stop)
+   * @brief Get the departures from this junction
+   * @implNote Includes services that don't stop at this junction
    * @return the departures
    */
   public List<Departure> getDepartures() {
