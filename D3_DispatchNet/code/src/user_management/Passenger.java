@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import mail_service.Email;
-import payment_gateway.MockPaymentGateway;
-import payment_gateway.PaymentGateway;
 import ticketing.Ticket;
 
 /**
