@@ -7,6 +7,8 @@ import csv_database.CsvDatabase;
 import mail_service.Email;
 import mail_service.MailService;
 import mail_service.MockMailService;
+import payment_gateway.PaymentGateway;
+import payment_gateway.MockPaymentGateway;
 import ticketing.Ticket;
 import IO_operations.IO;
 
@@ -20,10 +22,13 @@ public class UserManagement {
     private final static List<AuthenticatedUser> authenticatedUsers = new ArrayList<>();
     // Mail service instance for sending emails
     private final static MailService mailService = new MockMailService();
+    // Payment gateway instance for processing payments (used by passengers)
+    private final static PaymentGateway paymentGateway = new MockPaymentGateway();
     // IO instance for user input and output
     private final static IO io = new IO();
     // User session to track the current active user (only one at a time)
     private final static UserSession session = new UserSession();
+    // CSV database instance for loading and saving user data and tickets
     private final CsvDatabase csvDatabase = new CsvDatabase();
 
     /**
@@ -77,6 +82,10 @@ public class UserManagement {
      */
     public boolean sendEmail(Email email) {
         return mailService.sendEmail(email);
+    }
+
+    public boolean processTransaction(String transactionDescription) {
+        return paymentGateway.processTransaction(transactionDescription);
     }
 
     /**

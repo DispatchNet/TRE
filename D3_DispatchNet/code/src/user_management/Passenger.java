@@ -18,7 +18,6 @@ public class Passenger extends EndUser {
     // Active and cancelled tickets are both tracked in the same list,
     // so ticket lifecycle history can be obtained from each Ticket object.
     private final List<Ticket> tickets = new ArrayList<>();
-    private final PaymentGateway paymentGateway = new MockPaymentGateway();
 
     /**
      * @brief Constructor for Passenger class
@@ -92,7 +91,7 @@ public class Passenger extends EndUser {
         }
 
         String transactionDescription = "Purchase ticket: " + ticket.getDescription();
-        boolean success = paymentGateway.processTransaction(transactionDescription);
+        boolean success = userManagement.processTransaction(transactionDescription);
 
         if (!success) {
             userManagement.displayError("Ticket purchase failed. Please try again.");
@@ -136,7 +135,7 @@ public class Passenger extends EndUser {
         }
 
         String transactionDescription = "Cancel ticket: " + managedTicket.getDescription();
-        boolean success = paymentGateway.processTransaction(transactionDescription);
+        boolean success = userManagement.processTransaction(transactionDescription);
 
         if (!success) {
             userManagement.displayError("Ticket cancellation failed. Please try again.");
