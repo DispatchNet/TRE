@@ -5,7 +5,7 @@ package service_management;
  * @brief A Class defining a ServiceType
  * 
  */
-class ServiceType {
+public class ServiceType {
   final String id;
   String commercial_name;
   TrainType trainType;

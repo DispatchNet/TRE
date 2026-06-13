@@ -169,8 +169,10 @@ public class Ticket {
      * @return an integer representing the monetary value
      */
     public int getCost() {
-        // TODO evaluate cost
-        return 0;
+      int centsPerKm = this.departure.serviceSet().getType().getCentsPerKm();
+      int meters = this.getLength();
+      
+      return centsPerKm*meters/1000;
     }
     
     /*
