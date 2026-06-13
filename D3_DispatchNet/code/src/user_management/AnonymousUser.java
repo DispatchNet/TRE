@@ -114,8 +114,6 @@ public class AnonymousUser {
             // log the new user in the newly created account
             userManagement.loginUser(newUser);
         }
-        Passenger newUser = new Passenger(username, email, password1, userManagement);
-        userManagement.addAuthenticatedUser(newUser);
 
         // send email to the new user
         userManagement.sendEmail(

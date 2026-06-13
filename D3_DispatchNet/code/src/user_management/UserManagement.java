@@ -6,7 +6,7 @@ import java.util.List;
 import csv_database.CsvDatabase;
 import mail_service.Email;
 import mail_service.MailService;
-import mail_service.MailServiceFactory;
+import mail_service.MockMailService;
 import ticketing.Ticket;
 import IO_operations.IO;
 
@@ -19,7 +19,7 @@ public class UserManagement {
     // List of authenticated authenticated users in the system
     private final static List<AuthenticatedUser> authenticatedUsers = new ArrayList<>();
     // Mail service instance for sending emails
-    private final static MailService mailService = MailServiceFactory.getMailService();
+    private final static MailService mailService = new MockMailService();
     // IO instance for user input and output
     private final static IO io = new IO();
     // User session to track the current active user (only one at a time)
@@ -35,7 +35,7 @@ public class UserManagement {
         loadTickets();
 
         // create default admin account if it doesn't exist
-        if (getAuthenticatedUserByUsername("admin") == null) {
+        if (getAuthenticatedUserByUsername("Admin") == null) {
             NetworkManager admin = new NetworkManager(
                 "Admin", "admin@dispatchnet.it", "VerySecurePassword1234", this
             );
