@@ -123,6 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abdaf3034d3efc79a6147e57172f3934f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this junction's services.  <br /></td></tr>
 <tr class="memitem:a5024085388986afb63388beb0dbb2feb" id="r_a5024085388986afb63388beb0dbb2feb"><td class="memItemLeft">List&lt; Departure &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5024085388986afb63388beb0dbb2feb">getDepartures</a> ()</td></tr>
 <tr class="memdesc:a5024085388986afb63388beb0dbb2feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the departures from this junction (Includes services that don't stop).  <br /></td></tr>
+<tr class="memitem:a40c4af24e2ef1acc96b4e10c9548c388" id="r_a40c4af24e2ef1acc96b4e10c9548c388"><td class="memItemLeft"><a class="el" href="classinfrastructure_1_1Line.html">Line</a>&#160;</td><td class="memItemRight"><a class="el" href="#a40c4af24e2ef1acc96b4e10c9548c388">getToOther</a> (<a class="el" href="#aefc3d341f399df7b6bf5a33ac7484f65">Junction</a> other)</td></tr>
+<tr class="memdesc:a40c4af24e2ef1acc96b4e10c9548c388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the line from this junction to another, if it exists.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Class representing a junction's data. </p>
@@ -427,6 +429,40 @@ Public Member Functions</h2></td></tr>
 <p>Get this <a class="el" href="classinfrastructure_1_1Junction.html" title="A Class representing a junction&#39;s data.">Junction</a>'s <a class="el" href="classinfrastructure_1_1StationData.html" title="A Class containing a station&#39;s data.">StationData</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>this junction's station data </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classinfrastructure_1_1StationData.html" title="A Class containing a station&#39;s data.">StationData</a> </dd></dl>
+
+</div>
+</div>
+<a id="a40c4af24e2ef1acc96b4e10c9548c388" name="a40c4af24e2ef1acc96b4e10c9548c388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40c4af24e2ef1acc96b4e10c9548c388">&#9670;&#160;</a></span>getToOther()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classinfrastructure_1_1Line.html">Line</a> infrastructure.Junction.getToOther </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aefc3d341f399df7b6bf5a33ac7484f65">Junction</a></td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the line from this junction to another, if it exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The other junction the line should connect to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classinfrastructure_1_1Line.html" title="A Class representing a line between 2 Junction elements.">Line</a> pointer, NULL if there is no such line </dd></dl>
 
 </div>
 </div>

@@ -19,7 +19,7 @@ Optional$<$ \doxymbox{\hyperlink{classservice__management_1_1StopData}{Stop\+Dat
 int \doxymbox{\hyperlink{classservice__management_1_1ServiceStep_aaef64645b335e50a6a78ba210b3d1ae0}{get\+Travel\+Minutes}} ()
 \begin{DoxyCompactList}\small\item\em Get the travel minutes to this destination. \end{DoxyCompactList}\item 
 boolean \doxymbox{\hyperlink{classservice__management_1_1ServiceStep_a2fe5fe7b5e98281f6de5cace5c8da5ff}{is\+Stopping}} ()
-\begin{DoxyCompactList}\small\item\em get the travel minutes to this destination. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get whether the train is stopping at this destination. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -68,7 +68,7 @@ String service\+\_\+management.\+Service\+Step.\+get\+Id (\begin{DoxyParamCaptio
 Get this service\+Step\textquotesingle{}s ID. 
 
 \begin{DoxyReturn}{Returns}
-
+this service\textquotesingle{}s ID 
 \end{DoxyReturn}
 \Hypertarget{classservice__management_1_1ServiceStep_a8dc44b5dcda0f8e0988d670e26eddde4}\index{service\_management.ServiceStep@{service\_management.ServiceStep}!getJunction@{getJunction}}
 \index{getJunction@{getJunction}!service\_management.ServiceStep@{service\_management.ServiceStep}}
@@ -117,10 +117,10 @@ boolean service\+\_\+management.\+Service\+Step.\+is\+Stopping (\begin{DoxyParam
 
 
 
-get the travel minutes to this destination. 
+Get whether the train is stopping at this destination. 
 
 \begin{DoxyReturn}{Returns}
-the travel time in minutes 
+true if the train is stopping, false otherwise 
 \end{DoxyReturn}
 
 

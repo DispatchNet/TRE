@@ -33,7 +33,9 @@ List$<$ \doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} $>$ \doxymbox{\
 List$<$ \doxymbox{\hyperlink{classservice__management_1_1ServiceSet}{Service\+Set}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1Junction_abdaf3034d3efc79a6147e57172f3934f}{get\+Services}} ()
 \begin{DoxyCompactList}\small\item\em Get this junction\textquotesingle{}s services. \end{DoxyCompactList}\item 
 List$<$ Departure $>$ \doxymbox{\hyperlink{classinfrastructure_1_1Junction_a5024085388986afb63388beb0dbb2feb}{get\+Departures}} ()
-\begin{DoxyCompactList}\small\item\em Get the departures from this junction (Includes services that don\textquotesingle{}t stop). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the departures from this junction (Includes services that don\textquotesingle{}t stop). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} \doxymbox{\hyperlink{classinfrastructure_1_1Junction_a40c4af24e2ef1acc96b4e10c9548c388}{get\+To\+Other}} (\doxymbox{\hyperlink{classinfrastructure_1_1Junction_aefc3d341f399df7b6bf5a33ac7484f65}{Junction}} other)
+\begin{DoxyCompactList}\small\item\em Get the line from this junction to another, if it exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -170,6 +172,24 @@ this junction\textquotesingle{}s station data
 \begin{DoxySeeAlso}{See also}
 \doxylink{classinfrastructure_1_1StationData}{Station\+Data} 
 \end{DoxySeeAlso}
+\Hypertarget{classinfrastructure_1_1Junction_a40c4af24e2ef1acc96b4e10c9548c388}\index{infrastructure.Junction@{infrastructure.Junction}!getToOther@{getToOther}}
+\index{getToOther@{getToOther}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{getToOther()}{getToOther()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_a40c4af24e2ef1acc96b4e10c9548c388} 
+\doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} infrastructure.\+Junction.\+get\+To\+Other (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1Junction_aefc3d341f399df7b6bf5a33ac7484f65}{Junction}}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the line from this junction to another, if it exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other junction the line should connect to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \doxylink{classinfrastructure_1_1Line}{Line} pointer, NULL if there is no such line 
+\end{DoxyReturn}
 \Hypertarget{classinfrastructure_1_1Junction_ae6c05d878229f56a5619c2e7f9d93f53}\index{infrastructure.Junction@{infrastructure.Junction}!isStation@{isStation}}
 \index{isStation@{isStation}!infrastructure.Junction@{infrastructure.Junction}}
 \doxysubsubsection{\texorpdfstring{isStation()}{isStation()}}

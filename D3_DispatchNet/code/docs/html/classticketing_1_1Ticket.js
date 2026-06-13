@@ -12,6 +12,7 @@ var classticketing_1_1Ticket =
     [ "getId", "classticketing_1_1Ticket.html#a83e95a6ee6a8cdcfb5abb98e6c00bc69", null ],
     [ "getJunction", "classticketing_1_1Ticket.html#ab3e701c7f5363067e7fe6427999ee461", null ],
     [ "getLastStep", "classticketing_1_1Ticket.html#ad76c3c9605817aa62ae34998044192da", null ],
+    [ "getLength", "classticketing_1_1Ticket.html#a64338eb23e1043207ca0abfbb424fc73", null ],
     [ "getOwner", "classticketing_1_1Ticket.html#a083a6196da9fceff79a3e3f001dcbaf0", null ],
     [ "getStatus", "classticketing_1_1Ticket.html#ab247737807d37826946ed71ce326d8ec", null ],
     [ "hashCode", "classticketing_1_1Ticket.html#a1d59e9b29721a17631a2bb06e96dd88c", null ],

@@ -8,6 +8,7 @@ var classinfrastructure_1_1Line =
     [ "getLengthMeters", "classinfrastructure_1_1Line.html#a5f6e6a9ddc67c8817acd4044aca8add8", null ],
     [ "getMaxSpeedKpH", "classinfrastructure_1_1Line.html#a04470401473f213ea085797e6dbd88c7", null ],
     [ "getnTracks", "classinfrastructure_1_1Line.html#a36e3ef7c65d015591af5229d21f63f06", null ],
+    [ "hasJunction", "classinfrastructure_1_1Line.html#a91a79734de1c41a4be72e083522749d8", null ],
     [ "setJunction1", "classinfrastructure_1_1Line.html#a3690b18b84a4c460e7e25266a94ef3ef", null ],
     [ "setJunction2", "classinfrastructure_1_1Line.html#ae246ec1ce23c8a2e6e301954febabb7d", null ],
     [ "setLengthMeters", "classinfrastructure_1_1Line.html#ab9a9eb16ade26dd90d1003ab69155471", null ],

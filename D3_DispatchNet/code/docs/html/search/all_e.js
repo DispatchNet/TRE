@@ -17,7 +17,7 @@ var searchData=
   ['servicetype_2ejava_14',['ServiceType.java',['../ServiceType_8java.html',1,'']]],
   ['setanonymoususer_15',['setAnonymousUser',['../classuser__management_1_1UserSession.html#a9d356ad00fa0ea4748009cc61c1d7ab4',1,'user_management::UserSession']]],
   ['setauthenticateduser_16',['setAuthenticatedUser',['../classuser__management_1_1UserSession.html#abb8c58802a92b570e41fb3d85dc6b41a',1,'user_management::UserSession']]],
-  ['setchosensrt_17',['setChosenSrt',['../classpath__finding_1_1Path__Finding.html#aa80674e608b582a6e28f318969656cce',1,'path_finding.Path_Finding.setChosenSrt(srtAlg newAlg)'],['../classpath__finding_1_1Path__Finding.html#aa80674e608b582a6e28f318969656cce',1,'path_finding.Path_Finding.setChosenSrt(srtAlg newAlg)']]],
+  ['setchosensrt_17',['setChosenSrt',['../classpath__finding_1_1Path__Finding.html#aa80674e608b582a6e28f318969656cce',1,'path_finding::Path_Finding']]],
   ['setdispatchtime_18',['setDispatchTime',['../classservice__management_1_1Dispatch.html#a419d0baa33a87789a720c5fcd2e5ea27',1,'service_management::Dispatch']]],
   ['setemail_19',['setEmail',['../classuser__management_1_1AuthenticatedUser.html#a77ee15db77877404946251dbae09d425',1,'user_management::AuthenticatedUser']]],
   ['setjunction1_20',['setJunction1',['../classinfrastructure_1_1Line.html#a3690b18b84a4c460e7e25266a94ef3ef',1,'infrastructure::Line']]],
