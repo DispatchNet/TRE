@@ -68,15 +68,24 @@ public class ServiceSet {
       dispatches
     );
   }
+
   /**
-   * Get this service's operator
+   * @breif Get this service's unique ID
+   * @return the ID
+   */
+  public String getId() {
+    return this.id;
+  }
+
+  /**
+   * @brief Get this service's operator
    * @return the company
    */
   public TrainCompany getCompany() {
     return company;
   }
   /**
-   * Get this service's type
+   * @brief Get this service's type
    * @return the type
    */
   public ServiceType getType() {
