@@ -7,10 +7,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import java.util.List; //Import this because Luca is a lazy bum
+
 import infrastructure.Junction;
 import user_management.Passenger;
 import ticketing.Ticket;
 import path_finding.srtAlg;
+import service_management.ServiceSet;
+import service_management.ServiceStep;
+import departure.Departure;
 
 /**
  * @class Path_finding
@@ -18,13 +23,27 @@ import path_finding.srtAlg;
  * @details created whith all the relevant information, stores the search result and is able to sort and produce it multiple times
  */
 public class Path_Finding{
-	Passenger requester;
-	Junction from;
-	Junction to;
-	LocalTime after; //Optional
-	LocalTime before; //Optional
+	final Passenger requester;
+	final Junction from;
+	final Junction to;
+	final LocalTime after; //Optional
+	final LocalTime before; //Optional
 	srtAlg chosenSrt;
 	ArrayList<ArrayList<Ticket>> results;
+
+  //Private constructor helpers
+  boolean is_after (Departure dep, Junction to) {
+    ServiceSet serv = dep.serviceSet();
+    boolean found_first = false;
+    boolean out = false;
+    for (int i = 0; i<serv.getSteps().size() && !out; i++) {
+      if (serv.getSteps().get(i) == dep.serviceStep()) found_first = true;
+      if (found_first && serv.getSteps().get(i).getJunction() == to) out = true;
+    }
+
+    return out;
+  }
+
 
   //Public	
 		/**
@@ -43,8 +62,110 @@ public class Path_Finding{
      * @see Ticket
      */
     public Path_Finding(Passenger requester, Junction from, Junction to, LocalTime after, LocalTime before) {
-			//TODO
-		}
+			//TODO make a null check on the from and to
+      //TODO make sure serviceSet equality is implemented and real
+      
+      final int MIN_RESULTS = 10;
+      final int MAX_ITERATIONS = 10000;
+
+      this.requester = requester;
+      this.from = from;
+      this.to = to;
+      if (after == null && before == null) this.after = LocalTime.now();
+      else  this.after = after;
+      this.before = before;
+      
+      this.chosenSrt = srtAlg.Length;
+
+      ArrayList<Integer> previous = new ArrayList<Integer>();
+      ArrayList<Departure> queue = new ArrayList<Departure>();
+      ArrayList<Integer> offsetMin = new ArrayList<Integer>();
+      ArrayList<Integer> candidates = new ArrayList<Integer>();
+      
+      //Prepare queue and the history holder
+      for (int i = 0; i<from.getDepartures().size(); i++) {
+        if (this.after == null || !from.getDepartures().get(i).time().isBefore(this.after)) {
+          queue.add(from.getDepartures().get(i));
+          previous.add(-1);
+          offsetMin.add(0);
+        }
+      }
+
+      //Width-first search
+      for (int i = 0; i<queue.size() && candidates.size() < MIN_RESULTS && i<MAX_ITERATIONS; i++) {
+        if (is_after(queue.get(i), this.to)) candidates.add(i); //If goes to, candidate solution
+        else {//else expand queue
+          boolean found_first = false;
+          List<ServiceStep> list = queue.get(i).serviceSet().getSteps();
+          ServiceStep first = queue.get(i).serviceStep();
+          LocalTime now = queue.get(i).time();
+          int nowffset = offsetMin.get(i);
+
+          for (int ii = 0; ii<list.size() && (this.before == null || !this.before.isBefore(now.plusMinutes(nowffset))); ii++) {
+            if (found_first) {
+              nowffset += list.get(ii).getTravelMinutes();
+              Junction current = list.get(ii).getJunction();
+              for (int iii = 0; iii<current.getDepartures().size(); iii++) {//Iterate over all deparures of the Junction
+                Departure dep = current.getDepartures().get(iii);
+                if (!dep.time().isBefore(now.plusMinutes(nowffset)) && !dep.time().isAfter(this.before) && !queue.contains(dep)) {//Only add departures that happen after arrival and before the limit, and aren't in queue yet
+                  queue.add(dep);
+                  previous.add(i);
+                  offsetMin.add(nowffset);
+                }
+              }
+            }
+            if (list.get(i) == first) found_first = true;//Only start counting after having arrived at the right step
+          }
+        }
+      }
+      
+      ArrayList<ArrayList<Departure>> candidate_departures = new ArrayList<ArrayList<Departure>>();
+      for (int i = 0; i<candidates.size(); i++) {
+        ArrayList<Departure> tempList = new ArrayList<Departure>();
+        int c = candidates.get(i); //current number
+        while (c != -1) {
+          tempList.add(queue.get(c));
+          c = previous.get(c);
+        }
+        Collections.reverse(tempList);
+        candidate_departures.add(tempList);
+      }
+
+      ArrayList<ArrayList<Ticket>> results = new ArrayList<ArrayList<Ticket>>();
+      for (int i = 0; i<candidate_departures.size(); i++) {
+        ArrayList<Ticket> tempList = new ArrayList<Ticket>();
+        for (int ii = 0; ii<candidate_departures.get(i).size()-1; ii++) {//All elements except the last one are trivial
+          Ticket newticket = new Ticket(
+            this.requester,
+            candidate_departures.get(i).get(ii),
+            candidate_departures.get(i).get(ii+1).serviceStep()//The first step of the next departure is obviously the last of the current
+          );
+          tempList.add(newticket);
+        }
+        //Need to find the correct serviceStep into "to"
+        List<ServiceStep> stepList = candidate_departures.get(i).get(candidate_departures.get(i).size()-1).serviceSet().getSteps();
+        ServiceStep prevStep = candidate_departures.get(i).get(candidate_departures.get(i).size()-1).serviceStep();
+        boolean found_first = false;
+        ServiceStep theStep = null;
+        for (int ii = 0; ii<stepList.size(); ii++) {
+          if (stepList.get(ii) == prevStep) found_first = true;
+          if (found_first && stepList.get(ii).getJunction() == this.to) theStep = stepList.get(ii);
+        }
+        if (theStep == null) {
+          //Something went wrong
+          //TODO error out here
+        }
+        tempList.add(new Ticket(
+          this.requester,
+          candidate_departures.get(i).get(candidate_departures.get(i).size()-1),
+          theStep
+        ));
+        
+        results.add(tempList);
+      }
+
+      this.results = results;
+    }
     
     /**
      * @brief requester getter 
