@@ -82,6 +82,31 @@ public class ServiceManagement {
   }
 
   /**
+   * @brief Directly registers an already-effective ServiceSet (used during deserialization).
+   *        Unlike addServiceRequest, this does not change the status of the set.
+   * @param serviceSet the ServiceSet to register as effective
+   */
+  public void addServiceSet(ServiceSet serviceSet) {
+    serviceSets.put(serviceSet.id, serviceSet);
+  }
+
+  /**
+   * @brief Returns all effective service sets.
+   * @return an unmodifiable view of the service sets map
+   */
+  public Map<String, ServiceSet> getServiceSets() {
+    return java.util.Collections.unmodifiableMap(serviceSets);
+  }
+
+  /**
+   * @brief Returns all pending service requests.
+   * @return an unmodifiable view of the service requests map
+   */
+  public Map<String, ServiceSet> getServiceRequests() {
+    return java.util.Collections.unmodifiableMap(serviceRequests);
+  }
+
+  /**
    * @brief Retrieves an active service set by its ID.
    * @param id the ID of the service set to retrieve
    * @return an Optional containing the ServiceSet with the given ID, or empty if not found

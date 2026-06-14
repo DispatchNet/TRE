@@ -5,6 +5,9 @@ import user_management.AuthenticatedUser;
 import user_management.EndUser;
 import user_management.Passenger;
 import user_management.UserManagement;
+
+import java.util.stream.Stream;
+
 import IO_operations.IO;
 import csv_database.CsvDatabase;
 
@@ -49,9 +52,18 @@ public class Main {
     csvDatabase.saveNetwork(network);
     csvDatabase.saveAuthenticatedUsers(userManagement.getAuthenticatedUsers());
     try {
-        csvDatabase.saveTickets(userManagement);
+      csvDatabase.saveTickets(
+        Main.getUserManagement().getAuthenticatedUsers().stream()
+          .flatMap(user -> {
+            if(user instanceof Passenger) {
+              return ((Passenger)user).getTickets().stream();
+            } else {
+              return Stream.empty();
+            }
+          }).toList()
+      );
     } catch (Exception e) {
-        System.err.println("Failed to save tickets: " + e.getMessage());
+      System.err.println("Failed to save tickets: " + e.getMessage());
     }
 
     System.out.println("Thank you for using DispatchNet. Goodbye!");
