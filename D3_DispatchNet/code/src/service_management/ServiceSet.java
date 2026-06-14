@@ -48,7 +48,7 @@ public class ServiceSet {
    * @brief Construct a serviceSet without an explicit ID
    * @param company The Company that runs this serivce
    * @param type This service's type
-   * @param status This services's status (PENDING REVIEW)
+   * @param status This services's status
    * @param steps This service's steps
    * @param dispatches This service's dispatches
    */
