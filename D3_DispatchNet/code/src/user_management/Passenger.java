@@ -110,7 +110,6 @@ public class Passenger extends EndUser {
             "Thank you for using DispatchNet.";
 
         userManagement.sendEmail(new Email(getEmail(), subject, body));
-        userManagement.saveTickets(); // persist tickets after successful purchase
         System.out.println("Ticket purchase completed successfully.");
         return true;
     }
@@ -150,7 +149,6 @@ public class Passenger extends EndUser {
             "Thank you for using DispatchNet.";
 
         userManagement.sendEmail(new Email(getEmail(), subject, body));
-        userManagement.saveTickets(); // persist ticket cancellation status
         System.out.println("Ticket cancellation completed successfully.");
         return true;
     }

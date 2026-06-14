@@ -20,6 +20,9 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 
+import IO_operations.IO;
+import csv_database.CsvDatabase;
+
 /**
  * @class TrainCompany
  * @brief Class representing a train company, a type of end user who can
@@ -348,7 +351,7 @@ public class TrainCompany extends EndUser {
 
     //Unit test
     public static void main(String args[]) {
-        TrainCompany trainCompany = new TrainCompany("-", "-", "-", new UserManagement());
+        TrainCompany trainCompany = new TrainCompany("-", "-", "-", new UserManagement(new IO(), new CsvDatabase()));
         trainCompany.createServiceRequest();
     }
 }

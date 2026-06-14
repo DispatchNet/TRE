@@ -10,6 +10,9 @@ import infrastructure.Network;
 import java.util.HashSet;
 import java.util.Set;
 
+import IO_operations.IO;
+import csv_database.CsvDatabase;
+
 /**
  * @class NetworkManager 
  * @brief Class representing a network manager, a type of authenticated user who 
@@ -619,7 +622,7 @@ public class NetworkManager extends AuthenticatedUser {
      */
     public static void main(String[] args) {
         // Test creating a new train company account
-        UserManagement userManagement = new UserManagement();
+        UserManagement userManagement = new UserManagement(new IO(), new CsvDatabase());
         new AnonymousUser(userManagement).login();
 
         NetworkManager networkManager = 

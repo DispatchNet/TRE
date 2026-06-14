@@ -1,5 +1,7 @@
 package user_management;
 
+import IO_operations.IO;
+import csv_database.CsvDatabase;
 import mail_service.Email;
 
 /**
@@ -177,7 +179,7 @@ public abstract class EndUser extends AuthenticatedUser {
      */
     public static void main(String[] args) {
         // Create a UserManagement instance for testing
-        UserManagement userManagement = new UserManagement();
+        UserManagement userManagement = new UserManagement(new IO(), new CsvDatabase());
 
         // Create an EndUser instance for testing (using Passenger as a concrete subclass)
         EndUser user = new Passenger(

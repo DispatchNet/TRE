@@ -1,5 +1,7 @@
 package user_management;
 
+import IO_operations.IO;
+import csv_database.CsvDatabase;
 import mail_service.Email;
 
 /**
@@ -247,7 +249,7 @@ public class AnonymousUser {
      */
     public static void main(String[] args) {
         // Create a mock UserManagement for testing
-        UserManagement userManagement = new UserManagement();
+        UserManagement userManagement = new UserManagement(new IO(), new CsvDatabase());
 
         // Test construction of AnonymousUser
         AnonymousUser anon = new AnonymousUser(userManagement);

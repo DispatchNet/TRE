@@ -24,7 +24,7 @@ public class GroupPass {
    */
   public GroupPass (Passenger owner) {
     this.owner = owner;
-    this.list = new ArrayList<Ticket>;
+    this.list = new ArrayList<Ticket>();
   }
   
   /**

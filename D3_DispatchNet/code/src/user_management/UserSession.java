@@ -1,5 +1,8 @@
 package user_management;
 
+import IO_operations.IO;
+import csv_database.CsvDatabase;
+
 /**
  * @class UserSession
  * @brief Tracks the current user session and whether the current user is authenticated.
@@ -93,7 +96,7 @@ public class UserSession {
         System.out.println("Current user: " + session.getCurrentUserIdentifier());
 
         // Create an anonymous user and set it in the session
-        AnonymousUser anon = new AnonymousUser(new UserManagement());
+        AnonymousUser anon = new AnonymousUser(new UserManagement(new IO(), new CsvDatabase()));
         session.setAnonymousUser(anon);
         System.out.println("Current user after setting anonymous: " +
             session.getCurrentUserIdentifier());
@@ -101,7 +104,7 @@ public class UserSession {
         // Create an authenticated user and set it in the session
         AuthenticatedUser auth = new Passenger(
             "testuser", "test@example.com", 
-            "Password1", new UserManagement()
+            "Password1", new UserManagement(new IO(), new CsvDatabase())
         );
         session.setAuthenticatedUser(auth);
         System.out.println("Current user after setting authenticated: " +

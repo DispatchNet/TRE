@@ -9,7 +9,6 @@ import mail_service.MailService;
 import mail_service.MockMailService;
 import payment_gateway.PaymentGateway;
 import payment_gateway.MockPaymentGateway;
-import ticketing.Ticket;
 import IO_operations.IO;
 
 /**
