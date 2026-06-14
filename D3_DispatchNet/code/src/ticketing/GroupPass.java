@@ -2,7 +2,6 @@ package ticketing;
 
 import java.util.ArrayList;
 
-import ticketing.Ticket;
 import user_management.Passenger;
 /**
  * @class GroupPass
