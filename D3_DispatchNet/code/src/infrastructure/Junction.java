@@ -1,9 +1,11 @@
 package infrastructure;
 
 import java.util.Optional;
+import java.util.Set;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.UUID;
 
 import departure.Departure;
@@ -181,6 +183,12 @@ public class Junction {
 
     return connection;
 
+  }
+
+  public List<Junction> getNeighbhors() {
+    return this.getConnectedLines().stream().map(
+      line -> line.getJunction1() == this ? line.getJunction2() : line.getJunction1()
+    ).toList();
   }
 
   static void main () {// Unit test

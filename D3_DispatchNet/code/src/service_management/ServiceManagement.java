@@ -1,5 +1,6 @@
 package service_management;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
@@ -10,10 +11,10 @@ import java.util.Optional;
  *        and train types that make up the rail network.
  */
 public class ServiceManagement {
-  Map<String, ServiceSet> serviceSets;
-  Map<String, ServiceSet> serviceRequests;
-  Map<String, ServiceType> serviceTypes;
-  Map<String, TrainType> trainTypes;
+  Map<String, ServiceSet> serviceSets = new HashMap<>();
+  Map<String, ServiceSet> serviceRequests = new HashMap<>();
+  Map<String, ServiceType> serviceTypes = new HashMap<>();
+  Map<String, TrainType> trainTypes = new HashMap<>();
 
   /**
    * @brief Submits a new service request pending approval.
