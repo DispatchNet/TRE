@@ -31,7 +31,7 @@ public class ServiceManagement {
    *        and its status is updated to Effective.
    * @param id the ID of the service request to approve
    */
-  public void approceServiceRequest(String id) {
+  public void approveServiceRequest(String id) {
     ServiceSet serviceSet = serviceRequests.remove(id);
     if (serviceSet != null) {
       serviceSet.setStatus(ServiceStatus.Effective);
