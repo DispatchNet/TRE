@@ -57,6 +57,30 @@ public class ServiceManagement {
   }
 
   /**
+   * @brief Registers a new service type.
+   * @param serviceType the ServiceType to add
+   */
+  public void addServiceType(ServiceType serviceType) {
+    serviceTypes.put(serviceType.getId(), serviceType);
+  }
+
+  /**
+   * @brief Returns all registered train types.
+   * @return an unmodifiable view of the train types map
+   */
+  public Map<String, TrainType> getTrainTypes() {
+    return java.util.Collections.unmodifiableMap(trainTypes);
+  }
+
+  /**
+   * @brief Returns all registered service types.
+   * @return an unmodifiable view of the service types map
+   */
+  public Map<String, ServiceType> getServiceTypes() {
+    return java.util.Collections.unmodifiableMap(serviceTypes);
+  }
+
+  /**
    * @brief Retrieves an active service set by its ID.
    * @param id the ID of the service set to retrieve
    * @return an Optional containing the ServiceSet with the given ID, or empty if not found
