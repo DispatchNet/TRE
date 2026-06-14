@@ -100,7 +100,7 @@ public class ServiceSet {
 
 
   /**
-   * Get this service's steps.
+   * @breif Get this service's steps.
    * @return An immutable ordered list of the steps that make up this service
    * @see ServiceStep
    */
@@ -109,7 +109,7 @@ public class ServiceSet {
   }
 
   /**
-   * Get this service's dispatches.
+   * @brief Get this service's dispatches.
    * @return An immutable list of this service's dispatches
    * @see Dispatch
    */
