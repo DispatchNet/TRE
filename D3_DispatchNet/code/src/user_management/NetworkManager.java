@@ -11,8 +11,6 @@ import infrastructure.Network;
 import java.util.HashSet;
 import java.util.Set;
 
-import csv_database.CsvDatabase;
-
 /**
  * @class NetworkManager 
  * @brief Class representing a network manager, a type of authenticated user who 
