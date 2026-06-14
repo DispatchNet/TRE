@@ -4,13 +4,13 @@ import infrastructure.GeoCoordinate;
 import infrastructure.Junction;
 import infrastructure.Line;
 import infrastructure.StationData;
+import main.Main;
 import service_management.ServiceManagement;
 import infrastructure.Network;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import IO_operations.IO;
 import csv_database.CsvDatabase;
 
 /**
@@ -622,7 +622,7 @@ public class NetworkManager extends AuthenticatedUser {
      */
     public static void main(String[] args) {
         // Test creating a new train company account
-        UserManagement userManagement = new UserManagement(new IO(), new CsvDatabase());
+        UserManagement userManagement = Main.getUserManagement();
         new AnonymousUser(userManagement).login();
 
         NetworkManager networkManager = 
