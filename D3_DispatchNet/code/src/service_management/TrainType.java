@@ -5,7 +5,6 @@ package service_management;
  * @brief A Class defining a TrainType 
  */
 public class TrainType {
-  private final String id;
   String identifier;
   int seatedCapacity;
   int standingCapacity;
@@ -13,27 +12,18 @@ public class TrainType {
 
   /**
    * @brief constructs for a TrainType
-   * @param id this TrainType's id
    * @param identifier this TraniType's unique identifier
    * @param seatedCapacity this TrainType's number of seats
    * @param standingCapacity this TrainType's number of standing places
    * @param isPassenger whther or not this TrainType can carry passengers
    */
-  public TrainType(String id,String identifier, int seatedCapacity, int standingCapacity, boolean isPassenger) {
-    this.id = id;
+  public TrainType(String identifier, int seatedCapacity, int standingCapacity, boolean isPassenger) {
     this.identifier = identifier;
     this.seatedCapacity = seatedCapacity;
     this.standingCapacity = standingCapacity;
     this.isPassenger = isPassenger;
   }
 
-  /**
-   * @brief get this traintype's unique ID
-   * @return the ID
-   */
-  public String getID() {
-    return this.id;
-  }
   /**
    * @brief Get the total seated capacity for this train type
    * @return seated capacity

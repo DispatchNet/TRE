@@ -274,7 +274,7 @@ public class TrainCompany extends EndUser {
         String passengerInput = userManagement.prompt("Can this train carry passengers? (yes/no):");
         boolean isPassenger = passengerInput.equalsIgnoreCase("yes");
 
-        TrainType trainType = new TrainType(UUID.randomUUID().toString(),identifier,seated,standing,isPassenger);
+        TrainType trainType = new TrainType(identifier,seated,standing,isPassenger);
 
         Main.getServiceManagement().addTrainType(trainType);
         System.out.println("Train type created: " + identifier);
