@@ -95,15 +95,30 @@ public class Main {
       String choice = io.prompt("Enter your choice:").trim();
 
       // handle input
-      switch(choice) {
-        case "a": accountInterface(currentUser); break;
-        case "p": pathFindingInterface(currentUser); break;
-        case "t": ((Passenger) currentUser).getTicketsHistory(); break;
-        case "s": ((TrainCompany) currentUser).createServiceRequest(); break;
-        case "n": networkInterface((NetworkManager) currentUser); break;
-        case "r": ((NetworkManager) currentUser).createTrainCompanyAccount(); break;
-        case "q": exitRequested = true; break;
-        default: System.out.println("Invalid input. Try again");
+      if(! (currentUser instanceof NetworkManager)) {
+        switch(choice) {
+          case "a": accountInterface(currentUser); break;
+          case "p": pathFindingInterface(currentUser); break;
+          case "q": exitRequested = true; break;
+          default: break;
+        }
+        if(currentUser instanceof Passenger) {
+          if(choice == "t")
+            ((Passenger) currentUser).getTicketsHistory();
+        }
+        else if(currentUser instanceof TrainCompany) {
+          if(choice == "s")
+            ((TrainCompany) currentUser).createServiceRequest();
+        }
+      }
+      else {
+        switch(choice) {
+          case "a": accountInterface(currentUser); break;
+          case "n": networkInterface((NetworkManager) currentUser); break;
+          case "r": ((NetworkManager) currentUser).createTrainCompanyAccount(); break;
+          case "q": exitRequested = true; break;
+          default: System.out.println("Invalid input. Try again");
+        }
       }
     }
   }
@@ -128,11 +143,42 @@ public class Main {
       }
     }
     else {
-      
+      System.out.println("\n--- Authentication page ---");
+      // network manager
+      if(user instanceof NetworkManager) {
+        // show options
+        System.out.println("l) Logout");
+
+        // get input
+        String choice = io.prompt("Enter your choice:").trim();
+
+        // handle input
+        switch(choice) {
+          case "l": ((AuthenticatedUser) user).logout(); break;
+          default: System.out.println("Invalid input."); break;
+        }
+      }
+      // end user
+      else {
+        // show options
+        System.out.println("c) Change data");
+        System.out.println("d) Delete account");
+        System.out.println("l) Logout");
+
+        // get input
+        String choice = io.prompt("Enter your choice:").trim();
+
+        switch(choice) {
+          case "c": ((EndUser) user).changeData(); break;
+          case "d": ((EndUser) user).deleteAccount(); break;
+          case "l": ((AuthenticatedUser) user).logout(); break;
+          default: System.out.println("Invalid input."); break;
+        }
+      }
     }
   }
 
-  private static void pathFindingInterface(Object user) {}
+  private static void pathFindingInterface(Object user) {} //TODO: add when done
 
   private static void networkInterface(NetworkManager user) {
     System.out.println("\n--- Network Management page ---");

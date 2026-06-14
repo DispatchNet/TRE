@@ -1,2 +1,3 @@
 id,username,email,password,userType
 0e3c90bc-0861-4019-8e82-8b56c0275106,Admin,admin@dispatchnet.it,VerySecurePassword1234,NetworkManager
+b4f77e0b-1bd7-4fde-8a82-314d3bba5700,username,mail,passwordNEW1,Passenger
