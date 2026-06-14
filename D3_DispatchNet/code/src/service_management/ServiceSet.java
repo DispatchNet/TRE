@@ -24,7 +24,7 @@ public class ServiceSet {
    * @param id This serviceSet's ID
    * @param company The Company that runs this serivce
    * @param type This service's type
-   * @param status This services's status (PENDING REVIEW)
+   * @param status This services's status
    * @param steps This service's steps
    * @param dispatches This service's dispatches
    */
@@ -48,7 +48,7 @@ public class ServiceSet {
    * @brief Construct a serviceSet without an explicit ID
    * @param company The Company that runs this serivce
    * @param type This service's type
-   * @param status This services's status (PENDING REVIEW)
+   * @param status This services's status
    * @param steps This service's steps
    * @param dispatches This service's dispatches
    */
@@ -68,15 +68,24 @@ public class ServiceSet {
       dispatches
     );
   }
+
   /**
-   * Get this service's operator
+   * @breif Get this service's unique ID
+   * @return the ID
+   */
+  public String getId() {
+    return this.id;
+  }
+
+  /**
+   * @brief Get this service's operator
    * @return the company
    */
   public TrainCompany getCompany() {
     return company;
   }
   /**
-   * Get this service's type
+   * @brief Get this service's type
    * @return the type
    */
   public ServiceType getType() {
@@ -100,7 +109,7 @@ public class ServiceSet {
 
 
   /**
-   * Get this service's steps.
+   * @breif Get this service's steps.
    * @return An immutable ordered list of the steps that make up this service
    * @see ServiceStep
    */
@@ -109,7 +118,7 @@ public class ServiceSet {
   }
 
   /**
-   * Get this service's dispatches.
+   * @brief Get this service's dispatches.
    * @return An immutable list of this service's dispatches
    * @see Dispatch
    */

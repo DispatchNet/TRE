@@ -11,10 +11,24 @@ public class TrainType {
   boolean isPassenger;
 
   /**
+   * @brief constructs for a TrainType
+   * @param identifier this TraniType's unique identifier
+   * @param seatedCapacity this TrainType's number of seats
+   * @param standingCapacity this TrainType's number of standing places
+   * @param isPassenger whther or not this TrainType can carry passengers
+   */
+  public TrainType(String identifier, int seatedCapacity, int standingCapacity, boolean isPassenger) {
+    this.identifier = identifier;
+    this.seatedCapacity = seatedCapacity;
+    this.standingCapacity = standingCapacity;
+    this.isPassenger = isPassenger;
+  }
+
+  /**
    * @brief Get the total seated capacity for this train type
    * @return seated capacity
    */
-  int getSeatedCapacity() {
+  public int getSeatedCapacity() {
     return this.seatedCapacity;
   }
   
@@ -22,7 +36,7 @@ public class TrainType {
   * @brief Get the total standing capacity for this train type
   * @return The train's standing capacity
   */
-  int getStandingCapacity() {
+  public int getStandingCapacity() {
     return this.standingCapacity;
   }
   
@@ -30,7 +44,7 @@ public class TrainType {
   * @brief Get the total overall capacity for this train type
   * @return total capacity
   */
-  int getTotalCapacity() {
+  public int getTotalCapacity() {
     return this.getSeatedCapacity() + this.getStandingCapacity();
   }
 
@@ -38,7 +52,7 @@ public class TrainType {
   * @brief Get this train's identifier string
   * @return The train's identifier
   */
-  String getIdentifier() {
+  public String getIdentifier() {
     return this.identifier;
   }
 
@@ -46,7 +60,7 @@ public class TrainType {
    * @brief Get whether this train can carry passengers or not
    * @return true if the train can carry passengers, otherwise false
    */
-  boolean isPassenger() {
+  public boolean isPassenger() {
     return this.isPassenger;
   }
 }

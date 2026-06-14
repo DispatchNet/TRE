@@ -4,6 +4,7 @@ import infrastructure.GeoCoordinate;
 import infrastructure.Junction;
 import infrastructure.Line;
 import infrastructure.StationData;
+import service_management.ServiceManagement;
 import infrastructure.Network;
 
 import java.util.HashSet;
@@ -17,6 +18,8 @@ import java.util.Set;
 public class NetworkManager extends AuthenticatedUser {
     // The network instance this manager operates on
     private final Network network = new Network(); // TODO: move to container class
+    private final ServiceManagement serviceManagement = new ServiceManagement();
+
     /**
      * @brief Constructor for NetworkManager class
      * @param username The username of the network manager
@@ -518,12 +521,89 @@ public class NetworkManager extends AuthenticatedUser {
         }
     }
 
-    /**
-     * @brief Reviews a service request
-     * @param serviceRequest The service request to review
+     /**
+     * @brief Reviews a pending service request, displaying its details and
+     *        prompting the network manager to approve or reject it.
+     *        On approval the request is promoted to an active service set.
+     *        On rejection it is discarded.
+     *        Notifies the owning train company by email in either case.
+     * @param serviceRequestID The ID of the service request to review
      */
-    public void reviewServiceRequest(String serviceRequest) {
-        // TODO: implement service request review
+    public void reviewServiceRequest(String serviceRequestID) {
+        // look up the request
+        var maybeRequest = serviceManagement.getServiceRequest(serviceRequestID);
+
+        // abort if not found
+        if (maybeRequest.isEmpty()) {
+            userManagement.displayError("Service request not found: " + serviceRequestID);
+            return;
+        }
+
+        var request = maybeRequest.get();
+
+        // build a human-readable summary of the request
+        StringBuilder details = new StringBuilder();
+        details.append("=== Service Request: ").append(serviceRequestID).append(" ===\n");
+        details.append("Company  : ").append(request.getCompany().getUsername()).append("\n");
+        details.append("Type     : ").append(request.getType().getCommercialName()).append("\n");
+        details.append("Status   : ").append(request.getStatus()).append("\n");
+        details.append("Steps    :\n");
+
+        // list each step with junction name, travel time and stop data if present
+        for (var step : request.getSteps()) {
+            details.append("  - Junction: ").append(step.getJunction().getName());
+            details.append("  Travel: ").append(step.getTravelMinutes()).append(" min");
+            if (step.isStopping()) {
+                details.append("  [STOP]");
+            }
+            details.append("\n");
+        }
+
+        details.append("Dispatches: ");
+        for (var dispatch : request.getDispatches()) {
+            details.append(dispatch.getTrainNumber()).append(":").append(dispatch.getDispatchTime().toString()).append("\n");
+        }
+        
+        // display the summary
+        System.out.println(details);
+
+        // prompt for approve / reject decision, loop until valid input
+        while (true) {
+            String decision = userManagement.prompt(
+                "Approve or reject this request? (approve/reject):"
+            );
+
+            if (decision.equalsIgnoreCase("approve")) {
+                // promote the request to an active service set
+                serviceManagement.approveServiceRequest(serviceRequestID);
+                System.out.println("Service request approved: " + serviceRequestID);
+
+                // notify the train company by email
+                userManagement.sendEmail(new mail_service.Email(
+                    request.getCompany().getEmail(),
+                    "Service Request Approved",
+                    "Your service request " + serviceRequestID + " has been approved " +
+                    "and is now active."
+                ));
+                return;
+
+            } else if (decision.equalsIgnoreCase("reject")) {
+                // discard the request
+                serviceManagement.rejectServiceRequest(serviceRequestID);
+                System.out.println("Service request rejected: " + serviceRequestID);
+
+                // notify the train company by email
+                userManagement.sendEmail(new mail_service.Email(
+                    request.getCompany().getEmail(),
+                    "Service Request Rejected",
+                    "Your service request " + serviceRequestID + " has been rejected."
+                ));
+                return;
+
+            } else {
+                userManagement.displayError("Invalid input. Please enter 'approve' or 'reject'.");
+            }
+        }
     }
 
     /**

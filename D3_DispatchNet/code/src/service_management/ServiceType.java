@@ -1,5 +1,4 @@
 package service_management;
-
 /**
  * @class ServiceType
  * @brief A Class defining a ServiceType
@@ -7,7 +6,7 @@ package service_management;
  */
 public class ServiceType {
   final String id;
-  String commercial_name;
+  String commercialName;
   TrainType trainType;
   int centsPerKm;
 
@@ -20,35 +19,63 @@ public class ServiceType {
    */
   public ServiceType(String id, String commercial_name, TrainType trainType, int centsPerKm) {
     this.id = id;
-    this.commercial_name = commercial_name;
+    this.commercialName = commercial_name;
     this.trainType = trainType;
     this.centsPerKm = centsPerKm;
   }
 
+  /**
+   * @brief Returns the unique identifier of this ServiceType
+   * @return the id of this ServiceType
+   */
   public String getId() {
     return id;
   }
 
-  public String getCommercial_name() {
-    return commercial_name;
+  /**
+   * @brief Returns the commercial name of this ServiceType
+   * @return the commercial name of this ServiceType
+   */
+  public String getCommercialName() {
+    return commercialName;
   }
 
+  /**
+   * @brief Returns the TrainType associated with this ServiceType
+   * @return the TrainType used to run this ServiceType
+   */
   public TrainType getTrainType() {
     return trainType;
   }
 
+  /**
+   * @brief Returns the price rate of this ServiceType
+   * @return the price in cents per kilometer used to calculate ticket prices
+   */
   public int getCentsPerKm() {
     return centsPerKm;
   }
 
-  public void setCommercial_name(String commercial_name) {
-    this.commercial_name = commercial_name;
+  /**
+   * @brief Sets the commercial name of this ServiceType
+   * @param commercialName the new commercial name to assign to this ServiceType
+   */
+  public void setCommercialName(String commercialName) {
+    this.commercialName = commercialName;
   }
 
+  /**
+   * @brief Sets the TrainType of this ServiceType
+   * @param trainType the new TrainType to assign to this ServiceType
+   */
   public void setTrainType(TrainType trainType) {
     this.trainType = trainType;
   }
 
+  /**
+   * @brief Sets the price rate of this ServiceType
+   * @param centsPerKm the new price in cents per kilometer used to calculate ticket prices
+   */
   public void setCentsPerKm(int centsPerKm) {
     this.centsPerKm = centsPerKm;
   }
