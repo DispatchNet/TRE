@@ -59,7 +59,7 @@ public class Main {
   }
 
   private static void runInterface() {
-    System.out.println("Welcome to DispatchNet!");
+    System.out.println("--- Welcome to DispatchNet! ---");
 
     boolean exitRequested = false;
 
@@ -100,7 +100,7 @@ public class Main {
         case "p": pathFindingInterface(currentUser); break;
         case "t": ((Passenger) currentUser).getTicketsHistory(); break;
         case "s": ((TrainCompany) currentUser).createServiceRequest(); break;
-        case "n": networkInterface(); break;
+        case "n": networkInterface((NetworkManager) currentUser); break;
         case "r": ((NetworkManager) currentUser).createTrainCompanyAccount(); break;
         case "q": exitRequested = true; break;
         default: System.out.println("Invalid input. Try again");
@@ -121,14 +121,92 @@ public class Main {
 
       // handle input
       switch(choice) {
-        case "l": break;
-        case "r": break;
-        case "p": break;
-        default
+        case "l": ((AnonymousUser) user).login(); break;
+        case "r": ((AnonymousUser) user).register(); break;
+        case "p": ((AnonymousUser) user).resetPassword(); break;
+        default: System.out.println("Invalid input."); break;
       }
+    }
+    else {
+      
     }
   }
 
   private static void pathFindingInterface(Object user) {}
-  private static void networkInterface() {}
+
+  private static void networkInterface(NetworkManager user) {
+    System.out.println("\n--- Network Management page ---");
+    System.out.println("Current Network");
+    user.viewNetwork();
+
+    // show options
+    System.out.println("c) Create");
+    System.out.println("e) Edit");
+    System.out.println("d) Delete");
+
+    // get input
+    String choice = io.prompt("Enter your choice:").trim();
+    String choice1; //used later
+    String elementId; //used later
+
+    switch(choice) {
+      case "c": // create
+        // show options
+        System.out.println("s) Station");
+        System.out.println("j) Junction");
+        System.out.println("l) Line");
+
+        // get input
+        choice1 = io.prompt("Enter your choice:").trim();
+
+        // handle input
+        switch(choice1) {
+          case "s": user.createStation(); break; //station
+          case "j": user.createJunction(); break; //junction
+          case "l": user.createLine(); break; //line
+          default: System.out.println("Invalid input."); break;
+        }
+
+        break;
+      case "e": // edit
+        // show options
+        System.out.println("s) Station");
+        System.out.println("j) Junction");
+        System.out.println("l) Line");
+
+        // get input
+        choice1 = io.prompt("Enter your choice:").trim();
+        elementId = io.prompt("Enter element id:").trim();
+
+        // handle input
+        switch(choice1) {
+          case "s": user.editStation(elementId); break; //station
+          case "j": user.editJunction(elementId); break; //junction
+          case "l": user.editLine(elementId); break; //line
+          default: System.out.println("Invalid input."); break;
+        }
+
+        break;
+      case "d": // delete
+        // show options
+        System.out.println("s) Station");
+        System.out.println("j) Junction");
+        System.out.println("l) Line");
+
+        // get input
+        choice1 = io.prompt("Enter your choice:").trim();
+        elementId = io.prompt("Enter element id:").trim();
+
+        // handle input
+        switch(choice1) {
+          case "s": user.deleteStation(elementId); break; //station
+          case "j": user.deleteJunction(elementId); break; //junction
+          case "l": user.deleteLine(elementId); break; //line
+          default: System.out.println("Invalid input."); break;
+        }
+
+        break;
+      default: System.out.println("Invalid input."); break;
+    }
+  }
 }
