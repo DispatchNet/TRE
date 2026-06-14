@@ -111,14 +111,93 @@ public class CsvDatabase {
     }
 
     /**
-     * @brief Loads ticket records from the CSV file.
+     * @brief Parses a CSV line into an AuthenticatedUser object.
+     * @param line The CSV line to parse.
+     * @param userManagement The user management instance.
+     * @return The parsed AuthenticatedUser object, or an empty Optional if parsing fails.
+     */
+    private Optional<AuthenticatedUser> parseUser(String line, UserManagement userManagement) {
+        // Split a CSV row into fields. The -1 parameter preserves trailing empty values.
+        String[] values = line.split(",", -1);
+
+        // Validate that the CSV row contains at least the expected user columns.
+        if (values.length < 5) {
+            return Optional.empty();
+        }
+
+        // Extract values by column index.
+        String id = values[0];
+        String username = values[1];
+        String email = values[2];
+        String password = values[3];
+        UserType userType;
+        try {
+            // Convert the user type string into the corresponding enum value.
+            userType = UserType.valueOf(values[4]);
+        } catch (IllegalArgumentException e) {
+            return Optional.empty();
+        }
+
+        // Instantiate the correct subclass based on the parsed userType.
+        switch (userType) {
+            case Passenger:
+                return Optional.of(new Passenger(id, username, email, password, userManagement));
+            case TrainCompany:
+                return Optional.of(new TrainCompany(id, username, email, password, userManagement));
+            case NetworkManager:
+                return Optional.of(new NetworkManager(id, username, email, password, userManagement));
+            default:
+                return Optional.empty();
+        }
+    }
+
+    /**
+     * @brief Saves authenticated users to the CSV file.
+     * @param users The list of authenticated users to save.
+     */
+    public void saveAuthenticatedUsers(List<AuthenticatedUser> users) {
+        try {
+            // Build the CSV content in memory before writing it to disk.
+            List<String> output = new ArrayList<>();
+
+            // Add the header row to the CSV output.
+            output.add("id,username,email,password,userType");
+
+            // Convert each authenticated user into a CSV formatted string.
+            for (AuthenticatedUser user : users) {
+                output.add(createUserCsvLine(user));
+            }
+
+            // Write the CSV data to USER_FILE, creating it if necessary and replacing any existing file contents.
+            Files.write(USER_FILE, output, StandardCharsets.UTF_8, 
+                StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
+            );
+        } catch (IOException e) {
+            System.err.println("Failed to save authenticated users: " + e.getMessage());
+        }
+    }
+
+    /**
+     * @brief Creates a CSV line for an AuthenticatedUser object.
+     * @param user The user for which to create a CSV line.
+     * @return The CSV line as a string.
+     */
+    private String createUserCsvLine(AuthenticatedUser user) {
+        return String.join(",",
+            escapeCsv(user.getId()),
+            escapeCsv(user.getUsername()),
+            escapeCsv(user.getEmail()),
+            escapeCsv(user.getPassword()),
+            escapeCsv(user.getUserType().name())
+        );
+    }
+
+    /**
+     * @brief Loads ticket records from the CSV file and assigns them to their owners.
      * @param userManagement The user management instance used to resolve ticket owners.
-     * @return A list of Ticket objects loaded from storage.
      * @throws IOException If the ticket CSV file cannot be read.
      */
-    public List<Ticket> loadTickets(UserManagement userManagement) throws IOException {
-        List<Ticket> result = new ArrayList<>();
-
+    public void loadTickets(UserManagement userManagement) throws IOException {
         for (String line : readCsvRecords(TICKET_FILE)) {
             String[] values = line.split(",", -1);
             if (values.length < 5) {
@@ -141,10 +220,42 @@ public class CsvDatabase {
                 continue;
             }
 
-            result.add(new Ticket(id, passenger, description, status, history));
+            passenger.addLoadedTicket(new Ticket(id, passenger, description, status, history));
+        }
+    }
+
+    
+    /**
+     * @brief Deserializes a semicolon-separated list from a CSV field.
+     * @param serialized The serialized list string.
+     * @return The deserialized values.
+     */
+    private List<String> deserializeList(String serialized) {
+        if (serialized == null || serialized.isBlank()) {
+            return new ArrayList<>();
         }
 
+        List<String> result = new ArrayList<>();
+        for (String item : serialized.split(";")) {
+            if (!item.isBlank()) {
+                result.add(item.trim());
+            }
+        }
         return result;
+    }
+
+    /**
+     * @brief Saves all passenger tickets from UserManagement to the ticket CSV file.
+     * @param userManagement The user management instance containing tickets to persist.
+     */
+    public void saveTickets(UserManagement userManagement) {
+        List<Ticket> allTickets = new ArrayList<>();
+        for (AuthenticatedUser user : userManagement.getAuthenticatedUsers()) {
+            if (user instanceof Passenger passenger) {
+                allTickets.addAll(passenger.getAllTickets());
+            }
+        }
+        saveTickets(allTickets);
     }
 
     /**
@@ -174,29 +285,15 @@ public class CsvDatabase {
     }
 
     /**
-     * @brief Saves authenticated users to the CSV file.
-     * @param users The list of authenticated users to save.
+     * @brief Serializes a list of strings into a single CSV-safe value.
+     * @param values The list of items.
+     * @return The serialized string.
      */
-    public void saveAuthenticatedUsers(List<AuthenticatedUser> users) {
-        try {
-            // Build the CSV content in memory before writing it to disk.
-            List<String> output = new ArrayList<>();
-
-            // Add the header row to the CSV output.
-            output.add("id,username,email,password,userType");
-
-            // Convert each authenticated user into a CSV formatted string.
-            for (AuthenticatedUser user : users) {
-                output.add(createUserCsvLine(user));
-            }
-
-            // Write the CSV data to USER_FILE, creating it if necessary and replacing any existing file contents.
-            Files.write(USER_FILE, output, StandardCharsets.UTF_8, 
-                StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
-            );
-        } catch (IOException e) {
-            System.err.println("Failed to save authenticated users: " + e.getMessage());
+    private String serializeList(List<String> values) {
+        if (values == null || values.isEmpty()) {
+            return "";
         }
+        return String.join(";", values);
     }
 
     /**
@@ -245,83 +342,56 @@ public class CsvDatabase {
     }
 
     /**
-     * @brief Reads CSV records from a file.
-     * @param source The path to the CSV file.
-     * @return A list of CSV records.
+     * @brief Loads the station data from a CSV file.
+     * @return A list of station data.
      * @throws IOException If an I/O error occurs.
      */
-    private List<String> readCsvRecords(Path source) throws IOException {
-        // If the file doesn't exist, there are no records to read.
-        if (!Files.exists(source)) {
-            return Collections.emptyList();
+    private List<StationData> loadStationData() throws IOException {
+        // Load station_data.csv into StationData objects.
+        List<StationData> result = new ArrayList<>();
+
+        // Each non-header row is a station record with id, junctionId, and platforms.
+        for (String line : readCsvRecords(STATION_FILE)) {
+            String[] values = line.split(",", -1); // preserve empty trailing fields
+
+            // Validate that we have at least the expected number of fields (3 in this case)
+            if (values.length < 3) {
+                continue; // skip malformed rows
+            }
+
+            // Extract values
+            String id = values[0];
+            Set<String> platforms = deserializePlatforms(values[2]);
+
+            // Create a StationData object and add to result list
+            result.add(new StationData(id, platforms));
         }
 
-        // Read all lines using UTF-8 encoding. The first line is the CSV header.
-        List<String> lines = Files.readAllLines(source, StandardCharsets.UTF_8);
-
-        // If the file is empty, return no records.
-        if (lines.isEmpty()) {
-            return Collections.emptyList();
-        }
-
-        // Skip the first line (header) and ignore blank lines in the CSV data.
-        return lines.stream().skip(1).filter(line -> !line.isBlank()).collect(Collectors.toList());
+        return result;
     }
 
     /**
-     * @brief Parses a CSV line into an AuthenticatedUser object.
-     * @param line The CSV line to parse.
-     * @param userManagement The user management instance.
-     * @return The parsed AuthenticatedUser object, or an empty Optional if parsing fails.
+     * @brief Deserializes a string of platform names into a set.
+     * @param serialized The serialized string.
+     * @return The set of platform names.
      */
-    private Optional<AuthenticatedUser> parseUser(String line, UserManagement userManagement) {
-        // Split a CSV row into fields. The -1 parameter preserves trailing empty values.
-        String[] values = line.split(",", -1);
-
-        // Validate that the CSV row contains at least the expected user columns.
-        if (values.length < 5) {
-            return Optional.empty();
+    private Set<String> deserializePlatforms(String serialized) {
+        // If the stored field is empty, return an empty set of platforms.
+        if (serialized == null || serialized.isBlank()) {
+            return Collections.emptySet();
         }
 
-        // Extract values by column index.
-        String id = values[0];
-        String username = values[1];
-        String email = values[2];
-        String password = values[3];
-        UserType userType;
-        try {
-            // Convert the user type string into the corresponding enum value.
-            userType = UserType.valueOf(values[4]);
-        } catch (IllegalArgumentException e) {
-            return Optional.empty();
+        // The platform list is stored as semicolon-separated values.
+        String[] tokens = serialized.split(";");
+        Set<String> set = new HashSet<>();
+        
+        for (String token : tokens) {
+            if (!token.isBlank()) {
+                set.add(token.trim());
+            }
         }
 
-        // Instantiate the correct subclass based on the parsed userType.
-        switch (userType) {
-            case Passenger:
-                return Optional.of(new Passenger(id, username, email, password, userManagement));
-            case TrainCompany:
-                return Optional.of(new TrainCompany(id, username, email, password, userManagement));
-            case NetworkManager:
-                return Optional.of(new NetworkManager(id, username, email, password, userManagement));
-            default:
-                return Optional.empty();
-        }
-    }
-
-    /**
-     * @brief Creates a CSV line for an AuthenticatedUser object.
-     * @param user The user for which to create a CSV line.
-     * @return The CSV line as a string.
-     */
-    private String createUserCsvLine(AuthenticatedUser user) {
-        return String.join(",",
-            escapeCsv(user.getId()),
-            escapeCsv(user.getUsername()),
-            escapeCsv(user.getEmail()),
-            escapeCsv(user.getPassword()),
-            escapeCsv(user.getUserType().name())
-        );
+        return set;
     }
 
     /**
@@ -354,96 +424,17 @@ public class CsvDatabase {
     }
 
     /**
-     * @brief Saves the junction data to a CSV file.
-     * @param network The network containing the junction data.
-     * @throws IOException If an I/O error occurs.
+     * @brief Serializes a set of platform names into a string.
+     * @param platforms The set of platform names.
+     * @return The serialized string.
      */
-    private void saveJunctions(Network network) throws IOException {
-        // Build the CSV file content for junctions.
-        List<String> output = new ArrayList<>();
-        
-        // Header row defines the columns for junctions.csv.
-        output.add("id,name,latitude,longitude,stationDataId");
-        
-        // Convert each junction in the network to a CSV line.
-        for (Junction junction : network.getJunctions().values()) {
-            String stationDataId = junction.getStationData().
-                map(StationData::getId).orElse(""); // optional station data reference
-
-            GeoCoordinate location = junction.getLocation();
-            
-            output.add(String.join(",",
-                escapeCsv(junction.getId()),
-                escapeCsv(junction.getName()),
-                Float.toString(location.latitude),
-                Float.toString(location.longitude),
-                escapeCsv(stationDataId)
-            ));
+    private String serializePlatforms(Set<String> platforms) {
+        // Store platform names as a semicolon-separated string for the CSV file.
+        if (platforms == null || platforms.isEmpty()) {
+            return "";
         }
 
-        // Write the junction CSV file using UTF-8 and overwrite any prior contents.
-        Files.write(JUNCTION_FILE, output, StandardCharsets.UTF_8, 
-            StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
-        );
-    }
-
-    /**
-     * @brief Saves the line data to a CSV file.
-     * @param network The network containing the line data.
-     * @throws IOException If an I/O error occurs.
-     */
-    private void saveLines(Network network) throws IOException {
-        // Build the CSV file content for line data.
-        List<String> output = new ArrayList<>();
-
-        // Header row defines the columns for lines.csv.
-        output.add("id,junction1Id,junction2Id,lengthMeters,maxSpeedKpH,nTracks");
-
-        // Convert each Line object in the network into a CSV row.
-        for (Line line : network.getLines().values()) {
-            output.add(String.join(",",
-                escapeCsv(line.getId()),
-                escapeCsv(line.getJunction1().getId()),
-                escapeCsv(line.getJunction2().getId()),
-                Integer.toString(line.getLengthMeters()),
-                Integer.toString(line.getMaxSpeedKpH()),
-                Integer.toString(line.getnTracks())
-            ));
-        }
-
-        // Write the lines CSV file using UTF-8 and overwrite any prior contents.
-        Files.write(LINE_FILE, output, StandardCharsets.UTF_8, 
-            StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
-        );
-    }
-
-    /**
-     * @brief Loads the station data from a CSV file.
-     * @return A list of station data.
-     * @throws IOException If an I/O error occurs.
-     */
-    private List<StationData> loadStationData() throws IOException {
-        // Load station_data.csv into StationData objects.
-        List<StationData> result = new ArrayList<>();
-
-        // Each non-header row is a station record with id, junctionId, and platforms.
-        for (String line : readCsvRecords(STATION_FILE)) {
-            String[] values = line.split(",", -1); // preserve empty trailing fields
-
-            // Validate that we have at least the expected number of fields (3 in this case)
-            if (values.length < 3) {
-                continue; // skip malformed rows
-            }
-
-            // Extract values
-            String id = values[0];
-            Set<String> platforms = deserializePlatforms(values[2]);
-
-            // Create a StationData object and add to result list
-            result.add(new StationData(id, platforms));
-        }
-
-        return result;
+        return String.join(";", platforms);
     }
 
     /**
@@ -486,6 +477,40 @@ public class CsvDatabase {
     }
 
     /**
+     * @brief Saves the junction data to a CSV file.
+     * @param network The network containing the junction data.
+     * @throws IOException If an I/O error occurs.
+     */
+    private void saveJunctions(Network network) throws IOException {
+        // Build the CSV file content for junctions.
+        List<String> output = new ArrayList<>();
+        
+        // Header row defines the columns for junctions.csv.
+        output.add("id,name,latitude,longitude,stationDataId");
+        
+        // Convert each junction in the network to a CSV line.
+        for (Junction junction : network.getJunctions().values()) {
+            String stationDataId = junction.getStationData().
+                map(StationData::getId).orElse(""); // optional station data reference
+
+            GeoCoordinate location = junction.getLocation();
+            
+            output.add(String.join(",",
+                escapeCsv(junction.getId()),
+                escapeCsv(junction.getName()),
+                Float.toString(location.latitude),
+                Float.toString(location.longitude),
+                escapeCsv(stationDataId)
+            ));
+        }
+
+        // Write the junction CSV file using UTF-8 and overwrite any prior contents.
+        Files.write(JUNCTION_FILE, output, StandardCharsets.UTF_8, 
+            StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
+        );
+    }
+
+    /**
      * @brief Loads the line data from a CSV file.
      * @param junctionsById A map of junctions by ID.
      * @return A list of lines.
@@ -524,6 +549,60 @@ public class CsvDatabase {
     }
 
     /**
+     * @brief Saves the line data to a CSV file.
+     * @param network The network containing the line data.
+     * @throws IOException If an I/O error occurs.
+     */
+    private void saveLines(Network network) throws IOException {
+        // Build the CSV file content for line data.
+        List<String> output = new ArrayList<>();
+
+        // Header row defines the columns for lines.csv.
+        output.add("id,junction1Id,junction2Id,lengthMeters,maxSpeedKpH,nTracks");
+
+        // Convert each Line object in the network into a CSV row.
+        for (Line line : network.getLines().values()) {
+            output.add(String.join(",",
+                escapeCsv(line.getId()),
+                escapeCsv(line.getJunction1().getId()),
+                escapeCsv(line.getJunction2().getId()),
+                Integer.toString(line.getLengthMeters()),
+                Integer.toString(line.getMaxSpeedKpH()),
+                Integer.toString(line.getnTracks())
+            ));
+        }
+
+        // Write the lines CSV file using UTF-8 and overwrite any prior contents.
+        Files.write(LINE_FILE, output, StandardCharsets.UTF_8, 
+            StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
+        );
+    }
+    
+    /**
+     * @brief Reads CSV records from a file.
+     * @param source The path to the CSV file.
+     * @return A list of CSV records.
+     * @throws IOException If an I/O error occurs.
+     */
+    private List<String> readCsvRecords(Path source) throws IOException {
+        // If the file doesn't exist, there are no records to read.
+        if (!Files.exists(source)) {
+            return Collections.emptyList();
+        }
+
+        // Read all lines using UTF-8 encoding. The first line is the CSV header.
+        List<String> lines = Files.readAllLines(source, StandardCharsets.UTF_8);
+
+        // If the file is empty, return no records.
+        if (lines.isEmpty()) {
+            return Collections.emptyList();
+        }
+
+        // Skip the first line (header) and ignore blank lines in the CSV data.
+        return lines.stream().skip(1).filter(line -> !line.isBlank()).collect(Collectors.toList());
+    }
+
+    /**
      * @brief Escapes a string for use in a CSV file.
      * @param input The input string.
      * @return The escaped string.
@@ -543,74 +622,5 @@ public class CsvDatabase {
         }
 
         return value;
-    }
-
-    /**
-     * @brief Deserializes a string of platform names into a set.
-     * @param serialized The serialized string.
-     * @return The set of platform names.
-     */
-    private Set<String> deserializePlatforms(String serialized) {
-        // If the stored field is empty, return an empty set of platforms.
-        if (serialized == null || serialized.isBlank()) {
-            return Collections.emptySet();
-        }
-
-        // The platform list is stored as semicolon-separated values.
-        String[] tokens = serialized.split(";");
-        Set<String> set = new HashSet<>();
-        
-        for (String token : tokens) {
-            if (!token.isBlank()) {
-                set.add(token.trim());
-            }
-        }
-
-        return set;
-    }
-
-    /**
-     * @brief Serializes a set of platform names into a string.
-     * @param platforms The set of platform names.
-     * @return The serialized string.
-     */
-    private String serializePlatforms(Set<String> platforms) {
-        // Store platform names as a semicolon-separated string for the CSV file.
-        if (platforms == null || platforms.isEmpty()) {
-            return "";
-        }
-
-        return String.join(";", platforms);
-    }
-
-    /**
-     * @brief Serializes a list of strings into a single CSV-safe value.
-     * @param values The list of items.
-     * @return The serialized string.
-     */
-    private String serializeList(List<String> values) {
-        if (values == null || values.isEmpty()) {
-            return "";
-        }
-        return String.join(";", values);
-    }
-
-    /**
-     * @brief Deserializes a semicolon-separated list from a CSV field.
-     * @param serialized The serialized list string.
-     * @return The deserialized values.
-     */
-    private List<String> deserializeList(String serialized) {
-        if (serialized == null || serialized.isBlank()) {
-            return new ArrayList<>();
-        }
-
-        List<String> result = new ArrayList<>();
-        for (String item : serialized.split(";")) {
-            if (!item.isBlank()) {
-                result.add(item.trim());
-            }
-        }
-        return result;
     }
 }

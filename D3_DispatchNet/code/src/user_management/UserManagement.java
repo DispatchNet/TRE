@@ -25,19 +25,25 @@ public class UserManagement {
     // Payment gateway instance for processing payments (used by passengers)
     private final static PaymentGateway paymentGateway = new MockPaymentGateway();
     // IO instance for user input and output
-    private final static IO io = new IO();
+    private final IO io;
     // User session to track the current active user (only one at a time)
     private final static UserSession session = new UserSession();
     // CSV database instance for loading and saving user data and tickets
-    private final CsvDatabase csvDatabase = new CsvDatabase();
+    private final CsvDatabase csvDatabase;
 
     /**
      * @brief Constructor for UserManagement class
      */
-    public UserManagement() {
+    public UserManagement(IO io, CsvDatabase csvDatabase) {
+        this.io = io;
+        this.csvDatabase = csvDatabase;
         session.setAnonymousUser(new AnonymousUser(this));
         authenticatedUsers.addAll(csvDatabase.loadAuthenticatedUsers(this));
-        loadTickets();
+        try {
+            csvDatabase.loadTickets(this);
+        } catch (Exception e) {
+            System.err.println("Failed to load tickets: " + e.getMessage());
+        }
 
         // create default admin account if it doesn't exist
         if (getAuthenticatedUserByUsername("Admin") == null) {
@@ -296,44 +302,11 @@ public class UserManagement {
     }
 
     /**
-     * @brief Saves all passenger tickets to the CSV file.
-     */
-    public void saveTickets() {
-        try {
-            List<Ticket> allTickets = new ArrayList<>();
-            for (AuthenticatedUser user : authenticatedUsers) {
-                if (user instanceof Passenger passenger) {
-                    allTickets.addAll(passenger.getAllTickets());
-                }
-            }
-            csvDatabase.saveTickets(allTickets);
-        } catch (Exception e) {
-            System.err.println("Failed to save tickets: " + e.getMessage());
-        }
-    }
-
-    /**
-     * @brief Loads tickets from the CSV file and assigns them to their owners.
-     */
-    private void loadTickets() {
-        try {
-            for (Ticket ticket : csvDatabase.loadTickets(this)) {
-                Passenger owner = ticket.getOwner();
-                if (owner != null) {
-                    owner.addLoadedTicket(ticket);
-                }
-            }
-        } catch (Exception e) {
-            System.err.println("Failed to load tickets: " + e.getMessage());
-        }
-    }
-
-    /**
      * @brief Main method for testing UserManagement
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
-        UserManagement userManagement = new UserManagement();
+        UserManagement userManagement = new UserManagement(new IO(), new CsvDatabase());
 
         // set initial anonymous user
         AnonymousUser currentAnon = new AnonymousUser(userManagement);
