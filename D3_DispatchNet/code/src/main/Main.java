@@ -2,8 +2,6 @@ package main;
 import infrastructure.Network;
 import service_management.ServiceManagement;
 import user_management.AnonymousUser;
-import user_management.AuthenticatedUser;
-import user_management.EndUser;
 import user_management.NetworkManager;
 import user_management.Passenger;
 import user_management.TrainCompany;
