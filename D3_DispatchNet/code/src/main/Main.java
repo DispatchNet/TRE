@@ -1,4 +1,4 @@
-package world;
+package main;
 import infrastructure.Network;
 import service_management.ServiceManagement;
 import user_management.UserManagement;
@@ -6,7 +6,7 @@ import user_management.UserManagement;
 /**
  * @class holds all globally relevant information
  */
-public class World {
+public class Main {
   static final Network network = new Network();
   static final ServiceManagement serviceManagement = new ServiceManagement();
   static final UserManagement userManagement = new UserManagement();

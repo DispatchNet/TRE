@@ -8,7 +8,7 @@ import service_management.ServiceType;
 import service_management.StopData;
 import service_management.TrainType;
 import infrastructure.Junction;
-import world.World;
+import world.Main;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;
@@ -56,7 +56,7 @@ public class TrainCompany extends EndUser {
      */
     public void createServiceRequest() {
 
-        if(World.getNetwork().getJunctions().size() < 2) {
+        if(Main.getNetwork().getJunctions().size() < 2) {
             userManagement.displayError("There are fewer than 2 junctions in the network, it's not possible to create a serviceRequest at this time");
             return;
         }
@@ -71,7 +71,7 @@ public class TrainCompany extends EndUser {
 
         while (true) {
             // list available neighbhoring junctions for reference (or all the junctions if it's the first one)
-            for(var junction : (steps.size() > 0) ? steps.getLast().getJunction().getNeighbhors() : World.getNetwork().getJunctions().values()) {
+            for(var junction : (steps.size() > 0) ? steps.getLast().getJunction().getNeighbhors() : Main.getNetwork().getJunctions().values()) {
                     System.out.println(String.format("%s: %s [%s]",
                     junction.getId(), junction.getName(),
                     junction.getStationData().map(station -> "Station").orElse("Junction"))
@@ -85,7 +85,7 @@ public class TrainCompany extends EndUser {
                 "Enter junction ID for step " + (steps.size() + 1) + " (or 'done' to finish):"
             );
             
-            Junction junction = World.getNetwork().getJunctions().get(junctionId);
+            Junction junction = Main.getNetwork().getJunctions().get(junctionId);
             if (junction == null) {
                 userManagement.displayError("Junction not found");
                 continue;
@@ -198,7 +198,7 @@ public class TrainCompany extends EndUser {
             dispatches
         );
 
-        World.getServiceManagement().addServiceRequest(serviceSet);
+        Main.getServiceManagement().addServiceRequest(serviceSet);
         System.out.println("Service request submitted with ID: " + serviceSet.getId());
     }
 
@@ -230,7 +230,7 @@ public class TrainCompany extends EndUser {
             UUID.randomUUID().toString(), name, trainType, centsPerKm
         );
 
-        World.getServiceManagement().addServiceType(serviceType);
+        Main.getServiceManagement().addServiceType(serviceType);
         System.out.println("Service type created: " + serviceType.getId() + " (" + name + ")");
         return serviceType;
     }
@@ -273,7 +273,7 @@ public class TrainCompany extends EndUser {
 
         TrainType trainType = new TrainType(identifier,seated,standing,isPassenger);
 
-        World.getServiceManagement().addTrainType(trainType);
+        Main.getServiceManagement().addTrainType(trainType);
         System.out.println("Train type created: " + identifier);
         return trainType;
     }
@@ -287,7 +287,7 @@ public class TrainCompany extends EndUser {
      * @return the chosen or newly created ServiceType, or null if the user cancels
      */
     private ServiceType selectOrCreateServiceType() {
-        var serviceTypes = World.getServiceManagement().getServiceTypes();
+        var serviceTypes = Main.getServiceManagement().getServiceTypes();
 
         if (!serviceTypes.isEmpty()) {
             System.out.println("Existing service types:");
@@ -302,7 +302,7 @@ public class TrainCompany extends EndUser {
             );
 
             if (!choice.equalsIgnoreCase("new")) {
-                var found = World.getServiceManagement().getServiceType(choice);
+                var found = Main.getServiceManagement().getServiceType(choice);
                 if (found.isPresent()) return found.get();
                 userManagement.displayError("Service type ID not found. Creating a new one instead.");
             }
@@ -318,7 +318,7 @@ public class TrainCompany extends EndUser {
      * @return the chosen or newly created TrainType
      */
     private TrainType selectOrCreateTrainType() {
-        var trainTypes = World.getServiceManagement().getTrainTypes();
+        var trainTypes = Main.getServiceManagement().getTrainTypes();
 
         if (!trainTypes.isEmpty()) {
             System.out.println("Existing train types:");
@@ -334,7 +334,7 @@ public class TrainCompany extends EndUser {
             );
 
             if (!choice.equalsIgnoreCase("new")) {
-                var found = World.getServiceManagement().getTrainType(choice);
+                var found = Main.getServiceManagement().getTrainType(choice);
                 if (found.isPresent()) return found.get();
                 userManagement.displayError("Train type not found. Creating a new one instead.");
             }
