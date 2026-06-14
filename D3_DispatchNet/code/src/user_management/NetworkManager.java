@@ -18,8 +18,8 @@ import java.util.Set;
  */
 public class NetworkManager extends AuthenticatedUser {
     // The network instance this manager operates on
-    private final Network network = new Network(); // TODO: move to container class
-    private final ServiceManagement serviceManagement = new ServiceManagement();
+    private final Network network = Main.getNetwork();
+    private final ServiceManagement serviceManagement = Main.getServiceManagement();
 
     /**
      * @brief Constructor for NetworkManager class
