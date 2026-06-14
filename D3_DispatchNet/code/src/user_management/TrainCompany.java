@@ -8,7 +8,7 @@ import service_management.ServiceType;
 import service_management.StopData;
 import service_management.TrainType;
 import infrastructure.Junction;
-import world.Main;
+import main.Main;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;

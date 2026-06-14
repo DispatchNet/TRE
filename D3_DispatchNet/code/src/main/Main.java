@@ -38,4 +38,16 @@ public class Main {
         System.err.println("Failed to save tickets: " + e.getMessage());
     }
   }
+
+  public static Network getNetwork() {
+    return network;
+  }
+
+  public static ServiceManagement getServiceManagement() {
+    return serviceManagement;
+  }
+
+  public static UserManagement getUserManagement() {
+    return userManagement;
+  }
 }
