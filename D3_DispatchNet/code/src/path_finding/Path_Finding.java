@@ -9,6 +9,8 @@ import java.util.Comparator;
 
 import java.util.List; //Import this because Luca is a lazy bum
 
+import java.lang.StringBuilder;
+
 import infrastructure.Junction;
 import user_management.Passenger;
 import ticketing.Ticket;
@@ -16,7 +18,8 @@ import service_management.ServiceSet;
 import service_management.ServiceStep;
 import departure.Departure;
 
-import IO_operations.IO;
+import main.Main;
+import user_management.UserManagement;
 
 /**
  * @class Path_finding
@@ -67,13 +70,11 @@ public class Path_Finding{
     public Path_Finding(Object requester, Junction from, Junction to, LocalTime after, LocalTime before) {
       
       if (requester == null || from == null || to == null) {
-        //TODO error out here
         throw new Exception("BadField: Missing Necessary field");
       }
 			
       
       if(!requester instanceof Passenger && !requester instanceof AnonymousUser) {
-        //TODO error out here
         throw new Exception("BadReq: Invalid requester");
       }
       
@@ -166,8 +167,7 @@ public class Path_Finding{
         }
         if (theStep == null) {
           //Something went wrong
-          //TODO error out here
-          throw new Exception("NoPath")
+          throw new Exception("NoPath");
         }
         tempList.add(new Ticket(
           this.requester,
@@ -255,26 +255,63 @@ public class Path_Finding{
      * @exception BadRequester The requester of Pathfinding is not allowed to purchase tickets
      */
 		public void prchTcks() {
-		  //TODO manage IO
        
       if (!this.requester instanceof Passenger) throw new Exception("BadRequester");
+      
+      StringBuilder queryText = new StringBuilder;
+
+      queryText.append("Please select one of the following by number index\n-------\n");
+
+      for (int i = 0; i<results.size(); i++) {
+        queryText.append(i);
+        queryText.append(":\t");
+        for (int ii = 0; ii<results.get(i).size(); ii++) {
+          queryText.append(results.get(i).get(ii).getJunction().getName());
+          if (ii+1<results.get(i).size()) queryText.append(", ");
+        }
+        queryText.append(".\n");
+      }
 
       int index = 0;
       boolean ok_flag = true;
       
-      //form query string with Junction names  
-
+      UserManagement cmd = Main.getUserManagement();
+      
       //Get index from user
       do {
         //set index to some value from user
-        if ()
-      }
+        String userReply = cmd.prompt(queryText.toString());
+        
+        index = Integer.parseInt(userReply);
+
+        if (index < 0 || index >= results.size()) cmd.displayError("Invalid index, please try again");
+
+      } while (index < 0 || index >= results.size());
       
+      boolean allPurchased;
+      do {
+        allPurchased = true;
+      
+        queryText = new StringBuilder;
+        queryText.append("Please select one of the following by number of index\n-------\n");
 
-
-      //Select ticket here by some way
-
-
+        for (int i = 0; i<results.get(index).size(); i++){
+          queryText.append(i);
+          queryText.append(":\t");
+          queryText.append(results.get(index).get(i).getDescription();
+          if (results.get(index).get(i).isActive()) queryText.append("\t Purchased!");
+          else allPurchased = false;
+          queryText.append("\n");
+        }
+        
+        int ticketSelector = Integer.parseInt(cmd.prompt(queryText.toString()));
+        if (ticketSelector >= 0 && ticketSelector < results.get(index).size()) {
+          //TODO Purchase ticket
+        } else {
+          cmd.displayError("Invalid Ticket index, please try again");
+        }
+        
+      } while (!allPurchased);
 		}
 
 //Private
