@@ -1,3 +1,3 @@
 id,companyId,serviceTypeId,status,isRequest
-75a4546d-6b6b-41c3-b823-ae25be53637e,beb82c42-5ee6-41dd-8888-a2744364d45a,a156105f-e0f1-41db-8386-35cfb147cb7a,PendingApproval,true
-9d096b29-81f6-4c5e-a772-fcb5ea66f74e,beb82c42-5ee6-41dd-8888-a2744364d45a,a156105f-e0f1-41db-8386-35cfb147cb7a,PendingApproval,true
+75a4546d-6b6b-41c3-b823-ae25be53637e,beb82c42-5ee6-41dd-8888-a2744364d45a,a156105f-e0f1-41db-8386-35cfb147cb7a,Effective,false
+9d096b29-81f6-4c5e-a772-fcb5ea66f74e,beb82c42-5ee6-41dd-8888-a2744364d45a,a156105f-e0f1-41db-8386-35cfb147cb7a,Effective,false
