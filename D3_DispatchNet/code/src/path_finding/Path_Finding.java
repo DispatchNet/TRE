@@ -13,6 +13,7 @@ import java.lang.StringBuilder;
 
 import infrastructure.Junction;
 import user_management.Passenger;
+import user_management.AnonymousUser;
 import ticketing.Ticket;
 import service_management.ServiceSet;
 import service_management.ServiceStep;
@@ -67,15 +68,20 @@ public class Path_Finding{
      * @see Junction
      * @see Ticket
      */
-    public Path_Finding(Object requester, Junction from, Junction to, LocalTime after, LocalTime before) {
+    public Path_Finding(Object requester, Junction from, Junction to, LocalTime after, LocalTime before) throws Exception {
       
+      UserManagement cmd = Main.getUserManagement();
+  
+
       if (requester == null || from == null || to == null) {
-        throw new Exception("BadField: Missing Necessary field");
+        cmd.displayError("BadField");
+        throw new Exception("BadField");
       }
 			
       
-      if(!requester instanceof Passenger && !requester instanceof AnonymousUser) {
-        throw new Exception("BadReq: Invalid requester");
+      if(!(requester instanceof Passenger) && !(requester instanceof AnonymousUser)) {
+        cmd.displayError("BadReq");
+        throw new Exception("BadReq");
       }
       
 
@@ -89,6 +95,8 @@ public class Path_Finding{
       else  this.after = after;
       this.before = before;
       
+      Passenger ticketRequester = (requester instanceof Passenger)? (Passenger) requester: null;
+
       this.chosenSrt = srtAlg.Length;
 
       ArrayList<Integer> previous = new ArrayList<Integer>();
@@ -150,7 +158,7 @@ public class Path_Finding{
         ArrayList<Ticket> tempList = new ArrayList<Ticket>();
         for (int ii = 0; ii<candidate_departures.get(i).size()-1; ii++) {//All elements except the last one are trivial
           Ticket newticket = new Ticket(
-            this.requester,
+            ticketRequester,
             candidate_departures.get(i).get(ii),
             candidate_departures.get(i).get(ii+1).serviceStep()//The first step of the next departure is obviously the last of the current
           );
@@ -167,18 +175,19 @@ public class Path_Finding{
         }
         if (theStep == null) {
           //Something went wrong
-          throw new Exception("NoPath");
+          cmd.displayError("NoPath");
+        } else { 
+          tempList.add(new Ticket(
+            ticketRequester,
+            candidate_departures.get(i).get(candidate_departures.get(i).size()-1),
+            theStep
+          ));
         }
-        tempList.add(new Ticket(
-          this.requester,
-          candidate_departures.get(i).get(candidate_departures.get(i).size()-1),
-          theStep
-        ));
         
         results.add(tempList);
       }
 
-      if (results.size() == 0) throw new Exception("BadSearch");
+      if (results.size() == 0) cmd.displayError("BadSearch");
 
       this.results = results;
     }
@@ -187,7 +196,7 @@ public class Path_Finding{
      * @brief requester getter 
      * @return a Passenger pointer
      */
-		public Passenger getRequester() {
+		public Object getRequester() {
 			return requester;
 		}
     
@@ -254,11 +263,13 @@ public class Path_Finding{
      * @brief Handles the pruchase of tickets from the POV of the pathfinder
      * @exception BadRequester The requester of Pathfinding is not allowed to purchase tickets
      */
-		public void prchTcks() {
-       
-      if (!this.requester instanceof Passenger) throw new Exception("BadRequester");
+		public void prchTcks() throws Exception {
       
-      StringBuilder queryText = new StringBuilder;
+      Passenger ticketUser = (this.requester instanceof Passenger)? (Passenger) this.requester: null; 
+
+      if (!(this.requester instanceof Passenger)) throw new Exception("BadRequester"); 
+
+      StringBuilder queryText = new StringBuilder();
 
       queryText.append("Please select one of the following by number index\n-------\n");
 
@@ -292,13 +303,13 @@ public class Path_Finding{
       do {
         allPurchased = true;
       
-        queryText = new StringBuilder;
+        queryText = new StringBuilder();
         queryText.append("Please select one of the following by number of index\n-------\n");
 
         for (int i = 0; i<results.get(index).size(); i++){
           queryText.append(i);
           queryText.append(":\t");
-          queryText.append(results.get(index).get(i).getDescription();
+          queryText.append(results.get(index).get(i).getDescription());
           if (results.get(index).get(i).isActive()) queryText.append("\t Purchased!");
           else allPurchased = false;
           queryText.append("\n");
@@ -306,7 +317,7 @@ public class Path_Finding{
         
         int ticketSelector = Integer.parseInt(cmd.prompt(queryText.toString()));
         if (ticketSelector >= 0 && ticketSelector < results.get(index).size()) {
-          //TODO Purchase ticket
+          ticketUser.purchaseTicket(results.get(index).get(ticketSelector));    
         } else {
           cmd.displayError("Invalid Ticket index, please try again");
         }
