@@ -103,7 +103,8 @@ public class Main {
         System.out.println("n) Network");
         System.out.println("r) Register Train Company");
       }
-      // common option
+      // common options
+      System.out.println("m) Show Map");
       System.out.println("q) Quit");
 
       // get input
@@ -136,6 +137,7 @@ public class Main {
         switch(choice) {
           case "n": networkInterface((NetworkManager) currentUser); break;
           case "r": ((NetworkManager) currentUser).createTrainCompanyAccount(); break;
+          case "m": printMap(); break;
           case "q": exitRequested = true; break;
           default: System.out.println("Invalid input. Try again");
         }
