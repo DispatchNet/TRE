@@ -122,9 +122,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abdaf3034d3efc79a6147e57172f3934f" id="r_abdaf3034d3efc79a6147e57172f3934f"><td class="memItemLeft">List&lt; <a class="el" href="classservice__management_1_1ServiceSet.html">ServiceSet</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#abdaf3034d3efc79a6147e57172f3934f">getServices</a> ()</td></tr>
 <tr class="memdesc:abdaf3034d3efc79a6147e57172f3934f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this junction's services.  <br /></td></tr>
 <tr class="memitem:a5024085388986afb63388beb0dbb2feb" id="r_a5024085388986afb63388beb0dbb2feb"><td class="memItemLeft">List&lt; Departure &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5024085388986afb63388beb0dbb2feb">getDepartures</a> ()</td></tr>
-<tr class="memdesc:a5024085388986afb63388beb0dbb2feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the departures from this junction (Includes services that don't stop).  <br /></td></tr>
+<tr class="memdesc:a5024085388986afb63388beb0dbb2feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the departures from this junction @implNote Includes services that don't stop at this junction.  <br /></td></tr>
 <tr class="memitem:a40c4af24e2ef1acc96b4e10c9548c388" id="r_a40c4af24e2ef1acc96b4e10c9548c388"><td class="memItemLeft"><a class="el" href="classinfrastructure_1_1Line.html">Line</a>&#160;</td><td class="memItemRight"><a class="el" href="#a40c4af24e2ef1acc96b4e10c9548c388">getToOther</a> (<a class="el" href="#aefc3d341f399df7b6bf5a33ac7484f65">Junction</a> other)</td></tr>
 <tr class="memdesc:a40c4af24e2ef1acc96b4e10c9548c388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the line from this junction to another, if it exists.  <br /></td></tr>
+<tr class="memitem:a80e90eafe9b1d3acc6e4368c2dd90c7e" id="r_a80e90eafe9b1d3acc6e4368c2dd90c7e"><td class="memItemLeft">List&lt; <a class="el" href="#aefc3d341f399df7b6bf5a33ac7484f65">Junction</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a80e90eafe9b1d3acc6e4368c2dd90c7e">getNeighbhors</a> ()</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Class representing a junction's data. </p>
@@ -286,7 +287,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the departures from this junction (Includes services that don't stop). </p>
+<p>Get the departures from this junction @implNote Includes services that don't stop at this junction. </p>
 <dl class="section return"><dt>Returns</dt><dd>the departures </dd></dl>
 
 </div>
@@ -372,6 +373,31 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets this <a class="el" href="classinfrastructure_1_1Junction.html" title="A Class representing a junction&#39;s data.">Junction</a>'s name. </p>
 <dl class="section return"><dt>Returns</dt><dd>this junction's name </dd></dl>
+
+</div>
+</div>
+<a id="a80e90eafe9b1d3acc6e4368c2dd90c7e" name="a80e90eafe9b1d3acc6e4368c2dd90c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e90eafe9b1d3acc6e4368c2dd90c7e">&#9670;&#160;</a></span>getNeighbhors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="#aefc3d341f399df7b6bf5a33ac7484f65">Junction</a> &gt; infrastructure.Junction.getNeighbhors </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -42,13 +42,15 @@ void \doxymbox{\hyperlink{classticketing_1_1Ticket_a12cc8e2ad48e38d1abfcde83c93d
 int \doxymbox{\hyperlink{classticketing_1_1Ticket_af4e3d7dca5152d6ee51fc133d405bea1}{get\+Cost}} ()
 \begin{DoxyCompactList}\small\item\em evalutes the total cost of the ticket \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classinfrastructure_1_1Junction}{Junction}} \doxymbox{\hyperlink{classticketing_1_1Ticket_ab3e701c7f5363067e7fe6427999ee461}{get\+Junction}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Get the last junction the train is valid for. \end{DoxyCompactList}\item 
 boolean \doxymbox{\hyperlink{classticketing_1_1Ticket_a774cdfb4683b4d561924b2ddb54f6564}{equals}} (Object o)
 \item 
 int \doxymbox{\hyperlink{classticketing_1_1Ticket_a1d59e9b29721a17631a2bb06e96dd88c}{hash\+Code}} ()
 \item 
 int \doxymbox{\hyperlink{classticketing_1_1Ticket_a64338eb23e1043207ca0abfbb424fc73}{get\+Length}} ()
-\begin{DoxyCompactList}\small\item\em returns the lenght in meters of the ticket\textquotesingle{}s course \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em returns the lenght in meters of the ticket\textquotesingle{}s course \end{DoxyCompactList}\item 
+Local\+Time \doxymbox{\hyperlink{classticketing_1_1Ticket_a5d1e7aafec66df33b8b0c475ab5c1f6a}{get\+Arrival}} ()
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -161,6 +163,12 @@ Adds an entry to the ticket lifecycle history.
 {\footnotesize\ttfamily \label{classticketing_1_1Ticket_a774cdfb4683b4d561924b2ddb54f6564} 
 boolean ticketing.\+Ticket.\+equals (\begin{DoxyParamCaption}\item[{Object}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+\Hypertarget{classticketing_1_1Ticket_a5d1e7aafec66df33b8b0c475ab5c1f6a}\index{ticketing.Ticket@{ticketing.Ticket}!getArrival@{getArrival}}
+\index{getArrival@{getArrival}!ticketing.Ticket@{ticketing.Ticket}}
+\doxysubsubsection{\texorpdfstring{getArrival()}{getArrival()}}
+{\footnotesize\ttfamily \label{classticketing_1_1Ticket_a5d1e7aafec66df33b8b0c475ab5c1f6a} 
+Local\+Time ticketing.\+Ticket.\+get\+Arrival (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \Hypertarget{classticketing_1_1Ticket_af4e3d7dca5152d6ee51fc133d405bea1}\index{ticketing.Ticket@{ticketing.Ticket}!getCost@{getCost}}
 \index{getCost@{getCost}!ticketing.Ticket@{ticketing.Ticket}}
 \doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
@@ -235,6 +243,16 @@ The ticket id.
 {\footnotesize\ttfamily \label{classticketing_1_1Ticket_ab3e701c7f5363067e7fe6427999ee461} 
 \doxymbox{\hyperlink{classinfrastructure_1_1Junction}{Junction}} ticketing.\+Ticket.\+get\+Junction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Get the last junction the train is valid for. 
+
+Looks into the last\+Step value and extracts the junction it points total \begin{DoxyReturn}{Returns}
+a \doxylink{classinfrastructure_1_1Junction}{Junction} pointer 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{classinfrastructure_1_1Junction}{Junction} 
+\end{DoxySeeAlso}
 \Hypertarget{classticketing_1_1Ticket_ad76c3c9605817aa62ae34998044192da}\index{ticketing.Ticket@{ticketing.Ticket}!getLastStep@{getLastStep}}
 \index{getLastStep@{getLastStep}!ticketing.Ticket@{ticketing.Ticket}}
 \doxysubsubsection{\texorpdfstring{getLastStep()}{getLastStep()}}

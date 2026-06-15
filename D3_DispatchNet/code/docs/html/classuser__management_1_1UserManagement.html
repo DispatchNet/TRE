@@ -97,8 +97,8 @@ $(function(){initNavTree('classuser__management_1_1UserManagement.html','','clas
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aebf624db28c98c91f2d1a97683f922ea" id="r_aebf624db28c98c91f2d1a97683f922ea"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aebf624db28c98c91f2d1a97683f922ea">UserManagement</a> ()</td></tr>
-<tr class="memdesc:aebf624db28c98c91f2d1a97683f922ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classuser__management_1_1UserManagement.html" title="Class managing the user accounts in the system. Other modules will interact with this class to manage...">UserManagement</a> class.  <br /></td></tr>
+<tr class="memitem:a2106f0c9e08baa00fd8207ada0445af5" id="r_a2106f0c9e08baa00fd8207ada0445af5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2106f0c9e08baa00fd8207ada0445af5">UserManagement</a> (<a class="el" href="classIO__operations_1_1IO.html">IO</a> io, <a class="el" href="classcsv__database_1_1CsvDatabase.html">CsvDatabase</a> csvDatabase)</td></tr>
+<tr class="memdesc:a2106f0c9e08baa00fd8207ada0445af5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classuser__management_1_1UserManagement.html" title="Class managing the user accounts in the system. Other modules will interact with this class to manage...">UserManagement</a> class.  <br /></td></tr>
 <tr class="memitem:ae7334f03c708cd1630fcc73093cc4432" id="r_ae7334f03c708cd1630fcc73093cc4432"><td class="memItemLeft">List&lt; <a class="el" href="classuser__management_1_1AuthenticatedUser.html">AuthenticatedUser</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae7334f03c708cd1630fcc73093cc4432">getAuthenticatedUsers</a> ()</td></tr>
 <tr class="memdesc:ae7334f03c708cd1630fcc73093cc4432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the list of authenticated users.  <br /></td></tr>
 <tr class="memitem:a83f9ca2a346cbfd795b7d36ccb533989" id="r_a83f9ca2a346cbfd795b7d36ccb533989"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a83f9ca2a346cbfd795b7d36ccb533989">addAuthenticatedUser</a> (<a class="el" href="classuser__management_1_1AuthenticatedUser.html">AuthenticatedUser</a> user)</td></tr>
@@ -126,13 +126,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab8affa201980a987db4d3a4a747db31e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transitions the current session from authenticated to anonymous. Clears the authenticated user and creates a new anonymous session.  <br /></td></tr>
 <tr class="memitem:a0a736e52d5f3843756477e863efdf630" id="r_a0a736e52d5f3843756477e863efdf630"><td class="memItemLeft"><a class="el" href="classuser__management_1_1AuthenticatedUser.html">AuthenticatedUser</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0a736e52d5f3843756477e863efdf630">getAuthenticatedUserById</a> (String id)</td></tr>
 <tr class="memdesc:a0a736e52d5f3843756477e863efdf630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an authenticated user by their id.  <br /></td></tr>
-<tr class="memitem:a9cc50fbdb29f913d2d85bd22af5dc77b" id="r_a9cc50fbdb29f913d2d85bd22af5dc77b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9cc50fbdb29f913d2d85bd22af5dc77b">saveTickets</a> ()</td></tr>
-<tr class="memdesc:a9cc50fbdb29f913d2d85bd22af5dc77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves all passenger tickets to the CSV file.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:afb2e961f50194f840c383624fa2eb76c" id="r_afb2e961f50194f840c383624fa2eb76c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#afb2e961f50194f840c383624fa2eb76c">main</a> (String[] args)</td></tr>
-<tr class="memdesc:afb2e961f50194f840c383624fa2eb76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main method for testing <a class="el" href="classuser__management_1_1UserManagement.html" title="Class managing the user accounts in the system. Other modules will interact with this class to manage...">UserManagement</a>.  <br /></td></tr>
+<tr class="memdesc:afb2e961f50194f840c383624fa2eb76c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmain_1_1Main.html">Main</a> method for testing <a class="el" href="classuser__management_1_1UserManagement.html" title="Class managing the user accounts in the system. Other modules will interact with this class to manage...">UserManagement</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -154,8 +152,8 @@ Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class managing the user accounts in the system. Other modules will interact with this class to manage user sessions and data. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aebf624db28c98c91f2d1a97683f922ea" name="aebf624db28c98c91f2d1a97683f922ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebf624db28c98c91f2d1a97683f922ea">&#9670;&#160;</a></span>UserManagement()</h2>
+<a id="a2106f0c9e08baa00fd8207ada0445af5" name="a2106f0c9e08baa00fd8207ada0445af5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2106f0c9e08baa00fd8207ada0445af5">&#9670;&#160;</a></span>UserManagement()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,8 +164,12 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">user_management.UserManagement.UserManagement </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classIO__operations_1_1IO.html">IO</a></td>          <td class="paramname"><span class="paramname"><em>io</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classcsv__database_1_1CsvDatabase.html">CsvDatabase</a></td>          <td class="paramname"><span class="paramname"><em>csvDatabase</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -720,7 +722,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Main method for testing <a class="el" href="classuser__management_1_1UserManagement.html" title="Class managing the user accounts in the system. Other modules will interact with this class to manage...">UserManagement</a>. </p>
+<p><a class="el" href="classmain_1_1Main.html">Main</a> method for testing <a class="el" href="classuser__management_1_1UserManagement.html" title="Class managing the user accounts in the system. Other modules will interact with this class to manage...">UserManagement</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">args</td><td>Command-line arguments </td></tr>
@@ -853,33 +855,6 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a9cc50fbdb29f913d2d85bd22af5dc77b" name="a9cc50fbdb29f913d2d85bd22af5dc77b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cc50fbdb29f913d2d85bd22af5dc77b">&#9670;&#160;</a></span>saveTickets()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void user_management.UserManagement.saveTickets </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Saves all passenger tickets to the CSV file. </p>
 
 </div>
 </div>

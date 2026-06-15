@@ -13,6 +13,14 @@ public class IO {
     public void displayError(String message) {
         System.out.println("Error: " + message);
     }
+    
+    /**
+     * @brief Prints a generic message
+     * @param message The string to display
+     */
+    public void print(String message) {
+      System.out.print(message);
+    }
 
     /**
      * @brief Prompts the user for input

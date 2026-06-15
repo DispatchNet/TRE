@@ -33,9 +33,11 @@ List$<$ \doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} $>$ \doxymbox{\
 List$<$ \doxymbox{\hyperlink{classservice__management_1_1ServiceSet}{Service\+Set}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1Junction_abdaf3034d3efc79a6147e57172f3934f}{get\+Services}} ()
 \begin{DoxyCompactList}\small\item\em Get this junction\textquotesingle{}s services. \end{DoxyCompactList}\item 
 List$<$ Departure $>$ \doxymbox{\hyperlink{classinfrastructure_1_1Junction_a5024085388986afb63388beb0dbb2feb}{get\+Departures}} ()
-\begin{DoxyCompactList}\small\item\em Get the departures from this junction (Includes services that don\textquotesingle{}t stop). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get the departures from this junction @impl\+Note Includes services that don\textquotesingle{}t stop at this junction. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classinfrastructure_1_1Line}{Line}} \doxymbox{\hyperlink{classinfrastructure_1_1Junction_a40c4af24e2ef1acc96b4e10c9548c388}{get\+To\+Other}} (\doxymbox{\hyperlink{classinfrastructure_1_1Junction_aefc3d341f399df7b6bf5a33ac7484f65}{Junction}} other)
-\begin{DoxyCompactList}\small\item\em Get the line from this junction to another, if it exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the line from this junction to another, if it exists. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{classinfrastructure_1_1Junction_aefc3d341f399df7b6bf5a33ac7484f65}{Junction}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1Junction_a80e90eafe9b1d3acc6e4368c2dd90c7e}{get\+Neighbhors}} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -99,7 +101,7 @@ List$<$ Departure $>$ infrastructure.\+Junction.\+get\+Departures (\begin{DoxyPa
 
 
 
-Get the departures from this junction (Includes services that don\textquotesingle{}t stop). 
+Get the departures from this junction @impl\+Note Includes services that don\textquotesingle{}t stop at this junction. 
 
 \begin{DoxyReturn}{Returns}
 the departures 
@@ -143,6 +145,12 @@ Gets this \doxylink{classinfrastructure_1_1Junction}{Junction}\textquotesingle{}
 \begin{DoxyReturn}{Returns}
 this junction\textquotesingle{}s name 
 \end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1Junction_a80e90eafe9b1d3acc6e4368c2dd90c7e}\index{infrastructure.Junction@{infrastructure.Junction}!getNeighbhors@{getNeighbhors}}
+\index{getNeighbhors@{getNeighbhors}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{getNeighbhors()}{getNeighbhors()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1Junction_a80e90eafe9b1d3acc6e4368c2dd90c7e} 
+List$<$ \doxymbox{\hyperlink{classinfrastructure_1_1Junction_aefc3d341f399df7b6bf5a33ac7484f65}{Junction}} $>$ infrastructure.\+Junction.\+get\+Neighbhors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \Hypertarget{classinfrastructure_1_1Junction_abdaf3034d3efc79a6147e57172f3934f}\index{infrastructure.Junction@{infrastructure.Junction}!getServices@{getServices}}
 \index{getServices@{getServices}!infrastructure.Junction@{infrastructure.Junction}}
 \doxysubsubsection{\texorpdfstring{getServices()}{getServices()}}

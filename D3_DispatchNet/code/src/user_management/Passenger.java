@@ -175,20 +175,6 @@ public class Passenger extends EndUser {
     }
 
     /**
-     * @brief Finds a path between two stations
-     */
-    public void findPath() {
-        // TODO: implement path finding
-    }
-
-    /**
-     * @brief Searches for stations or trains
-     */
-    public void searchStationTrain() {
-        // TODO: implement station/train search
-    }
-
-    /**
      * @brief Views the map
      */
     public void viewMap() {

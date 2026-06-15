@@ -121,7 +121,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a89f425ce564186241d3057b404a94f5d" id="r_a89f425ce564186241d3057b404a94f5d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a89f425ce564186241d3057b404a94f5d">editStation</a> (String station)</td></tr>
 <tr class="memdesc:a89f425ce564186241d3057b404a94f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edits an existing station in the transportation network.  <br /></td></tr>
 <tr class="memitem:a6ac2fc40afc2d9323941a658009aa973" id="r_a6ac2fc40afc2d9323941a658009aa973"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6ac2fc40afc2d9323941a658009aa973">editJunction</a> (String junction)</td></tr>
-<tr class="memdesc:a6ac2fc40afc2d9323941a658009aa973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edits an existing junction in the transportation network.  <br /></td></tr>
+<tr class="memdesc:a6ac2fc40afc2d9323941a658009aa973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edits an existing junction in the transportation network. Cannot become a station.  <br /></td></tr>
 <tr class="memitem:a8ca33578390b616bfa45c2c2c009b8e3" id="r_a8ca33578390b616bfa45c2c2c009b8e3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8ca33578390b616bfa45c2c2c009b8e3">editLine</a> (String line)</td></tr>
 <tr class="memdesc:a8ca33578390b616bfa45c2c2c009b8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edits an existing line in the transportation network.  <br /></td></tr>
 <tr class="memitem:a507d53464376d4db3868c44c4622a01c" id="r_a507d53464376d4db3868c44c4622a01c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a507d53464376d4db3868c44c4622a01c">deleteStation</a> (String station)</td></tr>
@@ -130,8 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aaf85fe787ae44d08442f72fc4857b5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes an existing junction in the transportation network.  <br /></td></tr>
 <tr class="memitem:a40ad7c1c81d6db496bcf32c455b47271" id="r_a40ad7c1c81d6db496bcf32c455b47271"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a40ad7c1c81d6db496bcf32c455b47271">deleteLine</a> (String line)</td></tr>
 <tr class="memdesc:a40ad7c1c81d6db496bcf32c455b47271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes an existing line in the transportation network.  <br /></td></tr>
-<tr class="memitem:a0805b2c854567e57e1b261f7c459d0bd" id="r_a0805b2c854567e57e1b261f7c459d0bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0805b2c854567e57e1b261f7c459d0bd">reviewServiceRequest</a> (String serviceRequest)</td></tr>
-<tr class="memdesc:a0805b2c854567e57e1b261f7c459d0bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reviews a service request.  <br /></td></tr>
+<tr class="memitem:acee8c2de7936596fcc4763058e761374" id="r_acee8c2de7936596fcc4763058e761374"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acee8c2de7936596fcc4763058e761374">reviewServiceRequest</a> (String serviceRequestID)</td></tr>
+<tr class="memdesc:acee8c2de7936596fcc4763058e761374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reviews a pending service request, displaying its details and prompting the network manager to approve or reject it. On approval the request is promoted to an active service set. On rejection it is discarded. Notifies the owning train company by email in either case.  <br /></td></tr>
 <tr class="memitem:a15360369432afbe7f3747f6238a042af" id="r_a15360369432afbe7f3747f6238a042af"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a15360369432afbe7f3747f6238a042af">createTrainCompanyAccount</a> ()</td></tr>
 <tr class="memdesc:a15360369432afbe7f3747f6238a042af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new account for a train company.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classuser__management_1_1AuthenticatedUser"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classuser__management_1_1AuthenticatedUser')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classuser__management_1_1AuthenticatedUser.html">user_management.AuthenticatedUser</a></td></tr>
@@ -167,7 +167,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e492c560c4af6a9a70511c061998526" id="r_a2e492c560c4af6a9a70511c061998526"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a2e492c560c4af6a9a70511c061998526">main</a> (String[] args)</td></tr>
-<tr class="memdesc:a2e492c560c4af6a9a70511c061998526"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main method for testing <a class="el" href="classuser__management_1_1NetworkManager.html" title="Class representing a network manager, a type of authenticated user who can manage the network and rev...">NetworkManager</a> behavior.  <br /></td></tr>
+<tr class="memdesc:a2e492c560c4af6a9a70511c061998526"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmain_1_1Main.html">Main</a> method for testing <a class="el" href="classuser__management_1_1NetworkManager.html" title="Class representing a network manager, a type of authenticated user who can manage the network and rev...">NetworkManager</a> behavior.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -503,7 +503,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Edits an existing junction in the transportation network. </p>
+<p>Edits an existing junction in the transportation network. Cannot become a station. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">junction</td><td>The junction to edit </td></tr>
@@ -602,7 +602,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Main method for testing <a class="el" href="classuser__management_1_1NetworkManager.html" title="Class representing a network manager, a type of authenticated user who can manage the network and rev...">NetworkManager</a> behavior. </p>
+<p><a class="el" href="classmain_1_1Main.html">Main</a> method for testing <a class="el" href="classuser__management_1_1NetworkManager.html" title="Class representing a network manager, a type of authenticated user who can manage the network and rev...">NetworkManager</a> behavior. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">args</td><td>Command-line arguments </td></tr>
@@ -612,8 +612,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a0805b2c854567e57e1b261f7c459d0bd" name="a0805b2c854567e57e1b261f7c459d0bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0805b2c854567e57e1b261f7c459d0bd">&#9670;&#160;</a></span>reviewServiceRequest()</h2>
+<a id="acee8c2de7936596fcc4763058e761374" name="acee8c2de7936596fcc4763058e761374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acee8c2de7936596fcc4763058e761374">&#9670;&#160;</a></span>reviewServiceRequest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -624,7 +624,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void user_management.NetworkManager.reviewServiceRequest </td>
           <td>(</td>
-          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>serviceRequest</em></span></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>serviceRequestID</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -635,10 +635,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reviews a service request. </p>
+<p>Reviews a pending service request, displaying its details and prompting the network manager to approve or reject it. On approval the request is promoted to an active service set. On rejection it is discarded. Notifies the owning train company by email in either case. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">serviceRequest</td><td>The service request to review </td></tr>
+    <tr><td class="paramname">serviceRequestID</td><td>The ID of the service request to review </td></tr>
   </table>
   </dd>
 </dl>

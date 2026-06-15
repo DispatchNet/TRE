@@ -130,10 +130,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af4e3d7dca5152d6ee51fc133d405bea1" id="r_af4e3d7dca5152d6ee51fc133d405bea1"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af4e3d7dca5152d6ee51fc133d405bea1">getCost</a> ()</td></tr>
 <tr class="memdesc:af4e3d7dca5152d6ee51fc133d405bea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">evalutes the total cost of the ticket  <br /></td></tr>
 <tr class="memitem:ab3e701c7f5363067e7fe6427999ee461" id="r_ab3e701c7f5363067e7fe6427999ee461"><td class="memItemLeft"><a class="el" href="classinfrastructure_1_1Junction.html">Junction</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab3e701c7f5363067e7fe6427999ee461">getJunction</a> ()</td></tr>
+<tr class="memdesc:ab3e701c7f5363067e7fe6427999ee461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the last junction the train is valid for.  <br /></td></tr>
 <tr class="memitem:a774cdfb4683b4d561924b2ddb54f6564" id="r_a774cdfb4683b4d561924b2ddb54f6564"><td class="memItemLeft">boolean&#160;</td><td class="memItemRight"><a class="el" href="#a774cdfb4683b4d561924b2ddb54f6564">equals</a> (Object o)</td></tr>
 <tr class="memitem:a1d59e9b29721a17631a2bb06e96dd88c" id="r_a1d59e9b29721a17631a2bb06e96dd88c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1d59e9b29721a17631a2bb06e96dd88c">hashCode</a> ()</td></tr>
 <tr class="memitem:a64338eb23e1043207ca0abfbb424fc73" id="r_a64338eb23e1043207ca0abfbb424fc73"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a64338eb23e1043207ca0abfbb424fc73">getLength</a> ()</td></tr>
 <tr class="memdesc:a64338eb23e1043207ca0abfbb424fc73"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the lenght in meters of the ticket's course  <br /></td></tr>
+<tr class="memitem:a5d1e7aafec66df33b8b0c475ab5c1f6a" id="r_a5d1e7aafec66df33b8b0c475ab5c1f6a"><td class="memItemLeft">LocalTime&#160;</td><td class="memItemRight"><a class="el" href="#a5d1e7aafec66df33b8b0c475ab5c1f6a">getArrival</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -357,6 +359,31 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5d1e7aafec66df33b8b0c475ab5c1f6a" name="a5d1e7aafec66df33b8b0c475ab5c1f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d1e7aafec66df33b8b0c475ab5c1f6a">&#9670;&#160;</a></span>getArrival()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LocalTime ticketing.Ticket.getArrival </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af4e3d7dca5152d6ee51fc133d405bea1" name="af4e3d7dca5152d6ee51fc133d405bea1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4e3d7dca5152d6ee51fc133d405bea1">&#9670;&#160;</a></span>getCost()</h2>
 
@@ -520,6 +547,10 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get the last junction the train is valid for. </p>
+<p>Looks into the lastStep value and extracts the junction it points total </p><dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classinfrastructure_1_1Junction.html" title="A Class representing a junction&#39;s data.">Junction</a> pointer </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classinfrastructure_1_1Junction.html" title="A Class representing a junction&#39;s data.">Junction</a> </dd></dl>
 
 </div>
 </div>

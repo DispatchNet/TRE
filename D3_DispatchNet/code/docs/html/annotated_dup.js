@@ -18,6 +18,9 @@ var annotated_dup =
       [ "MailService", "interfacemail__service_1_1MailService.html", "interfacemail__service_1_1MailService" ],
       [ "MockMailService", "classmail__service_1_1MockMailService.html", "classmail__service_1_1MockMailService" ]
     ] ],
+    [ "main", "namespacemain.html", [
+      [ "Main", "classmain_1_1Main.html", null ]
+    ] ],
     [ "path_finding", "namespacepath__finding.html", [
       [ "Path_Finding", "classpath__finding_1_1Path__Finding.html", "classpath__finding_1_1Path__Finding" ],
       [ "srtAlg", "enumpath__finding_1_1srtAlg.html", "enumpath__finding_1_1srtAlg" ]
@@ -28,14 +31,16 @@ var annotated_dup =
     ] ],
     [ "service_management", "namespaceservice__management.html", [
       [ "Dispatch", "classservice__management_1_1Dispatch.html", "classservice__management_1_1Dispatch" ],
-      [ "ServiceManagement", "classservice__management_1_1ServiceManagement.html", null ],
+      [ "ServiceManagement", "classservice__management_1_1ServiceManagement.html", "classservice__management_1_1ServiceManagement" ],
       [ "ServiceSet", "classservice__management_1_1ServiceSet.html", "classservice__management_1_1ServiceSet" ],
       [ "ServiceStatus", "enumservice__management_1_1ServiceStatus.html", "enumservice__management_1_1ServiceStatus" ],
       [ "ServiceStep", "classservice__management_1_1ServiceStep.html", "classservice__management_1_1ServiceStep" ],
+      [ "ServiceType", "classservice__management_1_1ServiceType.html", "classservice__management_1_1ServiceType" ],
       [ "StopData", "classservice__management_1_1StopData.html", "classservice__management_1_1StopData" ],
-      [ "TrainType", "classservice__management_1_1TrainType.html", null ]
+      [ "TrainType", "classservice__management_1_1TrainType.html", "classservice__management_1_1TrainType" ]
     ] ],
     [ "ticketing", "namespaceticketing.html", [
+      [ "GroupPass", "classticketing_1_1GroupPass.html", "classticketing_1_1GroupPass" ],
       [ "Ticket", "classticketing_1_1Ticket.html", "classticketing_1_1Ticket" ]
     ] ],
     [ "user_management", "namespaceuser__management.html", [

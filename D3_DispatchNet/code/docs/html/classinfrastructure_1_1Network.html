@@ -95,6 +95,10 @@ $(function(){initNavTree('classinfrastructure_1_1Network.html','','classinfrastr
 <p>A Class representing the network. Provides an interface to add/remove elements from the network.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:EditError" id="r_EditError"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="enuminfrastructure_1_1Network_1_1EditError.html">EditError</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a033139e8f7f1539d34f677e22d328b72" id="r_a033139e8f7f1539d34f677e22d328b72"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a033139e8f7f1539d34f677e22d328b72">Network</a> ()</td></tr>
@@ -106,6 +110,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9ab91dde47f76df3afb6c997aefb967d"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the map of lines.  <br /></td></tr>
 <tr class="memitem:a9e9f8ebaa47e4637758bd147036ded1c" id="r_a9e9f8ebaa47e4637758bd147036ded1c"><td class="memItemLeft">Map&lt; String, <a class="el" href="classinfrastructure_1_1Junction.html">Junction</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9e9f8ebaa47e4637758bd147036ded1c">getJunctions</a> ()</td></tr>
 <tr class="memdesc:a9e9f8ebaa47e4637758bd147036ded1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the map of junctions.  <br /></td></tr>
+<tr class="memitem:a91532cc7840fecd1611e854f16171c90" id="r_a91532cc7840fecd1611e854f16171c90"><td class="memItemLeft">Optional&lt; <a class="el" href="classinfrastructure_1_1Junction.html">Junction</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a91532cc7840fecd1611e854f16171c90">getJunctionByName</a> (String name)</td></tr>
+<tr class="memitem:ab42c069adc815fd2b0735d7eec8e4a81" id="r_ab42c069adc815fd2b0735d7eec8e4a81"><td class="memItemLeft">Optional&lt; <a class="el" href="enuminfrastructure_1_1Network_1_1EditError.html">EditError</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab42c069adc815fd2b0735d7eec8e4a81">removeJunction</a> (String id)</td></tr>
+<tr class="memdesc:ab42c069adc815fd2b0735d7eec8e4a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a junction from the network  <br /></td></tr>
+<tr class="memitem:a49d745db50bc1528d719f88bf06a232b" id="r_a49d745db50bc1528d719f88bf06a232b"><td class="memItemLeft">Optional&lt; <a class="el" href="enuminfrastructure_1_1Network_1_1EditError.html">EditError</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a49d745db50bc1528d719f88bf06a232b">removeLine</a> (String id)</td></tr>
+<tr class="memdesc:a49d745db50bc1528d719f88bf06a232b"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a junction from the network  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Class representing the network. Provides an interface to add/remove elements from the network. </p>
@@ -214,6 +223,38 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a91532cc7840fecd1611e854f16171c90" name="a91532cc7840fecd1611e854f16171c90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91532cc7840fecd1611e854f16171c90">&#9670;&#160;</a></span>getJunctionByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; <a class="el" href="classinfrastructure_1_1Junction.html">Junction</a> &gt; infrastructure.Network.getJunctionByName </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>@breif Search a junction on it's network by it's name </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of the junction </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classinfrastructure_1_1Junction.html" title="A Class representing a junction&#39;s data.">Junction</a> if's found, Optional.empty() otherwise </dd></dl>
+
+</div>
+</div>
 <a id="a9e9f8ebaa47e4637758bd147036ded1c" name="a9e9f8ebaa47e4637758bd147036ded1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e9f8ebaa47e4637758bd147036ded1c">&#9670;&#160;</a></span>getJunctions()</h2>
 
@@ -267,6 +308,76 @@ Public Member Functions</h2></td></tr>
 
 <p>get the map of lines. </p>
 <dl class="section return"><dt>Returns</dt><dd>An unmodifiable view of the lines </dd></dl>
+
+</div>
+</div>
+<a id="ab42c069adc815fd2b0735d7eec8e4a81" name="ab42c069adc815fd2b0735d7eec8e4a81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab42c069adc815fd2b0735d7eec8e4a81">&#9670;&#160;</a></span>removeJunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; <a class="el" href="enuminfrastructure_1_1Network_1_1EditError.html">EditError</a> &gt; infrastructure.Network.removeJunction </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>remove a junction from the network </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the id of the jucntion </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If any error occured, the error @implNote Also removes all lines connected to the deleted junction, as well as adjacencies from neighbhoring junctions </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="enuminfrastructure_1_1Network_1_1EditError.html">EditError</a> </dd></dl>
+
+</div>
+</div>
+<a id="a49d745db50bc1528d719f88bf06a232b" name="a49d745db50bc1528d719f88bf06a232b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d745db50bc1528d719f88bf06a232b">&#9670;&#160;</a></span>removeLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; <a class="el" href="enuminfrastructure_1_1Network_1_1EditError.html">EditError</a> &gt; infrastructure.Network.removeLine </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>remove a junction from the network </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the id of the jucntion </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If any error occured, the error, otherwise Optional.empty() @implNote Also removes this line from the known adjacencies of it's connected lines </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="enuminfrastructure_1_1Network_1_1EditError.html">EditError</a> </dd></dl>
 
 </div>
 </div>

@@ -4,6 +4,7 @@ var classservice__management_1_1ServiceSet =
     [ "ServiceSet", "classservice__management_1_1ServiceSet.html#a105bfd07a5baa3818013dd847cedfba7", null ],
     [ "getCompany", "classservice__management_1_1ServiceSet.html#a19a65e215695ef2bb7d3e570e9603416", null ],
     [ "getDispatches", "classservice__management_1_1ServiceSet.html#a2292f4b899af6be80da1c46f07187880", null ],
+    [ "getId", "classservice__management_1_1ServiceSet.html#aac61949ec42c9e40235ae1c2424eeb70", null ],
     [ "getStatus", "classservice__management_1_1ServiceSet.html#a8418f5211e269399652a213219fb2708", null ],
     [ "getSteps", "classservice__management_1_1ServiceSet.html#afd15d489da6e4e70a9579bcfcb60b7a2", null ],
     [ "getType", "classservice__management_1_1ServiceSet.html#a458ff401e0f9ba750462b110850e9913", null ],

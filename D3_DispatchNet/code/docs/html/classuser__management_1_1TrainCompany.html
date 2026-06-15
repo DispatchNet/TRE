@@ -112,11 +112,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a11a603ae15e3bf1a50e7597053835f11" id="r_a11a603ae15e3bf1a50e7597053835f11"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a11a603ae15e3bf1a50e7597053835f11">TrainCompany</a> (String id, String username, String email, String password, <a class="el" href="classuser__management_1_1UserManagement.html">UserManagement</a> <a class="el" href="classuser__management_1_1AuthenticatedUser.html#afc13e6811e6fbd798dc8f8eadecb5c9f">userManagement</a>)</td></tr>
 <tr class="memdesc:a11a603ae15e3bf1a50e7597053835f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classuser__management_1_1TrainCompany.html" title="Class representing a train company, a type of end user who can additionally create service requests a...">TrainCompany</a> class with explicit id.  <br /></td></tr>
 <tr class="memitem:a62e69af858f8a9b48a89629944b38363" id="r_a62e69af858f8a9b48a89629944b38363"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a62e69af858f8a9b48a89629944b38363">createServiceRequest</a> ()</td></tr>
-<tr class="memdesc:a62e69af858f8a9b48a89629944b38363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new service request.  <br /></td></tr>
-<tr class="memitem:a093fa2ed831ef58e2d1325714dbdc9fc" id="r_a093fa2ed831ef58e2d1325714dbdc9fc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a093fa2ed831ef58e2d1325714dbdc9fc">createServiceType</a> ()</td></tr>
-<tr class="memdesc:a093fa2ed831ef58e2d1325714dbdc9fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new service type.  <br /></td></tr>
-<tr class="memitem:a4be806906325eaddb82f45af5bc64d94" id="r_a4be806906325eaddb82f45af5bc64d94"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4be806906325eaddb82f45af5bc64d94">createTrainType</a> ()</td></tr>
-<tr class="memdesc:a4be806906325eaddb82f45af5bc64d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new train type.  <br /></td></tr>
+<tr class="memdesc:a62e69af858f8a9b48a89629944b38363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and submits a new service request. Prompts the user to select or create a <a class="el" href="classservice__management_1_1ServiceType.html" title="A Class defining a ServiceType.">ServiceType</a>, then build the route step-by-step, and add one or more Dispatches before submitting.  <br /></td></tr>
+<tr class="memitem:a77c70cad9cfecddd555f0d98a90c284b" id="r_a77c70cad9cfecddd555f0d98a90c284b"><td class="memItemLeft"><a class="el" href="classservice__management_1_1ServiceType.html">ServiceType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a77c70cad9cfecddd555f0d98a90c284b">createServiceType</a> ()</td></tr>
+<tr class="memdesc:a77c70cad9cfecddd555f0d98a90c284b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and registers a new <a class="el" href="classservice__management_1_1ServiceType.html" title="A Class defining a ServiceType.">ServiceType</a>. Prompts for a commercial name and cents-per-km, then delegates to selectOrCreateTrainType() for the associated <a class="el" href="classservice__management_1_1TrainType.html" title="A Class defining a TrainType.">TrainType</a>.  <br /></td></tr>
+<tr class="memitem:aa33d12862e58446d54908e045dac2523" id="r_aa33d12862e58446d54908e045dac2523"><td class="memItemLeft"><a class="el" href="classservice__management_1_1TrainType.html">TrainType</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa33d12862e58446d54908e045dac2523">createTrainType</a> ()</td></tr>
+<tr class="memdesc:aa33d12862e58446d54908e045dac2523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and registers a new <a class="el" href="classservice__management_1_1TrainType.html" title="A Class defining a TrainType.">TrainType</a>. Prompts for identifier, seated capacity, standing capacity, and whether the train carries passengers.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classuser__management_1_1EndUser"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classuser__management_1_1EndUser')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classuser__management_1_1EndUser.html">user_management.EndUser</a></td></tr>
 <tr class="memitem:a02af5b0c36ffcef8cf5e95d2b229a9df inherit pub_methods_classuser__management_1_1EndUser" id="r_a02af5b0c36ffcef8cf5e95d2b229a9df"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classuser__management_1_1EndUser.html#a02af5b0c36ffcef8cf5e95d2b229a9df">EndUser</a> (<a class="el" href="classuser__management_1_1UserManagement.html">UserManagement</a> <a class="el" href="classuser__management_1_1AuthenticatedUser.html#afc13e6811e6fbd798dc8f8eadecb5c9f">userManagement</a>)</td></tr>
 <tr class="memdesc:a02af5b0c36ffcef8cf5e95d2b229a9df inherit pub_methods_classuser__management_1_1EndUser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor for <a class="el" href="classuser__management_1_1EndUser.html" title="Abstract class representing an end user, a type of authenticated user who can view and manage their o...">EndUser</a> class.  <br /></td></tr>
@@ -160,11 +160,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4a09cae41928361de7dd4888427b8760 inherit pub_methods_classuser__management_1_1AuthenticatedUser" id="r_a4a09cae41928361de7dd4888427b8760"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="classuser__management_1_1AuthenticatedUser.html#a4a09cae41928361de7dd4888427b8760">hashCode</a> ()</td></tr>
 <tr class="memdesc:a4a09cae41928361de7dd4888427b8760 inherit pub_methods_classuser__management_1_1AuthenticatedUser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a hash code for the authenticated user.  <br /></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:af1e038e1283e6b0145d9d35f2ba0f447" id="r_af1e038e1283e6b0145d9d35f2ba0f447"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af1e038e1283e6b0145d9d35f2ba0f447">main</a> (String args[])</td></tr>
+<tr class="memdesc:af1e038e1283e6b0145d9d35f2ba0f447"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmain_1_1Main.html">Main</a> method for testing <a class="el" href="classuser__management_1_1EndUser.html" title="Abstract class representing an end user, a type of authenticated user who can view and manage their o...">EndUser</a> behavior.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_methods_classuser__management_1_1EndUser"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classuser__management_1_1EndUser')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="classuser__management_1_1EndUser.html">user_management.EndUser</a></td></tr>
-<tr class="memitem:a9cb01d95dcc9b8b48560dc23de9c603b inherit pub_static_methods_classuser__management_1_1EndUser" id="r_a9cb01d95dcc9b8b48560dc23de9c603b"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="classuser__management_1_1EndUser.html#a9cb01d95dcc9b8b48560dc23de9c603b">main</a> (String[] args)</td></tr>
-<tr class="memdesc:a9cb01d95dcc9b8b48560dc23de9c603b inherit pub_static_methods_classuser__management_1_1EndUser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main method for testing <a class="el" href="classuser__management_1_1EndUser.html" title="Abstract class representing an end user, a type of authenticated user who can view and manage their o...">EndUser</a> behavior.  <br /></td></tr>
 <tr class="inherit_header pro_attribs_classuser__management_1_1AuthenticatedUser"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classuser__management_1_1AuthenticatedUser')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classuser__management_1_1AuthenticatedUser.html">user_management.AuthenticatedUser</a></td></tr>
 <tr class="memitem:afc13e6811e6fbd798dc8f8eadecb5c9f inherit pro_attribs_classuser__management_1_1AuthenticatedUser" id="r_afc13e6811e6fbd798dc8f8eadecb5c9f"><td class="memItemLeft">final <a class="el" href="classuser__management_1_1UserManagement.html">UserManagement</a>&#160;</td><td class="memItemRight"><a class="el" href="classuser__management_1_1AuthenticatedUser.html#afc13e6811e6fbd798dc8f8eadecb5c9f">userManagement</a></td></tr>
 </table>
@@ -291,12 +293,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a new service request. </p>
+<p>Creates and submits a new service request. Prompts the user to select or create a <a class="el" href="classservice__management_1_1ServiceType.html" title="A Class defining a ServiceType.">ServiceType</a>, then build the route step-by-step, and add one or more Dispatches before submitting. </p>
 
 </div>
 </div>
-<a id="a093fa2ed831ef58e2d1325714dbdc9fc" name="a093fa2ed831ef58e2d1325714dbdc9fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a093fa2ed831ef58e2d1325714dbdc9fc">&#9670;&#160;</a></span>createServiceType()</h2>
+<a id="a77c70cad9cfecddd555f0d98a90c284b" name="a77c70cad9cfecddd555f0d98a90c284b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77c70cad9cfecddd555f0d98a90c284b">&#9670;&#160;</a></span>createServiceType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,7 +307,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void user_management.TrainCompany.createServiceType </td>
+          <td class="memname"><a class="el" href="classservice__management_1_1ServiceType.html">ServiceType</a> user_management.TrainCompany.createServiceType </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -318,12 +320,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a new service type. </p>
+<p>Creates and registers a new <a class="el" href="classservice__management_1_1ServiceType.html" title="A Class defining a ServiceType.">ServiceType</a>. Prompts for a commercial name and cents-per-km, then delegates to selectOrCreateTrainType() for the associated <a class="el" href="classservice__management_1_1TrainType.html" title="A Class defining a TrainType.">TrainType</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The created <a class="el" href="classservice__management_1_1ServiceType.html" title="A Class defining a ServiceType.">ServiceType</a> </dd></dl>
 
 </div>
 </div>
-<a id="a4be806906325eaddb82f45af5bc64d94" name="a4be806906325eaddb82f45af5bc64d94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4be806906325eaddb82f45af5bc64d94">&#9670;&#160;</a></span>createTrainType()</h2>
+<a id="aa33d12862e58446d54908e045dac2523" name="aa33d12862e58446d54908e045dac2523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa33d12862e58446d54908e045dac2523">&#9670;&#160;</a></span>createTrainType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,7 +335,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void user_management.TrainCompany.createTrainType </td>
+          <td class="memname"><a class="el" href="classservice__management_1_1TrainType.html">TrainType</a> user_management.TrainCompany.createTrainType </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -345,7 +348,43 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a new train type. </p>
+<p>Creates and registers a new <a class="el" href="classservice__management_1_1TrainType.html" title="A Class defining a TrainType.">TrainType</a>. Prompts for identifier, seated capacity, standing capacity, and whether the train carries passengers. </p>
+<dl class="section return"><dt>Returns</dt><dd>the created <a class="el" href="classservice__management_1_1TrainType.html" title="A Class defining a TrainType.">TrainType</a> </dd></dl>
+
+</div>
+</div>
+<a id="af1e038e1283e6b0145d9d35f2ba0f447" name="af1e038e1283e6b0145d9d35f2ba0f447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1e038e1283e6b0145d9d35f2ba0f447">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void user_management.TrainCompany.main </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>args</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classmain_1_1Main.html">Main</a> method for testing <a class="el" href="classuser__management_1_1EndUser.html" title="Abstract class representing an end user, a type of authenticated user who can view and manage their o...">EndUser</a> behavior. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Command-line arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classuser__management_1_1EndUser.html#a9cb01d95dcc9b8b48560dc23de9c603b">user_management.EndUser</a>.</p>
 
 </div>
 </div>

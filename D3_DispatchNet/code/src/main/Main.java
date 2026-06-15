@@ -17,6 +17,8 @@ import infrastructure.Junction;
 import IO_operations.IO;
 import csv_database.CsvDatabase;
 
+import service_management.ServiceSet;
+
 /**
  * @class holds all globally relevant information
  */
@@ -119,7 +121,7 @@ public class Main {
         else {
           switch(choice) {
             case "p": pathFindingInterface(currentUser); break;
-            case "s": break; //TODO add search train station when done
+            case "s": stationTrainSearchInterface(currentUser); break;
           }
           if(currentUser instanceof Passenger) {
             if(choice.equals("t"))
@@ -193,13 +195,39 @@ public class Main {
     }
   }
 
-  private static void pathFindingInterface(Object user) {
+  private static Path_Finding pathFindingInterface(Object user) {
     Optional<Junction> from = network.getJunctionByName(io.prompt("From station:"));
     Optional<Junction> to = network.getJunctionByName(io.prompt("To station:"));
-    LocalTime after = LocalTime.parse(io.prompt("After time:"));
-    LocalTime before = LocalTime.parse(io.prompt("Before time:"));
+    LocalTime after; //these can be optional, parsing them immediately will break
+    LocalTime before; 
+    String maybeAfter = io.prompt("After time:");
+    String maybeBefore = io.prompt("Before time:");
+      
+    if (maybeAfter != "") {
+      try {
+        after = LocalTime.parse(maybeAfter);
+      } catch (Exception e) {
+        after = null;
+      }
+    } else after = null;
 
-    new Path_Finding(user, from.orElse(null), to.orElse(null), after, before);
+    if (maybeBefore != "") {
+      try {
+        before = LocalTime.parse(maybeBefore);
+      } catch (Exception e) {
+        before = null;
+      }
+    } else before = null;
+
+
+    Path_Finding out = null;
+    try{
+      out = new Path_Finding(user, from.orElse(null), to.orElse(null), after, before);
+    } catch (Exception e) {
+      out = null; //Make sure no half-baked stuff is getting sent
+    } finally {
+      return out;
+    }
   }
 
   private static void networkInterface(NetworkManager user) {
@@ -277,4 +305,28 @@ public class Main {
       default: System.out.println("Invalid input."); break;
     }
   }
+
+  private static void stationTrainSearchInterface (Object user) {
+    
+    String searchTerm = io.prompt("Search: ");
+
+    Optional<Junction> junc = network.getJunctionByName(searchTerm);
+    Optional<ServiceSet> trains = serviceManagement.getServiceSet(searchTerm);
+
+    if (junc.isPresent()) {
+      io.print("The query matched the Station:\n");
+      io.print(junc.get().getName() + "\t°: " + junc.get().getLocation().latitude + "  " + junc.get().getLocation().longitude+ "\n");
+    } else {
+      io.print("Query did not match any stations\n\n");
+    }
+
+    if (trains.isPresent()) {
+      io.print("The query matched the Train\n");
+      io.print(trains.get().getCompany().getUsername() + " " + trains.get().getId() + "\n");
+    } else {
+      io.print("The query did not match any trains\n");
+    }
+
+  }
+
 }

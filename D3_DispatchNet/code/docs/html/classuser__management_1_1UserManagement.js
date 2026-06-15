@@ -1,6 +1,6 @@
 var classuser__management_1_1UserManagement =
 [
-    [ "UserManagement", "classuser__management_1_1UserManagement.html#aebf624db28c98c91f2d1a97683f922ea", null ],
+    [ "UserManagement", "classuser__management_1_1UserManagement.html#a2106f0c9e08baa00fd8207ada0445af5", null ],
     [ "addAuthenticatedUser", "classuser__management_1_1UserManagement.html#a83f9ca2a346cbfd795b7d36ccb533989", null ],
     [ "authenticateUser", "classuser__management_1_1UserManagement.html#adb8a1e1a254e0274d691f78c8c2e19a7", null ],
     [ "checkEmailExistence", "classuser__management_1_1UserManagement.html#afb272522dfa97fc9ea3328c0cc4e562f", null ],
@@ -21,6 +21,5 @@ var classuser__management_1_1UserManagement =
     [ "prompt", "classuser__management_1_1UserManagement.html#aeb62b2a53928428e54d053ccb6cc1a95", null ],
     [ "promptPassword", "classuser__management_1_1UserManagement.html#a6b14e8552e54b69a20557cb80825bc83", null ],
     [ "removeAuthenticatedUser", "classuser__management_1_1UserManagement.html#a52964c827c1c2ead1bdcc8c5897cdeb8", null ],
-    [ "saveTickets", "classuser__management_1_1UserManagement.html#a9cc50fbdb29f913d2d85bd22af5dc77b", null ],
     [ "sendEmail", "classuser__management_1_1UserManagement.html#a7f16a4696e991edf2fec02ce16e7b763", null ]
 ];

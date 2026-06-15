@@ -19,11 +19,11 @@ Inheritance diagram for user\+\_\+management.\+Train\+Company:\+\begin{figure}[H
 \doxymbox{\hyperlink{classuser__management_1_1TrainCompany_a11a603ae15e3bf1a50e7597053835f11}{Train\+Company}} (String id, String username, String email, String password, \doxymbox{\hyperlink{classuser__management_1_1UserManagement}{User\+Management}} \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_afc13e6811e6fbd798dc8f8eadecb5c9f}{user\+Management}})
 \begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1TrainCompany}{Train\+Company} class with explicit id. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classuser__management_1_1TrainCompany_a62e69af858f8a9b48a89629944b38363}{create\+Service\+Request}} ()
-\begin{DoxyCompactList}\small\item\em Creates a new service request. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classuser__management_1_1TrainCompany_a093fa2ed831ef58e2d1325714dbdc9fc}{create\+Service\+Type}} ()
-\begin{DoxyCompactList}\small\item\em Creates a new service type. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classuser__management_1_1TrainCompany_a4be806906325eaddb82f45af5bc64d94}{create\+Train\+Type}} ()
-\begin{DoxyCompactList}\small\item\em Creates a new train type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates and submits a new service request. Prompts the user to select or create a \doxylink{classservice__management_1_1ServiceType}{Service\+Type}, then build the route step-\/by-\/step, and add one or more Dispatches before submitting. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classservice__management_1_1ServiceType}{Service\+Type}} \doxymbox{\hyperlink{classuser__management_1_1TrainCompany_a77c70cad9cfecddd555f0d98a90c284b}{create\+Service\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Creates and registers a new \doxylink{classservice__management_1_1ServiceType}{Service\+Type}. Prompts for a commercial name and cents-\/per-\/km, then delegates to select\+Or\+Create\+Train\+Type() for the associated \doxylink{classservice__management_1_1TrainType}{Train\+Type}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classservice__management_1_1TrainType}{Train\+Type}} \doxymbox{\hyperlink{classuser__management_1_1TrainCompany_aa33d12862e58446d54908e045dac2523}{create\+Train\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Creates and registers a new \doxylink{classservice__management_1_1TrainType}{Train\+Type}. Prompts for identifier, seated capacity, standing capacity, and whether the train carries passengers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classuser__management_1_1EndUser}{user\+\_\+management.\+End\+User}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -70,12 +70,12 @@ boolean \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_a4ed89b9
 \begin{DoxyCompactList}\small\item\em Checks if this authenticated user is equal to another object. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser_a4a09cae41928361de7dd4888427b8760}{hash\+Code}} ()
 \begin{DoxyCompactList}\small\item\em Generates a hash code for the authenticated user. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{classuser__management_1_1EndUser}{user\+\_\+management.\+End\+User}}}
+\doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \doxymbox{\hyperlink{classuser__management_1_1EndUser_a9cb01d95dcc9b8b48560dc23de9c603b}{main}} (String\+[$\,$]\+ args)
-\begin{DoxyCompactList}\small\item\em Main method for testing \doxylink{classuser__management_1_1EndUser}{End\+User} behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static void \doxymbox{\hyperlink{classuser__management_1_1TrainCompany_af1e038e1283e6b0145d9d35f2ba0f447}{main}} (String args\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em \doxylink{classmain_1_1Main}{Main} method for testing \doxylink{classuser__management_1_1EndUser}{End\+User} behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser}{user\+\_\+management.\+Authenticated\+User}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -133,27 +133,52 @@ void user\+\_\+management.\+Train\+Company.\+create\+Service\+Request (\begin{Do
 
 
 
-Creates a new service request. 
+Creates and submits a new service request. Prompts the user to select or create a \doxylink{classservice__management_1_1ServiceType}{Service\+Type}, then build the route step-\/by-\/step, and add one or more Dispatches before submitting. 
 
-\Hypertarget{classuser__management_1_1TrainCompany_a093fa2ed831ef58e2d1325714dbdc9fc}\index{user\_management.TrainCompany@{user\_management.TrainCompany}!createServiceType@{createServiceType}}
+\Hypertarget{classuser__management_1_1TrainCompany_a77c70cad9cfecddd555f0d98a90c284b}\index{user\_management.TrainCompany@{user\_management.TrainCompany}!createServiceType@{createServiceType}}
 \index{createServiceType@{createServiceType}!user\_management.TrainCompany@{user\_management.TrainCompany}}
 \doxysubsubsection{\texorpdfstring{createServiceType()}{createServiceType()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1TrainCompany_a093fa2ed831ef58e2d1325714dbdc9fc} 
-void user\+\_\+management.\+Train\+Company.\+create\+Service\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1TrainCompany_a77c70cad9cfecddd555f0d98a90c284b} 
+\doxymbox{\hyperlink{classservice__management_1_1ServiceType}{Service\+Type}} user\+\_\+management.\+Train\+Company.\+create\+Service\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Creates a new service type. 
+Creates and registers a new \doxylink{classservice__management_1_1ServiceType}{Service\+Type}. Prompts for a commercial name and cents-\/per-\/km, then delegates to select\+Or\+Create\+Train\+Type() for the associated \doxylink{classservice__management_1_1TrainType}{Train\+Type}. 
 
-\Hypertarget{classuser__management_1_1TrainCompany_a4be806906325eaddb82f45af5bc64d94}\index{user\_management.TrainCompany@{user\_management.TrainCompany}!createTrainType@{createTrainType}}
+\begin{DoxyReturn}{Returns}
+The created \doxylink{classservice__management_1_1ServiceType}{Service\+Type} 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1TrainCompany_aa33d12862e58446d54908e045dac2523}\index{user\_management.TrainCompany@{user\_management.TrainCompany}!createTrainType@{createTrainType}}
 \index{createTrainType@{createTrainType}!user\_management.TrainCompany@{user\_management.TrainCompany}}
 \doxysubsubsection{\texorpdfstring{createTrainType()}{createTrainType()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1TrainCompany_a4be806906325eaddb82f45af5bc64d94} 
-void user\+\_\+management.\+Train\+Company.\+create\+Train\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1TrainCompany_aa33d12862e58446d54908e045dac2523} 
+\doxymbox{\hyperlink{classservice__management_1_1TrainType}{Train\+Type}} user\+\_\+management.\+Train\+Company.\+create\+Train\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Creates a new train type. 
+Creates and registers a new \doxylink{classservice__management_1_1TrainType}{Train\+Type}. Prompts for identifier, seated capacity, standing capacity, and whether the train carries passengers. 
+
+\begin{DoxyReturn}{Returns}
+the created \doxylink{classservice__management_1_1TrainType}{Train\+Type} 
+\end{DoxyReturn}
+\Hypertarget{classuser__management_1_1TrainCompany_af1e038e1283e6b0145d9d35f2ba0f447}\index{user\_management.TrainCompany@{user\_management.TrainCompany}!main@{main}}
+\index{main@{main}!user\_management.TrainCompany@{user\_management.TrainCompany}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1TrainCompany_af1e038e1283e6b0145d9d35f2ba0f447} 
+void user\+\_\+management.\+Train\+Company.\+main (\begin{DoxyParamCaption}\item[{String}]{args}{\+[$\,$]\+}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxylink{classmain_1_1Main}{Main} method for testing \doxylink{classuser__management_1_1EndUser}{End\+User} behavior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Command-\/line arguments \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \doxymbox{\hyperlink{classuser__management_1_1EndUser_a9cb01d95dcc9b8b48560dc23de9c603b}{user\+\_\+management.\+End\+User}}.
 
 
 

@@ -8,7 +8,7 @@ Class managing the user accounts in the system. Other modules will interact with
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{classuser__management_1_1UserManagement_aebf624db28c98c91f2d1a97683f922ea}{User\+Management}} ()
+\doxymbox{\hyperlink{classuser__management_1_1UserManagement_a2106f0c9e08baa00fd8207ada0445af5}{User\+Management}} (\doxymbox{\hyperlink{classIO__operations_1_1IO}{IO}} io, \doxymbox{\hyperlink{classcsv__database_1_1CsvDatabase}{Csv\+Database}} csv\+Database)
 \begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1UserManagement}{User\+Management} class. \end{DoxyCompactList}\item 
 List$<$ \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User}} $>$ \doxymbox{\hyperlink{classuser__management_1_1UserManagement_ae7334f03c708cd1630fcc73093cc4432}{get\+Authenticated\+Users}} ()
 \begin{DoxyCompactList}\small\item\em Gets the list of authenticated users. \end{DoxyCompactList}\item 
@@ -37,14 +37,12 @@ void \doxymbox{\hyperlink{classuser__management_1_1UserManagement_af193ad576f495
 void \doxymbox{\hyperlink{classuser__management_1_1UserManagement_ab8affa201980a987db4d3a4a747db31e}{logout\+User}} ()
 \begin{DoxyCompactList}\small\item\em Transitions the current session from authenticated to anonymous. Clears the authenticated user and creates a new anonymous session. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classuser__management_1_1AuthenticatedUser}{Authenticated\+User}} \doxymbox{\hyperlink{classuser__management_1_1UserManagement_a0a736e52d5f3843756477e863efdf630}{get\+Authenticated\+User\+By\+Id}} (String id)
-\begin{DoxyCompactList}\small\item\em Gets an authenticated user by their id. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classuser__management_1_1UserManagement_a9cc50fbdb29f913d2d85bd22af5dc77b}{save\+Tickets}} ()
-\begin{DoxyCompactList}\small\item\em Saves all passenger tickets to the CSV file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets an authenticated user by their id. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \doxymbox{\hyperlink{classuser__management_1_1UserManagement_afb2e961f50194f840c383624fa2eb76c}{main}} (String\+[$\,$]\+ args)
-\begin{DoxyCompactList}\small\item\em Main method for testing \doxylink{classuser__management_1_1UserManagement}{User\+Management}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \doxylink{classmain_1_1Main}{Main} method for testing \doxylink{classuser__management_1_1UserManagement}{User\+Management}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -70,11 +68,11 @@ Class managing the user accounts in the system. Other modules will interact with
 \label{doc-constructors}
 \Hypertarget{classuser__management_1_1UserManagement_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classuser__management_1_1UserManagement_aebf624db28c98c91f2d1a97683f922ea}\index{user\_management.UserManagement@{user\_management.UserManagement}!UserManagement@{UserManagement}}
+\Hypertarget{classuser__management_1_1UserManagement_a2106f0c9e08baa00fd8207ada0445af5}\index{user\_management.UserManagement@{user\_management.UserManagement}!UserManagement@{UserManagement}}
 \index{UserManagement@{UserManagement}!user\_management.UserManagement@{user\_management.UserManagement}}
 \doxysubsubsection{\texorpdfstring{UserManagement()}{UserManagement()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1UserManagement_aebf624db28c98c91f2d1a97683f922ea} 
-user\+\_\+management.\+User\+Management.\+User\+Management (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1UserManagement_a2106f0c9e08baa00fd8207ada0445af5} 
+user\+\_\+management.\+User\+Management.\+User\+Management (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classIO__operations_1_1IO}{IO}}}]{io}{, }\item[{\doxymbox{\hyperlink{classcsv__database_1_1CsvDatabase}{Csv\+Database}}}]{csv\+Database}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -346,7 +344,7 @@ void user\+\_\+management.\+User\+Management.\+main (\begin{DoxyParamCaption}\it
 
 
 
-Main method for testing \doxylink{classuser__management_1_1UserManagement}{User\+Management}. 
+\doxylink{classmain_1_1Main}{Main} method for testing \doxylink{classuser__management_1_1UserManagement}{User\+Management}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -410,16 +408,6 @@ Removes an authenticated user from the system.
 {\em user} & The authenticated user to remove \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classuser__management_1_1UserManagement_a9cc50fbdb29f913d2d85bd22af5dc77b}\index{user\_management.UserManagement@{user\_management.UserManagement}!saveTickets@{saveTickets}}
-\index{saveTickets@{saveTickets}!user\_management.UserManagement@{user\_management.UserManagement}}
-\doxysubsubsection{\texorpdfstring{saveTickets()}{saveTickets()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1UserManagement_a9cc50fbdb29f913d2d85bd22af5dc77b} 
-void user\+\_\+management.\+User\+Management.\+save\+Tickets (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Saves all passenger tickets to the CSV file. 
-
 \Hypertarget{classuser__management_1_1UserManagement_a7f16a4696e991edf2fec02ce16e7b763}\index{user\_management.UserManagement@{user\_management.UserManagement}!sendEmail@{sendEmail}}
 \index{sendEmail@{sendEmail}!user\_management.UserManagement@{user\_management.UserManagement}}
 \doxysubsubsection{\texorpdfstring{sendEmail()}{sendEmail()}}

@@ -10,14 +10,17 @@ var hierarchy =
     ] ],
     [ "csv_database.CsvDatabase", "classcsv__database_1_1CsvDatabase.html", null ],
     [ "service_management.Dispatch", "classservice__management_1_1Dispatch.html", null ],
+    [ "infrastructure.Network.EditError", "enuminfrastructure_1_1Network_1_1EditError.html", null ],
     [ "mail_service.Email", "classmail__service_1_1Email.html", null ],
     [ "infrastructure.GeoCoordinate", "classinfrastructure_1_1GeoCoordinate.html", null ],
+    [ "ticketing.GroupPass", "classticketing_1_1GroupPass.html", null ],
     [ "IO_operations.IO", "classIO__operations_1_1IO.html", null ],
     [ "infrastructure.Junction", "classinfrastructure_1_1Junction.html", null ],
     [ "infrastructure.Line", "classinfrastructure_1_1Line.html", null ],
     [ "mail_service.MailService", "interfacemail__service_1_1MailService.html", [
       [ "mail_service.MockMailService", "classmail__service_1_1MockMailService.html", null ]
     ] ],
+    [ "main.Main", "classmain_1_1Main.html", null ],
     [ "infrastructure.Network", "classinfrastructure_1_1Network.html", null ],
     [ "path_finding.Path_Finding", "classpath__finding_1_1Path__Finding.html", null ],
     [ "payment_gateway.PaymentGateway", "interfacepayment__gateway_1_1PaymentGateway.html", [
@@ -27,6 +30,7 @@ var hierarchy =
     [ "service_management.ServiceSet", "classservice__management_1_1ServiceSet.html", null ],
     [ "service_management.ServiceStatus", "enumservice__management_1_1ServiceStatus.html", null ],
     [ "service_management.ServiceStep", "classservice__management_1_1ServiceStep.html", null ],
+    [ "service_management.ServiceType", "classservice__management_1_1ServiceType.html", null ],
     [ "path_finding.srtAlg", "enumpath__finding_1_1srtAlg.html", null ],
     [ "infrastructure.StationData", "classinfrastructure_1_1StationData.html", null ],
     [ "service_management.StopData", "classservice__management_1_1StopData.html", null ],

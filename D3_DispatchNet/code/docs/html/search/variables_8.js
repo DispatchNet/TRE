@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usermanagement_0',['userManagement',['../classuser__management_1_1AuthenticatedUser.html#afc13e6811e6fbd798dc8f8eadecb5c9f',1,'user_management::AuthenticatedUser']]]
+  ['traincompany_0',['TrainCompany',['../enumuser__management_1_1UserType.html#a7303fec80645c12daa765f8df17d850b',1,'user_management::UserType']]]
 ];
