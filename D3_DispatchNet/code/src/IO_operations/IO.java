@@ -26,7 +26,7 @@ public class IO {
      * @brief Prints a generic message and includes a newline character at the end
      * @param message The string to print
      */
-    public void printLn(String message) {
+    public void println(String message) {
       System.out.println(message);
     }
 
