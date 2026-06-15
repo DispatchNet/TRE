@@ -124,6 +124,7 @@ public class Main {
         }
         else {
           switch(choice) {
+            case "m": printMap(); break;
             case "p": pathFindingInterface(currentUser); break;
             case "s": stationTrainSearchInterface(currentUser); break;
           }
@@ -137,7 +138,6 @@ public class Main {
         switch(choice) {
           case "n": networkInterface((NetworkManager) currentUser); break;
           case "r": ((NetworkManager) currentUser).createTrainCompanyAccount(); break;
-          case "m": printMap(); break;
           case "q": exitRequested = true; break;
           default: io.printLn("Invalid input. Try again");
         }
