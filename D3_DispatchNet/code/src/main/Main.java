@@ -218,7 +218,7 @@ public class Main {
     LocalTime after; //these can be optional, parsing them immediately will break
     LocalTime before; 
     String maybeAfter = io.prompt("After time:");
-    if (maybeAfter != "") {
+    if (!maybeAfter.equals("") ) { //TODO find a way to detect empty line properly
       try {
         after = LocalTime.parse(maybeAfter);
       } catch (Exception e) {
@@ -228,7 +228,7 @@ public class Main {
     } else after = null;
     
     String maybeBefore = io.prompt("Before time:");  
-    if (maybeBefore != "") {
+    if (!maybeBefore.equals("")) {
       try {
         before = LocalTime.parse(maybeBefore);
       } catch (Exception e) {
