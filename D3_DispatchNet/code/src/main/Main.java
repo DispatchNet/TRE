@@ -16,6 +16,7 @@ import user_management.EndUser;
 import user_management.AuthenticatedUser;
 import user_management.UserManagement;
 import path_finding.Path_Finding;
+import path_finding.srtAlg;
 import infrastructure.Junction;
 import IO_operations.IO;
 import csv_database.CsvDatabase;
@@ -200,14 +201,12 @@ public class Main {
     }
   }
 
-  private static Path_Finding pathFindingInterface(Object user) {
+  private static void pathFindingInterface(Object user) {
     Optional<Junction> from = network.getJunctionByName(io.prompt("From station:"));
     Optional<Junction> to = network.getJunctionByName(io.prompt("To station:"));
     LocalTime after; //these can be optional, parsing them immediately will break
     LocalTime before; 
     String maybeAfter = io.prompt("After time:");
-    String maybeBefore = io.prompt("Before time:");
-      
     if (maybeAfter != "") {
       try {
         after = LocalTime.parse(maybeAfter);
@@ -216,7 +215,8 @@ public class Main {
         after = null;
       }
     } else after = null;
-
+    
+    String maybeBefore = io.prompt("Before time:");  
     if (maybeBefore != "") {
       try {
         before = LocalTime.parse(maybeBefore);
@@ -227,14 +227,63 @@ public class Main {
     } else before = null;
 
 
-    Path_Finding out = null;
+    Path_Finding path = null;
     try{
-      out = new Path_Finding(user, from.orElse(null), to.orElse(null), after, before);
+      path = new Path_Finding(user, from.orElse(null), to.orElse(null), after, before);
     } catch (Exception e) {
-      out = null; //Make sure no half-baked stuff is getting sent
-    } finally {
-      return out;
+      path = null; //Make sure no half-baked stuff is getting sent
     }
+    
+    if (path == null) {
+      io.print("Something went wrong when creating path");
+      return;
+    }
+
+    io.print(path.toString());
+    
+    boolean quit = false;
+    boolean something_went_wrong = false;
+    do {
+      String userInput = io.prompt("p) Purchase tickets\n s) Change sorting\n q) Quit");
+      switch (userInput) {
+        case "p":
+          if (!something_went_wrong) try {
+            path.prchTcks();
+          } catch (Exception e) {
+            io.displayError("Looks like something went wrong while purhcasing tickets, returning to path options");
+          }
+        break;
+
+        case "s": 
+          userInput = io.prompt("l) Sort by ascending lenght\nd) Sort by descending departure\na) Sort by ascending arrival\nc) Sort by ascending cost");
+          switch(userInput) {
+            case "l":
+              path.setChosenSrt(srtAlg.Length);
+            break;
+
+            case "d":
+              path.setChosenSrt(srtAlg.Departure);
+            break;
+
+            case "a":
+              path.setChosenSrt(srtAlg.Arrival);
+            break;
+
+            case "c":
+              path.setChosenSrt(srtAlg.Cost);
+            break;
+
+            default:
+              io.print("Invalid sorting, returning to path options");
+          }
+        break;
+        
+        case "q": quit = true; break;
+
+        default: 
+          io.print("Invalid operation, returning to path options");
+      }
+    } while (!quit);
   }
 
   private static void networkInterface(NetworkManager user) {

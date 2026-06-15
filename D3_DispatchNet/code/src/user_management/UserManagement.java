@@ -94,6 +94,14 @@ public class UserManagement {
     }
 
     /**
+     * @biref print a generic message
+     * @param message message to be printed
+     */
+    public void print(String message) {
+      io.print(message);
+    }
+
+    /**
      * @brief Displays an error message
      * @param message The error message to display
      */
