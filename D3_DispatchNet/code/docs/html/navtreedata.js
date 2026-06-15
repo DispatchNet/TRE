@@ -50,11 +50,11 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"AnonymousUser_8java.html",
-"classservice__management_1_1ServiceManagement.html#aee34d1a6268f7025c719108c5e579226",
-"classuser__management_1_1TrainCompany.html#a62e69af858f8a9b48a89629944b38363"
+"_anonymous_user_8java.html",
+"classservice__management_1_1_service_management.html#a7752e9a9dbd60ee880a3f0bdd29f67e5",
+"classuser__management_1_1_train_company.html#a11a603ae15e3bf1a50e7597053835f11"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronization';
-var SYNCOFFMSG = 'click to enable panel synchronization';
-var LISTOFALLMEMBERS = 'List of all members';
+const SYNCONMSG = 'click to disable panel synchronization';
+const SYNCOFFMSG = 'click to enable panel synchronization';
+const LISTOFALLMEMBERS = 'List of all members';

@@ -8,9 +8,15 @@ A Class representing a line between 2 \doxylink{classinfrastructure_1_1_junction
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-Junction \doxymbox{\hyperlink{classinfrastructure_1_1_line_afc7e348a024766894814dc2729094648}{get\+Junction1}} ()
+\doxymbox{\hyperlink{classinfrastructure_1_1_line_abd1407cffe2efcd5de0a9a444d4b32aa}{Line}} (\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} j1, \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} j2, int length\+Meters, int max\+Speed\+KpH, int n\+Tracks)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classinfrastructure_1_1_line}{Line} with generated id. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classinfrastructure_1_1_line_ab4f332077049ebd73b4e6ae151722de9}{Line}} (String id, \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} j1, \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} j2, int length\+Meters, int max\+Speed\+KpH, int n\+Tracks)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classinfrastructure_1_1_line}{Line} with explicit id. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classinfrastructure_1_1_line_ad1c71479518e5802554a5e7615d8f593}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the unique identifier for this line. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} \doxymbox{\hyperlink{classinfrastructure_1_1_line_afc7e348a024766894814dc2729094648}{get\+Junction1}} ()
 \begin{DoxyCompactList}\small\item\em Gets one of the junctions this line ends at. \end{DoxyCompactList}\item 
-Junction \doxymbox{\hyperlink{classinfrastructure_1_1_line_ada3ae6de59b3814ecd2f468a3f707334}{get\+Junction2}} ()
+\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} \doxymbox{\hyperlink{classinfrastructure_1_1_line_ada3ae6de59b3814ecd2f468a3f707334}{get\+Junction2}} ()
 \begin{DoxyCompactList}\small\item\em Gets one of the junctions this line ends at. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classinfrastructure_1_1_line_a5f6e6a9ddc67c8817acd4044aca8add8}{get\+Length\+Meters}} ()
 \begin{DoxyCompactList}\small\item\em Gets one of the length of this line in meters. \end{DoxyCompactList}\item 
@@ -18,29 +24,94 @@ int \doxymbox{\hyperlink{classinfrastructure_1_1_line_a04470401473f213ea085797e6
 \begin{DoxyCompactList}\small\item\em Gets the max speed in kilometers per hour. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classinfrastructure_1_1_line_a36e3ef7c65d015591af5229d21f63f06}{getn\+Tracks}} ()
 \begin{DoxyCompactList}\small\item\em Gets the number of tracks of this line. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classinfrastructure_1_1_line_a3690b18b84a4c460e7e25266a94ef3ef}{set\+Junction1}} (Junction junction)
+void \doxymbox{\hyperlink{classinfrastructure_1_1_line_a3690b18b84a4c460e7e25266a94ef3ef}{set\+Junction1}} (\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} junction)
 \begin{DoxyCompactList}\small\item\em Replaces junction1 of this \doxylink{classinfrastructure_1_1_line}{Line}. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classinfrastructure_1_1_line_ae246ec1ce23c8a2e6e301954febabb7d}{set\+Junction2}} (Junction junction)
+void \doxymbox{\hyperlink{classinfrastructure_1_1_line_ae246ec1ce23c8a2e6e301954febabb7d}{set\+Junction2}} (\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} junction)
 \begin{DoxyCompactList}\small\item\em Replaces junction2 of this \doxylink{classinfrastructure_1_1_line}{Line}. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classinfrastructure_1_1_line_ab9a9eb16ade26dd90d1003ab69155471}{set\+Length\+Meters}} (int length\+Meters)
 \begin{DoxyCompactList}\small\item\em Sets the length of this \doxylink{classinfrastructure_1_1_line}{Line}. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classinfrastructure_1_1_line_aebfa394b4b9f299ed9c8ae11c170ae94}{set\+Max\+Speed\+KpH}} (int max\+Speed\+KpH)
 \begin{DoxyCompactList}\small\item\em Sets the max speed of this line in km/\+h. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classinfrastructure_1_1_line_af37187109407d3fad6c6993c269fa5f3}{setn\+Tracks}} (int n\+Tracks)
-\begin{DoxyCompactList}\small\item\em Sets the number of tracks of this line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets the number of tracks of this line. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classinfrastructure_1_1_line_ad30a9bfb7b959d675d1f1c911c2d89ae}{is\+Used}} ()
+\begin{DoxyCompactList}\small\item\em Checks whether the line is used or not. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classinfrastructure_1_1_line_a91a79734de1c41a4be72e083522749d8}{has\+Junction}} (\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} jun)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 A Class representing a line between 2 \doxylink{classinfrastructure_1_1_junction}{Junction} elements. 
 
+\label{classinfrastructure_1_1_line_doc-constructors}
+\Hypertarget{classinfrastructure_1_1_line_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classinfrastructure_1_1_line_abd1407cffe2efcd5de0a9a444d4b32aa}\index{infrastructure.Line@{infrastructure.Line}!Line@{Line}}
+\index{Line@{Line}!infrastructure.Line@{infrastructure.Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_line_abd1407cffe2efcd5de0a9a444d4b32aa} 
+infrastructure.\+Line.\+Line (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}}}]{j1}{, }\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}}}]{j2}{, }\item[{int}]{length\+Meters}{, }\item[{int}]{max\+Speed\+KpH}{, }\item[{int}]{n\+Tracks}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{classinfrastructure_1_1_line}{Line} with generated id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j1} & A \doxylink{classinfrastructure_1_1_junction}{Junction} in the network \\
+\hline
+{\em j2} & A \doxylink{classinfrastructure_1_1_junction}{Junction} in the network \\
+\hline
+{\em length\+Meters} & The length of this line in meters \\
+\hline
+{\em max\+Speed\+KpH} & The max speed of this line in Kilometers per hour \\
+\hline
+{\em n\+Tracks} & The number of tracks this line has\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Null\+Pointer\+Exception} & if the any junction is null. @impl\+Note Also adds this line to the junction\textquotesingle{}s adjacencies. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classinfrastructure_1_1_line_ab4f332077049ebd73b4e6ae151722de9}\index{infrastructure.Line@{infrastructure.Line}!Line@{Line}}
+\index{Line@{Line}!infrastructure.Line@{infrastructure.Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_line_ab4f332077049ebd73b4e6ae151722de9} 
+infrastructure.\+Line.\+Line (\begin{DoxyParamCaption}\item[{String}]{id}{, }\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}}}]{j1}{, }\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}}}]{j2}{, }\item[{int}]{length\+Meters}{, }\item[{int}]{max\+Speed\+KpH}{, }\item[{int}]{n\+Tracks}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{classinfrastructure_1_1_line}{Line} with explicit id. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Null\+Pointer\+Exception} & if the any junction is null. @impl\+Note Also adds this line to the junction\textquotesingle{}s adjacencies. \\
+\hline
+\end{DoxyExceptions}
+
+
 \label{classinfrastructure_1_1_line_doc-func-members}
 \Hypertarget{classinfrastructure_1_1_line_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classinfrastructure_1_1_line_ad1c71479518e5802554a5e7615d8f593}\index{infrastructure.Line@{infrastructure.Line}!getId@{getId}}
+\index{getId@{getId}!infrastructure.Line@{infrastructure.Line}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_line_ad1c71479518e5802554a5e7615d8f593} 
+String infrastructure.\+Line.\+get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the unique identifier for this line. 
+
+\begin{DoxyReturn}{Returns}
+the id 
+\end{DoxyReturn}
 \Hypertarget{classinfrastructure_1_1_line_afc7e348a024766894814dc2729094648}\index{infrastructure.Line@{infrastructure.Line}!getJunction1@{getJunction1}}
 \index{getJunction1@{getJunction1}!infrastructure.Line@{infrastructure.Line}}
 \doxysubsubsection{\texorpdfstring{getJunction1()}{getJunction1()}}
 {\footnotesize\ttfamily \label{classinfrastructure_1_1_line_afc7e348a024766894814dc2729094648} 
-Junction infrastructure.\+Line.\+get\+Junction1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} infrastructure.\+Line.\+get\+Junction1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -53,7 +124,7 @@ the junction
 \index{getJunction2@{getJunction2}!infrastructure.Line@{infrastructure.Line}}
 \doxysubsubsection{\texorpdfstring{getJunction2()}{getJunction2()}}
 {\footnotesize\ttfamily \label{classinfrastructure_1_1_line_ada3ae6de59b3814ecd2f468a3f707334} 
-Junction infrastructure.\+Line.\+get\+Junction2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} infrastructure.\+Line.\+get\+Junction2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -101,11 +172,35 @@ Gets the number of tracks of this line.
 \begin{DoxyReturn}{Returns}
 the number of tracks 
 \end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1_line_a91a79734de1c41a4be72e083522749d8}\index{infrastructure.Line@{infrastructure.Line}!hasJunction@{hasJunction}}
+\index{hasJunction@{hasJunction}!infrastructure.Line@{infrastructure.Line}}
+\doxysubsubsection{\texorpdfstring{hasJunction()}{hasJunction()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_line_a91a79734de1c41a4be72e083522749d8} 
+boolean infrastructure.\+Line.\+has\+Junction (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}}}]{jun}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns whether a junction is in junction1 or junction2 
+\begin{DoxyParams}{Parameters}
+{\em jun} & a junciton pointer @reutrn a booleanean \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classinfrastructure_1_1_line_ad30a9bfb7b959d675d1f1c911c2d89ae}\index{infrastructure.Line@{infrastructure.Line}!isUsed@{isUsed}}
+\index{isUsed@{isUsed}!infrastructure.Line@{infrastructure.Line}}
+\doxysubsubsection{\texorpdfstring{isUsed()}{isUsed()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_line_ad30a9bfb7b959d675d1f1c911c2d89ae} 
+boolean infrastructure.\+Line.\+is\+Used (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks whether the line is used or not. 
+
+\begin{DoxyReturn}{Returns}
+true if the line is used, false otherwise 
+\end{DoxyReturn}
 \Hypertarget{classinfrastructure_1_1_line_a3690b18b84a4c460e7e25266a94ef3ef}\index{infrastructure.Line@{infrastructure.Line}!setJunction1@{setJunction1}}
 \index{setJunction1@{setJunction1}!infrastructure.Line@{infrastructure.Line}}
 \doxysubsubsection{\texorpdfstring{setJunction1()}{setJunction1()}}
 {\footnotesize\ttfamily \label{classinfrastructure_1_1_line_a3690b18b84a4c460e7e25266a94ef3ef} 
-void infrastructure.\+Line.\+set\+Junction1 (\begin{DoxyParamCaption}\item[{Junction}]{junction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void infrastructure.\+Line.\+set\+Junction1 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}}}]{junction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -116,11 +211,16 @@ Replaces junction1 of this \doxylink{classinfrastructure_1_1_line}{Line}.
 {\em junction} & the new junction. @impl\+Note also removes this line from the junction\textquotesingle{}s adjacencies. \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Null\+Pointer\+Excpetion} & if the junction is null \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classinfrastructure_1_1_line_ae246ec1ce23c8a2e6e301954febabb7d}\index{infrastructure.Line@{infrastructure.Line}!setJunction2@{setJunction2}}
 \index{setJunction2@{setJunction2}!infrastructure.Line@{infrastructure.Line}}
 \doxysubsubsection{\texorpdfstring{setJunction2()}{setJunction2()}}
 {\footnotesize\ttfamily \label{classinfrastructure_1_1_line_ae246ec1ce23c8a2e6e301954febabb7d} 
-void infrastructure.\+Line.\+set\+Junction2 (\begin{DoxyParamCaption}\item[{Junction}]{junction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void infrastructure.\+Line.\+set\+Junction2 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}}}]{junction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -131,6 +231,11 @@ Replaces junction2 of this \doxylink{classinfrastructure_1_1_line}{Line}.
 {\em junction} & the new junction. @impl\+Note also removes this line from the junction\textquotesingle{}s adjacencies. \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Null\+Pointer\+Excpetion} & if the junction is null \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classinfrastructure_1_1_line_ab9a9eb16ade26dd90d1003ab69155471}\index{infrastructure.Line@{infrastructure.Line}!setLengthMeters@{setLengthMeters}}
 \index{setLengthMeters@{setLengthMeters}!infrastructure.Line@{infrastructure.Line}}
 \doxysubsubsection{\texorpdfstring{setLengthMeters()}{setLengthMeters()}}

@@ -5,7 +5,7 @@ var namespaces_dup =
       [ "Departure", "namespacedeparture.html#a63dd841fbd63f1423cbd0a1beaa6e900", null ]
     ] ],
     [ "infrastructure", "namespaceinfrastructure.html", "namespaceinfrastructure" ],
-    [ "IO_operations", "namespaceIO__operations.html", "namespaceIO__operations" ],
+    [ "IO_operations", "namespace_i_o__operations.html", "namespace_i_o__operations" ],
     [ "mail_service", "namespacemail__service.html", "namespacemail__service" ],
     [ "main", "namespacemain.html", "namespacemain" ],
     [ "path_finding", "namespacepath__finding.html", "namespacepath__finding" ],

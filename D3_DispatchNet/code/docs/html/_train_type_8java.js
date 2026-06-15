@@ -1,4 +1,4 @@
 var _train_type_8java =
 [
-    [ "service_mangement.TrainType", "classservice__mangement_1_1_train_type.html", null ]
+    [ "service_management.TrainType", "classservice__management_1_1_train_type.html", "classservice__management_1_1_train_type" ]
 ];

@@ -1,13 +1,8 @@
 var searchData=
 [
-  ['mail_5fservice_0',['mail_service',['../namespacemail__service.html',1,'']]],
-  ['mailservice_1',['MailService',['../interfacemail__service_1_1MailService.html',1,'mail_service']]],
-  ['mailservice_2ejava_2',['MailService.java',['../MailService_8java.html',1,'']]],
-  ['main_3',['Main',['../classmain_1_1Main.html',1,'main']]],
-  ['main_4',['main',['../namespacemain.html',1,'main'],['../classmain_1_1Main.html#a896f71a651b705304693dbfe0cf9ca63',1,'main.Main.main()'],['../classpath__finding_1_1Path__Finding.html#a8e862192ab089b4543a64e359314e192',1,'path_finding.Path_Finding.main()'],['../classticketing_1_1GroupPass.html#a95db771ea3d812d3f3d84a2e998a32c7',1,'ticketing.GroupPass.main()'],['../classticketing_1_1Ticket.html#a3d12e8caedcb466ea29d8e1b8eec2faf',1,'ticketing.Ticket.main()'],['../classuser__management_1_1AnonymousUser.html#a83318d85b0f176cd219eb9c88b2031ed',1,'user_management.AnonymousUser.main()'],['../classuser__management_1_1EndUser.html#a9cb01d95dcc9b8b48560dc23de9c603b',1,'user_management.EndUser.main()'],['../classuser__management_1_1NetworkManager.html#a2e492c560c4af6a9a70511c061998526',1,'user_management.NetworkManager.main()'],['../classuser__management_1_1TrainCompany.html#af1e038e1283e6b0145d9d35f2ba0f447',1,'user_management.TrainCompany.main()'],['../classuser__management_1_1UserManagement.html#afb2e961f50194f840c383624fa2eb76c',1,'user_management.UserManagement.main()'],['../classuser__management_1_1UserSession.html#a93a62ffea8830e65c1397d4ae6dfc6dc',1,'user_management.UserSession.main()'],['../enumuser__management_1_1UserType.html#a22fa07a60be2e963cca471219d69d9b6',1,'user_management.UserType.main()']]],
-  ['main_2ejava_5',['Main.java',['../Main_8java.html',1,'']]],
-  ['mockmailservice_6',['MockMailService',['../classmail__service_1_1MockMailService.html',1,'mail_service']]],
-  ['mockmailservice_2ejava_7',['MockMailService.java',['../MockMailService_8java.html',1,'']]],
-  ['mockpaymentgateway_8',['MockPaymentGateway',['../classpayment__gateway_1_1MockPaymentGateway.html',1,'payment_gateway']]],
-  ['mockpaymentgateway_2ejava_9',['MockPaymentGateway.java',['../MockPaymentGateway_8java.html',1,'']]]
+  ['network_0',['Network',['../classinfrastructure_1_1_network.html',1,'infrastructure.Network'],['../classinfrastructure_1_1_network.html#a033139e8f7f1539d34f677e22d328b72',1,'infrastructure.Network.Network()']]],
+  ['network_2ejava_1',['Network.java',['../_network_8java.html',1,'']]],
+  ['networkmanager_2',['NetworkManager',['../classuser__management_1_1_network_manager.html',1,'user_management.NetworkManager'],['../enumuser__management_1_1_user_type.html#a8b3cf31c13e4a11fb3145ad6bde9c3cb',1,'user_management.UserType.NetworkManager'],['../classuser__management_1_1_network_manager.html#ae8ee9940c29d84150c451b19046d41ac',1,'user_management.NetworkManager.NetworkManager(String username, String email, String password, UserManagement userManagement)'],['../classuser__management_1_1_network_manager.html#a4bd8f16525216a0ade837a75e08ef0e1',1,'user_management.NetworkManager.NetworkManager(String id, String username, String email, String password, UserManagement userManagement)']]],
+  ['networkmanager_2ejava_3',['NetworkManager.java',['../_network_manager_8java.html',1,'']]],
+  ['not_5ffound_4',['NOT_FOUND',['../enuminfrastructure_1_1_network_1_1_edit_error.html#a83fbce37546e12073730880d4afac6e6',1,'infrastructure::Network::EditError']]]
 ];

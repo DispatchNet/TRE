@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import mail_service.Email;
 import ticketing.Ticket;
+import ticketing.GroupPass;
 
 /**
  * @class Passenger
@@ -152,6 +153,20 @@ public class Passenger extends EndUser {
         System.out.println("Ticket cancellation completed successfully.");
         return true;
     }
+
+    /**
+     * @brief Purchases a new group pass (not impelemented)
+     * @param ticket The group pass to purchase
+     * @return true if the ticket was purchased successfully, false otherwise
+     */
+    public boolean purchaseGroupPass(GroupPass groupPass) { return false; }
+
+    /**
+     * @brief Cancel a purchased group pass (not impelemented)
+     * @param ticket The group pass to purchase
+     * @return true if the group pass was cancelled successfully, false otherwise
+     */
+    public boolean cancelGroupPass(GroupPass groupPass) { return false; }
 
     /**
      * @brief Retrieves the history of purchased and cancelled tickets

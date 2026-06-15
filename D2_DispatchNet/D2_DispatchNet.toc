@@ -1,0 +1,153 @@
+\contentsline {section}{Purpose}{2}{section*.2}%
+\contentsline {chapter}{\numberline {1}Context Description (D1)}{3}{chapter.1}%
+\contentsline {section}{\numberline {O}Objectives}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {O.1}Ticketing system}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {O.2}Route-finding}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {O.3}Virtual board}{4}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {O.4}Rail system modeling}{4}{subsection.1.1.4}%
+\contentsline {section}{Stakeholders}{5}{section*.4}%
+\contentsline {subsection}{Internal}{5}{section*.5}%
+\contentsline {subsubsection}{Human}{5}{section*.6}%
+\contentsline {subsubsection}{Human}{5}{section*.7}%
+\contentsline {subsection}{External}{5}{section*.8}%
+\contentsline {subsubsection}{Human}{5}{section*.9}%
+\contentsline {subsubsection}{Non-human}{5}{section*.10}%
+\contentsline {section}{\numberline {FR}Functional requirements}{7}{section.1.2}%
+\contentsline {subsection}{\numberline {FR.1}Account classification}{7}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {FR.2}Account registration}{7}{subsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {FR.2.1}Consent management}{7}{subsubsection.1.2.2.1}%
+\contentsline {subsubsection}{\numberline {FR.2.2}Account registration notification}{7}{subsubsection.1.2.2.2}%
+\contentsline {subsection}{\numberline {FR.3}Account deletion}{7}{subsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {FR.3.1}Account deletion notification}{7}{subsubsection.1.2.3.1}%
+\contentsline {subsection}{\numberline {FR.4}Data request management}{8}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {FR.5}Account data change}{8}{subsection.1.2.5}%
+\contentsline {subsubsection}{\numberline {FR.5.1}Account data change notification}{8}{subsubsection.1.2.5.1}%
+\contentsline {subsection}{\numberline {FR.6}Password reset}{8}{subsection.1.2.6}%
+\contentsline {subsection}{\numberline {FR.7}Login}{8}{subsection.1.2.7}%
+\contentsline {subsection}{\numberline {FR.8}Logout}{8}{subsection.1.2.8}%
+\contentsline {subsection}{\numberline {FR.9}Tickets details display}{8}{subsection.1.2.9}%
+\contentsline {subsection}{\numberline {FR.10}Tickets purchase}{9}{subsection.1.2.10}%
+\contentsline {subsubsection}{\numberline {FR.10.1}Tickets purchase confirmation}{9}{subsubsection.1.2.10.1}%
+\contentsline {subsubsection}{\numberline {FR.10.2}Tickets purchase notification}{9}{subsubsection.1.2.10.2}%
+\contentsline {subsection}{\numberline {FR.11}Tickets cancellation}{9}{subsection.1.2.11}%
+\contentsline {subsubsection}{\numberline {FR.11.1}Tickets cancellation confirmation}{9}{subsubsection.1.2.11.1}%
+\contentsline {subsubsection}{\numberline {FR.11.2}Tickets cancellation notification}{9}{subsubsection.1.2.11.2}%
+\contentsline {subsection}{\numberline {FR.12}Tickets history}{9}{subsection.1.2.12}%
+\contentsline {subsubsection}{\numberline {FR.12.1}Tickets classification}{9}{subsubsection.1.2.12.1}%
+\contentsline {subsection}{\numberline {FR.13}Path search}{10}{subsection.1.2.13}%
+\contentsline {subsubsection}{\numberline {FR.13.1}Path points}{10}{subsubsection.1.2.13.1}%
+\contentsline {subsubsection}{\numberline {FR.13.2}Path timing}{10}{subsubsection.1.2.13.2}%
+\contentsline {subsection}{\numberline {FR.14}Path ranking}{10}{subsection.1.2.14}%
+\contentsline {subsubsection}{\numberline {FR.14.1}Ranking length}{10}{subsubsection.1.2.14.1}%
+\contentsline {subsubsection}{\numberline {FR.14.2}Ranking deviation "Departure"}{10}{subsubsection.1.2.14.2}%
+\contentsline {subsubsection}{\numberline {FR.14.3}Ranking deviation 2 "Arrival"}{11}{subsubsection.1.2.14.3}%
+\contentsline {subsubsection}{\numberline {FR.14.4}Ranking cost}{11}{subsubsection.1.2.14.4}%
+\contentsline {subsection}{\numberline {FR.15}Transfers}{11}{subsection.1.2.15}%
+\contentsline {subsection}{\numberline {FR.16}Train access restriction}{11}{subsection.1.2.16}%
+\contentsline {subsection}{\numberline {FR.17}Station display}{11}{subsection.1.2.17}%
+\contentsline {subsubsection}{\numberline {FR.17.1}Station search}{11}{subsubsection.1.2.17.1}%
+\contentsline {subsection}{\numberline {FR.18}Train display}{11}{subsection.1.2.18}%
+\contentsline {subsubsection}{\numberline {FR.18.1}Train search}{12}{subsubsection.1.2.18.1}%
+\contentsline {subsection}{\numberline {FR.19}Path display}{12}{subsection.1.2.19}%
+\contentsline {subsection}{\numberline {FR.20}Creating a Service Request}{12}{subsection.1.2.20}%
+\contentsline {subsection}{\numberline {FR.21}Defining a Train Type}{12}{subsection.1.2.21}%
+\contentsline {subsection}{\numberline {FR.22}Defining a Service Type}{12}{subsection.1.2.22}%
+\contentsline {subsection}{\numberline {FR.23}Viewing the Network}{12}{subsection.1.2.23}%
+\contentsline {subsection}{\numberline {FR.24}Managing a Station}{12}{subsection.1.2.24}%
+\contentsline {subsubsection}{\numberline {FR.24.1}Registering a Station}{13}{subsubsection.1.2.24.1}%
+\contentsline {subsubsection}{\numberline {FR.24.2}Modifying a Station}{13}{subsubsection.1.2.24.2}%
+\contentsline {subsubsection}{\numberline {FR.24.3}Deleting a Station}{13}{subsubsection.1.2.24.3}%
+\contentsline {subsection}{\numberline {FR.25}Managing a Line}{13}{subsection.1.2.25}%
+\contentsline {subsubsection}{\numberline {FR.25.1}Registering a Line}{13}{subsubsection.1.2.25.1}%
+\contentsline {subsubsection}{\numberline {FR.25.2}Modifying a Line}{13}{subsubsection.1.2.25.2}%
+\contentsline {subsubsection}{\numberline {FR.25.3}Deleting a Line}{13}{subsubsection.1.2.25.3}%
+\contentsline {subsection}{\numberline {FR.26}Managing a Junction}{13}{subsection.1.2.26}%
+\contentsline {subsubsection}{\numberline {FR.26.1}Registering a Junction}{14}{subsubsection.1.2.26.1}%
+\contentsline {subsubsection}{\numberline {FR.26.2}Modifying a Junction}{14}{subsubsection.1.2.26.2}%
+\contentsline {subsubsection}{\numberline {FR.26.3}Deleting a Junction}{14}{subsubsection.1.2.26.3}%
+\contentsline {subsection}{\numberline {FR.27}Automated Service Integrity Checks}{14}{subsection.1.2.27}%
+\contentsline {subsubsection}{\numberline {FR.27.1}Single Track Line Availability Check}{14}{subsubsection.1.2.27.1}%
+\contentsline {subsubsection}{\numberline {FR.27.2}Platform Availability Check}{14}{subsubsection.1.2.27.2}%
+\contentsline {subsubsection}{\numberline {FR.27.3}Track-side Systems Compatibility Check}{14}{subsubsection.1.2.27.3}%
+\contentsline {subsubsection}{\numberline {FR.27.4}Track Geometry Check}{15}{subsubsection.1.2.27.4}%
+\contentsline {subsection}{\numberline {FR.28}Displaying Integrity Check Results}{15}{subsection.1.2.28}%
+\contentsline {subsection}{\numberline {FR.29}Service Request Review}{15}{subsection.1.2.29}%
+\contentsline {subsubsection}{\numberline {FR.29.1}Service Request approval}{15}{subsubsection.1.2.29.1}%
+\contentsline {subsubsection}{\numberline {FR.29.2}Service Request amendment}{15}{subsubsection.1.2.29.2}%
+\contentsline {subsubsection}{\numberline {FR.29.3}Service Request denial}{15}{subsubsection.1.2.29.3}%
+\contentsline {subsection}{Requirement restrictions based on user classification}{15}{subsubsection.1.2.29.3}%
+\contentsline {section}{\numberline {NFR}Non-functional requirements}{17}{section.1.3}%
+\contentsline {subsection}{\numberline {NFR.1}Data Protection Regulation}{17}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {NFR.2}Account data}{17}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {NFR.3}Account data details}{18}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {NFR.4}Password security}{18}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {NFR.5}Typo prevention}{18}{subsection.1.3.5}%
+\contentsline {subsection}{\numberline {NFR.6}Consent for personal data processing}{18}{subsection.1.3.6}%
+\contentsline {subsection}{\numberline {NFR.7}Request of processed data}{18}{subsection.1.3.7}%
+\contentsline {subsection}{\numberline {NFR.8}Rectification of processed data}{19}{subsection.1.3.8}%
+\contentsline {subsection}{\numberline {NFR.9}Email notification}{19}{subsection.1.3.9}%
+\contentsline {subsection}{\numberline {NFR.10}Station-train display switching}{19}{subsection.1.3.10}%
+\contentsline {subsubsection}{\numberline {NFR.10.1}Station to train display}{19}{subsubsection.1.3.10.1}%
+\contentsline {subsubsection}{\numberline {NFR.10.2}Train to station display}{19}{subsubsection.1.3.10.2}%
+\contentsline {subsection}{\numberline {NFR.11}Station-path searching switching}{19}{subsection.1.3.11}%
+\contentsline {subsubsection}{\numberline {NFR.11.1}Station "from" path}{19}{subsubsection.1.3.11.1}%
+\contentsline {subsubsection}{\numberline {NFR.11.2}Station "to" path}{20}{subsubsection.1.3.11.2}%
+\contentsline {subsection}{\numberline {NFR.12}Path list to path list}{20}{subsection.1.3.12}%
+\contentsline {subsection}{\numberline {NFR.13}Ranking non-choice}{20}{subsection.1.3.13}%
+\contentsline {subsection}{\numberline {NFR.14}Network infrastructure}{20}{subsection.1.3.14}%
+\contentsline {chapter}{\numberline {2}Use Cases \& UML (D2)}{21}{chapter.2}%
+\contentsline {section}{RE: Objectives}{21}{section*.13}%
+\contentsline {subsection}{Ticketing system}{21}{section*.15}%
+\contentsline {subsection}{Route-finding}{22}{section*.16}%
+\contentsline {subsection}{Virtual board}{22}{section*.17}%
+\contentsline {subsection}{Rail system modeling}{22}{section*.18}%
+\contentsline {section}{RE: Stakeholders}{23}{section*.19}%
+\contentsline {subsection}{Internal}{23}{section*.20}%
+\contentsline {subsubsection}{Human}{23}{section*.21}%
+\contentsline {subsubsection}{Human}{23}{section*.22}%
+\contentsline {subsection}{External}{23}{section*.23}%
+\contentsline {subsubsection}{Human}{23}{section*.24}%
+\contentsline {subsubsection}{Non-human}{23}{section*.25}%
+\contentsline {section}{Component Diagram}{24}{section*.26}%
+\contentsline {subsection}{User authentication}{25}{section*.28}%
+\contentsline {subsubsection}{Registration}{26}{section*.29}%
+\contentsline {subsubsection}{Login}{32}{section*.30}%
+\contentsline {subsubsection}{Logout}{36}{section*.31}%
+\contentsline {subsection}{User management}{39}{section*.32}%
+\contentsline {subsubsection}{Account deletion}{40}{section*.33}%
+\contentsline {subsubsection}{Account data view}{43}{section*.34}%
+\contentsline {subsubsection}{Account data change}{46}{section*.35}%
+\contentsline {subsubsection}{Reset password}{53}{section*.36}%
+\contentsline {subsection}{Ticketing management}{60}{section*.37}%
+\contentsline {subsubsection}{View Ticket Details}{61}{section*.38}%
+\contentsline {subsubsection}{Ticket purchase}{64}{section*.39}%
+\contentsline {subsubsection}{Ticket cancellation}{68}{section*.40}%
+\contentsline {subsubsection}{Ticket history}{72}{section*.41}%
+\contentsline {subsection}{Path finding}{75}{section*.42}%
+\contentsline {subsubsection}{Find Path}{76}{section*.43}%
+\contentsline {subsubsection}{Purchase Tickets in path}{81}{section*.44}%
+\contentsline {subsubsection}{View Stations in path}{86}{section*.45}%
+\contentsline {subsection}{Info view}{89}{section*.46}%
+\contentsline {subsubsection}{View Train and Station Details}{90}{section*.47}%
+\contentsline {subsubsection}{Search Info}{94}{section*.48}%
+\contentsline {subsubsection}{View Map}{98}{section*.49}%
+\contentsline {subsection}{Network management}{101}{section*.50}%
+\contentsline {subsubsection}{View Network Elements}{102}{section*.51}%
+\contentsline {subsubsection}{Insert Station Data}{105}{section*.52}%
+\contentsline {subsubsection}{Insert Junction Data}{108}{section*.53}%
+\contentsline {subsubsection}{Insert Line Data}{111}{section*.54}%
+\contentsline {subsubsection}{Create Station}{114}{section*.55}%
+\contentsline {subsubsection}{Create Junction}{117}{section*.56}%
+\contentsline {subsubsection}{Create Line}{120}{section*.57}%
+\contentsline {subsubsection}{Edit Station}{123}{section*.58}%
+\contentsline {subsubsection}{Edit Junction}{126}{section*.59}%
+\contentsline {subsubsection}{Edit Line}{129}{section*.60}%
+\contentsline {subsubsection}{Delete Station}{132}{section*.61}%
+\contentsline {subsubsection}{Delete Junction}{135}{section*.62}%
+\contentsline {subsubsection}{Delete Line}{138}{section*.63}%
+\contentsline {subsection}{Service management}{141}{section*.64}%
+\contentsline {subsubsection}{Defining a Train Type}{142}{section*.65}%
+\contentsline {subsubsection}{Registering a Service Type}{145}{section*.66}%
+\contentsline {subsubsection}{Create Service Request}{149}{section*.67}%
+\contentsline {subsubsection}{Service Request Review}{154}{section*.68}%
+\contentsline {section}{Class Diagram}{158}{section*.70}%

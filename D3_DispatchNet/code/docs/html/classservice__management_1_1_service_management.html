@@ -118,9 +118,384 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classservice__
   <div class="headertitle"><div class="title">service_management.ServiceManagement Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A management class that provides functionality to edit the network. Maintains the collections of service sets, service requests, service types, and train types that make up the rail network.  
+ <a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a714e185201b06855b7ab8bd98ba1061b" id="r_a714e185201b06855b7ab8bd98ba1061b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a714e185201b06855b7ab8bd98ba1061b">addServiceRequest</a> (<a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> serviceSet)</td></tr>
+<tr class="memdesc:a714e185201b06855b7ab8bd98ba1061b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits a new service request pending approval. The service set is stored in the requests map with PendingApproval status.  <br /></td></tr>
+<tr class="memitem:ac4a450102407c9feb5d4f4b47d11a6bf" id="r_ac4a450102407c9feb5d4f4b47d11a6bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac4a450102407c9feb5d4f4b47d11a6bf">approveServiceRequest</a> (String id)</td></tr>
+<tr class="memdesc:ac4a450102407c9feb5d4f4b47d11a6bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approves a pending service request and promotes it to an active service set. The service is moved from the requests map to the active service sets map and its status is updated to Effective.  <br /></td></tr>
+<tr class="memitem:aee34d1a6268f7025c719108c5e579226" id="r_aee34d1a6268f7025c719108c5e579226"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee34d1a6268f7025c719108c5e579226">rejectServiceRequest</a> (String id)</td></tr>
+<tr class="memdesc:aee34d1a6268f7025c719108c5e579226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rejects and removes a pending service request. The service set is removed from the requests map and discarded.  <br /></td></tr>
+<tr class="memitem:a278a070667bea1b8fc355b2c57c00723" id="r_a278a070667bea1b8fc355b2c57c00723"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a278a070667bea1b8fc355b2c57c00723">addTrainType</a> (<a class="el" href="classservice__management_1_1_train_type.html">TrainType</a> trainType)</td></tr>
+<tr class="memdesc:a278a070667bea1b8fc355b2c57c00723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new train type in the network.  <br /></td></tr>
+<tr class="memitem:a39840bb8f6c5cb1a1cfad1619efe4d26" id="r_a39840bb8f6c5cb1a1cfad1619efe4d26"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a39840bb8f6c5cb1a1cfad1619efe4d26">addServiceType</a> (<a class="el" href="classservice__management_1_1_service_type.html">ServiceType</a> serviceType)</td></tr>
+<tr class="memdesc:a39840bb8f6c5cb1a1cfad1619efe4d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new service type.  <br /></td></tr>
+<tr class="memitem:a83a7ad88a2dc8277c272b6999fbfd328" id="r_a83a7ad88a2dc8277c272b6999fbfd328"><td class="memItemLeft">Map&lt; String, <a class="el" href="classservice__management_1_1_train_type.html">TrainType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a83a7ad88a2dc8277c272b6999fbfd328">getTrainTypes</a> ()</td></tr>
+<tr class="memdesc:a83a7ad88a2dc8277c272b6999fbfd328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all registered train types.  <br /></td></tr>
+<tr class="memitem:a67db59b53cbf1114c09c4609d5561efd" id="r_a67db59b53cbf1114c09c4609d5561efd"><td class="memItemLeft">Map&lt; String, <a class="el" href="classservice__management_1_1_service_type.html">ServiceType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a67db59b53cbf1114c09c4609d5561efd">getServiceTypes</a> ()</td></tr>
+<tr class="memdesc:a67db59b53cbf1114c09c4609d5561efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all registered service types.  <br /></td></tr>
+<tr class="memitem:a8cbf688f37a01305f73e7f029bbf54f0" id="r_a8cbf688f37a01305f73e7f029bbf54f0"><td class="memItemLeft">Map&lt; String, <a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8cbf688f37a01305f73e7f029bbf54f0">getServiceSets</a> ()</td></tr>
+<tr class="memdesc:a8cbf688f37a01305f73e7f029bbf54f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all registered active service sets.  <br /></td></tr>
+<tr class="memitem:a380f585558decbd8a5836a4d7861e512" id="r_a380f585558decbd8a5836a4d7861e512"><td class="memItemLeft">Map&lt; String, <a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a380f585558decbd8a5836a4d7861e512">getServiceRequests</a> ()</td></tr>
+<tr class="memdesc:a380f585558decbd8a5836a4d7861e512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all registered active service sets.  <br /></td></tr>
+<tr class="memitem:a0483350bc1fad52b9914841c0771a46b" id="r_a0483350bc1fad52b9914841c0771a46b"><td class="memItemLeft">Optional&lt; <a class="el" href="classservice__management_1_1_train_type.html">TrainType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0483350bc1fad52b9914841c0771a46b">getTrainType</a> (String id)</td></tr>
+<tr class="memdesc:a0483350bc1fad52b9914841c0771a46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a train type by its identifier.  <br /></td></tr>
+<tr class="memitem:a7752e9a9dbd60ee880a3f0bdd29f67e5" id="r_a7752e9a9dbd60ee880a3f0bdd29f67e5"><td class="memItemLeft">Optional&lt; <a class="el" href="classservice__management_1_1_service_type.html">ServiceType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7752e9a9dbd60ee880a3f0bdd29f67e5">getServiceType</a> (String id)</td></tr>
+<tr class="memdesc:a7752e9a9dbd60ee880a3f0bdd29f67e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a service type by its ID.  <br /></td></tr>
+</table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>management class that provides functionality to edit the network </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>A management class that provides functionality to edit the network. Maintains the collections of service sets, service requests, service types, and train types that make up the rail network. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a714e185201b06855b7ab8bd98ba1061b" name="a714e185201b06855b7ab8bd98ba1061b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a714e185201b06855b7ab8bd98ba1061b">&#9670;&#160;</a></span>addServiceRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void service_management.ServiceManagement.addServiceRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a></td>          <td class="paramname"><span class="paramname"><em>serviceSet</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Submits a new service request pending approval. The service set is stored in the requests map with PendingApproval status. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serviceSet</td><td>the <a class="el" href="classservice__management_1_1_service_set.html" title="A Class defining a set of services along a common route.">ServiceSet</a> being requested for addition to the network </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a39840bb8f6c5cb1a1cfad1619efe4d26" name="a39840bb8f6c5cb1a1cfad1619efe4d26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39840bb8f6c5cb1a1cfad1619efe4d26">&#9670;&#160;</a></span>addServiceType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void service_management.ServiceManagement.addServiceType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classservice__management_1_1_service_type.html">ServiceType</a></td>          <td class="paramname"><span class="paramname"><em>serviceType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers a new service type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serviceType</td><td>the <a class="el" href="classservice__management_1_1_service_type.html" title="A Class defining a ServiceType.">ServiceType</a> to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a278a070667bea1b8fc355b2c57c00723" name="a278a070667bea1b8fc355b2c57c00723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a278a070667bea1b8fc355b2c57c00723">&#9670;&#160;</a></span>addTrainType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void service_management.ServiceManagement.addTrainType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classservice__management_1_1_train_type.html">TrainType</a></td>          <td class="paramname"><span class="paramname"><em>trainType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers a new train type in the network. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trainType</td><td>the <a class="el" href="classservice__management_1_1_train_type.html" title="A Class defining a TrainType.">TrainType</a> to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac4a450102407c9feb5d4f4b47d11a6bf" name="ac4a450102407c9feb5d4f4b47d11a6bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a450102407c9feb5d4f4b47d11a6bf">&#9670;&#160;</a></span>approveServiceRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void service_management.ServiceManagement.approveServiceRequest </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Approves a pending service request and promotes it to an active service set. The service is moved from the requests map to the active service sets map and its status is updated to Effective. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the ID of the service request to approve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a380f585558decbd8a5836a4d7861e512" name="a380f585558decbd8a5836a4d7861e512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a380f585558decbd8a5836a4d7861e512">&#9670;&#160;</a></span>getServiceRequests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map&lt; String, <a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> &gt; service_management.ServiceManagement.getServiceRequests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns all registered active service sets. </p>
+<dl class="section return"><dt>Returns</dt><dd>an unmodifiable view of the service sets map </dd></dl>
+
+</div>
+</div>
+<a id="a8cbf688f37a01305f73e7f029bbf54f0" name="a8cbf688f37a01305f73e7f029bbf54f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cbf688f37a01305f73e7f029bbf54f0">&#9670;&#160;</a></span>getServiceSets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map&lt; String, <a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> &gt; service_management.ServiceManagement.getServiceSets </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns all registered active service sets. </p>
+<dl class="section return"><dt>Returns</dt><dd>an unmodifiable view of the service sets map </dd></dl>
+
+</div>
+</div>
+<a id="a7752e9a9dbd60ee880a3f0bdd29f67e5" name="a7752e9a9dbd60ee880a3f0bdd29f67e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7752e9a9dbd60ee880a3f0bdd29f67e5">&#9670;&#160;</a></span>getServiceType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; <a class="el" href="classservice__management_1_1_service_type.html">ServiceType</a> &gt; service_management.ServiceManagement.getServiceType </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves a service type by its ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the ID of the <a class="el" href="classservice__management_1_1_service_type.html" title="A Class defining a ServiceType.">ServiceType</a> to retrieve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an Optional containing the <a class="el" href="classservice__management_1_1_service_type.html" title="A Class defining a ServiceType.">ServiceType</a> with the given ID, or empty if not found </dd></dl>
+
+</div>
+</div>
+<a id="a67db59b53cbf1114c09c4609d5561efd" name="a67db59b53cbf1114c09c4609d5561efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67db59b53cbf1114c09c4609d5561efd">&#9670;&#160;</a></span>getServiceTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map&lt; String, <a class="el" href="classservice__management_1_1_service_type.html">ServiceType</a> &gt; service_management.ServiceManagement.getServiceTypes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns all registered service types. </p>
+<dl class="section return"><dt>Returns</dt><dd>an unmodifiable view of the service types map </dd></dl>
+
+</div>
+</div>
+<a id="a0483350bc1fad52b9914841c0771a46b" name="a0483350bc1fad52b9914841c0771a46b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0483350bc1fad52b9914841c0771a46b">&#9670;&#160;</a></span>getTrainType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; <a class="el" href="classservice__management_1_1_train_type.html">TrainType</a> &gt; service_management.ServiceManagement.getTrainType </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves a train type by its identifier. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the identifier of the <a class="el" href="classservice__management_1_1_train_type.html" title="A Class defining a TrainType.">TrainType</a> to retrieve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an Optional containing the <a class="el" href="classservice__management_1_1_train_type.html" title="A Class defining a TrainType.">TrainType</a> with the given identifier, or empty if not found </dd></dl>
+
+</div>
+</div>
+<a id="a83a7ad88a2dc8277c272b6999fbfd328" name="a83a7ad88a2dc8277c272b6999fbfd328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a7ad88a2dc8277c272b6999fbfd328">&#9670;&#160;</a></span>getTrainTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map&lt; String, <a class="el" href="classservice__management_1_1_train_type.html">TrainType</a> &gt; service_management.ServiceManagement.getTrainTypes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns all registered train types. </p>
+<dl class="section return"><dt>Returns</dt><dd>an unmodifiable view of the train types map </dd></dl>
+
+</div>
+</div>
+<a id="aee34d1a6268f7025c719108c5e579226" name="aee34d1a6268f7025c719108c5e579226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee34d1a6268f7025c719108c5e579226">&#9670;&#160;</a></span>rejectServiceRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void service_management.ServiceManagement.rejectServiceRequest </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rejects and removes a pending service request. The service set is removed from the requests map and discarded. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the ID of the service request to reject </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/service_management/<a class="el" href="_service_management_8java.html">ServiceManagement.java</a></li>
 </ul>
 </div><!-- contents -->

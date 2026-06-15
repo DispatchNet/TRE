@@ -1,17 +1,38 @@
 \doxysection{src/\+path\+\_\+finding/\+\+Path\+\_\+\+Finding.java File Reference}
 \hypertarget{_path___finding_8java}{}\label{_path___finding_8java}\index{src/path\_finding/Path\_Finding.java@{src/path\_finding/Path\_Finding.java}}
+{\ttfamily import java.\+time.\+temporal.\+Chrono\+Unit.\+MINUTES;}\newline
 {\ttfamily import java.\+time.\+Local\+Time;}\newline
+{\ttfamily import java.\+util.\+Array\+List;}\newline
+{\ttfamily import java.\+util.\+Collections;}\newline
+{\ttfamily import java.\+util.\+Comparator;}\newline
 {\ttfamily import java.\+util.\+List;}\newline
+{\ttfamily import java.\+lang.\+String\+Builder;}\newline
+{\ttfamily import infrastructure.\+Junction;}\newline
+{\ttfamily import user\+\_\+management.\+Passenger;}\newline
+{\ttfamily import user\+\_\+management.\+Anonymous\+User;}\newline
+{\ttfamily import ticketing.\+Ticket;}\newline
+{\ttfamily import service\+\_\+management.\+Service\+Set;}\newline
+{\ttfamily import service\+\_\+management.\+Service\+Step;}\newline
+{\ttfamily import departure.\+Departure;}\newline
+{\ttfamily import main.\+Main;}\newline
+{\ttfamily import user\+\_\+management.\+User\+Management;}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class {\bfseries Passenger}
+class \doxymbox{\hyperlink{classpath__finding_1_1_path___finding}{path\+\_\+finding.\+Path\+\_\+\+Finding}}
 \item 
-class {\bfseries Junction}
+class {\bfseries path\+\_\+finding.\+sort\+By\+Lenght}
+\begin{DoxyCompactList}\small\item\em The comparator that allows the paths to be sorted by sort\+By\+Lenght. \end{DoxyCompactList}\item 
+class {\bfseries path\+\_\+finding.\+sort\+By\+Departure}
+\begin{DoxyCompactList}\small\item\em The comparator that allows the paths to be sorted by departure time. \end{DoxyCompactList}\item 
+class {\bfseries path\+\_\+finding.\+sort\+By\+Arrival}
+\begin{DoxyCompactList}\small\item\em The comparator that allows the paths to be sorted by arrival time. \end{DoxyCompactList}\item 
+class {\bfseries path\+\_\+finding.\+sort\+By\+Cost}
+\begin{DoxyCompactList}\small\item\em The comparator that allows the paths to be sorted by Cost. \end{DoxyCompactList}\item 
+class {\bfseries path\+\_\+finding.\+Path\+Comparator}
+\begin{DoxyCompactList}\small\item\em Complex comparator that allows paths sorting according to a provided \doxylink{enumpath__finding_1_1srt_alg}{srt\+Alg} parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Packages}
+\begin{DoxyCompactItemize}
 \item 
-class {\bfseries Ticket}
-\item 
-enum \doxymbox{\hyperlink{enumsrt_alg}{srt\+Alg}}
-\item 
-class {\bfseries Path\+\_\+\+Finding}
+package \doxymbox{\hyperlink{namespacepath__finding}{path\+\_\+finding}}
 \end{DoxyCompactItemize}

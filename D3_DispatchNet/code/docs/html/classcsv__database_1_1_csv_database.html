@@ -130,10 +130,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6afe10db8cf3efcc18b95e2ef2aab7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads authenticated users from the CSV file.  <br /></td></tr>
 <tr class="memitem:a375c0f5298f3d3f22c4d65f62f9661fc" id="r_a375c0f5298f3d3f22c4d65f62f9661fc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a375c0f5298f3d3f22c4d65f62f9661fc">saveAuthenticatedUsers</a> (List&lt; <a class="el" href="classuser__management_1_1_authenticated_user.html">AuthenticatedUser</a> &gt; users)</td></tr>
 <tr class="memdesc:a375c0f5298f3d3f22c4d65f62f9661fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves authenticated users to the CSV file.  <br /></td></tr>
+<tr class="memitem:a2385a3f62beeaf5d38a2350768527a66" id="r_a2385a3f62beeaf5d38a2350768527a66"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2385a3f62beeaf5d38a2350768527a66">loadTickets</a> (<a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a> userManagement)  throws IOException </td></tr>
+<tr class="memdesc:a2385a3f62beeaf5d38a2350768527a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads ticket records from the CSV file and assigns them to their owners.  <br /></td></tr>
+<tr class="memitem:a4e3774853207830694f2bc5897b4ca4c" id="r_a4e3774853207830694f2bc5897b4ca4c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4e3774853207830694f2bc5897b4ca4c">saveTickets</a> (<a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a> userManagement)</td></tr>
+<tr class="memdesc:a4e3774853207830694f2bc5897b4ca4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves all passenger tickets from <a class="el" href="classuser__management_1_1_user_management.html" title="Class managing the user accounts in the system. Other modules will interact with this class to manage...">UserManagement</a> to the ticket CSV file.  <br /></td></tr>
+<tr class="memitem:a8a8102d625a9dbf113430259c779194e" id="r_a8a8102d625a9dbf113430259c779194e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8a8102d625a9dbf113430259c779194e">saveTickets</a> (List&lt; <a class="el" href="classticketing_1_1_ticket.html">Ticket</a> &gt; tickets)</td></tr>
+<tr class="memdesc:a8a8102d625a9dbf113430259c779194e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves ticket objects to the ticket CSV file.  <br /></td></tr>
 <tr class="memitem:a2ad9f289bfbede41dad278549f2f69a3" id="r_a2ad9f289bfbede41dad278549f2f69a3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2ad9f289bfbede41dad278549f2f69a3">loadNetwork</a> (<a class="el" href="classinfrastructure_1_1_network.html">Network</a> network)</td></tr>
 <tr class="memdesc:a2ad9f289bfbede41dad278549f2f69a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the network data from the CSV files.  <br /></td></tr>
 <tr class="memitem:a10d9e3efca422251e8da0857bdcc178d" id="r_a10d9e3efca422251e8da0857bdcc178d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a10d9e3efca422251e8da0857bdcc178d">saveNetwork</a> (<a class="el" href="classinfrastructure_1_1_network.html">Network</a> network)</td></tr>
 <tr class="memdesc:a10d9e3efca422251e8da0857bdcc178d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the network data to the CSV files.  <br /></td></tr>
+<tr class="memitem:a07d9e98dd45f81b0a3c2589d5cd6617e" id="r_a07d9e98dd45f81b0a3c2589d5cd6617e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a07d9e98dd45f81b0a3c2589d5cd6617e">loadServiceManagement</a> (<a class="el" href="classservice__management_1_1_service_management.html">ServiceManagement</a> serviceManagement, <a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a> userManagement, <a class="el" href="classinfrastructure_1_1_network.html">Network</a> network)</td></tr>
+<tr class="memdesc:a07d9e98dd45f81b0a3c2589d5cd6617e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads all service management data from CSV files. Must be called after <a class="el" href="#a2ad9f289bfbede41dad278549f2f69a3" title="Loads the network data from the CSV files.">loadNetwork()</a> and <a class="el" href="#a6afe10db8cf3efcc18b95e2ef2aab7b7" title="Loads authenticated users from the CSV file.">loadAuthenticatedUsers()</a> so that <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> and <a class="el" href="classuser__management_1_1_train_company.html" title="Class representing a train company, a type of end user who can additionally create service requests a...">TrainCompany</a> references can be resolved.  <br /></td></tr>
+<tr class="memitem:ae27f2460b3870b236118599c4f8f5abd" id="r_ae27f2460b3870b236118599c4f8f5abd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae27f2460b3870b236118599c4f8f5abd">saveServiceManagement</a> (<a class="el" href="classservice__management_1_1_service_management.html">ServiceManagement</a> serviceManagement)</td></tr>
+<tr class="memdesc:ae27f2460b3870b236118599c4f8f5abd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves all service management data to CSV files.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>CSV-based persistence layer for authenticated users and infrastructure data. </p>
@@ -228,6 +238,89 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a07d9e98dd45f81b0a3c2589d5cd6617e" name="a07d9e98dd45f81b0a3c2589d5cd6617e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d9e98dd45f81b0a3c2589d5cd6617e">&#9670;&#160;</a></span>loadServiceManagement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void csv_database.CsvDatabase.loadServiceManagement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classservice__management_1_1_service_management.html">ServiceManagement</a></td>          <td class="paramname"><span class="paramname"><em>serviceManagement</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a></td>          <td class="paramname"><span class="paramname"><em>userManagement</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classinfrastructure_1_1_network.html">Network</a></td>          <td class="paramname"><span class="paramname"><em>network</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads all service management data from CSV files. Must be called after <a class="el" href="#a2ad9f289bfbede41dad278549f2f69a3" title="Loads the network data from the CSV files.">loadNetwork()</a> and <a class="el" href="#a6afe10db8cf3efcc18b95e2ef2aab7b7" title="Loads authenticated users from the CSV file.">loadAuthenticatedUsers()</a> so that <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> and <a class="el" href="classuser__management_1_1_train_company.html" title="Class representing a train company, a type of end user who can additionally create service requests a...">TrainCompany</a> references can be resolved. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serviceManagement</td><td>The <a class="el" href="classservice__management_1_1_service_management.html" title="A management class that provides functionality to edit the network. Maintains the collections of serv...">ServiceManagement</a> instance to populate. </td></tr>
+    <tr><td class="paramname">userManagement</td><td>Used to resolve <a class="el" href="classuser__management_1_1_train_company.html" title="Class representing a train company, a type of end user who can additionally create service requests a...">TrainCompany</a> owners by ID. </td></tr>
+    <tr><td class="paramname">network</td><td>Used to resolve <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> references in ServiceSteps. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2385a3f62beeaf5d38a2350768527a66" name="a2385a3f62beeaf5d38a2350768527a66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2385a3f62beeaf5d38a2350768527a66">&#9670;&#160;</a></span>loadTickets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void csv_database.CsvDatabase.loadTickets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a></td>          <td class="paramname"><span class="paramname"><em>userManagement</em></span></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads ticket records from the CSV file and assigns them to their owners. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userManagement</td><td>The user management instance used to resolve ticket owners. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IOException</td><td>If the ticket CSV file cannot be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a375c0f5298f3d3f22c4d65f62f9661fc" name="a375c0f5298f3d3f22c4d65f62f9661fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a375c0f5298f3d3f22c4d65f62f9661fc">&#9670;&#160;</a></span>saveAuthenticatedUsers()</h2>
 
@@ -288,6 +381,105 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">network</td><td>The network to save. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae27f2460b3870b236118599c4f8f5abd" name="ae27f2460b3870b236118599c4f8f5abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae27f2460b3870b236118599c4f8f5abd">&#9670;&#160;</a></span>saveServiceManagement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void csv_database.CsvDatabase.saveServiceManagement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classservice__management_1_1_service_management.html">ServiceManagement</a></td>          <td class="paramname"><span class="paramname"><em>serviceManagement</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves all service management data to CSV files. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serviceManagement</td><td>The <a class="el" href="classservice__management_1_1_service_management.html" title="A management class that provides functionality to edit the network. Maintains the collections of serv...">ServiceManagement</a> instance to persist. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a8102d625a9dbf113430259c779194e" name="a8a8102d625a9dbf113430259c779194e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a8102d625a9dbf113430259c779194e">&#9670;&#160;</a></span>saveTickets() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void csv_database.CsvDatabase.saveTickets </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classticketing_1_1_ticket.html">Ticket</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>tickets</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves ticket objects to the ticket CSV file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tickets</td><td>The list of tickets to persist. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4e3774853207830694f2bc5897b4ca4c" name="a4e3774853207830694f2bc5897b4ca4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e3774853207830694f2bc5897b4ca4c">&#9670;&#160;</a></span>saveTickets() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void csv_database.CsvDatabase.saveTickets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a></td>          <td class="paramname"><span class="paramname"><em>userManagement</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves all passenger tickets from <a class="el" href="classuser__management_1_1_user_management.html" title="Class managing the user accounts in the system. Other modules will interact with this class to manage...">UserManagement</a> to the ticket CSV file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userManagement</td><td>The user management instance containing tickets to persist. </td></tr>
   </table>
   </dd>
 </dl>

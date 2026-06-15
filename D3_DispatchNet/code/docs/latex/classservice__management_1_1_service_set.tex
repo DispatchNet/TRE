@@ -8,22 +8,24 @@ A Class defining a set of services along a common route.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{classservice__management_1_1_service_set_a11655f275293b525688e381c815592ed}{Service\+Set}} (String id, \doxymbox{\hyperlink{classuser__management_1_1_train_company}{Train\+Company}} company, Service\+Type type, \doxymbox{\hyperlink{enumservice__management_1_1_service_status}{Service\+Status}} status, List$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_step}{Service\+Step}} $>$ steps, List$<$ \doxymbox{\hyperlink{classservice__management_1_1_dispatch}{Dispatch}} $>$ dispatches)
+\doxymbox{\hyperlink{classservice__management_1_1_service_set_a11655f275293b525688e381c815592ed}{Service\+Set}} (String id, \doxymbox{\hyperlink{classuser__management_1_1_train_company}{Train\+Company}} company, \doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}} type, \doxymbox{\hyperlink{enumservice__management_1_1_service_status}{Service\+Status}} status, List$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_step}{Service\+Step}} $>$ steps, List$<$ \doxymbox{\hyperlink{classservice__management_1_1_dispatch}{Dispatch}} $>$ dispatches)
 \begin{DoxyCompactList}\small\item\em Construct a service\+Set. \end{DoxyCompactList}\item 
-\doxymbox{\hyperlink{classservice__management_1_1_service_set_a105bfd07a5baa3818013dd847cedfba7}{Service\+Set}} (\doxymbox{\hyperlink{classuser__management_1_1_train_company}{Train\+Company}} company, Service\+Type type, \doxymbox{\hyperlink{enumservice__management_1_1_service_status}{Service\+Status}} status, List$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_step}{Service\+Step}} $>$ steps, List$<$ \doxymbox{\hyperlink{classservice__management_1_1_dispatch}{Dispatch}} $>$ dispatches)
+\doxymbox{\hyperlink{classservice__management_1_1_service_set_a105bfd07a5baa3818013dd847cedfba7}{Service\+Set}} (\doxymbox{\hyperlink{classuser__management_1_1_train_company}{Train\+Company}} company, \doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}} type, \doxymbox{\hyperlink{enumservice__management_1_1_service_status}{Service\+Status}} status, List$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_step}{Service\+Step}} $>$ steps, List$<$ \doxymbox{\hyperlink{classservice__management_1_1_dispatch}{Dispatch}} $>$ dispatches)
 \begin{DoxyCompactList}\small\item\em Construct a service\+Set without an explicit ID. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classservice__management_1_1_service_set_aac61949ec42c9e40235ae1c2424eeb70}{get\+Id}} ()
+\item 
 \doxymbox{\hyperlink{classuser__management_1_1_train_company}{Train\+Company}} \doxymbox{\hyperlink{classservice__management_1_1_service_set_a19a65e215695ef2bb7d3e570e9603416}{get\+Company}} ()
-\item 
-Service\+Type \doxymbox{\hyperlink{classservice__management_1_1_service_set_a458ff401e0f9ba750462b110850e9913}{get\+Type}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Get this service\textquotesingle{}s operator. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}} \doxymbox{\hyperlink{classservice__management_1_1_service_set_a458ff401e0f9ba750462b110850e9913}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get this service\textquotesingle{}s type. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{enumservice__management_1_1_service_status}{Service\+Status}} \doxymbox{\hyperlink{classservice__management_1_1_service_set_a8418f5211e269399652a213219fb2708}{get\+Status}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em get the status of this service \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classservice__management_1_1_service_set_a3d5d61bb293ba5e8258b50bb9e444b9f}{set\+Status}} (\doxymbox{\hyperlink{enumservice__management_1_1_service_status}{Service\+Status}} status)
-\item 
+\begin{DoxyCompactList}\small\item\em set the status of this service \end{DoxyCompactList}\item 
 List$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_step}{Service\+Step}} $>$ \doxymbox{\hyperlink{classservice__management_1_1_service_set_afd15d489da6e4e70a9579bcfcb60b7a2}{get\+Steps}} ()
 \item 
 List$<$ \doxymbox{\hyperlink{classservice__management_1_1_dispatch}{Dispatch}} $>$ \doxymbox{\hyperlink{classservice__management_1_1_service_set_a2292f4b899af6be80da1c46f07187880}{get\+Dispatches}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get this service\textquotesingle{}s dispatches. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -43,7 +45,7 @@ A Class defining a set of services along a common route.
 \index{ServiceSet@{ServiceSet}!service\_management.ServiceSet@{service\_management.ServiceSet}}
 \doxysubsubsection{\texorpdfstring{ServiceSet()}{ServiceSet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{classservice__management_1_1_service_set_a11655f275293b525688e381c815592ed} 
-service\+\_\+management.\+Service\+Set.\+Service\+Set (\begin{DoxyParamCaption}\item[{String}]{id}{, }\item[{\doxymbox{\hyperlink{classuser__management_1_1_train_company}{Train\+Company}}}]{company}{, }\item[{Service\+Type}]{type}{, }\item[{\doxymbox{\hyperlink{enumservice__management_1_1_service_status}{Service\+Status}}}]{status}{, }\item[{List$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_step}{Service\+Step}} $>$}]{steps}{, }\item[{List$<$ \doxymbox{\hyperlink{classservice__management_1_1_dispatch}{Dispatch}} $>$}]{dispatches}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+service\+\_\+management.\+Service\+Set.\+Service\+Set (\begin{DoxyParamCaption}\item[{String}]{id}{, }\item[{\doxymbox{\hyperlink{classuser__management_1_1_train_company}{Train\+Company}}}]{company}{, }\item[{\doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}}}]{type}{, }\item[{\doxymbox{\hyperlink{enumservice__management_1_1_service_status}{Service\+Status}}}]{status}{, }\item[{List$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_step}{Service\+Step}} $>$}]{steps}{, }\item[{List$<$ \doxymbox{\hyperlink{classservice__management_1_1_dispatch}{Dispatch}} $>$}]{dispatches}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -57,7 +59,7 @@ Construct a service\+Set.
 \hline
 {\em type} & This service\textquotesingle{}s type \\
 \hline
-{\em status} & This services\textquotesingle{}s status (PENDING REVIEW) \\
+{\em status} & This services\textquotesingle{}s status \\
 \hline
 {\em steps} & This service\textquotesingle{}s steps \\
 \hline
@@ -68,7 +70,7 @@ Construct a service\+Set.
 \index{ServiceSet@{ServiceSet}!service\_management.ServiceSet@{service\_management.ServiceSet}}
 \doxysubsubsection{\texorpdfstring{ServiceSet()}{ServiceSet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \label{classservice__management_1_1_service_set_a105bfd07a5baa3818013dd847cedfba7} 
-service\+\_\+management.\+Service\+Set.\+Service\+Set (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_train_company}{Train\+Company}}}]{company}{, }\item[{Service\+Type}]{type}{, }\item[{\doxymbox{\hyperlink{enumservice__management_1_1_service_status}{Service\+Status}}}]{status}{, }\item[{List$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_step}{Service\+Step}} $>$}]{steps}{, }\item[{List$<$ \doxymbox{\hyperlink{classservice__management_1_1_dispatch}{Dispatch}} $>$}]{dispatches}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+service\+\_\+management.\+Service\+Set.\+Service\+Set (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_train_company}{Train\+Company}}}]{company}{, }\item[{\doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}}}]{type}{, }\item[{\doxymbox{\hyperlink{enumservice__management_1_1_service_status}{Service\+Status}}}]{status}{, }\item[{List$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_step}{Service\+Step}} $>$}]{steps}{, }\item[{List$<$ \doxymbox{\hyperlink{classservice__management_1_1_dispatch}{Dispatch}} $>$}]{dispatches}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -80,7 +82,7 @@ Construct a service\+Set without an explicit ID.
 \hline
 {\em type} & This service\textquotesingle{}s type \\
 \hline
-{\em status} & This services\textquotesingle{}s status (PENDING REVIEW) \\
+{\em status} & This services\textquotesingle{}s status \\
 \hline
 {\em steps} & This service\textquotesingle{}s steps \\
 \hline
@@ -98,7 +100,11 @@ Construct a service\+Set without an explicit ID.
 {\footnotesize\ttfamily \label{classservice__management_1_1_service_set_a19a65e215695ef2bb7d3e570e9603416} 
 \doxymbox{\hyperlink{classuser__management_1_1_train_company}{Train\+Company}} service\+\_\+management.\+Service\+Set.\+get\+Company (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Get this service\textquotesingle{}s operator \begin{DoxyReturn}{Returns}
+
+
+Get this service\textquotesingle{}s operator. 
+
+\begin{DoxyReturn}{Returns}
 the company 
 \end{DoxyReturn}
 \Hypertarget{classservice__management_1_1_service_set_a2292f4b899af6be80da1c46f07187880}\index{service\_management.ServiceSet@{service\_management.ServiceSet}!getDispatches@{getDispatches}}
@@ -107,25 +113,45 @@ the company
 {\footnotesize\ttfamily \label{classservice__management_1_1_service_set_a2292f4b899af6be80da1c46f07187880} 
 List$<$ \doxymbox{\hyperlink{classservice__management_1_1_dispatch}{Dispatch}} $>$ service\+\_\+management.\+Service\+Set.\+get\+Dispatches (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Get this service\textquotesingle{}s dispatches. \begin{DoxyReturn}{Returns}
+
+
+Get this service\textquotesingle{}s dispatches. 
+
+\begin{DoxyReturn}{Returns}
 An immutable list of this service\textquotesingle{}s dispatches 
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
 \doxylink{classservice__management_1_1_dispatch}{Dispatch} 
 \end{DoxySeeAlso}
+\Hypertarget{classservice__management_1_1_service_set_aac61949ec42c9e40235ae1c2424eeb70}\index{service\_management.ServiceSet@{service\_management.ServiceSet}!getId@{getId}}
+\index{getId@{getId}!service\_management.ServiceSet@{service\_management.ServiceSet}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_set_aac61949ec42c9e40235ae1c2424eeb70} 
+String service\+\_\+management.\+Service\+Set.\+get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+@breif Get this service\textquotesingle{}s unique ID \begin{DoxyReturn}{Returns}
+the ID 
+\end{DoxyReturn}
 \Hypertarget{classservice__management_1_1_service_set_a8418f5211e269399652a213219fb2708}\index{service\_management.ServiceSet@{service\_management.ServiceSet}!getStatus@{getStatus}}
 \index{getStatus@{getStatus}!service\_management.ServiceSet@{service\_management.ServiceSet}}
 \doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
 {\footnotesize\ttfamily \label{classservice__management_1_1_service_set_a8418f5211e269399652a213219fb2708} 
 \doxymbox{\hyperlink{enumservice__management_1_1_service_status}{Service\+Status}} service\+\_\+management.\+Service\+Set.\+get\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+get the status of this service 
+
+\begin{DoxyReturn}{Returns}
+the service\textquotesingle{}s status 
+\end{DoxyReturn}
 \Hypertarget{classservice__management_1_1_service_set_afd15d489da6e4e70a9579bcfcb60b7a2}\index{service\_management.ServiceSet@{service\_management.ServiceSet}!getSteps@{getSteps}}
 \index{getSteps@{getSteps}!service\_management.ServiceSet@{service\_management.ServiceSet}}
 \doxysubsubsection{\texorpdfstring{getSteps()}{getSteps()}}
 {\footnotesize\ttfamily \label{classservice__management_1_1_service_set_afd15d489da6e4e70a9579bcfcb60b7a2} 
 List$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_step}{Service\+Step}} $>$ service\+\_\+management.\+Service\+Set.\+get\+Steps (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Get this service\textquotesingle{}s steps. \begin{DoxyReturn}{Returns}
+@breif Get this service\textquotesingle{}s steps. \begin{DoxyReturn}{Returns}
 An immutable ordered list of the steps that make up this service 
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
@@ -135,9 +161,13 @@ An immutable ordered list of the steps that make up this service
 \index{getType@{getType}!service\_management.ServiceSet@{service\_management.ServiceSet}}
 \doxysubsubsection{\texorpdfstring{getType()}{getType()}}
 {\footnotesize\ttfamily \label{classservice__management_1_1_service_set_a458ff401e0f9ba750462b110850e9913} 
-Service\+Type service\+\_\+management.\+Service\+Set.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}} service\+\_\+management.\+Service\+Set.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Get this service\textquotesingle{}s type \begin{DoxyReturn}{Returns}
+
+
+Get this service\textquotesingle{}s type. 
+
+\begin{DoxyReturn}{Returns}
 the type 
 \end{DoxyReturn}
 \Hypertarget{classservice__management_1_1_service_set_a3d5d61bb293ba5e8258b50bb9e444b9f}\index{service\_management.ServiceSet@{service\_management.ServiceSet}!setStatus@{setStatus}}
@@ -146,6 +176,15 @@ the type
 {\footnotesize\ttfamily \label{classservice__management_1_1_service_set_a3d5d61bb293ba5e8258b50bb9e444b9f} 
 void service\+\_\+management.\+Service\+Set.\+set\+Status (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{enumservice__management_1_1_service_status}{Service\+Status}}}]{status}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+set the status of this service 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & the new status for this service \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}

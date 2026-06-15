@@ -140,6 +140,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acc19eed0bd6c137afba3df938aaa5e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty Constructor for <a class="el" href="classuser__management_1_1_authenticated_user.html" title="Abstract class representing an authenticated user in the system, containing their credentials and use...">AuthenticatedUser</a> class.  <br /></td></tr>
 <tr class="memitem:ae9a55c997dc9d8c12936fa302f5d4e19" id="r_ae9a55c997dc9d8c12936fa302f5d4e19"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae9a55c997dc9d8c12936fa302f5d4e19">AuthenticatedUser</a> (String username, String email, String password, <a class="el" href="enumuser__management_1_1_user_type.html">UserType</a> userType, <a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a> userManagement)</td></tr>
 <tr class="memdesc:ae9a55c997dc9d8c12936fa302f5d4e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classuser__management_1_1_authenticated_user.html" title="Abstract class representing an authenticated user in the system, containing their credentials and use...">AuthenticatedUser</a> class.  <br /></td></tr>
+<tr class="memitem:af38ca69953beb17d8e20474ae5548a62" id="r_af38ca69953beb17d8e20474ae5548a62"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af38ca69953beb17d8e20474ae5548a62">AuthenticatedUser</a> (String id, String username, String email, String password, <a class="el" href="enumuser__management_1_1_user_type.html">UserType</a> userType, <a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a> userManagement)</td></tr>
+<tr class="memdesc:af38ca69953beb17d8e20474ae5548a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classuser__management_1_1_authenticated_user.html" title="Abstract class representing an authenticated user in the system, containing their credentials and use...">AuthenticatedUser</a> class with explicit id.  <br /></td></tr>
+<tr class="memitem:a0fc57b8d0f424172ac74a2e0fc6296b0" id="r_a0fc57b8d0f424172ac74a2e0fc6296b0"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a0fc57b8d0f424172ac74a2e0fc6296b0">getId</a> ()</td></tr>
+<tr class="memdesc:a0fc57b8d0f424172ac74a2e0fc6296b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unique id of the authenticated user.  <br /></td></tr>
 <tr class="memitem:a09d3ea4888c58c57a2f381fb32034d42" id="r_a09d3ea4888c58c57a2f381fb32034d42"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a09d3ea4888c58c57a2f381fb32034d42">getUsername</a> ()</td></tr>
 <tr class="memdesc:a09d3ea4888c58c57a2f381fb32034d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the username of the authenticated user.  <br /></td></tr>
 <tr class="memitem:abea2507b50591d83e3a2b0f3637fe189" id="r_abea2507b50591d83e3a2b0f3637fe189"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#abea2507b50591d83e3a2b0f3637fe189">getEmail</a> ()</td></tr>
@@ -169,7 +173,7 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>Abstract class representing an authenticated user in the system, containing their credentials and user type. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acc19eed0bd6c137afba3df938aaa5e7f" name="acc19eed0bd6c137afba3df938aaa5e7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc19eed0bd6c137afba3df938aaa5e7f">&#9670;&#160;</a></span>AuthenticatedUser() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acc19eed0bd6c137afba3df938aaa5e7f">&#9670;&#160;</a></span>AuthenticatedUser() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,7 +200,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="ae9a55c997dc9d8c12936fa302f5d4e19" name="ae9a55c997dc9d8c12936fa302f5d4e19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9a55c997dc9d8c12936fa302f5d4e19">&#9670;&#160;</a></span>AuthenticatedUser() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a55c997dc9d8c12936fa302f5d4e19">&#9670;&#160;</a></span>AuthenticatedUser() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,6 +244,67 @@ Protected Attributes</h2></td></tr>
 <p>Constructor for <a class="el" href="classuser__management_1_1_authenticated_user.html" title="Abstract class representing an authenticated user in the system, containing their credentials and use...">AuthenticatedUser</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">username</td><td>The username of the authenticated user </td></tr>
+    <tr><td class="paramname">email</td><td>The email of the authenticated user </td></tr>
+    <tr><td class="paramname">password</td><td>The password of the authenticated user </td></tr>
+    <tr><td class="paramname">userType</td><td>The type of the authenticated user </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af38ca69953beb17d8e20474ae5548a62" name="af38ca69953beb17d8e20474ae5548a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af38ca69953beb17d8e20474ae5548a62">&#9670;&#160;</a></span>AuthenticatedUser() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">user_management.AuthenticatedUser.AuthenticatedUser </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>username</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>email</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>password</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="enumuser__management_1_1_user_type.html">UserType</a></td>          <td class="paramname"><span class="paramname"><em>userType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classuser__management_1_1_user_management.html">UserManagement</a></td>          <td class="paramname"><span class="paramname"><em>userManagement</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor for <a class="el" href="classuser__management_1_1_authenticated_user.html" title="Abstract class representing an authenticated user in the system, containing their credentials and use...">AuthenticatedUser</a> class with explicit id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The unique identifier of the authenticated user </td></tr>
     <tr><td class="paramname">username</td><td>The username of the authenticated user </td></tr>
     <tr><td class="paramname">email</td><td>The email of the authenticated user </td></tr>
     <tr><td class="paramname">password</td><td>The password of the authenticated user </td></tr>
@@ -310,6 +375,34 @@ Protected Attributes</h2></td></tr>
 
 <p>Gets the email of the authenticated user. </p>
 <dl class="section return"><dt>Returns</dt><dd>The email of the authenticated user </dd></dl>
+
+</div>
+</div>
+<a id="a0fc57b8d0f424172ac74a2e0fc6296b0" name="a0fc57b8d0f424172ac74a2e0fc6296b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc57b8d0f424172ac74a2e0fc6296b0">&#9670;&#160;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String user_management.AuthenticatedUser.getId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the unique id of the authenticated user. </p>
+<dl class="section return"><dt>Returns</dt><dd>The unique identifier </dd></dl>
 
 </div>
 </div>

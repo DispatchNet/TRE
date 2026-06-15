@@ -2,8 +2,10 @@ var classuser__management_1_1_authenticated_user =
 [
     [ "AuthenticatedUser", "classuser__management_1_1_authenticated_user.html#acc19eed0bd6c137afba3df938aaa5e7f", null ],
     [ "AuthenticatedUser", "classuser__management_1_1_authenticated_user.html#ae9a55c997dc9d8c12936fa302f5d4e19", null ],
+    [ "AuthenticatedUser", "classuser__management_1_1_authenticated_user.html#af38ca69953beb17d8e20474ae5548a62", null ],
     [ "equals", "classuser__management_1_1_authenticated_user.html#a4ed89b9bcafa4f86a1637b251212e825", null ],
     [ "getEmail", "classuser__management_1_1_authenticated_user.html#abea2507b50591d83e3a2b0f3637fe189", null ],
+    [ "getId", "classuser__management_1_1_authenticated_user.html#a0fc57b8d0f424172ac74a2e0fc6296b0", null ],
     [ "getPassword", "classuser__management_1_1_authenticated_user.html#ab972efc0820664bae364120195cc502a", null ],
     [ "getUsername", "classuser__management_1_1_authenticated_user.html#a09d3ea4888c58c57a2f381fb32034d42", null ],
     [ "getUserType", "classuser__management_1_1_authenticated_user.html#a618015e999551dec58a497731a03048b", null ],

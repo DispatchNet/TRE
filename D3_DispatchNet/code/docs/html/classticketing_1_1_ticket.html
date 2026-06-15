@@ -119,32 +119,60 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classticketing
 </div><!--header-->
 <div class="contents">
 
-<p>Class representing a ticket, containing information about the owner, fist departure and last valid arrival.  
+<p>Class representing a ticket, containing information about the owner, first departure and last valid arrival.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:TicketStatus" id="r_TicketStatus"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><b>TicketStatus</b></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a52fe3f83b6d55410afe64039944ee4b7" id="r_a52fe3f83b6d55410afe64039944ee4b7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a52fe3f83b6d55410afe64039944ee4b7">Ticket</a> (<a class="el" href="classuser__management_1_1_passenger.html">Passenger</a> owner, Departure departure, <a class="el" href="classservice__management_1_1_service_step.html">ServiceStep</a> lastStep)</td></tr>
-<tr class="memdesc:a52fe3f83b6d55410afe64039944ee4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classticketing_1_1_ticket.html" title="Class representing a ticket, containing information about the owner, fist departure and last valid ar...">Ticket</a> class @description Constructs a ticket enforcing the mandatory owner, departure and step information.  <br /></td></tr>
+<tr class="memdesc:a52fe3f83b6d55410afe64039944ee4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classticketing_1_1_ticket.html" title="Class representing a ticket, containing information about the owner, first departure and last valid a...">Ticket</a> class.  <br /></td></tr>
+<tr class="memitem:ac768a04be71f6215f890aeebf64d95cd" id="r_ac768a04be71f6215f890aeebf64d95cd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac768a04be71f6215f890aeebf64d95cd">Ticket</a> (String id, <a class="el" href="classuser__management_1_1_passenger.html">Passenger</a> owner, Departure departure, <a class="el" href="classservice__management_1_1_service_step.html">ServiceStep</a> lastStep)</td></tr>
+<tr class="memdesc:ac768a04be71f6215f890aeebf64d95cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classticketing_1_1_ticket.html" title="Class representing a ticket, containing information about the owner, first departure and last valid a...">Ticket</a> class with explicit id.  <br /></td></tr>
+<tr class="memitem:a5bc4cad65790fc0206a80899a4777f33" id="r_a5bc4cad65790fc0206a80899a4777f33"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5bc4cad65790fc0206a80899a4777f33">Ticket</a> (String id, <a class="el" href="classuser__management_1_1_passenger.html">Passenger</a> owner, String description, TicketStatus status, List&lt; String &gt; history)</td></tr>
+<tr class="memdesc:a5bc4cad65790fc0206a80899a4777f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor used when loading tickets from storage.  <br /></td></tr>
+<tr class="memitem:a83e95a6ee6a8cdcfb5abb98e6c00bc69" id="r_a83e95a6ee6a8cdcfb5abb98e6c00bc69"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a83e95a6ee6a8cdcfb5abb98e6c00bc69">getId</a> ()</td></tr>
+<tr class="memdesc:a83e95a6ee6a8cdcfb5abb98e6c00bc69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unique ticket identifier.  <br /></td></tr>
 <tr class="memitem:a083a6196da9fceff79a3e3f001dcbaf0" id="r_a083a6196da9fceff79a3e3f001dcbaf0"><td class="memItemLeft"><a class="el" href="classuser__management_1_1_passenger.html">Passenger</a>&#160;</td><td class="memItemRight"><a class="el" href="#a083a6196da9fceff79a3e3f001dcbaf0">getOwner</a> ()</td></tr>
 <tr class="memdesc:a083a6196da9fceff79a3e3f001dcbaf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Owner getter.  <br /></td></tr>
 <tr class="memitem:a2bd87ede0ae1609713761d4b02824fa9" id="r_a2bd87ede0ae1609713761d4b02824fa9"><td class="memItemLeft">Departure&#160;</td><td class="memItemRight"><a class="el" href="#a2bd87ede0ae1609713761d4b02824fa9">getDeparture</a> ()</td></tr>
 <tr class="memdesc:a2bd87ede0ae1609713761d4b02824fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Departure getter.  <br /></td></tr>
+<tr class="memitem:a044a154a6f87490a15bd5c5614ef9257" id="r_a044a154a6f87490a15bd5c5614ef9257"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a044a154a6f87490a15bd5c5614ef9257">getDescription</a> ()</td></tr>
+<tr class="memdesc:a044a154a6f87490a15bd5c5614ef9257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ticket description.  <br /></td></tr>
+<tr class="memitem:ab247737807d37826946ed71ce326d8ec" id="r_ab247737807d37826946ed71ce326d8ec"><td class="memItemLeft">TicketStatus&#160;</td><td class="memItemRight"><a class="el" href="#ab247737807d37826946ed71ce326d8ec">getStatus</a> ()</td></tr>
+<tr class="memdesc:ab247737807d37826946ed71ce326d8ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current ticket status.  <br /></td></tr>
+<tr class="memitem:a5abdb3363093798e89d3870e722053a2" id="r_a5abdb3363093798e89d3870e722053a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5abdb3363093798e89d3870e722053a2">setStatus</a> (TicketStatus status)</td></tr>
+<tr class="memdesc:a5abdb3363093798e89d3870e722053a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the ticket status.  <br /></td></tr>
+<tr class="memitem:adb633a69df5ca346af8db124b11ca0f5" id="r_adb633a69df5ca346af8db124b11ca0f5"><td class="memItemLeft">boolean&#160;</td><td class="memItemRight"><a class="el" href="#adb633a69df5ca346af8db124b11ca0f5">isActive</a> ()</td></tr>
+<tr class="memdesc:adb633a69df5ca346af8db124b11ca0f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when the ticket is currently active.  <br /></td></tr>
+<tr class="memitem:a43e08cc9888a3642fac7de85dc22fdc0" id="r_a43e08cc9888a3642fac7de85dc22fdc0"><td class="memItemLeft">List&lt; String &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a43e08cc9888a3642fac7de85dc22fdc0">getHistory</a> ()</td></tr>
+<tr class="memdesc:a43e08cc9888a3642fac7de85dc22fdc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the list of history events for this ticket.  <br /></td></tr>
+<tr class="memitem:a12cc8e2ad48e38d1abfcde83c93d0c64" id="r_a12cc8e2ad48e38d1abfcde83c93d0c64"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a12cc8e2ad48e38d1abfcde83c93d0c64">addHistoryEntry</a> (String entry)</td></tr>
+<tr class="memdesc:a12cc8e2ad48e38d1abfcde83c93d0c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entry to the ticket lifecycle history.  <br /></td></tr>
 <tr class="memitem:ad76c3c9605817aa62ae34998044192da" id="r_ad76c3c9605817aa62ae34998044192da"><td class="memItemLeft"><a class="el" href="classservice__management_1_1_service_step.html">ServiceStep</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad76c3c9605817aa62ae34998044192da">getLastStep</a> ()</td></tr>
 <tr class="memdesc:ad76c3c9605817aa62ae34998044192da"><td class="mdescLeft">&#160;</td><td class="mdescRight">lastStep getter  <br /></td></tr>
 <tr class="memitem:af4e3d7dca5152d6ee51fc133d405bea1" id="r_af4e3d7dca5152d6ee51fc133d405bea1"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af4e3d7dca5152d6ee51fc133d405bea1">getCost</a> ()</td></tr>
-<tr class="memdesc:af4e3d7dca5152d6ee51fc133d405bea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">evalutes the total cost of the ticket @description uses the depature and lastStep information to measure the distance covered and which train is used, then computes the resulting price  <br /></td></tr>
+<tr class="memdesc:af4e3d7dca5152d6ee51fc133d405bea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">evalutes the total cost of the ticket  <br /></td></tr>
 <tr class="memitem:ab3e701c7f5363067e7fe6427999ee461" id="r_ab3e701c7f5363067e7fe6427999ee461"><td class="memItemLeft"><a class="el" href="classinfrastructure_1_1_junction.html">Junction</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab3e701c7f5363067e7fe6427999ee461">getJunction</a> ()</td></tr>
+<tr class="memdesc:ab3e701c7f5363067e7fe6427999ee461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the last junction the train is valid for.  <br /></td></tr>
+<tr class="memitem:a774cdfb4683b4d561924b2ddb54f6564" id="r_a774cdfb4683b4d561924b2ddb54f6564"><td class="memItemLeft">boolean&#160;</td><td class="memItemRight"><a class="el" href="#a774cdfb4683b4d561924b2ddb54f6564">equals</a> (Object o)</td></tr>
+<tr class="memitem:a1d59e9b29721a17631a2bb06e96dd88c" id="r_a1d59e9b29721a17631a2bb06e96dd88c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1d59e9b29721a17631a2bb06e96dd88c">hashCode</a> ()</td></tr>
+<tr class="memitem:a64338eb23e1043207ca0abfbb424fc73" id="r_a64338eb23e1043207ca0abfbb424fc73"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a64338eb23e1043207ca0abfbb424fc73">getLength</a> ()</td></tr>
+<tr class="memdesc:a64338eb23e1043207ca0abfbb424fc73"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the lenght in meters of the ticket's course  <br /></td></tr>
+<tr class="memitem:a5d1e7aafec66df33b8b0c475ab5c1f6a" id="r_a5d1e7aafec66df33b8b0c475ab5c1f6a"><td class="memItemLeft">LocalTime&#160;</td><td class="memItemRight"><a class="el" href="#a5d1e7aafec66df33b8b0c475ab5c1f6a">getArrival</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac22494c9fcd38b4516d8d34c597057d4" id="r_ac22494c9fcd38b4516d8d34c597057d4"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac22494c9fcd38b4516d8d34c597057d4">main</a> ()</td></tr>
+<tr class="memitem:a3d12e8caedcb466ea29d8e1b8eec2faf" id="r_a3d12e8caedcb466ea29d8e1b8eec2faf"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3d12e8caedcb466ea29d8e1b8eec2faf">main</a> (String[] args)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class representing a ticket, containing information about the owner, fist departure and last valid arrival. </p>
+<div class="textblock"><p>Class representing a ticket, containing information about the owner, first departure and last valid arrival. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a52fe3f83b6d55410afe64039944ee4b7" name="a52fe3f83b6d55410afe64039944ee4b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52fe3f83b6d55410afe64039944ee4b7">&#9670;&#160;</a></span>Ticket()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a52fe3f83b6d55410afe64039944ee4b7">&#9670;&#160;</a></span>Ticket() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,8 +203,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructor of <a class="el" href="classticketing_1_1_ticket.html" title="Class representing a ticket, containing information about the owner, fist departure and last valid ar...">Ticket</a> class @description Constructs a ticket enforcing the mandatory owner, departure and step information. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Constructor of <a class="el" href="classticketing_1_1_ticket.html" title="Class representing a ticket, containing information about the owner, first departure and last valid a...">Ticket</a> class. </p>
+<p>Constructs a ticket enforcing the mandatory owner, departure and step information </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">owner</td><td>The owner of the ticket </td></tr>
     <tr><td class="paramname">departure</td><td>The first station and train the ticket is valid from </td></tr>
@@ -190,7 +218,199 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac768a04be71f6215f890aeebf64d95cd" name="ac768a04be71f6215f890aeebf64d95cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac768a04be71f6215f890aeebf64d95cd">&#9670;&#160;</a></span>Ticket() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ticketing.Ticket.Ticket </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classuser__management_1_1_passenger.html">Passenger</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Departure</td>          <td class="paramname"><span class="paramname"><em>departure</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classservice__management_1_1_service_step.html">ServiceStep</a></td>          <td class="paramname"><span class="paramname"><em>lastStep</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor of <a class="el" href="classticketing_1_1_ticket.html" title="Class representing a ticket, containing information about the owner, first departure and last valid a...">Ticket</a> class with explicit id. </p>
+<p>Enforces mandatory id by checking if provided one is NULL and assigning one if it is </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Possible string to treat as identifier </td></tr>
+    <tr><td class="paramname">owner</td><td>The owner of the ticket </td></tr>
+    <tr><td class="paramname">departure</td><td>The first station and train the ticket is valid from </td></tr>
+    <tr><td class="paramname">lastStep</td><td>The last station and train the ticket is valid for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>Departure </dd>
+<dd>
+<a class="el" href="classservice__management_1_1_service_step.html" title="A Class defining a ServiceStep.">ServiceStep</a> </dd></dl>
+
+</div>
+</div>
+<a id="a5bc4cad65790fc0206a80899a4777f33" name="a5bc4cad65790fc0206a80899a4777f33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bc4cad65790fc0206a80899a4777f33">&#9670;&#160;</a></span>Ticket() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ticketing.Ticket.Ticket </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classuser__management_1_1_passenger.html">Passenger</a></td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>description</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TicketStatus</td>          <td class="paramname"><span class="paramname"><em>status</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; String &gt;</td>          <td class="paramname"><span class="paramname"><em>history</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor used when loading tickets from storage. </p>
+<p>Preserves status and history, but not departure or lastStep </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Possible string to treat as identifier </td></tr>
+    <tr><td class="paramname">owner</td><td>The owner of the ticket </td></tr>
+    <tr><td class="paramname">description</td><td>Description of the ticket </td></tr>
+    <tr><td class="paramname">status</td><td>Status of the ticket </td></tr>
+    <tr><td class="paramname">history</td><td>List of strings containing the history of the ticket </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a12cc8e2ad48e38d1abfcde83c93d0c64" name="a12cc8e2ad48e38d1abfcde83c93d0c64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12cc8e2ad48e38d1abfcde83c93d0c64">&#9670;&#160;</a></span>addHistoryEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ticketing.Ticket.addHistoryEntry </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>entry</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds an entry to the ticket lifecycle history. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td>The history event to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a774cdfb4683b4d561924b2ddb54f6564" name="a774cdfb4683b4d561924b2ddb54f6564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a774cdfb4683b4d561924b2ddb54f6564">&#9670;&#160;</a></span>equals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean ticketing.Ticket.equals </td>
+          <td>(</td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>o</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d1e7aafec66df33b8b0c475ab5c1f6a" name="a5d1e7aafec66df33b8b0c475ab5c1f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d1e7aafec66df33b8b0c475ab5c1f6a">&#9670;&#160;</a></span>getArrival()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LocalTime ticketing.Ticket.getArrival </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af4e3d7dca5152d6ee51fc133d405bea1" name="af4e3d7dca5152d6ee51fc133d405bea1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4e3d7dca5152d6ee51fc133d405bea1">&#9670;&#160;</a></span>getCost()</h2>
 
@@ -214,8 +434,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>evalutes the total cost of the ticket @description uses the depature and lastStep information to measure the distance covered and which train is used, then computes the resulting price </p>
-<dl class="section return"><dt>Returns</dt><dd>an integer representing the monetary value </dd></dl>
+<p>evalutes the total cost of the ticket </p>
+<p>uses the departure and lastStep information to measure the distance covered and which train is used, then computes the resulting price </p><dl class="section return"><dt>Returns</dt><dd>an integer representing the monetary value </dd></dl>
 
 </div>
 </div>
@@ -248,6 +468,90 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a044a154a6f87490a15bd5c5614ef9257" name="a044a154a6f87490a15bd5c5614ef9257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a044a154a6f87490a15bd5c5614ef9257">&#9670;&#160;</a></span>getDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String ticketing.Ticket.getDescription </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the ticket description. </p>
+<dl class="section return"><dt>Returns</dt><dd>A human-readable summary of the ticket. </dd></dl>
+
+</div>
+</div>
+<a id="a43e08cc9888a3642fac7de85dc22fdc0" name="a43e08cc9888a3642fac7de85dc22fdc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e08cc9888a3642fac7de85dc22fdc0">&#9670;&#160;</a></span>getHistory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; String &gt; ticketing.Ticket.getHistory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the list of history events for this ticket. </p>
+<dl class="section return"><dt>Returns</dt><dd>A copy of history entries. </dd></dl>
+
+</div>
+</div>
+<a id="a83e95a6ee6a8cdcfb5abb98e6c00bc69" name="a83e95a6ee6a8cdcfb5abb98e6c00bc69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83e95a6ee6a8cdcfb5abb98e6c00bc69">&#9670;&#160;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String ticketing.Ticket.getId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the unique ticket identifier. </p>
+<dl class="section return"><dt>Returns</dt><dd>The ticket id. </dd></dl>
+
+</div>
+</div>
 <a id="ab3e701c7f5363067e7fe6427999ee461" name="ab3e701c7f5363067e7fe6427999ee461"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3e701c7f5363067e7fe6427999ee461">&#9670;&#160;</a></span>getJunction()</h2>
 
@@ -270,6 +574,10 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get the last junction the train is valid for. </p>
+<p>Looks into the lastStep value and extracts the junction it points total </p><dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> pointer </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> </dd></dl>
 
 </div>
 </div>
@@ -302,6 +610,34 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a64338eb23e1043207ca0abfbb424fc73" name="a64338eb23e1043207ca0abfbb424fc73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64338eb23e1043207ca0abfbb424fc73">&#9670;&#160;</a></span>getLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ticketing.Ticket.getLength </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns the lenght in meters of the ticket's course </p>
+<dl class="section return"><dt>Returns</dt><dd>an integer representing meters of lenght </dd></dl>
+
+</div>
+</div>
 <a id="a083a6196da9fceff79a3e3f001dcbaf0" name="a083a6196da9fceff79a3e3f001dcbaf0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a083a6196da9fceff79a3e3f001dcbaf0">&#9670;&#160;</a></span>getOwner()</h2>
 
@@ -331,8 +667,89 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac22494c9fcd38b4516d8d34c597057d4" name="ac22494c9fcd38b4516d8d34c597057d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac22494c9fcd38b4516d8d34c597057d4">&#9670;&#160;</a></span>main()</h2>
+<a id="ab247737807d37826946ed71ce326d8ec" name="ab247737807d37826946ed71ce326d8ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab247737807d37826946ed71ce326d8ec">&#9670;&#160;</a></span>getStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TicketStatus ticketing.Ticket.getStatus </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current ticket status. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current TicketStatus. </dd></dl>
+
+</div>
+</div>
+<a id="a1d59e9b29721a17631a2bb06e96dd88c" name="a1d59e9b29721a17631a2bb06e96dd88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d59e9b29721a17631a2bb06e96dd88c">&#9670;&#160;</a></span>hashCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ticketing.Ticket.hashCode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb633a69df5ca346af8db124b11ca0f5" name="adb633a69df5ca346af8db124b11ca0f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb633a69df5ca346af8db124b11ca0f5">&#9670;&#160;</a></span>isActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean ticketing.Ticket.isActive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true when the ticket is currently active. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if status is ACTIVE. </dd></dl>
+
+</div>
+</div>
+<a id="a3d12e8caedcb466ea29d8e1b8eec2faf" name="a3d12e8caedcb466ea29d8e1b8eec2faf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d12e8caedcb466ea29d8e1b8eec2faf">&#9670;&#160;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,7 +760,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ticketing.Ticket.main </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">String[]</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -353,6 +770,39 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5abdb3363093798e89d3870e722053a2" name="a5abdb3363093798e89d3870e722053a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5abdb3363093798e89d3870e722053a2">&#9670;&#160;</a></span>setStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ticketing.Ticket.setStatus </td>
+          <td>(</td>
+          <td class="paramtype">TicketStatus</td>          <td class="paramname"><span class="paramname"><em>status</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the ticket status. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>The new status. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

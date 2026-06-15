@@ -1,0 +1,53 @@
+\doxysection{payment\+\_\+gateway.\+Payment\+Gateway Interface Reference}
+\hypertarget{interfacepayment__gateway_1_1_payment_gateway}{}\label{interfacepayment__gateway_1_1_payment_gateway}\index{payment\_gateway.PaymentGateway@{payment\_gateway.PaymentGateway}}
+
+
+Interface representing a payment gateway used by the system.  
+
+
+Inheritance diagram for payment\+\_\+gateway.\+Payment\+Gateway:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfacepayment__gateway_1_1_payment_gateway}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \doxymbox{\hyperlink{interfacepayment__gateway_1_1_payment_gateway_a0fa9cbbc49f329d64ef045ea6f5cf094}{process\+Transaction}} (String transaction\+Description)
+\begin{DoxyCompactList}\small\item\em Processes a transaction request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface representing a payment gateway used by the system. 
+
+\label{interfacepayment__gateway_1_1_payment_gateway_doc-func-members}
+\Hypertarget{interfacepayment__gateway_1_1_payment_gateway_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfacepayment__gateway_1_1_payment_gateway_a0fa9cbbc49f329d64ef045ea6f5cf094}\index{payment\_gateway.PaymentGateway@{payment\_gateway.PaymentGateway}!processTransaction@{processTransaction}}
+\index{processTransaction@{processTransaction}!payment\_gateway.PaymentGateway@{payment\_gateway.PaymentGateway}}
+\doxysubsubsection{\texorpdfstring{processTransaction()}{processTransaction()}}
+{\footnotesize\ttfamily \label{interfacepayment__gateway_1_1_payment_gateway_a0fa9cbbc49f329d64ef045ea6f5cf094} 
+boolean payment\+\_\+gateway.\+Payment\+Gateway.\+process\+Transaction (\begin{DoxyParamCaption}\item[{String}]{transaction\+Description}{}\end{DoxyParamCaption})}
+
+
+
+Processes a transaction request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transaction\+Description} & Description of the transaction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when transaction succeeds, false when it fails. 
+\end{DoxyReturn}
+
+
+Implemented in \doxymbox{\hyperlink{classpayment__gateway_1_1_mock_payment_gateway_acb7e968533ffb06a6c0a8342a1ddafc5}{payment\+\_\+gateway.\+Mock\+Payment\+Gateway}}.
+
+
+
+The documentation for this interface was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+payment\+\_\+gateway/\+\doxymbox{\hyperlink{_payment_gateway_8java}{Payment\+Gateway.\+java}}\end{DoxyCompactItemize}

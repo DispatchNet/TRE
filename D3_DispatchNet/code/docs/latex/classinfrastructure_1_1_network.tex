@@ -5,17 +5,45 @@
 A Class representing the network. Provides an interface to add/\+remove elements from the network.  
 
 
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{enuminfrastructure_1_1_network_1_1_edit_error}{Edit\+Error}}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \doxymbox{\hyperlink{classinfrastructure_1_1_network_a32220cc34d0ec586b6b4e192623ed460}{add\+Junction}} (Junction junction)
+\doxymbox{\hyperlink{classinfrastructure_1_1_network_a033139e8f7f1539d34f677e22d328b72}{Network}} ()
+\item 
+void \doxymbox{\hyperlink{classinfrastructure_1_1_network_a32220cc34d0ec586b6b4e192623ed460}{add\+Junction}} (\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} junction)
 \begin{DoxyCompactList}\small\item\em Adds a \doxylink{classinfrastructure_1_1_junction}{Junction} to the network. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classinfrastructure_1_1_network_ab7585378e8b44ba9ddd55647ed84784a}{add\+Line}} (Junction j1, Junction j2, int length\+Meters, int max\+Speed\+KpH, int n\+Tracks)
-\begin{DoxyCompactList}\small\item\em Adds a \doxylink{classinfrastructure_1_1_line}{Line} to the network and updates relevant adjacencies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \doxymbox{\hyperlink{classinfrastructure_1_1_network_ad97c37c743599553e5664fa0d83ccf5c}{add\+Line}} (\doxymbox{\hyperlink{classinfrastructure_1_1_line}{Line}} line)
+\begin{DoxyCompactList}\small\item\em Adds an existing \doxylink{classinfrastructure_1_1_line}{Line} object to the network. \end{DoxyCompactList}\item 
+Map$<$ String, \doxymbox{\hyperlink{classinfrastructure_1_1_line}{Line}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1_network_a9ab91dde47f76df3afb6c997aefb967d}{get\+Lines}} ()
+\begin{DoxyCompactList}\small\item\em get the map of lines. \end{DoxyCompactList}\item 
+Map$<$ String, \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1_network_a9e9f8ebaa47e4637758bd147036ded1c}{get\+Junctions}} ()
+\begin{DoxyCompactList}\small\item\em get the map of junctions. \end{DoxyCompactList}\item 
+Optional$<$ \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1_network_a91532cc7840fecd1611e854f16171c90}{get\+Junction\+By\+Name}} (String name)
+\item 
+Optional$<$ \doxymbox{\hyperlink{enuminfrastructure_1_1_network_1_1_edit_error}{Edit\+Error}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1_network_ab42c069adc815fd2b0735d7eec8e4a81}{remove\+Junction}} (String id)
+\begin{DoxyCompactList}\small\item\em remove a junction from the network \end{DoxyCompactList}\item 
+Optional$<$ \doxymbox{\hyperlink{enuminfrastructure_1_1_network_1_1_edit_error}{Edit\+Error}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1_network_a49d745db50bc1528d719f88bf06a232b}{remove\+Line}} (String id)
+\begin{DoxyCompactList}\small\item\em remove a junction from the network \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 A Class representing the network. Provides an interface to add/\+remove elements from the network. 
+
+\label{classinfrastructure_1_1_network_doc-constructors}
+\Hypertarget{classinfrastructure_1_1_network_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classinfrastructure_1_1_network_a033139e8f7f1539d34f677e22d328b72}\index{infrastructure.Network@{infrastructure.Network}!Network@{Network}}
+\index{Network@{Network}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{Network()}{Network()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_network_a033139e8f7f1539d34f677e22d328b72} 
+infrastructure.\+Network.\+Network (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
 
 \label{classinfrastructure_1_1_network_doc-func-members}
 \Hypertarget{classinfrastructure_1_1_network_doc-func-members}
@@ -24,7 +52,7 @@ A Class representing the network. Provides an interface to add/\+remove elements
 \index{addJunction@{addJunction}!infrastructure.Network@{infrastructure.Network}}
 \doxysubsubsection{\texorpdfstring{addJunction()}{addJunction()}}
 {\footnotesize\ttfamily \label{classinfrastructure_1_1_network_a32220cc34d0ec586b6b4e192623ed460} 
-void infrastructure.\+Network.\+add\+Junction (\begin{DoxyParamCaption}\item[{Junction}]{junction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void infrastructure.\+Network.\+add\+Junction (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}}}]{junction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -35,29 +63,113 @@ Adds a \doxylink{classinfrastructure_1_1_junction}{Junction} to the network.
 {\em junction} & The junction to add \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classinfrastructure_1_1_network_ab7585378e8b44ba9ddd55647ed84784a}\index{infrastructure.Network@{infrastructure.Network}!addLine@{addLine}}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & The junction is already present in the map \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classinfrastructure_1_1_network_ad97c37c743599553e5664fa0d83ccf5c}\index{infrastructure.Network@{infrastructure.Network}!addLine@{addLine}}
 \index{addLine@{addLine}!infrastructure.Network@{infrastructure.Network}}
 \doxysubsubsection{\texorpdfstring{addLine()}{addLine()}}
-{\footnotesize\ttfamily \label{classinfrastructure_1_1_network_ab7585378e8b44ba9ddd55647ed84784a} 
-void infrastructure.\+Network.\+add\+Line (\begin{DoxyParamCaption}\item[{Junction}]{j1}{, }\item[{Junction}]{j2}{, }\item[{int}]{length\+Meters}{, }\item[{int}]{max\+Speed\+KpH}{, }\item[{int}]{n\+Tracks}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_network_ad97c37c743599553e5664fa0d83ccf5c} 
+void infrastructure.\+Network.\+add\+Line (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_line}{Line}}}]{line}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Adds a \doxylink{classinfrastructure_1_1_line}{Line} to the network and updates relevant adjacencies. 
+Adds an existing \doxylink{classinfrastructure_1_1_line}{Line} object to the network. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em j1} & A \doxylink{classinfrastructure_1_1_junction}{Junction} in the network \\
-\hline
-{\em j2} & A \doxylink{classinfrastructure_1_1_junction}{Junction} in the network \\
-\hline
-{\em length\+Meters} & The length of this line in meters \\
-\hline
-{\em max\+Speed\+KpH} & The max speed of this line in Kilometers per hour \\
-\hline
-{\em n\+Tracks} & The number of tracks this line has \\
+{\em line} & The line to add \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Arguemtne\+Exception} & if the line is already in the network \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classinfrastructure_1_1_network_a91532cc7840fecd1611e854f16171c90}\index{infrastructure.Network@{infrastructure.Network}!getJunctionByName@{getJunctionByName}}
+\index{getJunctionByName@{getJunctionByName}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{getJunctionByName()}{getJunctionByName()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_network_a91532cc7840fecd1611e854f16171c90} 
+Optional$<$ \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} $>$ infrastructure.\+Network.\+get\+Junction\+By\+Name (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+@breif Search a junction on it\textquotesingle{}s network by it\textquotesingle{}s name 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the junction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \doxylink{classinfrastructure_1_1_junction}{Junction} if\textquotesingle{}s found, Optional.\+empty() otherwise 
+\end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1_network_a9e9f8ebaa47e4637758bd147036ded1c}\index{infrastructure.Network@{infrastructure.Network}!getJunctions@{getJunctions}}
+\index{getJunctions@{getJunctions}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{getJunctions()}{getJunctions()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_network_a9e9f8ebaa47e4637758bd147036ded1c} 
+Map$<$ String, \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} $>$ infrastructure.\+Network.\+get\+Junctions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the map of junctions. 
+
+\begin{DoxyReturn}{Returns}
+An unmodifiable view of the junctions 
+\end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1_network_a9ab91dde47f76df3afb6c997aefb967d}\index{infrastructure.Network@{infrastructure.Network}!getLines@{getLines}}
+\index{getLines@{getLines}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{getLines()}{getLines()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_network_a9ab91dde47f76df3afb6c997aefb967d} 
+Map$<$ String, \doxymbox{\hyperlink{classinfrastructure_1_1_line}{Line}} $>$ infrastructure.\+Network.\+get\+Lines (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the map of lines. 
+
+\begin{DoxyReturn}{Returns}
+An unmodifiable view of the lines 
+\end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1_network_ab42c069adc815fd2b0735d7eec8e4a81}\index{infrastructure.Network@{infrastructure.Network}!removeJunction@{removeJunction}}
+\index{removeJunction@{removeJunction}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{removeJunction()}{removeJunction()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_network_ab42c069adc815fd2b0735d7eec8e4a81} 
+Optional$<$ \doxymbox{\hyperlink{enuminfrastructure_1_1_network_1_1_edit_error}{Edit\+Error}} $>$ infrastructure.\+Network.\+remove\+Junction (\begin{DoxyParamCaption}\item[{String}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+remove a junction from the network 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the id of the jucntion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If any error occured, the error @impl\+Note Also removes all lines connected to the deleted junction, as well as adjacencies from neighbhoring junctions 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{enuminfrastructure_1_1_network_1_1_edit_error}{Edit\+Error} 
+\end{DoxySeeAlso}
+\Hypertarget{classinfrastructure_1_1_network_a49d745db50bc1528d719f88bf06a232b}\index{infrastructure.Network@{infrastructure.Network}!removeLine@{removeLine}}
+\index{removeLine@{removeLine}!infrastructure.Network@{infrastructure.Network}}
+\doxysubsubsection{\texorpdfstring{removeLine()}{removeLine()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_network_a49d745db50bc1528d719f88bf06a232b} 
+Optional$<$ \doxymbox{\hyperlink{enuminfrastructure_1_1_network_1_1_edit_error}{Edit\+Error}} $>$ infrastructure.\+Network.\+remove\+Line (\begin{DoxyParamCaption}\item[{String}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+remove a junction from the network 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the id of the jucntion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If any error occured, the error, otherwise Optional.\+empty() @impl\+Note Also removes this line from the known adjacencies of it\textquotesingle{}s connected lines 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{enuminfrastructure_1_1_network_1_1_edit_error}{Edit\+Error} 
+\end{DoxySeeAlso}
 
 
 The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}

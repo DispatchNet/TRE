@@ -14,10 +14,20 @@ List$<$ \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authe
 \begin{DoxyCompactList}\small\item\em Loads authenticated users from the CSV file. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classcsv__database_1_1_csv_database_a375c0f5298f3d3f22c4d65f62f9661fc}{save\+Authenticated\+Users}} (List$<$ \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{Authenticated\+User}} $>$ users)
 \begin{DoxyCompactList}\small\item\em Saves authenticated users to the CSV file. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classcsv__database_1_1_csv_database_a2385a3f62beeaf5d38a2350768527a66}{load\+Tickets}} (\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)  throws IOException 
+\begin{DoxyCompactList}\small\item\em Loads ticket records from the CSV file and assigns them to their owners. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classcsv__database_1_1_csv_database_a4e3774853207830694f2bc5897b4ca4c}{save\+Tickets}} (\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
+\begin{DoxyCompactList}\small\item\em Saves all passenger tickets from \doxylink{classuser__management_1_1_user_management}{User\+Management} to the ticket CSV file. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classcsv__database_1_1_csv_database_a8a8102d625a9dbf113430259c779194e}{save\+Tickets}} (List$<$ \doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}} $>$ tickets)
+\begin{DoxyCompactList}\small\item\em Saves ticket objects to the ticket CSV file. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classcsv__database_1_1_csv_database_a2ad9f289bfbede41dad278549f2f69a3}{load\+Network}} (\doxymbox{\hyperlink{classinfrastructure_1_1_network}{Network}} network)
 \begin{DoxyCompactList}\small\item\em Loads the network data from the CSV files. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classcsv__database_1_1_csv_database_a10d9e3efca422251e8da0857bdcc178d}{save\+Network}} (\doxymbox{\hyperlink{classinfrastructure_1_1_network}{Network}} network)
-\begin{DoxyCompactList}\small\item\em Saves the network data to the CSV files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Saves the network data to the CSV files. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classcsv__database_1_1_csv_database_a07d9e98dd45f81b0a3c2589d5cd6617e}{load\+Service\+Management}} (\doxymbox{\hyperlink{classservice__management_1_1_service_management}{Service\+Management}} service\+Management, \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management, \doxymbox{\hyperlink{classinfrastructure_1_1_network}{Network}} network)
+\begin{DoxyCompactList}\small\item\em Loads all service management data from CSV files. Must be called after \doxylink{classcsv__database_1_1_csv_database_a2ad9f289bfbede41dad278549f2f69a3}{load\+Network()} and \doxylink{classcsv__database_1_1_csv_database_a6afe10db8cf3efcc18b95e2ef2aab7b7}{load\+Authenticated\+Users()} so that \doxylink{classinfrastructure_1_1_junction}{Junction} and \doxylink{classuser__management_1_1_train_company}{Train\+Company} references can be resolved. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classcsv__database_1_1_csv_database_ae27f2460b3870b236118599c4f8f5abd}{save\+Service\+Management}} (\doxymbox{\hyperlink{classservice__management_1_1_service_management}{Service\+Management}} service\+Management)
+\begin{DoxyCompactList}\small\item\em Saves all service management data to CSV files. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -71,6 +81,45 @@ void csv\+\_\+database.\+Csv\+Database.\+load\+Network (\begin{DoxyParamCaption}
 
 Loads the network data from the CSV files. 
 
+\Hypertarget{classcsv__database_1_1_csv_database_a07d9e98dd45f81b0a3c2589d5cd6617e}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!loadServiceManagement@{loadServiceManagement}}
+\index{loadServiceManagement@{loadServiceManagement}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+\doxysubsubsection{\texorpdfstring{loadServiceManagement()}{loadServiceManagement()}}
+{\footnotesize\ttfamily \label{classcsv__database_1_1_csv_database_a07d9e98dd45f81b0a3c2589d5cd6617e} 
+void csv\+\_\+database.\+Csv\+Database.\+load\+Service\+Management (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classservice__management_1_1_service_management}{Service\+Management}}}]{service\+Management}{, }\item[{\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}}}]{user\+Management}{, }\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_network}{Network}}}]{network}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads all service management data from CSV files. Must be called after \doxylink{classcsv__database_1_1_csv_database_a2ad9f289bfbede41dad278549f2f69a3}{load\+Network()} and \doxylink{classcsv__database_1_1_csv_database_a6afe10db8cf3efcc18b95e2ef2aab7b7}{load\+Authenticated\+Users()} so that \doxylink{classinfrastructure_1_1_junction}{Junction} and \doxylink{classuser__management_1_1_train_company}{Train\+Company} references can be resolved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Management} & The \doxylink{classservice__management_1_1_service_management}{Service\+Management} instance to populate. \\
+\hline
+{\em user\+Management} & Used to resolve \doxylink{classuser__management_1_1_train_company}{Train\+Company} owners by ID. \\
+\hline
+{\em network} & Used to resolve \doxylink{classinfrastructure_1_1_junction}{Junction} references in Service\+Steps. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcsv__database_1_1_csv_database_a2385a3f62beeaf5d38a2350768527a66}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!loadTickets@{loadTickets}}
+\index{loadTickets@{loadTickets}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+\doxysubsubsection{\texorpdfstring{loadTickets()}{loadTickets()}}
+{\footnotesize\ttfamily \label{classcsv__database_1_1_csv_database_a2385a3f62beeaf5d38a2350768527a66} 
+void csv\+\_\+database.\+Csv\+Database.\+load\+Tickets (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}}}]{user\+Management}{}\end{DoxyParamCaption}) throws IOException\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads ticket records from the CSV file and assigns them to their owners. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Management} & The user management instance used to resolve ticket owners. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & If the ticket CSV file cannot be read. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classcsv__database_1_1_csv_database_a375c0f5298f3d3f22c4d65f62f9661fc}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!saveAuthenticatedUsers@{saveAuthenticatedUsers}}
 \index{saveAuthenticatedUsers@{saveAuthenticatedUsers}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
 \doxysubsubsection{\texorpdfstring{saveAuthenticatedUsers()}{saveAuthenticatedUsers()}}
@@ -99,6 +148,51 @@ Saves the network data to the CSV files.
 
 \begin{DoxyParams}{Parameters}
 {\em network} & The network to save. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcsv__database_1_1_csv_database_ae27f2460b3870b236118599c4f8f5abd}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!saveServiceManagement@{saveServiceManagement}}
+\index{saveServiceManagement@{saveServiceManagement}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+\doxysubsubsection{\texorpdfstring{saveServiceManagement()}{saveServiceManagement()}}
+{\footnotesize\ttfamily \label{classcsv__database_1_1_csv_database_ae27f2460b3870b236118599c4f8f5abd} 
+void csv\+\_\+database.\+Csv\+Database.\+save\+Service\+Management (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classservice__management_1_1_service_management}{Service\+Management}}}]{service\+Management}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Saves all service management data to CSV files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Management} & The \doxylink{classservice__management_1_1_service_management}{Service\+Management} instance to persist. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcsv__database_1_1_csv_database_a8a8102d625a9dbf113430259c779194e}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!saveTickets@{saveTickets}}
+\index{saveTickets@{saveTickets}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+\doxysubsubsection{\texorpdfstring{saveTickets()}{saveTickets()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classcsv__database_1_1_csv_database_a8a8102d625a9dbf113430259c779194e} 
+void csv\+\_\+database.\+Csv\+Database.\+save\+Tickets (\begin{DoxyParamCaption}\item[{List$<$ \doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}} $>$}]{tickets}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Saves ticket objects to the ticket CSV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tickets} & The list of tickets to persist. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcsv__database_1_1_csv_database_a4e3774853207830694f2bc5897b4ca4c}\index{csv\_database.CsvDatabase@{csv\_database.CsvDatabase}!saveTickets@{saveTickets}}
+\index{saveTickets@{saveTickets}!csv\_database.CsvDatabase@{csv\_database.CsvDatabase}}
+\doxysubsubsection{\texorpdfstring{saveTickets()}{saveTickets()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classcsv__database_1_1_csv_database_a4e3774853207830694f2bc5897b4ca4c} 
+void csv\+\_\+database.\+Csv\+Database.\+save\+Tickets (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}}}]{user\+Management}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Saves all passenger tickets from \doxylink{classuser__management_1_1_user_management}{User\+Management} to the ticket CSV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Management} & The user management instance containing tickets to persist. \\
 \hline
 \end{DoxyParams}
 

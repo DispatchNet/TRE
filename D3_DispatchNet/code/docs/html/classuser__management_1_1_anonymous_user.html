@@ -129,11 +129,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2c62a3d95147265b85af6bc4bf219b0d" id="r_a2c62a3d95147265b85af6bc4bf219b0d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a2c62a3d95147265b85af6bc4bf219b0d">getIdentifier</a> ()</td></tr>
 <tr class="memdesc:a2c62a3d95147265b85af6bc4bf219b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the identifier for the anonymous user.  <br /></td></tr>
 <tr class="memitem:a46c7e5d4eba6f36973eb1f30640f2027" id="r_a46c7e5d4eba6f36973eb1f30640f2027"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a46c7e5d4eba6f36973eb1f30640f2027">register</a> ()</td></tr>
-<tr class="memdesc:a46c7e5d4eba6f36973eb1f30640f2027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new user account from the anonymous user state.  <br /></td></tr>
+<tr class="memdesc:a46c7e5d4eba6f36973eb1f30640f2027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new user account from the anonymous user state. (wrapper function).  <br /></td></tr>
+<tr class="memitem:a532db9b6a7264e80aa1e5472c235e9ec" id="r_a532db9b6a7264e80aa1e5472c235e9ec"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a532db9b6a7264e80aa1e5472c235e9ec">register</a> (boolean fromNetworkManager)</td></tr>
+<tr class="memdesc:a532db9b6a7264e80aa1e5472c235e9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new user account from the anonymous user state.  <br /></td></tr>
 <tr class="memitem:a32b181b2695c9d859521c97f7f0a4cde" id="r_a32b181b2695c9d859521c97f7f0a4cde"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a32b181b2695c9d859521c97f7f0a4cde">resetPassword</a> ()</td></tr>
 <tr class="memdesc:a32b181b2695c9d859521c97f7f0a4cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the password of a user from the anonymous user state.  <br /></td></tr>
 <tr class="memitem:afc3e484831a7ea2d9a0308b2131bfe9e" id="r_afc3e484831a7ea2d9a0308b2131bfe9e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afc3e484831a7ea2d9a0308b2131bfe9e">login</a> ()</td></tr>
 <tr class="memdesc:afc3e484831a7ea2d9a0308b2131bfe9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log the anonymous user into the authenticated state.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a83318d85b0f176cd219eb9c88b2031ed" id="r_a83318d85b0f176cd219eb9c88b2031ed"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a83318d85b0f176cd219eb9c88b2031ed">main</a> (String[] args)</td></tr>
+<tr class="memdesc:a83318d85b0f176cd219eb9c88b2031ed"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmain_1_1_main.html">Main</a> method for testing <a class="el" href="classuser__management_1_1_anonymous_user.html" title="Class representing an anonymous user, who can only view the map and search for stations and trains.">AnonymousUser</a> behavior.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class representing an anonymous user, who can only view the map and search for stations and trains. </p>
@@ -228,8 +235,41 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a83318d85b0f176cd219eb9c88b2031ed" name="a83318d85b0f176cd219eb9c88b2031ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83318d85b0f176cd219eb9c88b2031ed">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void user_management.AnonymousUser.main </td>
+          <td>(</td>
+          <td class="paramtype">String[]</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classmain_1_1_main.html">Main</a> method for testing <a class="el" href="classuser__management_1_1_anonymous_user.html" title="Class representing an anonymous user, who can only view the map and search for stations and trains.">AnonymousUser</a> behavior. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Command-line arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a46c7e5d4eba6f36973eb1f30640f2027" name="a46c7e5d4eba6f36973eb1f30640f2027"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46c7e5d4eba6f36973eb1f30640f2027">&#9670;&#160;</a></span>register()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a46c7e5d4eba6f36973eb1f30640f2027">&#9670;&#160;</a></span>register() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -241,6 +281,33 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void user_management.AnonymousUser.register </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register a new user account from the anonymous user state. (wrapper function). </p>
+
+</div>
+</div>
+<a id="a532db9b6a7264e80aa1e5472c235e9ec" name="a532db9b6a7264e80aa1e5472c235e9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a532db9b6a7264e80aa1e5472c235e9ec">&#9670;&#160;</a></span>register() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void user_management.AnonymousUser.register </td>
+          <td>(</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>fromNetworkManager</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

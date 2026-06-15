@@ -16,24 +16,20 @@ Inheritance diagram for user\+\_\+management.\+Passenger:\+\begin{figure}[H]
 \item 
 \doxymbox{\hyperlink{classuser__management_1_1_passenger_a186537203017ae5cfb40f165deffc539}{Passenger}} (String username, String email, String password, \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
 \begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_passenger}{Passenger} class. \end{DoxyCompactList}\item 
-List$<$ String $>$ \doxymbox{\hyperlink{classuser__management_1_1_passenger_ac941e64d59ba6552238bf619448d79c0}{get\+Tickets}} ()
-\begin{DoxyCompactList}\small\item\em Gets the list of tickets purchased by the passenger. \end{DoxyCompactList}\item 
-boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_a52a6aa38e6ec9de0be15ffb86ced2202}{purchase\+Ticket}} (String ticket)
+\doxymbox{\hyperlink{classuser__management_1_1_passenger_a2d6262cea121c57547abb49043954a63}{Passenger}} (String id, String username, String email, String password, \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_passenger}{Passenger} class with explicit id. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}} $>$ \doxymbox{\hyperlink{classuser__management_1_1_passenger_a04f4769c4d7be6f319941b2d6ead5404}{get\+Tickets}} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of active tickets purchased by the passenger. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}} $>$ \doxymbox{\hyperlink{classuser__management_1_1_passenger_ac6b1b18ad08f5f2ce5c37ec674475807}{get\+All\+Tickets}} ()
+\begin{DoxyCompactList}\small\item\em Gets all tickets, including cancelled ones, for persistence and history. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classuser__management_1_1_passenger_ae3032998f583e094f474ca770efad9dd}{add\+Loaded\+Ticket}} (\doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}} ticket)
+\begin{DoxyCompactList}\small\item\em Adds a ticket loaded from the persistent storage. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_ab6713421691da583fe5d19f6b1eb4611}{purchase\+Ticket}} (\doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}} ticket)
 \begin{DoxyCompactList}\small\item\em Purchases a new ticket. \end{DoxyCompactList}\item 
-boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_ae7e647b76b375d3a9fb0af5fb58bfd74}{purchase\+Ticket\+Group}} (String group\+Pass)
-\begin{DoxyCompactList}\small\item\em Purchases a new group pass. \end{DoxyCompactList}\item 
-boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_a81844ab6dfcdb7740e3538134f991cd3}{cancel\+Ticket}} (String ticket)
+boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_a3d3feb18234bd805bc3219d8b3e65a72}{cancel\+Ticket}} (\doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}} ticket)
 \begin{DoxyCompactList}\small\item\em Cancels a purchased ticket. \end{DoxyCompactList}\item 
-boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_a3ac385fea1fde68f24998a71d6be5774}{cancel\+Ticket\+Group}} (String group\+Pass)
-\begin{DoxyCompactList}\small\item\em Cancels a purchased group pass. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classuser__management_1_1_passenger_ae7e8a928fd04ce05eb777f1c6b528553}{get\+Tickets\+History}} ()
-\begin{DoxyCompactList}\small\item\em Retrieves the history of purchased tickets. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classuser__management_1_1_passenger_ab249f4d6f2e23a46b41c9e2aefc8011a}{find\+Path}} ()
-\begin{DoxyCompactList}\small\item\em Finds a path between two stations. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classuser__management_1_1_passenger_afbd34a0e3cc4edc4da584366e73d600c}{search\+Station\+Train}} ()
-\begin{DoxyCompactList}\small\item\em Searches for stations or trains. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classuser__management_1_1_passenger_adfafbdcd621cb50788d7eb39c38ae458}{view\+Map}} ()
-\begin{DoxyCompactList}\small\item\em Views the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves the history of purchased and cancelled tickets. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classuser__management_1_1_end_user}{user\+\_\+management.\+End\+User}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,6 +37,8 @@ void \doxymbox{\hyperlink{classuser__management_1_1_passenger_adfafbdcd621cb5078
 \begin{DoxyCompactList}\small\item\em Empty constructor for \doxylink{classuser__management_1_1_end_user}{End\+User} class. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classuser__management_1_1_end_user_a7d05d362709eb8a00116ffd3c9c8ef44}{End\+User}} (String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} user\+Type, \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
 \begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_end_user}{End\+User} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classuser__management_1_1_end_user_af22dde1419afc4b4271511562c419fe8}{End\+User}} (String id, String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} user\+Type, \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_end_user}{End\+User} class with explicit id. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classuser__management_1_1_end_user_a81d7e803c9b49ada40d22b998b53d6c0}{view\+Data}} ()
 \begin{DoxyCompactList}\small\item\em Prints the user\textquotesingle{}s data, that is username and email. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classuser__management_1_1_end_user_ae17eabb5fdb0875d9deafa1b4b14c88e}{change\+Data}} ()
@@ -54,6 +52,10 @@ void \doxymbox{\hyperlink{classuser__management_1_1_end_user_ab809e033ef2f389636
 \begin{DoxyCompactList}\small\item\em Empty Constructor for \doxylink{classuser__management_1_1_authenticated_user}{Authenticated\+User} class. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_ae9a55c997dc9d8c12936fa302f5d4e19}{Authenticated\+User}} (String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} user\+Type, \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
 \begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_authenticated_user}{Authenticated\+User} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_af38ca69953beb17d8e20474ae5548a62}{Authenticated\+User}} (String id, String username, String email, String password, \doxymbox{\hyperlink{enumuser__management_1_1_user_type}{User\+Type}} user\+Type, \doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}} user\+Management)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classuser__management_1_1_authenticated_user}{Authenticated\+User} class with explicit id. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a0fc57b8d0f424172ac74a2e0fc6296b0}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the unique id of the authenticated user. \end{DoxyCompactList}\item 
 String \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a09d3ea4888c58c57a2f381fb32034d42}{get\+Username}} ()
 \begin{DoxyCompactList}\small\item\em Gets the username of the authenticated user. \end{DoxyCompactList}\item 
 String \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_abea2507b50591d83e3a2b0f3637fe189}{get\+Email}} ()
@@ -75,6 +77,11 @@ boolean \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a4ed89
 int \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user_a4a09cae41928361de7dd4888427b8760}{hash\+Code}} ()
 \begin{DoxyCompactList}\small\item\em Generates a hash code for the authenticated user. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{classuser__management_1_1_end_user}{user\+\_\+management.\+End\+User}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{classuser__management_1_1_end_user_a9cb01d95dcc9b8b48560dc23de9c603b}{main}} (String\+[$\,$]\+ args)
+\begin{DoxyCompactList}\small\item\em \doxylink{classmain_1_1_main}{Main} method for testing \doxylink{classuser__management_1_1_end_user}{End\+User} behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{classuser__management_1_1_authenticated_user}{user\+\_\+management.\+Authenticated\+User}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -90,7 +97,7 @@ Class representing a passenger, a type of end user who can additionally purchase
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classuser__management_1_1_passenger_a186537203017ae5cfb40f165deffc539}\index{user\_management.Passenger@{user\_management.Passenger}!Passenger@{Passenger}}
 \index{Passenger@{Passenger}!user\_management.Passenger@{user\_management.Passenger}}
-\doxysubsubsection{\texorpdfstring{Passenger()}{Passenger()}}
+\doxysubsubsection{\texorpdfstring{Passenger()}{Passenger()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{classuser__management_1_1_passenger_a186537203017ae5cfb40f165deffc539} 
 user\+\_\+management.\+Passenger.\+Passenger (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{email}{, }\item[{String}]{password}{, }\item[{\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}}}]{user\+Management}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -109,16 +116,41 @@ Constructor for \doxylink{classuser__management_1_1_passenger}{Passenger} class.
 {\em user\+Management} & The user management instance \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classuser__management_1_1_passenger_a2d6262cea121c57547abb49043954a63}\index{user\_management.Passenger@{user\_management.Passenger}!Passenger@{Passenger}}
+\index{Passenger@{Passenger}!user\_management.Passenger@{user\_management.Passenger}}
+\doxysubsubsection{\texorpdfstring{Passenger()}{Passenger()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_a2d6262cea121c57547abb49043954a63} 
+user\+\_\+management.\+Passenger.\+Passenger (\begin{DoxyParamCaption}\item[{String}]{id}{, }\item[{String}]{username}{, }\item[{String}]{email}{, }\item[{String}]{password}{, }\item[{\doxymbox{\hyperlink{classuser__management_1_1_user_management}{User\+Management}}}]{user\+Management}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{classuser__management_1_1_passenger}{Passenger} class with explicit id. 
+
 
 
 \label{classuser__management_1_1_passenger_doc-func-members}
 \Hypertarget{classuser__management_1_1_passenger_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classuser__management_1_1_passenger_a81844ab6dfcdb7740e3538134f991cd3}\index{user\_management.Passenger@{user\_management.Passenger}!cancelTicket@{cancelTicket}}
+\Hypertarget{classuser__management_1_1_passenger_ae3032998f583e094f474ca770efad9dd}\index{user\_management.Passenger@{user\_management.Passenger}!addLoadedTicket@{addLoadedTicket}}
+\index{addLoadedTicket@{addLoadedTicket}!user\_management.Passenger@{user\_management.Passenger}}
+\doxysubsubsection{\texorpdfstring{addLoadedTicket()}{addLoadedTicket()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_ae3032998f583e094f474ca770efad9dd} 
+void user\+\_\+management.\+Passenger.\+add\+Loaded\+Ticket (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}}}]{ticket}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a ticket loaded from the persistent storage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticket} & The ticket loaded from the database. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classuser__management_1_1_passenger_a3d3feb18234bd805bc3219d8b3e65a72}\index{user\_management.Passenger@{user\_management.Passenger}!cancelTicket@{cancelTicket}}
 \index{cancelTicket@{cancelTicket}!user\_management.Passenger@{user\_management.Passenger}}
 \doxysubsubsection{\texorpdfstring{cancelTicket()}{cancelTicket()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_a81844ab6dfcdb7740e3538134f991cd3} 
-boolean user\+\_\+management.\+Passenger.\+cancel\+Ticket (\begin{DoxyParamCaption}\item[{String}]{ticket}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_a3d3feb18234bd805bc3219d8b3e65a72} 
+boolean user\+\_\+management.\+Passenger.\+cancel\+Ticket (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}}}]{ticket}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -132,46 +164,31 @@ Cancels a purchased ticket.
 \begin{DoxyReturn}{Returns}
 true if the ticket was canceled successfully, false otherwise 
 \end{DoxyReturn}
-\Hypertarget{classuser__management_1_1_passenger_a3ac385fea1fde68f24998a71d6be5774}\index{user\_management.Passenger@{user\_management.Passenger}!cancelTicketGroup@{cancelTicketGroup}}
-\index{cancelTicketGroup@{cancelTicketGroup}!user\_management.Passenger@{user\_management.Passenger}}
-\doxysubsubsection{\texorpdfstring{cancelTicketGroup()}{cancelTicketGroup()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_a3ac385fea1fde68f24998a71d6be5774} 
-boolean user\+\_\+management.\+Passenger.\+cancel\+Ticket\+Group (\begin{DoxyParamCaption}\item[{String}]{group\+Pass}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\Hypertarget{classuser__management_1_1_passenger_ac6b1b18ad08f5f2ce5c37ec674475807}\index{user\_management.Passenger@{user\_management.Passenger}!getAllTickets@{getAllTickets}}
+\index{getAllTickets@{getAllTickets}!user\_management.Passenger@{user\_management.Passenger}}
+\doxysubsubsection{\texorpdfstring{getAllTickets()}{getAllTickets()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_ac6b1b18ad08f5f2ce5c37ec674475807} 
+List$<$ \doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}} $>$ user\+\_\+management.\+Passenger.\+get\+All\+Tickets (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Cancels a purchased group pass. 
+Gets all tickets, including cancelled ones, for persistence and history. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em group\+Pass} & The group pass to cancel \\
-\hline
-\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true if the group pass was canceled successfully, false otherwise 
+A list of all \doxylink{classticketing_1_1_ticket}{Ticket} objects. 
 \end{DoxyReturn}
-\Hypertarget{classuser__management_1_1_passenger_ab249f4d6f2e23a46b41c9e2aefc8011a}\index{user\_management.Passenger@{user\_management.Passenger}!findPath@{findPath}}
-\index{findPath@{findPath}!user\_management.Passenger@{user\_management.Passenger}}
-\doxysubsubsection{\texorpdfstring{findPath()}{findPath()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_ab249f4d6f2e23a46b41c9e2aefc8011a} 
-void user\+\_\+management.\+Passenger.\+find\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Finds a path between two stations. 
-
-\Hypertarget{classuser__management_1_1_passenger_ac941e64d59ba6552238bf619448d79c0}\index{user\_management.Passenger@{user\_management.Passenger}!getTickets@{getTickets}}
+\Hypertarget{classuser__management_1_1_passenger_a04f4769c4d7be6f319941b2d6ead5404}\index{user\_management.Passenger@{user\_management.Passenger}!getTickets@{getTickets}}
 \index{getTickets@{getTickets}!user\_management.Passenger@{user\_management.Passenger}}
 \doxysubsubsection{\texorpdfstring{getTickets()}{getTickets()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_ac941e64d59ba6552238bf619448d79c0} 
-List$<$ String $>$ user\+\_\+management.\+Passenger.\+get\+Tickets (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_a04f4769c4d7be6f319941b2d6ead5404} 
+List$<$ \doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}} $>$ user\+\_\+management.\+Passenger.\+get\+Tickets (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Gets the list of tickets purchased by the passenger. 
+Gets the list of active tickets purchased by the passenger. 
 
 \begin{DoxyReturn}{Returns}
-A list of Ticket 
+A list of active \doxylink{classticketing_1_1_ticket}{Ticket} objects. 
 \end{DoxyReturn}
 \Hypertarget{classuser__management_1_1_passenger_ae7e8a928fd04ce05eb777f1c6b528553}\index{user\_management.Passenger@{user\_management.Passenger}!getTicketsHistory@{getTicketsHistory}}
 \index{getTicketsHistory@{getTicketsHistory}!user\_management.Passenger@{user\_management.Passenger}}
@@ -181,13 +198,13 @@ void user\+\_\+management.\+Passenger.\+get\+Tickets\+History (\begin{DoxyParamC
 
 
 
-Retrieves the history of purchased tickets. 
+Retrieves the history of purchased and cancelled tickets. 
 
-\Hypertarget{classuser__management_1_1_passenger_a52a6aa38e6ec9de0be15ffb86ced2202}\index{user\_management.Passenger@{user\_management.Passenger}!purchaseTicket@{purchaseTicket}}
+\Hypertarget{classuser__management_1_1_passenger_ab6713421691da583fe5d19f6b1eb4611}\index{user\_management.Passenger@{user\_management.Passenger}!purchaseTicket@{purchaseTicket}}
 \index{purchaseTicket@{purchaseTicket}!user\_management.Passenger@{user\_management.Passenger}}
 \doxysubsubsection{\texorpdfstring{purchaseTicket()}{purchaseTicket()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_a52a6aa38e6ec9de0be15ffb86ced2202} 
-boolean user\+\_\+management.\+Passenger.\+purchase\+Ticket (\begin{DoxyParamCaption}\item[{String}]{ticket}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_ab6713421691da583fe5d19f6b1eb4611} 
+boolean user\+\_\+management.\+Passenger.\+purchase\+Ticket (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}}}]{ticket}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -201,44 +218,6 @@ Purchases a new ticket.
 \begin{DoxyReturn}{Returns}
 true if the ticket was purchased successfully, false otherwise 
 \end{DoxyReturn}
-\Hypertarget{classuser__management_1_1_passenger_ae7e647b76b375d3a9fb0af5fb58bfd74}\index{user\_management.Passenger@{user\_management.Passenger}!purchaseTicketGroup@{purchaseTicketGroup}}
-\index{purchaseTicketGroup@{purchaseTicketGroup}!user\_management.Passenger@{user\_management.Passenger}}
-\doxysubsubsection{\texorpdfstring{purchaseTicketGroup()}{purchaseTicketGroup()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_ae7e647b76b375d3a9fb0af5fb58bfd74} 
-boolean user\+\_\+management.\+Passenger.\+purchase\+Ticket\+Group (\begin{DoxyParamCaption}\item[{String}]{group\+Pass}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Purchases a new group pass. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em group\+Pass} & The group pass to purchase \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true if the group pass was purchased successfully, false otherwise 
-\end{DoxyReturn}
-\Hypertarget{classuser__management_1_1_passenger_afbd34a0e3cc4edc4da584366e73d600c}\index{user\_management.Passenger@{user\_management.Passenger}!searchStationTrain@{searchStationTrain}}
-\index{searchStationTrain@{searchStationTrain}!user\_management.Passenger@{user\_management.Passenger}}
-\doxysubsubsection{\texorpdfstring{searchStationTrain()}{searchStationTrain()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_afbd34a0e3cc4edc4da584366e73d600c} 
-void user\+\_\+management.\+Passenger.\+search\+Station\+Train (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Searches for stations or trains. 
-
-\Hypertarget{classuser__management_1_1_passenger_adfafbdcd621cb50788d7eb39c38ae458}\index{user\_management.Passenger@{user\_management.Passenger}!viewMap@{viewMap}}
-\index{viewMap@{viewMap}!user\_management.Passenger@{user\_management.Passenger}}
-\doxysubsubsection{\texorpdfstring{viewMap()}{viewMap()}}
-{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_adfafbdcd621cb50788d7eb39c38ae458} 
-void user\+\_\+management.\+Passenger.\+view\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Views the map. 
-
 
 
 The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}

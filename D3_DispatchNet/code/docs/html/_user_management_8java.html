@@ -120,9 +120,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_user_manageme
 <div class="contents">
 <div class="textblock"><code>import java.util.ArrayList;</code><br />
 <code>import java.util.List;</code><br />
+<code>import csv_database.CsvDatabase;</code><br />
 <code>import mail_service.Email;</code><br />
 <code>import mail_service.MailService;</code><br />
-<code>import mail_service.MailServiceFactory;</code><br />
+<code>import mail_service.MockMailService;</code><br />
+<code>import payment_gateway.PaymentGateway;</code><br />
+<code>import payment_gateway.MockPaymentGateway;</code><br />
 <code>import IO_operations.IO;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>

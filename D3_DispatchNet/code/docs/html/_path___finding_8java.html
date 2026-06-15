@@ -118,16 +118,40 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_path___findin
   <div class="headertitle"><div class="title">Path_Finding.java File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>import java.time.LocalTime;</code><br />
+<div class="textblock"><code>import java.time.temporal.ChronoUnit.MINUTES;</code><br />
+<code>import java.time.LocalTime;</code><br />
+<code>import java.util.ArrayList;</code><br />
+<code>import java.util.Collections;</code><br />
+<code>import java.util.Comparator;</code><br />
 <code>import java.util.List;</code><br />
+<code>import java.lang.StringBuilder;</code><br />
+<code>import infrastructure.Junction;</code><br />
+<code>import user_management.Passenger;</code><br />
+<code>import user_management.AnonymousUser;</code><br />
+<code>import ticketing.Ticket;</code><br />
+<code>import service_management.ServiceSet;</code><br />
+<code>import service_management.ServiceStep;</code><br />
+<code>import departure.Departure;</code><br />
+<code>import main.Main;</code><br />
+<code>import user_management.UserManagement;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:Passenger" id="r_Passenger"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><b>Passenger</b></td></tr>
-<tr class="memitem:Junction" id="r_Junction"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><b>Junction</b></td></tr>
-<tr class="memitem:Ticket" id="r_Ticket"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><b>Ticket</b></td></tr>
-<tr class="memitem:srtAlg" id="r_srtAlg"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="enumsrt_alg.html">srtAlg</a></td></tr>
-<tr class="memitem:Path_5FFinding" id="r_Path_5FFinding"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><b>Path_Finding</b></td></tr>
+<tr class="memitem:path_5Ffinding_2EPath_5FFinding" id="r_path_5Ffinding_2EPath_5FFinding"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classpath__finding_1_1_path___finding.html">path_finding.Path_Finding</a></td></tr>
+<tr class="memitem:path_5Ffinding_2EsortByLenght" id="r_path_5Ffinding_2EsortByLenght"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><b>path_finding.sortByLenght</b></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The comparator that allows the paths to be sorted by sortByLenght. <br /></td></tr>
+<tr class="memitem:path_5Ffinding_2EsortByDeparture" id="r_path_5Ffinding_2EsortByDeparture"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><b>path_finding.sortByDeparture</b></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The comparator that allows the paths to be sorted by departure time. <br /></td></tr>
+<tr class="memitem:path_5Ffinding_2EsortByArrival" id="r_path_5Ffinding_2EsortByArrival"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><b>path_finding.sortByArrival</b></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The comparator that allows the paths to be sorted by arrival time. <br /></td></tr>
+<tr class="memitem:path_5Ffinding_2EsortByCost" id="r_path_5Ffinding_2EsortByCost"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><b>path_finding.sortByCost</b></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The comparator that allows the paths to be sorted by Cost. <br /></td></tr>
+<tr class="memitem:path_5Ffinding_2EPathComparator" id="r_path_5Ffinding_2EPathComparator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><b>path_finding.PathComparator</b></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complex comparator that allows paths sorting according to a provided <a class="el" href="enumpath__finding_1_1srt_alg.html">srtAlg</a> parameter. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Packages</h2></td></tr>
+<tr class="memitem:path_5Ffinding" id="r_path_5Ffinding"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="namespacepath__finding.html">path_finding</a></td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

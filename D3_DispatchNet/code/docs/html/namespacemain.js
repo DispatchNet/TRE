@@ -1,4 +1,4 @@
 var namespacemain =
 [
-    [ "Main", "classmain_1_1Main.html", null ]
+    [ "Main", "classmain_1_1_main.html", null ]
 ];

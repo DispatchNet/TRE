@@ -2,8 +2,206 @@
 \hypertarget{classservice__management_1_1_service_management}{}\label{classservice__management_1_1_service_management}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}}
 
 
+A management class that provides functionality to edit the network. Maintains the collections of service sets, service requests, service types, and train types that make up the rail network.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{classservice__management_1_1_service_management_a714e185201b06855b7ab8bd98ba1061b}{add\+Service\+Request}} (\doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}} service\+Set)
+\begin{DoxyCompactList}\small\item\em Submits a new service request pending approval. The service set is stored in the requests map with Pending\+Approval status. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classservice__management_1_1_service_management_ac4a450102407c9feb5d4f4b47d11a6bf}{approve\+Service\+Request}} (String id)
+\begin{DoxyCompactList}\small\item\em Approves a pending service request and promotes it to an active service set. The service is moved from the requests map to the active service sets map and its status is updated to Effective. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classservice__management_1_1_service_management_aee34d1a6268f7025c719108c5e579226}{reject\+Service\+Request}} (String id)
+\begin{DoxyCompactList}\small\item\em Rejects and removes a pending service request. The service set is removed from the requests map and discarded. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classservice__management_1_1_service_management_a278a070667bea1b8fc355b2c57c00723}{add\+Train\+Type}} (\doxymbox{\hyperlink{classservice__management_1_1_train_type}{Train\+Type}} train\+Type)
+\begin{DoxyCompactList}\small\item\em Registers a new train type in the network. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classservice__management_1_1_service_management_a39840bb8f6c5cb1a1cfad1619efe4d26}{add\+Service\+Type}} (\doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}} service\+Type)
+\begin{DoxyCompactList}\small\item\em Registers a new service type. \end{DoxyCompactList}\item 
+Map$<$ String, \doxymbox{\hyperlink{classservice__management_1_1_train_type}{Train\+Type}} $>$ \doxymbox{\hyperlink{classservice__management_1_1_service_management_a83a7ad88a2dc8277c272b6999fbfd328}{get\+Train\+Types}} ()
+\begin{DoxyCompactList}\small\item\em Returns all registered train types. \end{DoxyCompactList}\item 
+Map$<$ String, \doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}} $>$ \doxymbox{\hyperlink{classservice__management_1_1_service_management_a67db59b53cbf1114c09c4609d5561efd}{get\+Service\+Types}} ()
+\begin{DoxyCompactList}\small\item\em Returns all registered service types. \end{DoxyCompactList}\item 
+Map$<$ String, \doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}} $>$ \doxymbox{\hyperlink{classservice__management_1_1_service_management_a8cbf688f37a01305f73e7f029bbf54f0}{get\+Service\+Sets}} ()
+\begin{DoxyCompactList}\small\item\em Returns all registered active service sets. \end{DoxyCompactList}\item 
+Map$<$ String, \doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}} $>$ \doxymbox{\hyperlink{classservice__management_1_1_service_management_a380f585558decbd8a5836a4d7861e512}{get\+Service\+Requests}} ()
+\begin{DoxyCompactList}\small\item\em Returns all registered active service sets. \end{DoxyCompactList}\item 
+Optional$<$ \doxymbox{\hyperlink{classservice__management_1_1_train_type}{Train\+Type}} $>$ \doxymbox{\hyperlink{classservice__management_1_1_service_management_a0483350bc1fad52b9914841c0771a46b}{get\+Train\+Type}} (String id)
+\begin{DoxyCompactList}\small\item\em Retrieves a train type by its identifier. \end{DoxyCompactList}\item 
+Optional$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}} $>$ \doxymbox{\hyperlink{classservice__management_1_1_service_management_a7752e9a9dbd60ee880a3f0bdd29f67e5}{get\+Service\+Type}} (String id)
+\begin{DoxyCompactList}\small\item\em Retrieves a service type by its ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
 \doxysubsection{Detailed Description}
-management class that provides functionality to edit the network 
+A management class that provides functionality to edit the network. Maintains the collections of service sets, service requests, service types, and train types that make up the rail network. 
+
+\label{classservice__management_1_1_service_management_doc-func-members}
+\Hypertarget{classservice__management_1_1_service_management_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classservice__management_1_1_service_management_a714e185201b06855b7ab8bd98ba1061b}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!addServiceRequest@{addServiceRequest}}
+\index{addServiceRequest@{addServiceRequest}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{addServiceRequest()}{addServiceRequest()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_a714e185201b06855b7ab8bd98ba1061b} 
+void service\+\_\+management.\+Service\+Management.\+add\+Service\+Request (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}}}]{service\+Set}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Submits a new service request pending approval. The service set is stored in the requests map with Pending\+Approval status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Set} & the \doxylink{classservice__management_1_1_service_set}{Service\+Set} being requested for addition to the network \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classservice__management_1_1_service_management_a39840bb8f6c5cb1a1cfad1619efe4d26}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!addServiceType@{addServiceType}}
+\index{addServiceType@{addServiceType}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{addServiceType()}{addServiceType()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_a39840bb8f6c5cb1a1cfad1619efe4d26} 
+void service\+\_\+management.\+Service\+Management.\+add\+Service\+Type (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}}}]{service\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registers a new service type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Type} & the \doxylink{classservice__management_1_1_service_type}{Service\+Type} to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classservice__management_1_1_service_management_a278a070667bea1b8fc355b2c57c00723}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!addTrainType@{addTrainType}}
+\index{addTrainType@{addTrainType}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{addTrainType()}{addTrainType()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_a278a070667bea1b8fc355b2c57c00723} 
+void service\+\_\+management.\+Service\+Management.\+add\+Train\+Type (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classservice__management_1_1_train_type}{Train\+Type}}}]{train\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registers a new train type in the network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em train\+Type} & the \doxylink{classservice__management_1_1_train_type}{Train\+Type} to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classservice__management_1_1_service_management_ac4a450102407c9feb5d4f4b47d11a6bf}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!approveServiceRequest@{approveServiceRequest}}
+\index{approveServiceRequest@{approveServiceRequest}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{approveServiceRequest()}{approveServiceRequest()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_ac4a450102407c9feb5d4f4b47d11a6bf} 
+void service\+\_\+management.\+Service\+Management.\+approve\+Service\+Request (\begin{DoxyParamCaption}\item[{String}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Approves a pending service request and promotes it to an active service set. The service is moved from the requests map to the active service sets map and its status is updated to Effective. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the ID of the service request to approve \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classservice__management_1_1_service_management_a380f585558decbd8a5836a4d7861e512}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!getServiceRequests@{getServiceRequests}}
+\index{getServiceRequests@{getServiceRequests}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{getServiceRequests()}{getServiceRequests()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_a380f585558decbd8a5836a4d7861e512} 
+Map$<$ String, \doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}} $>$ service\+\_\+management.\+Service\+Management.\+get\+Service\+Requests (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns all registered active service sets. 
+
+\begin{DoxyReturn}{Returns}
+an unmodifiable view of the service sets map 
+\end{DoxyReturn}
+\Hypertarget{classservice__management_1_1_service_management_a8cbf688f37a01305f73e7f029bbf54f0}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!getServiceSets@{getServiceSets}}
+\index{getServiceSets@{getServiceSets}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{getServiceSets()}{getServiceSets()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_a8cbf688f37a01305f73e7f029bbf54f0} 
+Map$<$ String, \doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}} $>$ service\+\_\+management.\+Service\+Management.\+get\+Service\+Sets (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns all registered active service sets. 
+
+\begin{DoxyReturn}{Returns}
+an unmodifiable view of the service sets map 
+\end{DoxyReturn}
+\Hypertarget{classservice__management_1_1_service_management_a7752e9a9dbd60ee880a3f0bdd29f67e5}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!getServiceType@{getServiceType}}
+\index{getServiceType@{getServiceType}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{getServiceType()}{getServiceType()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_a7752e9a9dbd60ee880a3f0bdd29f67e5} 
+Optional$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}} $>$ service\+\_\+management.\+Service\+Management.\+get\+Service\+Type (\begin{DoxyParamCaption}\item[{String}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a service type by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the ID of the \doxylink{classservice__management_1_1_service_type}{Service\+Type} to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Optional containing the \doxylink{classservice__management_1_1_service_type}{Service\+Type} with the given ID, or empty if not found 
+\end{DoxyReturn}
+\Hypertarget{classservice__management_1_1_service_management_a67db59b53cbf1114c09c4609d5561efd}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!getServiceTypes@{getServiceTypes}}
+\index{getServiceTypes@{getServiceTypes}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{getServiceTypes()}{getServiceTypes()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_a67db59b53cbf1114c09c4609d5561efd} 
+Map$<$ String, \doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}} $>$ service\+\_\+management.\+Service\+Management.\+get\+Service\+Types (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns all registered service types. 
+
+\begin{DoxyReturn}{Returns}
+an unmodifiable view of the service types map 
+\end{DoxyReturn}
+\Hypertarget{classservice__management_1_1_service_management_a0483350bc1fad52b9914841c0771a46b}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!getTrainType@{getTrainType}}
+\index{getTrainType@{getTrainType}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{getTrainType()}{getTrainType()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_a0483350bc1fad52b9914841c0771a46b} 
+Optional$<$ \doxymbox{\hyperlink{classservice__management_1_1_train_type}{Train\+Type}} $>$ service\+\_\+management.\+Service\+Management.\+get\+Train\+Type (\begin{DoxyParamCaption}\item[{String}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a train type by its identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the identifier of the \doxylink{classservice__management_1_1_train_type}{Train\+Type} to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Optional containing the \doxylink{classservice__management_1_1_train_type}{Train\+Type} with the given identifier, or empty if not found 
+\end{DoxyReturn}
+\Hypertarget{classservice__management_1_1_service_management_a83a7ad88a2dc8277c272b6999fbfd328}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!getTrainTypes@{getTrainTypes}}
+\index{getTrainTypes@{getTrainTypes}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{getTrainTypes()}{getTrainTypes()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_a83a7ad88a2dc8277c272b6999fbfd328} 
+Map$<$ String, \doxymbox{\hyperlink{classservice__management_1_1_train_type}{Train\+Type}} $>$ service\+\_\+management.\+Service\+Management.\+get\+Train\+Types (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns all registered train types. 
+
+\begin{DoxyReturn}{Returns}
+an unmodifiable view of the train types map 
+\end{DoxyReturn}
+\Hypertarget{classservice__management_1_1_service_management_aee34d1a6268f7025c719108c5e579226}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!rejectServiceRequest@{rejectServiceRequest}}
+\index{rejectServiceRequest@{rejectServiceRequest}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{rejectServiceRequest()}{rejectServiceRequest()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_aee34d1a6268f7025c719108c5e579226} 
+void service\+\_\+management.\+Service\+Management.\+reject\+Service\+Request (\begin{DoxyParamCaption}\item[{String}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rejects and removes a pending service request. The service set is removed from the requests map and discarded. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the ID of the service request to reject \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
 \item 

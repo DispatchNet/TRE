@@ -1,0 +1,213 @@
+\doxysection{path\+\_\+finding.\+Path\+\_\+\+Finding Class Reference}
+\hypertarget{classpath__finding_1_1_path___finding}{}\label{classpath__finding_1_1_path___finding}\index{path\_finding.Path\_Finding@{path\_finding.Path\_Finding}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classpath__finding_1_1_path___finding_a7c25856e2848a10e8369664e9a48bb64}{Path\+\_\+\+Finding}} (Object requester, \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} from, \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} to, Local\+Time after, Local\+Time before)  throws Exception 
+\begin{DoxyCompactList}\small\item\em creates the Pathfinding\+\_\+class \end{DoxyCompactList}\item 
+Object \doxymbox{\hyperlink{classpath__finding_1_1_path___finding_adcd69021ea397fe655c68ff850fe4eab}{get\+Requester}} ()
+\begin{DoxyCompactList}\small\item\em requester getter \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} \doxymbox{\hyperlink{classpath__finding_1_1_path___finding_af20fd98d7c0a4a8e0c07f93b4867a701}{get\+From}} ()
+\begin{DoxyCompactList}\small\item\em from getter \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} \doxymbox{\hyperlink{classpath__finding_1_1_path___finding_a0f508d36000593c0f18628558ff8fa1e}{get\+To}} ()
+\begin{DoxyCompactList}\small\item\em to getter \end{DoxyCompactList}\item 
+Local\+Time \doxymbox{\hyperlink{classpath__finding_1_1_path___finding_ab70569a0289d62da5af9593dbb9da313}{get\+After}} ()
+\begin{DoxyCompactList}\small\item\em after getter \end{DoxyCompactList}\item 
+Local\+Time \doxymbox{\hyperlink{classpath__finding_1_1_path___finding_ab9a0403427fa2ea5dca2b1509f91bcd2}{get\+Before}} ()
+\begin{DoxyCompactList}\small\item\em before getter \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{enumpath__finding_1_1srt_alg}{srt\+Alg}} \doxymbox{\hyperlink{classpath__finding_1_1_path___finding_a28c29b7daa00bdc1eab679226c6fc068}{get\+Chosen\+Srt}} ()
+\begin{DoxyCompactList}\small\item\em chosen\+Srt getter \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classpath__finding_1_1_path___finding_aa80674e608b582a6e28f318969656cce}{set\+Chosen\+Srt}} (\doxymbox{\hyperlink{enumpath__finding_1_1srt_alg}{srt\+Alg}} new\+Alg)
+\begin{DoxyCompactList}\small\item\em chosen\+Srt setter \end{DoxyCompactList}\item 
+Array\+List$<$ Array\+List$<$ \doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}} $>$ $>$ \doxymbox{\hyperlink{classpath__finding_1_1_path___finding_ae440fa57dbabcba4355e89b982317f98}{get\+Results}} ()
+\begin{DoxyCompactList}\small\item\em public way to access the results of the pathfinding \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classpath__finding_1_1_path___finding_a7d54813766ed7404f9294ca7656be35a}{prch\+Tcks}} ()  throws Exception 
+\begin{DoxyCompactList}\small\item\em Handles the pruchase of tickets from the POV of the pathfinder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{classpath__finding_1_1_path___finding_a8e862192ab089b4543a64e359314e192}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\label{classpath__finding_1_1_path___finding_doc-constructors}
+\Hypertarget{classpath__finding_1_1_path___finding_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpath__finding_1_1_path___finding_a7c25856e2848a10e8369664e9a48bb64}\index{path\_finding.Path\_Finding@{path\_finding.Path\_Finding}!Path\_Finding@{Path\_Finding}}
+\index{Path\_Finding@{Path\_Finding}!path\_finding.Path\_Finding@{path\_finding.Path\_Finding}}
+\doxysubsubsection{\texorpdfstring{Path\_Finding()}{Path\_Finding()}}
+{\footnotesize\ttfamily \label{classpath__finding_1_1_path___finding_a7c25856e2848a10e8369664e9a48bb64} 
+path\+\_\+finding.\+Path\+\_\+\+Finding.\+Path\+\_\+\+Finding (\begin{DoxyParamCaption}\item[{Object}]{requester}{, }\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}}}]{from}{, }\item[{\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}}}]{to}{, }\item[{Local\+Time}]{after}{, }\item[{Local\+Time}]{before}{}\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+creates the Pathfinding\+\_\+class 
+
+Enforces mandatory information like requester and parameters of the search, initializes the sorting algorithm enum to its default value and computes the result lists 
+\begin{DoxyParams}{Parameters}
+{\em requester} & which \doxylink{classuser__management_1_1_passenger}{Passenger} or \doxylink{classuser__management_1_1_anonymous_user}{Anonymous\+User} initiated the request, used for ticket generation \\
+\hline
+{\em from} & Where the search starts \\
+\hline
+{\em to} & Where the search ends \\
+\hline
+{\em after} & The earliest accepted time for the first train in a path to depart, is optional (all values pass) but if no "{}before"{} argument is specified defaults to current time \\
+\hline
+{\em before} & The latest accepted time for the last train in a path to arrive, is optional (all values pass) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Bad\+Field} & Requester, from junction or to junction are null, despite being mandatory \\
+\hline
+{\em Bad\+Req} & Requester object is not an instance of \doxylink{classuser__management_1_1_passenger}{Passenger} or \doxylink{classuser__management_1_1_anonymous_user}{Anonymous\+User} \\
+\hline
+{\em No\+Path} & The "{}from"{} \doxylink{classinfrastructure_1_1_junction}{Junction} cannot reach the "{}to"{} \doxylink{classinfrastructure_1_1_junction}{Junction} \\
+\hline
+{\em Bad\+Search} & No path respects both "{}after"{} and "{}before"{} argument \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\doxylink{classuser__management_1_1_passenger}{Passenger} 
+
+\doxylink{classinfrastructure_1_1_junction}{Junction} 
+
+\doxylink{classticketing_1_1_ticket}{Ticket} 
+\end{DoxySeeAlso}
+
+
+\label{classpath__finding_1_1_path___finding_doc-func-members}
+\Hypertarget{classpath__finding_1_1_path___finding_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpath__finding_1_1_path___finding_ab70569a0289d62da5af9593dbb9da313}\index{path\_finding.Path\_Finding@{path\_finding.Path\_Finding}!getAfter@{getAfter}}
+\index{getAfter@{getAfter}!path\_finding.Path\_Finding@{path\_finding.Path\_Finding}}
+\doxysubsubsection{\texorpdfstring{getAfter()}{getAfter()}}
+{\footnotesize\ttfamily \label{classpath__finding_1_1_path___finding_ab70569a0289d62da5af9593dbb9da313} 
+Local\+Time path\+\_\+finding.\+Path\+\_\+\+Finding.\+get\+After (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+after getter 
+
+\begin{DoxyReturn}{Returns}
+a Local\+Time 
+\end{DoxyReturn}
+\Hypertarget{classpath__finding_1_1_path___finding_ab9a0403427fa2ea5dca2b1509f91bcd2}\index{path\_finding.Path\_Finding@{path\_finding.Path\_Finding}!getBefore@{getBefore}}
+\index{getBefore@{getBefore}!path\_finding.Path\_Finding@{path\_finding.Path\_Finding}}
+\doxysubsubsection{\texorpdfstring{getBefore()}{getBefore()}}
+{\footnotesize\ttfamily \label{classpath__finding_1_1_path___finding_ab9a0403427fa2ea5dca2b1509f91bcd2} 
+Local\+Time path\+\_\+finding.\+Path\+\_\+\+Finding.\+get\+Before (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+before getter 
+
+\begin{DoxyReturn}{Returns}
+a Local\+Time 
+\end{DoxyReturn}
+\Hypertarget{classpath__finding_1_1_path___finding_a28c29b7daa00bdc1eab679226c6fc068}\index{path\_finding.Path\_Finding@{path\_finding.Path\_Finding}!getChosenSrt@{getChosenSrt}}
+\index{getChosenSrt@{getChosenSrt}!path\_finding.Path\_Finding@{path\_finding.Path\_Finding}}
+\doxysubsubsection{\texorpdfstring{getChosenSrt()}{getChosenSrt()}}
+{\footnotesize\ttfamily \label{classpath__finding_1_1_path___finding_a28c29b7daa00bdc1eab679226c6fc068} 
+\doxymbox{\hyperlink{enumpath__finding_1_1srt_alg}{srt\+Alg}} path\+\_\+finding.\+Path\+\_\+\+Finding.\+get\+Chosen\+Srt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+chosen\+Srt getter 
+
+\begin{DoxyReturn}{Returns}
+a \doxylink{enumpath__finding_1_1srt_alg}{srt\+Alg} enum 
+\end{DoxyReturn}
+\Hypertarget{classpath__finding_1_1_path___finding_af20fd98d7c0a4a8e0c07f93b4867a701}\index{path\_finding.Path\_Finding@{path\_finding.Path\_Finding}!getFrom@{getFrom}}
+\index{getFrom@{getFrom}!path\_finding.Path\_Finding@{path\_finding.Path\_Finding}}
+\doxysubsubsection{\texorpdfstring{getFrom()}{getFrom()}}
+{\footnotesize\ttfamily \label{classpath__finding_1_1_path___finding_af20fd98d7c0a4a8e0c07f93b4867a701} 
+\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} path\+\_\+finding.\+Path\+\_\+\+Finding.\+get\+From (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+from getter 
+
+\begin{DoxyReturn}{Returns}
+a \doxylink{classinfrastructure_1_1_junction}{Junction} pointer 
+\end{DoxyReturn}
+\Hypertarget{classpath__finding_1_1_path___finding_adcd69021ea397fe655c68ff850fe4eab}\index{path\_finding.Path\_Finding@{path\_finding.Path\_Finding}!getRequester@{getRequester}}
+\index{getRequester@{getRequester}!path\_finding.Path\_Finding@{path\_finding.Path\_Finding}}
+\doxysubsubsection{\texorpdfstring{getRequester()}{getRequester()}}
+{\footnotesize\ttfamily \label{classpath__finding_1_1_path___finding_adcd69021ea397fe655c68ff850fe4eab} 
+Object path\+\_\+finding.\+Path\+\_\+\+Finding.\+get\+Requester (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+requester getter 
+
+\begin{DoxyReturn}{Returns}
+a \doxylink{classuser__management_1_1_passenger}{Passenger} pointer 
+\end{DoxyReturn}
+\Hypertarget{classpath__finding_1_1_path___finding_ae440fa57dbabcba4355e89b982317f98}\index{path\_finding.Path\_Finding@{path\_finding.Path\_Finding}!getResults@{getResults}}
+\index{getResults@{getResults}!path\_finding.Path\_Finding@{path\_finding.Path\_Finding}}
+\doxysubsubsection{\texorpdfstring{getResults()}{getResults()}}
+{\footnotesize\ttfamily \label{classpath__finding_1_1_path___finding_ae440fa57dbabcba4355e89b982317f98} 
+Array\+List$<$ Array\+List$<$ \doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}} $>$ $>$ path\+\_\+finding.\+Path\+\_\+\+Finding.\+get\+Results (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+public way to access the results of the pathfinding 
+
+Calls the private srt\+Pth function when necessary, and formats the results \begin{DoxyReturn}{Returns}
+An Array\+List of paths (Array\+List of Tickets) 
+\end{DoxyReturn}
+\Hypertarget{classpath__finding_1_1_path___finding_a0f508d36000593c0f18628558ff8fa1e}\index{path\_finding.Path\_Finding@{path\_finding.Path\_Finding}!getTo@{getTo}}
+\index{getTo@{getTo}!path\_finding.Path\_Finding@{path\_finding.Path\_Finding}}
+\doxysubsubsection{\texorpdfstring{getTo()}{getTo()}}
+{\footnotesize\ttfamily \label{classpath__finding_1_1_path___finding_a0f508d36000593c0f18628558ff8fa1e} 
+\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} path\+\_\+finding.\+Path\+\_\+\+Finding.\+get\+To (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+to getter 
+
+\begin{DoxyReturn}{Returns}
+a \doxylink{classinfrastructure_1_1_junction}{Junction} pointer 
+\end{DoxyReturn}
+\Hypertarget{classpath__finding_1_1_path___finding_a8e862192ab089b4543a64e359314e192}\index{path\_finding.Path\_Finding@{path\_finding.Path\_Finding}!main@{main}}
+\index{main@{main}!path\_finding.Path\_Finding@{path\_finding.Path\_Finding}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{classpath__finding_1_1_path___finding_a8e862192ab089b4543a64e359314e192} 
+void path\+\_\+finding.\+Path\+\_\+\+Finding.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classpath__finding_1_1_path___finding_a7d54813766ed7404f9294ca7656be35a}\index{path\_finding.Path\_Finding@{path\_finding.Path\_Finding}!prchTcks@{prchTcks}}
+\index{prchTcks@{prchTcks}!path\_finding.Path\_Finding@{path\_finding.Path\_Finding}}
+\doxysubsubsection{\texorpdfstring{prchTcks()}{prchTcks()}}
+{\footnotesize\ttfamily \label{classpath__finding_1_1_path___finding_a7d54813766ed7404f9294ca7656be35a} 
+void path\+\_\+finding.\+Path\+\_\+\+Finding.\+prch\+Tcks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the pruchase of tickets from the POV of the pathfinder. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Bad\+Requester} & The requester of Pathfinding is not allowed to purchase tickets \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classpath__finding_1_1_path___finding_aa80674e608b582a6e28f318969656cce}\index{path\_finding.Path\_Finding@{path\_finding.Path\_Finding}!setChosenSrt@{setChosenSrt}}
+\index{setChosenSrt@{setChosenSrt}!path\_finding.Path\_Finding@{path\_finding.Path\_Finding}}
+\doxysubsubsection{\texorpdfstring{setChosenSrt()}{setChosenSrt()}}
+{\footnotesize\ttfamily \label{classpath__finding_1_1_path___finding_aa80674e608b582a6e28f318969656cce} 
+void path\+\_\+finding.\+Path\+\_\+\+Finding.\+set\+Chosen\+Srt (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{enumpath__finding_1_1srt_alg}{srt\+Alg}}}]{new\+Alg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+chosen\+Srt setter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Alg} & new enum value to use \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+path\+\_\+finding/\+\doxymbox{\hyperlink{_path___finding_8java}{Path\+\_\+\+Finding.\+java}}\end{DoxyCompactItemize}
