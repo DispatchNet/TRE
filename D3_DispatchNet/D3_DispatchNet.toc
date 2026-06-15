@@ -15,3 +15,4 @@
 \contentsline {section}{\numberline {2.7}APIs}{14}{section.2.7}%
 \contentsline {section}{\numberline {2.8}Code Preview}{14}{section.2.8}%
 \contentsline {section}{\numberline {2.9}Team roles}{14}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Roles and Activities}{15}{subsection.2.9.1}%

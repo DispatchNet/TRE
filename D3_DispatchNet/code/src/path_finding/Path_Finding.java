@@ -287,34 +287,38 @@ public class Path_Finding{
       
       UserManagement cmd = Main.getUserManagement();
       
-      //Get index from user
-      do {
-        //set index to some value from user
-        String userReply = cmd.prompt(queryText.toString());
+      String userReply = cmd.prompt(queryText.toString());
         
-        index = Integer.parseInt(userReply);
+      if (userReply == "q") return;
 
-        if (index < 0 || index >= results.size()) cmd.displayError("Invalid index, please try again");
+      index = Integer.parseInt(userReply);
 
-      } while (index < 0 || index >= results.size());
-      
+      if (index < 0 || index >= results.size()) {
+        cmd.displayError("Invalid index, returning to menu");
+        return;
+      }
+
       boolean allPurchased;
+      
       do {
         allPurchased = true;
       
         queryText = new StringBuilder();
-        queryText.append("Please select one of the following by number of index\n-------\n");
-
-        for (int i = 0; i<results.get(index).size(); i++){
+        queryText.append("Please select one of the following by number of index\n-------\nq) To quit\n-------\nq");
+        for (int i = 0; i<this.results.get(index).size(); i++){
           queryText.append(i);
           queryText.append(":\t");
-          queryText.append(results.get(index).get(i).getDescription());
-          if (results.get(index).get(i).isActive()) queryText.append("\t Purchased!");
+          queryText.append(this.results.get(index).get(i).getDescription());
+          if (this.results.get(index).get(i).isActive()) queryText.append("\t Purchased!");
           else allPurchased = false;
           queryText.append("\n");
         }
         
-        int ticketSelector = Integer.parseInt(cmd.prompt(queryText.toString()));
+        userReply = cmd.prompt(queryText.toString());
+
+        if (userReply == "q") return;
+
+        int ticketSelector = Integer.parseInt(userReply);
         if (ticketSelector >= 0 && ticketSelector < results.get(index).size()) {
           ticketUser.purchaseTicket(results.get(index).get(ticketSelector));    
         } else {
@@ -322,8 +326,20 @@ public class Path_Finding{
         }
         
       } while (!allPurchased);
+      cmd.print("All tickets purchased!");
 		}
-
+    
+    @Override
+    public String toString() {
+      StringBuilder out = new StringBuilder();
+      for (int i = 0; i<results.size(); i++) {
+        for (int ii = 0; ii<results.get(i).size(); ii++) {
+          out.append(results.get(i).get(ii).getJunction().getName() + "  ");
+        }
+      out.append("\n");
+      }
+      return out.toString();
+    }
 //Private
     /**
      * @brief sorts the results list according to the stored srtAlg
@@ -401,7 +417,7 @@ class sortByDeparture implements Comparator<ArrayList<Ticket>> {
     
     if (L1.get(0).getDeparture().time() == L2.get(0).getDeparture().time()) return 0;
     
-    return L1.get(0).getDeparture().time().isBefore(L2.get(0).getDeparture().time())? -1 : 1;
+    return L1.get(0).getDeparture().time().isAfter(L2.get(0).getDeparture().time())? -1 : 1;
   }
 };
 /**
@@ -506,4 +522,6 @@ class PathComparator implements Comparator<ArrayList<Ticket>> {
 
     return sortVal;
   }
+
+  
 }
