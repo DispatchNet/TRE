@@ -238,15 +238,30 @@ public class Main {
     } else before = null;
 
 
-    Path_Finding path;
+    Path_Finding path_finding;
     try{
-      path = new Path_Finding(user, from.orElse(null), to.orElse(null), after, before);
+      path_finding = new Path_Finding(user, from.orElse(null), to.orElse(null), after, before);
     } catch (Exception e) {
       io.print("Something went wrong when creating path\n");
       return;
     }
+    
+    for( var path : path_finding.getResults()) {
+      io.println(
+        String.join(";",
+          path.stream().map(section -> {
+            return String.format("%s %s -> %s %s (E%f)", 
+              section.getDeparture().time().toString(),
+              section.getDeparture().serviceStep().getJunction().getName(),
+              section.getLastStep().getJunction().getName(),
+              section.getArrival().toString(),
+              (float) section.getCost() / 100
+            );
+          }).toList()
+        )
+      );
+    }
 
-    io.print(path.toString());
 
     boolean quit = false;
     boolean something_went_wrong = false;
@@ -258,7 +273,7 @@ public class Main {
             io.print("Invalid operation, returning to path options");
           } else {
             if (!something_went_wrong) try {
-              path.prchTcks();
+              path_finding.prchTcks();
             } catch (Exception e) {
               io.displayError("Looks like something went wrong while purhcasing tickets, returning to path options");
             }
@@ -269,19 +284,19 @@ public class Main {
           userInput = io.prompt("l) Sort by ascending lenght\nd) Sort by descending departure\na) Sort by ascending arrival\nc) Sort by ascending cost");
           switch(userInput) {
             case "l":
-              path.setChosenSrt(srtAlg.Length);
+              path_finding.setChosenSrt(srtAlg.Length);
             break;
 
             case "d":
-              path.setChosenSrt(srtAlg.Departure);
+              path_finding.setChosenSrt(srtAlg.Departure);
             break;
 
             case "a":
-              path.setChosenSrt(srtAlg.Arrival);
+              path_finding.setChosenSrt(srtAlg.Arrival);
             break;
 
             case "c":
-              path.setChosenSrt(srtAlg.Cost);
+              path_finding.setChosenSrt(srtAlg.Cost);
             break;
 
             default:
