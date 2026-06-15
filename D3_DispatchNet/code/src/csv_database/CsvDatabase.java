@@ -898,10 +898,7 @@ public class CsvDatabase {
             if (holder.isRequest) {
                 serviceManagement.addServiceRequest(serviceSet);
             } else {
-                // addServiceRequest + approveServiceRequest is the only public path
-                // into serviceSets; the approve call moves it over and sets Effective.
-                serviceManagement.addServiceRequest(serviceSet);
-                serviceManagement.approveServiceRequest(holder.id);
+                serviceManagement.addService(serviceSet);
             }
         }
     }
