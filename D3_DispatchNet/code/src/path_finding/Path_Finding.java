@@ -16,6 +16,8 @@ import service_management.ServiceSet;
 import service_management.ServiceStep;
 import departure.Departure;
 
+import IO_operations.IO;
+
 /**
  * @class Path_finding
  * @brief Class representing a path_finding request
@@ -61,9 +63,13 @@ public class Path_Finding{
      * @see Ticket
      */
     public Path_Finding(Passenger requester, Junction from, Junction to, LocalTime after, LocalTime before) {
-			//TODO make a null check on the from and to
-      //TODO make sure serviceSet equality is implemented and real
       
+      if (requester == null || from == null || to == null) {
+        //TODO error out here
+        return null;
+      }
+
+
       final int MIN_RESULTS = 10;
       final int MAX_ITERATIONS = 10000;
 
@@ -153,6 +159,7 @@ public class Path_Finding{
         if (theStep == null) {
           //Something went wrong
           //TODO error out here
+          return null
         }
         tempList.add(new Ticket(
           this.requester,
@@ -231,14 +238,31 @@ public class Path_Finding{
 		public ArrayList<ArrayList<Ticket>> getResults() {
 			return srtPth();
 		}
-    
+
+
     /**
      * @brief Handles the pruchase of tickets from the POV of the pathfinder
-     * @param index which one of the lists of tickets is the one chosen by the user 
      * @exception OutOfBounds The argument is not a valid index for the results list
      */
-		public void prchTcks(int index) {
-		  //TODO
+		public void prchTcks() {
+		  //TODO manage IO
+      
+      int index = 0;
+      boolean ok_flag = true;
+      
+      //form query string with Junction names  
+
+      //Get index from user
+      do {
+        //set index to some value from user
+        if ()
+      }
+      
+
+
+      //Select ticket here by some way
+
+
 		}
 
 //Private
