@@ -54,6 +54,7 @@ public class Main {
     // Load objects from CSV files
     csvDatabase.loadNetwork(network);
     csvDatabase.loadAuthenticatedUsers(userManagement); // also loads tickets
+    csvDatabase.loadServiceManagement(serviceManagement, userManagement, network);
 
     // Start the interactive interface flow
     runInterface();
@@ -61,6 +62,7 @@ public class Main {
     // Save objects to CSV files before exiting
     csvDatabase.saveNetwork(network);
     csvDatabase.saveAuthenticatedUsers(userManagement.getAuthenticatedUsers());
+    csvDatabase.saveServiceManagement(serviceManagement);
     try {
         csvDatabase.saveTickets(userManagement);
     } catch (Exception e) {
@@ -116,6 +118,7 @@ public class Main {
           accountInterface(currentUser);
       if(! (currentUser instanceof NetworkManager)) {
         switch(choice) {
+          case "m": printMap(); break;
           case "q": exitRequested = true; break;
           default: break;
         }
@@ -125,7 +128,6 @@ public class Main {
         }
         else {
           switch(choice) {
-            case "m": printMap(); break;
             case "p": pathFindingInterface(currentUser); break;
             case "s": stationTrainSearchInterface(currentUser); break;
           }
@@ -367,7 +369,7 @@ public class Main {
     String searchTerm = io.prompt("Search: ");
 
     Optional<Junction> junc = network.getJunctionByName(searchTerm);
-    Optional<ServiceSet> trains = serviceManagement.getServiceSet(searchTerm);
+    Optional<ServiceSet> trains = Optional.ofNullable(serviceManagement.getServiceSets().get(searchTerm));
 
     if (junc.isPresent()) {
       io.print("The query matched the Station:\n");

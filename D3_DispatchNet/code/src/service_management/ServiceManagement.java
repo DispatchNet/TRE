@@ -82,21 +82,19 @@ public class ServiceManagement {
   }
 
   /**
-   * @brief Retrieves an active service set by its ID.
-   * @param id the ID of the service set to retrieve
-   * @return an Optional containing the ServiceSet with the given ID, or empty if not found
+  * @brief Returns all registered active service sets.
+   * @return an unmodifiable view of the service sets map
    */
-  public Optional<ServiceSet> getServiceSet(String id) {
-    return Optional.ofNullable(serviceSets.get(id));
+  public Map<String, ServiceSet> getServiceSets() {
+    return java.util.Collections.unmodifiableMap(serviceSets);
   }
 
   /**
-   * @brief Retrieves a pending service request by its ID.
-   * @param id the ID of the service request to retrieve
-   * @return an Optional containing the ServiceSet request with the given ID, or empty if not found
+   * @brief Returns all registered active service sets.
+   * @return an unmodifiable view of the service sets map
    */
-  public Optional<ServiceSet> getServiceRequest(String id) {
-    return Optional.ofNullable(serviceRequests.get(id));
+  public Map<String, ServiceSet> getServiceRequests() {
+    return java.util.Collections.unmodifiableMap(serviceRequests);
   }
 
   /**
@@ -116,4 +114,5 @@ public class ServiceManagement {
   public Optional<ServiceType> getServiceType(String id) {
     return Optional.ofNullable(serviceTypes.get(id));
   }
+
 }

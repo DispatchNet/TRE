@@ -5,6 +5,14 @@ import infrastructure.Junction;
 import infrastructure.Line;
 import infrastructure.Network;
 import infrastructure.StationData;
+import service_management.Dispatch;
+import service_management.ServiceManagement;
+import service_management.ServiceSet;
+import service_management.ServiceStatus;
+import service_management.ServiceStep;
+import service_management.ServiceType;
+import service_management.StopData;
+import service_management.TrainType;
 import ticketing.Ticket;
 import user_management.AuthenticatedUser;
 import user_management.Passenger;
@@ -19,8 +27,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.time.DayOfWeek;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -39,11 +50,16 @@ public class CsvDatabase {
     // File paths for CSV storage
     private static final Path DATA_DIR = Paths.get("csv_database", "data");
     // CSV files (add if necessary)
-    private static final Path USER_FILE = DATA_DIR.resolve("authenticated_users.csv");
-    private static final Path JUNCTION_FILE = DATA_DIR.resolve("junctions.csv");
-    private static final Path STATION_FILE = DATA_DIR.resolve("station_data.csv");
-    private static final Path LINE_FILE = DATA_DIR.resolve("lines.csv");
-    private static final Path TICKET_FILE = DATA_DIR.resolve("tickets.csv");
+    private static final Path USER_FILE         = DATA_DIR.resolve("authenticated_users.csv");
+    private static final Path JUNCTION_FILE     = DATA_DIR.resolve("junctions.csv");
+    private static final Path STATION_FILE      = DATA_DIR.resolve("station_data.csv");
+    private static final Path LINE_FILE         = DATA_DIR.resolve("lines.csv");
+    private static final Path TICKET_FILE       = DATA_DIR.resolve("tickets.csv");
+    private static final Path TRAIN_TYPE_FILE   = DATA_DIR.resolve("train_types.csv");
+    private static final Path SERVICE_TYPE_FILE = DATA_DIR.resolve("service_types.csv");
+    private static final Path SERVICE_SET_FILE  = DATA_DIR.resolve("service_sets.csv");
+    private static final Path SERVICE_STEP_FILE = DATA_DIR.resolve("service_steps.csv");
+    private static final Path DISPATCH_FILE     = DATA_DIR.resolve("dispatches.csv");
 
     /**
      * @brief Constructor for CsvDatabase.
@@ -73,6 +89,11 @@ public class CsvDatabase {
         createFileWithHeader(STATION_FILE, "id,junctionId,platforms");
         createFileWithHeader(LINE_FILE, "id,junction1Id,junction2Id,lengthMeters,maxSpeedKpH,nTracks");
         createFileWithHeader(TICKET_FILE, "id,ownerId,description,status,history");
+        createFileWithHeader(TRAIN_TYPE_FILE,   "identifier,seatedCapacity,standingCapacity,isPassenger");
+        createFileWithHeader(SERVICE_TYPE_FILE, "id,commercialName,trainTypeIdentifier,centsPerKm");
+        createFileWithHeader(SERVICE_SET_FILE,  "id,companyId,serviceTypeId,status,isRequest");
+        createFileWithHeader(SERVICE_STEP_FILE, "id,serviceSetId,stepIndex,junctionId,travelMinutes,platform,waitMinutes");
+        createFileWithHeader(DISPATCH_FILE,     "serviceSetId,trainNumber,dispatchTime,runningDays");
     }
 
     /**
@@ -622,5 +643,387 @@ public class CsvDatabase {
         }
 
         return value;
+    }
+
+    /**
+     * @brief Loads all service management data from CSV files.
+     *        Must be called after loadNetwork() and loadAuthenticatedUsers() so that
+     *        Junction and TrainCompany references can be resolved.
+     * @param serviceManagement The ServiceManagement instance to populate.
+     * @param userManagement    Used to resolve TrainCompany owners by ID.
+     * @param network           Used to resolve Junction references in ServiceSteps.
+     */
+    public void loadServiceManagement(
+            ServiceManagement serviceManagement,
+            UserManagement userManagement,
+            Network network) {
+        try {
+            // Load in dependency order: TrainTypes have no deps, ServiceTypes need
+            // TrainTypes, ServiceSets need ServiceTypes and TrainCompany users.
+            loadTrainTypes(serviceManagement);
+            loadServiceTypes(serviceManagement);
+            loadServiceSets(serviceManagement, userManagement, network);
+        } catch (IOException e) {
+            System.err.println("Failed to load service management data: " + e.getMessage());
+        }
+    }
+
+    /**
+     * @brief Saves all service management data to CSV files.
+     * @param serviceManagement The ServiceManagement instance to persist.
+     */
+    public void saveServiceManagement(ServiceManagement serviceManagement) {
+        try {
+            saveTrainTypes(serviceManagement);
+            saveServiceTypes(serviceManagement);
+            saveServiceSets(serviceManagement);
+        } catch (IOException e) {
+            System.err.println("Failed to save service management data: " + e.getMessage());
+        }
+    }
+
+    /**
+     * @brief Loads train types from train_types.csv.
+     * @param serviceManagement The destination for the loaded TrainType objects.
+     * @throws IOException If the CSV file cannot be read.
+     */
+    private void loadTrainTypes(ServiceManagement serviceManagement) throws IOException {
+        for (String line : readCsvRecords(TRAIN_TYPE_FILE)) {
+            String[] v = line.split(",", -1);
+            if (v.length < 4) continue;
+
+            String  identifier       = v[0];
+            int     seatedCapacity   = Integer.parseInt(v[1]);
+            int     standingCapacity = Integer.parseInt(v[2]);
+            boolean isPassenger      = Boolean.parseBoolean(v[3]);
+
+            serviceManagement.addTrainType(
+                new TrainType(identifier, seatedCapacity, standingCapacity, isPassenger));
+        }
+    }
+
+    /**
+     * @brief Saves all registered train types to train_types.csv.
+     * @param serviceManagement Source of the TrainType objects to persist.
+     * @throws IOException If the CSV file cannot be written.
+     */
+    private void saveTrainTypes(ServiceManagement serviceManagement) throws IOException {
+        List<String> output = new ArrayList<>();
+        output.add("identifier,seatedCapacity,standingCapacity,isPassenger");
+
+        for (TrainType tt : serviceManagement.getTrainTypes().values()) {
+            output.add(String.join(",",
+                escapeCsv(tt.getIdentifier()),
+                Integer.toString(tt.getSeatedCapacity()),
+                Integer.toString(tt.getStandingCapacity()),
+                Boolean.toString(tt.isPassenger())
+            ));
+        }
+
+        Files.write(TRAIN_TYPE_FILE, output, StandardCharsets.UTF_8,
+            StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+    }
+
+    /**
+     * @brief Loads service types from service_types.csv.
+     *        Depends on train types already being present in serviceManagement.
+     * @param serviceManagement Source of TrainType lookups; destination for ServiceType objects.
+     * @throws IOException If the CSV file cannot be read.
+     */
+    private void loadServiceTypes(ServiceManagement serviceManagement) throws IOException {
+        for (String line : readCsvRecords(SERVICE_TYPE_FILE)) {
+            String[] v = line.split(",", -1);
+            if (v.length < 4) continue;
+
+            String id             = v[0];
+            String commercialName = v[1];
+            String trainTypeId    = v[2];
+            int    centsPerKm     = Integer.parseInt(v[3]);
+
+            // Resolve the TrainType reference; skip if not found to keep data consistent.
+            Optional<TrainType> trainType = serviceManagement.getTrainType(trainTypeId);
+            if (trainType.isEmpty()) continue;
+
+            serviceManagement.addServiceType(
+                new ServiceType(id, commercialName, trainType.get(), centsPerKm));
+        }
+    }
+
+    /**
+     * @brief Saves all registered service types to service_types.csv.
+     * @param serviceManagement Source of the ServiceType objects to persist.
+     * @throws IOException If the CSV file cannot be written.
+     */
+    private void saveServiceTypes(ServiceManagement serviceManagement) throws IOException {
+        List<String> output = new ArrayList<>();
+        output.add("id,commercialName,trainTypeIdentifier,centsPerKm");
+
+        for (ServiceType st : serviceManagement.getServiceTypes().values()) {
+            output.add(String.join(",",
+                escapeCsv(st.getId()),
+                escapeCsv(st.getCommercialName()),
+                escapeCsv(st.getTrainType().getIdentifier()),
+                Integer.toString(st.getCentsPerKm())
+            ));
+        }
+
+        Files.write(SERVICE_TYPE_FILE, output, StandardCharsets.UTF_8,
+            StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+    }
+
+    /**
+     * @brief Holds the raw CSV data for a single ServiceSet row, pending construction
+     *        once all its steps and dispatches have been collected.
+     */
+    private static class PendingServiceSet {
+        final String        id;
+        final TrainCompany  company;
+        final ServiceType   serviceType;
+        final ServiceStatus status;
+        final boolean       isRequest;
+        final List<ServiceStep> steps     = new ArrayList<>();
+        final List<Dispatch>    dispatches = new ArrayList<>();
+
+        PendingServiceSet(String id, TrainCompany company, ServiceType serviceType,
+                          ServiceStatus status, boolean isRequest) {
+            this.id          = id;
+            this.company     = company;
+            this.serviceType = serviceType;
+            this.status      = status;
+            this.isRequest   = isRequest;
+        }
+    }
+
+    /**
+     * @brief Loads service sets (both active and pending requests) together with
+     *        their steps and dispatches from the three related CSV files.
+     *        All three files are read in full before any ServiceSet is constructed,
+     *        so each object is built exactly once with its complete step and dispatch
+     *        lists — no package-private field access required.
+     * @param serviceManagement Destination for loaded ServiceSet objects.
+     * @param userManagement    Used to resolve TrainCompany owners by ID.
+     * @param network           Used to resolve Junction references by ID in steps.
+     * @throws IOException If any CSV file cannot be read.
+     */
+    private void loadServiceSets(
+            ServiceManagement serviceManagement,
+            UserManagement userManagement,
+            Network network) throws IOException {
+
+        // ── Pass 1: read service_sets.csv into pending holders ────────────────
+        // PendingServiceSet accumulates steps and dispatches before the real
+        // ServiceSet is constructed, avoiding any need to mutate its fields.
+        Map<String, PendingServiceSet> pending = new HashMap<>();
+
+        for (String line : readCsvRecords(SERVICE_SET_FILE)) {
+            String[] v = line.split(",", -1);
+            if (v.length < 5) continue;
+
+            String id            = v[0];
+            String companyId     = v[1];
+            String serviceTypeId = v[2];
+            ServiceStatus status;
+            try {
+                status = ServiceStatus.valueOf(v[3]);
+            } catch (IllegalArgumentException e) {
+                continue; // skip rows with an unrecognised status
+            }
+            boolean isRequest = Boolean.parseBoolean(v[4]);
+
+            // Resolve owner – must be a TrainCompany.
+            AuthenticatedUser owner = userManagement.getAuthenticatedUserById(companyId);
+            if (!(owner instanceof TrainCompany company)) continue;
+
+            // Resolve service type.
+            Optional<ServiceType> serviceType = serviceManagement.getServiceType(serviceTypeId);
+            if (serviceType.isEmpty()) continue;
+
+            pending.put(id, new PendingServiceSet(id, company, serviceType.get(), status, isRequest));
+        }
+
+        // ── Pass 2: read service_steps.csv into the matching pending holder ───
+        // Rows arrive in CSV order; stepIndex in the file preserves the original ordering.
+        for (String line : readCsvRecords(SERVICE_STEP_FILE)) {
+            String[] v = line.split(",", -1);
+            if (v.length < 7) continue;
+
+            String stepId        = v[0];
+            String serviceSetId  = v[1];
+            // v[2] is stepIndex – present in the file for human readability only
+            String junctionId    = v[3];
+            int    travelMinutes = Integer.parseInt(v[4]);
+            String platform      = v[5]; // blank -> not stopping
+            String waitStr       = v[6]; // blank -> not stopping
+
+            PendingServiceSet holder = pending.get(serviceSetId);
+            if (holder == null) continue;
+
+            Junction junction = network.getJunctions().get(junctionId);
+            if (junction == null) continue;
+
+            Optional<StopData> stopData = Optional.empty();
+            if (!platform.isBlank() && !waitStr.isBlank()) {
+                stopData = Optional.of(new StopData(platform, Integer.parseInt(waitStr)));
+            }
+
+            holder.steps.add(new ServiceStep(stepId, junction, stopData, travelMinutes));
+        }
+
+        // ── Pass 3: read dispatches.csv into the matching pending holder ──────
+        for (String line : readCsvRecords(DISPATCH_FILE)) {
+            String[] v = line.split(",", -1);
+            if (v.length < 4) continue;
+
+            String         serviceSetId = v[0];
+            int            trainNumber  = Integer.parseInt(v[1]);
+            LocalTime      dispatchTime = LocalTime.parse(v[2]);
+            Set<DayOfWeek> runningDays  = deserializeDaysOfWeek(v[3]);
+
+            PendingServiceSet holder = pending.get(serviceSetId);
+            if (holder == null) continue;
+
+            holder.dispatches.add(new Dispatch(trainNumber, dispatchTime, runningDays));
+        }
+
+        // ── Pass 4: construct each ServiceSet once with its complete children ─
+        // Only at this point do we call the ServiceSet constructor, so the
+        // immutable lists it wraps already contain all steps and dispatches.
+        for (PendingServiceSet holder : pending.values()) {
+            ServiceSet serviceSet = new ServiceSet(
+                holder.id, holder.company, holder.serviceType, holder.status,
+                holder.steps, holder.dispatches);
+
+            // Register via ServiceManagement's own methods to keep its internal
+            // status bookkeeping consistent.
+            if (holder.isRequest) {
+                serviceManagement.addServiceRequest(serviceSet);
+            } else {
+                // addServiceRequest + approveServiceRequest is the only public path
+                // into serviceSets; the approve call moves it over and sets Effective.
+                serviceManagement.addServiceRequest(serviceSet);
+                serviceManagement.approveServiceRequest(holder.id);
+            }
+        }
+    }
+
+    /**
+     * @brief Saves active service sets, pending service requests, their steps,
+     *        and their dispatches to three CSV files in a single pass.
+     * @param serviceManagement Source of the data to persist.
+     * @throws IOException If any CSV file cannot be written.
+     */
+    private void saveServiceSets(ServiceManagement serviceManagement) throws IOException {
+        List<String> setOutput  = new ArrayList<>();
+        List<String> stepOutput = new ArrayList<>();
+        List<String> dispOutput = new ArrayList<>();
+
+        setOutput.add("id,companyId,serviceTypeId,status,isRequest");
+        stepOutput.add("id,serviceSetId,stepIndex,junctionId,travelMinutes,platform,waitMinutes");
+        dispOutput.add("serviceSetId,trainNumber,dispatchTime,runningDays");
+
+        // Active service sets (isRequest = false) …
+        for (ServiceSet set : serviceManagement.getServiceSets().values()) {
+            appendServiceSetRows(set, false, setOutput, stepOutput, dispOutput);
+        }
+        // … and pending requests (isRequest = true).
+        for (ServiceSet set : serviceManagement.getServiceRequests().values()) {
+            appendServiceSetRows(set, true, setOutput, stepOutput, dispOutput);
+        }
+
+        Files.write(SERVICE_SET_FILE,  setOutput,  StandardCharsets.UTF_8,
+            StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+        Files.write(SERVICE_STEP_FILE, stepOutput, StandardCharsets.UTF_8,
+            StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+        Files.write(DISPATCH_FILE,     dispOutput, StandardCharsets.UTF_8,
+            StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+    }
+
+    /**
+     * @brief Appends one ServiceSet's rows to the three in-memory accumulator lists.
+     * @param set       The ServiceSet to serialise.
+     * @param isRequest True when the set lives in serviceRequests, false for serviceSets.
+     * @param setOut    Accumulator for service_sets.csv rows.
+     * @param stepOut   Accumulator for service_steps.csv rows.
+     * @param dispOut   Accumulator for dispatches.csv rows.
+     */
+    private void appendServiceSetRows(
+            ServiceSet set,
+            boolean isRequest,
+            List<String> setOut,
+            List<String> stepOut,
+            List<String> dispOut) {
+
+        // service_sets.csv row
+        setOut.add(String.join(",",
+            escapeCsv(set.getId()),
+            escapeCsv(set.getCompany().getId()),
+            escapeCsv(set.getType().getId()),
+            escapeCsv(set.getStatus().name()),
+            Boolean.toString(isRequest)
+        ));
+
+        // service_steps.csv – one row per step; stepIndex records list position
+        List<ServiceStep> steps = set.getSteps();
+        for (int i = 0; i < steps.size(); i++) {
+            ServiceStep step = steps.get(i);
+            String platform    = "";
+            String waitMinutes = "";
+            if (step.isStopping()) {
+                StopData sd = step.getStopData().get();
+                platform    = sd.getPlatform();
+                waitMinutes = Integer.toString(sd.getWaitMinutes());
+            }
+            stepOut.add(String.join(",",
+                escapeCsv(step.getId()),
+                escapeCsv(set.getId()),
+                Integer.toString(i),
+                escapeCsv(step.getJunction().getId()),
+                Integer.toString(step.getTravelMinutes()),
+                escapeCsv(platform),
+                escapeCsv(waitMinutes)
+            ));
+        }
+
+        // dispatches.csv – one row per dispatch
+        for (Dispatch d : set.getDispatches()) {
+            dispOut.add(String.join(",",
+                escapeCsv(set.getId()),
+                Integer.toString(d.getTrainNumber()),
+                escapeCsv(d.getDispatchTime().toString()),
+                escapeCsv(serializeDaysOfWeek(d.getRunningDays()))
+            ));
+        }
+    }
+
+    /**
+     * @brief Serialises a set of DayOfWeek values to a semicolon-separated string.
+     * @param days The set of running days to serialise.
+     * @return A semicolon-separated string of day names, e.g. "MONDAY;WEDNESDAY".
+     */
+    private String serializeDaysOfWeek(Set<DayOfWeek> days) {
+        if (days == null || days.isEmpty()) return "";
+        return days.stream()
+                   .map(DayOfWeek::name)
+                   .collect(Collectors.joining(";"));
+    }
+
+    /**
+     * @brief Deserialises a semicolon-separated string back to a set of DayOfWeek values.
+     * @param serialized The serialised string from the CSV field.
+     * @return The corresponding set of DayOfWeek values (empty set on blank input).
+     */
+    private Set<DayOfWeek> deserializeDaysOfWeek(String serialized) {
+        Set<DayOfWeek> result = new HashSet<>();
+        if (serialized == null || serialized.isBlank()) return result;
+        for (String token : serialized.split(";")) {
+            if (!token.isBlank()) {
+                try {
+                    result.add(DayOfWeek.valueOf(token.trim()));
+                } catch (IllegalArgumentException ignored) {
+                    // skip unrecognised tokens
+                }
+            }
+        }
+        return result;
     }
 }

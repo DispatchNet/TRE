@@ -87,12 +87,6 @@ public class TrainCompany extends EndUser {
             String junctionId = userManagement.prompt(
                 "Enter junction ID for step " + (steps.size() + 1) + " (or 'done' to finish):"
             );
-            
-            Junction junction = Main.getNetwork().getJunctions().get(junctionId);
-            if (junction == null) {
-                userManagement.displayError("Junction not found");
-                continue;
-            }
 
             if (junctionId.equalsIgnoreCase("done")) {
                 if (steps.size() < 2) {
@@ -101,6 +95,14 @@ public class TrainCompany extends EndUser {
                 }
                 break;
             }
+            
+            Junction junction = Main.getNetwork().getJunctions().get(junctionId);
+            if (junction == null) {
+                userManagement.displayError("Junction not found");
+                continue;
+            }
+
+
 
             // parse travel minutes to this junction
             int travelMinutes;
@@ -177,7 +179,15 @@ public class TrainCompany extends EndUser {
                 String day = userManagement.prompt("Running day (or 'done'):").toUpperCase();
                 if (day.equals("DONE")) break;
                 try {
-                    runningDays.add(DayOfWeek.valueOf(day));
+                    switch (day) {
+                        case "MON" -> runningDays.add(DayOfWeek.MONDAY);
+                        case "TUE" -> runningDays.add(DayOfWeek.TUESDAY);
+                        case "WED" -> runningDays.add(DayOfWeek.WEDNESDAY);
+                        case "THU" -> runningDays.add(DayOfWeek.THURSDAY);
+                        case "FRI" -> runningDays.add(DayOfWeek.FRIDAY);
+                        case "SAT" -> runningDays.add(DayOfWeek.SATURDAY);
+                        case "SUN" -> runningDays.add(DayOfWeek.SUNDAY);
+                    }
                 } catch (IllegalArgumentException e) {
                     userManagement.displayError("Invalid day. Use MON, TUE, WED, THU, FRI, SAT or SUN.");
                 }

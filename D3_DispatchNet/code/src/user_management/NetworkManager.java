@@ -9,6 +9,7 @@ import service_management.ServiceManagement;
 import infrastructure.Network;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -532,7 +533,7 @@ public class NetworkManager extends AuthenticatedUser {
      */
     public void reviewServiceRequest(String serviceRequestID) {
         // look up the request
-        var maybeRequest = serviceManagement.getServiceRequest(serviceRequestID);
+        var maybeRequest = Optional.ofNullable(serviceManagement.getServiceRequests().get(serviceRequestID));
 
         // abort if not found
         if (maybeRequest.isEmpty()) {
