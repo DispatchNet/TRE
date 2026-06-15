@@ -176,6 +176,7 @@ public class Path_Finding{
         if (theStep == null) {
           //Something went wrong
           cmd.displayError("NoPath");
+          throw new Exception("NoPath");
         } else { 
           tempList.add(new Ticket(
             ticketRequester,
@@ -187,8 +188,10 @@ public class Path_Finding{
         results.add(tempList);
       }
 
-      if (results.size() == 0) cmd.displayError("BadSearch");
-
+      if (results.size() == 0) {
+        cmd.displayError("BadSearch");
+        throw new Exception("BadSearch");
+      }
       this.results = results;
     }
     
