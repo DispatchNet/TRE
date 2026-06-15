@@ -204,8 +204,17 @@ public class Main {
   }
 
   private static void pathFindingInterface(Object user) {
-    Optional<Junction> from = network.getJunctionByName(io.prompt("From station:"));
-    Optional<Junction> to = network.getJunctionByName(io.prompt("To station:"));
+    Optional<Junction> from = Optional.empty();
+    do {
+      from = network.getJunctionByName(io.prompt("From station:"));
+      if (!from.isPresent()) io.println("Invalid station");
+    } while (!from.isPresent());
+
+    Optional<Junction> to = Optional.empty();
+    do {
+      to = network.getJunctionByName(io.prompt("To station:"));
+      if (!to.isPresent()) io.println("Invalid station");
+    } while (!to.isPresent());
     LocalTime after; //these can be optional, parsing them immediately will break
     LocalTime before; 
     String maybeAfter = io.prompt("After time:");
@@ -229,24 +238,20 @@ public class Main {
     } else before = null;
 
 
-    Path_Finding path = null;
+    Path_Finding path;
     try{
       path = new Path_Finding(user, from.orElse(null), to.orElse(null), after, before);
     } catch (Exception e) {
-      path = null; //Make sure no half-baked stuff is getting sent
-    }
-    
-    if (path == null) {
-      io.print("Something went wrong when creating path");
+      io.print("Something went wrong when creating path\n");
       return;
     }
 
     io.print(path.toString());
-    
+
     boolean quit = false;
     boolean something_went_wrong = false;
     do {
-      String userInput = io.prompt("p) Purchase tickets\n s) Change sorting\n q) Quit");
+      String userInput = io.prompt("p) Purchase tickets\nc) Change sorting\nq) Quit\n");
       switch (userInput) {
         case "p":
           if (!something_went_wrong) try {
