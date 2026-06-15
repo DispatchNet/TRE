@@ -284,7 +284,6 @@ public class Path_Finding{
       }
 
       int index = 0;
-      boolean ok_flag = true;
       
       UserManagement cmd = Main.getUserManagement();
       

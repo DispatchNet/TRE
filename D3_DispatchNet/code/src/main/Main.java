@@ -66,16 +66,16 @@ public class Main {
         System.err.println("Failed to save tickets: " + e.getMessage());
     }
 
-    io.printLn("Thank you for using DispatchNet. Goodbye!");
+    io.println("Thank you for using DispatchNet. Goodbye!");
   }
 
   private static void runInterface() {
-    io.printLn("--- Welcome to DispatchNet! ---");
+    io.println("--- Welcome to DispatchNet! ---");
 
     boolean exitRequested = false;
 
     while(!exitRequested) {
-      io.printLn("\n--- DispatchNet Homepage ---");
+      io.println("\n--- DispatchNet Homepage ---");
 
       // get current user
       Object currentUser = userManagement.isAuthenticated() ? 
@@ -83,29 +83,29 @@ public class Main {
         userManagement.getSession().getAnonymousUser();
 
       // common options
-      io.printLn("a) Account");
+      io.println("a) Account");
       // common options (not for Network Manager)
       if(! (currentUser instanceof NetworkManager)) {
         // Passenger and Anonymous only
         if(!(currentUser instanceof TrainCompany)) {
-          io.printLn("p) Path finding");
-          io.printLn("s) Search for station or train");
+          io.println("p) Path finding");
+          io.println("s) Search for station or train");
         }
         // Passenger only
         if(currentUser instanceof Passenger)
-          io.printLn("t) Ticket history");
+          io.println("t) Ticket history");
         // TrainCompany only
         else if(currentUser instanceof TrainCompany)
-          io.printLn("s) Service");
+          io.println("s) Service");
       }
       // NetworkManager only
       else {
-        io.printLn("n) Network");
-        io.printLn("r) Register Train Company");
+        io.println("n) Network");
+        io.println("r) Register Train Company");
       }
       // common options
-      io.printLn("m) Show Map");
-      io.printLn("q) Quit");
+      io.println("m) Show Map");
+      io.println("q) Quit");
 
       // get input
       String choice = io.prompt("Enter your choice:").trim();
@@ -139,7 +139,7 @@ public class Main {
           case "n": networkInterface((NetworkManager) currentUser); break;
           case "r": ((NetworkManager) currentUser).createTrainCompanyAccount(); break;
           case "q": exitRequested = true; break;
-          default: io.printLn("Invalid input. Try again");
+          default: io.println("Invalid input. Try again");
         }
       }
     }
@@ -148,10 +148,10 @@ public class Main {
   private static void accountInterface(Object user) {
     if(user instanceof AnonymousUser) {
       // show options
-      io.printLn("\n--- Authentication page ---");
-      io.printLn("l) Login");
-      io.printLn("r) Register");
-      io.printLn("p) Reset password");
+      io.println("\n--- Authentication page ---");
+      io.println("l) Login");
+      io.println("r) Register");
+      io.println("p) Reset password");
 
       // get input
       String choice = io.prompt("Enter your choice:").trim();
@@ -161,15 +161,15 @@ public class Main {
         case "l": ((AnonymousUser) user).login(); break;
         case "r": ((AnonymousUser) user).register(); break;
         case "p": ((AnonymousUser) user).resetPassword(); break;
-        default: io.printLn("Invalid input."); break;
+        default: io.println("Invalid input."); break;
       }
     }
     else {
-      io.printLn("\n--- Authentication page ---");
+      io.println("\n--- Authentication page ---");
       // network manager
       if(user instanceof NetworkManager) {
         // show options
-        io.printLn("l) Logout");
+        io.println("l) Logout");
 
         // get input
         String choice = io.prompt("Enter your choice:").trim();
@@ -177,15 +177,15 @@ public class Main {
         // handle input
         switch(choice) {
           case "l": ((AuthenticatedUser) user).logout(); break;
-          default: io.printLn("Invalid input."); break;
+          default: io.println("Invalid input."); break;
         }
       }
       // end user
       else {
         // show options
-        io.printLn("c) Change data");
-        io.printLn("d) Delete account");
-        io.printLn("l) Logout");
+        io.println("c) Change data");
+        io.println("d) Delete account");
+        io.println("l) Logout");
 
         // get input
         String choice = io.prompt("Enter your choice:").trim();
@@ -194,7 +194,7 @@ public class Main {
           case "c": ((EndUser) user).changeData(); break;
           case "d": ((EndUser) user).deleteAccount(); break;
           case "l": ((AuthenticatedUser) user).logout(); break;
-          default: io.printLn("Invalid input."); break;
+          default: io.println("Invalid input."); break;
         }
       }
     }
@@ -238,14 +238,14 @@ public class Main {
   }
 
   private static void networkInterface(NetworkManager user) {
-    io.printLn("\n--- Network Management page ---");
-    io.printLn("Current Network");
+    io.println("\n--- Network Management page ---");
+    io.println("Current Network");
     user.viewNetwork();
 
     // show options
-    io.printLn("c) Create");
-    io.printLn("e) Edit");
-    io.printLn("d) Delete");
+    io.println("c) Create");
+    io.println("e) Edit");
+    io.println("d) Delete");
 
     // get input
     String choice = io.prompt("Enter your choice:").trim();
@@ -255,9 +255,9 @@ public class Main {
     switch(choice) {
       case "c": // create
         // show options
-        io.printLn("s) Station");
-        io.printLn("j) Junction");
-        io.printLn("l) Line");
+        io.println("s) Station");
+        io.println("j) Junction");
+        io.println("l) Line");
 
         // get input
         choice1 = io.prompt("Enter your choice:").trim();
@@ -267,15 +267,15 @@ public class Main {
           case "s": user.createStation(); break; //station
           case "j": user.createJunction(); break; //junction
           case "l": user.createLine(); break; //line
-          default: io.printLn("Invalid input."); break;
+          default: io.println("Invalid input."); break;
         }
 
         break;
       case "e": // edit
         // show options
-        io.printLn("s) Station");
-        io.printLn("j) Junction");
-        io.printLn("l) Line");
+        io.println("s) Station");
+        io.println("j) Junction");
+        io.println("l) Line");
 
         // get input
         choice1 = io.prompt("Enter your choice:").trim();
@@ -286,15 +286,15 @@ public class Main {
           case "s": user.editStation(elementId); break; //station
           case "j": user.editJunction(elementId); break; //junction
           case "l": user.editLine(elementId); break; //line
-          default: io.printLn("Invalid input."); break;
+          default: io.println("Invalid input."); break;
         }
 
         break;
       case "d": // delete
         // show options
-        io.printLn("s) Station");
-        io.printLn("j) Junction");
-        io.printLn("l) Line");
+        io.println("s) Station");
+        io.println("j) Junction");
+        io.println("l) Line");
 
         // get input
         choice1 = io.prompt("Enter your choice:").trim();
@@ -305,11 +305,11 @@ public class Main {
           case "s": user.deleteStation(elementId); break; //station
           case "j": user.deleteJunction(elementId); break; //junction
           case "l": user.deleteLine(elementId); break; //line
-          default: io.printLn("Invalid input."); break;
+          default: io.println("Invalid input."); break;
         }
 
         break;
-      default: io.printLn("Invalid input."); break;
+      default: io.println("Invalid input."); break;
     }
   }
 
