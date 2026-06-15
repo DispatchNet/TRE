@@ -189,7 +189,11 @@ public class Junction {
     ).toList();
   }
 
-  static void main () {// Unit test
-
+  /**
+   * @brief Add a serviceSet to this Junction
+   * @param serviceSet the serviceSet
+   */ 
+  public void addService(ServiceSet serviceSet) {
+    this.services.add(serviceSet);
   }
 };
