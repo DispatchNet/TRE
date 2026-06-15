@@ -218,7 +218,7 @@ public class Main {
     LocalTime after; //these can be optional, parsing them immediately will break
     LocalTime before; 
     String maybeAfter = io.prompt("After time:");
-    if (!maybeAfter.equals("") ) { //TODO find a way to detect empty line properly
+    if (!maybeAfter.equals("") ) {
       try {
         after = LocalTime.parse(maybeAfter);
       } catch (Exception e) {
@@ -251,13 +251,17 @@ public class Main {
     boolean quit = false;
     boolean something_went_wrong = false;
     do {
-      String userInput = io.prompt("p) Purchase tickets\nc) Change sorting\nq) Quit\n");
+      String userInput = (user instanceof Passenger)? io.prompt("p) Purchase tickets\nc) Change sorting\nq) Quit\n") : io.prompt("c) Change sorting\nq) Quit\n");
       switch (userInput) {
         case "p":
-          if (!something_went_wrong) try {
-            path.prchTcks();
-          } catch (Exception e) {
-            io.displayError("Looks like something went wrong while purhcasing tickets, returning to path options");
+          if (!(user instanceof Passenger)) {
+            io.print("Invalid operation, returning to path options");
+          } else {
+            if (!something_went_wrong) try {
+              path.prchTcks();
+            } catch (Exception e) {
+              io.displayError("Looks like something went wrong while purhcasing tickets, returning to path options");
+            }
           }
         break;
 
