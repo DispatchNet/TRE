@@ -51,7 +51,7 @@ public class Path_Finding{
      * @brief creates the Pathfinding_class
      * 
      * @details Enforces mandatory information like requester and parameters of the search, initializes the sorting algorithm enum to its default value and computes the result lists
-     * @param requester which Passenger initiated the request, used for ticket generation
+     * @param requester which Passenger or AnonymousUser initiated the request, used for ticket generation
      * @param from Where the search starts 
      * @param to Where the search ends 
      * @param after The earliest accepted time for the first train in a path to depart, is optional (all values pass) but if no "before" argument is specified defaults to current time
