@@ -37,6 +37,7 @@ public class ServiceManagement {
     if (serviceSet != null) {
       serviceSet.setStatus(ServiceStatus.Effective);
       serviceSets.put(id, serviceSet);
+      this.registerServiceSetAtJunctions(serviceSet);
     }
   }
 
@@ -113,6 +114,29 @@ public class ServiceManagement {
    */
   public Optional<ServiceType> getServiceType(String id) {
     return Optional.ofNullable(serviceTypes.get(id));
+  }
+
+  /**
+   * @brief Registers a new train service in the network.
+   * @param serviceSet the ServiceSeet to add
+   * @implNote Also adds the service to the list of active services of the junctions if it is effective
+   */
+  public void addService(ServiceSet serviceSet) {
+    serviceSets.put(serviceSet.getId(),serviceSet);
+    this.registerServiceSetAtJunctions(serviceSet);
+  }
+
+  /**
+   * @brief A private method that registers the steps of an effective service at it's station.
+   * @param serviceSet the ServiceSeet to add
+   * @implNote Also adds the service to the list of active services of the junctions if it is effective
+   */
+  private void registerServiceSetAtJunctions(ServiceSet serviceSet) {
+    if(serviceSet.getStatus() == ServiceStatus.Effective) {
+      for(var step : serviceSet.getSteps()) {
+        step.getJunction().addService(serviceSet);
+      }
+    }
   }
 
 }
