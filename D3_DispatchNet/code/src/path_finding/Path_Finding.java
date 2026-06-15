@@ -64,7 +64,7 @@ public class Path_Finding{
      * @see Junction
      * @see Ticket
      */
-    public Path_Finding( requester, Junction from, Junction to, LocalTime after, LocalTime before) {
+    public Path_Finding(Object requester, Junction from, Junction to, LocalTime after, LocalTime before) {
       
       if (requester == null || from == null || to == null) {
         //TODO error out here
@@ -72,7 +72,7 @@ public class Path_Finding{
       }
 			
       
-      if(!requester_ instanceof Passenger && !requester instanceof AnonymousUser) {
+      if(!requester instanceof Passenger && !requester instanceof AnonymousUser) {
         //TODO error out here
         throw new Exception("BadReq: Invalid requester");
       }
@@ -252,11 +252,13 @@ public class Path_Finding{
 
     /**
      * @brief Handles the pruchase of tickets from the POV of the pathfinder
-     * @exception OutOfBounds The argument is not a valid index for the results list
+     * @exception BadRequester The requester of Pathfinding is not allowed to purchase tickets
      */
 		public void prchTcks() {
 		  //TODO manage IO
-      
+       
+      if (!this.requester instanceof Passenger) throw new Exception("BadRequester");
+
       int index = 0;
       boolean ok_flag = true;
       
