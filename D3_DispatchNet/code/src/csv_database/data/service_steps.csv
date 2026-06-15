@@ -1,0 +1,5 @@
+id,serviceSetId,stepIndex,junctionId,travelMinutes,platform,waitMinutes
+0a1c4f16-c96b-42ce-83cb-965149581703,75a4546d-6b6b-41c3-b823-ae25be53637e,0,bbf88b8f-97cf-4c84-b43b-198cccf5a9fb,0,1 Tronco Sud,1
+ac5d46b4-d8c1-4b27-b3d3-21379e7910b9,75a4546d-6b6b-41c3-b823-ae25be53637e,1,1ef67fd5-9fb3-4315-9125-5394ef91a75e,10,1,1
+019fab4a-713d-451f-a277-af539b4def33,9d096b29-81f6-4c5e-a772-fcb5ea66f74e,0,bbf88b8f-97cf-4c84-b43b-198cccf5a9fb,0,1 Tronco Sud,1
+2d33f84e-8808-4ef7-a289-898eabd547f0,9d096b29-81f6-4c5e-a772-fcb5ea66f74e,1,1ef67fd5-9fb3-4315-9125-5394ef91a75e,5,1,1
