@@ -175,13 +175,6 @@ public class Passenger extends EndUser {
     }
 
     /**
-     * @brief Views the map
-     */
-    public void viewMap() {
-        // TODO: implement map viewing
-    }
-
-    /**
      * @brief Finds a ticket in the passenger tickets list by id.
      * @param ticketId The ticket id to search for.
      * @return The matching Ticket or null if not found.

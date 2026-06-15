@@ -2,6 +2,9 @@ package main;
 
 import java.time.LocalTime;
 import java.util.Optional;
+import java.util.List;
+import java.util.Map;
+import java.lang.StringBuilder;
 
 import infrastructure.Network;
 import service_management.ServiceManagement;
@@ -328,5 +331,23 @@ public class Main {
     }
 
   }
+  
+  public static void printMap () {
 
+    Map<String, Junction> juncs = network.getJunctions();
+    StringBuilder outLine = new StringBuilder();
+
+    for (Map.Entry<String, Junction> entry : juncs.entrySet()) {
+      Junction junc = entry.getValue();
+      List<Junction> neighList = junc.getNeighbours();
+      outLine.append(junc.getName() + ":\t");
+      for (Junction neighbour : neighList) {
+        outLine.append(neighbour.getName() + "\t"); 
+      }
+      outLine.append("\n");
+    }
+    
+    io.print(outLine.toString());
+
+  }
 }

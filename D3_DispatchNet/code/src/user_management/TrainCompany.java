@@ -74,7 +74,7 @@ public class TrainCompany extends EndUser {
 
         while (true) {
             // list available neighbhoring junctions for reference (or all the junctions if it's the first one)
-            for(var junction : (steps.size() > 0) ? steps.getLast().getJunction().getNeighbhors() : Main.getNetwork().getJunctions().values()) {
+            for(var junction : (steps.size() > 0) ? steps.getLast().getJunction().getNeighbours() : Main.getNetwork().getJunctions().values()) {
                     System.out.println(String.format("%s: %s [%s]",
                     junction.getId(), junction.getName(),
                     junction.getStationData().map(station -> "Station").orElse("Junction"))

@@ -183,7 +183,7 @@ public class Junction {
 
   }
 
-  public List<Junction> getNeighbhors() {
+  public List<Junction> getNeighbours() {
     return this.getConnectedLines().stream().map(
       line -> line.getJunction1() == this ? line.getJunction2() : line.getJunction1()
     ).toList();
