@@ -1,11 +1,19 @@
 package main;
+
+import java.time.LocalTime;
+import java.util.Optional;
+
 import infrastructure.Network;
 import service_management.ServiceManagement;
 import user_management.AnonymousUser;
 import user_management.NetworkManager;
 import user_management.Passenger;
 import user_management.TrainCompany;
+import user_management.EndUser;
+import user_management.AuthenticatedUser;
 import user_management.UserManagement;
+import path_finding.Path_Finding;
+import infrastructure.Junction;
 import IO_operations.IO;
 import csv_database.CsvDatabase;
 
@@ -69,11 +77,15 @@ public class Main {
         userManagement.getAuthenticatedUser() : 
         userManagement.getSession().getAnonymousUser();
 
+      // common options
+      System.out.println("a) Account");
       // common options (not for Network Manager)
       if(! (currentUser instanceof NetworkManager)) {
-        System.out.println("a) Account");
-        System.out.println("p) Path finding");
-
+        // Passenger and Anonymous only
+        if(!(currentUser instanceof TrainCompany)) {
+          System.out.println("p) Path finding");
+          System.out.println("s) Search for station or train");
+        }
         // Passenger only
         if(currentUser instanceof Passenger)
           System.out.println("t) Ticket history");
@@ -93,25 +105,30 @@ public class Main {
       String choice = io.prompt("Enter your choice:").trim();
 
       // handle input
+      if(choice.equals("a"))
+          accountInterface(currentUser);
       if(! (currentUser instanceof NetworkManager)) {
         switch(choice) {
-          case "a": accountInterface(currentUser); break;
-          case "p": pathFindingInterface(currentUser); break;
           case "q": exitRequested = true; break;
           default: break;
         }
-        if(currentUser instanceof Passenger) {
-          if(choice == "t")
-            ((Passenger) currentUser).getTicketsHistory();
-        }
-        else if(currentUser instanceof TrainCompany) {
-          if(choice == "s")
+        if(currentUser instanceof TrainCompany) {
+          if(choice.equals("s"))
             ((TrainCompany) currentUser).createServiceRequest();
+        }
+        else {
+          switch(choice) {
+            case "p": pathFindingInterface(currentUser); break;
+            case "s": break; //TODO add search train station when done
+          }
+          if(currentUser instanceof Passenger) {
+            if(choice.equals("t"))
+              ((Passenger) currentUser).getTicketsHistory();
+          }
         }
       }
       else {
         switch(choice) {
-          case "a": accountInterface(currentUser); break;
           case "n": networkInterface((NetworkManager) currentUser); break;
           case "r": ((NetworkManager) currentUser).createTrainCompanyAccount(); break;
           case "q": exitRequested = true; break;
@@ -176,7 +193,14 @@ public class Main {
     }
   }
 
-  private static void pathFindingInterface(Object user) {} //TODO: add when done
+  private static void pathFindingInterface(Object user) {
+    Optional<Junction> from = network.getJunctionByName(io.prompt("From station:"));
+    Optional<Junction> to = network.getJunctionByName(io.prompt("To station:"));
+    LocalTime after = LocalTime.parse(io.prompt("After time:"));
+    LocalTime before = LocalTime.parse(io.prompt("Before time:"));
+
+    new Path_Finding(user, from.orElse(null), to.orElse(null), after, before);
+  }
 
   private static void networkInterface(NetworkManager user) {
     System.out.println("\n--- Network Management page ---");

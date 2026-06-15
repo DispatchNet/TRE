@@ -60,10 +60,17 @@ public class Path_Finding{
      * @see Junction
      * @see Ticket
      */
-    public Path_Finding(Passenger requester, Junction from, Junction to, LocalTime after, LocalTime before) {
+    public Path_Finding(Object requester_, Junction from, Junction to, LocalTime after, LocalTime before) {
 			//TODO make a null check on the from and to
       //TODO make sure serviceSet equality is implemented and real
+      // TODO handle requester as Passenger and Anonymous
+      /*
+      if(requester_ instanceof Passenger) {}
+      else if(requester instanceof AnonymousUser) {}
+      */
       
+      Passenger requester = (Passenger) requester_; // TODO added for errors, to be changed
+
       final int MIN_RESULTS = 10;
       final int MAX_ITERATIONS = 10000;
 
