@@ -1,10 +1,19 @@
 package main;
+
+import java.time.LocalTime;
+import java.util.Optional;
+
 import infrastructure.Network;
 import service_management.ServiceManagement;
-import user_management.AuthenticatedUser;
-import user_management.EndUser;
+import user_management.AnonymousUser;
+import user_management.NetworkManager;
 import user_management.Passenger;
+import user_management.TrainCompany;
+import user_management.EndUser;
+import user_management.AuthenticatedUser;
 import user_management.UserManagement;
+import path_finding.Path_Finding;
+import infrastructure.Junction;
 import IO_operations.IO;
 import csv_database.CsvDatabase;
 
@@ -36,8 +45,6 @@ public class Main {
   }
 
   public static void main(String[] args) {
-    System.out.println("Welcome to DispatchNet!");
-
     // Load objects from CSV files
     csvDatabase.loadNetwork(network);
     csvDatabase.loadAuthenticatedUsers(userManagement); // also loads tickets
@@ -58,83 +65,216 @@ public class Main {
   }
 
   private static void runInterface() {
+    System.out.println("--- Welcome to DispatchNet! ---");
+
     boolean exitRequested = false;
 
-    while (!exitRequested) {
-      if (!userManagement.isAuthenticated()) {
-        exitRequested = showAnonymousMenu();
-      } else {
-        exitRequested = showAuthenticatedMenu();
+    while(!exitRequested) {
+      System.out.println("\n--- DispatchNet Homepage ---");
+
+      // get current user
+      Object currentUser = userManagement.isAuthenticated() ? 
+        userManagement.getAuthenticatedUser() : 
+        userManagement.getSession().getAnonymousUser();
+
+      // common options
+      System.out.println("a) Account");
+      // common options (not for Network Manager)
+      if(! (currentUser instanceof NetworkManager)) {
+        // Passenger and Anonymous only
+        if(!(currentUser instanceof TrainCompany)) {
+          System.out.println("p) Path finding");
+          System.out.println("s) Search for station or train");
+        }
+        // Passenger only
+        if(currentUser instanceof Passenger)
+          System.out.println("t) Ticket history");
+        // TrainCompany only
+        else if(currentUser instanceof TrainCompany)
+          System.out.println("s) Service");
+      }
+      // NetworkManager only
+      else {
+        System.out.println("n) Network");
+        System.out.println("r) Register Train Company");
+      }
+      // common option
+      System.out.println("q) Quit");
+
+      // get input
+      String choice = io.prompt("Enter your choice:").trim();
+
+      // handle input
+      if(choice.equals("a"))
+          accountInterface(currentUser);
+      if(! (currentUser instanceof NetworkManager)) {
+        switch(choice) {
+          case "q": exitRequested = true; break;
+          default: break;
+        }
+        if(currentUser instanceof TrainCompany) {
+          if(choice.equals("s"))
+            ((TrainCompany) currentUser).createServiceRequest();
+        }
+        else {
+          switch(choice) {
+            case "p": pathFindingInterface(currentUser); break;
+            case "s": break; //TODO add search train station when done
+          }
+          if(currentUser instanceof Passenger) {
+            if(choice.equals("t"))
+              ((Passenger) currentUser).getTicketsHistory();
+          }
+        }
+      }
+      else {
+        switch(choice) {
+          case "n": networkInterface((NetworkManager) currentUser); break;
+          case "r": ((NetworkManager) currentUser).createTrainCompanyAccount(); break;
+          case "q": exitRequested = true; break;
+          default: System.out.println("Invalid input. Try again");
+        }
       }
     }
   }
 
-  private static boolean showAnonymousMenu() {
-    System.out.println("\n--- DispatchNet Guest Interface ---");
-    System.out.println("1) Register");
-    System.out.println("2) Login");
-    System.out.println("3) Reset password");
-    System.out.println("4) Exit");
+  private static void accountInterface(Object user) {
+    if(user instanceof AnonymousUser) {
+      // show options
+      System.out.println("\n--- Authentication page ---");
+      System.out.println("l) Login");
+      System.out.println("r) Register");
+      System.out.println("p) Reset password");
 
-    String choice = io.prompt("Enter your choice:").trim();
-    switch (choice) {
-      case "1" -> userManagement.getSession().getAnonymousUser().register();
-      case "2" -> userManagement.getSession().getAnonymousUser().login();
-      case "3" -> userManagement.getSession().getAnonymousUser().resetPassword();
-      case "4" -> {
-        return true;
+      // get input
+      String choice = io.prompt("Enter your choice:").trim();
+
+      // handle input
+      switch(choice) {
+        case "l": ((AnonymousUser) user).login(); break;
+        case "r": ((AnonymousUser) user).register(); break;
+        case "p": ((AnonymousUser) user).resetPassword(); break;
+        default: System.out.println("Invalid input."); break;
       }
-      default -> System.out.println("Invalid choice. Please enter 1, 2, 3 or 4.");
     }
+    else {
+      System.out.println("\n--- Authentication page ---");
+      // network manager
+      if(user instanceof NetworkManager) {
+        // show options
+        System.out.println("l) Logout");
 
-    return false;
+        // get input
+        String choice = io.prompt("Enter your choice:").trim();
+
+        // handle input
+        switch(choice) {
+          case "l": ((AuthenticatedUser) user).logout(); break;
+          default: System.out.println("Invalid input."); break;
+        }
+      }
+      // end user
+      else {
+        // show options
+        System.out.println("c) Change data");
+        System.out.println("d) Delete account");
+        System.out.println("l) Logout");
+
+        // get input
+        String choice = io.prompt("Enter your choice:").trim();
+
+        switch(choice) {
+          case "c": ((EndUser) user).changeData(); break;
+          case "d": ((EndUser) user).deleteAccount(); break;
+          case "l": ((AuthenticatedUser) user).logout(); break;
+          default: System.out.println("Invalid input."); break;
+        }
+      }
+    }
   }
 
-  private static boolean showAuthenticatedMenu() {
-    AuthenticatedUser currentUser = userManagement.getAuthenticatedUser();
-    System.out.println("\n--- DispatchNet User Interface ---");
-    System.out.println("Logged in as: " + currentUser.getUsername() + " (" + currentUser.getUserType() + ")");
-    System.out.println("1) View profile");
-    System.out.println("2) Change profile");
-    System.out.println("3) Logout");
-    System.out.println("4) Exit");
-    if (currentUser instanceof Passenger) {
-      System.out.println("5) View ticket history");
-    }
+  private static void pathFindingInterface(Object user) {
+    Optional<Junction> from = network.getJunctionByName(io.prompt("From station:"));
+    Optional<Junction> to = network.getJunctionByName(io.prompt("To station:"));
+    LocalTime after = LocalTime.parse(io.prompt("After time:"));
+    LocalTime before = LocalTime.parse(io.prompt("Before time:"));
 
+    new Path_Finding(user, from.orElse(null), to.orElse(null), after, before);
+  }
+
+  private static void networkInterface(NetworkManager user) {
+    System.out.println("\n--- Network Management page ---");
+    System.out.println("Current Network");
+    user.viewNetwork();
+
+    // show options
+    System.out.println("c) Create");
+    System.out.println("e) Edit");
+    System.out.println("d) Delete");
+
+    // get input
     String choice = io.prompt("Enter your choice:").trim();
-    switch (choice) {
-      case "1" -> {
-        if (currentUser instanceof EndUser endUser) {
-          endUser.viewData();
-        } else {
-          System.out.println("Profile viewing is not available for this user type.");
-        }
-      }
-      case "2" -> {
-        if (currentUser instanceof EndUser endUser) {
-          endUser.changeData();
-        } else {
-          System.out.println("Profile editing is not available for this user type.");
-        }
-      }
-      case "3" -> {
-        userManagement.logoutUser();
-        System.out.println("You have been logged out.");
-      }
-      case "4" -> {
-        return true;
-      }
-      case "5" -> {
-        if (currentUser instanceof Passenger passenger) {
-          passenger.getTicketsHistory();
-        } else {
-          System.out.println("Invalid choice. Please enter a valid option.");
-        }
-      }
-      default -> System.out.println("Invalid choice. Please enter a valid option.");
-    }
+    String choice1; //used later
+    String elementId; //used later
 
-    return false;
+    switch(choice) {
+      case "c": // create
+        // show options
+        System.out.println("s) Station");
+        System.out.println("j) Junction");
+        System.out.println("l) Line");
+
+        // get input
+        choice1 = io.prompt("Enter your choice:").trim();
+
+        // handle input
+        switch(choice1) {
+          case "s": user.createStation(); break; //station
+          case "j": user.createJunction(); break; //junction
+          case "l": user.createLine(); break; //line
+          default: System.out.println("Invalid input."); break;
+        }
+
+        break;
+      case "e": // edit
+        // show options
+        System.out.println("s) Station");
+        System.out.println("j) Junction");
+        System.out.println("l) Line");
+
+        // get input
+        choice1 = io.prompt("Enter your choice:").trim();
+        elementId = io.prompt("Enter element id:").trim();
+
+        // handle input
+        switch(choice1) {
+          case "s": user.editStation(elementId); break; //station
+          case "j": user.editJunction(elementId); break; //junction
+          case "l": user.editLine(elementId); break; //line
+          default: System.out.println("Invalid input."); break;
+        }
+
+        break;
+      case "d": // delete
+        // show options
+        System.out.println("s) Station");
+        System.out.println("j) Junction");
+        System.out.println("l) Line");
+
+        // get input
+        choice1 = io.prompt("Enter your choice:").trim();
+        elementId = io.prompt("Enter element id:").trim();
+
+        // handle input
+        switch(choice1) {
+          case "s": user.deleteStation(elementId); break; //station
+          case "j": user.deleteJunction(elementId); break; //junction
+          case "l": user.deleteLine(elementId); break; //line
+          default: System.out.println("Invalid input."); break;
+        }
+
+        break;
+      default: System.out.println("Invalid input."); break;
+    }
   }
 }

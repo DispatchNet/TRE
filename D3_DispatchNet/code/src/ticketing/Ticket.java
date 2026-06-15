@@ -10,7 +10,6 @@ import user_management.Passenger;
 import service_management.ServiceStep;
 import departure.Departure;
 import infrastructure.Junction;
-import infrastructure.Line;
 
 /**
  * @class Ticket
@@ -205,8 +204,8 @@ public class Ticket {
         if (departure == null || lastStep == null) {
             return "";
         }
-        // TODO: uncomment when ready
-        Junction startJunction = null; //departure.serviceStep().getStationData().getJunction();
+        
+        Junction startJunction = departure.serviceStep().getJunction();
         Junction endJunction = lastStep.getJunction();
         if (startJunction == null || endJunction == null) {
             return "";

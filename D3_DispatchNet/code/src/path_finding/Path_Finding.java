@@ -24,7 +24,7 @@ import IO_operations.IO;
  * @details created whith all the relevant information, stores the search result and is able to sort and produce it multiple times
  */
 public class Path_Finding{
-	final Passenger requester;
+	final Object requester;//Passenger or AnonymousUser, the constructor refuses otherwise
 	final Junction from;
 	final Junction to;
 	final LocalTime after; //Optional
@@ -56,19 +56,27 @@ public class Path_Finding{
      * @param to Where the search ends 
      * @param after The earliest accepted time for the first train in a path to depart, is optional (all values pass) but if no "before" argument is specified defaults to current time
      * @param before The latest accepted time for the last train in a path to arrive, is optional (all values pass)
+     * @exception BadField Requester, from junction or to junction are null, despite being mandatory
+     * @exception BadReq Requester object is not an instance of Passenger or AnonymousUser
      * @exception NoPath The "from" Junction cannot reach the "to" Junction
      * @exception BadSearch No path respects both "after" and "before" argument
      * @see Passenger
      * @see Junction
      * @see Ticket
      */
-    public Path_Finding(Passenger requester, Junction from, Junction to, LocalTime after, LocalTime before) {
+    public Path_Finding( requester, Junction from, Junction to, LocalTime after, LocalTime before) {
       
       if (requester == null || from == null || to == null) {
         //TODO error out here
-        return null;
+        throw new Exception("BadField: Missing Necessary field");
       }
-
+			
+      
+      if(!requester_ instanceof Passenger && !requester instanceof AnonymousUser) {
+        //TODO error out here
+        throw new Exception("BadReq: Invalid requester");
+      }
+      
 
       final int MIN_RESULTS = 10;
       final int MAX_ITERATIONS = 10000;
@@ -159,7 +167,7 @@ public class Path_Finding{
         if (theStep == null) {
           //Something went wrong
           //TODO error out here
-          return null
+          throw new Exception("NoPath")
         }
         tempList.add(new Ticket(
           this.requester,
@@ -169,6 +177,8 @@ public class Path_Finding{
         
         results.add(tempList);
       }
+
+      if (results.size() == 0) throw new Exception("BadSearch");
 
       this.results = results;
     }

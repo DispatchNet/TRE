@@ -80,6 +80,20 @@ public class Network {
   }
 
   /**
+   * @breif Search a junction on it's network by it's name
+   * @param name the name of the junction
+   * @return the Junction if's found, Optional.empty() otherwise
+   */
+  public Optional<Junction> getJunctionByName(String name) {
+    for (Junction jct : this.getJunctions().values()) {
+      if(jct.getName().strip().equalsIgnoreCase(name)) {
+        return Optional.of(jct);
+      }
+    }
+    return Optional.empty();
+  }
+  
+  /**
    * @brief remove a junction from the network
    * @param id the id of the jucntion
    * @return If any error occured, the error
