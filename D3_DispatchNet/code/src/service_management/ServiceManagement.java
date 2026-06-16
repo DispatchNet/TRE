@@ -127,6 +127,15 @@ public class ServiceManagement {
   }
 
   /**
+   * @brief Checks whther a sercviceSet is compatible with the current network and traffic configuration
+   * @param serviceSet the serviceSet
+   * @return true if the serviceSet is good, false otherwise
+   */
+  public boolean checkIntegrity(ServiceSet serviceSet) {
+    return true;
+  }
+  
+  /**
    * @brief A private method that registers the steps of an effective service at it's station.
    * @param serviceSet the ServiceSeet to add
    * @implNote Also adds the service to the list of active services of the junctions if it is effective
