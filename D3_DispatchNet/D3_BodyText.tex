@@ -229,7 +229,7 @@ The field platform is a list. It contains the following fields:
 \imgins{images/database/station_data_database.png}
 
 The ticket contains the following fields:
-\imgins{images/database/ticket_database.png} TODO add ticket row
+\imgins{images/database/ticket_database.png}
 
 The train type contains information related to the physical train. It contains the following fields:
 \imgins{images/database/train_type_database.png}
@@ -316,9 +316,9 @@ UC implemented - corresponding function:
 	\item UC23 - editStation
 	\item UC24 editJunction
 	\item UC25 - editLine
-	\item UC26 - deleteStation
-	\item UC27 - deleteJunction
-	\item UC28 - deleteLine
+	\item UC26 - removeStation
+	\item UC27 - removeJunction
+	\item UC28 - removeLine
 	\item UC29 - serviceRequestReview
 \end{itemize}
 
@@ -363,38 +363,45 @@ The \it{authenticateUser} function matches the given login info with the one sto
 
 \imgins{images/previews/JunctionsIsUsed.png}
 Safety-checking function, it assures that a junction to be operated-upon does not have any services running on it, that may be disrupted or engage in undefined behaviour.
-This method checks whether a line is currently in use, this is not trivial unlike for Junctions where we simply need to check if the number of services that call there is above 0. To perform this check, I scan the services through both junctions in both directions (thisJct and otherJct swap) if any service is found to traverse both junctions one directly after the other (in any order) anyMatch fails and the whole functions returns true.
+This method checks whether a line is currently in use, this is not trivial unlike for Junctions where we simply need to check if the number of services that call there is above 0. To perform this check, I scan the services through both junctions in both directions (thisJct and otherJct swap) if any service is found to traverse both junctions one directly after the other (in any order) anyMatch fails and the whole functions returns true.\\
+It implements UC25, UC28
 
 \imgins{images/previews/PathComparator.png}
 The overarching comparator that allows path sorting. It involves several sub-comparators, so that different preferences can be reflected (wanting a cheaper rather than strictly shorter path).
-First, it attempts to use the preferred sorting system, but failing that it iterates on them all to reduce the likelihood of draws. This way, even if two paths are equally short, the otherwise-preferrable one will have priority, without upsetting the overall rankings.
+First, it attempts to use the preferred sorting system, but failing that it iterates on them all to reduce the likelihood of draws. This way, even if two paths are equally short, the otherwise-preferrable one will have priority, without upsetting the overall rankings.\\
+It implements UC12
 
 \imgins{images/previews/PathSortByLength.png}
 An example of the sub-comparators invoked in the main path comparator. It abides by Java's standard for comparators, returning a negative integer if the first element is to be put earlier, zero if they are equal and a postitive integer if the latter is.
-It comparator specifically operates by, in order, attempting to find the quickest path (by comparing departure and arrival times), then the shortest (space-wise) and lastly the one involving the least exchanges.
-
+It comparator specifically operates by, in order, attempting to find the quickest path (by comparing departure and arrival times), then the shortest (space-wise) and lastly the one involving the least exchanges.\\
+It implements UC12
 
 \imgins{images/previews/PathPurchaseTicket.png}
 The \it{prchTcks} function handles the selection and purchasing of tickets from pathfinding results. It first displays the results, (previously sorted), and allows for the selection of the preferred path (ticket list).
 Then it displays the tickets involved in the path with more detail, it once again allows for the Passenger to choose which tickets to purchase, automatically looping until the whole path is pruchased or the user quits explicitly.
-Utilizes the Passenger's pruchasing ticket method.
+Utilizes the Passenger's pruchasing ticket method.\\
+It implements UC
 
 \imgins{images/previews/PassengerPurchaseTicket.png}
 The \it{PurchaseTicket} function allows a Passenger (and only a Passenger) to pruchase a ticket.
 First it ensures the ticket information is valid (I.E. non-null and not intestated to someone else), then it further checks the ticket has not been purchased already, to avoid posssible double-charge scenarios.
 The ticket is then added to the passenger's history and a confirmation email is sent.
-Lastly, the function returns "true" to confirm a successful transaction;
+Lastly, the function returns "true" to confirm a successful transaction;\\
+It implements UC9
 
 \imgins{images/previews/TrainManCreateTType.png}
 The \it{selectOrCreateTrainType} function is responsible for handling of \it{TrainType} class. 
-It does so by first allowing the user to either select an already existing one or to create a new one.
+It does so by first allowing the user to either select an already existing one or to create a new one.\\
+It implements UC29
 
 \imgins{images/previews/NetManDeleteJunction.png}
-The \it{deleteJunction} function handles the smooth deletion of junctions, by first guaranteeing that no currently-in-use junctions are modified, then invoking the junction's internal removal code
+The \it{deleteJunction} function handles the smooth deletion of junctions, by first guaranteeing that no currently-in-use junctions are modified, then invoking the junction's internal removal code.\\
+It implements UC27
 
 \imgins{images/previews/NetManInsertJunData.png}
 The \it{insertJunctionData} function allows the \un{Network Manager} to create interal Junction data for new junctions.
-First, it ensures the name is unique, then it allows input for the Junction's latitude and longitude, and lastly it invokes the Junction constructor
+First, it ensures the name is unique, then it allows input for the Junction's latitude and longitude, and lastly it invokes the Junction constructor.\\
+It implements UC18
 
 \section{Team roles}\label{Team roles}
 
