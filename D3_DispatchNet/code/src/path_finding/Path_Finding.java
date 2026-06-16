@@ -277,13 +277,12 @@ public class Path_Finding{
 		public void prchTcks() throws Exception {
       
       Passenger ticketUser = (this.requester instanceof Passenger)? (Passenger) this.requester: null; 
-
-      if (!(this.requester instanceof Passenger)) throw new Exception("BadRequester"); 
+      if (!(this.requester instanceof Passenger)) throw new Exception("BadRequester");  //Guarantee user is Passenger 
 
       StringBuilder queryText = new StringBuilder();
+      queryText.append("Please select one of the following by number index\n-------\nq) Quit\n-------\n");
 
-      queryText.append("Please select one of the following by number index\n-------\n");
-
+      //Load Tickets for selection
       for (int i = 0; i<results.size(); i++) {
         queryText.append(i);
         queryText.append(":\t");
@@ -295,27 +294,23 @@ public class Path_Finding{
       }
 
       int index = 0;
-      
       UserManagement cmd = Main.getUserManagement();
-      
       String userReply = cmd.prompt(queryText.toString());
         
-      if (userReply == "q") return;
+      if (userReply == "q") return; //Allow the user to quit
 
       index = Integer.parseInt(userReply);
-
-      if (index < 0 || index >= results.size()) {
+      if (index < 0 || index >= results.size()) { //Index bound check;
         cmd.displayError("Invalid index, returning to menu");
         return;
       }
 
-      boolean allPurchased;
+      boolean allPurchased; //Repetition flag  
       
       do {
         allPurchased = true;
-      
         queryText = new StringBuilder();
-        queryText.append("Please select one of the following by number of index\n-------\nq) To quit\n-------\nq");
+        queryText.append("Please select one of the following by number of index\n-------\nq) To quit\n-------\nq"); //Load tikets in chosen path to display 
         for (int i = 0; i<this.results.get(index).size(); i++){
           queryText.append(i);
           queryText.append(":\t");
@@ -328,14 +323,12 @@ public class Path_Finding{
         userReply = cmd.prompt(queryText.toString());
 
         if (userReply == "q") return;
-
         int ticketSelector = Integer.parseInt(userReply);
         if (ticketSelector >= 0 && ticketSelector < results.get(index).size()) {
           ticketUser.purchaseTicket(results.get(index).get(ticketSelector));    
         } else {
           cmd.displayError("Invalid Ticket index, please try again");
         }
-        
       } while (!allPurchased);
       cmd.print("All tickets purchased!");
 		}
