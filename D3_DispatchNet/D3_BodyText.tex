@@ -306,6 +306,12 @@ All the codes, images and documentation can be found at our \href{https://github
 \imgins{images/previews/JunctionsIsUsed.png}
 \imgins{images/previews/PathComparator.png}
 \imgins{images/previews/PathSortByLength.png}
+
+\imgins{images/previews/PathPurchaseTicket.png}
+The \it{prchTcks} function handles the selection and purchasing of tickets from pathfinding results. It first displays the results, (previously sorted), and allows for the selection of the preferred path (ticket list).
+Then it displays the tickets involved in the path with more detail, it once again allows for the Passenger to choose which tickets to purchase, automatically looping until the whole path is pruchased or the user quits explicitly.
+Utilizes the Passenger's pruchasing ticket method.
+
 \imgins{images/previews/PassengerPurchaseTicket.png}
 The \it{PurchaseTicket} function allows a Passenger (and only a Passenger) to pruchase a ticket.
 First it ensures the ticket information is valid (I.E. non-null and not intestated to someone else), then it further checks the ticket has not been purchased already, to avoid posssible double-charge scenarios.
