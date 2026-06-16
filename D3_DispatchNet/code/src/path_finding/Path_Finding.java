@@ -38,11 +38,11 @@ public class Path_Finding{
 
   //Private constructor helpers
   boolean is_after (Departure dep, Junction to) {
-    ServiceSet serv = dep.serviceSet();
+    ServiceSet serv = dep.getServiceSet();
     boolean found_first = false;
     boolean out = false;
     for (int i = 0; i<serv.getSteps().size() && !out; i++) {
-      if (serv.getSteps().get(i) == dep.serviceStep()) found_first = true;
+      if (serv.getSteps().get(i) == dep.getServiceStep()) found_first = true;
       if (found_first && serv.getSteps().get(i).getJunction() == to) out = true;
     }
 
@@ -107,7 +107,7 @@ public class Path_Finding{
       
       //Prepare queue and the history holder
       for (int i = 0; i<from.getDepartures().size(); i++) {
-        if (this.after == null || !from.getDepartures().get(i).time().isBefore(this.after)) {
+        if (this.after == null || !from.getDepartures().get(i).getTime().isBefore(this.after)) {
           queue.add(from.getDepartures().get(i));
           previous.add(-1);
           offsetMin.add(0);
@@ -119,9 +119,9 @@ public class Path_Finding{
         if (is_after(queue.get(i), this.to)) candidates.add(i); //If goes to, candidate solution
         else {//else expand queue
           boolean found_first = false;
-          List<ServiceStep> list = queue.get(i).serviceSet().getSteps();
-          ServiceStep first = queue.get(i).serviceStep();
-          LocalTime now = queue.get(i).time();
+          List<ServiceStep> list = queue.get(i).getServiceSet().getSteps();
+          ServiceStep first = queue.get(i).getServiceStep();
+          LocalTime now = queue.get(i).getTime();
           int nowffset = offsetMin.get(i);
 
           for (int ii = 0; ii<list.size() && (this.before == null || !this.before.isBefore(now.plusMinutes(nowffset))); ii++) {
@@ -131,9 +131,9 @@ public class Path_Finding{
               for (int iii = 0; iii<current.getDepartures().size(); iii++) {//Iterate over all deparures of the Junction
                 Departure dep = current.getDepartures().get(iii);
                 if (
-                  dep.serviceStep().isStopping() &&
-                  !dep.time().isBefore(now.plusMinutes(nowffset)) &&
-                  !dep.time().isAfter(this.before) && !queue.contains(dep)
+                  dep.getServiceStep().isStopping() &&
+                  !dep.getTime().isBefore(now.plusMinutes(nowffset)) &&
+                  !dep.getTime().isAfter(this.before) && !queue.contains(dep)
                 ) {//Only add departures that happen after arrival and before the limit, and aren't in queue yet
                   queue.add(dep);
                   previous.add(i);
@@ -165,13 +165,13 @@ public class Path_Finding{
           Ticket newticket = new Ticket(
             ticketRequester,
             candidate_departures.get(i).get(ii),
-            candidate_departures.get(i).get(ii+1).serviceStep()//The first step of the next departure is obviously the last of the current
+            candidate_departures.get(i).get(ii+1).getServiceStep()//The first step of the next departure is obviously the last of the current
           );
           tempList.add(newticket);
         }
         //Need to find the correct serviceStep into "to"
-        List<ServiceStep> stepList = candidate_departures.get(i).get(candidate_departures.get(i).size()-1).serviceSet().getSteps();
-        ServiceStep prevStep = candidate_departures.get(i).get(candidate_departures.get(i).size()-1).serviceStep();
+        List<ServiceStep> stepList = candidate_departures.get(i).get(candidate_departures.get(i).size()-1).getServiceSet().getSteps();
+        ServiceStep prevStep = candidate_departures.get(i).get(candidate_departures.get(i).size()-1).getServiceStep();
         boolean found_first = false;
         ServiceStep theStep = null;
         for (int ii = 0; ii<stepList.size(); ii++) {
@@ -377,12 +377,12 @@ public class Path_Finding{
 class sortByLenght implements Comparator<ArrayList<Ticket>> {
   public int compare (ArrayList<Ticket> L1, ArrayList<Ticket> L2) {
     
-    LocalTime startL1 = L1.get(0).getDeparture().time();
-    LocalTime endL1 = L1.get(L1.size()-1).getDeparture().time();
+    LocalTime startL1 = L1.get(0).getDeparture().getTime();
+    LocalTime endL1 = L1.get(L1.size()-1).getDeparture().getTime();
     int offsetL1 = L1.get(L1.size()-1).getLastStep().getTravelMinutes();
 
-    LocalTime startL2 = L2.get(0).getDeparture().time();
-    LocalTime endL2 = L2.get(L2.size()-1).getDeparture().time();
+    LocalTime startL2 = L2.get(0).getDeparture().getTime();
+    LocalTime endL2 = L2.get(L2.size()-1).getDeparture().getTime();
     int offsetL2 = L2.get(L2.size()-1).getLastStep().getTravelMinutes();
     
     long diffL1 = MINUTES.between(startL1, endL1.plusMinutes(offsetL1));
@@ -423,9 +423,9 @@ class sortByLenght implements Comparator<ArrayList<Ticket>> {
 class sortByDeparture implements Comparator<ArrayList<Ticket>> {
   public int compare (ArrayList<Ticket> L1, ArrayList<Ticket> L2) {
     
-    if (L1.get(0).getDeparture().time() == L2.get(0).getDeparture().time()) return 0;
+    if (L1.get(0).getDeparture().getTime() == L2.get(0).getDeparture().getTime()) return 0;
     
-    return L1.get(0).getDeparture().time().isAfter(L2.get(0).getDeparture().time())? -1 : 1;
+    return L1.get(0).getDeparture().getTime().isAfter(L2.get(0).getDeparture().getTime())? -1 : 1;
   }
 };
 /**

@@ -343,16 +343,16 @@ public class UserManagement {
      * @brief Prints the current session state and authenticated users
      */
     private void printUsers() {
-        System.out.println("Authenticated Users:");
+        io.println("Authenticated Users:");
         for (AuthenticatedUser user : authenticatedUsers) {
-            System.out.println(" - " + user.getUsername());
+            io.println(" - " + user.getUsername());
         }
         System.out.println("Current Session:");
         if (session.isAuthenticated()) {
-            System.out.println(" - Authenticated: " + session.getAuthenticatedUser().getUsername());
+            io.println(" - Authenticated: " + session.getAuthenticatedUser().getUsername());
         } else {
-            System.out.println(" - Anonymous: " + session.getAnonymousUser().getIdentifier());
+            io.println(" - Anonymous: " + session.getAnonymousUser().getIdentifier());
         }
-        System.out.println();
+        io.println();
     }
 }

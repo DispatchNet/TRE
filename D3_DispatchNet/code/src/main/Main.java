@@ -252,8 +252,8 @@ public class Main {
         String.join(";",
           path.stream().map(section -> {
             return String.format("%s %s -> %s %s (E%f)", 
-              section.getDeparture().time().toString(),
-              section.getDeparture().serviceStep().getJunction().getName(),
+              section.getDeparture().getTime().toString(),
+              section.getDeparture().getServiceStep().getJunction().getName(),
               section.getLastStep().getJunction().getName(),
               section.getArrival().toString(),
               (float) section.getCost() / 100

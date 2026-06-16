@@ -16,6 +16,7 @@ public class Line {
   
   /**
    * @brief Constructs a Line with generated id
+   * @usecase 19,22
    * @param j1 A Junction in the network
    * @param j2 A Junction in the network
    * @param lengthMeters The length of this line in meters
@@ -164,7 +165,7 @@ public class Line {
     return junctions.stream().anyMatch(thisJct -> { //check for both directions at both junctions
       Junction otherJct = junction1 != thisJct ? junction1 : junction2; //flip the direction
 
-      return thisJct.getServices().stream().anyMatch(service -> {
+      return thisJct.getServiceSets().stream().anyMatch(service -> {
         boolean hitThis = false;
         boolean hitOther = false;
 
