@@ -410,6 +410,7 @@ public class Main {
 
   /**
    * @brief interface for station/train search page
+   * @usecase{UC13}
    * @usecase{UC14}
    * 
    * @param user user that requested the page (Anonymous or Passenger)
