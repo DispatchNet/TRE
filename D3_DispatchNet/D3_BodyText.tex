@@ -244,7 +244,16 @@ An anonymous user can register, reset its password or login.
 
 \imgins{user_diagrams/user_management_user.pdf}
 
-UC implemented: 1
+UC implemented - corresponding function:
+\begin{itemize}
+	\item UC1 - register\\
+	\item UC2 - deleteAccount\\
+	\item UC3 - viewData this is not explicit in the diagram because is in the Account Page\\
+	\item UC4 - changeData\\
+	\item UC5 - resetPassword\\
+	\item UC6 - login\\
+	\item UC7 - logout\\
+\end{itemize}
 
 
 \newpage
@@ -253,11 +262,28 @@ The following user diagram describes the flow of the ticketing component, starte
 
 \imgins{user_diagrams/ticketing_user.pdf}
 
+UC implemented - corresponding function:
+\begin{itemize}
+	\item UC8 - implemented as buildDescription, used in other functions
+	\item UC9 - purchaseTicket
+	\item UC10 - cancelTicket
+	\item UC11 - getTicketsHistory
+\end{itemize}
+
 \newpage
 \osubs{Passenger}
 The following user diagram describes the actions the passenger can take. It can go to \hyl{User Management}, view its ticket history, search for a train or station or start a path finding procedure. In the last two it can move to the \hyl{Ticketing} flow.
 
 \imgins{user_diagrams/passenger_user.pdf}
+
+UC implemented - corresponding function:
+\begin{itemize}
+	\item UC12 - PathFinding constructor
+	\item UC12.1 - prchTcks
+	\item UC13 - stationTrainSearchInterface
+	\item UC14 - stationTrainSearchInterface
+	\item UC15 - printMap
+\end{itemize}
 
 \newpage
 \osubs{Train Company}
@@ -265,11 +291,36 @@ The following user diagram describes the actions the train company can take. It 
 
 \imgins{user_diagrams/train_company_user.pdf}
 
+UC implemented - corresponding function:
+\begin{itemize}
+	\item UC29 - createTrainType
+	\item UC30 - createServiceType
+	\item UC31 - createServiceRequest
+\end{itemize}
+
 \newpage
 \osubs{Network Manager}
 The following user diagram describes the actions the network manager can take: managing the network and its elements ore creating a new account for a train company.
 
 \imgins{user_diagrams/network_manager_user.pdf}
+
+UC implemented - corresponding function:
+\begin{itemize}
+	\item UC16 - viewNetwork
+	\item UC17 - insertStationData
+	\item UC18 - insertJunctionData
+	\item UC19 - insertLineData
+	\item UC20 - createStation
+	\item UC21 - createJunction
+	\item UC22 - createLine
+	\item UC23 - editStation
+	\item UC24 editJunction
+	\item UC25 - editLine
+	\item UC26 - deleteStation
+	\item UC27 - deleteJunction
+	\item UC28 - deleteLine
+	\item UC29 - serviceRequestReview
+\end{itemize}
 
 \newpage
 
