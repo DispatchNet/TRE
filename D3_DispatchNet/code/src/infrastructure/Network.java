@@ -113,7 +113,7 @@ public class Network {
     Junction jct = this.junctions.get(id);
     List<Line> lines = jct.getConnectedLines();
 
-    if (jct.getServices().size() > 0) {
+    if (jct.getServiceSets().size() > 0) {
       return Optional.of(EditError.IN_USE);
     }
     

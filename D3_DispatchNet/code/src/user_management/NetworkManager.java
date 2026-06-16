@@ -125,7 +125,7 @@ public class NetworkManager extends AuthenticatedUser {
         }
 
         // check if junction is in use (services list non-empty)
-        if (jct.getServices().size() > 0) {
+        if (jct.getServiceSets().size() > 0) {
             userManagement.displayError(
                 "Station is used by services and cannot be edited"
             );
@@ -164,7 +164,7 @@ public class NetworkManager extends AuthenticatedUser {
         }
 
         // check if junction is in use (services list non-empty)
-        if (jct.getServices().size() > 0) {
+        if (jct.getServiceSets().size() > 0) {
             userManagement.displayError(
                 "Junction is used by services and cannot be edited"
             );
@@ -250,7 +250,7 @@ public class NetworkManager extends AuthenticatedUser {
         }
 
         // check if station is in use (services list non-empty)
-        if (jct.getServices().size() > 0) {
+        if (jct.getServiceSets().size() > 0) {
             userManagement.displayError(
                 "Station is used by services and cannot be deleted"
             );
@@ -293,7 +293,7 @@ public class NetworkManager extends AuthenticatedUser {
         }
 
         // check if junction is in use (services list non-empty)
-        if (jct.getServices().size() > 0) {
+        if (jct.getServiceSets().size() > 0) {
             userManagement.displayError(
                 "Junction is used by services and cannot be deleted"
             );

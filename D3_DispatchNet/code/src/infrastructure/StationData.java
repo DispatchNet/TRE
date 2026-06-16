@@ -23,6 +23,7 @@ public class StationData {
 
   /**
    * @brief Constructs a StationData object with an explicit id
+   * @usecase 17,20
    * @param id The unique identifier of the station data
    * @param platforms A set of platforms
    */
@@ -32,7 +33,7 @@ public class StationData {
   }
   
   /**
-   * @brief Gets the unique identifier of this station data
+   * @brief Gets the unique identifier of this station Departu
    * @return the identifier
    */
   public String getId() {

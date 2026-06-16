@@ -19,10 +19,11 @@ public class Junction {
   Optional<StationData> stationData;
   String name;
   List<Line> connectedLines;
-  List<ServiceSet> services;
+  List<ServiceSet> serviceSets;
   
   /**
    * @brief Create a Junction with generated id
+   * @usecase 18,21
    * @param location the location of this station as GPS coordinates
    * @param stationData the data for this station or {@code Optional.empty()}.
    * @param name the name of this station
@@ -54,7 +55,7 @@ public class Junction {
     this.stationData = stationData;
     this.name = name;
     this.connectedLines = connectedLines == null ? new ArrayList<>() : new ArrayList<>(connectedLines);
-    this.services = services == null ? new ArrayList<>() : new ArrayList<>(services);
+    this.serviceSets = services == null ? new ArrayList<>() : new ArrayList<>(services);
   }
   
   /**
@@ -132,17 +133,18 @@ public class Junction {
    * @brief Get this junction's services
    * @return this junction's services
    */
-  public List<ServiceSet> getServices() {
-    return Collections.unmodifiableList(services);
+  public List<ServiceSet> getServiceSets() {
+    return Collections.unmodifiableList(serviceSets);
   }
 
   /**
    * @brief Get the departures from this junction
+   * @usecase 13,12
    * @implNote Includes services that don't stop at this junction
    * @return the departures
    */
   public List<Departure> getDepartures() {
-    return getServices().stream().map(
+    return getServiceSets().stream().map(
       service -> {
         var steps = service.getSteps();
         var dispatches = service.getDispatches();
@@ -191,9 +193,10 @@ public class Junction {
 
   /**
    * @brief Add a serviceSet to this Junction
+   * @usecase 32
    * @param serviceSet the serviceSet
    */ 
   public void addService(ServiceSet serviceSet) {
-    this.services.add(serviceSet);
+    this.serviceSets.add(serviceSet);
   }
 };
