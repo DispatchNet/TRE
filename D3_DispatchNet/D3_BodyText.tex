@@ -363,7 +363,7 @@ The \it{authenticateUser} function matches the given login info with the one sto
 
 \imgins{images/previews/JunctionsIsUsed.png}
 Safety-checking function, it assures that a junction to be operated-upon does not have any services running on it, that may be disrupted or engage in undefined behaviour.
-//TODO LUCA
+This method checks whether a line is currently in use, this is not trivial unlike for Junctions where we simply need to check if the number of services that call there is above 0. To perform this check, I scan the services through both junctions in both directions (thisJct and otherJct swap) if any service is found to traverse both junctions one directly after the other (in any order) anyMatch fails and the whole functions returns true.
 
 \imgins{images/previews/PathComparator.png}
 The overarching comparator that allows path sorting. It involves several sub-comparators, so that different preferences can be reflected (wanting a cheaper rather than strictly shorter path).
