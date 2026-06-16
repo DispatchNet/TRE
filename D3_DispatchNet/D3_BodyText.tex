@@ -199,24 +199,26 @@ The dispatch contains information to identify services and schedule it within a 
 The field runningDays is a list. It moreover contains the following fields: 
 \imgins{images/database/dispatch_database.png}
 
-The junction contains data of the physical junction or station (considered as junction). It contains the following fields:
+The junction contains data of the physical junction or station (considered as junction). \\
+The field StationDataId is optional. It contains the following fields:
 \imgins{images/database/junction_database.png}
 
-The line contains the following fields:
+The line contains data used to know the length and service consistency checks. It contains the following fields:
 \imgins{images/database/line_database.png}
 
-The service set contains the following fields:
+The service set contains information related to its status. It contains the following fields:
 \imgins{images/database/service_set_database.png}
 
-The service step contains the following fields:
+The service step contains data related to one step of the service.\\
+The field platform is a list. It contains the following fields:
 \imgins{images/database/service_step_database.png}
 
 The service type contains the following fields:
 \imgins{images/database/service_type_database.png}
 
-The station data contains the following fields:
+The station data contains details of a station.\\
+The field platform is a list. It contains the following fields:
 \imgins{images/database/station_data_database.png}
-
 
 The ticket contains the following fields:
 \imgins{images/database/ticket_database.png} TODO add ticket row
