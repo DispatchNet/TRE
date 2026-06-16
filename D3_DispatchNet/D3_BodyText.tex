@@ -300,10 +300,15 @@ All the codes, images and documentation can be found at our \href{https://github
 
 \section{Code Preview}
 
-\imgins{images/previews/AnonLoogin.png}
-\imgins{images/previews/AnonRegister.png}
-\imgins{images/previews/AuthenticateUser.png}
+\imgins{images/previews/AnonLogin.png}
+The \it{login} function allows \un{Anonymous} users to elevate their role. This is done by inserting username and password (using a dedicated IO operation that doesn't display inserted text on the display).
 
+\imgins{images/previews/AnonRegister.png}
+The \it{register} function is responsible for converting \un{Anonymous} users into \it{Passengers} upon submission and verification of login information, and email address.
+It checks that both email and username be unique, and the passowrd is both strong and inserted correctly (by matching to a second insertion).
+
+\imgins{images/previews/AuthenticateUser.png}
+The \it{authenticateUser} function matches the given login info with the one stored in the system, ensuring "wrong" login attempts fail and "right" ones complete successfully.
 
 \imgins{images/previews/JunctionsIsUsed.png}
 Safety-checking function, it assures that a junction to be operated-upon does not have any services running on it, that may be disrupted or engage in undefined behaviour.
