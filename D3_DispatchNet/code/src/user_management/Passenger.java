@@ -70,6 +70,8 @@ public class Passenger extends EndUser {
 
     /**
      * @brief Purchases a new ticket
+     * @usecase{UC9}
+     * @usecase{UC12.1}
      * @param ticket The ticket to purchase
      * @return true if the ticket was purchased successfully, false otherwise
      */

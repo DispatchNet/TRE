@@ -389,6 +389,9 @@ public class Main {
     }
   }
 
+  /**
+   * @usecase{UC14}
+   */
   private static void stationTrainSearchInterface (Object user) {
     
     String searchTerm = io.prompt("Search: ");

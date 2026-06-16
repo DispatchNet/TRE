@@ -81,6 +81,7 @@ public class Network {
 
   /**
    * @breif Search a junction on it's network by it's name
+   * @usecase{UC14}
    * @param name the name of the junction
    * @return the Junction if's found, Optional.empty() otherwise
    */

@@ -53,6 +53,7 @@ public class Path_Finding{
   //Public	
 		/**
      * @brief creates the Pathfinding_class
+     * @usecase{UC12}
      * 
      * @details Enforces mandatory information like requester and parameters of the search, initializes the sorting algorithm enum to its default value and computes the result lists
      * @param requester which Passenger or AnonymousUser initiated the request, used for ticket generation

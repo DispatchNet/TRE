@@ -48,6 +48,7 @@ public abstract class EndUser extends AuthenticatedUser {
 
     /**
      * @brief Prints the user's data, that is username and email
+     * @usecase{UC3}
      */
     public void viewData() {
         userManagement.print("Username: " + getUsername() + "\n");
@@ -56,6 +57,7 @@ public abstract class EndUser extends AuthenticatedUser {
 
     /**
      * @brief Changes the user's data
+     * @usecase{UC4}
      */
     public void changeData() {
         // ask user which data they want to change, amongst username, email and password
@@ -168,6 +170,7 @@ public abstract class EndUser extends AuthenticatedUser {
 
     /**
      * @brief Deletes the user's account
+     * @usecase{UC2}
      */
     public void deleteAccount() {
         userManagement.logoutUser();
