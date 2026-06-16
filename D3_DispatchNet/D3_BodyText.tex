@@ -1,7 +1,16 @@
+\section{Class Diagram}
+In the following image, the updated class diagram, changed in order to take advatantage of the Java language and to accomodate the implementation.
+
+\imgins{class_diagram/class_diagram.pdf}
+
+The descriptions of the classes can be found on the \hyl{Documentation}.
+
 \section{Project Structure}
 In the following is shown the structure of the project.
 
-\imgins{images/structure/DispatchNet_project_structure.png}.
+\imgins{images/structure/project_structure_1.png}\imgins{images/structure/project_structure_2.png}
+
+TODO mettere le immagini affiancate
 
 It is composed of: 
 
@@ -11,8 +20,10 @@ It is composed of:
     \begin{itemize}
         \item departure: \textcolor{red}{TODO: ?};
         \item infrastructure: the network and its management;
+        \item main: contains the runnable class, which implement the interface;
         \item path\_finding: the algorithm to find a path between stations;
         \item service\_management: the management of services;
+       \item ticketing: managemet of tickets information;
         \item user\_management: the management of users and their authentication.
     \end{itemize}
 
@@ -21,6 +32,7 @@ It is composed of:
         \item csv\_database: the actual database and its management;
         \item IO\_operations: input/output operation to interact with the user from terminal;
         \item mail\_service: integration with a possible mail service, as well as a temporary mock one;
+        \item payment\_gateway: integration with a possible payment service, as well as a temporary mock one.
     \end{itemize}
     
 \end{itemize}
@@ -43,7 +55,9 @@ We chose \bf{Java} for the operational part and \bf{Doxygen} to generate documen
 Our motivation for \bf{Java} was the extreme portability and the very module-friendly structure, allowing us to experiment and tinker with different implementations of the same expected behaviour in a plug-and-play fashion. 
 The garbage collector feature of \bf{Java} also ensures us to spend more time working of the functioning of our systems rather than the management of their lifetimes.
 
-\bf{Doxygen} was chosen due to its in-built support for \bf{Java} development and for its low overhead cost during code development, as the comment-tag system requires both very little time and brain-power to make, while still being very sight-readable in the code files.
+\section{Documentation}\label{Documentation}
+\bf{Doxygen} was chosen due to its in-built support for \bf{Java} development and for its low overhead cost during code development, as the comment-tag system requires both very little time and brain-power to make, while still being very sight-readable in the code files.\\
+It is available at our github at the following link TODO: add link.
 
 \section{Project Dependencies}
 \begin{itemize}
@@ -58,16 +72,25 @@ The data will be managed within the code and saved to the database only at the e
 
 The database contains one file for each set of data:
 \begin{itemize}
-    \item authenticated users
-    \item junctions
-    \item lines
-    \item platform
-    \item station data
-    \item \textcolor{red}{TODO: add if necessary}
+    \item authenticated users,
+    \item dispatches,
+    \item junctions,
+    \item lines,
+    \item service\_sets,
+    \item service\_types,
+    \item station data,
+    \item tickets,
+    \item train\_types.
 \end{itemize}
+
+TODO: fix dimensions
 
 The authenticated user conatins the following fields:
 \imgins{images/database/user_database.png}
+
+
+The dispatch conatins the following fields:
+\imgins{images/database/dispatch_database.png}
 
 The junction contains the following fields:
 \imgins{images/database/junction_database.png}
@@ -75,11 +98,24 @@ The junction contains the following fields:
 The line contains the following fields:
 \imgins{images/database/line_database.png}
 
-The platform contains the following fields:
-\imgins{images/database/platform_database.png}
+The service set contains the following fields:
+\imgins{images/database/service_set_database.png}
 
-The sstation data contains the following fields:
-\imgins{images/database/stationdata_database.png}
+The service step contains the following fields:
+\imgins{images/database/service_step_database.png}
+
+The service type contains the following fields:
+\imgins{images/database/service_type_database.png}
+
+The station data contains the following fields:
+\imgins{images/database/station_data_database.png}
+
+
+The ticket contains the following fields:
+\imgins{images/database/ticket_database.png} TODO add ticket row
+
+The train type contains the following fields:
+\imgins{images/database/train_type_database.png}
 
 \section{User Flows}
 
@@ -150,15 +186,15 @@ We divided the project into 3 natural modules, so that everyone worked on every 
 \caption{Roles and Activities}
 \label{tab:roles}
 
-\begin{tabular}{c|p{10cm}}
+\begin{tabular}{c|p{5cm}|p{5cm}}
 \hline
-\textbf{Team member} & \textbf{Roles and Activities}\\
+\textbf{Team member} & \textbf{modules} & \textbf{Roles and Activities}\\
 \hline
-Alessio Zanon & Latex expert\\
+Alessio Zanon & Path finding, Info view, Ticketing & Latex expert\\
 \hline
-Leonardo Tonetta & Team leader: monitoring deadlines, submitting deliverables, scheduling meeting\\
+Leonardo Tonetta & User authentication and management, Ticketing & Team leader: monitoring deadlines, submitting deliverables, scheduling meeting\\
 \hline
-Luca Fiorini & Railway expert\\
+Luca Fiorini & Network and Service management & Railway expert\\
 \end{tabular}
 
 \end{table}

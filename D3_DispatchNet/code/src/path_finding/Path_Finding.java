@@ -129,7 +129,11 @@ public class Path_Finding{
               Junction current = list.get(ii).getJunction();
               for (int iii = 0; iii<current.getDepartures().size(); iii++) {//Iterate over all deparures of the Junction
                 Departure dep = current.getDepartures().get(iii);
-                if (!dep.time().isBefore(now.plusMinutes(nowffset)) && !dep.time().isAfter(this.before) && !queue.contains(dep)) {//Only add departures that happen after arrival and before the limit, and aren't in queue yet
+                if (
+                  dep.serviceStep().isStopping() &&
+                  !dep.time().isBefore(now.plusMinutes(nowffset)) &&
+                  !dep.time().isAfter(this.before) && !queue.contains(dep)
+                ) {//Only add departures that happen after arrival and before the limit, and aren't in queue yet
                   queue.add(dep);
                   previous.add(i);
                   offsetMin.add(nowffset);
