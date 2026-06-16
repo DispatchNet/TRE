@@ -258,18 +258,22 @@ External APIs have been modeled as interfaces with mock implementations.
 The interface paradigm allows us to use valid invocations towards a fake implementation that can easily be swapped at a later date by a real implementation.
 Specifically, we have implemented the following fake external APIs
 \begin{itemize}
-    \item \verb|mail\_service|: The mail service
+    \item \verb|mail_service|: The mail service
         \begin{itemize}
             \item Interface: \verb|MailService|
             \item Mock implementation: \verb|MockMailService|
         \end{itemize}
-    \item \verb|payment\_gateway|: The payment gateway
+    \item \verb|payment_gateway|: The payment gateway
         \begin{itemize}
             \item Interface: \verb|PaymentGateway|
             \item Mock implementation: \verb|MockPaymentGateway|
         \end{itemize} 
 \end{itemize}
 The mock implementation of payment gateway also has non-deterministic behavior allowing us to test adequate handling of real-world failure conditions.
+
+\section{GitHub repo}
+TODO
+
 \section{Code Preview}
 
 \section{Team roles}

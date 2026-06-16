@@ -427,15 +427,9 @@ class sortByLenght implements Comparator<ArrayList<Ticket>> {
 class sortByDeparture implements Comparator<ArrayList<Ticket>> {
   public int compare (ArrayList<Ticket> L1, ArrayList<Ticket> L2) {
     
-<<<<<<< Updated upstream
     if (L1.get(0).getDeparture().getTime() == L2.get(0).getDeparture().getTime()) return 0;
     
     return L1.get(0).getDeparture().getTime().isAfter(L2.get(0).getDeparture().getTime())? -1 : 1;
-=======
-    if (L1.get(0).getDeparture().getTime() == L2.get(0).getDeparture().time()) return 0;
-    
-    return L1.get(0).getDeparture().getTime().isAfter(L2.get(0).getDeparture().time())? -1 : 1;
->>>>>>> Stashed changes
   }
 };
 /**

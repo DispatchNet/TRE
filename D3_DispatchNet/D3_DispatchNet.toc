@@ -27,5 +27,6 @@
 \contentsline {subsection}{\numberline {2.8.4}Train Company}{20}{subsection.2.8.4}%
 \contentsline {subsection}{\numberline {2.8.5}Network Manager}{21}{subsection.2.8.5}%
 \contentsline {section}{\numberline {2.9}APIs}{22}{section.2.9}%
-\contentsline {section}{\numberline {2.10}Code Preview}{22}{section.2.10}%
-\contentsline {section}{\numberline {2.11}Team roles}{22}{section.2.11}%
+\contentsline {section}{\numberline {2.10}GitHub repo}{22}{section.2.10}%
+\contentsline {section}{\numberline {2.11}Code Preview}{22}{section.2.11}%
+\contentsline {section}{\numberline {2.12}Team roles}{22}{section.2.12}%

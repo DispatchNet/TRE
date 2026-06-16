@@ -353,6 +353,6 @@ public class UserManagement {
         } else {
             io.println(" - Anonymous: " + session.getAnonymousUser().getIdentifier());
         }
-        io.println();
+        io.println("");
     }
 }
