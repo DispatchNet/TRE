@@ -193,7 +193,7 @@ public class Line {
   }
   
 /**
- * @public returns whether a junction is in junction1 or junction2
+ * @brief returns whether a junction is in junction1 or junction2
  * @param jun a junciton pointer 
  * @reutrn a booleanean
  */
@@ -201,7 +201,4 @@ public class Line {
     return jun == this.junction1 || jun == this.junction2; 
   }
 
-  static void main () {//Unit test
-
-  }
 }
