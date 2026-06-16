@@ -354,9 +354,26 @@ All the codes, images and documentation can be found at our \href{https://github
 \imgins{images/previews/AnonLoogin.png}
 \imgins{images/previews/AnonRegister.png}
 \imgins{images/previews/AuthenticateUser.png}
+
+
 \imgins{images/previews/JunctionsIsUsed.png}
+Safety-checking function, it assures that a junction to be operated-upon does not have any services running on it, that may be disrupted or engage in undefined behaviour.
+//TODO LUCA
+
 \imgins{images/previews/PathComparator.png}
+The overarching comparator that allows path sorting. It involves several sub-comparators, so that different preferences can be reflected (wanting a cheaper rather than strictly shorter path).
+First, it attempts to use the preferred sorting system, but failing that it iterates on them all to reduce the likelihood of draws. This way, even if two paths are equally short, the otherwise-preferrable one will have priority, without upsetting the overall rankings.
+
 \imgins{images/previews/PathSortByLength.png}
+An example of the sub-comparators invoked in the main path comparator. It abides by Java's standard for comparators, returning a negative integer if the first element is to be put earlier, zero if they are equal and a postitive integer if the latter is.
+It comparator specifically operates by, in order, attempting to find the quickest path (by comparing departure and arrival times), then the shortest (space-wise) and lastly the one involving the least exchanges.
+
+
+\imgins{images/previews/PathPurchaseTicket.png}
+The \it{prchTcks} function handles the selection and purchasing of tickets from pathfinding results. It first displays the results, (previously sorted), and allows for the selection of the preferred path (ticket list).
+Then it displays the tickets involved in the path with more detail, it once again allows for the Passenger to choose which tickets to purchase, automatically looping until the whole path is pruchased or the user quits explicitly.
+Utilizes the Passenger's pruchasing ticket method.
+
 \imgins{images/previews/PassengerPurchaseTicket.png}
 The \it{PurchaseTicket} function allows a Passenger (and only a Passenger) to pruchase a ticket.
 First it ensures the ticket information is valid (I.E. non-null and not intestated to someone else), then it further checks the ticket has not been purchased already, to avoid posssible double-charge scenarios.
