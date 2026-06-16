@@ -64,6 +64,8 @@ public class UserManagement {
 
     /**
      * @brief Adds a authenticated authenticated user to the system
+     * @usecase{UC1}
+     * @usecase{UC6}
      * @param user The authenticated user to add
      */
     public void addAuthenticatedUser(AuthenticatedUser user) {
@@ -73,6 +75,8 @@ public class UserManagement {
 
     /**
      * @brief Removes an authenticated user from the system
+     * @usecase{UC2}
+     * @usecase{UC7}
      * @param user The authenticated user to remove
      */
     public void removeAuthenticatedUser(AuthenticatedUser user) {

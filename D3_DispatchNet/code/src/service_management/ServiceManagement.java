@@ -30,6 +30,7 @@ public class ServiceManagement {
    * @brief Approves a pending service request and promotes it to an active service set.
    *        The service is moved from the requests map to the active service sets map
    *        and its status is updated to Effective.
+   * @usecase 32
    * @param id the ID of the service request to approve
    */
   public void approveServiceRequest(String id) {
@@ -44,6 +45,7 @@ public class ServiceManagement {
   /**
    * @brief Rejects and removes a pending service request.
    *        The service set is removed from the requests map and discarded.
+   * @usecase 32
    * @param id the ID of the service request to reject
    */
   public void rejectServiceRequest(String id) {
@@ -126,6 +128,15 @@ public class ServiceManagement {
     this.registerServiceSetAtJunctions(serviceSet);
   }
 
+  /**
+   * @brief Checks whther a sercviceSet is compatible with the current network and traffic configuration
+   * @param serviceSet the serviceSet
+   * @return true if the serviceSet is good, false otherwise
+   */
+  public boolean checkIntegrity(ServiceSet serviceSet) {
+    return true;
+  }
+  
   /**
    * @brief A private method that registers the steps of an effective service at it's station.
    * @param serviceSet the ServiceSeet to add

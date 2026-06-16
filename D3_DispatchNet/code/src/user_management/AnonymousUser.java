@@ -35,6 +35,7 @@ public class AnonymousUser {
     /** 
      * @brief Register a new user account from the anonymous user state. 
      * (wrapper function)
+     * @usecase{UC1}
     */
     public void register() {
         register(false);
@@ -42,6 +43,7 @@ public class AnonymousUser {
 
     /**
      * @brief Register a new user account from the anonymous user state.
+     * @usecase{UC1}
      */
     public void register(boolean fromNetworkManager) {
         String username, email, password1, password2;
@@ -129,6 +131,7 @@ public class AnonymousUser {
 
     /**
      * @brief Reset the password of a user from the anonymous user state.
+     * @usecase{UC5}
      */
     public void resetPassword() {
         String email;
@@ -220,6 +223,7 @@ public class AnonymousUser {
 
     /**
      * @brief Log the anonymous user into the authenticated state.
+     * @usecase{UC6}
      */
     public void login() {
         String username, password;

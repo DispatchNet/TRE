@@ -1,5 +1,6 @@
 var classservice__management_1_1_service_management =
 [
+    [ "addService", "classservice__management_1_1_service_management.html#a037183a2db554ae3def1ed70dbc68ad7", null ],
     [ "addServiceRequest", "classservice__management_1_1_service_management.html#a714e185201b06855b7ab8bd98ba1061b", null ],
     [ "addServiceType", "classservice__management_1_1_service_management.html#a39840bb8f6c5cb1a1cfad1619efe4d26", null ],
     [ "addTrainType", "classservice__management_1_1_service_management.html#a278a070667bea1b8fc355b2c57c00723", null ],

@@ -48,6 +48,7 @@ public class NetworkManager extends AuthenticatedUser {
 
     /**
      * @brief Views the transportation network
+     * @usecase{UC16}
      */
     public void viewNetwork() {
         // Simple network view: print junctions and lines
@@ -65,6 +66,7 @@ public class NetworkManager extends AuthenticatedUser {
 
     /**
      * @brief Creates a new station in the transportation network
+     * @usecase{UC20}
      */
     public void createStation() {
         // Insert station data
@@ -79,6 +81,7 @@ public class NetworkManager extends AuthenticatedUser {
 
     /**
      * @brief Creates a new junction in the transportation network
+     * @usecase{UC21}
      */
     public void createJunction() {
         // Insert junction data
@@ -93,6 +96,7 @@ public class NetworkManager extends AuthenticatedUser {
 
     /**
      * @brief Creates a new line in the transportation network
+     * @usecase{UC22}
      */
     public void createLine() {
         // Insert line data
@@ -107,6 +111,7 @@ public class NetworkManager extends AuthenticatedUser {
 
     /**
      * @brief Edits an existing station in the transportation network
+     * @usecase{UC23}
      * @param station The station to edit
      */
     public void editStation(String station) {
@@ -120,7 +125,7 @@ public class NetworkManager extends AuthenticatedUser {
         }
 
         // check if junction is in use (services list non-empty)
-        if (jct.getServices().size() > 0) {
+        if (jct.getServiceSets().size() > 0) {
             userManagement.displayError(
                 "Station is used by services and cannot be edited"
             );
@@ -145,6 +150,7 @@ public class NetworkManager extends AuthenticatedUser {
 
     /**
      * @brief Edits an existing junction in the transportation network. Cannot become a station.
+     * @usecase{UC24}
      * @param junction The junction to edit
      */
     public void editJunction(String junction) {
@@ -158,7 +164,7 @@ public class NetworkManager extends AuthenticatedUser {
         }
 
         // check if junction is in use (services list non-empty)
-        if (jct.getServices().size() > 0) {
+        if (jct.getServiceSets().size() > 0) {
             userManagement.displayError(
                 "Junction is used by services and cannot be edited"
             );
@@ -182,6 +188,7 @@ public class NetworkManager extends AuthenticatedUser {
 
     /**
      * @brief Edits an existing line in the transportation network
+     * @usecase{UC25}
      * @param line The line to edit
      */
     public void editLine(String line) {
@@ -221,6 +228,7 @@ public class NetworkManager extends AuthenticatedUser {
 
     /**
      * @brief Deletes an existing station in the transportation network
+     * @usecase{UC26}
      * @param station The station to delete
      */
     public void deleteStation(String station) {
@@ -242,7 +250,7 @@ public class NetworkManager extends AuthenticatedUser {
         }
 
         // check if station is in use (services list non-empty)
-        if (jct.getServices().size() > 0) {
+        if (jct.getServiceSets().size() > 0) {
             userManagement.displayError(
                 "Station is used by services and cannot be deleted"
             );
@@ -271,6 +279,7 @@ public class NetworkManager extends AuthenticatedUser {
 
     /**
      * @brief Deletes an existing junction in the transportation network
+     * @usecase{UC27}
      * @param junction The junction to delete
      */
     public void deleteJunction(String junction) {
@@ -284,7 +293,7 @@ public class NetworkManager extends AuthenticatedUser {
         }
 
         // check if junction is in use (services list non-empty)
-        if (jct.getServices().size() > 0) {
+        if (jct.getServiceSets().size() > 0) {
             userManagement.displayError(
                 "Junction is used by services and cannot be deleted"
             );
@@ -313,6 +322,7 @@ public class NetworkManager extends AuthenticatedUser {
 
     /**
      * @brief Deletes an existing line in the transportation network
+     * @usecase{UC28}
      * @param line The line to delete
      */
     public void deleteLine(String line) {
@@ -357,6 +367,8 @@ public class NetworkManager extends AuthenticatedUser {
      * @brief Prompt the user to insert station data and build a Junction with StationData
      * Implements the Insert Station Data flow: requests name, coordinates and platforms,
      * validates uniqueness and returns the created Junction or null on cancel/error.
+     * @usecase{UC20}
+     * @usecase{UC23}
      */
     private Junction insertStationData() {
         // Loop until valid input is provided 
@@ -427,6 +439,8 @@ public class NetworkManager extends AuthenticatedUser {
     /*
      * @brief Prompt the user to insert junction data and build a Junction. 
      * Not a station (no station data).
+     * @usecase{UC21}
+     * @usecase{UC24}
      */
     private Junction insertJunctionData() {
         // Loop until valid input is provided
@@ -471,6 +485,8 @@ public class NetworkManager extends AuthenticatedUser {
 
     /*
      * @brief Prompt the user to insert line data and build a Line
+     * @usecase{UC22}
+     * @usecase{UC25}
      */
     private Line insertLineData() {
         // check that at least 2 junctions exist to connect with a line
@@ -529,6 +545,7 @@ public class NetworkManager extends AuthenticatedUser {
      *        On approval the request is promoted to an active service set.
      *        On rejection it is discarded.
      *        Notifies the owning train company by email in either case.
+     * @usecase{UC32}
      * @param serviceRequestID The ID of the service request to review
      */
     public void reviewServiceRequest(String serviceRequestID) {

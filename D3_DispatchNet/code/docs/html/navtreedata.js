@@ -25,9 +25,9 @@
 var NAVTREE =
 [
   [ "TRE", "index.html", [
-    [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
-      [ "Namespace Members", "namespacemembers.html", [
+    [ "Packages", "namespaces.html", [
+      [ "Package List", "namespaces.html", "namespaces_dup" ],
+      [ "Package Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ]
       ] ]
@@ -51,8 +51,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_anonymous_user_8java.html",
-"classservice__management_1_1_service_management.html#a7752e9a9dbd60ee880a3f0bdd29f67e5",
-"classuser__management_1_1_train_company.html#a11a603ae15e3bf1a50e7597053835f11"
+"classservice__management_1_1_service_management.html#a39840bb8f6c5cb1a1cfad1619efe4d26",
+"classuser__management_1_1_passenger.html#ab6713421691da583fe5d19f6b1eb4611"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';
