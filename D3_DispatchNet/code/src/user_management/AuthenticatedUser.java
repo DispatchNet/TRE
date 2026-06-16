@@ -133,6 +133,7 @@ public abstract class AuthenticatedUser {
 
     /**
     * @brief Log out the authenticated user, moving to the anonymous user state.
+    * @usecase{UC7}
     */
     public void logout() {
         userManagement.logoutUser();
