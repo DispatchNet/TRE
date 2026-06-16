@@ -37,6 +37,7 @@ public class Network {
 
   /**
    * @brief Adds a Junction to the network
+   * @usecase 21,22
    * @param junction The junction to add
    * @throws InvalidArgumentException The junction is already present in the map
    */
@@ -52,6 +53,7 @@ public class Network {
   /**
    * @brief Adds an existing Line object to the network.
    * @param line The line to add
+   * @usecase 22
    * @throws IllegalArguemtneException if the line is already in the network
    */
   public void addLine(Line line) {
@@ -65,6 +67,7 @@ public class Network {
 
   /**
    * @brief get the map of lines.
+   * @usecase 13,15
    * @return An unmodifiable view of the lines
    */
   public Map<String,Line> getLines() {
@@ -73,6 +76,7 @@ public class Network {
 
   /**
    * @brief get the map of junctions.
+   * @usecase 13,15
    * @return An unmodifiable view of the junctions
    */
   public Map<String,Junction> getJunctions() {
@@ -95,6 +99,7 @@ public class Network {
   
   /**
    * @brief remove a junction from the network
+   * @usecase 26,27
    * @param id the id of the jucntion
    * @return If any error occured, the error
    * @implNote Also removes all lines connected to the deleted junction, as well as adjacencies from neighbhoring junctions
@@ -125,6 +130,7 @@ public class Network {
 
   /**
    * @brief remove a junction from the network
+   * @usecase 28
    * @param id the id of the jucntion
    * @return If any error occured, the error, otherwise Optional.empty()
    * @implNote Also removes this line from the known adjacencies of it's connected lines
