@@ -1,5 +1,5 @@
 \contentsline {section}{Purpose}{3}{section*.2}%
-\contentsline {chapter}{\numberline {1}TODO CLEAN CLASS DIAGRAM}{4}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Previous deliverables}{4}{chapter.1}%
 \contentsline {chapter}{\numberline {2}D3}{5}{chapter.2}%
 \contentsline {section}{RE: Objectives}{5}{section*.4}%
 \contentsline {subsection}{Ticketing system}{5}{section*.6}%
@@ -13,20 +13,21 @@
 \contentsline {subsection}{External}{7}{section*.14}%
 \contentsline {subsubsection}{Human}{7}{section*.15}%
 \contentsline {subsubsection}{Non-human}{7}{section*.16}%
-\contentsline {section}{\numberline {2.1}Class Diagram}{8}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Project Structure}{10}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Architecture}{11}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Implementation Language}{12}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Documentation}{12}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Project Dependencies}{12}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Database}{12}{section.2.7}%
-\contentsline {section}{\numberline {2.8}User Flows}{15}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}User Management}{15}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}Ticketing}{17}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Passenger}{18}{subsection.2.8.3}%
-\contentsline {subsection}{\numberline {2.8.4}Train Company}{19}{subsection.2.8.4}%
-\contentsline {subsection}{\numberline {2.8.5}Network Manager}{20}{subsection.2.8.5}%
-\contentsline {section}{\numberline {2.9}APIs}{21}{section.2.9}%
-\contentsline {section}{\numberline {2.10}GitHub repo}{21}{section.2.10}%
-\contentsline {section}{\numberline {2.11}Code Preview}{21}{section.2.11}%
-\contentsline {section}{\numberline {2.12}Team roles}{21}{section.2.12}%
+\contentsline {section}{\numberline {2.1}Use case implemented}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Class Diagram}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Project Structure}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Architecture}{11}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Implementation Language}{12}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Documentation}{12}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Project Dependencies}{12}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Database}{12}{section.2.8}%
+\contentsline {section}{\numberline {2.9}User Flows}{14}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}User Management}{14}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}Ticketing}{17}{subsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.9.3}Passenger}{18}{subsection.2.9.3}%
+\contentsline {subsection}{\numberline {2.9.4}Train Company}{20}{subsection.2.9.4}%
+\contentsline {subsection}{\numberline {2.9.5}Network Manager}{21}{subsection.2.9.5}%
+\contentsline {section}{\numberline {2.10}APIs}{23}{section.2.10}%
+\contentsline {section}{\numberline {2.11}GitHub repo}{23}{section.2.11}%
+\contentsline {section}{\numberline {2.12}Code Preview}{24}{section.2.12}%
+\contentsline {section}{\numberline {2.13}Team roles}{34}{section.2.13}%
