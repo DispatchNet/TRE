@@ -9,5 +9,6 @@ var classpath__finding_1_1_path___finding =
     [ "getResults", "classpath__finding_1_1_path___finding.html#ae440fa57dbabcba4355e89b982317f98", null ],
     [ "getTo", "classpath__finding_1_1_path___finding.html#a0f508d36000593c0f18628558ff8fa1e", null ],
     [ "prchTcks", "classpath__finding_1_1_path___finding.html#a7d54813766ed7404f9294ca7656be35a", null ],
-    [ "setChosenSrt", "classpath__finding_1_1_path___finding.html#aa80674e608b582a6e28f318969656cce", null ]
+    [ "setChosenSrt", "classpath__finding_1_1_path___finding.html#aa80674e608b582a6e28f318969656cce", null ],
+    [ "toString", "classpath__finding_1_1_path___finding.html#a28e2106699a473c43b13eb79615554ea", null ]
 ];

@@ -220,6 +220,7 @@ public class AnonymousUser {
 
     /**
      * @brief Log the anonymous user into the authenticated state.
+     * @usecase{UC6}
      */
     public void login() {
         String username, password;

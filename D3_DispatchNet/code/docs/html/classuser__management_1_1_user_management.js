@@ -17,6 +17,7 @@ var classuser__management_1_1_user_management =
     [ "isAuthenticated", "classuser__management_1_1_user_management.html#a77d9fd14f1a9272156a11ae05b9b4cb1", null ],
     [ "loginUser", "classuser__management_1_1_user_management.html#af193ad576f495c43499d7c7ff2c9ef04", null ],
     [ "logoutUser", "classuser__management_1_1_user_management.html#ab8affa201980a987db4d3a4a747db31e", null ],
+    [ "print", "classuser__management_1_1_user_management.html#a00029e4c5eb0e694bf47e71805dbdea8", null ],
     [ "processTransaction", "classuser__management_1_1_user_management.html#a8934421768a979a09ac62a74197bd889", null ],
     [ "prompt", "classuser__management_1_1_user_management.html#aeb62b2a53928428e54d053ccb6cc1a95", null ],
     [ "promptPassword", "classuser__management_1_1_user_management.html#a6b14e8552e54b69a20557cb80825bc83", null ],

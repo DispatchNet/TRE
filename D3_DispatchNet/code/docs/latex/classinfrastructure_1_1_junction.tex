@@ -37,7 +37,9 @@ List$<$ Departure $>$ \doxymbox{\hyperlink{classinfrastructure_1_1_junction_a502
 \doxymbox{\hyperlink{classinfrastructure_1_1_line}{Line}} \doxymbox{\hyperlink{classinfrastructure_1_1_junction_a40c4af24e2ef1acc96b4e10c9548c388}{get\+To\+Other}} (\doxymbox{\hyperlink{classinfrastructure_1_1_junction_aefc3d341f399df7b6bf5a33ac7484f65}{Junction}} other)
 \begin{DoxyCompactList}\small\item\em Get the line from this junction to another, if it exists. \end{DoxyCompactList}\item 
 List$<$ \doxymbox{\hyperlink{classinfrastructure_1_1_junction_aefc3d341f399df7b6bf5a33ac7484f65}{Junction}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1_junction_aea60ba67f309ed7438314986983d6d23}{get\+Neighbours}} ()
-\end{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{classinfrastructure_1_1_junction_a82958f4370beec21773b66482816c7ff}{add\+Service}} (\doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}} service\+Set)
+\begin{DoxyCompactList}\small\item\em Add a service\+Set to this \doxylink{classinfrastructure_1_1_junction}{Junction}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -80,6 +82,21 @@ Create a \doxylink{classinfrastructure_1_1_junction}{Junction} with explicit id.
 \label{classinfrastructure_1_1_junction_doc-func-members}
 \Hypertarget{classinfrastructure_1_1_junction_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classinfrastructure_1_1_junction_a82958f4370beec21773b66482816c7ff}\index{infrastructure.Junction@{infrastructure.Junction}!addService@{addService}}
+\index{addService@{addService}!infrastructure.Junction@{infrastructure.Junction}}
+\doxysubsubsection{\texorpdfstring{addService()}{addService()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_junction_a82958f4370beec21773b66482816c7ff} 
+void infrastructure.\+Junction.\+add\+Service (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}}}]{service\+Set}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a service\+Set to this \doxylink{classinfrastructure_1_1_junction}{Junction}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Set} & the service\+Set \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classinfrastructure_1_1_junction_af311651161c1d2e431329fcf130221e6}\index{infrastructure.Junction@{infrastructure.Junction}!getConnectedLines@{getConnectedLines}}
 \index{getConnectedLines@{getConnectedLines}!infrastructure.Junction@{infrastructure.Junction}}
 \doxysubsubsection{\texorpdfstring{getConnectedLines()}{getConnectedLines()}}

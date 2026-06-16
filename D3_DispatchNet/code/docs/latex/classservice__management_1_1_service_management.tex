@@ -29,7 +29,9 @@ Map$<$ String, \doxymbox{\hyperlink{classservice__management_1_1_service_set}{Se
 Optional$<$ \doxymbox{\hyperlink{classservice__management_1_1_train_type}{Train\+Type}} $>$ \doxymbox{\hyperlink{classservice__management_1_1_service_management_a0483350bc1fad52b9914841c0771a46b}{get\+Train\+Type}} (String id)
 \begin{DoxyCompactList}\small\item\em Retrieves a train type by its identifier. \end{DoxyCompactList}\item 
 Optional$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}} $>$ \doxymbox{\hyperlink{classservice__management_1_1_service_management_a7752e9a9dbd60ee880a3f0bdd29f67e5}{get\+Service\+Type}} (String id)
-\begin{DoxyCompactList}\small\item\em Retrieves a service type by its ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves a service type by its ID. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classservice__management_1_1_service_management_a037183a2db554ae3def1ed70dbc68ad7}{add\+Service}} (\doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}} service\+Set)
+\begin{DoxyCompactList}\small\item\em Registers a new train service in the network. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -38,6 +40,21 @@ A management class that provides functionality to edit the network. Maintains th
 \label{classservice__management_1_1_service_management_doc-func-members}
 \Hypertarget{classservice__management_1_1_service_management_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classservice__management_1_1_service_management_a037183a2db554ae3def1ed70dbc68ad7}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!addService@{addService}}
+\index{addService@{addService}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{addService()}{addService()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_a037183a2db554ae3def1ed70dbc68ad7} 
+void service\+\_\+management.\+Service\+Management.\+add\+Service (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}}}]{service\+Set}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registers a new train service in the network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Set} & the Service\+Seet to add @impl\+Note Also adds the service to the list of active services of the junctions if it is effective \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classservice__management_1_1_service_management_a714e185201b06855b7ab8bd98ba1061b}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!addServiceRequest@{addServiceRequest}}
 \index{addServiceRequest@{addServiceRequest}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
 \doxysubsubsection{\texorpdfstring{addServiceRequest()}{addServiceRequest()}}

@@ -28,6 +28,10 @@ boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_ab6713421691da5
 \begin{DoxyCompactList}\small\item\em Purchases a new ticket. \end{DoxyCompactList}\item 
 boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_a3d3feb18234bd805bc3219d8b3e65a72}{cancel\+Ticket}} (\doxymbox{\hyperlink{classticketing_1_1_ticket}{Ticket}} ticket)
 \begin{DoxyCompactList}\small\item\em Cancels a purchased ticket. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_a76068051fb886ef3d6af347607715eed}{purchase\+Group\+Pass}} (\doxymbox{\hyperlink{classticketing_1_1_group_pass}{Group\+Pass}} group\+Pass)
+\begin{DoxyCompactList}\small\item\em Purchases a new group pass (not impelemented). \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_a00766032c568019f7977d0729b183872}{cancel\+Group\+Pass}} (\doxymbox{\hyperlink{classticketing_1_1_group_pass}{Group\+Pass}} group\+Pass)
+\begin{DoxyCompactList}\small\item\em Cancel a purchased group pass (not impelemented). \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classuser__management_1_1_passenger_ae7e8a928fd04ce05eb777f1c6b528553}{get\+Tickets\+History}} ()
 \begin{DoxyCompactList}\small\item\em Retrieves the history of purchased and cancelled tickets. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classuser__management_1_1_end_user}{user\+\_\+management.\+End\+User}}}
@@ -146,6 +150,24 @@ Adds a ticket loaded from the persistent storage.
 {\em ticket} & The ticket loaded from the database. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classuser__management_1_1_passenger_a00766032c568019f7977d0729b183872}\index{user\_management.Passenger@{user\_management.Passenger}!cancelGroupPass@{cancelGroupPass}}
+\index{cancelGroupPass@{cancelGroupPass}!user\_management.Passenger@{user\_management.Passenger}}
+\doxysubsubsection{\texorpdfstring{cancelGroupPass()}{cancelGroupPass()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_a00766032c568019f7977d0729b183872} 
+boolean user\+\_\+management.\+Passenger.\+cancel\+Group\+Pass (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classticketing_1_1_group_pass}{Group\+Pass}}}]{group\+Pass}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cancel a purchased group pass (not impelemented). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticket} & The group pass to purchase \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the group pass was cancelled successfully, false otherwise 
+\end{DoxyReturn}
 \Hypertarget{classuser__management_1_1_passenger_a3d3feb18234bd805bc3219d8b3e65a72}\index{user\_management.Passenger@{user\_management.Passenger}!cancelTicket@{cancelTicket}}
 \index{cancelTicket@{cancelTicket}!user\_management.Passenger@{user\_management.Passenger}}
 \doxysubsubsection{\texorpdfstring{cancelTicket()}{cancelTicket()}}
@@ -200,6 +222,24 @@ void user\+\_\+management.\+Passenger.\+get\+Tickets\+History (\begin{DoxyParamC
 
 Retrieves the history of purchased and cancelled tickets. 
 
+\Hypertarget{classuser__management_1_1_passenger_a76068051fb886ef3d6af347607715eed}\index{user\_management.Passenger@{user\_management.Passenger}!purchaseGroupPass@{purchaseGroupPass}}
+\index{purchaseGroupPass@{purchaseGroupPass}!user\_management.Passenger@{user\_management.Passenger}}
+\doxysubsubsection{\texorpdfstring{purchaseGroupPass()}{purchaseGroupPass()}}
+{\footnotesize\ttfamily \label{classuser__management_1_1_passenger_a76068051fb886ef3d6af347607715eed} 
+boolean user\+\_\+management.\+Passenger.\+purchase\+Group\+Pass (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classticketing_1_1_group_pass}{Group\+Pass}}}]{group\+Pass}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Purchases a new group pass (not impelemented). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticket} & The group pass to purchase \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the ticket was purchased successfully, false otherwise 
+\end{DoxyReturn}
 \Hypertarget{classuser__management_1_1_passenger_ab6713421691da583fe5d19f6b1eb4611}\index{user\_management.Passenger@{user\_management.Passenger}!purchaseTicket@{purchaseTicket}}
 \index{purchaseTicket@{purchaseTicket}!user\_management.Passenger@{user\_management.Passenger}}
 \doxysubsubsection{\texorpdfstring{purchaseTicket()}{purchaseTicket()}}

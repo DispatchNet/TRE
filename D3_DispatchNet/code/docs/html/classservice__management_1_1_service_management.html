@@ -146,10 +146,45 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0483350bc1fad52b9914841c0771a46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a train type by its identifier.  <br /></td></tr>
 <tr class="memitem:a7752e9a9dbd60ee880a3f0bdd29f67e5" id="r_a7752e9a9dbd60ee880a3f0bdd29f67e5"><td class="memItemLeft">Optional&lt; <a class="el" href="classservice__management_1_1_service_type.html">ServiceType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7752e9a9dbd60ee880a3f0bdd29f67e5">getServiceType</a> (String id)</td></tr>
 <tr class="memdesc:a7752e9a9dbd60ee880a3f0bdd29f67e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a service type by its ID.  <br /></td></tr>
+<tr class="memitem:a037183a2db554ae3def1ed70dbc68ad7" id="r_a037183a2db554ae3def1ed70dbc68ad7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a037183a2db554ae3def1ed70dbc68ad7">addService</a> (<a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> serviceSet)</td></tr>
+<tr class="memdesc:a037183a2db554ae3def1ed70dbc68ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new train service in the network.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A management class that provides functionality to edit the network. Maintains the collections of service sets, service requests, service types, and train types that make up the rail network. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a037183a2db554ae3def1ed70dbc68ad7" name="a037183a2db554ae3def1ed70dbc68ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a037183a2db554ae3def1ed70dbc68ad7">&#9670;&#160;</a></span>addService()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void service_management.ServiceManagement.addService </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a></td>          <td class="paramname"><span class="paramname"><em>serviceSet</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers a new train service in the network. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serviceSet</td><td>the ServiceSeet to add @implNote Also adds the service to the list of active services of the junctions if it is effective </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a714e185201b06855b7ab8bd98ba1061b" name="a714e185201b06855b7ab8bd98ba1061b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a714e185201b06855b7ab8bd98ba1061b">&#9670;&#160;</a></span>addServiceRequest()</h2>
 

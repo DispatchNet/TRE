@@ -2,6 +2,7 @@ var classinfrastructure_1_1_junction =
 [
     [ "Junction", "classinfrastructure_1_1_junction.html#aefc3d341f399df7b6bf5a33ac7484f65", null ],
     [ "Junction", "classinfrastructure_1_1_junction.html#a7b9ab1a47d997eed94788c84b4300477", null ],
+    [ "addService", "classinfrastructure_1_1_junction.html#a82958f4370beec21773b66482816c7ff", null ],
     [ "getConnectedLines", "classinfrastructure_1_1_junction.html#af311651161c1d2e431329fcf130221e6", null ],
     [ "getDepartures", "classinfrastructure_1_1_junction.html#a5024085388986afb63388beb0dbb2feb", null ],
     [ "getId", "classinfrastructure_1_1_junction.html#a4d2fee8eeab8b477279e92c5e4e205cd", null ],
