@@ -92,6 +92,11 @@ They are the primary stakeholders for making functional decisions.
 
 % \it{Boundary:} The project will not provide actual transactions nor integration with any payment application.
 
+\section{Use case implemented}
+UC1-12.1, 13-32
+
+So we didn't implement:
+UC12.2
 
 \section{Class Diagram}
 In the following image, the updated class diagram, changed in order to take advatantage of the Java language and to accomodate the implementation.
@@ -106,9 +111,12 @@ We introduced the following classes:
 	\item UserSession: for simplicity we changed to focus of the application on one user at a time. This class is used to keep track of the current user that is using the program;
 	\item IO: class used to group function to interact with the user;
 	\item CsvDatabase: not shown because ideally it is implemented with an external SQL server.
+	\item Location: merged two separate variables, latitude and longitude
 \end{itemize}
 
-We added attributes concerning the classes that have been introduced in UserManagement, removed getter and setter for better readability.
+We added attributes concerning the classes that have been introduced in UserManagement, removed getter and setter for better readability.\\
+ToString() methods were intended as function to display the information, which has been implemented within the code, so not implemented explicitly.\\
+Some List types have been substituded by Map types because better representative.
 
 The updated descriptions of the classes can be found on the \hyl{Documentation}. TODO add link to section
 
@@ -235,6 +243,8 @@ It provides different pages depending on the type of user. An authenticated user
 An anonymous user can register, reset its password or login.
 
 \imgins{user_diagrams/user_management_user.pdf}
+
+UC implemented: 1
 
 
 \newpage
