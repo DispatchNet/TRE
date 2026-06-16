@@ -98,14 +98,25 @@ In the following image, the updated class diagram, changed in order to take adva
 
 \imgins{class_diagram/class_diagram.pdf}
 
-The descriptions of the classes can be found on the \hyl{Documentation}.
+We introduced the following classes:
+\begin{itemize}
+	\item Email: used by the UserManagement class to send an Email through a MailService;
+	\item MailService: interface defining the necessary methods for a real MailService, such as the MockMailService implemented in the code;
+	\item PaymentGateway: interface defining the necessary methods for a real PaymentGateway, such as the MockPayementGateway implemented in the code;
+	\item UserSession: for simplicity we changed to focus of the application on one user at a time. This class is used to keep track of the current user that is using the program;
+	\item IO: class used to group function to interact with the user;
+	\item CsvDatabase: not shown because ideally it is implemented with an external SQL server.
+\end{itemize}
 
+We added attributes concerning the classes that have been introduced in UserManagement, removed getter and setter for better readability.
+
+The updated descriptions of the classes can be found on the \hyl{Documentation}. TODO add link to section
+
+\newpage
 \section{Project Structure}
 In the following is shown the structure of the project.
 
-\imgins{images/structure/project_structure_1.png}\imgins{images/structure/project_structure_2.png}
-
-TODO mettere le immagini affiancate
+\imgins{images/structure/project_structure.pdf}
 
 It is composed of: 
 
@@ -113,7 +124,7 @@ It is composed of:
 
     \item the main modules:
     \begin{itemize}
-        \item departure: \textcolor{red}{TODO: ?};
+        \item departure: a specific service departing from a junction at a given time.;
         \item infrastructure: the network and its management;
         \item main: contains the runnable class, which implement the interface;
         \item path\_finding: the algorithm to find a path between stations;
@@ -141,18 +152,18 @@ Thus, the client is expected to perform only to the relatively light work of dis
 
 Not beholden to such limitations, the central server must then receive requests and perform the computatonally expensive operations, chief among them the weighted-graph-traversal over the train nework, but also loading and handling the information from the database.
 
-Unfortunately, due to both skill and time limitations, the project is implemented as a temporary measure in a monolithic form, while still taking care to expect and enforce the necessary separation and operations for a hypothetical future division and upgrade to a client-server system ready for deployment.
+Due to both skill and time limitations, the project is implemented as a temporary measure in a monolithic form, while still taking care to expect and enforce the necessary separation and operations for a hypothetical future division and upgrade to a client-server system ready for deployment.
 
 \section{Implementation Language}\label{Implementation Language}
-We chose \bf{Java} for the operational part and \bf{Doxygen} to generate documentation dynamically.
+We chose \bf{Java} for the operational part.
 
 
-Our motivation for \bf{Java} was the extreme portability and the very module-friendly structure, allowing us to experiment and tinker with different implementations of the same expected behaviour in a plug-and-play fashion. 
+Our motivation for \bf{Java} was the extreme portability and the very module-friendly structure, allowing us to experiment and tinker with different implementations of the same expected behaviour in a plug-and-play fashion. As described in the \hyl{Team roles} we splitted the work in modules from the beginning, so the modularity of \bf{Java} came natural.
 The garbage collector feature of \bf{Java} also ensures us to spend more time working of the functioning of our systems rather than the management of their lifetimes.
 
 \section{Documentation}\label{Documentation}
-\bf{Doxygen} was chosen due to its in-built support for \bf{Java} development and for its low overhead cost during code development, as the comment-tag system requires both very little time and brain-power to make, while still being very sight-readable in the code files.\\
-It is available at our github at the following link TODO: add link.
+\bf{Doxygen} was chosen due to its in-built support for \bf{Java} development and for its low overhead cost during code development, as the comment-tag system is very time efficient, while still being very sight-readable in the code files.\\
+It is available at our github at the following \href{https://github.com/DispatchNet/TRE/tree/userD/D3_DispatchNet/code/docs/html/index.html}{link}.
 
 \section{Project Dependencies}
 \begin{itemize}
@@ -161,9 +172,10 @@ It is available at our github at the following link TODO: add link.
 
 \section{Database}
 
-To save data between different we used a database saved as several CSV files.\\
+To save data between different session we used a database saved as several CSV files.\\
 It will be loaded at startup, containing at least the account of the network manager, with default information.
-The data will be managed within the code and saved to the database only at the end of the program.
+The data will be managed within the code and saved to the database only at the end of the program.\\
+Therefore, the number of entries for each file is variable. Wherever a list was needed, we used the convention of separating with ";" the elements of the list, which is put within a single field.
 
 The database contains one file for each set of data:
 \begin{itemize}
@@ -178,16 +190,16 @@ The database contains one file for each set of data:
     \item train\_types.
 \end{itemize}
 
-TODO: fix dimensions
+The following files can be found for better readability in \href{https://github.com/DispatchNet/TRE/tree/userD/D3_DispatchNet/code/src/csv_database/data}{GitHub}
 
-The authenticated user conatins the following fields:
+The authenticated user contains data used for authentication and functionaility selection based on the type of user. It contains the following fields:
 \imgins{images/database/user_database.png}
 
-
-The dispatch conatins the following fields:
+The dispatch contains information to identify services and schedule it within a week .\\
+The field runningDays is a list. It moreover contains the following fields: 
 \imgins{images/database/dispatch_database.png}
 
-The junction contains the following fields:
+The junction contains data of the physical junction or station (considered as junction). It contains the following fields:
 \imgins{images/database/junction_database.png}
 
 The line contains the following fields:
@@ -276,7 +288,7 @@ TODO
 
 \section{Code Preview}
 
-\section{Team roles}
+\section{Team roles}\label{Team roles}
 
 We divided the project into 3 natural modules, so that everyone worked on every aspect of software engineering flow. Following, specific \hyperref[Table1]{Roles and Activities}
 

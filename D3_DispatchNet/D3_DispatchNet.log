@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.14)  16 JUN 2026 20:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.14)  16 JUN 2026 21:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -350,7 +350,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...n}{\numberline {2.9}APIs}{22}{section.2.9}
+l.29 ...n}{\numberline {2.9}APIs}{24}{section.2.9}
                                                   % [1
 
 ])
@@ -394,94 +394,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
 pdfTeX warning: miktex-pdftex.exe (file ./class_diagram/class_diagram.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<class_diagram/class_diagram.pdf, id=203, 3197.9475pt x 2108.87875pt>
+<class_diagram/class_diagram.pdf, id=208, 3197.9475pt x 2108.87875pt>
 File: class_diagram/class_diagram.pdf Graphic file (type pdf)
 <use class_diagram/class_diagram.pdf>
 Package pdftex.def Info: class_diagram/class_diagram.pdf  used on input line 99
 .
-(pdftex.def)             Requested size: 296.39786pt x 195.45438pt.
-<images/structure/project_structure_1.png, id=206, 176.45924pt x 478.78876pt>
-File: images/structure/project_structure_1.png Graphic file (type png)
-<use images/structure/project_structure_1.png>
-Package pdftex.def Info: images/structure/project_structure_1.png  used on inpu
-t line 106.
-(pdftex.def)             Requested size: 296.39786pt x 804.3158pt.
-[8 <./class_diagram/class_diagram.pdf>]
-Overfull \vbox (255.8158pt too high) has occurred while \output is active []
+(pdftex.def)             Requested size: 390.0pt x 257.17343pt.
 
+Overfull \hbox (1.8501pt too wide) in paragraph at lines 104--105
+[]\OT1/cmr/m/n/12 MailService: in-ter-face defin-ing the nec-es-sary meth-ods f
+or a real MailSer-
+ []
 
-[9 <./images/structure/project_structure_1.png>]
-<images/structure/project_structure_2.png, id=308, 180.675pt x 468.5505pt>
-File: images/structure/project_structure_2.png Graphic file (type png)
-<use images/structure/project_structure_2.png>
-Package pdftex.def Info: images/structure/project_structure_2.png  used on inpu
-t line 106.
-(pdftex.def)             Requested size: 296.39786pt x 768.73524pt.
- [10]
-Overfull \vbox (220.23524pt too high) has occurred while \output is active []
-
-
-[11 <./images/structure/project_structure_2.png>] [12]
-Overfull \hbox (0.7351pt too wide) in paragraph at lines 150--152
+[8 <./class_diagram/class_diagram.pdf>] [9]
+<images/structure/project_structure.pdf, id=310, 406.51875pt x 406.51875pt>
+File: images/structure/project_structure.pdf Graphic file (type pdf)
+<use images/structure/project_structure.pdf>
+Package pdftex.def Info: images/structure/project_structure.pdf  used on input 
+line 119.
+(pdftex.def)             Requested size: 390.0pt x 390.01164pt.
+ [10 <./images/structure/project_structure.pdf>] [11]
+Overfull \hbox (0.7351pt too wide) in paragraph at lines 161--163
 []\OT1/cmr/m/n/12 Our mo-ti-va-tion for \OT1/cmr/bx/n/12 Java \OT1/cmr/m/n/12 w
 as the ex-treme porta-bil-ity and the very module-
  []
 
-[13]
-<images/database/user_database.png, id=329, 1085.55562pt x 52.69687pt>
+[12]
+<images/database/user_database.png, id=336, 1085.55562pt x 52.69687pt>
 File: images/database/user_database.png Graphic file (type png)
 <use images/database/user_database.png>
 Package pdftex.def Info: images/database/user_database.png  used on input line 
-184.
-(pdftex.def)             Requested size: 296.39786pt x 14.38835pt.
-<images/database/dispatch_database.png, id=331, 829.9005pt x 39.14626pt>
+195.
+(pdftex.def)             Requested size: 390.0pt x 18.93225pt.
+<images/database/dispatch_database.png, id=339, 829.9005pt x 39.14626pt>
 File: images/database/dispatch_database.png Graphic file (type png)
 <use images/database/dispatch_database.png>
 Package pdftex.def Info: images/database/dispatch_database.png  used on input l
-ine 188.
-(pdftex.def)             Requested size: 296.39786pt x 13.98093pt.
-<images/database/junction_database.png, id=333, 844.3545pt x 34.32825pt>
+ine 199.
+(pdftex.def)             Requested size: 390.0pt x 18.39635pt.
+<images/database/junction_database.png, id=341, 844.3545pt x 34.32825pt>
 File: images/database/junction_database.png Graphic file (type png)
 <use images/database/junction_database.png>
 Package pdftex.def Info: images/database/junction_database.png  used on input l
-ine 191.
-(pdftex.def)             Requested size: 296.39786pt x 12.05014pt.
-<images/database/line_database.png, id=335, 855.79726pt x 36.135pt>
+ine 202.
+(pdftex.def)             Requested size: 390.0pt x 15.85559pt.
+<images/database/line_database.png, id=343, 855.79726pt x 36.135pt>
 File: images/database/line_database.png Graphic file (type png)
 <use images/database/line_database.png>
 Package pdftex.def Info: images/database/line_database.png  used on input line 
-194.
-(pdftex.def)             Requested size: 296.39786pt x 12.51509pt.
-<images/database/service_set_database.png, id=337, 898.557pt x 31.91925pt>
+205.
+(pdftex.def)             Requested size: 390.0pt x 16.46735pt.
+<images/database/service_set_database.png, id=345, 898.557pt x 31.91925pt>
 File: images/database/service_set_database.png Graphic file (type png)
 <use images/database/service_set_database.png>
 Package pdftex.def Info: images/database/service_set_database.png  used on inpu
-t line 197.
-(pdftex.def)             Requested size: 296.39786pt x 10.52899pt.
- [14 <./images/database/user_database.png> <./images/database/dispatch_database
-.png> <./images/database/junction_database.png>]
-<images/database/service_step_database.png, id=346, 920.238pt x 31.317pt>
+t line 208.
+(pdftex.def)             Requested size: 390.0pt x 13.85406pt.
+<images/database/service_step_database.png, id=347, 920.238pt x 31.317pt>
 File: images/database/service_step_database.png Graphic file (type png)
 <use images/database/service_step_database.png>
 Package pdftex.def Info: images/database/service_step_database.png  used on inp
-ut line 200.
-(pdftex.def)             Requested size: 296.39786pt x 10.08662pt.
-<images/database/service_type_database.png, id=348, 536.60475pt x 45.16875pt>
+ut line 211.
+(pdftex.def)             Requested size: 390.0pt x 13.27202pt.
+<images/database/service_type_database.png, id=349, 536.60475pt x 45.16875pt>
 File: images/database/service_type_database.png Graphic file (type png)
 <use images/database/service_type_database.png>
 Package pdftex.def Info: images/database/service_type_database.png  used on inp
-ut line 203.
-(pdftex.def)             Requested size: 296.39786pt x 24.9497pt.
-<images/database/station_data_database.png, id=350, 770.88pt x 46.37325pt>
+ut line 214.
+(pdftex.def)             Requested size: 390.0pt x 32.82884pt.
+ [13 <./images/database/user_database.png> <./images/database/dispatch_database
+.png> <./images/database/junction_database.png> <./images/database/line_databas
+e.png> <./images/database/service_set_database.png>]
+<images/database/station_data_database.png, id=360, 770.88pt x 46.37325pt>
 File: images/database/station_data_database.png Graphic file (type png)
 <use images/database/station_data_database.png>
 Package pdftex.def Info: images/database/station_data_database.png  used on inp
-ut line 206.
-(pdftex.def)             Requested size: 296.39786pt x 17.83003pt.
+ut line 217.
+(pdftex.def)             Requested size: 390.0pt x 23.46039pt.
 
 
 LaTeX Warning: File `images/database/ticket_database.png' not found on input li
-ne 210.
+ne 221.
 
 
 ! Package pdftex.def Error: File `images/database/ticket_database.png' not foun
@@ -491,79 +484,82 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.210 \imgins{images/database/ticket_database.png}
+l.221 \imgins{images/database/ticket_database.png}
                                                    TODO add ticket row
 ? 
-[15 <./images/database/line_database.png> <./images/database/service_set_databa
-se.png> <./images/database/service_step_database.png> <./images/database/servic
-e_type_database.png> <./images/database/station_data_database.png>]
-<images/database/train_type_database.png, id=362, 560.0925pt x 45.16875pt>
+[14 <./images/database/service_step_database.png> <./images/database/service_ty
+pe_database.png> <./images/database/station_data_database.png>]
+<images/database/train_type_database.png, id=370, 560.0925pt x 45.16875pt>
 File: images/database/train_type_database.png Graphic file (type png)
 <use images/database/train_type_database.png>
 Package pdftex.def Info: images/database/train_type_database.png  used on input
- line 213.
-(pdftex.def)             Requested size: 296.39786pt x 23.90416pt.
- [16 <./images/database/train_type_database.png>]
-<user_diagrams/user_management_user.pdf, id=370, 885.3075pt x 983.675pt>
+ line 224.
+(pdftex.def)             Requested size: 390.0pt x 31.45317pt.
+ [15 <./images/database/train_type_database.png>]
+<user_diagrams/user_management_user.pdf, id=378, 885.3075pt x 983.675pt>
 File: user_diagrams/user_management_user.pdf Graphic file (type pdf)
 <use user_diagrams/user_management_user.pdf>
 Package pdftex.def Info: user_diagrams/user_management_user.pdf  used on input 
-line 223.
-(pdftex.def)             Requested size: 296.39786pt x 329.32678pt.
- [17 <./user_diagrams/user_management_user.pdf>]
-<user_diagrams/ticketing_user.pdf, id=378, 447.6725pt x 376.40625pt>
+line 234.
+(pdftex.def)             Requested size: 390.0pt x 433.34367pt.
+ [16] [17 <./user_diagrams/user_management_user.pdf>]
+<user_diagrams/ticketing_user.pdf, id=390, 447.6725pt x 376.40625pt>
 File: user_diagrams/ticketing_user.pdf Graphic file (type pdf)
 <use user_diagrams/ticketing_user.pdf>
 Package pdftex.def Info: user_diagrams/ticketing_user.pdf  used on input line 2
-30.
-(pdftex.def)             Requested size: 296.39786pt x 249.22148pt.
+41.
+(pdftex.def)             Requested size: 390.0pt x 327.92451pt.
  [18 <./user_diagrams/ticketing_user.pdf>]
-<user_diagrams/passenger_user.pdf, id=388, 702.625pt x 993.7125pt>
+<user_diagrams/passenger_user.pdf, id=400, 702.625pt x 993.7125pt>
 File: user_diagrams/passenger_user.pdf Graphic file (type pdf)
 <use user_diagrams/passenger_user.pdf>
 Package pdftex.def Info: user_diagrams/passenger_user.pdf  used on input line 2
-36.
-(pdftex.def)             Requested size: 296.39786pt x 419.20627pt.
- [19 <./user_diagrams/passenger_user.pdf>]
-<user_diagrams/train_company_user.pdf, id=396, 939.51pt x 817.0525pt>
+47.
+(pdftex.def)             Requested size: 390.0pt x 551.59277pt.
+ [19]
+Overfull \vbox (3.09277pt too high) has occurred while \output is active []
+
+
+[20 <./user_diagrams/passenger_user.pdf>] [21]
+<user_diagrams/train_company_user.pdf, id=416, 939.51pt x 817.0525pt>
 File: user_diagrams/train_company_user.pdf Graphic file (type pdf)
 <use user_diagrams/train_company_user.pdf>
 Package pdftex.def Info: user_diagrams/train_company_user.pdf  used on input li
-ne 242.
-(pdftex.def)             Requested size: 296.39786pt x 257.75938pt.
- [20 <./user_diagrams/train_company_user.pdf>]
-<user_diagrams/network_manager_user.pdf, id=403, 873.2625pt x 730.73pt>
+ne 253.
+(pdftex.def)             Requested size: 390.0pt x 339.15775pt.
+ [22 <./user_diagrams/train_company_user.pdf>]
+<user_diagrams/network_manager_user.pdf, id=423, 873.2625pt x 730.73pt>
 File: user_diagrams/network_manager_user.pdf Graphic file (type pdf)
 <use user_diagrams/network_manager_user.pdf>
 Package pdftex.def Info: user_diagrams/network_manager_user.pdf  used on input 
-line 248.
-(pdftex.def)             Requested size: 296.39786pt x 248.02121pt.
- [21 <./user_diagrams/network_manager_user.pdf>]
+line 259.
+(pdftex.def)             Requested size: 390.0pt x 326.339pt.
+ [23 <./user_diagrams/network_manager_user.pdf>]
 
-LaTeX Warning: Hyper reference `Table1' on page 22 undefined on input line 281.
+LaTeX Warning: Hyper reference `Table1' on page 24 undefined on input line 292.
 
 
 
-Underfull \hbox (badness 3428) in paragraph at lines 292--292
+Underfull \hbox (badness 3428) in paragraph at lines 303--303
 []\OT1/cmr/m/n/12 Path find-ing, Info view,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--294
+Underfull \hbox (badness 10000) in paragraph at lines 305--305
 []\OT1/cmr/m/n/12 User au-then-ti-ca-tion and
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 294--295
+Underfull \hbox (badness 1546) in paragraph at lines 305--306
 []\OT1/cmr/m/n/12 Team leader: mon-i-tor-ing
  []
 
 
-Overfull \hbox (22.40302pt too wide) in paragraph at lines 288--298
+Overfull \hbox (22.40302pt too wide) in paragraph at lines 299--309
  [][] 
  []
 
-[22]) [23] (D3_DispatchNet.aux)
+[24]) [25] (D3_DispatchNet.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -572,26 +568,17 @@ L3 programming layer <2025-12-24>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `D3_DispatchNet.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `D3_DispatchNet.out':
-(rerunfilecheck)             Before: 6E23D95A844B0B9E7A42D8AD4DDA556C;3636
-(rerunfilecheck)             After:  6B6A64C022F13F4D3A2656421C54DE6F;3719.
+Package rerunfilecheck Info: File `D3_DispatchNet.out' has not changed.
+(rerunfilecheck)             Checksum: 6B6A64C022F13F4D3A2656421C54DE6F;3719.
  ) 
 Here is how much of TeX's memory you used:
- 10421 strings out of 467871
- 168942 string characters out of 5418376
- 582360 words of memory out of 5000000
- 39128 multiletter control sequences out of 15000+600000
+ 10418 strings out of 467871
+ 168664 string characters out of 5418376
+ 582397 words of memory out of 5000000
+ 39123 multiletter control sequences out of 15000+600000
  635170 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,373b,562s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,432b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\gatto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><C:/Users/gatto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/gatto/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -600,9 +587,9 @@ pe1/public/amsfonts/cm/cmr12.pfb><C:/Users/gatto/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/gatto/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/gatto/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on D3_DispatchNet.pdf (24 pages, 1080169 bytes).
+Output written on D3_DispatchNet.pdf (26 pages, 1118267 bytes).
 PDF statistics:
- 468 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 500000)
- 334 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 64 named destinations out of 1000 (max. 500000)
+ 337 words of extra memory for PDF output out of 10000 (max. 10000000)
 

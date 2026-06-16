@@ -14,19 +14,19 @@
 \contentsline {subsubsection}{Human}{7}{section*.15}%
 \contentsline {subsubsection}{Non-human}{7}{section*.16}%
 \contentsline {section}{\numberline {2.1}Class Diagram}{8}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Project Structure}{8}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Architecture}{12}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Implementation Language}{13}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Documentation}{13}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Project Dependencies}{13}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Database}{14}{section.2.7}%
+\contentsline {section}{\numberline {2.2}Project Structure}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Architecture}{11}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Implementation Language}{12}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Documentation}{12}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Project Dependencies}{12}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Database}{12}{section.2.7}%
 \contentsline {section}{\numberline {2.8}User Flows}{16}{section.2.8}%
 \contentsline {subsection}{\numberline {2.8.1}User Management}{16}{subsection.2.8.1}%
 \contentsline {subsection}{\numberline {2.8.2}Ticketing}{18}{subsection.2.8.2}%
 \contentsline {subsection}{\numberline {2.8.3}Passenger}{19}{subsection.2.8.3}%
-\contentsline {subsection}{\numberline {2.8.4}Train Company}{20}{subsection.2.8.4}%
-\contentsline {subsection}{\numberline {2.8.5}Network Manager}{21}{subsection.2.8.5}%
-\contentsline {section}{\numberline {2.9}APIs}{22}{section.2.9}%
-\contentsline {section}{\numberline {2.10}GitHub repo}{22}{section.2.10}%
-\contentsline {section}{\numberline {2.11}Code Preview}{22}{section.2.11}%
-\contentsline {section}{\numberline {2.12}Team roles}{22}{section.2.12}%
+\contentsline {subsection}{\numberline {2.8.4}Train Company}{22}{subsection.2.8.4}%
+\contentsline {subsection}{\numberline {2.8.5}Network Manager}{23}{subsection.2.8.5}%
+\contentsline {section}{\numberline {2.9}APIs}{24}{section.2.9}%
+\contentsline {section}{\numberline {2.10}GitHub repo}{24}{section.2.10}%
+\contentsline {section}{\numberline {2.11}Code Preview}{24}{section.2.11}%
+\contentsline {section}{\numberline {2.12}Team roles}{24}{section.2.12}%
