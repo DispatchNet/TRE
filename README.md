@@ -64,6 +64,6 @@ They are the primary stakeholders for making functional decisions.
 Payment gateway, which provides the underlying payment methods.
 
 ## **Usage**
-To run the simple CLI, run ".\D3_DispatchNet\code\src\main\Main.java". In the future  we aim to create GUI.
+To run the simple CLI, open ".\D3_DispatchNet\code\src" as root and run ".\main\Main.java". In the future  we aim to create a GUI integration.
 
 To see the documentation, open ".\D3_DispatchNet\code\docs\html\index.html".
