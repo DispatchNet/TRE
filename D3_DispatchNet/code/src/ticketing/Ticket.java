@@ -168,7 +168,7 @@ public class Ticket {
      * @return an integer representing the monetary value
      */
     public int getCost() {
-      int centsPerKm = this.departure.serviceSet().getType().getCentsPerKm();
+      int centsPerKm = this.departure.getServiceSet().getType().getCentsPerKm();
       int meters = this.getLength();
       
       return centsPerKm*meters/1000;
@@ -205,7 +205,7 @@ public class Ticket {
             return "";
         }
         
-        Junction startJunction = departure.serviceStep().getJunction();
+        Junction startJunction = departure.getServiceStep().getJunction();
         Junction endJunction = lastStep.getJunction();
         if (startJunction == null || endJunction == null) {
             return "";
@@ -225,10 +225,10 @@ public class Ticket {
      */
     public int getLength() {
       
-      ServiceStep first = this.departure.serviceStep();
+      ServiceStep first = this.departure.getServiceStep();
       ServiceStep last = lastStep;
 
-      List<ServiceStep> list = this.departure.serviceSet().getSteps();
+      List<ServiceStep> list = this.departure.getServiceSet().getSteps();
       
       ArrayList<Junction> passed_junctions = new ArrayList<Junction>();
 
@@ -250,10 +250,10 @@ public class Ticket {
 
     public LocalTime getArrival() {
         
-      ServiceStep first = this.departure.serviceStep();
+      ServiceStep first = this.departure.getServiceStep();
       ServiceStep last = lastStep;
 
-      List<ServiceStep> list = this.departure.serviceSet().getSteps();
+      List<ServiceStep> list = this.departure.getServiceSet().getSteps();
 
       long offset = 0;
 
@@ -264,7 +264,7 @@ public class Ticket {
       }
       offset += last.getTravelMinutes();
 
-      return this.departure.time().plusMinutes(offset);
+      return this.departure.getTime().plusMinutes(offset);
 
     }
 
