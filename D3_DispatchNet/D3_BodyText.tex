@@ -297,9 +297,21 @@ All the codes, images and documentation can be found at our \href{https://github
 \imgins{images/previews/PathComparator.png}
 \imgins{images/previews/PathSortByLength.png}
 \imgins{images/previews/PassengerPurchaseTicket.png}
+The \it{PurchaseTicket} function allows a Passenger (and only a Passenger) to pruchase a ticket.
+First it ensures the ticket information is valid (I.E. non-null and not intestated to someone else), then it further checks the ticket has not been purchased already, to avoid posssible double-charge scenarios.
+The ticket is then added to the passenger's history and a confirmation email is sent.
+Lastly, the function returns "true" to confirm a successful transaction;
+
 \imgins{images/previews/TrainManCreateTType.png}
+The \it{selectOrCreateTrainType} function is responsible for handling of \it{TrainType} class. 
+It does so by first allowing the user to either select an already existing one or to create a new one.
+
 \imgins{images/previews/NetManDeleteJunction.png}
+The \it{deleteJunction} function handles the smooth deletion of junctions, by first guaranteeing that no currently-in-use junctions are modified, then invoking the junction's internal removal code
+
 \imgins{images/previews/NetManInsertJunData.png}
+The \it{insertJunctionData} function allows the \un{Network Manager} to create interal Junction data for new junctions.
+First, it ensures the name is unique, then it allows input for the Junction's latitude and longitude, and lastly it invokes the Junction constructor
 
 \section{Team roles}\label{Team roles}
 
