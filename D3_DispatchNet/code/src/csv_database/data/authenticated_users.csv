@@ -1,3 +1,4 @@
 id,username,email,password,userType
 0e3c90bc-0861-4019-8e82-8b56c0275106,Admin,admin@dispatchnet.it,VerySecurePassword1234,NetworkManager
 beb82c42-5ee6-41dd-8888-a2744364d45a,Trenitalia,info@ternitalia.it,DefaultPassword1,TrainCompany
+d80a37bb-f9cb-45a2-891e-a75ea978e53b,Luca,luca.fio45@gmail.com,TrainsAreCool1!,Passenger
