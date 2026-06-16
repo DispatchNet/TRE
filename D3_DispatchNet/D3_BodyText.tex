@@ -223,7 +223,7 @@ The field platform is a list. It contains the following fields:
 The ticket contains the following fields:
 \imgins{images/database/ticket_database.png} TODO add ticket row
 
-The train type contains the following fields:
+The train type contains information related to the physical train. It contains the following fields:
 \imgins{images/database/train_type_database.png}
 
 \section{User Flows}
@@ -245,7 +245,7 @@ The following user diagram describes the flow of the ticketing component, starte
 
 \newpage
 \osubs{Passenger}
-The following user diagram describes the actions the passenger can take. It can go to \hyl{User Management}, view its ticket history or start a path finding procedure. In the last two it can move to the \hyl{Ticketing} flow.
+The following user diagram describes the actions the passenger can take. It can go to \hyl{User Management}, view its ticket history, search for a train or station or start a path finding procedure. In the last two it can move to the \hyl{Ticketing} flow.
 
 \imgins{user_diagrams/passenger_user.pdf}
 
@@ -257,7 +257,7 @@ The following user diagram describes the actions the train company can take. It 
 
 \newpage
 \osubs{Network Manager}
-The following user diagram describes the actions the network manager can take: managing the network and its elements.
+The following user diagram describes the actions the network manager can take: managing the network and its elements ore creating a new account for a train company.
 
 \imgins{user_diagrams/network_manager_user.pdf}
 
@@ -286,13 +286,13 @@ Specifically, we have implemented the following fake external APIs
 The mock implementation of payment gateway also has non-deterministic behavior allowing us to test adequate handling of real-world failure conditions.
 
 \section{GitHub repo}
-TODO
+All the codes, images and documentation can be found at our \href{https://github.com/DispatchNet/TRE/}{GitHub}
 
 \section{Code Preview}
 
 \section{Team roles}\label{Team roles}
 
-We divided the project into 3 natural modules, so that everyone worked on every aspect of software engineering flow. Following, specific \hyperref[Table1]{Roles and Activities}
+We divided the project into 3 natural modules, so that everyone worked on every aspect of software engineering flow. Following, specific roles and activities, as well as the workload distribution.
 
 \begin{table}[h]
 \centering
@@ -314,7 +314,7 @@ Luca Fiorini & Network and Service management & Railway expert\\
 
 \begin{table}[h]
 \centering
-\caption{Workload and distribution}
+\caption{Workload distribution}
 \label{tab:workload}
 
 \begin{tabular}{c|c c c}
