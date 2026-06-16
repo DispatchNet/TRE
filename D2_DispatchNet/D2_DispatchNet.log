@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.14)  15 JUN 2026 23:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.14)  16 JUN 2026 17:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3588,6 +3588,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
 
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 2
+00.
+(C:\Users\gatto\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 200.
 
 Underfull \hbox (badness 10000) in paragraph at lines 199--201
 
@@ -3814,22 +3821,23 @@ Package rerunfilecheck Info: File `D2_DispatchNet.out' has not changed.
 (rerunfilecheck)             Checksum: A2CB2BF4F18311D6FE04FEF5EE95C858;24166.
  ) 
 Here is how much of TeX's memory you used:
- 11423 strings out of 467871
- 199555 string characters out of 5418376
+ 11443 strings out of 467871
+ 199926 string characters out of 5418376
  594535 words of memory out of 5000000
- 39860 multiletter control sequences out of 15000+600000
+ 39877 multiletter control sequences out of 15000+600000
  634833 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,17n,79p,412b,599s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\gatto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><C:/Users/gatto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/gatto/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb><C:/Users/gatto/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb><C:/Users/gatto/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on D2_DispatchNet.pdf (169 pages, 4966221 bytes).
+ic/amsfonts/cm/cmmi12.pfb><C:/Users/gatto/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/gatto/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/gatto/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on D2_DispatchNet.pdf (169 pages, 4974300 bytes).
 PDF statistics:
- 3144 PDF objects out of 3580 (max. 8388607)
+ 3149 PDF objects out of 3580 (max. 8388607)
  329 named destinations out of 1000 (max. 500000)
  2025 words of extra memory for PDF output out of 10000 (max. 10000000)
 
