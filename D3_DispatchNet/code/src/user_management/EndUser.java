@@ -50,8 +50,8 @@ public abstract class EndUser extends AuthenticatedUser {
      * @brief Prints the user's data, that is username and email
      */
     public void viewData() {
-        System.out.println("Username: " + getUsername());
-        System.out.println("Email: " + getEmail());
+        userManagement.print("Username: " + getUsername() + "\n");
+        userManagement.print("Email: " + getEmail() + "\n");
     }
 
     /**

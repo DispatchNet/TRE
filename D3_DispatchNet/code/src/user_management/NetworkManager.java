@@ -51,15 +51,15 @@ public class NetworkManager extends AuthenticatedUser {
      */
     public void viewNetwork() {
         // Simple network view: print junctions and lines
-        System.out.println("Junctions:");
+        userManagement.print("Junctions:\n");
         for (var j : network.getJunctions().values()) {
-            System.out.println(" - " + j.getId() + " : " + j.getName());
+            userManagement.print(" - " + j.getId() + " : " + j.getName() + "\n");
         }
 
-        System.out.println("Lines:");
+        userManagement.print("Lines:\n");
         for (var l : network.getLines().values()) {
-            System.out.println(" - " + l.getId() + " : " + 
-                l.getJunction1().getId() + " <-> " + l.getJunction2().getId());
+            userManagement.print(" - " + l.getId() + " : " + 
+                l.getJunction1().getId() + " <-> " + l.getJunction2().getId() + "\n");
         }
     }
 
@@ -73,7 +73,7 @@ public class NetworkManager extends AuthenticatedUser {
         // add to network if creation successful
         if (j != null) {
             network.addJunction(j);
-            System.out.println("Station created: " + j.getId());
+            userManagement.print("Station created: " + j.getId() + "\n");
         }
     }
 
@@ -87,7 +87,7 @@ public class NetworkManager extends AuthenticatedUser {
         // add to network if creation successful
         if (j != null) {
             network.addJunction(j);
-            System.out.println("Junction created: " + j.getId());
+            userManagement.print("Junction created: " + j.getId() + "\n");
         }
     }
 
@@ -101,7 +101,7 @@ public class NetworkManager extends AuthenticatedUser {
         // add to network if creation successful
         if (l != null) {
             network.addLine(l);
-            System.out.println("Line created: " + l.getId());
+            userManagement.print("Line created: " + l.getId() + "\n");
         }
     }
 
@@ -140,7 +140,7 @@ public class NetworkManager extends AuthenticatedUser {
         jct.setStationData(newJ.getStationData());
 
         // print confirmation
-        System.out.println("Station edited: " + jct.getId());
+        userManagement.print("Station edited: " + jct.getId() + "\n");
     }
 
     /**
@@ -177,7 +177,7 @@ public class NetworkManager extends AuthenticatedUser {
         jct.setLocation(newJ.getLocation());
 
         // print confirmation
-        System.out.println("Junction edited: " + jct.getId());
+        userManagement.print("Junction edited: " + jct.getId() + "\n");
     }
 
     /**
@@ -216,7 +216,7 @@ public class NetworkManager extends AuthenticatedUser {
         ln.setnTracks(newLine.getnTracks());
 
         // print confirmation
-        System.out.println("Line edited: " + ln.getId());
+        userManagement.print("Line edited: " + ln.getId() + "\n");
     }
 
     /**
@@ -265,7 +265,7 @@ public class NetworkManager extends AuthenticatedUser {
         }
         else { // success
             // print confirmation
-            System.out.println("Station deleted: " + station);
+            userManagement.print("Station deleted: " + station + "\n");
         }
     }
 
@@ -307,7 +307,7 @@ public class NetworkManager extends AuthenticatedUser {
         } 
         else { // success
             // print confirmation
-            System.out.println("Junction deleted: " + junction);
+            userManagement.print("Junction deleted: " + junction+ "\n");
         }
     }
 
@@ -349,7 +349,7 @@ public class NetworkManager extends AuthenticatedUser {
         } 
         else { // success
             // print confirmation
-            System.out.println("Line deleted: " + line);
+            userManagement.print("Line deleted: " + line + "\n");
         }
     }
 
@@ -482,9 +482,9 @@ public class NetworkManager extends AuthenticatedUser {
         }
 
         // print available junctions for user reference
-        System.out.println("Available junctions:");
+        userManagement.print("Available junctions:\n");
         for (var j : network.getJunctions().values()) {
-            System.out.println(" - " + j.getId() + " : " + j.getName());
+            userManagement.print(" - " + j.getId() + " : " + j.getName() + "\n");
         }
 
         // prompt for junction ids to connect
@@ -567,7 +567,7 @@ public class NetworkManager extends AuthenticatedUser {
         }
         
         // display the summary
-        System.out.println(details);
+        userManagement.print(details + "\n");
 
         // prompt for approve / reject decision, loop until valid input
         while (true) {
@@ -578,7 +578,7 @@ public class NetworkManager extends AuthenticatedUser {
             if (decision.equalsIgnoreCase("approve")) {
                 // promote the request to an active service set
                 serviceManagement.approveServiceRequest(serviceRequestID);
-                System.out.println("Service request approved: " + serviceRequestID);
+                userManagement.print("Service request approved: " + serviceRequestID + "\n");
 
                 // notify the train company by email
                 userManagement.sendEmail(new mail_service.Email(
@@ -592,7 +592,7 @@ public class NetworkManager extends AuthenticatedUser {
             } else if (decision.equalsIgnoreCase("reject")) {
                 // discard the request
                 serviceManagement.rejectServiceRequest(serviceRequestID);
-                System.out.println("Service request rejected: " + serviceRequestID);
+                userManagement.print("Service request rejected: " + serviceRequestID + "\n");
 
                 // notify the train company by email
                 userManagement.sendEmail(new mail_service.Email(
@@ -628,7 +628,7 @@ public class NetworkManager extends AuthenticatedUser {
             (NetworkManager) userManagement.
             getAuthenticatedUserByUsername("Admin");
         
-        System.out.println("Creating a new train company account...");
+        userManagement.print("Creating a new train company account...\n");
         networkManager.createTrainCompanyAccount();
     }
 }

@@ -111,7 +111,7 @@ public class Passenger extends EndUser {
             "Thank you for using DispatchNet.";
 
         userManagement.sendEmail(new Email(getEmail(), subject, body));
-        System.out.println("Ticket purchase completed successfully.");
+        userManagement.print("Ticket purchase completed successfully.\n");
         return true;
     }
 
@@ -150,7 +150,7 @@ public class Passenger extends EndUser {
             "Thank you for using DispatchNet.";
 
         userManagement.sendEmail(new Email(getEmail(), subject, body));
-        System.out.println("Ticket cancellation completed successfully.");
+        userManagement.print("Ticket cancellation completed successfully.\n");
         return true;
     }
 
@@ -172,20 +172,21 @@ public class Passenger extends EndUser {
      * @brief Retrieves the history of purchased and cancelled tickets
      */
     public void getTicketsHistory() {
-        System.out.println("Ticket history for " + getUsername() + ":");
+        userManagement.print("Ticket history for " + getUsername() + ":\n");
 
         if (tickets.isEmpty()) {
-            System.out.println("  No ticket purchases or cancellations found.");
+            userManagement.print("  No ticket purchases or cancellations found.\n");
             return;
         }
 
         for (Ticket ticket : tickets) {
-            System.out.println("  Ticket: " + ticket.getDescription());
-            System.out.println("    Status: " + ticket.getStatus());
+            userManagement.print("  Ticket: " + ticket.getDescription() + "\n");
+            userManagement.print("    Status: " + ticket.getStatus() + "\n");
+
             for (String event : ticket.getHistory()) {
-                System.out.println("    " + event);
+                userManagement.print("    " + event + "\n");
             }
-            System.out.println();
+            userManagement.print("\n");
         }
     }
 

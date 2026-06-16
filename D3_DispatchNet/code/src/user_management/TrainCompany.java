@@ -70,14 +70,14 @@ public class TrainCompany extends EndUser {
 
         // --- build the list of steps ---
         List<ServiceStep> steps = new ArrayList<>();
-        System.out.println("Add route steps one by one. Enter 'done' when finished (minimum 2 steps required).");
+        userManagement.print("Add route steps one by one. Enter 'done' when finished (minimum 2 steps required).\n");
 
         while (true) {
             // list available neighbhoring junctions for reference (or all the junctions if it's the first one)
             for(var junction : (steps.size() > 0) ? steps.getLast().getJunction().getNeighbours() : Main.getNetwork().getJunctions().values()) {
-                    System.out.println(String.format("%s: %s [%s]",
+                    userManagement.print(String.format("%s: %s [%s]",
                     junction.getId(), junction.getName(),
-                    junction.getStationData().map(station -> "Station").orElse("Junction"))
+                    junction.getStationData().map(station -> "Station").orElse("Junction") + "\n")
                 );
                 junction.getStationData().ifPresent(station -> {
                     String.join(",",station.getPlatforms());
@@ -134,7 +134,7 @@ public class TrainCompany extends EndUser {
             }
 
             steps.add(new ServiceStep(UUID.randomUUID().toString(), junction, stopData, travelMinutes));
-            System.out.println("Step added. Total steps so far: " + steps.size());
+            userManagement.print("Step added. Total steps so far: " + steps.size() + "\n");
         }
 
         // --- add dispatches ---
@@ -174,7 +174,7 @@ public class TrainCompany extends EndUser {
 
             // collect running days
             Set<DayOfWeek> runningDays = EnumSet.noneOf(DayOfWeek.class);
-            System.out.println("Enter running days (MON, TUE, WED, THU, FRI, SAT, SUN), one per line. Enter 'done' when finished.");
+            userManagement.print("Enter running days (MON, TUE, WED, THU, FRI, SAT, SUN), one per line. Enter 'done' when finished.\n");
             while (true) {
                 String day = userManagement.prompt("Running day (or 'done'):").toUpperCase();
                 if (day.equals("DONE")) break;
@@ -199,7 +199,7 @@ public class TrainCompany extends EndUser {
             }
 
             dispatches.add(new Dispatch(trainNumber, dispatchTime, runningDays));
-            System.out.println("Dispatch added. Total dispatches so far: " + dispatches.size());
+            userManagement.print("Dispatch added. Total dispatches so far: " + dispatches.size() + "\n");
         }
 
         // --- assemble and submit the service request ---
@@ -212,7 +212,7 @@ public class TrainCompany extends EndUser {
         );
 
         Main.getServiceManagement().addServiceRequest(serviceSet);
-        System.out.println("Service request submitted with ID: " + serviceSet.getId());
+        userManagement.print("Service request submitted with ID: " + serviceSet.getId() + "\n");
     }
 
     /**
@@ -244,7 +244,7 @@ public class TrainCompany extends EndUser {
         );
 
         Main.getServiceManagement().addServiceType(serviceType);
-        System.out.println("Service type created: " + serviceType.getId() + " (" + name + ")");
+        userManagement.print("Service type created: " + serviceType.getId() + " (" + name + ")\n");
         return serviceType;
     }
 
@@ -287,7 +287,7 @@ public class TrainCompany extends EndUser {
         TrainType trainType = new TrainType(identifier,seated,standing,isPassenger);
 
         Main.getServiceManagement().addTrainType(trainType);
-        System.out.println("Train type created: " + identifier);
+        userManagement.print("Train type created: " + identifier + "\n");
         return trainType;
     }
 
@@ -303,11 +303,11 @@ public class TrainCompany extends EndUser {
         var serviceTypes = Main.getServiceManagement().getServiceTypes();
 
         if (!serviceTypes.isEmpty()) {
-            System.out.println("Existing service types:");
+            userManagement.print("Existing service types:\n");
             for (var entry : serviceTypes.entrySet()) {
-                System.out.println("  [" + entry.getKey() + "] "
+                userManagement.print("  [" + entry.getKey() + "] "
                     + entry.getValue().getCommercialName()
-                    + " — " + entry.getValue().getCentsPerKm() + " c/km");
+                    + " — " + entry.getValue().getCentsPerKm() + " c/km\n");
             }
 
             String choice = userManagement.prompt(
@@ -320,7 +320,7 @@ public class TrainCompany extends EndUser {
                 userManagement.displayError("Service type ID not found. Creating a new one instead.");
             }
         } else {
-            System.out.println("No service types exist yet. Please create one.");
+            userManagement.print("No service types exist yet. Please create one.\n");
         }
 
         // fall through to creation
@@ -334,12 +334,12 @@ public class TrainCompany extends EndUser {
         var trainTypes = Main.getServiceManagement().getTrainTypes();
 
         if (!trainTypes.isEmpty()) {
-            System.out.println("Existing train types:");
+            userManagement.print("Existing train types:\n");
             for (var entry : trainTypes.entrySet()) {
-                System.out.println("  [" + entry.getKey() + "] "
+                userManagement.print("  [" + entry.getKey() + "] "
                     + entry.getValue().getIdentifier()
                     + " — seated: " + entry.getValue().getSeatedCapacity()
-                    + ", standing: " + entry.getValue().getStandingCapacity());
+                    + ", standing: " + entry.getValue().getStandingCapacity() + "\n" );
             }
 
             String choice = userManagement.prompt(
@@ -352,7 +352,7 @@ public class TrainCompany extends EndUser {
                 userManagement.displayError("Train type not found. Creating a new one instead.");
             }
         } else {
-            System.out.println("No train types exist yet. Please create one.");
+            userManagement.print("No train types exist yet. Please create one.\n");
         }
 
         // fall through to creation

@@ -91,6 +91,7 @@ public class Main {
       if(! (currentUser instanceof NetworkManager)) {
         // Passenger and Anonymous only
         if(!(currentUser instanceof TrainCompany)) {
+          io.println("m) Show Map");
           io.println("p) Path finding");
           io.println("s) Search for station or train");
         }
@@ -107,7 +108,7 @@ public class Main {
         io.println("r) Register Train Company");
       }
       // common options
-      io.println("m) Show Map");
+
       io.println("q) Quit");
 
       // get input
@@ -412,10 +413,10 @@ public class Main {
   }
   
   public static void printMap () {
-
+    
     Map<String, Junction> juncs = network.getJunctions();
     StringBuilder outLine = new StringBuilder();
-
+  
     for (Map.Entry<String, Junction> entry : juncs.entrySet()) {
       Junction junc = entry.getValue();
       List<Junction> neighList = junc.getNeighbours();
@@ -425,8 +426,8 @@ public class Main {
       }
       outLine.append("\n");
     }
-    
-    System.out.print(outLine.toString());
+     
+    io.print(outLine.toString());
 
   }
 }
