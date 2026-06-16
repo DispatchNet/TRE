@@ -164,6 +164,10 @@ public class Ticket {
 
     /**
      * @brief evalutes the total cost of the ticket
+     * @usecase{UC8}
+     * @usecase{UC9}
+     * @usecase{UC10}
+     * @usecase{UC12}
      * @details uses the departure and lastStep information to measure the distance covered and which train is used, then computes the resulting price
      * @return an integer representing the monetary value
      */
@@ -176,6 +180,7 @@ public class Ticket {
     
     /**
      * @brief Get the last junction the train is valid for
+     * @usecase{UC8}
      * @details Looks into the lastStep value and extracts the junction it points total
      * @return a Junction pointer
      * @see Junction

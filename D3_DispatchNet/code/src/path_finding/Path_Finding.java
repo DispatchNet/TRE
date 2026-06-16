@@ -258,6 +258,8 @@ public class Path_Finding{
     
     /**
      * @brief public way to access the results of the pathfinding 
+     * @usecase{UC12}
+     * usecase{UC12.2}
      * 
      * @details Calls the private srtPth function when necessary, and formats the results
      * @return An ArrayList of paths (ArrayList of Tickets)
@@ -269,6 +271,7 @@ public class Path_Finding{
 
     /**
      * @brief Handles the pruchase of tickets from the POV of the pathfinder
+     * @usecase{UC12.1}
      * @exception BadRequester The requester of Pathfinding is not allowed to purchase tickets
      */
 		public void prchTcks() throws Exception {
@@ -351,6 +354,7 @@ public class Path_Finding{
 //Private
     /**
      * @brief sorts the results list according to the stored srtAlg
+     * @usecase{UC12}
      * 
      * @details calls the complex comparator PathComparator to sort in the correct order
      * @return A list of lists, of tickets (List of Paths)
@@ -423,9 +427,15 @@ class sortByLenght implements Comparator<ArrayList<Ticket>> {
 class sortByDeparture implements Comparator<ArrayList<Ticket>> {
   public int compare (ArrayList<Ticket> L1, ArrayList<Ticket> L2) {
     
+<<<<<<< Updated upstream
     if (L1.get(0).getDeparture().getTime() == L2.get(0).getDeparture().getTime()) return 0;
     
     return L1.get(0).getDeparture().getTime().isAfter(L2.get(0).getDeparture().getTime())? -1 : 1;
+=======
+    if (L1.get(0).getDeparture().getTime() == L2.get(0).getDeparture().time()) return 0;
+    
+    return L1.get(0).getDeparture().getTime().isAfter(L2.get(0).getDeparture().time())? -1 : 1;
+>>>>>>> Stashed changes
   }
 };
 /**

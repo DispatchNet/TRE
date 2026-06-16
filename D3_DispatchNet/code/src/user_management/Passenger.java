@@ -119,6 +119,7 @@ public class Passenger extends EndUser {
 
     /**
      * @brief Cancels a purchased ticket
+     * @usecase{UC10}
      * @param ticket The ticket to cancel
      * @return true if the ticket was canceled successfully, false otherwise
      */
@@ -158,6 +159,7 @@ public class Passenger extends EndUser {
 
     /**
      * @brief Purchases a new group pass (not impelemented)
+     * @usecase{UC9}
      * @param ticket The group pass to purchase
      * @return true if the ticket was purchased successfully, false otherwise
      */
@@ -165,6 +167,7 @@ public class Passenger extends EndUser {
 
     /**
      * @brief Cancel a purchased group pass (not impelemented)
+     * @usecasse{UC10}
      * @param ticket The group pass to purchase
      * @return true if the group pass was cancelled successfully, false otherwise
      */
@@ -172,6 +175,7 @@ public class Passenger extends EndUser {
 
     /**
      * @brief Retrieves the history of purchased and cancelled tickets
+     * @usecase{UC11}
      */
     public void getTicketsHistory() {
         userManagement.print("Ticket history for " + getUsername() + ":\n");

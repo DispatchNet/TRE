@@ -56,6 +56,7 @@ public class TrainCompany extends EndUser {
      * @brief Creates and submits a new service request.
      *        Prompts the user to select or create a ServiceType, then build the
      *        route step-by-step, and add one or more Dispatches before submitting.
+     * @usecase{UC31}
      */
     public void createServiceRequest() {
 
@@ -219,6 +220,7 @@ public class TrainCompany extends EndUser {
      * @brief Creates and registers a new ServiceType.
      *        Prompts for a commercial name and cents-per-km, then delegates to
      *        selectOrCreateTrainType() for the associated TrainType.
+     * @usecase{UC30}
      * @return The created ServiceType
      */
     public ServiceType createServiceType() {
@@ -252,6 +254,7 @@ public class TrainCompany extends EndUser {
      * @brief Creates and registers a new TrainType.
      *        Prompts for identifier, seated capacity, standing capacity,
      *        and whether the train carries passengers.
+     * @usecase{UC29}
      * @return the created TrainType
      */
     public TrainType createTrainType() {

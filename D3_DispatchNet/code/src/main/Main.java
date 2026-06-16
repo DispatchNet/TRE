@@ -72,6 +72,9 @@ public class Main {
     io.println("Thank you for using DispatchNet. Goodbye!");
   }
 
+  /**
+   * @brief run main interface
+   */
   private static void runInterface() {
     io.println("--- Welcome to DispatchNet! ---");
 
@@ -149,6 +152,10 @@ public class Main {
     }
   }
 
+  /**
+   * @brief interface for account page
+   * @param user user that requested the page (Anonymous or Authenticated)
+   */
   private static void accountInterface(Object user) {
     if(user instanceof AnonymousUser) {
       // show options
@@ -170,6 +177,10 @@ public class Main {
     }
     else {
       io.println("\n--- Authentication page ---");
+      if(user instanceof EndUser) {
+        io.println("Your data");
+        ((EndUser) user).viewData();
+      }
       // network manager
       if(user instanceof NetworkManager) {
         // show options
@@ -204,6 +215,10 @@ public class Main {
     }
   }
 
+  /**
+   * @brief interface for pathfinding page
+   * @param user user that requested the page (Anonymous or Authenticated)
+   */
   private static void pathFindingInterface(Object user) {
     Optional<Junction> from = Optional.empty();
     do {
@@ -313,6 +328,10 @@ public class Main {
     } while (!quit);
   }
 
+  /**
+   * @brief interface for network management page
+   * @param user user that requested the page (NetworkManager)
+   */
   private static void networkInterface(NetworkManager user) {
     io.println("\n--- Network Management page ---");
     io.println("Current Network");
@@ -390,7 +409,10 @@ public class Main {
   }
 
   /**
+   * @brief interface for station/train search page
    * @usecase{UC14}
+   * 
+   * @param user user that requested the page (Anonymous or Passenger)
    */
   private static void stationTrainSearchInterface (Object user) {
     
@@ -415,6 +437,9 @@ public class Main {
 
   }
   
+  /**
+   * @brief print map
+   */
   public static void printMap () {
     
     Map<String, Junction> juncs = network.getJunctions();
