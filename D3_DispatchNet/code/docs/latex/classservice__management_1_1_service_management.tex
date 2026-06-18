@@ -11,9 +11,9 @@ A management class that provides functionality to edit the network. Maintains th
 void \doxymbox{\hyperlink{classservice__management_1_1_service_management_a714e185201b06855b7ab8bd98ba1061b}{add\+Service\+Request}} (\doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}} service\+Set)
 \begin{DoxyCompactList}\small\item\em Submits a new service request pending approval. The service set is stored in the requests map with Pending\+Approval status. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classservice__management_1_1_service_management_ac4a450102407c9feb5d4f4b47d11a6bf}{approve\+Service\+Request}} (String id)
-\begin{DoxyCompactList}\small\item\em Approves a pending service request and promotes it to an active service set. The service is moved from the requests map to the active service sets map and its status is updated to Effective. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Approves a pending service request and promotes it to an active service set. The service is moved from the requests map to the active service sets map and its status is updated to Effective. @usecase 32. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classservice__management_1_1_service_management_aee34d1a6268f7025c719108c5e579226}{reject\+Service\+Request}} (String id)
-\begin{DoxyCompactList}\small\item\em Rejects and removes a pending service request. The service set is removed from the requests map and discarded. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Rejects and removes a pending service request. The service set is removed from the requests map and discarded. @usecase 32. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classservice__management_1_1_service_management_a278a070667bea1b8fc355b2c57c00723}{add\+Train\+Type}} (\doxymbox{\hyperlink{classservice__management_1_1_train_type}{Train\+Type}} train\+Type)
 \begin{DoxyCompactList}\small\item\em Registers a new train type in the network. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classservice__management_1_1_service_management_a39840bb8f6c5cb1a1cfad1619efe4d26}{add\+Service\+Type}} (\doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}} service\+Type)
@@ -31,7 +31,9 @@ Optional$<$ \doxymbox{\hyperlink{classservice__management_1_1_train_type}{Train\
 Optional$<$ \doxymbox{\hyperlink{classservice__management_1_1_service_type}{Service\+Type}} $>$ \doxymbox{\hyperlink{classservice__management_1_1_service_management_a7752e9a9dbd60ee880a3f0bdd29f67e5}{get\+Service\+Type}} (String id)
 \begin{DoxyCompactList}\small\item\em Retrieves a service type by its ID. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classservice__management_1_1_service_management_a037183a2db554ae3def1ed70dbc68ad7}{add\+Service}} (\doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}} service\+Set)
-\begin{DoxyCompactList}\small\item\em Registers a new train service in the network. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Registers a new train service in the network. \end{DoxyCompactList}\item 
+boolean \doxymbox{\hyperlink{classservice__management_1_1_service_management_a0bbec39614e4559bd0bb348b5e16250d}{check\+Integrity}} (\doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}} service\+Set)
+\begin{DoxyCompactList}\small\item\em Checks whther a sercvice\+Set is compatible with the current network and traffic configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -108,13 +110,31 @@ void service\+\_\+management.\+Service\+Management.\+approve\+Service\+Request (
 
 
 
-Approves a pending service request and promotes it to an active service set. The service is moved from the requests map to the active service sets map and its status is updated to Effective. 
+Approves a pending service request and promotes it to an active service set. The service is moved from the requests map to the active service sets map and its status is updated to Effective. @usecase 32. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em id} & the ID of the service request to approve \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classservice__management_1_1_service_management_a0bbec39614e4559bd0bb348b5e16250d}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!checkIntegrity@{checkIntegrity}}
+\index{checkIntegrity@{checkIntegrity}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
+\doxysubsubsection{\texorpdfstring{checkIntegrity()}{checkIntegrity()}}
+{\footnotesize\ttfamily \label{classservice__management_1_1_service_management_a0bbec39614e4559bd0bb348b5e16250d} 
+boolean service\+\_\+management.\+Service\+Management.\+check\+Integrity (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classservice__management_1_1_service_set}{Service\+Set}}}]{service\+Set}{}\end{DoxyParamCaption})}
+
+
+
+Checks whther a sercvice\+Set is compatible with the current network and traffic configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Set} & the service\+Set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the service\+Set is good, false otherwise 
+\end{DoxyReturn}
 \Hypertarget{classservice__management_1_1_service_management_a380f585558decbd8a5836a4d7861e512}\index{service\_management.ServiceManagement@{service\_management.ServiceManagement}!getServiceRequests@{getServiceRequests}}
 \index{getServiceRequests@{getServiceRequests}!service\_management.ServiceManagement@{service\_management.ServiceManagement}}
 \doxysubsubsection{\texorpdfstring{getServiceRequests()}{getServiceRequests()}}
@@ -211,7 +231,7 @@ void service\+\_\+management.\+Service\+Management.\+reject\+Service\+Request (\
 
 
 
-Rejects and removes a pending service request. The service set is removed from the requests map and discarded. 
+Rejects and removes a pending service request. The service set is removed from the requests map and discarded. @usecase 32. 
 
 
 \begin{DoxyParams}{Parameters}

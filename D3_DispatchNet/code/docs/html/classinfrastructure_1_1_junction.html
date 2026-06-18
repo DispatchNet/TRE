@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classinfrastru
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aefc3d341f399df7b6bf5a33ac7484f65" id="r_aefc3d341f399df7b6bf5a33ac7484f65"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aefc3d341f399df7b6bf5a33ac7484f65">Junction</a> (<a class="el" href="classinfrastructure_1_1_geo_coordinate.html">GeoCoordinate</a> location, Optional&lt; <a class="el" href="classinfrastructure_1_1_station_data.html">StationData</a> &gt; stationData, String name, List&lt; <a class="el" href="classinfrastructure_1_1_line.html">Line</a> &gt; connectedLines, List&lt; <a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> &gt; services)</td></tr>
-<tr class="memdesc:aefc3d341f399df7b6bf5a33ac7484f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> with generated id.  <br /></td></tr>
+<tr class="memdesc:aefc3d341f399df7b6bf5a33ac7484f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> with generated id @usecase 18,21.  <br /></td></tr>
 <tr class="memitem:a7b9ab1a47d997eed94788c84b4300477" id="r_a7b9ab1a47d997eed94788c84b4300477"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7b9ab1a47d997eed94788c84b4300477">Junction</a> (String id, <a class="el" href="classinfrastructure_1_1_geo_coordinate.html">GeoCoordinate</a> location, Optional&lt; <a class="el" href="classinfrastructure_1_1_station_data.html">StationData</a> &gt; stationData, String name, List&lt; <a class="el" href="classinfrastructure_1_1_line.html">Line</a> &gt; connectedLines, List&lt; <a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> &gt; services)</td></tr>
 <tr class="memdesc:a7b9ab1a47d997eed94788c84b4300477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> with explicit id.  <br /></td></tr>
 <tr class="memitem:a4d2fee8eeab8b477279e92c5e4e205cd" id="r_a4d2fee8eeab8b477279e92c5e4e205cd"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a4d2fee8eeab8b477279e92c5e4e205cd">getId</a> ()</td></tr>
@@ -146,15 +146,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aac69c0b13f4c0a03378b22f239d546fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a>'s name.  <br /></td></tr>
 <tr class="memitem:af311651161c1d2e431329fcf130221e6" id="r_af311651161c1d2e431329fcf130221e6"><td class="memItemLeft">List&lt; <a class="el" href="classinfrastructure_1_1_line.html">Line</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af311651161c1d2e431329fcf130221e6">getConnectedLines</a> ()</td></tr>
 <tr class="memdesc:af311651161c1d2e431329fcf130221e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this junction's connected lines.  <br /></td></tr>
-<tr class="memitem:abdaf3034d3efc79a6147e57172f3934f" id="r_abdaf3034d3efc79a6147e57172f3934f"><td class="memItemLeft">List&lt; <a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#abdaf3034d3efc79a6147e57172f3934f">getServices</a> ()</td></tr>
-<tr class="memdesc:abdaf3034d3efc79a6147e57172f3934f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this junction's services.  <br /></td></tr>
-<tr class="memitem:a5024085388986afb63388beb0dbb2feb" id="r_a5024085388986afb63388beb0dbb2feb"><td class="memItemLeft">List&lt; Departure &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5024085388986afb63388beb0dbb2feb">getDepartures</a> ()</td></tr>
-<tr class="memdesc:a5024085388986afb63388beb0dbb2feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the departures from this junction @implNote Includes services that don't stop at this junction.  <br /></td></tr>
+<tr class="memitem:af2afabf35c9adf4b2dd8be2afd80fccb" id="r_af2afabf35c9adf4b2dd8be2afd80fccb"><td class="memItemLeft">List&lt; <a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af2afabf35c9adf4b2dd8be2afd80fccb">getServiceSets</a> ()</td></tr>
+<tr class="memdesc:af2afabf35c9adf4b2dd8be2afd80fccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this junction's services.  <br /></td></tr>
+<tr class="memitem:a5024085388986afb63388beb0dbb2feb" id="r_a5024085388986afb63388beb0dbb2feb"><td class="memItemLeft">List&lt; <a class="el" href="classdeparture_1_1_departure.html">Departure</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5024085388986afb63388beb0dbb2feb">getDepartures</a> ()</td></tr>
+<tr class="memdesc:a5024085388986afb63388beb0dbb2feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the departures from this junction @usecase 13,12 @implNote Includes services that don't stop at this junction.  <br /></td></tr>
 <tr class="memitem:a40c4af24e2ef1acc96b4e10c9548c388" id="r_a40c4af24e2ef1acc96b4e10c9548c388"><td class="memItemLeft"><a class="el" href="classinfrastructure_1_1_line.html">Line</a>&#160;</td><td class="memItemRight"><a class="el" href="#a40c4af24e2ef1acc96b4e10c9548c388">getToOther</a> (<a class="el" href="#aefc3d341f399df7b6bf5a33ac7484f65">Junction</a> other)</td></tr>
 <tr class="memdesc:a40c4af24e2ef1acc96b4e10c9548c388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the line from this junction to another, if it exists.  <br /></td></tr>
 <tr class="memitem:aea60ba67f309ed7438314986983d6d23" id="r_aea60ba67f309ed7438314986983d6d23"><td class="memItemLeft">List&lt; <a class="el" href="#aefc3d341f399df7b6bf5a33ac7484f65">Junction</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aea60ba67f309ed7438314986983d6d23">getNeighbours</a> ()</td></tr>
 <tr class="memitem:a82958f4370beec21773b66482816c7ff" id="r_a82958f4370beec21773b66482816c7ff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a82958f4370beec21773b66482816c7ff">addService</a> (<a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> serviceSet)</td></tr>
-<tr class="memdesc:a82958f4370beec21773b66482816c7ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a serviceSet to this <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a>.  <br /></td></tr>
+<tr class="memdesc:a82958f4370beec21773b66482816c7ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a serviceSet to this <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> @usecase 32.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Class representing a junction's data. </p>
@@ -193,7 +193,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> with generated id. </p>
+<p>Create a <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> with generated id @usecase 18,21. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">location</td><td>the location of this station as GPS coordinates </td></tr>
@@ -264,7 +264,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Add a serviceSet to this <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a>. </p>
+<p>Add a serviceSet to this <a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> @usecase 32. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">serviceSet</td><td>the serviceSet </td></tr>
@@ -301,7 +301,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt; Departure &gt; infrastructure.Junction.getDepartures </td>
+          <td class="memname">List&lt; <a class="el" href="classdeparture_1_1_departure.html">Departure</a> &gt; infrastructure.Junction.getDepartures </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -309,7 +309,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the departures from this junction @implNote Includes services that don't stop at this junction. </p>
+<p>Get the departures from this junction @usecase 13,12 @implNote Includes services that don't stop at this junction. </p>
 <dl class="section return"><dt>Returns</dt><dd>the departures </dd></dl>
 
 </div>
@@ -391,14 +391,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abdaf3034d3efc79a6147e57172f3934f" name="abdaf3034d3efc79a6147e57172f3934f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdaf3034d3efc79a6147e57172f3934f">&#9670;&#160;</a></span>getServices()</h2>
+<a id="af2afabf35c9adf4b2dd8be2afd80fccb" name="af2afabf35c9adf4b2dd8be2afd80fccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2afabf35c9adf4b2dd8be2afd80fccb">&#9670;&#160;</a></span>getServiceSets()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt; <a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> &gt; infrastructure.Junction.getServices </td>
+          <td class="memname">List&lt; <a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> &gt; infrastructure.Junction.getServiceSets </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>

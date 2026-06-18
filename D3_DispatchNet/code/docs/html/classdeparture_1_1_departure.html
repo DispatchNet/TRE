@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TRE: infrastructure.StationData Class Reference</title>
+<title>TRE: departure.Departure Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('classinfrastructure_1_1_station_data.html','','classinfrastructure_1_1_station_data-members'); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classdeparture_1_1_departure.html','','classdeparture_1_1_departure-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -115,79 +115,57 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classinfrastru
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">infrastructure.StationData Class Reference</div></div>
+  <div class="headertitle"><div class="title">departure.Departure Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>A Class containing a station's data.  
+<p>Represents a specific service departing from a junction at a given time.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae672ce4f71ed5ea3bbe1eae8836f4a2b" id="r_ae672ce4f71ed5ea3bbe1eae8836f4a2b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae672ce4f71ed5ea3bbe1eae8836f4a2b">StationData</a> (Set&lt; String &gt; platforms)</td></tr>
-<tr class="memdesc:ae672ce4f71ed5ea3bbe1eae8836f4a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classinfrastructure_1_1_station_data.html" title="A Class containing a station&#39;s data.">StationData</a> object with a generated id.  <br /></td></tr>
-<tr class="memitem:ab520ac567dd3f7154333ff59856fc5f7" id="r_ab520ac567dd3f7154333ff59856fc5f7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab520ac567dd3f7154333ff59856fc5f7">StationData</a> (String id, Set&lt; String &gt; platforms)</td></tr>
-<tr class="memdesc:ab520ac567dd3f7154333ff59856fc5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classinfrastructure_1_1_station_data.html" title="A Class containing a station&#39;s data.">StationData</a> object with an explicit id @usecase 17,20.  <br /></td></tr>
-<tr class="memitem:aa67a7eb8249450028b7b53788b9743eb" id="r_aa67a7eb8249450028b7b53788b9743eb"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#aa67a7eb8249450028b7b53788b9743eb">getId</a> ()</td></tr>
-<tr class="memdesc:aa67a7eb8249450028b7b53788b9743eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unique identifier of this station Departu.  <br /></td></tr>
-<tr class="memitem:a723962db41dc632da33d9956f7d9b918" id="r_a723962db41dc632da33d9956f7d9b918"><td class="memItemLeft">Set&lt; String &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a723962db41dc632da33d9956f7d9b918">getPlatforms</a> ()</td></tr>
-<tr class="memdesc:a723962db41dc632da33d9956f7d9b918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the platforms of this station.  <br /></td></tr>
-<tr class="memitem:aac65c5013ce97de77865f210c4353d0d" id="r_aac65c5013ce97de77865f210c4353d0d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aac65c5013ce97de77865f210c4353d0d">setPlatforms</a> (Set&lt; String &gt; platforms)</td></tr>
-<tr class="memdesc:aac65c5013ce97de77865f210c4353d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the platforms of this station.  <br /></td></tr>
+<tr class="memitem:a336551f940835e0b4277304b67f0697f" id="r_a336551f940835e0b4277304b67f0697f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a336551f940835e0b4277304b67f0697f">Departure</a> (<a class="el" href="classservice__management_1_1_service_step.html">ServiceStep</a> serviceStep, <a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> serviceSet, LocalTime time)</td></tr>
+<tr class="memdesc:a336551f940835e0b4277304b67f0697f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classdeparture_1_1_departure.html" title="Represents a specific service departing from a junction at a given time.">Departure</a>.  <br /></td></tr>
+<tr class="memitem:ac4d50d872c7c847026507a9c9b51bf88" id="r_ac4d50d872c7c847026507a9c9b51bf88"><td class="memItemLeft"><a class="el" href="classservice__management_1_1_service_step.html">ServiceStep</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac4d50d872c7c847026507a9c9b51bf88">getServiceStep</a> ()</td></tr>
+<tr class="memdesc:ac4d50d872c7c847026507a9c9b51bf88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the service step associated with this departure.  <br /></td></tr>
+<tr class="memitem:a8e2a3a0813e87bc0aba1a82da33c0803" id="r_a8e2a3a0813e87bc0aba1a82da33c0803"><td class="memItemLeft"><a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8e2a3a0813e87bc0aba1a82da33c0803">getServiceSet</a> ()</td></tr>
+<tr class="memdesc:a8e2a3a0813e87bc0aba1a82da33c0803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the service set containing this departure.  <br /></td></tr>
+<tr class="memitem:ac8395b025f6b9c791760a536305aa7c3" id="r_ac8395b025f6b9c791760a536305aa7c3"><td class="memItemLeft">LocalTime&#160;</td><td class="memItemRight"><a class="el" href="#ac8395b025f6b9c791760a536305aa7c3">getTime</a> ()</td></tr>
+<tr class="memdesc:ac8395b025f6b9c791760a536305aa7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the scheduled departure time.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A Class containing a station's data. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classinfrastructure_1_1_junction.html" title="A Class representing a junction&#39;s data.">Junction</a> </dd></dl>
+<div class="textblock"><p>Represents a specific service departing from a junction at a given time. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae672ce4f71ed5ea3bbe1eae8836f4a2b" name="ae672ce4f71ed5ea3bbe1eae8836f4a2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae672ce4f71ed5ea3bbe1eae8836f4a2b">&#9670;&#160;</a></span>StationData() <span class="overload">[1/2]</span></h2>
+<a id="a336551f940835e0b4277304b67f0697f" name="a336551f940835e0b4277304b67f0697f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a336551f940835e0b4277304b67f0697f">&#9670;&#160;</a></span>Departure()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">infrastructure.StationData.StationData </td>
+          <td class="memname">departure.Departure.Departure </td>
           <td>(</td>
-          <td class="paramtype">Set&lt; String &gt;</td>          <td class="paramname"><span class="paramname"><em>platforms</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructs a <a class="el" href="classinfrastructure_1_1_station_data.html" title="A Class containing a station&#39;s data.">StationData</a> object with a generated id. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">platforms</td><td>A set of platforms </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab520ac567dd3f7154333ff59856fc5f7" name="ab520ac567dd3f7154333ff59856fc5f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab520ac567dd3f7154333ff59856fc5f7">&#9670;&#160;</a></span>StationData() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">infrastructure.StationData.StationData </td>
-          <td>(</td>
-          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classservice__management_1_1_service_step.html">ServiceStep</a></td>          <td class="paramname"><span class="paramname"><em>serviceStep</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Set&lt; String &gt;</td>          <td class="paramname"><span class="paramname"><em>platforms</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a></td>          <td class="paramname"><span class="paramname"><em>serviceSet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LocalTime</td>          <td class="paramname"><span class="paramname"><em>time</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="classinfrastructure_1_1_station_data.html" title="A Class containing a station&#39;s data.">StationData</a> object with an explicit id @usecase 17,20. </p>
+<p>Constructs a new <a class="el" href="classdeparture_1_1_departure.html" title="Represents a specific service departing from a junction at a given time.">Departure</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>The unique identifier of the station data </td></tr>
-    <tr><td class="paramname">platforms</td><td>A set of platforms </td></tr>
+    <tr><td class="paramname">serviceStep</td><td>The service step associated with the departure. </td></tr>
+    <tr><td class="paramname">serviceSet</td><td>The service set containing the service. </td></tr>
+    <tr><td class="paramname">time</td><td>The scheduled departure time. </td></tr>
   </table>
   </dd>
 </dl>
@@ -195,14 +173,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="aa67a7eb8249450028b7b53788b9743eb" name="aa67a7eb8249450028b7b53788b9743eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa67a7eb8249450028b7b53788b9743eb">&#9670;&#160;</a></span>getId()</h2>
+<a id="a8e2a3a0813e87bc0aba1a82da33c0803" name="a8e2a3a0813e87bc0aba1a82da33c0803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e2a3a0813e87bc0aba1a82da33c0803">&#9670;&#160;</a></span>getServiceSet()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String infrastructure.StationData.getId </td>
+          <td class="memname"><a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> departure.Departure.getServiceSet </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -210,19 +188,19 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the unique identifier of this station Departu. </p>
-<dl class="section return"><dt>Returns</dt><dd>the identifier </dd></dl>
+<p>Gets the service set containing this departure. </p>
+<dl class="section return"><dt>Returns</dt><dd>The service set. </dd></dl>
 
 </div>
 </div>
-<a id="a723962db41dc632da33d9956f7d9b918" name="a723962db41dc632da33d9956f7d9b918"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a723962db41dc632da33d9956f7d9b918">&#9670;&#160;</a></span>getPlatforms()</h2>
+<a id="ac4d50d872c7c847026507a9c9b51bf88" name="ac4d50d872c7c847026507a9c9b51bf88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d50d872c7c847026507a9c9b51bf88">&#9670;&#160;</a></span>getServiceStep()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Set&lt; String &gt; infrastructure.StationData.getPlatforms </td>
+          <td class="memname"><a class="el" href="classservice__management_1_1_service_step.html">ServiceStep</a> departure.Departure.getServiceStep </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -230,38 +208,33 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the platforms of this station. </p>
-<dl class="section return"><dt>Returns</dt><dd>the platforms </dd></dl>
+<p>Gets the service step associated with this departure. </p>
+<dl class="section return"><dt>Returns</dt><dd>The service step. </dd></dl>
 
 </div>
 </div>
-<a id="aac65c5013ce97de77865f210c4353d0d" name="aac65c5013ce97de77865f210c4353d0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac65c5013ce97de77865f210c4353d0d">&#9670;&#160;</a></span>setPlatforms()</h2>
+<a id="ac8395b025f6b9c791760a536305aa7c3" name="ac8395b025f6b9c791760a536305aa7c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8395b025f6b9c791760a536305aa7c3">&#9670;&#160;</a></span>getTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void infrastructure.StationData.setPlatforms </td>
+          <td class="memname">LocalTime departure.Departure.getTime </td>
           <td>(</td>
-          <td class="paramtype">Set&lt; String &gt;</td>          <td class="paramname"><span class="paramname"><em>platforms</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the platforms of this station. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">platforms</td><td>the platforms </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Gets the scheduled departure time. </p>
+<dl class="section return"><dt>Returns</dt><dd>The departure time. </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/infrastructure/<a class="el" href="_station_data_8java.html">StationData.java</a></li>
+<li>src/departure/<a class="el" href="_departure_8java.html">Departure.java</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -276,7 +249,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="namespaceinfrastructure.html">infrastructure</a></li><li class="navelem"><a href="classinfrastructure_1_1_station_data.html">StationData</a></li>
+    <li class="navelem"><a href="namespacedeparture.html">departure</a></li><li class="navelem"><a href="classdeparture_1_1_departure.html">Departure</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

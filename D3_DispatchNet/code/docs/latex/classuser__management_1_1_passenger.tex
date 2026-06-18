@@ -31,7 +31,7 @@ boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_a3d3feb18234bd8
 boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_a76068051fb886ef3d6af347607715eed}{purchase\+Group\+Pass}} (\doxymbox{\hyperlink{classticketing_1_1_group_pass}{Group\+Pass}} group\+Pass)
 \begin{DoxyCompactList}\small\item\em Purchases a new group pass (not impelemented). \end{DoxyCompactList}\item 
 boolean \doxymbox{\hyperlink{classuser__management_1_1_passenger_a00766032c568019f7977d0729b183872}{cancel\+Group\+Pass}} (\doxymbox{\hyperlink{classticketing_1_1_group_pass}{Group\+Pass}} group\+Pass)
-\begin{DoxyCompactList}\small\item\em Cancel a purchased group pass (not impelemented). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Cancel a purchased group pass (not impelemented) @usecasse\{UC10\}. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classuser__management_1_1_passenger_ae7e8a928fd04ce05eb777f1c6b528553}{get\+Tickets\+History}} ()
 \begin{DoxyCompactList}\small\item\em Retrieves the history of purchased and cancelled tickets. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classuser__management_1_1_end_user}{user\+\_\+management.\+End\+User}}}
@@ -158,7 +158,7 @@ boolean user\+\_\+management.\+Passenger.\+cancel\+Group\+Pass (\begin{DoxyParam
 
 
 
-Cancel a purchased group pass (not impelemented). 
+Cancel a purchased group pass (not impelemented) @usecasse\{UC10\}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -178,6 +178,12 @@ boolean user\+\_\+management.\+Passenger.\+cancel\+Ticket (\begin{DoxyParamCapti
 
 Cancels a purchased ticket. 
 
+\begin{DoxyParagraph}{Use Case:\+}
+
+\begin{DoxyItemize}
+\item UC10 
+\end{DoxyItemize}
+\end{DoxyParagraph}
 
 \begin{DoxyParams}{Parameters}
 {\em ticket} & The ticket to cancel \\
@@ -222,6 +228,12 @@ void user\+\_\+management.\+Passenger.\+get\+Tickets\+History (\begin{DoxyParamC
 
 Retrieves the history of purchased and cancelled tickets. 
 
+\begin{DoxyParagraph}{Use Case:\+}
+
+\begin{DoxyItemize}
+\item UC11 
+\end{DoxyItemize}
+\end{DoxyParagraph}
 \Hypertarget{classuser__management_1_1_passenger_a76068051fb886ef3d6af347607715eed}\index{user\_management.Passenger@{user\_management.Passenger}!purchaseGroupPass@{purchaseGroupPass}}
 \index{purchaseGroupPass@{purchaseGroupPass}!user\_management.Passenger@{user\_management.Passenger}}
 \doxysubsubsection{\texorpdfstring{purchaseGroupPass()}{purchaseGroupPass()}}
@@ -232,6 +244,12 @@ boolean user\+\_\+management.\+Passenger.\+purchase\+Group\+Pass (\begin{DoxyPar
 
 Purchases a new group pass (not impelemented). 
 
+\begin{DoxyParagraph}{Use Case:\+}
+
+\begin{DoxyItemize}
+\item UC9 
+\end{DoxyItemize}
+\end{DoxyParagraph}
 
 \begin{DoxyParams}{Parameters}
 {\em ticket} & The group pass to purchase \\
@@ -250,6 +268,18 @@ boolean user\+\_\+management.\+Passenger.\+purchase\+Ticket (\begin{DoxyParamCap
 
 Purchases a new ticket. 
 
+\begin{DoxyParagraph}{Use Case:\+}
+
+\begin{DoxyItemize}
+\item UC9 
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Use Case:\+}
+
+\begin{DoxyItemize}
+\item UC12.\+1 
+\end{DoxyItemize}
+\end{DoxyParagraph}
 
 \begin{DoxyParams}{Parameters}
 {\em ticket} & The ticket to purchase \\

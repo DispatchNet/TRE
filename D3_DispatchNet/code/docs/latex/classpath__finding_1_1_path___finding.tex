@@ -45,6 +45,12 @@ path\+\_\+finding.\+Path\+\_\+\+Finding.\+Path\+\_\+\+Finding (\begin{DoxyParamC
 
 creates the Pathfinding\+\_\+class 
 
+\begin{DoxyParagraph}{Use Case:\+}
+
+\begin{DoxyItemize}
+\item UC12
+\end{DoxyItemize}
+\end{DoxyParagraph}
 Enforces mandatory information like requester and parameters of the search, initializes the sorting algorithm enum to its default value and computes the result lists 
 \begin{DoxyParams}{Parameters}
 {\em requester} & which \doxylink{classuser__management_1_1_passenger}{Passenger} or \doxylink{classuser__management_1_1_anonymous_user}{Anonymous\+User} initiated the request, used for ticket generation \\
@@ -156,6 +162,12 @@ Array\+List$<$ Array\+List$<$ \doxymbox{\hyperlink{classticketing_1_1_ticket}{Ti
 
 public way to access the results of the pathfinding 
 
+\begin{DoxyParagraph}{Use Case:\+}
+
+\begin{DoxyItemize}
+\item UC12 usecase\{UC12.\+2\}
+\end{DoxyItemize}
+\end{DoxyParagraph}
 Calls the private srt\+Pth function when necessary, and formats the results \begin{DoxyReturn}{Returns}
 An Array\+List of paths (Array\+List of Tickets) 
 \end{DoxyReturn}
@@ -188,6 +200,12 @@ void path\+\_\+finding.\+Path\+\_\+\+Finding.\+prch\+Tcks (\begin{DoxyParamCapti
 
 Handles the pruchase of tickets from the POV of the pathfinder. 
 
+\begin{DoxyParagraph}{Use Case:\+}
+
+\begin{DoxyItemize}
+\item UC12.\+1 
+\end{DoxyItemize}
+\end{DoxyParagraph}
 
 \begin{DoxyExceptions}{Exceptions}
 {\em Bad\+Requester} & The requester of Pathfinding is not allowed to purchase tickets \\

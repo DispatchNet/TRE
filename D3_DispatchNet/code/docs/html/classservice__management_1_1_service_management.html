@@ -127,9 +127,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a714e185201b06855b7ab8bd98ba1061b" id="r_a714e185201b06855b7ab8bd98ba1061b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a714e185201b06855b7ab8bd98ba1061b">addServiceRequest</a> (<a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> serviceSet)</td></tr>
 <tr class="memdesc:a714e185201b06855b7ab8bd98ba1061b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits a new service request pending approval. The service set is stored in the requests map with PendingApproval status.  <br /></td></tr>
 <tr class="memitem:ac4a450102407c9feb5d4f4b47d11a6bf" id="r_ac4a450102407c9feb5d4f4b47d11a6bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac4a450102407c9feb5d4f4b47d11a6bf">approveServiceRequest</a> (String id)</td></tr>
-<tr class="memdesc:ac4a450102407c9feb5d4f4b47d11a6bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approves a pending service request and promotes it to an active service set. The service is moved from the requests map to the active service sets map and its status is updated to Effective.  <br /></td></tr>
+<tr class="memdesc:ac4a450102407c9feb5d4f4b47d11a6bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approves a pending service request and promotes it to an active service set. The service is moved from the requests map to the active service sets map and its status is updated to Effective. @usecase 32.  <br /></td></tr>
 <tr class="memitem:aee34d1a6268f7025c719108c5e579226" id="r_aee34d1a6268f7025c719108c5e579226"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee34d1a6268f7025c719108c5e579226">rejectServiceRequest</a> (String id)</td></tr>
-<tr class="memdesc:aee34d1a6268f7025c719108c5e579226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rejects and removes a pending service request. The service set is removed from the requests map and discarded.  <br /></td></tr>
+<tr class="memdesc:aee34d1a6268f7025c719108c5e579226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rejects and removes a pending service request. The service set is removed from the requests map and discarded. @usecase 32.  <br /></td></tr>
 <tr class="memitem:a278a070667bea1b8fc355b2c57c00723" id="r_a278a070667bea1b8fc355b2c57c00723"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a278a070667bea1b8fc355b2c57c00723">addTrainType</a> (<a class="el" href="classservice__management_1_1_train_type.html">TrainType</a> trainType)</td></tr>
 <tr class="memdesc:a278a070667bea1b8fc355b2c57c00723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new train type in the network.  <br /></td></tr>
 <tr class="memitem:a39840bb8f6c5cb1a1cfad1619efe4d26" id="r_a39840bb8f6c5cb1a1cfad1619efe4d26"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a39840bb8f6c5cb1a1cfad1619efe4d26">addServiceType</a> (<a class="el" href="classservice__management_1_1_service_type.html">ServiceType</a> serviceType)</td></tr>
@@ -148,6 +148,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7752e9a9dbd60ee880a3f0bdd29f67e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a service type by its ID.  <br /></td></tr>
 <tr class="memitem:a037183a2db554ae3def1ed70dbc68ad7" id="r_a037183a2db554ae3def1ed70dbc68ad7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a037183a2db554ae3def1ed70dbc68ad7">addService</a> (<a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> serviceSet)</td></tr>
 <tr class="memdesc:a037183a2db554ae3def1ed70dbc68ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new train service in the network.  <br /></td></tr>
+<tr class="memitem:a0bbec39614e4559bd0bb348b5e16250d" id="r_a0bbec39614e4559bd0bb348b5e16250d"><td class="memItemLeft">boolean&#160;</td><td class="memItemRight"><a class="el" href="#a0bbec39614e4559bd0bb348b5e16250d">checkIntegrity</a> (<a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a> serviceSet)</td></tr>
+<tr class="memdesc:a0bbec39614e4559bd0bb348b5e16250d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whther a sercviceSet is compatible with the current network and traffic configuration.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A management class that provides functionality to edit the network. Maintains the collections of service sets, service requests, service types, and train types that make up the rail network. </p>
@@ -267,13 +269,39 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Approves a pending service request and promotes it to an active service set. The service is moved from the requests map to the active service sets map and its status is updated to Effective. </p>
+<p>Approves a pending service request and promotes it to an active service set. The service is moved from the requests map to the active service sets map and its status is updated to Effective. @usecase 32. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the ID of the service request to approve </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a0bbec39614e4559bd0bb348b5e16250d" name="a0bbec39614e4559bd0bb348b5e16250d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bbec39614e4559bd0bb348b5e16250d">&#9670;&#160;</a></span>checkIntegrity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean service_management.ServiceManagement.checkIntegrity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classservice__management_1_1_service_set.html">ServiceSet</a></td>          <td class="paramname"><span class="paramname"><em>serviceSet</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks whther a sercviceSet is compatible with the current network and traffic configuration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serviceSet</td><td>the serviceSet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the serviceSet is good, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -424,7 +452,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Rejects and removes a pending service request. The service set is removed from the requests map and discarded. </p>
+<p>Rejects and removes a pending service request. The service set is removed from the requests map and discarded. @usecase 32. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the ID of the service request to reject </td></tr>

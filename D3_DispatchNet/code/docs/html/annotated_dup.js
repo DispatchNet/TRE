@@ -3,6 +3,9 @@ var annotated_dup =
     [ "csv_database", "namespacecsv__database.html", [
       [ "CsvDatabase", "classcsv__database_1_1_csv_database.html", "classcsv__database_1_1_csv_database" ]
     ] ],
+    [ "departure", "namespacedeparture.html", [
+      [ "Departure", "classdeparture_1_1_departure.html", "classdeparture_1_1_departure" ]
+    ] ],
     [ "infrastructure", "namespaceinfrastructure.html", [
       [ "GeoCoordinate", "classinfrastructure_1_1_geo_coordinate.html", "classinfrastructure_1_1_geo_coordinate" ],
       [ "Junction", "classinfrastructure_1_1_junction.html", "classinfrastructure_1_1_junction" ],

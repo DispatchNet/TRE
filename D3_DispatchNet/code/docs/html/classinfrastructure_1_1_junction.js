@@ -9,7 +9,7 @@ var classinfrastructure_1_1_junction =
     [ "getLocation", "classinfrastructure_1_1_junction.html#ab668d83d145641f0ef4a4f158f6bae4a", null ],
     [ "getName", "classinfrastructure_1_1_junction.html#a153d50e1dfd3898cb23c20ad8c843d23", null ],
     [ "getNeighbours", "classinfrastructure_1_1_junction.html#aea60ba67f309ed7438314986983d6d23", null ],
-    [ "getServices", "classinfrastructure_1_1_junction.html#abdaf3034d3efc79a6147e57172f3934f", null ],
+    [ "getServiceSets", "classinfrastructure_1_1_junction.html#af2afabf35c9adf4b2dd8be2afd80fccb", null ],
     [ "getStationData", "classinfrastructure_1_1_junction.html#a4cbe9e3217bb4bd50ad7290ea4ef757a", null ],
     [ "getToOther", "classinfrastructure_1_1_junction.html#a40c4af24e2ef1acc96b4e10c9548c388", null ],
     [ "isStation", "classinfrastructure_1_1_junction.html#ae6c05d878229f56a5619c2e7f9d93f53", null ],

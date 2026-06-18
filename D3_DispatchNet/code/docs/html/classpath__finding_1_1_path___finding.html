@@ -183,6 +183,10 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>creates the Pathfinding_class </p>
+<dl class="section user"><dt>Use Case:</dt><dd><ul>
+<li>UC12</li>
+</ul>
+</dd></dl>
 <p>Enforces mandatory information like requester and parameters of the search, initializes the sorting algorithm enum to its default value and computes the result lists </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">requester</td><td>which <a class="el" href="classuser__management_1_1_passenger.html" title="Class representing a passenger, a type of end user who can additionally purchase and manage tickets.">Passenger</a> or <a class="el" href="classuser__management_1_1_anonymous_user.html" title="Class representing an anonymous user, who can only view the map and search for stations and trains.">AnonymousUser</a> initiated the request, used for ticket generation </td></tr>
@@ -327,6 +331,10 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>public way to access the results of the pathfinding </p>
+<dl class="section user"><dt>Use Case:</dt><dd><ul>
+<li>UC12 usecase{UC12.2}</li>
+</ul>
+</dd></dl>
 <p>Calls the private srtPth function when necessary, and formats the results </p><dl class="section return"><dt>Returns</dt><dd>An ArrayList of paths (ArrayList of Tickets) </dd></dl>
 
 </div>
@@ -392,6 +400,10 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Handles the pruchase of tickets from the POV of the pathfinder. </p>
+<dl class="section user"><dt>Use Case:</dt><dd><ul>
+<li>UC12.1 </li>
+</ul>
+</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">BadRequester</td><td>The requester of Pathfinding is not allowed to purchase tickets </td></tr>

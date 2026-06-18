@@ -4,7 +4,7 @@ var searchData=
   ['deletejunction_1',['deleteJunction',['../classuser__management_1_1_network_manager.html#aaf85fe787ae44d08442f72fc4857b5c0',1,'user_management::NetworkManager']]],
   ['deleteline_2',['deleteLine',['../classuser__management_1_1_network_manager.html#a40ad7c1c81d6db496bcf32c455b47271',1,'user_management::NetworkManager']]],
   ['deletestation_3',['deleteStation',['../classuser__management_1_1_network_manager.html#a507d53464376d4db3868c44c4622a01c',1,'user_management::NetworkManager']]],
-  ['departure_4',['Departure',['../enumpath__finding_1_1srt_alg.html#af333651b5349ce1373c4d13bfb2fede8',1,'path_finding.srtAlg.Departure'],['../namespacedeparture.html#a63dd841fbd63f1423cbd0a1beaa6e900',1,'departure.Departure()']]],
+  ['departure_4',['Departure',['../classdeparture_1_1_departure.html',1,'departure.Departure'],['../enumpath__finding_1_1srt_alg.html#af333651b5349ce1373c4d13bfb2fede8',1,'path_finding.srtAlg.Departure'],['../classdeparture_1_1_departure.html#a336551f940835e0b4277304b67f0697f',1,'departure.Departure.Departure()']]],
   ['departure_5',['departure',['../namespacedeparture.html',1,'']]],
   ['departure_2ejava_6',['Departure.java',['../_departure_8java.html',1,'']]],
   ['dispatch_7',['Dispatch',['../classservice__management_1_1_dispatch.html',1,'service_management.Dispatch'],['../classservice__management_1_1_dispatch.html#a13809313397c48721e637d87e7312fa6',1,'service_management.Dispatch.Dispatch()']]],

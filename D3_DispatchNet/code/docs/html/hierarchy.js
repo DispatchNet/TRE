@@ -9,6 +9,7 @@ var hierarchy =
       [ "user_management.NetworkManager", "classuser__management_1_1_network_manager.html", null ]
     ] ],
     [ "csv_database.CsvDatabase", "classcsv__database_1_1_csv_database.html", null ],
+    [ "departure.Departure", "classdeparture_1_1_departure.html", null ],
     [ "service_management.Dispatch", "classservice__management_1_1_dispatch.html", null ],
     [ "infrastructure.Network.EditError", "enuminfrastructure_1_1_network_1_1_edit_error.html", null ],
     [ "mail_service.Email", "classmail__service_1_1_email.html", null ],

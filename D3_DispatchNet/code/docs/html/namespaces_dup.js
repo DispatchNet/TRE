@@ -1,9 +1,7 @@
 var namespaces_dup =
 [
     [ "csv_database", "namespacecsv__database.html", "namespacecsv__database" ],
-    [ "departure", "namespacedeparture.html", [
-      [ "Departure", "namespacedeparture.html#a63dd841fbd63f1423cbd0a1beaa6e900", null ]
-    ] ],
+    [ "departure", "namespacedeparture.html", "namespacedeparture" ],
     [ "infrastructure", "namespaceinfrastructure.html", "namespaceinfrastructure" ],
     [ "IO_operations", "namespace_i_o__operations.html", "namespace_i_o__operations" ],
     [ "mail_service", "namespacemail__service.html", "namespacemail__service" ],

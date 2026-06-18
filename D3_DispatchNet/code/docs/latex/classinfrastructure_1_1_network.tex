@@ -16,19 +16,19 @@ enum \doxymbox{\hyperlink{enuminfrastructure_1_1_network_1_1_edit_error}{Edit\+E
 \doxymbox{\hyperlink{classinfrastructure_1_1_network_a033139e8f7f1539d34f677e22d328b72}{Network}} ()
 \item 
 void \doxymbox{\hyperlink{classinfrastructure_1_1_network_a32220cc34d0ec586b6b4e192623ed460}{add\+Junction}} (\doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} junction)
-\begin{DoxyCompactList}\small\item\em Adds a \doxylink{classinfrastructure_1_1_junction}{Junction} to the network. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Adds a \doxylink{classinfrastructure_1_1_junction}{Junction} to the network @usecase 21,22. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classinfrastructure_1_1_network_ad97c37c743599553e5664fa0d83ccf5c}{add\+Line}} (\doxymbox{\hyperlink{classinfrastructure_1_1_line}{Line}} line)
 \begin{DoxyCompactList}\small\item\em Adds an existing \doxylink{classinfrastructure_1_1_line}{Line} object to the network. \end{DoxyCompactList}\item 
 Map$<$ String, \doxymbox{\hyperlink{classinfrastructure_1_1_line}{Line}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1_network_a9ab91dde47f76df3afb6c997aefb967d}{get\+Lines}} ()
-\begin{DoxyCompactList}\small\item\em get the map of lines. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em get the map of lines. @usecase 13,15 \end{DoxyCompactList}\item 
 Map$<$ String, \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1_network_a9e9f8ebaa47e4637758bd147036ded1c}{get\+Junctions}} ()
-\begin{DoxyCompactList}\small\item\em get the map of junctions. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em get the map of junctions. @usecase 13,15 \end{DoxyCompactList}\item 
 Optional$<$ \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1_network_a91532cc7840fecd1611e854f16171c90}{get\+Junction\+By\+Name}} (String name)
 \item 
 Optional$<$ \doxymbox{\hyperlink{enuminfrastructure_1_1_network_1_1_edit_error}{Edit\+Error}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1_network_ab42c069adc815fd2b0735d7eec8e4a81}{remove\+Junction}} (String id)
-\begin{DoxyCompactList}\small\item\em remove a junction from the network \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em remove a junction from the network @usecase 26,27 \end{DoxyCompactList}\item 
 Optional$<$ \doxymbox{\hyperlink{enuminfrastructure_1_1_network_1_1_edit_error}{Edit\+Error}} $>$ \doxymbox{\hyperlink{classinfrastructure_1_1_network_a49d745db50bc1528d719f88bf06a232b}{remove\+Line}} (String id)
-\begin{DoxyCompactList}\small\item\em remove a junction from the network \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em remove a junction from the network @usecase 28 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -56,7 +56,7 @@ void infrastructure.\+Network.\+add\+Junction (\begin{DoxyParamCaption}\item[{\d
 
 
 
-Adds a \doxylink{classinfrastructure_1_1_junction}{Junction} to the network. 
+Adds a \doxylink{classinfrastructure_1_1_junction}{Junction} to the network @usecase 21,22. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -80,7 +80,7 @@ Adds an existing \doxylink{classinfrastructure_1_1_line}{Line} object to the net
 
 
 \begin{DoxyParams}{Parameters}
-{\em line} & The line to add \\
+{\em line} & The line to add @usecase 22 \\
 \hline
 \end{DoxyParams}
 
@@ -94,7 +94,13 @@ Adds an existing \doxylink{classinfrastructure_1_1_line}{Line} object to the net
 {\footnotesize\ttfamily \label{classinfrastructure_1_1_network_a91532cc7840fecd1611e854f16171c90} 
 Optional$<$ \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}} $>$ infrastructure.\+Network.\+get\+Junction\+By\+Name (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption})}
 
-@breif Search a junction on it\textquotesingle{}s network by it\textquotesingle{}s name 
+@breif Search a junction on it\textquotesingle{}s network by it\textquotesingle{}s name \begin{DoxyParagraph}{Use Case:\+}
+
+\begin{DoxyItemize}
+\item UC14 
+\end{DoxyItemize}
+\end{DoxyParagraph}
+
 \begin{DoxyParams}{Parameters}
 {\em name} & the name of the junction \\
 \hline
@@ -110,7 +116,7 @@ Map$<$ String, \doxymbox{\hyperlink{classinfrastructure_1_1_junction}{Junction}}
 
 
 
-get the map of junctions. 
+get the map of junctions. @usecase 13,15 
 
 \begin{DoxyReturn}{Returns}
 An unmodifiable view of the junctions 
@@ -123,7 +129,7 @@ Map$<$ String, \doxymbox{\hyperlink{classinfrastructure_1_1_line}{Line}} $>$ inf
 
 
 
-get the map of lines. 
+get the map of lines. @usecase 13,15 
 
 \begin{DoxyReturn}{Returns}
 An unmodifiable view of the lines 
@@ -136,7 +142,7 @@ Optional$<$ \doxymbox{\hyperlink{enuminfrastructure_1_1_network_1_1_edit_error}{
 
 
 
-remove a junction from the network 
+remove a junction from the network @usecase 26,27 
 
 
 \begin{DoxyParams}{Parameters}
@@ -157,7 +163,7 @@ Optional$<$ \doxymbox{\hyperlink{enuminfrastructure_1_1_network_1_1_edit_error}{
 
 
 
-remove a junction from the network 
+remove a junction from the network @usecase 28 
 
 
 \begin{DoxyParams}{Parameters}

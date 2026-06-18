@@ -5,6 +5,7 @@ var classservice__management_1_1_service_management =
     [ "addServiceType", "classservice__management_1_1_service_management.html#a39840bb8f6c5cb1a1cfad1619efe4d26", null ],
     [ "addTrainType", "classservice__management_1_1_service_management.html#a278a070667bea1b8fc355b2c57c00723", null ],
     [ "approveServiceRequest", "classservice__management_1_1_service_management.html#ac4a450102407c9feb5d4f4b47d11a6bf", null ],
+    [ "checkIntegrity", "classservice__management_1_1_service_management.html#a0bbec39614e4559bd0bb348b5e16250d", null ],
     [ "getServiceRequests", "classservice__management_1_1_service_management.html#a380f585558decbd8a5836a4d7861e512", null ],
     [ "getServiceSets", "classservice__management_1_1_service_management.html#a8cbf688f37a01305f73e7f029bbf54f0", null ],
     [ "getServiceType", "classservice__management_1_1_service_management.html#a7752e9a9dbd60ee880a3f0bdd29f67e5", null ],
